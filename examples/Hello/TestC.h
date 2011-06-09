@@ -47,16 +47,14 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
   protected:
     explicit Hello_stub (Hello_proxy_ptr p);
-  
-    static const std::string repo_id_;
-  
     static Hello_stub* narrow (corba_0x::CORBA::Object_stub* obj);
   
   private:
-    Hello_stub& operator=(const Hello_stub&) = delete;
-    Hello_stub(const Hello_stub&) = delete;
     Hello_stub (void) = delete;
+    Hello_stub(const Hello_stub&) = delete;
+    Hello_stub& operator=(const Hello_stub&) = delete;
     Hello_proxy_ptr hello_proxy_;
+    static const std::string repo_id_;
   }; // Hello_stub
 
   
@@ -66,7 +64,6 @@ namespace Test {
     : public virtual corba_0x::CORBA::Object_ref<T>
   {
   public:
-    typedef T ref_type;
     explicit Hello_ref (T *s = 0);
     Hello_ref (const Hello_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
