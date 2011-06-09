@@ -20,45 +20,46 @@ using namespace corba_0x;
 namespace Test {
 
   // generated from StubHeaderWriter#enter_interface
+  
+  // generated from c++/cli_hdr/interface_fwd.erb
   class Hello_stub;
   template <typename T> class Hello_ref;
-  typedef Hello_ref < Hello_stub> Hello;
-
+  typedef Hello_ref <Hello_stub> Hello;
+  
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
-
+  
   // generated from c++/cli_hdr/interface_pre.erb
   class Hello_stub
     : public virtual corba_0x::CORBA::Object_stub
   {
   public:
-    friend class Hello_ref < Hello_stub>;
-
+    friend class Hello_ref <Hello_stub>;
+  
     virtual const std::string& _interface_repository_id () const;
-
+    
     // generated from c++/cli_hdr/operation.erb
     virtual std::string get_string (void);
-
+    
     // generated from c++/cli_hdr/operation.erb
     virtual void shutdown (void);
-
+  
     // generated from c++/cli_hdr/interface_post.erb
-
   protected:
     explicit Hello_stub (Hello_proxy_ptr p);
-
+  
     static const std::string repo_id_;
-
+  
     static Hello_stub* narrow (corba_0x::CORBA::Object_stub* obj);
-
+  
   private:
-    Hello_stub (void) = delete;
     Hello_stub& operator=(const Hello_stub&) = delete;
     Hello_stub(const Hello_stub&) = delete;
+    Hello_stub (void) = delete;
     Hello_proxy_ptr hello_proxy_;
   }; // Hello_stub
 
-
+  
   // generated from c++/cli_hdr/interface_objref.erb
   template <typename T>
   class Hello_ref
@@ -66,19 +67,18 @@ namespace Test {
   {
   public:
     typedef T ref_type;
-    Hello_ref ();
-    explicit Hello_ref (T *s);
-    Hello_ref (std::shared_ptr <T> t);
-    Hello_ref (Hello_ref<T> &t);
-    Hello_ref (Hello_ref<T> &&t);
+    explicit Hello_ref (T *s = 0);
     Hello_ref (const Hello_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    void operator=(const std::nullptr_t& t);
-
-    static Hello narrow (corba_0x::CORBA::Object obj);
+    void operator=(std::nullptr_t t);
+    static Hello narrow(corba_0x::CORBA::Object obj);
   };
-
 }; // namespace Test
+
+
+// generated from StubHeaderStdWriter#pre_visit
+namespace std {
+}; // std
 
 #include "TestC.inl"
 
