@@ -1,0 +1,16 @@
+//
+// $Id$
+//
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  enum EEnum
+  {
+    A,
+    B,
+    C
+  };
+
+  const EEnum my_enum = A;
+};
