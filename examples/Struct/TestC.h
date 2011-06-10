@@ -32,14 +32,14 @@ namespace Test {
             const double& d,
             const bool& b,
             const char& c);
-    Simple (const uint8_t&& o,
-            const int32_t&& l,
-            const std::string&& s,
-            const double&& d,
-            const bool&& b,
-            const char&& c);
+    Simple (uint8_t&& o,
+            int32_t&& l,
+            std::string&& s,
+            double&& d,
+            bool&& b,
+            char&& c);
     Simple& operator= (const Simple& x);
-    Simple& operator= (const Simple&& x);
+    Simple& operator= (Simple&& x);
 
     void o (const uint8_t& _o);
     const uint8_t& o (void) const;
