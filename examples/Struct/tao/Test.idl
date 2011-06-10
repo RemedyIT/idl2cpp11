@@ -1,0 +1,35 @@
+//
+// $Id$
+//
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  struct Simple
+  {
+    octet   o;
+    long    l;
+    string  s;
+    double  d;
+    boolean b;
+    char    c;
+  };
+
+  /// A very simple interface
+  interface Foo
+  {
+    boolean pass_struct (in Simple s);
+    
+    Simple return_struct ();
+    
+    boolean get_struct (out Simple s);
+    
+    boolean update_struct (inout Simple s);
+    
+    /// A method to shutdown the ORB
+    /**
+     * This method is used to simplify the test shutdown process
+     */
+    oneway void shutdown ();
+  };
+};
