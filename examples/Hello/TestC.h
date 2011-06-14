@@ -20,35 +20,35 @@ using namespace corba_0x;
 namespace Test {
 
   // generated from StubHeaderWriter#enter_interface
-  
+
   // generated from c++/cli_hdr/interface_fwd.erb
   class Hello_stub;
   template <typename T> class Hello_ref;
   typedef Hello_ref <Hello_stub> Hello;
-  
+
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
-  
+
   // generated from c++/cli_hdr/interface_pre.erb
   class Hello_stub
     : public virtual corba_0x::CORBA::Object_stub
   {
   public:
     friend class Hello_ref <Hello_stub>;
-  
+
     virtual const std::string& _interface_repository_id () const;
-    
+
     // generated from c++/cli_hdr/operation.erb
-    virtual std::string get_string (void);
-    
+    std::string get_string (void);
+
     // generated from c++/cli_hdr/operation.erb
-    virtual void shutdown (void);
-  
+    void shutdown (void);
+
     // generated from c++/cli_hdr/interface_post.erb
   protected:
     explicit Hello_stub (Hello_proxy_ptr p);
     static Hello_stub* narrow (corba_0x::CORBA::Object_stub* obj);
-  
+
   private:
     Hello_stub (void) = delete;
     Hello_stub(const Hello_stub&) = delete;
@@ -57,7 +57,7 @@ namespace Test {
     static const std::string repo_id_;
   }; // Hello_stub
 
-  
+
   // generated from c++/cli_hdr/interface_objref.erb
   template <typename T>
   class Hello_ref
