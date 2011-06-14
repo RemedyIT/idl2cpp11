@@ -44,22 +44,22 @@ namespace Test {
     void _d (const DataType&);
     void _d (DataType&&);
     const DataType& _d (void) const;
-    DataType&& _d (void);
+    DataType& _d (void);
 
     void longData (const int32_t& _longData);
     void longData (int32_t&& _longData);
     const int32_t& longData (void) const;
-    int32_t&& longData (void);
+    int32_t& longData (void);
 
     void shortData (const int16_t& _shortData);
     void shortData (int16_t&& _shortData);
     const int16_t& shortData (void) const;
-    int16_t&& shortData (void);
+    int16_t& shortData (void);
 
     void stringData (const std::string& _stringData);
     void stringData (std::string&& _stringData);
     const std::string& stringData (void) const;
-    std::string&& stringData (void);
+    std::string& stringData (void);
 
     void _default (void);
 
