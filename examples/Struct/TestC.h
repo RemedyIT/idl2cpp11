@@ -11,8 +11,8 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
-#include <tao/0x/stddef.h>
-#include <tao/0x/corba.h>
+#include "tao/0x/stddef.h"
+#include "tao/0x/corba.h"
 
 using namespace corba_0x;
 
@@ -26,6 +26,12 @@ namespace Test {
 
     // generated from c++/cli_hdr/struct_post.erb
     Simple (void);
+    Simple (uint8_t o,
+            int32_t l,
+            std::string s,
+            double d,
+            bool b,
+            char c);
     Simple (const uint8_t& o,
             const int32_t& l,
             const std::string& s,
@@ -85,12 +91,19 @@ namespace Test {
   // generated from StubHeaderWriter#enter_interface
 
   // generated from c++/cli_hdr/interface_fwd.erb
+  #if !defined (_INTF_TEST_FOO_FWD_)
+  #define _INTF_TEST_FOO_FWD_
   class Foo_stub;
   template <typename T> class Foo_ref;
-  typedef Foo_ref <Foo_stub> Foo;
+  namespace stub_types_
+  {
+    typedef Foo_ref <Foo_stub> Foo;
+  };
+  using stub_types_::Foo;
 
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
+  #endif // !_INTF_TEST_FOO_FWD_
 
   // generated from c++/cli_hdr/interface_pre.erb
   class Foo_stub
@@ -102,23 +115,23 @@ namespace Test {
     virtual const std::string& _interface_repository_id () const;
 
     // generated from c++/cli_hdr/operation.erb
-    virtual bool pass_struct (const Test::Simple& s);
+    bool pass_struct (const Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    virtual Test::Simple return_struct (void);
+    Test::Simple return_struct (void);
 
     // generated from c++/cli_hdr/operation.erb
-    virtual bool get_struct (Test::Simple& s);
+    bool get_struct (Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    virtual bool update_struct (Test::Simple& s);
+    bool update_struct (Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    virtual void shutdown (void);
+    void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
-  protected:
     explicit Foo_stub (Foo_proxy_ptr p);
+  protected:
     static Foo_stub* narrow (corba_0x::CORBA::Object_stub* obj);
 
   private:
@@ -126,7 +139,6 @@ namespace Test {
     Foo_stub(const Foo_stub&) = delete;
     Foo_stub& operator=(const Foo_stub&) = delete;
     Foo_proxy_ptr foo_proxy_;
-    static const std::string repo_id_;
   }; // Foo_stub
 
 
