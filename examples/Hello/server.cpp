@@ -1,7 +1,5 @@
 // $Id$
 
-#include "tao/0x/orb.h"
-#include "tao/0x/PortableServer/portableserver.h"
 #include "Hello.h"
 
 #include <iostream>
