@@ -4,7 +4,7 @@
 project(*Client): taoclient {
   includes += $(IDL2Cxx0x_ROOT)/src
   libpaths += $(IDL2Cxx0x_ROOT)/lib
-  libs += TAO_0x
+  libs += tao_0x
   verbatim(gnuace,local) {
     CPPFLAGS += -std=c++0x
   }
