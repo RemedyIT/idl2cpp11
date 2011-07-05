@@ -1,7 +1,7 @@
 // -*- MPC -*-
 // $Id$
 
-project(*idl): taoidldefaults {
+project(*struct_idl): taoidldefaults {
   idlflags += -Sp
   IDL_Files {
     Test.idl
@@ -9,9 +9,9 @@ project(*idl): taoidldefaults {
   custom_only = 1
 }
 
-project(*Server): taoserver {
+project(*struct_Server): taoserver {
   exename = server
-  after += *idl
+  after += *struct_idl
   Source_Files {
     Foo.cpp
     server.cpp
