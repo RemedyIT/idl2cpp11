@@ -1,7 +1,7 @@
 // -*- MPC -*-
 // $Id$
 
-project(*Client): taoclient {
+project(*objrefarg_Client): taoclient {
   includes += $(IDL2Cxx0x_ROOT)/src
   libpaths += $(IDL2Cxx0x_ROOT)/lib
   libs += tao_0x
