@@ -1,13 +1,7 @@
 // -*- MPC -*-
 // $Id$
 
-project(*objrefarg_Client): taoclient {
-  includes += $(IDL2Cxx0x_ROOT)/src
-  libpaths += $(IDL2Cxx0x_ROOT)/lib
-  libs += tao_0x
-  verbatim(gnuace,local) {
-    CPPFLAGS += -std=c++0x
-  }
+project(*objrefarg_Client): tao_0x_client {
   Source_Files {
     client.cpp
   }

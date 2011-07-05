@@ -1,13 +1,15 @@
 // -*- MPC -*-
 // $Id$
 
-project(*hello_Server): taoserver {
-  includes += $(IDL2Cxx0x_ROOT)/src
-  libpaths += $(IDL2Cxx0x_ROOT)/lib
-  libs += tao_0x tao_portable_server_0x
-  verbatim(gnuace,local) {
-    CPPFLAGS += -std=c++0x
+project(*hello_Idl): ridl_defaults {
+  IDL_Files {
+    Test.idl
   }
+  custom_only = 1
+}
+
+project(*hello_Server): tao_0x_server {
+  after += *hello_Idl
   Source_Files {
     Hello.cpp
     server.cpp
@@ -20,13 +22,8 @@ project(*hello_Server): taoserver {
   }
 }
 
-project(*hello_Client): taoclient {
-  includes += $(IDL2Cxx0x_ROOT)/src
-  libpaths += $(IDL2Cxx0x_ROOT)/lib
-  libs += tao_0x
-  verbatim(gnuace,local) {
-    CPPFLAGS += -std=c++0x
-  }
+project(*hello_Client): tao_0x_client {
+  after += *hello_Idl
   Source_Files {
     client.cpp
   }
