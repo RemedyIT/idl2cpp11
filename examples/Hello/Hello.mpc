@@ -1,7 +1,7 @@
 // -*- MPC -*-
 // $Id$
 
-project(*Server): taoserver {
+project(*hello_Server): taoserver {
   includes += $(IDL2Cxx0x_ROOT)/src
   libpaths += $(IDL2Cxx0x_ROOT)/lib
   libs += tao_0x tao_portable_server_0x
@@ -20,7 +20,7 @@ project(*Server): taoserver {
   }
 }
 
-project(*Client): taoclient {
+project(*hello_Client): taoclient {
   includes += $(IDL2Cxx0x_ROOT)/src
   libpaths += $(IDL2Cxx0x_ROOT)/lib
   libs += tao_0x
