@@ -42,7 +42,7 @@ module Test
       case dtPoint: Point pointData;
       case dtTrack: Track trackData;
       case dtGlobal: Global globalData;
-      // by default (implicit), empty union
+      // by default, empty union
     };
 
   /// A very simple interface
