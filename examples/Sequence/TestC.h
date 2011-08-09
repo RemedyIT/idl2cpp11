@@ -113,7 +113,7 @@ namespace Test {
     typedef const ref_type* const_ptr_type;
     typedef corba_0x::CORBA::ObjMember_T<Foo_traits, ref_type>  member_type;
 
-    static ptr_type create (const_ptr_type copy_from = 0);
+    static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
   };
@@ -170,7 +170,7 @@ namespace Test {
     : public virtual corba_0x::CORBA::Object_ref<T>
   {
   public:
-    explicit Foo_ref (T *s = 0);
+    explicit Foo_ref (T *s = nullptr);
     Foo_ref (const Foo_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     void operator=(std::nullptr_t t);

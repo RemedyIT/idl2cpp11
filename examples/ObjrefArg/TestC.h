@@ -41,7 +41,7 @@ namespace Test {
     typedef const ref_type* const_ptr_type;
     typedef corba_0x::CORBA::ObjMember_T<Hello_traits, ref_type>  member_type;
 
-    static ptr_type create (const_ptr_type copy_from = 0);
+    static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
   };
@@ -68,7 +68,7 @@ namespace Test {
     typedef const ref_type* const_ptr_type;
     typedef corba_0x::CORBA::ObjMember_T<Hello_Factory_traits, ref_type>  member_type;
 
-    static ptr_type create (const_ptr_type copy_from = 0);
+    static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
   };
@@ -108,7 +108,7 @@ namespace Test {
     : public virtual corba_0x::CORBA::Object_ref<T>
   {
   public:
-    explicit Hello_Factory_ref (T *s = 0);
+    explicit Hello_Factory_ref (T *s = nullptr);
     Hello_Factory_ref (const Hello_Factory_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     void operator=(std::nullptr_t t);
@@ -139,7 +139,7 @@ namespace Test {
     typedef const ref_type* const_ptr_type;
     typedef corba_0x::CORBA::ObjMember_T<Hello_traits, ref_type>  member_type;
 
-    static ptr_type create (const_ptr_type copy_from = 0);
+    static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
   };
@@ -179,7 +179,7 @@ namespace Test {
     : public virtual corba_0x::CORBA::Object_ref<T>
   {
   public:
-    explicit Hello_ref (T *s = 0);
+    explicit Hello_ref (T *s = nullptr);
     Hello_ref (const Hello_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     void operator=(std::nullptr_t t);

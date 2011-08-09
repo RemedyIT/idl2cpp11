@@ -11,8 +11,11 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
+#include "ace/pre.h"
+
 #include "tao/0x/stddef.h"
 #include "tao/0x/corba.h"
+#include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
 
@@ -26,24 +29,13 @@ namespace Test {
 
     // generated from c++/cli_hdr/struct_post.erb
     Simple (void);
+    ~Simple (void) = default;
     Simple (uint8_t o,
             int32_t l,
             std::string s,
             double d,
             bool b,
             char c);
-    Simple (const uint8_t& o,
-            const int32_t& l,
-            const std::string& s,
-            const double& d,
-            const bool& b,
-            const char& c);
-    Simple (uint8_t&& o,
-            int32_t&& l,
-            std::string&& s,
-            double&& d,
-            bool&& b,
-            char&& c);
     Simple& operator= (const Simple& x);
     Simple& operator= (Simple&& x);
 
@@ -91,19 +83,29 @@ namespace Test {
   // generated from StubHeaderWriter#enter_interface
 
   // generated from c++/cli_hdr/interface_fwd.erb
-  #if !defined (_INTF_TEST_FOO_FWD_)
-  #define _INTF_TEST_FOO_FWD_
+#if !defined (_INTF_TEST_FOO_FWD_)
+#define _INTF_TEST_FOO_FWD_
   class Foo_stub;
+  class Foo_skel;
   template <typename T> class Foo_ref;
-  namespace stub_types_
-  {
-    typedef Foo_ref <Foo_stub> Foo;
-  };
-  using stub_types_::Foo;
-
+  template <typename T> class Foo_srvref;
+  typedef Foo_ref <Foo_stub> Foo;
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
-  #endif // !_INTF_TEST_FOO_FWD_
+
+  struct Foo_traits
+  {
+    typedef Foo_stub stub_type;
+    typedef Foo ref_type;
+    typedef ref_type* ptr_type;
+    typedef const ref_type* const_ptr_type;
+    typedef corba_0x::CORBA::ObjMember_T<Foo_traits, ref_type>  member_type;
+
+    static ptr_type create (const_ptr_type copy_from = nullptr);
+    static void destroy (ptr_type p);
+    static void swap (ref_type& r1, ref_type& r2);
+  };
+#endif // !_INTF_TEST_FOO_FWD_
 
   // generated from c++/cli_hdr/interface_pre.erb
   class Foo_stub
@@ -148,11 +150,14 @@ namespace Test {
     : public virtual corba_0x::CORBA::Object_ref<T>
   {
   public:
-    explicit Foo_ref (T *s = 0);
+    explicit Foo_ref (T *s = nullptr);
     Foo_ref (const Foo_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     void operator=(std::nullptr_t t);
     static Foo narrow(corba_0x::CORBA::Object obj);
+
+    typedef Foo_srvref<Foo_skel> servant_type;
+    typedef Foo_skel servant_base_type;
   };
 }; // namespace Test
 
@@ -173,6 +178,8 @@ namespace std {
 #if defined (__TAO_0X_INCLUDE_STUB_PROXY__)
 #include "TestP.h"
 #endif
+
+#include "ace/post.h"
 
 #endif // __RIDL_TESTC_H_INCLUDED__
 

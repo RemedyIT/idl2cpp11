@@ -11,8 +11,10 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
-#include <tao/0x/stddef.h>
-#include <tao/0x/corba.h>
+#include "ace/pre.h"
+
+#include "tao/0x/stddef.h"
+#include "tao/0x/corba.h"
 
 using namespace corba_0x;
 
@@ -38,6 +40,11 @@ namespace std {
 
 #include "TestC.inl"
 
+#if defined (__TAO_0X_INCLUDE_STUB_PROXY__)
+#include "TestP.h"
+#endif
+
+#include "ace/post.h"
 
 #endif // __RIDL_TESTC_H_INCLUDED__
 

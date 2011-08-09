@@ -17,7 +17,7 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-#include "tao/0x/PortableServer/servantbase.h"
+#include "tao/0x/portable_server/servantbase.h"
 
 // generated from ServantHeaderWriter#enter_module
 namespace Test {
@@ -35,9 +35,14 @@ namespace Test {
   protected:
     Hello_skel (void);
 
+    virtual Servant_proxy_ptr get_proxy ();
+
   public:
     /// Useful for template programming.
     typedef Test::Hello stub_type;
+    typedef std::shared_ptr<Hello_skel> reference_type;
+
+    reference_type _reference ();
 
     virtual ~Hello_skel (void);
 
@@ -54,20 +59,25 @@ namespace Test {
     virtual void shutdown (void) = 0;
 
     // generated from c++/srv_hdr/interface_post.erb
-    private:
-      POA::Hello_proxy_ptr hello_proxy_;
-    };
+  private:
+    friend class POA::Hello_proxy;
 
-    template <typename T>
-    class Hello_srvref
-      : public virtual corba_0x::PortableServer::SrvRef_T<T>
-    {
-    public:
-      explicit Hello_srvref (T *s = 0);
-      Hello_srvref (const corba_0x::PortableServer::SrvRef_T<T>& o);
-      operator corba_0x::PortableServer::Servant_ref <corba_0x::PortableServer::Servant_skel> ();
-      void operator=(std::nullptr_t t);
-    };
+    typedef std::weak_ptr<Hello_skel> weak_reference_type;
+    weak_reference_type self_ref_;
+
+    POA::Hello_proxy_ptr hello_proxy_;
+  };
+
+  template <typename T>
+  class Hello_srvref
+    : public virtual corba_0x::PortableServer::SrvRef_T<T>
+  {
+  public:
+    explicit Hello_srvref (T *s = nullptr);
+    Hello_srvref (const corba_0x::PortableServer::SrvRef_T<T>& o);
+    operator corba_0x::PortableServer::Servant_ref <corba_0x::PortableServer::Servant_skel> ();
+    void operator=(std::nullptr_t t);
+  };
 }; // namespace Test
 
 

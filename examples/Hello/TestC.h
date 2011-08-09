@@ -11,8 +11,11 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
-#include <tao/0x/stddef.h>
-#include <tao/0x/corba.h>
+#include "ace/pre.h"
+
+#include "tao/0x/stddef.h"
+#include "tao/0x/corba.h"
+#include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
 
@@ -22,12 +25,29 @@ namespace Test {
   // generated from StubHeaderWriter#enter_interface
 
   // generated from c++/cli_hdr/interface_fwd.erb
+#if !defined (_INTF_TEST_HELLO_FWD_)
+#define _INTF_TEST_HELLO_FWD_
   class Hello_stub;
+  class Hello_skel;
   template <typename T> class Hello_ref;
+  template <typename T> class Hello_srvref;
   typedef Hello_ref <Hello_stub> Hello;
-
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
+
+  struct Hello_traits
+  {
+    typedef Hello_stub stub_type;
+    typedef Hello ref_type;
+    typedef ref_type* ptr_type;
+    typedef const ref_type* const_ptr_type;
+    typedef corba_0x::CORBA::ObjMember_T<Hello_traits, ref_type>  member_type;
+
+    static ptr_type create (const_ptr_type copy_from = nullptr);
+    static void destroy (ptr_type p);
+    static void swap (ref_type& r1, ref_type& r2);
+  };
+#endif // !_INTF_TEST_HELLO_FWD_
 
   // generated from c++/cli_hdr/interface_pre.erb
   class Hello_stub
@@ -45,8 +65,8 @@ namespace Test {
     void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
-  protected:
     explicit Hello_stub (Hello_proxy_ptr p);
+  protected:
     static Hello_stub* narrow (corba_0x::CORBA::Object_stub* obj);
 
   private:
@@ -54,7 +74,6 @@ namespace Test {
     Hello_stub(const Hello_stub&) = delete;
     Hello_stub& operator=(const Hello_stub&) = delete;
     Hello_proxy_ptr hello_proxy_;
-    static const std::string repo_id_;
   }; // Hello_stub
 
 
@@ -64,11 +83,14 @@ namespace Test {
     : public virtual corba_0x::CORBA::Object_ref<T>
   {
   public:
-    explicit Hello_ref (T *s = 0);
+    explicit Hello_ref (T *s = nullptr);
     Hello_ref (const Hello_ref<T>& o);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     void operator=(std::nullptr_t t);
     static Hello narrow(corba_0x::CORBA::Object obj);
+
+    typedef Hello_srvref<Hello_skel> servant_type;
+    typedef Hello_skel servant_base_type;
   };
 }; // namespace Test
 
@@ -82,6 +104,8 @@ namespace std {
 #if defined (__TAO_0X_INCLUDE_STUB_PROXY__)
 #include "TestP.h"
 #endif
+
+#include "ace/post.h"
 
 #endif // __RIDL_TESTC_H_INCLUDED__
 
