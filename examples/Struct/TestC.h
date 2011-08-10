@@ -30,6 +30,8 @@ namespace Test {
     // generated from c++/cli_hdr/struct_post.erb
     Simple (void);
     ~Simple (void) = default;
+    Simple (const Simple&) = default;
+    Simple (Simple&&) = default;
     Simple (uint8_t o,
             int32_t l,
             std::string s,

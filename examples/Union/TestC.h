@@ -27,6 +27,8 @@ public:
   // generated from c++/cli_hdr/struct_post.erb
   Global (void);
   ~Global (void) = default;
+  Global (const Global&) = default;
+  Global (Global&&) = default;
   Global (int32_t x);
   Global& operator= (const Global& x);
   Global& operator= (Global&& x);
@@ -65,6 +67,8 @@ namespace Test {
     // generated from c++/cli_hdr/struct_post.erb
     Point (void);
     ~Point (void) = default;
+    Point (const Point&) = default;
+    Point (Point&&) = default;
     Point (int32_t x,
            int32_t y);
     Point& operator= (const Point& x);
@@ -95,6 +99,8 @@ namespace Test {
     // generated from c++/cli_hdr/struct_post.erb
     Track (void);
     ~Track (void) = default;
+    Track (const Track&) = default;
+    Track (Track&&) = default;
     Track (int32_t id,
            Test::Point p);
     Track& operator= (const Track& x);
