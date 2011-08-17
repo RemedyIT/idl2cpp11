@@ -5,6 +5,11 @@
 /// Put the interfaces in a module, to avoid global namespace pollution
 module Test
 {
+  struct Variable
+  {
+    string name;
+  };
+
   struct Simple
   {
     octet   o;
@@ -19,13 +24,13 @@ module Test
   interface Foo
   {
     boolean pass_struct (in Simple s);
-    
+
     Simple return_struct ();
-    
+
     boolean get_struct (out Simple s);
-    
+
     boolean update_struct (inout Simple s);
-    
+
     /// A method to shutdown the ORB
     /**
      * This method is used to simplify the test shutdown process

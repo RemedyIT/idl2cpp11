@@ -23,6 +23,31 @@ using namespace corba_0x;
 namespace Test {
 
   // generated from c++/cli_hdr/struct_pre.erb
+  class Variable
+  {
+  public:
+
+    // generated from c++/cli_hdr/struct_post.erb
+    Variable (void);
+    ~Variable (void) = default;
+    Variable (const Variable&) = default;
+    Variable (Variable&&) = default;
+    Variable (std::string name);
+    Variable& operator= (const Variable& x);
+    Variable& operator= (Variable&& x);
+
+    void name (const std::string& _name);
+    void name (std::string&& _name);
+    const std::string& name (void) const;
+    std::string& name (void);
+
+    void swap (Variable& s);
+
+  private:
+    std::string name_;
+  }; // Variable
+
+  // generated from c++/cli_hdr/struct_pre.erb
   class Simple
   {
   public:
@@ -166,6 +191,13 @@ namespace Test {
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
+
+  // generated from c++/cli_hdr/struct_std.erb
+  template <>
+  inline void swap (Test::Variable& m1, Test::Variable& m2)
+  {
+    m1.swap (m2);
+  }
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
