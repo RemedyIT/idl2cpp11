@@ -32,12 +32,12 @@ namespace Test {
     ~Simple (void) = default;
     Simple (const Simple&) = default;
     Simple (Simple&&) = default;
-    Simple (uint8_t o,
-            int32_t l,
-            std::string s,
-            double d,
-            bool b,
-            char c);
+    explicit Simple (uint8_t o,
+                     int32_t l,
+                     std::string s,
+                     double d,
+                     bool b,
+                     char c);
     Simple& operator= (const Simple& x);
     Simple& operator= (Simple&& x);
 

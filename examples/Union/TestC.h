@@ -29,7 +29,7 @@ public:
   ~Global (void) = default;
   Global (const Global&) = default;
   Global (Global&&) = default;
-  Global (int32_t x);
+  explicit Global (int32_t x);
   Global& operator= (const Global& x);
   Global& operator= (Global&& x);
 
@@ -69,8 +69,8 @@ namespace Test {
     ~Point (void) = default;
     Point (const Point&) = default;
     Point (Point&&) = default;
-    Point (int32_t x,
-           int32_t y);
+    explicit Point (int32_t x,
+                    int32_t y);
     Point& operator= (const Point& x);
     Point& operator= (Point&& x);
 
@@ -101,8 +101,8 @@ namespace Test {
     ~Track (void) = default;
     Track (const Track&) = default;
     Track (Track&&) = default;
-    Track (int32_t id,
-           Test::Point p);
+    explicit Track (int32_t id,
+                    Test::Point p);
     Track& operator= (const Track& x);
     Track& operator= (Track&& x);
 

@@ -9,5 +9,4 @@ module Test
   {
     void do_something ();
   };
-
 };

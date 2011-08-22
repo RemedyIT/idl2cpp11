@@ -15,6 +15,7 @@
 
 #include "tao/0x/stddef.h"
 #include "tao/0x/corba.h"
+#include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
 
@@ -82,6 +83,77 @@ namespace Test {
   constexpr TCounter double_count = (Test::count * 2);
 }; // namespace Test
 
+
+// generated from StubHeaderWriter#enter_interface
+
+// generated from c++/cli_hdr/interface_fwd.erb
+#if !defined (_INTF_A_FWD_)
+#define _INTF_A_FWD_
+class A_stub;
+class A_skel;
+template <typename T> class A_ref;
+template <typename T> class A_srvref;
+typedef A_ref <A_stub> A;
+class A_proxy;
+typedef A_proxy* A_proxy_ptr;
+
+struct A_traits
+{
+  typedef A_stub stub_type;
+  typedef A ref_type;
+  typedef ref_type* ptr_type;
+  typedef const ref_type* const_ptr_type;
+  typedef corba_0x::CORBA::ObjMember_T<A_traits, ref_type>  member_type;
+
+  static ptr_type create (const_ptr_type copy_from = nullptr);
+  static void destroy (ptr_type p);
+  static void swap (ref_type& r1, ref_type& r2);
+};
+#endif // !_INTF_A_FWD_
+
+// generated from c++/cli_hdr/interface_pre.erb
+class A_stub
+  : public virtual corba_0x::CORBA::Object_stub
+{
+public:
+  friend class A_ref <A_stub>;
+
+  virtual const std::string& _interface_repository_id () const;
+
+  // generated from StubHeaderWriter#visit_const
+  static constexpr float pi = 3.14159;
+
+  // generated from c++/cli_hdr/interface_post.erb
+  explicit A_stub (A_proxy_ptr p);
+protected:
+  static A_stub* narrow (corba_0x::CORBA::Object_stub* obj);
+
+private:
+  A_stub (void) = delete;
+  A_stub(const A_stub&) = delete;
+  A_stub& operator=(const A_stub&) = delete;
+  A_proxy_ptr a_proxy_;
+}; // A_stub
+
+
+// generated from c++/cli_hdr/interface_objref.erb
+template <typename T>
+class A_ref
+  : public virtual corba_0x::CORBA::Object_ref<T>
+{
+public:
+  explicit A_ref (T *s = nullptr);
+  A_ref (const A_ref<T>& o);
+  operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
+  void operator=(std::nullptr_t t);
+  static A narrow(corba_0x::CORBA::Object obj);
+
+  typedef A_srvref<A_skel> servant_type;
+  typedef A_skel servant_base_type;
+
+  // generated from StubHeaderObjrefWriter#visit_const
+  static constexpr float pi = T::pi;
+};
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

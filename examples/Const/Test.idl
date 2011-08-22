@@ -26,3 +26,8 @@ module Test
   const TName name = "wilco";
   const TCounter double_count = count * 2;
 };
+
+interface A
+{
+  const float pi = 3.14159;
+};

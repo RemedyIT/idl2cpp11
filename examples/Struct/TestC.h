@@ -32,7 +32,7 @@ namespace Test {
     ~Variable (void) = default;
     Variable (const Variable&) = default;
     Variable (Variable&&) = default;
-    Variable (std::string name);
+    explicit Variable (std::string name);
     Variable& operator= (const Variable& x);
     Variable& operator= (Variable&& x);
 
@@ -57,12 +57,12 @@ namespace Test {
     ~Simple (void) = default;
     Simple (const Simple&) = default;
     Simple (Simple&&) = default;
-    Simple (uint8_t o,
-            int32_t l,
-            std::string s,
-            double d,
-            bool b,
-            char c);
+    explicit Simple (uint8_t o,
+                     int32_t l,
+                     std::string s,
+                     double d,
+                     bool b,
+                     char c);
     Simple& operator= (const Simple& x);
     Simple& operator= (Simple&& x);
 
