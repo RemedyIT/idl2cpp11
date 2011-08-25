@@ -1,0 +1,15 @@
+//
+// $Id$
+//
+
+/// Put the interfaces in a module, to avoid global namespace pollution
+module Test
+{
+  typedef float F[10];
+  typedef string V[10];
+  typedef string M[1][2][3];
+
+  interface Foo {
+    void op(in F p1, out V p2, inout M p3);
+  };
+};
