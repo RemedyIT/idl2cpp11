@@ -16,6 +16,7 @@
 #include "tao/0x/stddef.h"
 #include "tao/0x/corba.h"
 #include "tao/0x/system_exception.h"
+#include "tao/0x/orb.h"
 #include "tao/0x/user_exception.h"
 #include "tao/0x/object_member_t.h"
 
@@ -34,9 +35,6 @@ namespace Test {
   
     virtual void _raise (void) const;
     
-    static FooEx * _downcast (corba_0x::CORBA::Exception * x);
-    static FooEx const * _downcast (corba_0x::CORBA::Exception const * x);
-  
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
   
     virtual void _tao_decode (TAO_InputCDR &cdr);
@@ -72,9 +70,6 @@ namespace Test {
   
     virtual void _raise (void) const;
     
-    static BooEx * _downcast (corba_0x::CORBA::Exception * x);
-    static BooEx const * _downcast (corba_0x::CORBA::Exception const * x);
-  
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
   
     virtual void _tao_decode (TAO_InputCDR &cdr);

@@ -16,6 +16,7 @@
 #include "tao/0x/stddef.h"
 #include "tao/0x/corba.h"
 #include "tao/0x/system_exception.h"
+#include "tao/0x/orb.h"
 #include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
