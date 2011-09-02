@@ -15,6 +15,7 @@
 
 #include "tao/0x/stddef.h"
 #include "tao/0x/corba.h"
+#include "tao/0x/system_exception.h"
 #include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
@@ -255,14 +256,16 @@ namespace Test {
 
   // generated from c++/cli_hdr/interface_objref.erb
   template <typename T>
-  class Foo_ref
-    : public virtual corba_0x::CORBA::Object_ref<T>
+  class Foo_ref : public corba_0x::CORBA::ObjRef_T<T>
   {
   public:
     explicit Foo_ref (T *s = nullptr);
-    Foo_ref (const Foo_ref<T>& o);
-    operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
+    Foo_ref (std::shared_ptr <T> &t);
+    template<typename _Tp1, typename = typename
+      std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
+      Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
     void operator=(std::nullptr_t t);
+    operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     static Foo narrow(corba_0x::CORBA::Object obj);
 
     typedef Foo_srvref<Foo_skel> servant_type;
