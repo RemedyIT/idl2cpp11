@@ -56,6 +56,8 @@ namespace Test {
 
     virtual const std::string& _interface_repository_id () const;
 
+    virtual bool _is_a (const std::string& local_type_id);
+
     // generated from c++/cli_hdr/operation.erb
     virtual void do_something (void) = 0;
 
@@ -82,7 +84,7 @@ namespace Test {
       Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::LocalObject_ref <corba_0x::CORBA::LocalObject_stub> ();
-    static Foo narrow(corba_0x::CORBA::Object obj);
+    static Foo_ref<T> narrow(corba_0x::CORBA::Object obj);
   };
 }; // namespace Test
 

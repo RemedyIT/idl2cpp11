@@ -24,21 +24,21 @@ using namespace corba_0x;
 
 // generated from StubHeaderWriter#enter_module
 namespace Test {
-  
+
   // generated from c++/cli_hdr/except_pre.erb
   class FooEx
    : public corba_0x::CORBA::UserException
   {
   public:
-  
+
     virtual const char* what() const throw ();
-  
+
     virtual void _raise (void) const;
     
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-  
+
     virtual void _tao_decode (TAO_InputCDR &cdr);
-  
+
     /// Deep copy
     virtual corba_0x::CORBA::Exception *_tao_duplicate (void) const;  
 
@@ -59,21 +59,21 @@ namespace Test {
   private:
     std::string message_;
   }; // FooEx
-  
+
   // generated from c++/cli_hdr/except_pre.erb
   class BooEx
    : public corba_0x::CORBA::UserException
   {
   public:
-  
+
     virtual const char* what() const throw ();
-  
+
     virtual void _raise (void) const;
     
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-  
+
     virtual void _tao_decode (TAO_InputCDR &cdr);
-  
+
     /// Deep copy
     virtual corba_0x::CORBA::Exception *_tao_duplicate (void) const;  
 
@@ -147,10 +147,10 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
     explicit Foo_stub (Foo_proxy_ptr p);
   protected:
+    Foo_stub (void);
     static Foo_stub* narrow (corba_0x::CORBA::Object_stub* obj);
 
   private:
-    Foo_stub (void) = delete;
     Foo_stub(const Foo_stub&) = delete;
     Foo_stub& operator=(const Foo_stub&) = delete;
     Foo_proxy_ptr foo_proxy_;
@@ -169,7 +169,7 @@ namespace Test {
       Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    static Foo narrow(corba_0x::CORBA::Object obj);
+    static Foo_ref<T> narrow(corba_0x::CORBA::Object obj);
 
     typedef Foo_srvref<Foo_skel> servant_type;
     typedef Foo_skel servant_base_type;

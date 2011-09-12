@@ -128,10 +128,10 @@ public:
   // generated from c++/cli_hdr/interface_post.erb
   explicit A_stub (A_proxy_ptr p);
 protected:
+  A_stub (void);
   static A_stub* narrow (corba_0x::CORBA::Object_stub* obj);
 
 private:
-  A_stub (void) = delete;
   A_stub(const A_stub&) = delete;
   A_stub& operator=(const A_stub&) = delete;
   A_proxy_ptr a_proxy_;
@@ -150,7 +150,7 @@ public:
     A_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
   void operator=(std::nullptr_t t);
   operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-  static A narrow(corba_0x::CORBA::Object obj);
+  static A_ref<T> narrow(corba_0x::CORBA::Object obj);
 
   typedef A_srvref<A_skel> servant_type;
   typedef A_skel servant_base_type;

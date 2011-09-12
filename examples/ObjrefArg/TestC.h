@@ -94,10 +94,10 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
     explicit Hello_Factory_stub (Hello_Factory_proxy_ptr p);
   protected:
+    Hello_Factory_stub (void);
     static Hello_Factory_stub* narrow (corba_0x::CORBA::Object_stub* obj);
 
   private:
-    Hello_Factory_stub (void) = delete;
     Hello_Factory_stub(const Hello_Factory_stub&) = delete;
     Hello_Factory_stub& operator=(const Hello_Factory_stub&) = delete;
     Hello_Factory_proxy_ptr hello_factory_proxy_;
@@ -116,7 +116,7 @@ namespace Test {
       Hello_Factory_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    static Hello_Factory narrow(corba_0x::CORBA::Object obj);
+    static Hello_Factory_ref<T> narrow(corba_0x::CORBA::Object obj);
 
     typedef Hello_Factory_srvref<Hello_Factory_skel> servant_type;
     typedef Hello_Factory_skel servant_base_type;
@@ -167,10 +167,10 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
     explicit Hello_stub (Hello_proxy_ptr p);
   protected:
+    Hello_stub (void);
     static Hello_stub* narrow (corba_0x::CORBA::Object_stub* obj);
 
   private:
-    Hello_stub (void) = delete;
     Hello_stub(const Hello_stub&) = delete;
     Hello_stub& operator=(const Hello_stub&) = delete;
     Hello_proxy_ptr hello_proxy_;
@@ -189,7 +189,7 @@ namespace Test {
       Hello_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    static Hello narrow(corba_0x::CORBA::Object obj);
+    static Hello_ref<T> narrow(corba_0x::CORBA::Object obj);
 
     typedef Hello_srvref<Hello_skel> servant_type;
     typedef Hello_skel servant_base_type;
