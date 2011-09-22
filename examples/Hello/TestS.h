@@ -25,8 +25,8 @@ namespace Test {
   // generated from c++/srv_hdr/interface_pre.erb
   namespace POA
   {
-    class Hello_proxy;
-    typedef Hello_proxy* Hello_proxy_ptr;
+    class Hello_srvproxy;
+    typedef Hello_srvproxy* Hello_srvproxy_ptr;
   }
 
   class Hello_skel
@@ -60,12 +60,9 @@ namespace Test {
 
     // generated from c++/srv_hdr/interface_post.erb
   private:
-    friend class POA::Hello_proxy;
+    friend class POA::Hello_srvproxy;
 
-    typedef std::weak_ptr<Hello_skel> weak_reference_type;
-    weak_reference_type self_ref_;
-
-    POA::Hello_proxy_ptr hello_proxy_;
+    POA::Hello_srvproxy_ptr hello_srvproxy_;
   };
 
   template <typename T>

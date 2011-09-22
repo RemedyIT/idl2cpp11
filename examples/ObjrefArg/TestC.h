@@ -17,7 +17,6 @@
 #include "tao/0x/corba.h"
 #include "tao/0x/system_exception.h"
 #include "tao/0x/orb.h"
-#include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
 
@@ -41,11 +40,13 @@ namespace Test {
     typedef Hello ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::CORBA::ObjMember_T<Hello_traits, ref_type>  member_type;
+    typedef corba_0x::ObjVar_T<Hello_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
+    static void move (ref_type& r1, ref_type& r2);
+    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_HELLO_FWD_
 
@@ -68,11 +69,13 @@ namespace Test {
     typedef Hello_Factory ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::CORBA::ObjMember_T<Hello_Factory_traits, ref_type>  member_type;
+    typedef corba_0x::ObjVar_T<Hello_Factory_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
+    static void move (ref_type& r1, ref_type& r2);
+    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_HELLO_FACTORY_FWD_
 
@@ -86,7 +89,7 @@ namespace Test {
     virtual const std::string& _interface_repository_id () const;
 
     // generated from c++/cli_hdr/operation.erb
-    Test::Hello get_hello (void);
+    Test::Hello_traits::var_type get_hello (void);
 
     // generated from c++/cli_hdr/operation.erb
     void get_hello_2 (Test::Hello& hello_obj);
@@ -111,9 +114,13 @@ namespace Test {
   public:
     explicit Hello_Factory_ref (T *s = nullptr);
     Hello_Factory_ref (std::shared_ptr <T> &t);
+    
     template<typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-      Hello_Factory_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
+    Hello_Factory_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
+    template<bool VAR = true, typename _Tp1, typename = typename
+      std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
+    Hello_Factory_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     static Hello_Factory_ref<T> narrow(corba_0x::CORBA::Object obj);
@@ -141,11 +148,13 @@ namespace Test {
     typedef Hello ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::CORBA::ObjMember_T<Hello_traits, ref_type>  member_type;
+    typedef corba_0x::ObjVar_T<Hello_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
+    static void move (ref_type& r1, ref_type& r2);
+    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_HELLO_FWD_
 
@@ -184,9 +193,13 @@ namespace Test {
   public:
     explicit Hello_ref (T *s = nullptr);
     Hello_ref (std::shared_ptr <T> &t);
+    
     template<typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-      Hello_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
+    Hello_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
+    template<bool VAR = true, typename _Tp1, typename = typename
+      std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
+    Hello_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     static Hello_ref<T> narrow(corba_0x::CORBA::Object obj);

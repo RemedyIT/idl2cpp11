@@ -18,7 +18,6 @@
 #include "tao/0x/system_exception.h"
 #include "tao/0x/orb.h"
 #include "tao/0x/user_exception.h"
-#include "tao/0x/object_member_t.h"
 
 using namespace corba_0x;
 
@@ -114,11 +113,13 @@ namespace Test {
     typedef Foo ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::CORBA::ObjMember_T<Foo_traits, ref_type>  member_type;
+    typedef corba_0x::ObjVar_T<Foo_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
+    static void move (ref_type& r1, ref_type& r2);
+    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_FOO_FWD_
 
@@ -164,9 +165,13 @@ namespace Test {
   public:
     explicit Foo_ref (T *s = nullptr);
     Foo_ref (std::shared_ptr <T> &t);
+    
     template<typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-      Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> (obj.get()) {};
+    Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
+    template<bool VAR = true, typename _Tp1, typename = typename
+      std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
+    Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
     operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
     static Foo_ref<T> narrow(corba_0x::CORBA::Object obj);
