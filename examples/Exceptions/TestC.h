@@ -13,20 +13,20 @@
 
 #include "ace/pre.h"
 
-#include "tao/0x/stddef.h"
-#include "tao/0x/corba.h"
-#include "tao/0x/system_exception.h"
-#include "tao/0x/orb.h"
-#include "tao/0x/user_exception.h"
+#include "tao/x11/stddef.h"
+#include "tao/x11/corba.h"
+#include "tao/x11/system_exception.h"
+#include "tao/x11/orb.h"
+#include "tao/x11/user_exception.h"
 
-using namespace corba_0x;
+using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
 namespace Test {
 
   // generated from c++/cli_hdr/except_pre.erb
   class FooEx
-   : public corba_0x::CORBA::UserException
+   : public TAOX11_NAMESPACE::CORBA::UserException
   {
   public:
 
@@ -39,7 +39,7 @@ namespace Test {
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
     /// Deep copy
-    virtual corba_0x::CORBA::Exception *_tao_duplicate (void) const;  
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;  
 
     // generated from c++/cli_hdr/except_post.erb
     FooEx (void);
@@ -61,7 +61,7 @@ namespace Test {
 
   // generated from c++/cli_hdr/except_pre.erb
   class BooEx
-   : public corba_0x::CORBA::UserException
+   : public TAOX11_NAMESPACE::CORBA::UserException
   {
   public:
 
@@ -74,7 +74,7 @@ namespace Test {
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
     /// Deep copy
-    virtual corba_0x::CORBA::Exception *_tao_duplicate (void) const;  
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;  
 
     // generated from c++/cli_hdr/except_post.erb
     BooEx (void);
@@ -113,19 +113,19 @@ namespace Test {
     typedef Foo ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::ObjVar_T<Foo_traits>  var_type;
+    typedef TAOX11_NAMESPACE::ObjVar_T<Foo_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
     static void move (ref_type& r1, ref_type& r2);
-    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
+    static const TAOX11_NAMESPACE::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_FOO_FWD_
 
   // generated from c++/cli_hdr/interface_pre.erb
   class Foo_stub
-    : public virtual corba_0x::CORBA::Object_stub
+    : public virtual TAOX11_NAMESPACE::CORBA::Object_stub
   {
   public:
     friend class Foo_ref <Foo_stub>;
@@ -148,8 +148,9 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
     explicit Foo_stub (Foo_proxy_ptr p);
   protected:
+    explicit Foo_stub (Foo_proxy_ptr p, bool);
     Foo_stub (void);
-    static Foo_stub* narrow (corba_0x::CORBA::Object_stub* obj);
+    static Foo_stub* narrow (TAOX11_NAMESPACE::CORBA::Object_stub* obj);
 
   private:
     Foo_stub(const Foo_stub&) = delete;
@@ -160,7 +161,7 @@ namespace Test {
 
   // generated from c++/cli_hdr/interface_objref.erb
   template <typename T>
-  class Foo_ref : public corba_0x::CORBA::ObjRef_T<T>
+  class Foo_ref : public TAOX11_NAMESPACE::CORBA::ObjRef_T<T>
   {
   public:
     explicit Foo_ref (T *s = nullptr);
@@ -168,13 +169,13 @@ namespace Test {
     
     template<typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-    Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
+    Foo_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
     template<bool VAR = true, typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
-    Foo_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
+    Foo_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
-    operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    static Foo_ref<T> narrow(corba_0x::CORBA::Object obj);
+    operator TAOX11_NAMESPACE::CORBA::Object_ref <TAOX11_NAMESPACE::CORBA::Object_stub> ();
+    static Foo_ref<T> narrow(TAOX11_NAMESPACE::CORBA::Object obj);
 
     typedef Foo_srvref<Foo_skel> servant_type;
     typedef Foo_skel servant_base_type;
@@ -188,7 +189,7 @@ namespace std {
 
 #include "TestC.inl"
 
-#if defined (__TAO_0X_INCLUDE_STUB_PROXY__)
+#if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "TestP.h"
 #endif
 

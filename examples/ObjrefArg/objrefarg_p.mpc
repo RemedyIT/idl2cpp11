@@ -8,7 +8,7 @@ project(*gen_idl): ridl_defaults {
   custom_only = 1
 }
 
-project(*objrefarg_Client): tao_0x_client {
+project(*objrefarg_Client): taox11_client {
   after += *gen_idl
   Source_Files {
     client.cpp

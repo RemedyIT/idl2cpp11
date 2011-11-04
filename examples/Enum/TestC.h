@@ -13,12 +13,12 @@
 
 #include "ace/pre.h"
 
-#include "tao/0x/stddef.h"
-#include "tao/0x/corba.h"
-#include "tao/0x/system_exception.h"
-#include "tao/0x/orb.h"
+#include "tao/x11/stddef.h"
+#include "tao/x11/corba.h"
+#include "tao/x11/system_exception.h"
+#include "tao/x11/orb.h"
 
-using namespace corba_0x;
+using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
 namespace Test {
@@ -42,7 +42,7 @@ namespace std {
 
 #include "TestC.inl"
 
-#if defined (__TAO_0X_INCLUDE_STUB_PROXY__)
+#if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "TestP.h"
 #endif
 

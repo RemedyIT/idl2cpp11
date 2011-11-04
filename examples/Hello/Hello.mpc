@@ -8,7 +8,7 @@ project(*hello_Idl): ridl_defaults {
   custom_only = 1
 }
 
-project(*hello_Server): tao_0x_server {
+project(*hello_Server): taox11_server {
   after += *hello_Idl
   Source_Files {
     Hello.cpp
@@ -22,7 +22,7 @@ project(*hello_Server): tao_0x_server {
   }
 }
 
-project(*hello_Client): tao_0x_client {
+project(*hello_Client): taox11_client {
   after += *hello_Idl
   Source_Files {
     client.cpp

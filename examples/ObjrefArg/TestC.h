@@ -13,12 +13,12 @@
 
 #include "ace/pre.h"
 
-#include "tao/0x/stddef.h"
-#include "tao/0x/corba.h"
-#include "tao/0x/system_exception.h"
-#include "tao/0x/orb.h"
+#include "tao/x11/stddef.h"
+#include "tao/x11/corba.h"
+#include "tao/x11/system_exception.h"
+#include "tao/x11/orb.h"
 
-using namespace corba_0x;
+using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
 namespace Test {
@@ -40,13 +40,13 @@ namespace Test {
     typedef Hello ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::ObjVar_T<Hello_traits>  var_type;
+    typedef TAOX11_NAMESPACE::ObjVar_T<Hello_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
     static void move (ref_type& r1, ref_type& r2);
-    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
+    static const TAOX11_NAMESPACE::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_HELLO_FWD_
 
@@ -69,19 +69,19 @@ namespace Test {
     typedef Hello_Factory ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::ObjVar_T<Hello_Factory_traits>  var_type;
+    typedef TAOX11_NAMESPACE::ObjVar_T<Hello_Factory_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
     static void move (ref_type& r1, ref_type& r2);
-    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
+    static const TAOX11_NAMESPACE::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_HELLO_FACTORY_FWD_
 
   // generated from c++/cli_hdr/interface_pre.erb
   class Hello_Factory_stub
-    : public virtual corba_0x::CORBA::Object_stub
+    : public virtual TAOX11_NAMESPACE::CORBA::Object_stub
   {
   public:
     friend class Hello_Factory_ref <Hello_Factory_stub>;
@@ -97,8 +97,9 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
     explicit Hello_Factory_stub (Hello_Factory_proxy_ptr p);
   protected:
+    explicit Hello_Factory_stub (Hello_Factory_proxy_ptr p, bool);
     Hello_Factory_stub (void);
-    static Hello_Factory_stub* narrow (corba_0x::CORBA::Object_stub* obj);
+    static Hello_Factory_stub* narrow (TAOX11_NAMESPACE::CORBA::Object_stub* obj);
 
   private:
     Hello_Factory_stub(const Hello_Factory_stub&) = delete;
@@ -109,7 +110,7 @@ namespace Test {
 
   // generated from c++/cli_hdr/interface_objref.erb
   template <typename T>
-  class Hello_Factory_ref : public corba_0x::CORBA::ObjRef_T<T>
+  class Hello_Factory_ref : public TAOX11_NAMESPACE::CORBA::ObjRef_T<T>
   {
   public:
     explicit Hello_Factory_ref (T *s = nullptr);
@@ -117,13 +118,13 @@ namespace Test {
     
     template<typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-    Hello_Factory_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
+    Hello_Factory_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
     template<bool VAR = true, typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
-    Hello_Factory_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
+    Hello_Factory_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
-    operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    static Hello_Factory_ref<T> narrow(corba_0x::CORBA::Object obj);
+    operator TAOX11_NAMESPACE::CORBA::Object_ref <TAOX11_NAMESPACE::CORBA::Object_stub> ();
+    static Hello_Factory_ref<T> narrow(TAOX11_NAMESPACE::CORBA::Object obj);
 
     typedef Hello_Factory_srvref<Hello_Factory_skel> servant_type;
     typedef Hello_Factory_skel servant_base_type;
@@ -148,19 +149,19 @@ namespace Test {
     typedef Hello ref_type;
     typedef ref_type* ptr_type;
     typedef const ref_type* const_ptr_type;
-    typedef corba_0x::ObjVar_T<Hello_traits>  var_type;
+    typedef TAOX11_NAMESPACE::ObjVar_T<Hello_traits>  var_type;
 
     static ptr_type create (const_ptr_type copy_from = nullptr);
     static void destroy (ptr_type p);
     static void swap (ref_type& r1, ref_type& r2);
     static void move (ref_type& r1, ref_type& r2);
-    static const corba_0x::Object_proxy& to_proxy (const ref_type& p);
+    static const TAOX11_NAMESPACE::Object_proxy& to_proxy (const ref_type& p);
   };
 #endif // !_INTF_TEST_HELLO_FWD_
 
   // generated from c++/cli_hdr/interface_pre.erb
   class Hello_stub
-    : public virtual corba_0x::CORBA::Object_stub
+    : public virtual TAOX11_NAMESPACE::CORBA::Object_stub
   {
   public:
     friend class Hello_ref <Hello_stub>;
@@ -176,8 +177,9 @@ namespace Test {
     // generated from c++/cli_hdr/interface_post.erb
     explicit Hello_stub (Hello_proxy_ptr p);
   protected:
+    explicit Hello_stub (Hello_proxy_ptr p, bool);
     Hello_stub (void);
-    static Hello_stub* narrow (corba_0x::CORBA::Object_stub* obj);
+    static Hello_stub* narrow (TAOX11_NAMESPACE::CORBA::Object_stub* obj);
 
   private:
     Hello_stub(const Hello_stub&) = delete;
@@ -188,7 +190,7 @@ namespace Test {
 
   // generated from c++/cli_hdr/interface_objref.erb
   template <typename T>
-  class Hello_ref : public corba_0x::CORBA::ObjRef_T<T>
+  class Hello_ref : public TAOX11_NAMESPACE::CORBA::ObjRef_T<T>
   {
   public:
     explicit Hello_ref (T *s = nullptr);
@@ -196,13 +198,13 @@ namespace Test {
     
     template<typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-    Hello_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
+    Hello_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
     template<bool VAR = true, typename _Tp1, typename = typename
       std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
-    Hello_ref (_Tp1 obj) : corba_0x::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
+    Hello_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
-    operator corba_0x::CORBA::Object_ref <corba_0x::CORBA::Object_stub> ();
-    static Hello_ref<T> narrow(corba_0x::CORBA::Object obj);
+    operator TAOX11_NAMESPACE::CORBA::Object_ref <TAOX11_NAMESPACE::CORBA::Object_stub> ();
+    static Hello_ref<T> narrow(TAOX11_NAMESPACE::CORBA::Object obj);
 
     typedef Hello_srvref<Hello_skel> servant_type;
     typedef Hello_skel servant_base_type;
@@ -216,7 +218,7 @@ namespace std {
 
 #include "TestC.inl"
 
-#if defined (__TAO_0X_INCLUDE_STUB_PROXY__)
+#if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "TestP.h"
 #endif
 

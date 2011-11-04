@@ -17,7 +17,7 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-#include "tao/0x/portable_server/servantbase.h"
+#include "tao/x11/portable_server/servantbase.h"
 
 // generated from ServantHeaderWriter#enter_module
 namespace Test {
@@ -30,10 +30,11 @@ namespace Test {
   }
 
   class Hello_skel
-    : public virtual corba_0x::PortableServer::Servant_skel
+    : public virtual TAOX11_NAMESPACE::PortableServer::Servant_skel
   {
   protected:
     Hello_skel (void);
+    Hello_skel (bool); // for inheritance chains
 
     virtual Servant_proxy_ptr get_proxy ();
 
@@ -67,12 +68,12 @@ namespace Test {
 
   template <typename T>
   class Hello_srvref
-    : public virtual corba_0x::PortableServer::SrvRef_T<T>
+    : public virtual TAOX11_NAMESPACE::PortableServer::SrvRef_T<T>
   {
   public:
     explicit Hello_srvref (T *s = nullptr);
-    Hello_srvref (const corba_0x::PortableServer::SrvRef_T<T>& o);
-    operator corba_0x::PortableServer::Servant_ref <corba_0x::PortableServer::Servant_skel> ();
+    Hello_srvref (const TAOX11_NAMESPACE::PortableServer::SrvRef_T<T>& o);
+    operator TAOX11_NAMESPACE::PortableServer::Servant_ref <TAOX11_NAMESPACE::PortableServer::Servant_skel> ();
     void operator=(std::nullptr_t t);
   };
 }; // namespace Test
