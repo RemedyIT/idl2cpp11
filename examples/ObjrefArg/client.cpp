@@ -1,6 +1,5 @@
 
 #include "TestC.h"
-#include "tao/0x/orb.h"
 
 #include <iostream>
 
