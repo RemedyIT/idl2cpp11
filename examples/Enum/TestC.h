@@ -11,7 +11,7 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
-#include "ace/pre.h"
+#include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
 #include "tao/x11/corba.h"
@@ -40,13 +40,19 @@ namespace Test {
 namespace std {
 }; // std
 
+// generated from c++/cli_hdr/inline.erb
 #include "TestC.inl"
 
+// generated from StubHeaderStdWriter#pre_visit
+namespace std {
+}; // std
+
+// generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "TestP.h"
 #endif
 
-#include "ace/post.h"
+#include /**/ "ace/post.h"
 
 #endif // __RIDL_TESTC_H_INCLUDED__
 
