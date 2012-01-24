@@ -17,6 +17,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/object.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -96,6 +97,9 @@ namespace Test {
       std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
     Hello_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
     void operator=(std::nullptr_t t);
+    void operator=(T *s);
+    void operator=(const Hello_ref<T>& o);
+    void operator=(Hello_ref<T>&& o);
     operator TAOX11_NAMESPACE::CORBA::Object_ref <TAOX11_NAMESPACE::CORBA::Object_stub> ();
     static Hello_ref<T> narrow(TAOX11_NAMESPACE::CORBA::Object obj);
 
