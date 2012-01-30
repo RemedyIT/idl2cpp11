@@ -17,7 +17,7 @@ public:
   Hello (CORBA::ORB orb);
 
   // = The skeleton methods
-  virtual std::string get_string (void);
+  virtual std::string get_string (void) override;
 
   virtual void shutdown (void);
 
