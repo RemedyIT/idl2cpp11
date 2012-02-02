@@ -49,7 +49,7 @@ namespace Test
 
       virtual bool _is_a (const std::string& logical_type_id);
 
-      TAOX11_CORBA::object_reference< Test::Hello> _this (void);
+      TAOX11_CORBA::object_reference< ::Test::Hello> _this (void);
 
       virtual const std::string _interface_repository_id (void) const;
 
@@ -76,10 +76,10 @@ namespace TAOX11_NAMESPACE {
 
     // generated from c++/srv_hdr/interface_servant_traits.erb
     template <>
-    struct servant_traits< Test::Hello>
+    struct servant_traits< ::Test::Hello>
     {
-      typedef Test::POA::Hello             base_type;
-      typedef Test::POA::Hello::_ref_type  ref_type;
+      typedef ::Test::POA::Hello             base_type;
+      typedef ::Test::POA::Hello::_ref_type  ref_type;
     };
   }; // CORBA
 }; // TAOX11_NAMESPACE
