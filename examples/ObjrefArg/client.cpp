@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
   try
     {
-      CORBA::ORB _orb = CORBA::ORB_init (argc, argv);
+      CORBA::object_reference<CORBA::ORB> _orb = CORBA::ORB_init (argc, argv);
 
       if (_orb == nullptr)
       {
@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
         exit (1);
       }
 
-      CORBA::Object obj = _orb->string_to_object ("file://test.ior");
+      CORBA::object_reference<CORBA::Object> obj = _orb->string_to_object ("file://test.ior");
 
       if (obj == nullptr)
       {
@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      Test::Hello_Factory hello_factory = Test::Hello_Factory::narrow (obj);
+      CORBA::object_reference<Test::Hello_Factory> hello_factory = Test::Hello_Factory::narrow (obj);
 
       if (hello_factory == nullptr)
       {
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 
       std::cout << "narrowed Hello_Factory interface" << std::endl;
 
-      Test::Hello hello = hello_factory->get_hello ();
+      CORBA::object_reference<Test::Hello> hello = hello_factory->get_hello ();
 
       if (hello == nullptr)
       {
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 
       std::cout << "hello->get_string () returned " << hello->get_string () << std::endl;
 
-      Test::Hello hello_2;
+      CORBA::object_reference<Test::Hello> hello_2;
       hello_factory->get_hello_2 (hello_2);
 
       if (hello_2 == nullptr)

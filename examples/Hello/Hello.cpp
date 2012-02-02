@@ -1,7 +1,7 @@
 // $Id$
 #include "Hello.h"
 
-Hello::Hello (CORBA::ORB orb)
+Hello::Hello (CORBA::object_reference<CORBA::ORB> orb)
   : orb_ (orb)
 {
 }

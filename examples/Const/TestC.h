@@ -22,7 +22,8 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-namespace Test {
+namespace Test
+{
 
   // generated from StubHeaderWriter#visit_const
   constexpr char ch_val = 'a';
@@ -91,83 +92,66 @@ namespace Test {
 // generated from c++/cli_hdr/interface_fwd.erb
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
-class A_stub;
-class A_skel;
-template <typename T> class A_ref;
-template <typename T> class A_srvref;
-typedef A_ref <A_stub> A;
+class A;
 class A_proxy;
 typedef A_proxy* A_proxy_ptr;
-
-struct A_traits
+namespace POA
 {
-  typedef A_stub stub_type;
-  typedef A ref_type;
-  typedef ref_type* ptr_type;
-  typedef const ref_type* const_ptr_type;
-  typedef TAOX11_NAMESPACE::ObjVar_T<A_traits>  var_type;
-
-  static ptr_type create (const_ptr_type copy_from = nullptr);
-  static void destroy (ptr_type p);
-  static void swap (ref_type& r1, ref_type& r2);
-  static void move (ref_type& r1, ref_type& r2);
-  static const TAOX11_NAMESPACE::Object_proxy& to_proxy (const ref_type& p);
+  class A;
 };
 #endif // !_INTF_A_FWD_
 
+// generated from c++/cli_hdr/interface_object_traits.erb
+namespace TAOX11_NAMESPACE
+{
+  namespace CORBA
+  {
+    template<>
+    void
+    object_traits<A>::destroy (
+        A*);
+    template<>
+    const Object_proxy*
+    object_traits<A>::to_proxy (
+        const object_traits<A>::ref_type&);
+    template<>
+    object_traits<A>::ref_type object_traits<A>::narrow (
+    	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
+  };
+};
+
 // generated from c++/cli_hdr/interface_pre.erb
-class A_stub
-  : public virtual TAOX11_NAMESPACE::CORBA::Object_stub
+class A
+  : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
 public:
-  friend class A_ref <A_stub>;
+  friend struct TAOX11_CORBA::object_traits< A>;
 
-  virtual const std::string& _interface_repository_id () const;
+  typedef TAOX11_CORBA::object_traits< A> _traits_type;
+  typedef TAOX11_CORBA::object_reference< A> _ref_type;
+
+  virtual const std::string& _interface_repository_id () const override;
 
   // generated from StubHeaderWriter#visit_const
   static constexpr float pi = 3.14159;
 
   // generated from c++/cli_hdr/interface_post.erb
-  explicit A_stub (A_proxy_ptr p);
+  static TAOX11_CORBA::object_reference< A> narrow (
+      const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
+  {
+    return TAOX11_CORBA::object_traits< A>::narrow (obj);
+  }
+
+  explicit A (A_proxy_ptr p);
 protected:
-  explicit A_stub (A_proxy_ptr p, bool);
-  A_stub (void);
-  static A_stub* narrow (TAOX11_NAMESPACE::CORBA::Object_stub* obj);
+  explicit A (A_proxy_ptr p, bool);
+  A (void);
 
 private:
-  A_stub(const A_stub&) = delete;
-  A_stub& operator=(const A_stub&) = delete;
+  A(const A&) = delete;
+  A& operator=(const A&) = delete;
   A_proxy_ptr a_proxy_;
-}; // A_stub
-
-
-// generated from c++/cli_hdr/interface_objref.erb
-template <typename T>
-class A_ref : public TAOX11_NAMESPACE::CORBA::ObjRef_T<T>
-{
-public:
-  explicit A_ref (T *s = nullptr);
-  A_ref (std::shared_ptr <T> &t);
-  
-  template<typename _Tp1, typename = typename
-    std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-  A_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
-  template<bool VAR = true, typename _Tp1, typename = typename
-    std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
-  A_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
-  void operator=(std::nullptr_t t);
-  void operator=(T *s);
-  void operator=(const A_ref<T>& o);
-  void operator=(A_ref<T>&& o);
-  operator TAOX11_NAMESPACE::CORBA::Object_ref <TAOX11_NAMESPACE::CORBA::Object_stub> ();
-  static A_ref<T> narrow(TAOX11_NAMESPACE::CORBA::Object obj);
-
-  typedef A_srvref<A_skel> servant_type;
-  typedef A_skel servant_base_type;
-
-  // generated from StubHeaderObjrefWriter#visit_const
-  static constexpr float pi = T::pi;
-};
+}; // A
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

@@ -22,7 +22,8 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-namespace Test {
+namespace Test
+{
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Simple
@@ -101,38 +102,52 @@ namespace Test {
   // generated from c++/cli_hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
-  class Foo_stub;
-  class Foo_skel;
-  template <typename T> class Foo_ref;
-  template <typename T> class Foo_srvref;
-  typedef Foo_ref <Foo_stub> Foo;
+  class Foo;
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
-
-  struct Foo_traits
+  namespace POA
   {
-    typedef Foo_stub stub_type;
-    typedef Foo ref_type;
-    typedef ref_type* ptr_type;
-    typedef const ref_type* const_ptr_type;
-    typedef TAOX11_NAMESPACE::ObjVar_T<Foo_traits>  var_type;
-
-    static ptr_type create (const_ptr_type copy_from = nullptr);
-    static void destroy (ptr_type p);
-    static void swap (ref_type& r1, ref_type& r2);
-    static void move (ref_type& r1, ref_type& r2);
-    static const TAOX11_NAMESPACE::Object_proxy& to_proxy (const ref_type& p);
+    class Foo;
   };
 #endif // !_INTF_TEST_FOO_FWD_
+  // generated from CxxWriterBase#at_global_scope
+}; // Test
+// entering CxxWriterBase#at_global_scope
+
+// generated from c++/cli_hdr/interface_object_traits.erb
+namespace TAOX11_NAMESPACE
+{
+  namespace CORBA
+  {
+    template<>
+    void
+    object_traits<Test::Foo>::destroy (
+        Test::Foo*);
+    template<>
+    const Object_proxy*
+    object_traits<Test::Foo>::to_proxy (
+        const object_traits<Test::Foo>::ref_type&);
+    template<>
+    object_traits<Test::Foo>::ref_type object_traits<Test::Foo>::narrow (
+    	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
+  };
+};
+
+// leaving CxxWriterBase#at_global_scope
+namespace Test
+{
 
   // generated from c++/cli_hdr/interface_pre.erb
-  class Foo_stub
-    : public virtual TAOX11_NAMESPACE::CORBA::Object_stub
+  class Foo
+    : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
   public:
-    friend class Foo_ref <Foo_stub>;
+    friend struct TAOX11_CORBA::object_traits< Foo>;
 
-    virtual const std::string& _interface_repository_id () const;
+    typedef TAOX11_CORBA::object_traits< Foo> _traits_type;
+    typedef TAOX11_CORBA::object_reference< Foo> _ref_type;
+
+    virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
     Test::LongSeq test_long_seq (const Test::LongSeq& sin,
@@ -158,43 +173,22 @@ namespace Test {
     void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
-    explicit Foo_stub (Foo_proxy_ptr p);
+    static TAOX11_CORBA::object_reference< Foo> narrow (
+        const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
+    {
+      return TAOX11_CORBA::object_traits< Foo>::narrow (obj);
+    }
+
+    explicit Foo (Foo_proxy_ptr p);
   protected:
-    explicit Foo_stub (Foo_proxy_ptr p, bool);
-    Foo_stub (void);
-    static Foo_stub* narrow (TAOX11_NAMESPACE::CORBA::Object_stub* obj);
+    explicit Foo (Foo_proxy_ptr p, bool);
+    Foo (void);
 
   private:
-    Foo_stub(const Foo_stub&) = delete;
-    Foo_stub& operator=(const Foo_stub&) = delete;
+    Foo(const Foo&) = delete;
+    Foo& operator=(const Foo&) = delete;
     Foo_proxy_ptr foo_proxy_;
-  }; // Foo_stub
-
-
-  // generated from c++/cli_hdr/interface_objref.erb
-  template <typename T>
-  class Foo_ref : public TAOX11_NAMESPACE::CORBA::ObjRef_T<T>
-  {
-  public:
-    explicit Foo_ref (T *s = nullptr);
-    Foo_ref (std::shared_ptr <T> &t);
-    
-    template<typename _Tp1, typename = typename
-      std::enable_if<std::is_convertible<typename _Tp1::ref_type*, T*>::value>::type>
-    Foo_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj.get_shared (); };
-    template<bool VAR = true, typename _Tp1, typename = typename
-      std::enable_if<std::is_convertible<typename _Tp1::traits::stub_type*, T*>::value>::type>
-    Foo_ref (_Tp1 obj) : TAOX11_NAMESPACE::CORBA::ObjRef_T<T> () { this->stub_ = obj->get_shared (); };
-    void operator=(std::nullptr_t t);
-    void operator=(T *s);
-    void operator=(const Foo_ref<T>& o);
-    void operator=(Foo_ref<T>&& o);
-    operator TAOX11_NAMESPACE::CORBA::Object_ref <TAOX11_NAMESPACE::CORBA::Object_stub> ();
-    static Foo_ref<T> narrow(TAOX11_NAMESPACE::CORBA::Object obj);
-
-    typedef Foo_srvref<Foo_skel> servant_type;
-    typedef Foo_skel servant_base_type;
-  };
+  }; // Foo
 }; // namespace Test
 
 

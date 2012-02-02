@@ -20,64 +20,69 @@
 #include "tao/x11/portable_server/servantbase.h"
 
 // generated from ServantHeaderWriter#enter_module
-namespace Test {
+namespace Test
+{
 
   // generated from c++/srv_hdr/interface_pre.erb
   namespace POA
   {
     class Hello_srvproxy;
     typedef Hello_srvproxy* Hello_srvproxy_ptr;
-  }
 
-  class Hello_skel
-    : public virtual TAOX11_NAMESPACE::PortableServer::Servant_skel
-  {
-  protected:
-    Hello_skel (void);
-    Hello_skel (bool); // for inheritance chains
+    class Hello
+      : public virtual TAOX11_NAMESPACE::PortableServer::Servant
+    {
+    protected:
+      Hello (void);
+      Hello (bool); // for inheritance chains
 
-    virtual Servant_proxy_ptr get_proxy ();
+      virtual Servant_proxy_ptr get_proxy ();
 
-  public:
-    /// Useful for template programming.
-    typedef Test::Hello stub_type;
-    typedef std::shared_ptr<Hello_skel> reference_type;
+    public:
+      typedef TAOX11_CORBA::servant_traits< Hello>    _traits_type;
+      typedef TAOX11_CORBA::servant_reference< Hello>   _ref_type;
+      typedef typename _ref_type::shared_ptr_type   _shared_type;
 
-    reference_type _reference ();
+      _shared_type _reference ();
 
-    virtual ~Hello_skel (void);
+      virtual ~Hello (void);
 
-    virtual bool _is_a (const std::string& logical_type_id);
+      virtual bool _is_a (const std::string& logical_type_id);
 
-    stub_type _this (void);
+      TAOX11_CORBA::object_reference< Test::Hello> _this (void);
 
-    virtual const std::string _interface_repository_id (void) const;
+      virtual const std::string _interface_repository_id (void) const;
 
-    // generated from c++/srv_hdr/operation.erb
-    virtual std::string get_string (void) = 0;
+      // generated from c++/srv_hdr/operation.erb
+      virtual std::string get_string (void) = 0;
 
-    // generated from c++/srv_hdr/operation.erb
-    virtual void shutdown (void) = 0;
+      // generated from c++/srv_hdr/operation.erb
+      virtual void shutdown (void) = 0;
 
-    // generated from c++/srv_hdr/interface_post.erb
-  private:
-    friend class POA::Hello_srvproxy;
+      // generated from c++/srv_hdr/interface_post.erb
+    private:
+      friend class POA::Hello_srvproxy;
 
-    POA::Hello_srvproxy_ptr hello_srvproxy_;
-  };
+      POA::Hello_srvproxy_ptr hello_srvproxy_;
+    };
 
-  template <typename T>
-  class Hello_srvref
-    : public virtual TAOX11_NAMESPACE::PortableServer::SrvRef_T<T>
-  {
-  public:
-    explicit Hello_srvref (T *s = nullptr);
-    Hello_srvref (const TAOX11_NAMESPACE::PortableServer::SrvRef_T<T>& o);
-    operator TAOX11_NAMESPACE::PortableServer::Servant_ref <TAOX11_NAMESPACE::PortableServer::Servant_skel> ();
-    void operator=(std::nullptr_t t);
-  };
+  }; // POA
 }; // namespace Test
 
+
+// generated from ServantHeaderSrvTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace CORBA {
+
+    // generated from c++/srv_hdr/interface_servant_traits.erb
+    template <>
+    struct servant_traits< Test::Hello>
+    {
+      typedef Test::POA::Hello             base_type;
+      typedef Test::POA::Hello::_ref_type  ref_type;
+    };
+  }; // CORBA
+}; // TAOX11_NAMESPACE
 
 #include "TestS.inl"
 

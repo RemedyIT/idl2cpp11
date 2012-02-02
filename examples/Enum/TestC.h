@@ -21,7 +21,8 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-namespace Test {
+namespace Test
+{
 
   // generated from c++/cli_hdr/enum.erb
   enum class EEnum : uint32_t
