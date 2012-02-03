@@ -120,14 +120,14 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Foo>::destroy (
+    object_traits< ::Test::Foo>::destroy (
         Test::Foo*);
     template<>
     const Object_proxy*
-    object_traits<Test::Foo>::to_proxy (
-        const object_traits<Test::Foo>::ref_type&);
+    object_traits< ::Test::Foo>::to_proxy (
+        const object_traits< ::Test::Foo>::ref_type&);
     template<>
-    object_traits<Test::Foo>::ref_type object_traits<Test::Foo>::narrow (
+    object_traits< ::Test::Foo>::ref_type object_traits< ::Test::Foo>::narrow (
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };

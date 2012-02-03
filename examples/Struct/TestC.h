@@ -134,14 +134,14 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Foo>::destroy (
+    object_traits< ::Test::Foo>::destroy (
         Test::Foo*);
     template<>
     const Object_proxy*
-    object_traits<Test::Foo>::to_proxy (
-        const object_traits<Test::Foo>::ref_type&);
+    object_traits< ::Test::Foo>::to_proxy (
+        const object_traits< ::Test::Foo>::ref_type&);
     template<>
-    object_traits<Test::Foo>::ref_type object_traits<Test::Foo>::narrow (
+    object_traits< ::Test::Foo>::ref_type object_traits< ::Test::Foo>::narrow (
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
@@ -163,16 +163,16 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    bool pass_struct (const Test::Simple& s);
+    bool pass_struct (const ::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    Test::Simple return_struct (void);
+    ::Test::Simple return_struct (void);
 
     // generated from c++/cli_hdr/operation.erb
-    bool get_struct (Test::Simple& s);
+    bool get_struct (::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    bool update_struct (Test::Simple& s);
+    bool update_struct (::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
     void shutdown (void);
@@ -202,11 +202,11 @@ namespace std {
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  void swap (Test::Variable& m1, Test::Variable& m2);
+  void swap (::Test::Variable& m1, ::Test::Variable& m2);
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  void swap (Test::Simple& m1, Test::Simple& m2);
+  void swap (::Test::Simple& m1, ::Test::Simple& m2);
 }; // std
 
 // generated from c++/cli_hdr/inline.erb
@@ -217,14 +217,14 @@ namespace std {
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  inline void swap (Test::Variable& m1, Test::Variable& m2)
+  inline void swap (::Test::Variable& m1, ::Test::Variable& m2)
   {
     m1.swap (m2);
   }
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  inline void swap (Test::Simple& m1, Test::Simple& m2)
+  inline void swap (::Test::Simple& m1, ::Test::Simple& m2)
   {
     m1.swap (m2);
   }

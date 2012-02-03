@@ -47,14 +47,14 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Hello>::destroy (
+    object_traits< ::Test::Hello>::destroy (
         Test::Hello*);
     template<>
     const Object_proxy*
-    object_traits<Test::Hello>::to_proxy (
-        const object_traits<Test::Hello>::ref_type&);
+    object_traits< ::Test::Hello>::to_proxy (
+        const object_traits< ::Test::Hello>::ref_type&);
     template<>
-    object_traits<Test::Hello>::ref_type object_traits<Test::Hello>::narrow (
+    object_traits< ::Test::Hello>::ref_type object_traits< ::Test::Hello>::narrow (
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
@@ -87,14 +87,14 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Hello_Factory>::destroy (
+    object_traits< ::Test::Hello_Factory>::destroy (
         Test::Hello_Factory*);
     template<>
     const Object_proxy*
-    object_traits<Test::Hello_Factory>::to_proxy (
-        const object_traits<Test::Hello_Factory>::ref_type&);
+    object_traits< ::Test::Hello_Factory>::to_proxy (
+        const object_traits< ::Test::Hello_Factory>::ref_type&);
     template<>
-    object_traits<Test::Hello_Factory>::ref_type object_traits<Test::Hello_Factory>::narrow (
+    object_traits< ::Test::Hello_Factory>::ref_type object_traits< ::Test::Hello_Factory>::narrow (
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };

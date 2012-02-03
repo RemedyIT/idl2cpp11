@@ -105,7 +105,7 @@ namespace Test
     Track (const Track&) = default;
     Track (Track&&) = default;
     explicit Track (int32_t id,
-                    Test::Point p);
+                    ::Test::Point p);
     Track& operator= (const Track& x);
     Track& operator= (Track&& x);
 
@@ -114,16 +114,16 @@ namespace Test
     const int32_t& id (void) const;
     int32_t& id (void);
 
-    void p (const Test::Point& _p);
-    void p (Test::Point&& _p);
-    const Test::Point& p (void) const;
-    Test::Point& p (void);
+    void p (const ::Test::Point& _p);
+    void p (::Test::Point&& _p);
+    const ::Test::Point& p (void) const;
+    ::Test::Point& p (void);
 
     void swap (Track& s);
 
   private:
     int32_t id_;
-    Test::Point p_;
+    ::Test::Point p_;
   }; // Track
 
   // generated from c++/cli_hdr/union_pre.erb
@@ -157,20 +157,20 @@ namespace Test
     const std::string& stringData (void) const;
     std::string& stringData (void);
 
-    void pointData (const Test::Point& _pointData);
-    void pointData (Test::Point&& _pointData);
-    const Test::Point& pointData (void) const;
-    Test::Point& pointData (void);
+    void pointData (const ::Test::Point& _pointData);
+    void pointData (::Test::Point&& _pointData);
+    const ::Test::Point& pointData (void) const;
+    ::Test::Point& pointData (void);
 
-    void trackData (const Test::Track& _trackData);
-    void trackData (Test::Track&& _trackData);
-    const Test::Track& trackData (void) const;
-    Test::Track& trackData (void);
+    void trackData (const ::Test::Track& _trackData);
+    void trackData (::Test::Track&& _trackData);
+    const ::Test::Track& trackData (void) const;
+    ::Test::Track& trackData (void);
 
-    void globalData (const Global& _globalData);
-    void globalData (Global&& _globalData);
-    const Global& globalData (void) const;
-    Global& globalData (void);
+    void globalData (const ::Global& _globalData);
+    void globalData (::Global&& _globalData);
+    const ::Global& globalData (void) const;
+    ::Global& globalData (void);
 
     void _default (void);
 
@@ -188,9 +188,9 @@ namespace Test
       int32_t longData_;
       int16_t shortData_;
       std::string stringData_;
-      Test::Point pointData_;
-      Test::Track trackData_;
-      Global globalData_;
+      ::Test::Point pointData_;
+      ::Test::Track trackData_;
+      ::Global globalData_;
     } u_;
   }; // Data
 
@@ -218,14 +218,14 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Foo>::destroy (
+    object_traits< ::Test::Foo>::destroy (
         Test::Foo*);
     template<>
     const Object_proxy*
-    object_traits<Test::Foo>::to_proxy (
-        const object_traits<Test::Foo>::ref_type&);
+    object_traits< ::Test::Foo>::to_proxy (
+        const object_traits< ::Test::Foo>::ref_type&);
     template<>
-    object_traits<Test::Foo>::ref_type object_traits<Test::Foo>::narrow (
+    object_traits< ::Test::Foo>::ref_type object_traits< ::Test::Foo>::narrow (
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
@@ -247,16 +247,16 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    bool pass_union (const Test::Data& s);
+    bool pass_union (const ::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
-    Test::Data return_union (void);
+    ::Test::Data return_union (void);
 
     // generated from c++/cli_hdr/operation.erb
-    bool get_union (Test::Data& s);
+    bool get_union (::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
-    bool update_union (Test::Data& s);
+    bool update_union (::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
     void shutdown (void);
@@ -286,19 +286,19 @@ namespace std {
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  void swap (Global& m1, Global& m2);
+  void swap (::Global& m1, ::Global& m2);
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  void swap (Test::Point& m1, Test::Point& m2);
+  void swap (::Test::Point& m1, ::Test::Point& m2);
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  void swap (Test::Track& m1, Test::Track& m2);
+  void swap (::Test::Track& m1, ::Test::Track& m2);
 
   // generated from c++/cli_hdr/union_std.erb
   template <>
-  void swap (Test::Data& m1, Test::Data& m2);
+  void swap (::Test::Data& m1, ::Test::Data& m2);
 }; // std
 
 // generated from c++/cli_hdr/inline.erb
@@ -309,28 +309,28 @@ namespace std {
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  inline void swap (Global& m1, Global& m2)
+  inline void swap (::Global& m1, ::Global& m2)
   {
     m1.swap (m2);
   }
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  inline void swap (Test::Point& m1, Test::Point& m2)
+  inline void swap (::Test::Point& m1, ::Test::Point& m2)
   {
     m1.swap (m2);
   }
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  inline void swap (Test::Track& m1, Test::Track& m2)
+  inline void swap (::Test::Track& m1, ::Test::Track& m2)
   {
     m1.swap (m2);
   }
 
   // generated from c++/cli_hdr/union_std.erb
   template <>
-  inline void swap (Test::Data& m1, Test::Data& m2)
+  inline void swap (::Test::Data& m1, ::Test::Data& m2)
   {
     m1.swap (m2);
   }

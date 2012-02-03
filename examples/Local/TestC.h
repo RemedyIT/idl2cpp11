@@ -44,7 +44,7 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Foo>::destroy (
+    object_traits< ::Test::Foo>::destroy (
         Test::Foo*);
   };
 };

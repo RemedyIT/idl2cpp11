@@ -58,14 +58,14 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     void
-    object_traits<Test::Foo>::destroy (
+    object_traits< ::Test::Foo>::destroy (
         Test::Foo*);
     template<>
     const Object_proxy*
-    object_traits<Test::Foo>::to_proxy (
-        const object_traits<Test::Foo>::ref_type&);
+    object_traits< ::Test::Foo>::to_proxy (
+        const object_traits< ::Test::Foo>::ref_type&);
     template<>
-    object_traits<Test::Foo>::ref_type object_traits<Test::Foo>::narrow (
+    object_traits< ::Test::Foo>::ref_type object_traits< ::Test::Foo>::narrow (
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
@@ -87,9 +87,9 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    void op (const Test::F& p1,
-             Test::V& p2,
-             Test::M& p3);
+    void op (const ::Test::F& p1,
+             ::Test::V& p2,
+             ::Test::M& p3);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Foo> narrow (
