@@ -87,9 +87,9 @@ namespace Test
     BooEx& operator= (const BooEx& x);
     BooEx& operator= (BooEx&& x);
 
-    void id (const int32_t& _id);
+    void id (int32_t _id);
     void id (int32_t&& _id);
-    const int32_t& id (void) const;
+    int32_t id (void) const;
     int32_t& id (void);
 
   private:

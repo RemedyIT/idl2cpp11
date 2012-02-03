@@ -35,8 +35,8 @@ public:
   Global& operator= (const Global& x);
   Global& operator= (Global&& x);
 
-  void x (const int32_t& _x);
-  const int32_t& x (void) const;
+  void x (int32_t _x);
+  int32_t x (void) const;
   int32_t& x (void);
 
   void swap (Global& s);
@@ -76,12 +76,12 @@ namespace Test
     Point& operator= (const Point& x);
     Point& operator= (Point&& x);
 
-    void x (const int32_t& _x);
-    const int32_t& x (void) const;
+    void x (int32_t _x);
+    int32_t x (void) const;
     int32_t& x (void);
 
-    void y (const int32_t& _y);
-    const int32_t& y (void) const;
+    void y (int32_t _y);
+    int32_t y (void) const;
     int32_t& y (void);
 
     void swap (Point& s);
@@ -106,8 +106,8 @@ namespace Test
     Track& operator= (const Track& x);
     Track& operator= (Track&& x);
 
-    void id (const int32_t& _id);
-    const int32_t& id (void) const;
+    void id (int32_t _id);
+    int32_t id (void) const;
     int32_t& id (void);
 
     void p (const ::Test::Point& _p);
@@ -135,15 +135,15 @@ namespace Test
     Data &operator= (const Data&);
     Data &operator= (Data&&);
 
-    void _d (const DataType&);
-    const DataType& _d (void) const;
+    void _d (DataType);
+    DataType _d (void) const;
 
-    void longData (const int32_t& _longData);
-    const int32_t& longData (void) const;
+    void longData (int32_t _longData);
+    int32_t longData (void) const;
     int32_t& longData (void);
 
-    void shortData (const int16_t& _shortData);
-    const int16_t& shortData (void) const;
+    void shortData (int16_t _shortData);
+    int16_t shortData (void) const;
     int16_t& shortData (void);
 
     void stringData (const std::string& _stringData);

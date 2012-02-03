@@ -69,12 +69,12 @@ namespace Test
     Simple& operator= (const Simple& x);
     Simple& operator= (Simple&& x);
 
-    void o (const uint8_t& _o);
-    const uint8_t& o (void) const;
+    void o (uint8_t _o);
+    uint8_t o (void) const;
     uint8_t& o (void);
 
-    void l (const int32_t& _l);
-    const int32_t& l (void) const;
+    void l (int32_t _l);
+    int32_t l (void) const;
     int32_t& l (void);
 
     void s (const std::string& _s);
@@ -82,16 +82,16 @@ namespace Test
     const std::string& s (void) const;
     std::string& s (void);
 
-    void d (const double& _d);
-    const double& d (void) const;
+    void d (double _d);
+    double d (void) const;
     double& d (void);
 
-    void b (const bool& _b);
-    const bool& b (void) const;
+    void b (bool _b);
+    bool b (void) const;
     bool& b (void);
 
-    void c (const char& _c);
-    const char& c (void) const;
+    void c (char _c);
+    char c (void) const;
     char& c (void);
 
     void swap (Simple& s);
