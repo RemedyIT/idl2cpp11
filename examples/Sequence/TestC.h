@@ -45,12 +45,10 @@ namespace Test
     Simple& operator= (Simple&& x);
 
     void o (const uint8_t& _o);
-    void o (uint8_t&& _o);
     const uint8_t& o (void) const;
     uint8_t& o (void);
 
     void l (const int32_t& _l);
-    void l (int32_t&& _l);
     const int32_t& l (void) const;
     int32_t& l (void);
 
@@ -60,17 +58,14 @@ namespace Test
     std::string& s (void);
 
     void d (const double& _d);
-    void d (double&& _d);
     const double& d (void) const;
     double& d (void);
 
     void b (const bool& _b);
-    void b (bool&& _b);
     const bool& b (void) const;
     bool& b (void);
 
     void c (const char& _c);
-    void c (char&& _c);
     const char& c (void) const;
     char& c (void);
 

@@ -36,7 +36,6 @@ public:
   Global& operator= (Global&& x);
 
   void x (const int32_t& _x);
-  void x (int32_t&& _x);
   const int32_t& x (void) const;
   int32_t& x (void);
 
@@ -78,12 +77,10 @@ namespace Test
     Point& operator= (Point&& x);
 
     void x (const int32_t& _x);
-    void x (int32_t&& _x);
     const int32_t& x (void) const;
     int32_t& x (void);
 
     void y (const int32_t& _y);
-    void y (int32_t&& _y);
     const int32_t& y (void) const;
     int32_t& y (void);
 
@@ -110,7 +107,6 @@ namespace Test
     Track& operator= (Track&& x);
 
     void id (const int32_t& _id);
-    void id (int32_t&& _id);
     const int32_t& id (void) const;
     int32_t& id (void);
 
@@ -143,12 +139,10 @@ namespace Test
     const DataType& _d (void) const;
 
     void longData (const int32_t& _longData);
-    void longData (int32_t&& _longData);
     const int32_t& longData (void) const;
     int32_t& longData (void);
 
     void shortData (const int16_t& _shortData);
-    void shortData (int16_t&& _shortData);
     const int16_t& shortData (void) const;
     int16_t& shortData (void);
 
