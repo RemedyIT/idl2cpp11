@@ -41,7 +41,7 @@ namespace Test
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;  
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;
 
     // generated from c++/cli_hdr/except_post.erb
     FooEx (void);
@@ -76,7 +76,7 @@ namespace Test
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;  
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;
 
     // generated from c++/cli_hdr/except_post.erb
     BooEx (void);
@@ -88,6 +88,7 @@ namespace Test
     BooEx& operator= (BooEx&& x);
 
     void id (int32_t _id);
+    void id (int32_t&& _id);
     int32_t id (void) const;
     int32_t& id (void);
 
@@ -113,8 +114,6 @@ namespace Test
 // entering CxxWriterBase#at_global_scope
 
 // generated from c++/cli_hdr/interface_object_traits.erb
-#if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
-#define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
 {
   namespace CORBA
@@ -132,7 +131,6 @@ namespace TAOX11_NAMESPACE
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
-#endif // !_INTF_TEST_FOO_TRAITS_DECL_
 
 // leaving CxxWriterBase#at_global_scope
 namespace Test

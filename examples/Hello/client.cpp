@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      CORBA::object_reference<Test::Hello> hello = Test::Hello::narrow (obj);
+      Test::Hello::_ref_type hello = Test::Hello::narrow (obj);
 
       if (!hello)
       {
