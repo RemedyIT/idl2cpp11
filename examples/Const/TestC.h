@@ -102,6 +102,8 @@ namespace POA
 #endif // !_INTF_A_FWD_
 
 // generated from c++/cli_hdr/interface_object_traits.erb
+#if !defined (_INTF_A_TRAITS_DECL_)
+#define _INTF_A_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
 {
   namespace CORBA
@@ -119,6 +121,7 @@ namespace TAOX11_NAMESPACE
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
+#endif // !_INTF_A_TRAITS_DECL_
 
 // generated from c++/cli_hdr/interface_pre.erb
 class A

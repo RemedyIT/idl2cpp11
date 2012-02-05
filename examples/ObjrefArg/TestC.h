@@ -41,6 +41,8 @@ namespace Test
 // entering CxxWriterBase#at_global_scope
 
 // generated from c++/cli_hdr/interface_object_traits.erb
+#if !defined (_INTF_TEST_HELLO_TRAITS_DECL_)
+#define _INTF_TEST_HELLO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
 {
   namespace CORBA
@@ -58,6 +60,7 @@ namespace TAOX11_NAMESPACE
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
+#endif // !_INTF_TEST_HELLO_TRAITS_DECL_
 
 // leaving CxxWriterBase#at_global_scope
 namespace Test
@@ -81,6 +84,8 @@ namespace Test
 // entering CxxWriterBase#at_global_scope
 
 // generated from c++/cli_hdr/interface_object_traits.erb
+#if !defined (_INTF_TEST_HELLO_FACTORY_TRAITS_DECL_)
+#define _INTF_TEST_HELLO_FACTORY_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
 {
   namespace CORBA
@@ -98,6 +103,7 @@ namespace TAOX11_NAMESPACE
     	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
+#endif // !_INTF_TEST_HELLO_FACTORY_TRAITS_DECL_
 
 // leaving CxxWriterBase#at_global_scope
 namespace Test
