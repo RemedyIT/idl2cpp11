@@ -15,6 +15,11 @@ module Test
     void op ();
   };
 
+  struct Nested
+  {
+    octet o;
+  };
+
   struct Simple
   {
     octet   o;
@@ -24,6 +29,7 @@ module Test
     boolean b;
     char    c;
     Bar     bar_ref;
+    Nested  nested_struct;
   };
 
   /// A very simple interface
