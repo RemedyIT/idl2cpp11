@@ -50,6 +50,82 @@ namespace Test
     std::string name_;
   }; // Variable
 
+  // generated from StubHeaderWriter#enter_interface
+
+  // generated from c++/cli_hdr/interface_fwd.erb
+#if !defined (_INTF_TEST_BAR_FWD_)
+#define _INTF_TEST_BAR_FWD_
+  class Bar;
+  class Bar_proxy;
+  typedef Bar_proxy* Bar_proxy_ptr;
+  namespace POA
+  {
+    class Bar;
+  };
+#endif // !_INTF_TEST_BAR_FWD_
+  // generated from CxxWriterBase#at_global_scope
+}; // Test
+// entering CxxWriterBase#at_global_scope
+
+// generated from c++/cli_hdr/interface_object_traits.erb
+#if !defined (_INTF_TEST_BAR_TRAITS_DECL_)
+#define _INTF_TEST_BAR_TRAITS_DECL_
+namespace TAOX11_NAMESPACE
+{
+  namespace CORBA
+  {
+    template<>
+    void
+    object_traits< ::Test::Bar>::destroy (
+        Test::Bar*);
+    template<>
+    const Object_proxy*
+    object_traits< ::Test::Bar>::to_proxy (
+        const object_traits< ::Test::Bar>::ref_type&);
+    template<>
+    object_traits< ::Test::Bar>::ref_type object_traits< ::Test::Bar>::narrow (
+    	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
+  };
+};
+#endif // !_INTF_TEST_BAR_TRAITS_DECL_
+
+// leaving CxxWriterBase#at_global_scope
+namespace Test
+{
+
+  // generated from c++/cli_hdr/interface_pre.erb
+  class Bar
+    : public virtual TAOX11_NAMESPACE::CORBA::Object
+  {
+  public:
+    friend struct TAOX11_CORBA::object_traits< Bar>;
+
+    typedef TAOX11_CORBA::object_traits< Bar> _traits_type;
+    typedef TAOX11_CORBA::object_reference< Bar> _ref_type;
+
+    virtual const std::string& _interface_repository_id () const override;
+
+    // generated from c++/cli_hdr/operation.erb
+    void op (void);
+
+    // generated from c++/cli_hdr/interface_post.erb
+    static TAOX11_CORBA::object_reference< Bar> narrow (
+        const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
+    {
+      return TAOX11_CORBA::object_traits< Bar>::narrow (obj);
+    }
+
+    explicit Bar (Bar_proxy_ptr p);
+  protected:
+    explicit Bar (Bar_proxy_ptr p, bool);
+    Bar (void);
+
+  private:
+    Bar(const Bar&) = delete;
+    Bar& operator=(const Bar&) = delete;
+    Bar_proxy_ptr bar_proxy_;
+  }; // Bar
+
   // generated from c++/cli_hdr/struct_pre.erb
   class Simple
   {
@@ -65,7 +141,8 @@ namespace Test
                      std::string s,
                      double d,
                      bool b,
-                     char c);
+                     char c,
+                     TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref);
     Simple& operator= (const Simple& x);
     Simple& operator= (Simple&& x);
 
@@ -94,6 +171,10 @@ namespace Test
     char c (void) const;
     char& c (void);
 
+    void bar_ref (TAOX11_CORBA::object_reference< ::Test::Bar> _bar_ref);
+    TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref (void) const;
+    TAOX11_CORBA::object_reference< ::Test::Bar>& bar_ref (void);
+
     void swap (Simple& s);
 
   private:
@@ -103,6 +184,7 @@ namespace Test
     double d_;
     bool b_;
     char c_;
+    TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref_;
   }; // Simple
 
   // generated from StubHeaderWriter#enter_interface
