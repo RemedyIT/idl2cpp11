@@ -84,7 +84,9 @@ namespace Test
 
   private:
     Foo(const Foo&) = delete;
+    Foo(Foo&&) = delete;
     Foo& operator=(const Foo&) = delete;
+    Foo& operator=(Foo&&) = delete;
   }; // Foo
 }; // namespace Test
 
