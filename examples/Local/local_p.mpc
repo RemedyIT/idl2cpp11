@@ -7,3 +7,17 @@ project(*gen_idl): ridl_defaults {
   }
   custom_only = 1
 }
+
+project(*client): taox11_portableserver {
+  sharedname = foo
+  after += *gen_idl
+  Source_Files {
+    Foo.cpp
+  }
+  Source_Files {
+    TestC.cpp
+    TestS.cpp
+  }
+  IDL_Files {
+  }
+}
