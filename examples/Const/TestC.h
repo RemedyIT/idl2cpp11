@@ -149,6 +149,7 @@ public:
 protected:
   explicit A (A_proxy_ptr p, bool);
   A (void);
+  ~A (void);
 
 private:
   A(const A&) = delete;

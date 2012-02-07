@@ -81,6 +81,7 @@ namespace Test
     }
   protected:
     Foo (void);
+    ~Foo (void);
 
   private:
     Foo(const Foo&) = delete;

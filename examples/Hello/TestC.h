@@ -97,6 +97,7 @@ namespace Test
   protected:
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
+    ~Hello (void);
 
   private:
     Hello(const Hello&) = delete;
