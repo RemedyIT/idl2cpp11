@@ -1,0 +1,8 @@
+// -*- MPC -*-
+
+project(*gen_idl): ridl_defaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}

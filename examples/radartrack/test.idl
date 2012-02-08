@@ -1,0 +1,9 @@
+
+typedef sequence<octet> octetseq;
+struct RadarTrack {
+  string id;
+  long x;
+  long y;
+  long z;
+  octetseq plot;
+};
