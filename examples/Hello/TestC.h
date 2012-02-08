@@ -101,7 +101,9 @@ namespace Test
 
   private:
     Hello(const Hello&) = delete;
+    Hello(Hello&&) = delete;
     Hello& operator=(const Hello&) = delete;
+    Hello& operator=(Hello&&) = delete;
     Hello_proxy_ptr hello_proxy_;
   }; // Hello
 }; // namespace Test

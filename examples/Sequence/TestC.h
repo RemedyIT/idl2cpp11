@@ -185,7 +185,9 @@ namespace Test
 
   private:
     Foo(const Foo&) = delete;
+    Foo(Foo&&) = delete;
     Foo& operator=(const Foo&) = delete;
+    Foo& operator=(Foo&&) = delete;
     Foo_proxy_ptr foo_proxy_;
   }; // Foo
 }; // namespace Test

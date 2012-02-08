@@ -142,7 +142,9 @@ namespace Test
 
   private:
     Hello_Factory(const Hello_Factory&) = delete;
+    Hello_Factory(Hello_Factory&&) = delete;
     Hello_Factory& operator=(const Hello_Factory&) = delete;
+    Hello_Factory& operator=(Hello_Factory&&) = delete;
     Hello_Factory_proxy_ptr hello_factory_proxy_;
   }; // Hello_Factory
 
@@ -193,7 +195,9 @@ namespace Test
 
   private:
     Hello(const Hello&) = delete;
+    Hello(Hello&&) = delete;
     Hello& operator=(const Hello&) = delete;
+    Hello& operator=(Hello&&) = delete;
     Hello_proxy_ptr hello_proxy_;
   }; // Hello
 }; // namespace Test

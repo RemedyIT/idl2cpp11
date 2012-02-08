@@ -153,7 +153,9 @@ protected:
 
 private:
   A(const A&) = delete;
+  A(A&&) = delete;
   A& operator=(const A&) = delete;
+  A& operator=(A&&) = delete;
   A_proxy_ptr a_proxy_;
 }; // A
 
