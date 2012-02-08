@@ -79,6 +79,12 @@ namespace TAOX11_NAMESPACE {
     {
       typedef ::Test::POA::Hello             base_type;
       typedef ::Test::POA::Hello::_ref_type  ref_type;
+      template <typename _Tp1, typename = typename
+          std::enable_if<std::is_convertible< ::Test::POA::Hello*, _Tp1*>::value>::type>
+      static ref_type downcast (const servant_reference<_Tp1>& base)
+      {
+        return ref_type (std::dynamic_pointer_cast< ::Test::POA::Hello> (base.get_shared ()));
+      }
     };
   }; // CORBA
 }; // TAOX11_NAMESPACE
