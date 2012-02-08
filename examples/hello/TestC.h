@@ -50,9 +50,9 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    void
-    object_traits< ::Test::Hello>::destroy (
-        Test::Hello*);
+    object_traits< ::Test::Hello>::ref_type
+    object_traits< ::Test::Hello>::to_reference (
+        ::Test::Hello*);
     template<>
     const Object_proxy*
     object_traits< ::Test::Hello>::to_proxy (
@@ -95,9 +95,14 @@ namespace Test
 
     explicit Hello (Hello_proxy_ptr p);
   protected:
+    typedef std::shared_ptr<Hello>   _shared_ptr_type;
+    
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
     ~Hello (void) = default;
+
+    _shared_ptr_type _reference ()
+    { return std::dynamic_pointer_cast<Hello> (this->_get_reference ()); }
 
   private:
     Hello(const Hello&) = delete;

@@ -45,9 +45,9 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    void
-    object_traits< ::Test::Foo>::destroy (
-        Test::Foo*);
+    object_traits< ::Test::Foo>::ref_type
+    object_traits< ::Test::Foo>::to_reference (
+        ::Test::Foo*);
   };
 };
 #endif // !_INTF_TEST_FOO_TRAITS_DECL_
@@ -80,8 +80,13 @@ namespace Test
       return TAOX11_CORBA::object_traits< Foo>::narrow (obj);
     }
   protected:
+    typedef std::shared_ptr<Foo>   _shared_ptr_type;
+    
     Foo (void);
     ~Foo (void) = default;
+
+    _shared_ptr_type _reference ()
+    { return std::dynamic_pointer_cast<Foo> (this->_get_reference ()); }
 
   private:
     Foo(const Foo&) = delete;

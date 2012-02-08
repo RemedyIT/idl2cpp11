@@ -109,9 +109,9 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    void
-    object_traits< ::A>::destroy (
-        A*);
+    object_traits< ::A>::ref_type
+    object_traits< ::A>::to_reference (
+        ::A*);
     template<>
     const Object_proxy*
     object_traits< ::A>::to_proxy (
@@ -147,9 +147,14 @@ public:
 
   explicit A (A_proxy_ptr p);
 protected:
+  typedef std::shared_ptr<A>   _shared_ptr_type;
+  
   explicit A (A_proxy_ptr p, bool);
   A (void);
   ~A (void) = default;
+
+  _shared_ptr_type _reference ()
+  { return std::dynamic_pointer_cast<A> (this->_get_reference ()); }
 
 private:
   A(const A&) = delete;

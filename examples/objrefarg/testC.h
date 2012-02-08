@@ -48,9 +48,9 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    void
-    object_traits< ::Test::Hello>::destroy (
-        Test::Hello*);
+    object_traits< ::Test::Hello>::ref_type
+    object_traits< ::Test::Hello>::to_reference (
+        ::Test::Hello*);
     template<>
     const Object_proxy*
     object_traits< ::Test::Hello>::to_proxy (
@@ -91,9 +91,9 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    void
-    object_traits< ::Test::Hello_Factory>::destroy (
-        Test::Hello_Factory*);
+    object_traits< ::Test::Hello_Factory>::ref_type
+    object_traits< ::Test::Hello_Factory>::to_reference (
+        ::Test::Hello_Factory*);
     template<>
     const Object_proxy*
     object_traits< ::Test::Hello_Factory>::to_proxy (
@@ -136,9 +136,14 @@ namespace Test
 
     explicit Hello_Factory (Hello_Factory_proxy_ptr p);
   protected:
+    typedef std::shared_ptr<Hello_Factory>   _shared_ptr_type;
+    
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool);
     Hello_Factory (void);
     ~Hello_Factory (void) = default;
+
+    _shared_ptr_type _reference ()
+    { return std::dynamic_pointer_cast<Hello_Factory> (this->_get_reference ()); }
 
   private:
     Hello_Factory(const Hello_Factory&) = delete;
@@ -189,9 +194,14 @@ namespace Test
 
     explicit Hello (Hello_proxy_ptr p);
   protected:
+    typedef std::shared_ptr<Hello>   _shared_ptr_type;
+    
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
     ~Hello (void) = default;
+
+    _shared_ptr_type _reference ()
+    { return std::dynamic_pointer_cast<Hello> (this->_get_reference ()); }
 
   private:
     Hello(const Hello&) = delete;
