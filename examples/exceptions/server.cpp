@@ -1,6 +1,4 @@
-// $Id$
-
-#include "Foo.h"
+#include "foo.h"
 
 #include <iostream>
 #include <fstream>

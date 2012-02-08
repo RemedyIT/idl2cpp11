@@ -3,15 +3,11 @@
  *
  * Author: Martin Corino
  *
- * $Id$
- *
  * Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
  --------------------------------------------------------------------*/
 
 #include "TestC.h"
-#include "tao/0x/orb.h"
-
 #include <iostream>
 
 int main(int argc, char* argv[])

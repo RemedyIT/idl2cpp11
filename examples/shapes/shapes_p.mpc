@@ -3,7 +3,7 @@
 
 project(*gen_idl): ridl_defaults {
   IDL_Files {
-    Test.idl
+    test.idl
   }
   custom_only = 1
 }

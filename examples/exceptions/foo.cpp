@@ -1,5 +1,4 @@
-// $Id$
-#include "Foo.h"
+#include "foo.h"
 
 Foo::Foo (CORBA::ORB orb)
   : orb_ (orb)
