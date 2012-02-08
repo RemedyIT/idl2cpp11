@@ -1,7 +1,6 @@
 // $Id$
 
-#include "Foo.h"
-
+#include "foo.h"
 #include <iostream>
 #include <fstream>
 
@@ -10,7 +9,7 @@ main(int argc, ACE_TCHAR *argv[])
 {
   try
     {
-      CORBA::ORB _orb = CORBA::ORB_init (argc, argv);
+      CORBA::object_reference<CORBA::ORB> _orb = CORBA::ORB_init (argc, argv);
 
       if (_orb == nullptr)
       {
@@ -18,7 +17,7 @@ main(int argc, ACE_TCHAR *argv[])
         exit (1);
       }
 
-      CORBA::Object obj = _orb->resolve_initial_references ("RootPOA");
+      CORBA::object_reference<CORBA::Object> obj = _orb->resolve_initial_references ("RootPOA");
 
       if (obj == nullptr)
       {
@@ -28,7 +27,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "retrieved RootPOA object reference" << std::endl;
 
-      PortableServer::POA root_poa = PortableServer::POA::narrow (obj);
+      CORBA::object_reference<PortableServer::POA> root_poa = PortableServer::POA::narrow (obj);
 
       if (!root_poa)
       {
@@ -38,7 +37,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "narrowed POA interface" << std::endl;
 
-      PortableServer::POAManager poaman = root_poa->the_POAManager ();
+      CORBA::object_reference<PortableServer::POAManager> poaman = root_poa->the_POAManager ();
 
       if (!poaman)
       {
@@ -46,7 +45,7 @@ main(int argc, ACE_TCHAR *argv[])
         exit (1);
       }
 
-      Test::Foo::servant_type hello_impl (new Foo (_orb));
+      CORBA::servant_traits<Test::Foo>::ref_type hello_impl (new Foo (_orb));
 
       std::cout << "created Foo servant" << std::endl;
 
@@ -54,7 +53,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "activated Foo servant" << std::endl;
 
-      CORBA::Object hello_obj = root_poa->id_to_reference (id);
+      CORBA::object_reference<CORBA::Object> hello_obj = root_poa->id_to_reference (id);
 
       if (hello_obj == nullptr)
       {
@@ -62,7 +61,7 @@ main(int argc, ACE_TCHAR *argv[])
         exit (1);
       }
 
-      Test::Foo hello = Test::Foo::narrow (hello_obj);
+      CORBA::object_reference<Test::Foo> hello = Test::Foo::narrow (hello_obj);
 
       if (hello == nullptr)
       {

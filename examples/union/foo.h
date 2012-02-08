@@ -6,15 +6,15 @@
 #define FOO_H
 #include /**/ "ace/pre.h"
 
-#include "TestS.h"
+#include "testS.h"
 
-/// Implement the Test::Hello interface
+/// Implement the Test::Foo interface
 class Foo
-  : public virtual Test::Foo::servant_base_type
+  : public virtual CORBA::servant_traits<Test::Foo>::base_type
 {
 public:
   /// Constructor
-  Foo (CORBA::ORB orb);
+  Foo (CORBA::object_reference<CORBA::ORB> orb);
 
   // = The skeleton methods
   virtual bool pass_union (const Test::Data & s);
@@ -28,9 +28,9 @@ public:
   virtual void shutdown (void);
 
 private:
-  /// Use an ORB reference to conver strings to objects and shutdown
+  /// Use an ORB reference to convert strings to objects and shutdown
   /// the application.
-  CORBA::ORB orb_;
+  CORBA::object_reference<CORBA::ORB> orb_;
   Test::Data s_;
 };
 

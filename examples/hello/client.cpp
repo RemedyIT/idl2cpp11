@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------
- * client.cpp - CORBA C++0x client application
+ * client.cpp - CORBA C++11 client application
  *
  * Author: Martin Corino
  *
