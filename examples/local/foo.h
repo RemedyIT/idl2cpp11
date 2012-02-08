@@ -1,6 +1,6 @@
 // $Id$
 
-#include "TestC.h"
+#include "testC.h"
 
 class Foo_impl : public virtual Test::Foo
 {

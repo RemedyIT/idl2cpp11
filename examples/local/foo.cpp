@@ -1,6 +1,6 @@
 // $Id$
 
-#include "Foo.h"
+#include "foo.h"
 
 void
 Foo_impl::do_something (void)
