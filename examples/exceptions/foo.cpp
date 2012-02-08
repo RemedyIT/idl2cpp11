@@ -1,6 +1,6 @@
 #include "foo.h"
 
-Foo::Foo (CORBA::ORB orb)
+Foo::Foo (CORBA::object_reference<CORBA::ORB> orb)
   : orb_ (orb)
 {
 }

@@ -2,15 +2,14 @@
 #define FOO_H
 #include /**/ "ace/pre.h"
 
-#include "TestS.h"
+#include "testS.h"
 
-/// Implement the Test::Hello interface
-class Foo
-  : public virtual Test::Foo::servant_base_type
+/// Implement the Test::Foo interface
+class Foo : public virtual CORBA::servant_traits<Test::Foo>::base_type
 {
 public:
   /// Constructor
-  Foo (CORBA::ORB orb);
+  Foo (CORBA::object_reference<CORBA::ORB> orb);
 
   // = The skeleton methods
   virtual void do_it ();
@@ -25,7 +24,7 @@ public:
 private:
   /// Use an ORB reference to convert strings to objects and shutdown
   /// the application.
-  CORBA::ORB orb_;
+  CORBA::object_reference<CORBA::ORB> orb_;
 };
 
 #include /**/ "ace/post.h"

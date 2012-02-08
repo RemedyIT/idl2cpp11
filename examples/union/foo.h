@@ -9,8 +9,7 @@
 #include "testS.h"
 
 /// Implement the Test::Foo interface
-class Foo
-  : public virtual CORBA::servant_traits<Test::Foo>::base_type
+class Foo : public virtual CORBA::servant_traits<Test::Foo>::base_type
 {
 public:
   /// Constructor

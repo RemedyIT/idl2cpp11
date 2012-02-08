@@ -1,5 +1,4 @@
 // -*- MPC -*-
-// $Id$
 
 project(*gen_idl): ridl_defaults {
   IDL_Files {
@@ -8,7 +7,7 @@ project(*gen_idl): ridl_defaults {
   custom_only = 1
 }
 
-project(*union_server): taox11_server {
+project(*_server): taox11_server {
   after += *gen_idl
   Source_Files {
     foo.cpp
@@ -22,7 +21,7 @@ project(*union_server): taox11_server {
   }
 }
 
-project(*union_client): taox11_client {
+project(*_client): taox11_client {
   after += *gen_idl
   Source_Files {
     client.cpp
