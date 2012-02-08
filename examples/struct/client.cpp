@@ -3,15 +3,11 @@
  *
  * Author: Martin Corino
  *
- * $Id$
- *
  * Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
  --------------------------------------------------------------------*/
 
-#include "TestC.h"
-#include "tao/0x/orb.h"
-
+#include "testC.h"
 #include <iostream>
 
 void dump(const Test::Simple& s)
