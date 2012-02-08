@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 {
   try
     {
-      CORBA::ORB _orb = CORBA::ORB_init (argc, argv);
+      CORBA::object_reference<CORBA::ORB> _orb = CORBA::ORB_init (argc, argv);
 
       if (_orb == nullptr)
       {
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
         exit (1);
       }
 
-      CORBA::Object obj = _orb->string_to_object ("file://test.ior");
+      CORBA::object_reference<CORBA::Object> obj = _orb->string_to_object ("file://test.ior");
 
       if (obj == nullptr)
       {
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      Test::Foo foo = Test::Foo::narrow (obj);
+      CORBA::object_reference<Test::Foo> foo = Test::Foo::narrow (obj);
 
       if (!foo)
       {
