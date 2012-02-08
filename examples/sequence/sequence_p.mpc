@@ -3,7 +3,20 @@
 
 project(*gen_idl): ridl_defaults {
   IDL_Files {
-    Test.idl
+    test.idl
   }
   custom_only = 1
 }
+
+project(*_client): taox11_client {
+  after += *gen_idl
+  Source_Files {
+    client.cpp
+  }
+  Source_Files {
+    testC.cpp
+  }
+  IDL_Files {
+  }
+}
+
