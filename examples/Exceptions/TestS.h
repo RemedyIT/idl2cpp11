@@ -32,6 +32,11 @@ namespace Test
     class Foo
       : public virtual TAOX11_NAMESPACE::PortableServer::Servant
     {
+    public:
+      typedef TAOX11_CORBA::servant_traits< Foo>    _traits_type;
+      typedef TAOX11_CORBA::servant_reference< Foo>   _ref_type;
+      typedef typename _ref_type::shared_ptr_type   _shared_type;
+
     protected:
       Foo (void);
       Foo (bool); // for inheritance chains
@@ -39,12 +44,10 @@ namespace Test
 
       virtual Servant_proxy_ptr get_proxy ();
 
-    public:
-      typedef TAOX11_CORBA::servant_traits< Foo>    _traits_type;
-      typedef TAOX11_CORBA::servant_reference< Foo>   _ref_type;
-      typedef typename _ref_type::shared_ptr_type   _shared_type;
-
       _shared_type _reference ();
+
+      friend class TAOX11_CORBA::servant_reference< Foo>;
+    public:
 
       virtual bool _is_a (const std::string& logical_type_id);
 
