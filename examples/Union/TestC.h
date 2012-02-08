@@ -269,7 +269,7 @@ namespace Test
   protected:
     explicit Foo (Foo_proxy_ptr p, bool);
     Foo (void);
-    ~Foo (void);
+    ~Foo (void) = default;
 
   private:
     Foo(const Foo&) = delete;

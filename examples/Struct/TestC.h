@@ -119,7 +119,7 @@ namespace Test
   protected:
     explicit Bar (Bar_proxy_ptr p, bool);
     Bar (void);
-    ~Bar (void);
+    ~Bar (void) = default;
 
   private:
     Bar(const Bar&) = delete;
@@ -300,7 +300,7 @@ namespace Test
   protected:
     explicit Foo (Foo_proxy_ptr p, bool);
     Foo (void);
-    ~Foo (void);
+    ~Foo (void) = default;
 
   private:
     Foo(const Foo&) = delete;

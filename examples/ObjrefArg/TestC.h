@@ -138,7 +138,7 @@ namespace Test
   protected:
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool);
     Hello_Factory (void);
-    ~Hello_Factory (void);
+    ~Hello_Factory (void) = default;
 
   private:
     Hello_Factory(const Hello_Factory&) = delete;
@@ -189,7 +189,7 @@ namespace Test
   protected:
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
-    ~Hello (void);
+    ~Hello (void) = default;
 
   private:
     Hello(const Hello&) = delete;
