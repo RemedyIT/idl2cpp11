@@ -35,6 +35,7 @@ namespace Test
     protected:
       Foo (void);
       Foo (bool); // for inheritance chains
+      virtual ~Foo (void);
 
       virtual Servant_proxy_ptr get_proxy ();
 
@@ -44,8 +45,6 @@ namespace Test
       typedef typename _ref_type::shared_ptr_type   _shared_type;
 
       _shared_type _reference ();
-
-      virtual ~Foo (void);
 
       virtual bool _is_a (const std::string& logical_type_id);
 
