@@ -46,7 +46,7 @@ namespace Test
 
       _shared_type _reference ();
 
-      friend class TAOX11_CORBA::servant_reference< Foo>;
+      template <typename T> friend class TAOX11_CORBA::servant_reference;
     public:
 
       virtual bool _is_a (const std::string& logical_type_id);

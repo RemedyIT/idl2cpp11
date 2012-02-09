@@ -114,7 +114,7 @@ namespace Test
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
   public:
-    friend struct TAOX11_CORBA::object_traits< Hello_Factory>;
+    template <typename T> friend struct TAOX11_CORBA::object_traits;
 
     typedef TAOX11_CORBA::object_traits< Hello_Factory> _traits_type;
     typedef TAOX11_CORBA::object_reference< Hello_Factory> _ref_type;
@@ -172,7 +172,7 @@ namespace Test
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
   public:
-    friend struct TAOX11_CORBA::object_traits< Hello>;
+    template <typename T> friend struct TAOX11_CORBA::object_traits;
 
     typedef TAOX11_CORBA::object_traits< Hello> _traits_type;
     typedef TAOX11_CORBA::object_reference< Hello> _ref_type;

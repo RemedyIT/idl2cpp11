@@ -236,7 +236,7 @@ namespace Test
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
   public:
-    friend struct TAOX11_CORBA::object_traits< Foo>;
+    template <typename T> friend struct TAOX11_CORBA::object_traits;
 
     typedef TAOX11_CORBA::object_traits< Foo> _traits_type;
     typedef TAOX11_CORBA::object_reference< Foo> _ref_type;
