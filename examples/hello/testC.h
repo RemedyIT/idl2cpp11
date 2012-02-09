@@ -59,7 +59,7 @@ namespace TAOX11_NAMESPACE
         const object_traits< ::Test::Hello>::ref_type&);
     template<>
     object_traits< ::Test::Hello>::ref_type object_traits< ::Test::Hello>::narrow (
-    	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
+       const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
 #endif // !_INTF_TEST_HELLO_TRAITS_DECL_

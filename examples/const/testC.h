@@ -118,7 +118,7 @@ namespace TAOX11_NAMESPACE
         const object_traits< ::A>::ref_type&);
     template<>
     object_traits< ::A>::ref_type object_traits< ::A>::narrow (
-    	 const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
+       const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
   };
 };
 #endif // !_INTF_A_TRAITS_DECL_
