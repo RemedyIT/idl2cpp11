@@ -41,7 +41,7 @@ namespace Test
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;  
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;
 
     // generated from c++/cli_hdr/except_post.erb
     FooEx (void);
@@ -76,7 +76,7 @@ namespace Test
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;  
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;
 
     // generated from c++/cli_hdr/except_post.erb
     BooEx (void);
