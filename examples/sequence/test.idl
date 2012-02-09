@@ -22,6 +22,8 @@ module Test
 
   typedef sequence<long> LongSeq;
 
+  typedef sequence<long, 50> BoundedLongSeq;
+
   typedef sequence<boolean> BoolSeq;
 
   typedef sequence<string> StringSeq;

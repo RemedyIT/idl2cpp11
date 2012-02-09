@@ -87,6 +87,9 @@ namespace Test
   typedef std::vector < int32_t> LongSeq;
 
   // generated from c++/cli_hdr/typedef.erb
+  typedef std::vector < int32_t> BoundedLongSeq;
+
+  // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < bool> BoolSeq;
 
   // generated from c++/cli_hdr/typedef.erb
