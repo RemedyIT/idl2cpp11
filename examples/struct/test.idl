@@ -18,21 +18,16 @@ module Test
     void op ();
   };
 
-  struct Nested
-  {
-    octet o;
-  };
-
   struct Simple
   {
-    octet   o;
-    long    l;
-    string  s;
-    double  d;
-    boolean b;
-    char    c;
-    Bar     bar_ref;
-    Nested  nested_struct;
+    octet    o;
+    long     l;
+    string   s;
+    double   d;
+    boolean  b;
+    char     c;
+    Bar      bar_ref;
+    Variable v;
   };
 
   /// A very simple interface

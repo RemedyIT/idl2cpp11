@@ -135,30 +135,6 @@ namespace Test
   }; // Bar
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Nested final
-  {
-  public:
-
-    // generated from c++/cli_hdr/struct_post.erb
-    Nested (void);
-    ~Nested (void) = default;
-    Nested (const Nested&) = default;
-    Nested (Nested&&) = default;
-    explicit Nested (uint8_t o);
-    Nested& operator= (const Nested& x);
-    Nested& operator= (Nested&& x);
-
-    void o (uint8_t _o);
-    uint8_t o (void) const;
-    uint8_t& o (void);
-
-    void swap (Nested& s);
-
-  private:
-    uint8_t o_;
-  }; // Nested
-
-  // generated from c++/cli_hdr/struct_pre.erb
   class Simple final
   {
   public:
@@ -175,7 +151,7 @@ namespace Test
                      bool b,
                      char c,
                      TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref,
-                     ::Test::Nested nested_struct);
+                     ::Test::Variable v);
     Simple& operator= (const Simple& x);
     Simple& operator= (Simple&& x);
 
@@ -208,10 +184,10 @@ namespace Test
     TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref (void) const;
     TAOX11_CORBA::object_reference< ::Test::Bar>& bar_ref (void);
 
-    void nested_struct (const ::Test::Nested& _nested_struct);
-    void nested_struct (::Test::Nested&& _nested_struct);
-    const ::Test::Nested& nested_struct (void) const;
-    ::Test::Nested& nested_struct (void);
+    void v (const ::Test::Variable& _v);
+    void v (::Test::Variable&& _v);
+    const ::Test::Variable& v (void) const;
+    ::Test::Variable& v (void);
 
     void swap (Simple& s);
 
@@ -223,7 +199,7 @@ namespace Test
     bool b_;
     char c_;
     TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref_;
-    ::Test::Nested nested_struct_;
+    ::Test::Variable v_;
   }; // Simple
 
   // generated from StubHeaderWriter#enter_interface
@@ -333,10 +309,6 @@ namespace std {
 
   // generated from c++/cli_hdr/struct_std.erb
   template <>
-  void swap (::Test::Nested& m1, ::Test::Nested& m2);
-
-  // generated from c++/cli_hdr/struct_std.erb
-  template <>
   void swap (::Test::Simple& m1, ::Test::Simple& m2);
 }; // std
 
@@ -349,13 +321,6 @@ namespace std {
   // generated from c++/cli_hdr/struct_std.erb
   template <>
   inline void swap (::Test::Variable& m1, ::Test::Variable& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++/cli_hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::Nested& m1, ::Test::Nested& m2)
   {
     m1.swap (m2);
   }
