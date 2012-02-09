@@ -26,7 +26,7 @@ namespace Test
 {
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Variable
+  class Variable final
   {
   public:
 
@@ -135,7 +135,7 @@ namespace Test
   }; // Bar
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Nested
+  class Nested final
   {
   public:
 
@@ -159,7 +159,7 @@ namespace Test
   }; // Nested
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Simple
+  class Simple final
   {
   public:
 

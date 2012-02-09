@@ -27,21 +27,21 @@ namespace Test
 {
 
   // generated from c++/cli_hdr/except_pre.erb
-  class FooEx
+  class FooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
   public:
 
-    virtual const char* what() const throw ();
+    virtual const char* what() const throw () override;
 
-    virtual void _raise (void) const;
+    virtual void _raise (void) const override;
 
-    virtual void _tao_encode (TAO_OutputCDR &cdr) const;
+    virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
 
-    virtual void _tao_decode (TAO_InputCDR &cdr);
+    virtual void _tao_decode (TAO_InputCDR &cdr) override;
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const override;
 
     // generated from c++/cli_hdr/except_post.erb
     FooEx (void);
@@ -62,21 +62,21 @@ namespace Test
   }; // FooEx
 
   // generated from c++/cli_hdr/except_pre.erb
-  class BooEx
+  class BooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
   public:
 
-    virtual const char* what() const throw ();
+    virtual const char* what() const throw () override;
 
-    virtual void _raise (void) const;
+    virtual void _raise (void) const override;
 
-    virtual void _tao_encode (TAO_OutputCDR &cdr) const;
+    virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
 
-    virtual void _tao_decode (TAO_InputCDR &cdr);
+    virtual void _tao_decode (TAO_InputCDR &cdr) override;
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const;
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const override;
 
     // generated from c++/cli_hdr/except_post.erb
     BooEx (void);

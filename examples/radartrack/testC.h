@@ -24,7 +24,7 @@ using namespace TAOX11_NAMESPACE;
 typedef std::vector < uint8_t> octetseq;
 
 // generated from c++/cli_hdr/struct_pre.erb
-class RadarTrack
+class RadarTrack final
 {
 public:
 

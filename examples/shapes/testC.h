@@ -21,7 +21,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++/cli_hdr/struct_pre.erb
-class ShapeType
+class ShapeType final
 {
 public:
 
@@ -64,7 +64,7 @@ private:
 }; // ShapeType
 
 // generated from c++/cli_hdr/struct_pre.erb
-class Attributes
+class Attributes final
 {
 public:
 

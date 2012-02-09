@@ -22,7 +22,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++/cli_hdr/struct_pre.erb
-class Global
+class Global final
 {
 public:
 
@@ -62,7 +62,7 @@ namespace Test
   }; // DataType
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Point
+  class Point final
   {
   public:
 
@@ -92,7 +92,7 @@ namespace Test
   }; // Point
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Track
+  class Track final
   {
   public:
 
@@ -123,7 +123,7 @@ namespace Test
   }; // Track
 
   // generated from c++/cli_hdr/union_pre.erb
-  class Data
+  class Data final
   {
   public:
 

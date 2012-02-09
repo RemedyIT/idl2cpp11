@@ -26,7 +26,7 @@ namespace Test
 {
 
   // generated from c++/cli_hdr/struct_pre.erb
-  class Simple
+  class Simple final
   {
   public:
 
