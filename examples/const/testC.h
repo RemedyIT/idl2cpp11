@@ -148,7 +148,7 @@ public:
   explicit A (A_proxy_ptr p);
 protected:
   typedef std::shared_ptr<A>   _shared_ptr_type;
-  
+
   explicit A (A_proxy_ptr p, bool);
   A (void);
   ~A (void) = default;

@@ -96,7 +96,7 @@ namespace Test
     explicit Hello (Hello_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Hello>   _shared_ptr_type;
-    
+
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
     ~Hello (void) = default;

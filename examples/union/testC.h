@@ -268,7 +268,7 @@ namespace Test
     explicit Foo (Foo_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Foo>   _shared_ptr_type;
-    
+
     explicit Foo (Foo_proxy_ptr p, bool);
     Foo (void);
     ~Foo (void) = default;

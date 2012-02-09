@@ -137,7 +137,7 @@ namespace Test
     explicit Hello_Factory (Hello_Factory_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Hello_Factory>   _shared_ptr_type;
-    
+
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool);
     Hello_Factory (void);
     ~Hello_Factory (void) = default;
@@ -195,7 +195,7 @@ namespace Test
     explicit Hello (Hello_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Hello>   _shared_ptr_type;
-    
+
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
     ~Hello (void) = default;
