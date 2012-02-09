@@ -151,17 +151,17 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    void do_it (void);
+    virtual void do_it (void);
 
     // generated from c++/cli_hdr/attribute.erb
-    int32_t a_number(void);
+    virtual int32_t a_number(void);
 
     // generated from c++/cli_hdr/attribute.erb
-    std::string a_string(void);
-    void a_string(const std::string& _v);
+    virtual std::string a_string(void);
+    virtual void a_string(const std::string& _v);
 
     // generated from c++/cli_hdr/operation.erb
-    void shutdown (void);
+    virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Foo> narrow (

@@ -244,19 +244,19 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    bool pass_union (const ::Test::Data& s);
+    virtual bool pass_union (const ::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
-    ::Test::Data return_union (void);
+    virtual ::Test::Data return_union (void);
 
     // generated from c++/cli_hdr/operation.erb
-    bool get_union (::Test::Data& s);
+    virtual bool get_union (::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
-    bool update_union (::Test::Data& s);
+    virtual bool update_union (::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
-    void shutdown (void);
+    virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Foo> narrow (

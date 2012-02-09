@@ -90,7 +90,7 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    void op (const ::Test::F& p1,
+    virtual void op (const ::Test::F& p1,
              ::Test::V& p2,
              ::Test::M& p3);
 

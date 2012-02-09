@@ -122,10 +122,10 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    TAOX11_CORBA::object_reference< ::Test::Hello> get_hello (void);
+    virtual TAOX11_CORBA::object_reference< ::Test::Hello> get_hello (void);
 
     // generated from c++/cli_hdr/operation.erb
-    void get_hello_2 (TAOX11_CORBA::object_reference< ::Test::Hello>& hello_obj);
+    virtual void get_hello_2 (TAOX11_CORBA::object_reference< ::Test::Hello>& hello_obj);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Hello_Factory> narrow (
@@ -180,10 +180,10 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    std::string get_string (void);
+    virtual std::string get_string (void);
 
     // generated from c++/cli_hdr/operation.erb
-    void shutdown (void);
+    virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Hello> narrow (

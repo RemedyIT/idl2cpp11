@@ -106,7 +106,7 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    void op (void);
+    virtual void op (void);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Bar> narrow (
@@ -282,19 +282,19 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    bool pass_struct (const ::Test::Simple& s);
+    virtual bool pass_struct (const ::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    ::Test::Simple return_struct (void);
+    virtual ::Test::Simple return_struct (void);
 
     // generated from c++/cli_hdr/operation.erb
-    bool get_struct (::Test::Simple& s);
+    virtual bool get_struct (::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    bool update_struct (::Test::Simple& s);
+    virtual bool update_struct (::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
-    void shutdown (void);
+    virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Foo> narrow (

@@ -81,10 +81,10 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
-    std::string get_string (void);
+    virtual std::string get_string (void);
 
     // generated from c++/cli_hdr/operation.erb
-    void shutdown (void);
+    virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Hello> narrow (
