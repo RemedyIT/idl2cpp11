@@ -1,6 +1,6 @@
 // $Id$
 
-#include "Hello.h"
+#include "hello.h"
 
 #include <iostream>
 #include <fstream>

@@ -119,7 +119,7 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/inline.erb
-#include "TestC.inl"
+#include "testC.inl"
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
@@ -127,7 +127,7 @@ namespace std {
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
-#include "TestP.h"
+#include "testP.h"
 #endif
 
 #include /**/ "ace/post.h"

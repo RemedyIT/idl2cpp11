@@ -1,6 +1,9 @@
-//
-// $Id: Test.idl 13 2011-06-14 14:13:23Z martin $
-//
+/*--------------------------------------------------------------------
+ * test.idl - CORBA C++11 test idl
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 
 /// Put the interfaces in a module, to avoid global namespace pollution
 module Test
@@ -10,7 +13,7 @@ module Test
   interface Hello_Factory
   {
     Hello get_hello ();
-    
+
     void get_hello_2(out Hello hello_obj);
   };
 

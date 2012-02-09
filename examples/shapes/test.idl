@@ -1,3 +1,10 @@
+/*--------------------------------------------------------------------
+ * test.idl - CORBA C++11 test idl
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
+
 struct ShapeType {
   string color; //@key
   long x;

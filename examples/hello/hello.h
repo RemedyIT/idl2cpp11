@@ -6,7 +6,7 @@
 #define HELLO_H
 #include /**/ "ace/pre.h"
 
-#include "TestS.h"
+#include "testS.h"
 
 /// Implement the Test::Hello interface
 class Hello

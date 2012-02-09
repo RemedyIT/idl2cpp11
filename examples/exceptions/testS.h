@@ -11,7 +11,7 @@
 #ifndef __RIDL_TESTS_H_INCLUDED__
 #define __RIDL_TESTS_H_INCLUDED__
 
-#include "TestC.h"
+#include "testC.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
@@ -26,46 +26,53 @@ namespace Test
   // generated from c++/srv_hdr/interface_pre.erb
   namespace POA
   {
-    class Hello_srvproxy;
-    typedef Hello_srvproxy* Hello_srvproxy_ptr;
+    class Foo_srvproxy;
+    typedef Foo_srvproxy* Foo_srvproxy_ptr;
 
-    class Hello
+    class Foo
       : public virtual TAOX11_NAMESPACE::PortableServer::Servant
     {
     public:
-      typedef TAOX11_CORBA::servant_traits< Hello>    _traits_type;
-      typedef TAOX11_CORBA::servant_reference< Hello>   _ref_type;
+      typedef TAOX11_CORBA::servant_traits< Foo>    _traits_type;
+      typedef TAOX11_CORBA::servant_reference< Foo>   _ref_type;
       typedef typename _ref_type::shared_ptr_type   _shared_type;
 
     protected:
-      Hello (void);
-      Hello (bool); // for inheritance chains
-      virtual ~Hello (void);
+      Foo (void);
+      Foo (bool); // for inheritance chains
+      virtual ~Foo (void);
 
       virtual Servant_proxy_ptr get_proxy ();
 
       _shared_type _reference ();
 
-      friend class TAOX11_CORBA::servant_reference< Hello>;
+      friend class TAOX11_CORBA::servant_reference< Foo>;
     public:
 
       virtual bool _is_a (const std::string& logical_type_id);
 
-      TAOX11_CORBA::object_reference< ::Test::Hello> _this (void);
+      TAOX11_CORBA::object_reference< ::Test::Foo> _this (void);
 
       virtual const std::string _interface_repository_id (void) const;
 
       // generated from c++/srv_hdr/operation.erb
-      virtual std::string get_string (void) = 0;
+      virtual void do_it (void) = 0;
+
+      // generated from c++/srv_hdr/attribute.erb
+      virtual int32_t a_number(void) = 0;
+
+      // generated from c++/srv_hdr/attribute.erb
+      virtual std::string a_string(void) = 0;
+      virtual void a_string(const std::string& _v) = 0;
 
       // generated from c++/srv_hdr/operation.erb
       virtual void shutdown (void) = 0;
 
       // generated from c++/srv_hdr/interface_post.erb
     private:
-      friend class POA::Hello_srvproxy;
+      friend class POA::Foo_srvproxy;
 
-      POA::Hello_srvproxy_ptr hello_srvproxy_;
+      POA::Foo_srvproxy_ptr foo_srvproxy_;
     };
 
   }; // POA
@@ -78,21 +85,21 @@ namespace TAOX11_NAMESPACE {
 
     // generated from c++/srv_hdr/interface_servant_traits.erb
     template <>
-    struct servant_traits< ::Test::Hello>
+    struct servant_traits< ::Test::Foo>
     {
-      typedef ::Test::POA::Hello             base_type;
-      typedef ::Test::POA::Hello::_ref_type  ref_type;
+      typedef ::Test::POA::Foo             base_type;
+      typedef ::Test::POA::Foo::_ref_type  ref_type;
       template <typename _Tp1, typename = typename
-          std::enable_if<std::is_convertible< ::Test::POA::Hello*, _Tp1*>::value>::type>
+          std::enable_if<std::is_convertible< ::Test::POA::Foo*, _Tp1*>::value>::type>
       static ref_type downcast (const servant_reference<_Tp1>& base)
       {
-        return ref_type (std::dynamic_pointer_cast< ::Test::POA::Hello> (base.get_shared ()));
+        return ref_type (std::dynamic_pointer_cast< ::Test::POA::Foo> (base.get_shared ()));
       }
     };
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#include "TestS.inl"
+#include "testS.inl"
 
 #endif // __RIDL_TESTS_H_INCLUDED__
 

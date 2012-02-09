@@ -1,4 +1,9 @@
 // -*- MPC -*-
+// CORBA C++11 MPC file
+//
+// Copyright (c) Remedy IT Expertise BV
+// Chamber of commerce Rotterdam nr.276339, The Netherlands
+// --------------------------------------------------------------------
 
 project(*gen_idl): ridl_defaults {
   IDL_Files {

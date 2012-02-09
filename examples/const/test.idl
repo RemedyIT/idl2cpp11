@@ -1,6 +1,9 @@
-//
-// $Id$
-//
+/*--------------------------------------------------------------------
+ * test.idl - CORBA C++11 test idl
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 
 /// Put the interfaces in a module, to avoid global namespace pollution
 module Test

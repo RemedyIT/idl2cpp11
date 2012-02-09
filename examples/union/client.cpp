@@ -1,8 +1,6 @@
 /*--------------------------------------------------------------------
  * client.cpp - CORBA C++11 client application
  *
- * Author: Martin Corino
- *
  * Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
  --------------------------------------------------------------------*/

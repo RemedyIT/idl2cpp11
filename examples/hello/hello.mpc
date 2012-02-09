@@ -1,9 +1,13 @@
 // -*- MPC -*-
-// $Id$
+// CORBA C++11 MPC file
+//
+// Copyright (c) Remedy IT Expertise BV
+// Chamber of commerce Rotterdam nr.276339, The Netherlands
+// --------------------------------------------------------------------
 
 project(*hello_Idl): ridl_defaults {
   IDL_Files {
-    Test.idl
+    test.idl
   }
   custom_only = 1
 }
@@ -11,12 +15,12 @@ project(*hello_Idl): ridl_defaults {
 project(*hello_Server): taox11_server {
   after += *hello_Idl
   Source_Files {
-    Hello.cpp
+    hello.cpp
     server.cpp
   }
   Source_Files {
-    TestC.cpp
-    TestS.cpp
+    testC.cpp
+    testS.cpp
   }
   IDL_Files {
   }
@@ -28,7 +32,7 @@ project(*hello_Client): taox11_client {
     client.cpp
   }
   Source_Files {
-    TestC.cpp
+    testC.cpp
   }
   IDL_Files {
   }

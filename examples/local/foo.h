@@ -1,4 +1,9 @@
-// $Id$
+/*--------------------------------------------------------------------
+ * foo.h - CORBA C++11
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 
 #include "testC.h"
 
