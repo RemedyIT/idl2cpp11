@@ -1,6 +1,3 @@
-#ifndef SHAPES_BASE_IDL
-#define SHAPES_BASE_IDL
-
 struct ShapeType {
   string color; //@key
   long x;
@@ -15,4 +12,3 @@ struct Attributes {
 };
 typedef sequence<ShapeType> ShapeTypeSeq;
 
-#endif
