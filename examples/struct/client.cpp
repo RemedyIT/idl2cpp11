@@ -52,8 +52,8 @@ int main(int argc, char* argv[])
       std::cout << "narrowed Foo interface" << std::endl;
 
       CORBA::object_reference<Test::Bar> bar;
-      Test::Nested nested;
-      Test::Simple simple (32, 12345, "test", 3.45, true, 'A', bar, nested);
+      Test::Variable v;
+      Test::Simple simple (32, 12345, "test", 3.45, true, 'A', bar, v);
 
       if (!foo->pass_struct(simple))
       {
