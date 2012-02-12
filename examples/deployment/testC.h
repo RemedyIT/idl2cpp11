@@ -158,6 +158,12 @@ namespace Deployment
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < SatisfierProperty> SatisfierProperties;
+}; // namespace Deployment
+
+
+// generated from StubHeaderWriter#enter_module
+namespace Deployment
+{
 
   // generated from c++/cli_hdr/enum.erb
   enum class CCMComponentPortKind : uint32_t
@@ -1149,6 +1155,12 @@ namespace Deployment
     ::Deployment::Properties infoProperty_;
     ::Deployment::PlanLocalities localityConstraint_;
   }; // DeploymentPlan
+}; // namespace Deployment
+
+
+// generated from StubHeaderWriter#enter_module
+namespace Deployment
+{
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ComponentPackageReference final
@@ -1193,7 +1205,7 @@ namespace Deployment
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
 
   // generated from c++/cli_hdr/typedef.erb
-  typedef std::vector < ResourceUsageKind> ResourceUsageKinds;
+  typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ImplementationRequirement final
