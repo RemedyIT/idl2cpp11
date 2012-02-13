@@ -51,7 +51,8 @@ main(int argc, ACE_TCHAR *argv[])
         exit (1);
       }
 
-      CORBA::servant_traits<Test::Foo>::ref_type hello_impl (new Foo (_orb));
+      CORBA::servant_traits<Test::Foo>::ref_type hello_impl =
+        CORBA::make_reference <Foo> (_orb);
 
       std::cout << "created Foo servant" << std::endl;
 

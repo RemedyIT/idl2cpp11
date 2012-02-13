@@ -46,7 +46,8 @@ main(int argc, ACE_TCHAR *argv[])
         exit (1);
       }
 
-      CORBA::servant_traits<Test::Hello>::ref_type hello_impl (new Hello (_orb));
+      CORBA::servant_traits<Test::Hello>::ref_type hello_impl =
+        CORBA::make_reference <Hello> (_orb);
 
       std::cout << "created Hello servant" << std::endl;
 
