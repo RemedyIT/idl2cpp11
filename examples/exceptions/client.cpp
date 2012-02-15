@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 
       if (_orb == nullptr)
       {
-        std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned null ORB." << std::endl;
+        std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned nil ORB." << std::endl;
         exit (1);
       }
 
@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 
       if (obj == nullptr)
       {
-        std::cerr << "ERROR: string_to_object(<ior>) returned null reference." << std::endl;
+        std::cerr << "ERROR: string_to_object(<ior>) returned nil reference." << std::endl;
         exit (1);
       }
 
@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 
       if (!foo)
       {
-        std::cerr << "ERROR: Test::Foo::narrow (obj) returned null object." << std::endl;
+        std::cerr << "ERROR: Test::Foo::narrow (obj) returned nil object." << std::endl;
         exit (1);
       }
 
