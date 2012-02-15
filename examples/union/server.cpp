@@ -32,7 +32,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "retrieved RootPOA object reference" << std::endl;
 
-      CORBA::object_reference<PortableServer::POA> root_poa = PortableServer::POA::narrow (obj);
+      CORBA::object_reference<PortableServer::POA> root_poa = PortableServer::POA::_narrow (obj);
 
       if (!root_poa)
       {
@@ -67,7 +67,7 @@ main(int argc, ACE_TCHAR *argv[])
         exit (1);
       }
 
-      CORBA::object_reference<Test::Foo> hello = Test::Foo::narrow (hello_obj);
+      CORBA::object_reference<Test::Foo> hello = Test::Foo::_narrow (hello_obj);
 
       if (hello == nullptr)
       {

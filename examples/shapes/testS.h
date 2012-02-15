@@ -25,8 +25,6 @@ namespace TAOX11_NAMESPACE {
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#include "testS.inl"
-
 #endif // __RIDL_TESTS_H_INCLUDED__
 
 // -*- END -*-

@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      CORBA::object_reference<Test::Hello_Factory> hello_factory = Test::Hello_Factory::narrow (obj);
+      CORBA::object_reference<Test::Hello_Factory> hello_factory = Test::Hello_Factory::_narrow (obj);
 
       if (hello_factory == nullptr)
       {

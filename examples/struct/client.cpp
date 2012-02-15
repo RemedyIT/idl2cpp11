@@ -11,7 +11,7 @@
 void dump(const Test::Simple& s)
 {
   std::cout << "Simple ("
-            << (int)s.o () << ", "
+            << s.o () << ", "
             << s.l () << ", "
             << s.s () << ", "
             << s.d () << ", "
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      CORBA::object_reference<Test::Foo> foo = Test::Foo::narrow (obj);
+      CORBA::object_reference<Test::Foo> foo = Test::Foo::_narrow (obj);
 
       if (!foo)
       {

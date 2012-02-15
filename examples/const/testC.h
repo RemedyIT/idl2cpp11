@@ -109,8 +109,8 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::A>::ref_type
-    object_traits< ::A>::to_reference (
+    object_traits< ::A>::shared_ptr_type
+    object_traits< ::A>::lock_shared (
         ::A*);
     template<>
     const Object_proxy*
@@ -139,22 +139,22 @@ public:
   static constexpr float pi = 3.14159;
 
   // generated from c++/cli_hdr/interface_post.erb
-  static TAOX11_CORBA::object_reference< A> narrow (
+  static TAOX11_CORBA::object_reference< A> _narrow (
       const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
   {
     return TAOX11_CORBA::object_traits< A>::narrow (obj);
   }
 
-  explicit A (A_proxy_ptr p);
 protected:
   typedef std::shared_ptr<A>   _shared_ptr_type;
 
+  template <typename _Tp1, typename, typename ...Args>
+  friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+
+  explicit A (A_proxy_ptr p);
   explicit A (A_proxy_ptr p, bool);
   A (void);
   ~A (void) = default;
-
-  _shared_ptr_type _reference ()
-  { return std::dynamic_pointer_cast<A> (this->_get_reference ()); }
 
 private:
   A(const A&) = delete;

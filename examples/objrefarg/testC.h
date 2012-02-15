@@ -48,8 +48,8 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Hello>::ref_type
-    object_traits< ::Test::Hello>::to_reference (
+    object_traits< ::Test::Hello>::shared_ptr_type
+    object_traits< ::Test::Hello>::lock_shared (
         ::Test::Hello*);
     template<>
     const Object_proxy*
@@ -91,8 +91,8 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Hello_Factory>::ref_type
-    object_traits< ::Test::Hello_Factory>::to_reference (
+    object_traits< ::Test::Hello_Factory>::shared_ptr_type
+    object_traits< ::Test::Hello_Factory>::lock_shared (
         ::Test::Hello_Factory*);
     template<>
     const Object_proxy*
@@ -128,22 +128,22 @@ namespace Test
     virtual void get_hello_2 (TAOX11_CORBA::object_reference< ::Test::Hello>& hello_obj);
 
     // generated from c++/cli_hdr/interface_post.erb
-    static TAOX11_CORBA::object_reference< Hello_Factory> narrow (
+    static TAOX11_CORBA::object_reference< Hello_Factory> _narrow (
         const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
     {
       return TAOX11_CORBA::object_traits< Hello_Factory>::narrow (obj);
     }
 
-    explicit Hello_Factory (Hello_Factory_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Hello_Factory>   _shared_ptr_type;
 
+    template <typename _Tp1, typename, typename ...Args>
+    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+
+    explicit Hello_Factory (Hello_Factory_proxy_ptr p);
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool);
     Hello_Factory (void);
     ~Hello_Factory (void) = default;
-
-    _shared_ptr_type _reference ()
-    { return std::dynamic_pointer_cast<Hello_Factory> (this->_get_reference ()); }
 
   private:
     Hello_Factory(const Hello_Factory&) = delete;
@@ -186,22 +186,22 @@ namespace Test
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
-    static TAOX11_CORBA::object_reference< Hello> narrow (
+    static TAOX11_CORBA::object_reference< Hello> _narrow (
         const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
     {
       return TAOX11_CORBA::object_traits< Hello>::narrow (obj);
     }
 
-    explicit Hello (Hello_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Hello>   _shared_ptr_type;
 
+    template <typename _Tp1, typename, typename ...Args>
+    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+
+    explicit Hello (Hello_proxy_ptr p);
     explicit Hello (Hello_proxy_ptr p, bool);
     Hello (void);
     ~Hello (void) = default;
-
-    _shared_ptr_type _reference ()
-    { return std::dynamic_pointer_cast<Hello> (this->_get_reference ()); }
 
   private:
     Hello(const Hello&) = delete;

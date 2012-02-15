@@ -30,11 +30,11 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      Test::Hello::_ref_type hello = Test::Hello::narrow (obj);
+      Test::Hello::_ref_type hello = Test::Hello::_narrow (obj);
 
       if (!hello)
       {
-        std::cerr << "ERROR: Test::Hello::narrow (obj) returned null object." << std::endl;
+        std::cerr << "ERROR: Test::Hello::_narrow (obj) returned null object." << std::endl;
         exit (1);
       }
 

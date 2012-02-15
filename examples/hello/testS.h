@@ -33,9 +33,8 @@ namespace Test
       : public virtual TAOX11_NAMESPACE::PortableServer::Servant
     {
     public:
-      typedef TAOX11_CORBA::servant_traits< Hello>    _traits_type;
+      typedef TAOX11_CORBA::servant_traits< Hello>      _traits_type;
       typedef TAOX11_CORBA::servant_reference< Hello>   _ref_type;
-      typedef typename _ref_type::shared_ptr_type   _shared_type;
 
     protected:
       Hello (void);
@@ -43,8 +42,6 @@ namespace Test
       virtual ~Hello (void);
 
       virtual Servant_proxy_ptr get_proxy ();
-
-      _shared_type _reference ();
 
       template <typename T> friend class TAOX11_CORBA::servant_reference;
     public:
@@ -86,13 +83,11 @@ namespace TAOX11_NAMESPACE {
           std::enable_if<std::is_convertible< ::Test::POA::Hello*, _Tp1*>::value>::type>
       static ref_type downcast (const servant_reference<_Tp1>& base)
       {
-        return ref_type (std::dynamic_pointer_cast< ::Test::POA::Hello> (base.get_shared ()));
+        return ref_type::_downcast (base);
       }
     };
   }; // CORBA
 }; // TAOX11_NAMESPACE
-
-#include "testS.inl"
 
 #endif // __RIDL_TESTS_H_INCLUDED__
 

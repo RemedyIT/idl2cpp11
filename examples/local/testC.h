@@ -45,8 +45,8 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Foo>::ref_type
-    object_traits< ::Test::Foo>::to_reference (
+    object_traits< ::Test::Foo>::shared_ptr_type
+    object_traits< ::Test::Foo>::lock_shared (
         ::Test::Foo*);
   };
 };
@@ -74,7 +74,7 @@ namespace Test
     virtual void do_something (void) = 0;
 
     // generated from c++/cli_hdr/interface_post.erb
-    static TAOX11_CORBA::object_reference< Foo> narrow (
+    static TAOX11_CORBA::object_reference< Foo> _narrow (
         const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
     {
       return TAOX11_CORBA::object_traits< Foo>::narrow (obj);
@@ -84,9 +84,6 @@ namespace Test
 
     Foo (void);
     ~Foo (void) = default;
-
-    _shared_ptr_type _reference ()
-    { return std::dynamic_pointer_cast<Foo> (this->_get_reference ()); }
 
   private:
     Foo(const Foo&) = delete;

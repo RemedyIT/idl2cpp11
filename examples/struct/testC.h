@@ -75,8 +75,8 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Bar>::ref_type
-    object_traits< ::Test::Bar>::to_reference (
+    object_traits< ::Test::Bar>::shared_ptr_type
+    object_traits< ::Test::Bar>::lock_shared (
         ::Test::Bar*);
     template<>
     const Object_proxy*
@@ -109,22 +109,22 @@ namespace Test
     virtual void op (void);
 
     // generated from c++/cli_hdr/interface_post.erb
-    static TAOX11_CORBA::object_reference< Bar> narrow (
+    static TAOX11_CORBA::object_reference< Bar> _narrow (
         const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
     {
       return TAOX11_CORBA::object_traits< Bar>::narrow (obj);
     }
 
-    explicit Bar (Bar_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Bar>   _shared_ptr_type;
 
+    template <typename _Tp1, typename, typename ...Args>
+    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+
+    explicit Bar (Bar_proxy_ptr p);
     explicit Bar (Bar_proxy_ptr p, bool);
     Bar (void);
     ~Bar (void) = default;
-
-    _shared_ptr_type _reference ()
-    { return std::dynamic_pointer_cast<Bar> (this->_get_reference ()); }
 
   private:
     Bar(const Bar&) = delete;
@@ -227,8 +227,8 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Foo>::ref_type
-    object_traits< ::Test::Foo>::to_reference (
+    object_traits< ::Test::Foo>::shared_ptr_type
+    object_traits< ::Test::Foo>::lock_shared (
         ::Test::Foo*);
     template<>
     const Object_proxy*
@@ -273,22 +273,22 @@ namespace Test
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
-    static TAOX11_CORBA::object_reference< Foo> narrow (
+    static TAOX11_CORBA::object_reference< Foo> _narrow (
         const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
     {
       return TAOX11_CORBA::object_traits< Foo>::narrow (obj);
     }
 
-    explicit Foo (Foo_proxy_ptr p);
   protected:
     typedef std::shared_ptr<Foo>   _shared_ptr_type;
 
+    template <typename _Tp1, typename, typename ...Args>
+    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+
+    explicit Foo (Foo_proxy_ptr p);
     explicit Foo (Foo_proxy_ptr p, bool);
     Foo (void);
     ~Foo (void) = default;
-
-    _shared_ptr_type _reference ()
-    { return std::dynamic_pointer_cast<Foo> (this->_get_reference ()); }
 
   private:
     Foo(const Foo&) = delete;
