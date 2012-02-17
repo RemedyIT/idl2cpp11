@@ -19,6 +19,7 @@
 #include "tao/x11/orb.h"
 #include "tao/x11/user_exception.h"
 #include "tao/x11/object.h"
+#include "tao/x11/anytypecode/any.h"
 
 using namespace TAOX11_NAMESPACE;
 
