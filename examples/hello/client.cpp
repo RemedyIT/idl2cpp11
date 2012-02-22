@@ -12,9 +12,9 @@ int main(int argc, char* argv[])
 {
   try
     {
-      CORBA::object_reference<CORBA::ORB> _orb = CORBA::ORB_init (argc, argv);
+      CORBA::object_traits<CORBA::ORB>::ref_type _orb = CORBA::ORB_init (argc, argv);
 
-      if (_orb == nullptr)
+      if (!_orb)
       {
         std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned nil ORB." << std::endl;
         exit (1);
