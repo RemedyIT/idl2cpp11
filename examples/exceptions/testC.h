@@ -151,6 +151,7 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::do_it
     virtual void do_it (void);
 
     // generated from c++/cli_hdr/attribute.erb
@@ -161,6 +162,7 @@ namespace Test
     virtual void a_string(const std::string& _v);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::shutdown
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb

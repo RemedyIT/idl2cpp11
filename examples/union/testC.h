@@ -244,18 +244,23 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::pass_union
     virtual bool pass_union (const ::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::return_union
     virtual ::Test::Data return_union (void);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::get_union
     virtual bool get_union (::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::update_union
     virtual bool update_union (::Test::Data& s);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::shutdown
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb

@@ -106,6 +106,7 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Bar::op
     virtual void op (void);
 
     // generated from c++/cli_hdr/interface_post.erb
@@ -258,18 +259,23 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::pass_struct
     virtual bool pass_struct (const ::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::return_struct
     virtual ::Test::Simple return_struct (void);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::get_struct
     virtual bool get_struct (::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::update_struct
     virtual bool update_struct (::Test::Simple& s);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::shutdown
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb

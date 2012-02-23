@@ -81,9 +81,11 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Hello::get_string
     virtual std::string get_string (void);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Hello::shutdown
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb

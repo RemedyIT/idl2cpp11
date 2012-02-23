@@ -71,6 +71,7 @@ namespace Test
     virtual bool _is_a (const std::string& local_type_id) override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::do_something
     virtual void do_something (void) = 0;
 
     // generated from c++/cli_hdr/interface_post.erb

@@ -151,26 +151,31 @@ namespace Test
     virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::test_long_seq
     virtual ::Test::LongSeq test_long_seq (const ::Test::LongSeq& sin,
                                    ::Test::LongSeq& sinout,
                                    ::Test::LongSeq& sout);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::test_bool_seq
     virtual ::Test::BoolSeq test_bool_seq (const ::Test::BoolSeq& sin,
                                    ::Test::BoolSeq& sinout,
                                    ::Test::BoolSeq& sout);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::test_string_seq
     virtual ::Test::StringSeq test_string_seq (const ::Test::StringSeq& sin,
                                        ::Test::StringSeq& sinout,
                                        ::Test::StringSeq& sout);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::test_struct_seq
     virtual ::Test::SimpleSeq test_struct_seq (const ::Test::SimpleSeq& sin,
                                        ::Test::SimpleSeq& sinout,
                                        ::Test::SimpleSeq& sout);
 
     // generated from c++/cli_hdr/operation.erb
+    /// @copybrief Test::Foo::shutdown
     virtual void shutdown (void);
 
     // generated from c++/cli_hdr/interface_post.erb
