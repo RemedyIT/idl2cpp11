@@ -76,7 +76,7 @@ namespace Test
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Foo> _narrow (
-        const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
+        TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> obj)
     {
       return TAOX11_CORBA::object_traits< Foo>::narrow (obj);
     }

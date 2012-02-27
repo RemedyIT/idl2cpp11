@@ -56,10 +56,10 @@ namespace TAOX11_NAMESPACE
     template<>
     const Object_proxy*
     object_traits< ::Test::Hello>::to_proxy (
-        const object_traits< ::Test::Hello>::ref_type&);
+        object_traits< ::Test::Hello>::ref_type);
     template<>
     object_traits< ::Test::Hello>::ref_type object_traits< ::Test::Hello>::narrow (
-       const object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type&);
+       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
 };
 #endif // !_INTF_TEST_HELLO_TRAITS_DECL_
@@ -90,7 +90,7 @@ namespace Test
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Hello> _narrow (
-        const TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object>& obj)
+        TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> obj)
     {
       return TAOX11_CORBA::object_traits< Hello>::narrow (obj);
     }

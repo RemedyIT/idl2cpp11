@@ -52,6 +52,7 @@ namespace Test
 
       virtual const std::string _interface_repository_id (void) const;
 
+
       // generated from c++/srv_hdr/operation.erb
       virtual std::string get_string (void) = 0;
 
@@ -81,7 +82,7 @@ namespace TAOX11_NAMESPACE {
       typedef ::Test::POA::Hello::_ref_type  ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Test::POA::Hello*, _Tp1*>::value>::type>
-      static ref_type downcast (const servant_reference<_Tp1>& base)
+      static ref_type downcast (servant_reference<_Tp1> base)
       {
         return ref_type::_downcast (base);
       }
