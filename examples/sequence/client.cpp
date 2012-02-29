@@ -64,7 +64,7 @@ int main(int argc, char* argv[])
       if (_orb == nullptr)
       {
         std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned nil ORB." << std::endl;
-        exit (1);
+        return 1;
       }
 
       CORBA::object_reference<CORBA::Object> obj = _orb->string_to_object ("file://test.ior");
@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
       if (obj == nullptr)
       {
         std::cerr << "ERROR: string_to_object(<ior>) returned nil reference." << std::endl;
-        exit (1);
+        return 1;
       }
 
       std::cout << "retrieved object reference" << std::endl;
@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
       if (!foo)
       {
         std::cerr << "ERROR: Test::Foo::narrow (obj) returned nil object." << std::endl;
-        exit (1);
+        return 1;
       }
 
       std::cout << "narrowed Foo interface" << std::endl;

@@ -15,7 +15,7 @@ main(int argc, ACE_TCHAR *argv[])
       if (_orb == nullptr)
       {
         std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned nil ORB." << std::endl;
-        exit (1);
+        return 1;
       }
 
       CORBA::object_reference<CORBA::Object> obj = _orb->resolve_initial_references ("RootPOA");
@@ -23,7 +23,7 @@ main(int argc, ACE_TCHAR *argv[])
       if (obj == nullptr)
       {
         std::cerr << "ERROR: resolve_initial_references (\"RootPOA\") returned nil reference." << std::endl;
-        exit (1);
+        return 1;
       }
 
       std::cout << "retrieved RootPOA object reference" << std::endl;
@@ -33,7 +33,7 @@ main(int argc, ACE_TCHAR *argv[])
       if (!root_poa)
       {
         std::cerr << "ERROR: PortableServer::POA::narrow (obj) returned nil object." << std::endl;
-        exit (1);
+        return 1;
       }
 
       std::cout << "narrowed POA interface" << std::endl;
@@ -43,7 +43,7 @@ main(int argc, ACE_TCHAR *argv[])
       if (!poaman)
       {
         std::cerr << "ERROR: root_poa->the_POAManager () returned nil object." << std::endl;
-        exit (1);
+        return 1;
       }
 
       CORBA::servant_traits<Test::Hello>::ref_type hello_impl =
@@ -60,7 +60,7 @@ main(int argc, ACE_TCHAR *argv[])
       if (hello_obj == nullptr)
       {
         std::cerr << "ERROR: root_poa->id_to_reference (id) returned nil reference." << std::endl;
-        exit (1);
+        return 1;
       }
 
       CORBA::object_reference<Test::Hello> hello = Test::Hello::_narrow (hello_obj);
@@ -72,7 +72,7 @@ main(int argc, ACE_TCHAR *argv[])
       if (!fos)
       {
         std::cerr << "ERROR: failed to open file 'test.ior'" << std::endl;
-        exit (1);
+        return 1;
       }
       fos << ior;
       fos.close ();
