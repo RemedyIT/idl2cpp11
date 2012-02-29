@@ -11,6 +11,7 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
+
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
@@ -81,8 +82,79 @@ namespace std {
   void swap (::RadarTrack& m1, ::RadarTrack& m2);
 }; // std
 
-// generated from c++/cli_hdr/inline.erb
-#include "testC.inl"
+// generated from c++/cli_inl/struct_inl.erb
+inline RadarTrack::RadarTrack ()
+           : id_ (std::string())
+           , x_ (0)
+           , y_ (0)
+           , z_ (0)
+           , plot_ (std::vector < uint8_t> ())
+{
+}
+inline RadarTrack::RadarTrack (std::string id,
+                               int32_t x,
+                               int32_t y,
+                               int32_t z,
+                               ::octetseq plot)
+           : id_ (std::move (id))
+           , x_ (std::move (x))
+           , y_ (std::move (y))
+           , z_ (std::move (z))
+           , plot_ (std::move (plot))
+{
+}
+
+inline void RadarTrack::id (const std::string& _id) { this->id_ = _id; }
+inline void RadarTrack::id (std::string&& _id) { this->id_ = std::move (_id); }
+inline const std::string& RadarTrack::id (void) const { return this->id_; }
+inline std::string& RadarTrack::id (void) { return this->id_; }
+
+inline void RadarTrack::x (int32_t _x) { this->x_ = _x; }
+inline int32_t RadarTrack::x (void) const { return this->x_; }
+inline int32_t& RadarTrack::x (void) { return this->x_; }
+
+inline void RadarTrack::y (int32_t _y) { this->y_ = _y; }
+inline int32_t RadarTrack::y (void) const { return this->y_; }
+inline int32_t& RadarTrack::y (void) { return this->y_; }
+
+inline void RadarTrack::z (int32_t _z) { this->z_ = _z; }
+inline int32_t RadarTrack::z (void) const { return this->z_; }
+inline int32_t& RadarTrack::z (void) { return this->z_; }
+
+inline void RadarTrack::plot (const ::octetseq& _plot) { this->plot_ = _plot; }
+inline void RadarTrack::plot (::octetseq&& _plot) { this->plot_ = std::move (_plot); }
+inline const ::octetseq& RadarTrack::plot (void) const { return this->plot_; }
+inline ::octetseq& RadarTrack::plot (void) { return this->plot_; }
+
+inline ::RadarTrack& RadarTrack::operator= (const ::RadarTrack& x)
+{
+  if (this != &x) {
+    this->id_ = x.id_;
+    this->x_ = x.x_;
+    this->y_ = x.y_;
+    this->z_ = x.z_;
+    this->plot_ = x.plot_;
+  }
+  return *this;
+}
+inline ::RadarTrack& RadarTrack::operator= (::RadarTrack&& x)
+{
+  this->id_ = std::move (x.id_);
+  this->x_ = std::move (x.x_);
+  this->y_ = std::move (x.y_);
+  this->z_ = std::move (x.z_);
+  this->plot_ = std::move (x.plot_);
+  return *this;
+}
+
+inline void RadarTrack::swap (::RadarTrack& s)
+{
+  std::swap (this->id_, s.id_);
+  std::swap (this->x_, s.x_);
+  std::swap (this->y_, s.y_);
+  std::swap (this->z_, s.z_);
+  std::swap (this->plot_, s.plot_);
+}
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

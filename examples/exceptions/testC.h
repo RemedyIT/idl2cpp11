@@ -11,6 +11,7 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
+
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
@@ -197,8 +198,78 @@ namespace Test
 namespace std {
 }; // std
 
-// generated from c++/cli_hdr/inline.erb
-#include "testC.inl"
+// generated from c++/cli_inl/except_inl.erb
+inline Test::FooEx::FooEx ()
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "Test::FooEx")
+  , message_ (std::string())
+{
+}
+inline Test::FooEx::FooEx (std::string message)
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "Test::FooEx")
+  , message_ (std::move (message))
+{
+}
+
+inline void Test::FooEx::message (const std::string& _message) { this->message_ = _message; }
+inline void Test::FooEx::message (std::string&& _message) { this->message_ = std::move (_message); }
+inline const std::string& Test::FooEx::message (void) const { return this->message_; }
+inline std::string& Test::FooEx::message (void) { return this->message_; }
+
+inline ::Test::FooEx& Test::FooEx::operator= (const FooEx& x)
+{
+  if (this != &x)
+  {
+    this->UserException::operator = (x);
+    this->message_ = x.message_;
+  }
+  return *this;
+}
+inline ::Test::FooEx& Test::FooEx::operator= (::Test::FooEx&& x)
+{
+  if (this != &x)
+  {
+    this->UserException::operator = (x);
+    this->message_ = std::move (x.message_);
+  }
+  return *this;
+}
+  
+
+// generated from c++/cli_inl/except_inl.erb
+inline Test::BooEx::BooEx ()
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "Test::BooEx")
+  , id_ (0)
+{
+}
+inline Test::BooEx::BooEx (int32_t id)
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "Test::BooEx")
+  , id_ (std::move (id))
+{
+}
+
+inline void Test::BooEx::id (int32_t _id) { this->id_ = _id; }
+inline int32_t Test::BooEx::id (void) const { return this->id_; }
+inline int32_t& Test::BooEx::id (void) { return this->id_; }
+
+inline ::Test::BooEx& Test::BooEx::operator= (const ::Test::BooEx& x)
+{
+  if (this != &x)
+  {
+    this->UserException::operator = (x);
+    this->id_ = x.id_;
+  }
+  return *this;
+}
+inline ::Test::BooEx& Test::BooEx::operator= (::Test::BooEx&& x)
+{
+  if (this != &x)
+  {
+    this->UserException::operator = (x);
+    this->id_ = std::move (x.id_);
+  }
+  return *this;
+}
+  
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

@@ -11,6 +11,7 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
+
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
@@ -318,8 +319,142 @@ namespace std {
   void swap (::Test::Simple& m1, ::Test::Simple& m2);
 }; // std
 
-// generated from c++/cli_hdr/inline.erb
-#include "testC.inl"
+// generated from c++/cli_inl/struct_inl.erb
+inline Test::Variable::Variable ()
+           : name_ (std::string())
+{
+}
+inline Test::Variable::Variable (std::string name)
+           : name_ (std::move (name))
+{
+}
+
+inline void Test::Variable::name (const std::string& _name) { this->name_ = _name; }
+inline void Test::Variable::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline const std::string& Test::Variable::name (void) const { return this->name_; }
+inline std::string& Test::Variable::name (void) { return this->name_; }
+
+inline ::Test::Variable& Test::Variable::operator= (const ::Test::Variable& x)
+{
+  if (this != &x) {
+    this->name_ = x.name_;
+  }
+  return *this;
+}
+inline ::Test::Variable& Test::Variable::operator= (::Test::Variable&& x)
+{
+  this->name_ = std::move (x.name_);
+  return *this;
+}
+
+inline void Test::Variable::swap (::Test::Variable& s)
+{
+  std::swap (this->name_, s.name_);
+}
+
+// generated from c++/cli_inl/struct_inl.erb
+inline Test::Simple::Simple ()
+           : o_ (0)
+           , l_ (0)
+           , s_ (std::string())
+           , d_ (0.0)
+           , b_ (false)
+           , c_ ('\0')
+           , bar_ref_ (nullptr)
+           , v_ (::Test::Variable ())
+{
+}
+inline Test::Simple::Simple (uint8_t o,
+                             int32_t l,
+                             std::string s,
+                             double d,
+                             bool b,
+                             char c,
+                             TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref,
+                             ::Test::Variable v)
+           : o_ (std::move (o))
+           , l_ (std::move (l))
+           , s_ (std::move (s))
+           , d_ (std::move (d))
+           , b_ (std::move (b))
+           , c_ (std::move (c))
+           , bar_ref_ (std::move (bar_ref))
+           , v_ (std::move (v))
+{
+}
+
+inline void Test::Simple::o (uint8_t _o) { this->o_ = _o; }
+inline uint8_t Test::Simple::o (void) const { return this->o_; }
+inline uint8_t& Test::Simple::o (void) { return this->o_; }
+
+inline void Test::Simple::l (int32_t _l) { this->l_ = _l; }
+inline int32_t Test::Simple::l (void) const { return this->l_; }
+inline int32_t& Test::Simple::l (void) { return this->l_; }
+
+inline void Test::Simple::s (const std::string& _s) { this->s_ = _s; }
+inline void Test::Simple::s (std::string&& _s) { this->s_ = std::move (_s); }
+inline const std::string& Test::Simple::s (void) const { return this->s_; }
+inline std::string& Test::Simple::s (void) { return this->s_; }
+
+inline void Test::Simple::d (double _d) { this->d_ = _d; }
+inline double Test::Simple::d (void) const { return this->d_; }
+inline double& Test::Simple::d (void) { return this->d_; }
+
+inline void Test::Simple::b (bool _b) { this->b_ = _b; }
+inline bool Test::Simple::b (void) const { return this->b_; }
+inline bool& Test::Simple::b (void) { return this->b_; }
+
+inline void Test::Simple::c (char _c) { this->c_ = _c; }
+inline char Test::Simple::c (void) const { return this->c_; }
+inline char& Test::Simple::c (void) { return this->c_; }
+
+inline void Test::Simple::bar_ref (TAOX11_CORBA::object_reference< ::Test::Bar> _bar_ref) { this->bar_ref_ = _bar_ref; }
+inline TAOX11_CORBA::object_reference< ::Test::Bar> Test::Simple::bar_ref (void) const { return this->bar_ref_; }
+inline TAOX11_CORBA::object_reference< ::Test::Bar>& Test::Simple::bar_ref (void) { return this->bar_ref_; }
+
+inline void Test::Simple::v (const ::Test::Variable& _v) { this->v_ = _v; }
+inline void Test::Simple::v (::Test::Variable&& _v) { this->v_ = std::move (_v); }
+inline const ::Test::Variable& Test::Simple::v (void) const { return this->v_; }
+inline ::Test::Variable& Test::Simple::v (void) { return this->v_; }
+
+inline ::Test::Simple& Test::Simple::operator= (const ::Test::Simple& x)
+{
+  if (this != &x) {
+    this->o_ = x.o_;
+    this->l_ = x.l_;
+    this->s_ = x.s_;
+    this->d_ = x.d_;
+    this->b_ = x.b_;
+    this->c_ = x.c_;
+    this->bar_ref_ = x.bar_ref_;
+    this->v_ = x.v_;
+  }
+  return *this;
+}
+inline ::Test::Simple& Test::Simple::operator= (::Test::Simple&& x)
+{
+  this->o_ = std::move (x.o_);
+  this->l_ = std::move (x.l_);
+  this->s_ = std::move (x.s_);
+  this->d_ = std::move (x.d_);
+  this->b_ = std::move (x.b_);
+  this->c_ = std::move (x.c_);
+  this->bar_ref_ = std::move (x.bar_ref_);
+  this->v_ = std::move (x.v_);
+  return *this;
+}
+
+inline void Test::Simple::swap (::Test::Simple& s)
+{
+  std::swap (this->o_, s.o_);
+  std::swap (this->l_, s.l_);
+  std::swap (this->s_, s.s_);
+  std::swap (this->d_, s.d_);
+  std::swap (this->b_, s.b_);
+  std::swap (this->c_, s.c_);
+  std::swap (this->bar_ref_, s.bar_ref_);
+  std::swap (this->v_, s.v_);
+}
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

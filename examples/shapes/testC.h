@@ -11,6 +11,7 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
+
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
@@ -116,8 +117,122 @@ namespace std {
   void swap (::Attributes& m1, ::Attributes& m2);
 }; // std
 
-// generated from c++/cli_hdr/inline.erb
-#include "testC.inl"
+// generated from c++/cli_inl/struct_inl.erb
+inline ShapeType::ShapeType ()
+           : color_ (std::string())
+           , x_ (0)
+           , y_ (0)
+           , shapesize_ (0)
+{
+}
+inline ShapeType::ShapeType (std::string color,
+                             int32_t x,
+                             int32_t y,
+                             int32_t shapesize)
+           : color_ (std::move (color))
+           , x_ (std::move (x))
+           , y_ (std::move (y))
+           , shapesize_ (std::move (shapesize))
+{
+}
+
+inline void ShapeType::color (const std::string& _color) { this->color_ = _color; }
+inline void ShapeType::color (std::string&& _color) { this->color_ = std::move (_color); }
+inline const std::string& ShapeType::color (void) const { return this->color_; }
+inline std::string& ShapeType::color (void) { return this->color_; }
+
+inline void ShapeType::x (int32_t _x) { this->x_ = _x; }
+inline int32_t ShapeType::x (void) const { return this->x_; }
+inline int32_t& ShapeType::x (void) { return this->x_; }
+
+inline void ShapeType::y (int32_t _y) { this->y_ = _y; }
+inline int32_t ShapeType::y (void) const { return this->y_; }
+inline int32_t& ShapeType::y (void) { return this->y_; }
+
+inline void ShapeType::shapesize (int32_t _shapesize) { this->shapesize_ = _shapesize; }
+inline int32_t ShapeType::shapesize (void) const { return this->shapesize_; }
+inline int32_t& ShapeType::shapesize (void) { return this->shapesize_; }
+
+inline ::ShapeType& ShapeType::operator= (const ::ShapeType& x)
+{
+  if (this != &x) {
+    this->color_ = x.color_;
+    this->x_ = x.x_;
+    this->y_ = x.y_;
+    this->shapesize_ = x.shapesize_;
+  }
+  return *this;
+}
+inline ::ShapeType& ShapeType::operator= (::ShapeType&& x)
+{
+  this->color_ = std::move (x.color_);
+  this->x_ = std::move (x.x_);
+  this->y_ = std::move (x.y_);
+  this->shapesize_ = std::move (x.shapesize_);
+  return *this;
+}
+
+inline void ShapeType::swap (::ShapeType& s)
+{
+  std::swap (this->color_, s.color_);
+  std::swap (this->x_, s.x_);
+  std::swap (this->y_, s.y_);
+  std::swap (this->shapesize_, s.shapesize_);
+}
+
+// generated from c++/cli_inl/struct_inl.erb
+inline Attributes::Attributes ()
+           : shape_ (std::string())
+           , color_ (std::string())
+           , speed_ (0.0)
+{
+}
+inline Attributes::Attributes (std::string shape,
+                               std::string color,
+                               float speed)
+           : shape_ (std::move (shape))
+           , color_ (std::move (color))
+           , speed_ (std::move (speed))
+{
+}
+
+inline void Attributes::shape (const std::string& _shape) { this->shape_ = _shape; }
+inline void Attributes::shape (std::string&& _shape) { this->shape_ = std::move (_shape); }
+inline const std::string& Attributes::shape (void) const { return this->shape_; }
+inline std::string& Attributes::shape (void) { return this->shape_; }
+
+inline void Attributes::color (const std::string& _color) { this->color_ = _color; }
+inline void Attributes::color (std::string&& _color) { this->color_ = std::move (_color); }
+inline const std::string& Attributes::color (void) const { return this->color_; }
+inline std::string& Attributes::color (void) { return this->color_; }
+
+inline void Attributes::speed (float _speed) { this->speed_ = _speed; }
+inline float Attributes::speed (void) const { return this->speed_; }
+inline float& Attributes::speed (void) { return this->speed_; }
+
+inline ::Attributes& Attributes::operator= (const ::Attributes& x)
+{
+  if (this != &x) {
+    this->shape_ = x.shape_;
+    this->color_ = x.color_;
+    this->speed_ = x.speed_;
+  }
+  return *this;
+}
+inline ::Attributes& Attributes::operator= (::Attributes&& x)
+{
+  this->shape_ = std::move (x.shape_);
+  this->color_ = std::move (x.color_);
+  this->speed_ = std::move (x.speed_);
+  return *this;
+}
+
+inline void Attributes::swap (::Attributes& s)
+{
+  std::swap (this->shape_, s.shape_);
+  std::swap (this->color_, s.color_);
+  std::swap (this->speed_, s.speed_);
+}
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

@@ -11,6 +11,7 @@
 #ifndef __RIDL_TESTC_H_INCLUDED__
 #define __RIDL_TESTC_H_INCLUDED__
 
+
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
@@ -167,9 +168,6 @@ private:
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 }; // std
-
-// generated from c++/cli_hdr/inline.erb
-#include "testC.inl"
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
