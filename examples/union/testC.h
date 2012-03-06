@@ -44,7 +44,7 @@ public:
 
 private:
   int32_t x_;
-}; // Global
+};// Global
 
 // generated from StubHeaderWriter#enter_module
 namespace Test
@@ -60,7 +60,7 @@ namespace Test
     dtPoint,
     dtTrack,
     dtGlobal
-  }; // DataType
+  };// DataType
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Point final
@@ -90,7 +90,7 @@ namespace Test
   private:
     int32_t x_;
     int32_t y_;
-  }; // Point
+  };// Point
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Track final
@@ -121,7 +121,7 @@ namespace Test
   private:
     int32_t id_;
     ::Test::Point p_;
-  }; // Track
+  };// Track
 
   // generated from c++/cli_hdr/union_pre.erb
   class Data final

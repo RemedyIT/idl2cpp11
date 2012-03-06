@@ -49,7 +49,7 @@ namespace Test
 
   private:
     std::string name_;
-  }; // Variable
+  };// Variable
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -202,7 +202,7 @@ namespace Test
     char c_;
     TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref_;
     ::Test::Variable v_;
-  }; // Simple
+  };// Simple
 
   // generated from StubHeaderWriter#enter_interface
 

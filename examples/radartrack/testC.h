@@ -72,7 +72,7 @@ private:
   int32_t y_;
   int32_t z_;
   ::octetseq plot_;
-}; // RadarTrack
+};// RadarTrack
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

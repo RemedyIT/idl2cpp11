@@ -62,7 +62,7 @@ private:
   int32_t x_;
   int32_t y_;
   int32_t shapesize_;
-}; // ShapeType
+};// ShapeType
 
 // generated from c++/cli_hdr/struct_pre.erb
 class Attributes final
@@ -100,7 +100,7 @@ private:
   std::string shape_;
   std::string color_;
   float speed_;
-}; // Attributes
+};// Attributes
 
 // generated from c++/cli_hdr/typedef.erb
 typedef std::vector < ::ShapeType> ShapeTypeSeq;

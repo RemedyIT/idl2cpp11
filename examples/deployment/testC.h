@@ -55,7 +55,7 @@ namespace Deployment
   private:
     std::string name_;
     TAOX11_NAMESPACE::CORBA::Any value_;
-  }; // Property
+  };// Property
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Property> Properties;
@@ -97,7 +97,7 @@ namespace Deployment
     std::string name_;
     std::string resourceType_;
     ::Deployment::Properties property_;
-  }; // Requirement
+  };// Requirement
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Requirement> Requirements;
@@ -111,7 +111,7 @@ namespace Deployment
     Maximum,
     Attribute,
     Selection
-  }; // SatisfierPropertyKind
+  };// SatisfierPropertyKind
 
   // generated from c++/cli_hdr/struct_pre.erb
   class SatisfierProperty final
@@ -155,7 +155,7 @@ namespace Deployment
     ::Deployment::SatisfierPropertyKind kind_;
     bool dynamic_;
     TAOX11_NAMESPACE::CORBA::Any value_;
-  }; // SatisfierProperty
+  };// SatisfierProperty
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < SatisfierProperty> SatisfierProperties;
@@ -177,7 +177,7 @@ namespace Deployment
     EventConsumer,
     ExtendedPort,
     MirrorPort
-  }; // CCMComponentPortKind
+  };// CCMComponentPortKind
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ComponentPortDescription final
@@ -253,7 +253,7 @@ namespace Deployment
     bool optional_;
     ::Deployment::CCMComponentPortKind kind_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam_;
-  }; // ComponentPortDescription
+  };// ComponentPortDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
@@ -287,7 +287,7 @@ namespace Deployment
   private:
     std::string name_;
     TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type_;
-  }; // ComponentPropertyDescription
+  };// ComponentPropertyDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
@@ -371,7 +371,7 @@ namespace Deployment
     ::Deployment::ComponentPortDescriptions port_;
     ::Deployment::ComponentPropertyDescriptions property_;
     ::Deployment::Properties infoProperty_;
-  }; // ComponentInterfaceDescription
+  };// ComponentInterfaceDescription
 
   // generated from c++/cli_hdr/struct_pre.erb
   class MonolithicDeploymentDescription final
@@ -424,7 +424,7 @@ namespace Deployment
     ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef_;
     ::Deployment::Properties execParameter_;
     ::Deployment::Requirements deployRequirement_;
-  }; // MonolithicDeploymentDescription
+  };// MonolithicDeploymentDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
@@ -437,7 +437,7 @@ namespace Deployment
     ResourceUsesInstance,
     PortUsesResource,
     ResourceUsesPort
-  }; // ResourceUsageKind
+  };// ResourceUsageKind
 
   // generated from c++/cli_hdr/struct_pre.erb
   class InstanceResourceDeploymentDescription final
@@ -482,7 +482,7 @@ namespace Deployment
     std::string requirementName_;
     std::string resourceName_;
     ::Deployment::Properties property_;
-  }; // InstanceResourceDeploymentDescription
+  };// InstanceResourceDeploymentDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
@@ -551,7 +551,7 @@ namespace Deployment
     ::Deployment::Properties configProperty_;
     ::Deployment::InstanceResourceDeploymentDescriptions deployedResource_;
     ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource_;
-  }; // InstanceDeploymentDescription
+  };// InstanceDeploymentDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
@@ -579,7 +579,7 @@ namespace Deployment
 
   private:
     std::string portName_;
-  }; // ComponentExternalPortEndpoint
+  };// ComponentExternalPortEndpoint
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
@@ -625,7 +625,7 @@ namespace Deployment
     bool provider_;
     ::Deployment::CCMComponentPortKind kind_;
     uint32_t instanceRef_;
-  }; // PlanSubcomponentPortEndpoint
+  };// PlanSubcomponentPortEndpoint
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
@@ -673,7 +673,7 @@ namespace Deployment
     bool provider_;
     std::string portName_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType_;
-  }; // ExternalReferenceEndpoint
+  };// ExternalReferenceEndpoint
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
@@ -722,7 +722,7 @@ namespace Deployment
     std::string requirementName_;
     std::string resourceName_;
     ::Deployment::Properties property_;
-  }; // ConnectionResourceDeploymentDescription
+  };// ConnectionResourceDeploymentDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
@@ -792,7 +792,7 @@ namespace Deployment
     ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint_;
     ::Deployment::ExternalReferenceEndpoints externalReference_;
     ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource_;
-  }; // PlanConnectionDescription
+  };// PlanConnectionDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
@@ -826,7 +826,7 @@ namespace Deployment
   private:
     std::string propertyName_;
     uint32_t instanceRef_;
-  }; // PlanSubcomponentPropertyReference
+  };// PlanSubcomponentPropertyReference
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
@@ -875,7 +875,7 @@ namespace Deployment
     ::TAOX11_NAMESPACE::CORBA::StringSeq source_;
     std::string externalName_;
     ::Deployment::PlanSubcomponentPropertyReferences delegatesTo_;
-  }; // PlanPropertyMapping
+  };// PlanPropertyMapping
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
@@ -903,7 +903,7 @@ namespace Deployment
 
   private:
     std::string requiredType_;
-  }; // ImplementationDependency
+  };// ImplementationDependency
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
@@ -945,7 +945,7 @@ namespace Deployment
     std::string requirementName_;
     std::string resourceName_;
     ::Deployment::Properties property_;
-  }; // ResourceDeploymentDescription
+  };// ResourceDeploymentDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
@@ -1015,7 +1015,7 @@ namespace Deployment
     ::Deployment::Properties execParameter_;
     ::Deployment::Requirements deployRequirement_;
     ::Deployment::ResourceDeploymentDescriptions deployedResource_;
-  }; // ArtifactDeploymentDescription
+  };// ArtifactDeploymentDescription
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
@@ -1026,7 +1026,7 @@ namespace Deployment
     PlanSameProcess,
     PlanDifferentProcess,
     PlanNoConstraint
-  }; // PlanLocalityKind
+  };// PlanLocalityKind
 
   // generated from c++/cli_hdr/struct_pre.erb
   class PlanLocality final
@@ -1057,7 +1057,7 @@ namespace Deployment
   private:
     ::Deployment::PlanLocalityKind constraint_;
     ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef_;
-  }; // PlanLocality
+  };// PlanLocality
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanLocality> PlanLocalities;
@@ -1155,7 +1155,7 @@ namespace Deployment
     ::Deployment::ArtifactDeploymentDescriptions artifact_;
     ::Deployment::Properties infoProperty_;
     ::Deployment::PlanLocalities localityConstraint_;
-  }; // DeploymentPlan
+  };// DeploymentPlan
 }; // namespace Deployment
 
 
@@ -1200,7 +1200,7 @@ namespace Deployment
     std::string requiredUUID_;
     std::string requiredName_;
     ::Deployment::ComponentInterfaceDescription requiredType_;
-  }; // ComponentPackageReference
+  };// ComponentPackageReference
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
@@ -1266,7 +1266,7 @@ namespace Deployment
     std::string name_;
     std::string resourceType_;
     ::Deployment::Properties property_;
-  }; // ImplementationRequirement
+  };// ImplementationRequirement
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
@@ -1308,7 +1308,7 @@ namespace Deployment
     std::string name_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType_;
     ::Deployment::SatisfierProperties property_;
-  }; // Capability
+  };// Capability
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Capability> Capabilities;

@@ -31,7 +31,7 @@ namespace Test
     A,
     B,
     C
-  }; // EEnum
+  };// EEnum
 
   // generated from StubHeaderWriter#visit_const
   constexpr EEnum my_enum = EEnum::A;

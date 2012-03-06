@@ -158,18 +158,6 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++/cli_hdr/interface_fwd.erb
-#if !defined (_INTF_TEST_HELLO_FWD_)
-#define _INTF_TEST_HELLO_FWD_
-  class Hello;
-  class Hello_proxy;
-  typedef Hello_proxy* Hello_proxy_ptr;
-  namespace POA
-  {
-    class Hello;
-  };
-#endif // !_INTF_TEST_HELLO_FWD_
-
   // generated from c++/cli_hdr/interface_pre.erb
   class Hello
     : public virtual TAOX11_NAMESPACE::CORBA::Object

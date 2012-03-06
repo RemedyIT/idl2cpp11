@@ -79,7 +79,7 @@ namespace Test
     double d_;
     bool b_;
     char c_;
-  }; // Simple
+  };// Simple
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Simple> SimpleSeq;
