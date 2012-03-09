@@ -189,6 +189,123 @@ namespace Test
     } u_;
   }; // Data
 
+  // generated from c++/cli_hdr/struct_pre.erb
+  class S final
+  {
+  public:
+
+    // generated from c++/cli_hdr/struct_post.erb
+    S (void);
+    ~S (void) = default;
+    S (const S&) = default;
+    S (S&&) = default;
+    explicit S (int32_t len);
+    S& operator= (const S& x);
+    S& operator= (S&& x);
+
+    void len (int32_t _len);
+    int32_t len (void) const;
+    int32_t& len (void);
+
+    void swap (S& s);
+
+  private:
+    int32_t len_;
+  };// S
+
+  // generated from c++/cli_hdr/interface_fwd.erb
+#if !defined (_INTF_TEST_A_FWD_)
+#define _INTF_TEST_A_FWD_
+  class A;
+  class A_proxy;
+  typedef A_proxy* A_proxy_ptr;
+  namespace POA
+  {
+    class A;
+  };
+#endif // !_INTF_TEST_A_FWD_
+  // generated from CxxWriterBase#at_global_scope
+}; // Test
+// entering CxxWriterBase#at_global_scope
+
+// generated from c++/cli_hdr/interface_object_traits.erb
+#if !defined (_INTF_TEST_A_TRAITS_DECL_)
+#define _INTF_TEST_A_TRAITS_DECL_
+namespace TAOX11_NAMESPACE
+{
+  namespace CORBA
+  {
+    template<>
+    object_traits< ::Test::A>::shared_ptr_type
+    object_traits< ::Test::A>::lock_shared (
+        ::Test::A*);
+    template<>
+    const Object_proxy*
+    object_traits< ::Test::A>::to_proxy (
+        object_traits< ::Test::A>::ref_type);
+    template<>
+    object_traits< ::Test::A>::ref_type object_traits< ::Test::A>::narrow (
+       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+};
+#endif // !_INTF_TEST_A_TRAITS_DECL_
+
+// leaving CxxWriterBase#at_global_scope
+namespace Test
+{
+
+  // generated from c++/cli_hdr/union_pre.erb
+  class U final
+  {
+  public:
+
+    // generated from c++/cli_hdr/union_post.erb
+    U (void);
+    U (const U&);
+    U (U&&);
+    ~U (void);
+    U &operator= (const U&);
+    U &operator= (U&&);
+
+    void _d (int32_t);
+    int32_t _d (void) const;
+
+    void x (int32_t _x);
+    int32_t x (void) const;
+    int32_t& x (void);
+
+    void z (const std::string& _z);
+    void z (std::string&& _z);
+    const std::string& z (void) const;
+    std::string& z (void);
+
+    void w (const ::Test::S& _w);
+    void w (::Test::S&& _w);
+    const ::Test::S& w (void) const;
+    ::Test::S& w (void);
+
+    void obj (TAOX11_CORBA::object_reference< ::Test::A> _obj);
+    TAOX11_CORBA::object_reference< ::Test::A> obj (void) const;
+    TAOX11_CORBA::object_reference< ::Test::A>& obj (void);
+
+    void swap (U& s);
+
+  private:
+    void _swap_u (U& s);
+    void _clear (void);
+
+    int32_t disc_;
+    union u_type_
+    {
+      u_type_ (void);
+      ~u_type_ (void);
+      int32_t x_;
+      std::string z_;
+      ::Test::S w_;
+      TAOX11_CORBA::object_reference< ::Test::A> obj_;
+    } u_;
+  }; // U
+
   // generated from StubHeaderWriter#enter_interface
 
   // generated from c++/cli_hdr/interface_fwd.erb
@@ -310,6 +427,14 @@ namespace std {
   // generated from c++/cli_hdr/union_std.erb
   template <>
   void swap (::Test::Data& m1, ::Test::Data& m2);
+
+  // generated from c++/cli_hdr/struct_std.erb
+  template <>
+  void swap (::Test::S& m1, ::Test::S& m2);
+
+  // generated from c++/cli_hdr/union_std.erb
+  template <>
+  void swap (::Test::U& m1, ::Test::U& m2);
 }; // std
 
 // generated from c++/cli_inl/struct_inl.erb
@@ -1081,6 +1206,501 @@ inline void Test::Data::_default (void)
   this->disc_ = ::Test::DataType::dtEmpty;
 }
 
+// generated from c++/cli_inl/struct_inl.erb
+inline Test::S::S ()
+           : len_ (0)
+{
+}
+inline Test::S::S (int32_t len)
+           : len_ (std::move (len))
+{
+}
+
+inline void Test::S::len (int32_t _len) { this->len_ = _len; }
+inline int32_t Test::S::len (void) const { return this->len_; }
+inline int32_t& Test::S::len (void) { return this->len_; }
+
+inline ::Test::S& Test::S::operator= (const ::Test::S& x)
+{
+  if (this != &x) {
+    this->len_ = x.len_;
+  }
+  return *this;
+}
+inline ::Test::S& Test::S::operator= (::Test::S&& x)
+{
+  this->len_ = std::move (x.len_);
+  return *this;
+}
+
+inline void Test::S::swap (::Test::S& s)
+{
+  std::swap (this->len_, s.len_);
+}
+// generated from c++/cli_inl/union_inl.erb
+
+inline Test::U::u_type_::u_type_ (void)
+{
+}
+
+inline Test::U::u_type_::~u_type_ (void)
+{
+}
+
+inline Test::U::U (void)
+  : disc_ ((-2147483647-1))
+{
+  new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A>;
+}
+
+inline Test::U::~U (void)
+{
+  this->_clear ();
+}
+
+inline Test::U::U (const ::Test::U& u)
+  : disc_ (u.disc_)
+{
+  switch (this->disc_)
+  {
+    case 1:
+      {
+        this->u_.x_ = u.u_.x_;
+      }
+    break;
+    case 2:
+      {
+        new (&this->u_.z_) std::string;
+        this->u_.z_ = u.u_.z_;
+      }
+    break;
+    case 3:
+    case 4:
+      {
+        new (&this->u_.w_) ::Test::S;
+        this->u_.w_ = u.u_.w_;
+      }
+    break;
+    default:
+      {
+        new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A>;
+        this->u_.obj_ = u.u_.obj_;
+      }
+    break;
+  }
+}
+
+inline Test::U::U (::Test::U&& u)
+  : disc_ (std::move (u.disc_))
+{
+  switch (this->disc_)
+  {
+  case 1:
+    {
+      this->u_.x_ = std::move (u.u_.x_);
+    }
+    break;
+  case 2:
+    {
+      new (&this->u_.z_) std::string (std::move (u.u_.z_));
+    }
+    break;
+  case 3:
+  case 4:
+    {
+      new (&this->u_.w_) ::Test::S (std::move (u.u_.w_));
+    }
+    break;
+  default:
+    {
+      new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (std::move (u.u_.obj_));
+    }
+    break;
+  }
+}
+
+inline void Test::U::_d (int32_t discval)
+{
+  if (this->disc_ != discval)
+  {
+    switch (this->disc_)
+    {
+      case 1:
+      {
+        switch (discval)
+        {
+          case 1:
+            break;
+          default:
+            throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+        }
+      }
+      break;
+      case 2:
+      {
+        switch (discval)
+        {
+          case 2:
+            break;
+          default:
+            throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+        }
+      }
+      break;
+      case 3:
+      case 4:
+      {
+        switch (discval)
+        {
+          case 3:
+          case 4:
+            break;
+          default:
+            throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+        }
+      }
+      break;
+      default:
+      {
+        switch (discval)
+        {
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+            throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+          default:
+            break;
+        }
+      }
+      break;
+    }
+    this->disc_ = discval;
+  }
+}
+inline int32_t Test::U::_d (void) const
+{
+  return this->disc_;
+}
+
+inline void Test::U::x (int32_t _x)
+{
+  if (this->disc_ != 1)
+  {
+    this->_clear ();
+  }
+  this->u_.x_ = _x;
+  this->disc_ = 1;
+}
+inline int32_t Test::U::x (void) const
+{
+  switch (this->disc_)
+  {
+    case 1:
+      break;
+    default:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+  }
+  return this->u_.x_;
+}
+inline int32_t& Test::U::x (void)
+{
+  switch (this->disc_)
+  {
+    case 1:
+      break;
+    default:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+  }
+  return this->u_.x_;
+}
+
+inline void Test::U::z (const std::string& _z)
+{
+  if (this->disc_ != 2)
+  {
+    this->_clear ();
+    new (&this->u_.z_) std::string (_z);
+  }
+  else
+  {
+    this->u_.z_ = _z;
+  }
+  this->disc_ = 2;
+}
+inline void Test::U::z (std::string&& _z)
+{
+  if (this->disc_ != 2)
+  {
+    this->_clear ();
+    new (&this->u_.z_) std::string (std::move (_z));
+  }
+  else
+  {
+    this->u_.z_ = std::move (_z);
+  }
+  this->disc_ = 2;
+}
+inline const std::string& Test::U::z (void) const
+{
+  switch (this->disc_)
+  {
+    case 2:
+      break;
+    default:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+  }
+  return this->u_.z_;
+}
+inline std::string& Test::U::z (void)
+{
+  switch (this->disc_)
+  {
+    case 2:
+      break;
+    default:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+  }
+  return this->u_.z_;
+}
+
+inline void Test::U::w (const ::Test::S& _w)
+{
+  if (this->disc_ != 3)
+  {
+    this->_clear ();
+    new (&this->u_.w_) ::Test::S (_w);
+  }
+  else
+  {
+    this->u_.w_ = _w;
+  }
+  this->disc_ = 3;
+}
+inline void Test::U::w (::Test::S&& _w)
+{
+  if (this->disc_ != 3)
+  {
+    this->_clear ();
+    new (&this->u_.w_) ::Test::S (std::move (_w));
+  }
+  else
+  {
+    this->u_.w_ = std::move (_w);
+  }
+  this->disc_ = 3;
+}
+inline const ::Test::S& Test::U::w (void) const
+{
+  switch (this->disc_)
+  {
+    case 3:
+    case 4:
+      break;
+    default:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+  }
+  return this->u_.w_;
+}
+inline ::Test::S& Test::U::w (void)
+{
+  switch (this->disc_)
+  {
+    case 3:
+    case 4:
+      break;
+    default:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+  }
+  return this->u_.w_;
+}
+
+inline void Test::U::obj (TAOX11_CORBA::object_reference< ::Test::A> _obj)
+{
+  if (this->disc_ != (-2147483647-1))
+  {
+    this->_clear ();
+    new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (_obj);
+  }
+  else
+  {
+    this->u_.obj_ = _obj;
+  }
+  this->disc_ = (-2147483647-1);
+}
+inline TAOX11_CORBA::object_reference< ::Test::A> Test::U::obj (void) const
+{
+  switch (this->disc_)
+  {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+    default:
+      break;
+  }
+  return this->u_.obj_;
+}
+inline TAOX11_CORBA::object_reference< ::Test::A>& Test::U::obj (void)
+{
+  switch (this->disc_)
+  {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
+    default:
+      break;
+  }
+  return this->u_.obj_;
+}
+
+inline ::Test::U& Test::U::operator= (const ::Test::U& u)
+{
+  if (this != &u)
+  {
+    this->_clear ();
+    this->disc_ = u.disc_;
+    switch (this->disc_)
+    {
+    case 1:
+      {
+        this->u_.x_ = u.u_.x_;
+      }
+      break;
+    case 2:
+      {
+        new (&this->u_.z_) std::string (u.u_.z_);
+      }
+      break;
+    case 3:
+    case 4:
+      {
+        new (&this->u_.w_) ::Test::S (u.u_.w_);
+      }
+      break;
+    default:
+      {
+        new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (u.u_.obj_);
+      }
+      break;
+    }
+  }
+  return *this;
+}
+
+inline ::Test::U& Test::U::operator= (::Test::U&& u)
+{
+  if (this != &u)
+  {
+    this->_clear ();
+    this->disc_ = std::move (u.disc_);
+    switch (this->disc_)
+    {
+    case 1:
+      {
+        this->u_.x_ = std::move (u.u_.x_);
+      }
+      break;
+    case 2:
+      {
+        new (&this->u_.z_) std::string (std::move (u.u_.z_));
+      }
+      break;
+    case 3:
+    case 4:
+      {
+        new (&this->u_.w_) ::Test::S (std::move (u.u_.w_));
+      }
+      break;
+    default:
+      {
+        new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (std::move (u.u_.obj_));
+      }
+      break;
+    }
+  }
+  return *this;
+}
+
+inline void Test::U::swap (::Test::U& s)
+{
+  if (this != &s)
+  {
+    if (this->disc_ != s.disc_)
+    {
+      // different datatypes; so use move semantics to swap efficiently through intermediary
+      ::Test::U intermediate (std::move (*this));
+      (*this) = std::move (s);
+      s = std::move (intermediate);
+    }
+    else
+    {
+      // same datatypes so swap directly
+      this->_swap_u (s);
+    }
+  }
+}
+
+inline void Test::U::_swap_u (::Test::U& s)
+{
+  // u_ members have been guaranteed initialized identically so simply swap data
+  switch (this->disc_)
+  {
+    case 1:
+    {
+      std::swap (this->u_.x_, s.u_.x_);
+    }
+    break;
+    case 2:
+    {
+      std::swap (this->u_.z_, s.u_.z_);
+    }
+    break;
+    case 3:
+    case 4:
+    {
+      std::swap (this->u_.w_, s.u_.w_);
+    }
+    break;
+    default:
+    {
+      std::swap (this->u_.obj_, s.u_.obj_);
+    }
+    break;
+  }
+}
+
+inline void Test::U::_clear (void)
+{
+  switch (this->disc_)
+  {
+  case 1:
+    {
+    }
+    break;
+  case 2:
+    {
+      this->u_.z_.std::string::~string ();
+    }
+    break;
+  case 3:
+  case 4:
+    {
+      this->u_.w_.::Test::S::~S ();
+    }
+    break;
+  default:
+    {
+      this->u_.obj_.TAOX11_CORBA::object_reference< ::Test::A>::~object_reference ();
+    }
+    break;
+  }
+}
+
+
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
@@ -1108,6 +1728,20 @@ namespace std {
   // generated from c++/cli_hdr/union_std.erb
   template <>
   inline void swap (::Test::Data& m1, ::Test::Data& m2)
+  {
+    m1.swap (m2);
+  }
+
+  // generated from c++/cli_hdr/struct_std.erb
+  template <>
+  inline void swap (::Test::S& m1, ::Test::S& m2)
+  {
+    m1.swap (m2);
+  }
+
+  // generated from c++/cli_hdr/union_std.erb
+  template <>
+  inline void swap (::Test::U& m1, ::Test::U& m2)
   {
     m1.swap (m2);
   }

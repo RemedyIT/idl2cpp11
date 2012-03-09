@@ -48,6 +48,19 @@ module Test
       // by default (implicit), empty union
     };
 
+  struct S
+  {
+    long len;
+  };
+  interface A;
+  union U switch (long) {
+    case 1: long x;
+    case 2: string z;
+    case 3:
+    case 4: S w;
+    default: A obj;
+  };
+
   /// A very simple interface
   interface Foo
   {
