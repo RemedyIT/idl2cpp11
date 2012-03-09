@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------------
+ * test.idl - CORBA C++11 test idl
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
+
+valuetype Example {
+  short op1();
+  long op2(in Example x);
+  private short val1;
+  public long val2;
+  private string val3;
+  private Example val5;
+};
+
+typedef octet Bytes[64];
+struct S { long value; };
+interface A { void op (); };
+valuetype Val {
+	public Val t;
+	private long v;
+	public Bytes w;
+	public string x;
+	private S y;
+	private A z;
+};
+
+valuetype StringValue string;
+interface X {
+	void op(out string s);
+};
+
+enum Color { red, green, blue };
+valuetype ColorValue Color;
+struct ColorValue2 { Color col;};
+interface A1 {
+	void op();
+};
+valuetype B supports A1 {
+	public short data;
+};
+
+valuetype V {
+	factory create_bool(in boolean b);
+	factory create_char(in char c);
+	factory create_octet(in octet o);
+	factory create_other(in short s, in string p);
+};
