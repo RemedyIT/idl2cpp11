@@ -52,7 +52,6 @@ namespace Test
 
       virtual const std::string _interface_repository_id (void) const;
 
-
       // generated from c++/srv_hdr/operation.erb
       virtual std::string get_string (void) = 0;
 
