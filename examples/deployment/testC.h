@@ -18,6 +18,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/anytypecode/any.h"
 
 using namespace TAOX11_NAMESPACE;
 

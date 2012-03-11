@@ -77,8 +77,12 @@ namespace TAOX11_NAMESPACE {
     template <>
     struct servant_traits< ::Test::Hello>
     {
-      typedef ::Test::POA::Hello             base_type;
-      typedef ::Test::POA::Hello::_ref_type  ref_type;
+      typedef ::Test::POA::Hello
+          base_type;
+      typedef TAOX11_CORBA::servant_reference< ::Test::POA::Hello>
+          ref_type;
+      typedef TAOX11_CORBA::weak_servant_reference< ::Test::POA::Hello>
+          weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Test::POA::Hello*, _Tp1*>::value>::type>
       static ref_type downcast (servant_reference<_Tp1> base)
