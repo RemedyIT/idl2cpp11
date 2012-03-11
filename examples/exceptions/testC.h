@@ -233,7 +233,7 @@ inline ::Test::FooEx& Test::FooEx::operator= (::Test::FooEx&& x)
   }
   return *this;
 }
- 
+
 
 // generated from c++/cli_inl/except_inl.erb
 inline Test::BooEx::BooEx ()
@@ -269,7 +269,7 @@ inline ::Test::BooEx& Test::BooEx::operator= (::Test::BooEx&& x)
   }
   return *this;
 }
- 
+
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
