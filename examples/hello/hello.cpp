@@ -1,4 +1,3 @@
-// $Id$
 #include "hello.h"
 
 Hello::Hello (CORBA::object_reference<CORBA::ORB> orb)

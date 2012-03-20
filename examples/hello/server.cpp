@@ -1,5 +1,3 @@
-// $Id$
-
 #include "hello.h"
 
 #include <iostream>
