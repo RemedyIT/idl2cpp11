@@ -1,3 +1,9 @@
+/*--------------------------------------------------------------------
+ * foo.h - CORBA C++11 client application
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 #ifndef FOO_H
 #define FOO_H
 #include /**/ "ace/pre.h"

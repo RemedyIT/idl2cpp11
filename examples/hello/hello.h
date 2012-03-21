@@ -1,3 +1,9 @@
+/*--------------------------------------------------------------------
+ * hello.h - CORBA C++11 client application
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 #ifndef HELLO_H
 #define HELLO_H
 #include /**/ "ace/pre.h"

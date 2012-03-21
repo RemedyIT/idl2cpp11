@@ -1,3 +1,9 @@
+/*--------------------------------------------------------------------
+ * server.cpp - CORBA C++11 server application
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 #include "hello.h"
 
 #include <iostream>
