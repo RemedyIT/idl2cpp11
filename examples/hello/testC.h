@@ -59,7 +59,8 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Hello>::to_proxy (
         object_traits< ::Test::Hello>::ref_type);
     template<>
-    object_traits< ::Test::Hello>::ref_type object_traits< ::Test::Hello>::narrow (
+    object_traits< ::Test::Hello>::ref_type 
+    object_traits< ::Test::Hello>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
 };

@@ -129,7 +129,8 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::to_proxy (
         object_traits< ::Test::Foo>::ref_type);
     template<>
-    object_traits< ::Test::Foo>::ref_type object_traits< ::Test::Foo>::narrow (
+    object_traits< ::Test::Foo>::ref_type 
+    object_traits< ::Test::Foo>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
 };
@@ -233,7 +234,7 @@ inline ::Test::FooEx& Test::FooEx::operator= (::Test::FooEx&& x)
   }
   return *this;
 }
-
+  
 
 // generated from c++/cli_inl/except_inl.erb
 inline Test::BooEx::BooEx ()
@@ -269,7 +270,7 @@ inline ::Test::BooEx& Test::BooEx::operator= (::Test::BooEx&& x)
   }
   return *this;
 }
-
+  
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

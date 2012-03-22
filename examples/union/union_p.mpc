@@ -12,7 +12,7 @@ project(*gen_idl): ridl_defaults {
   custom_only = 1
 }
 
-project(*_server): taox11_server {
+project(*server): taox11_server {
   after += *gen_idl
   Source_Files {
     foo.cpp
@@ -26,7 +26,7 @@ project(*_server): taox11_server {
   }
 }
 
-project(*_client): taox11_client {
+project(*client): taox11_client {
   after += *gen_idl
   Source_Files {
     client.cpp
