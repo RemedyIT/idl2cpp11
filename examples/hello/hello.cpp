@@ -1,4 +1,9 @@
-// $Id$
+/*--------------------------------------------------------------------
+ * hello.cpp - CORBA C++11 client application
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 #include "hello.h"
 
 Hello::Hello (CORBA::object_reference<CORBA::ORB> orb)
