@@ -244,7 +244,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::A>::to_proxy (
         object_traits< ::Test::A>::ref_type);
     template<>
-    object_traits< ::Test::A>::ref_type 
+    object_traits< ::Test::A>::ref_type
     object_traits< ::Test::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
@@ -340,7 +340,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::to_proxy (
         object_traits< ::Test::Foo>::ref_type);
     template<>
-    object_traits< ::Test::Foo>::ref_type 
+    object_traits< ::Test::Foo>::ref_type
     object_traits< ::Test::Foo>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
@@ -580,35 +580,35 @@ inline Test::Data::Data (const ::Test::Data& u)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtLong:
+    case ::Test::DataType::dtLong:
       {
         this->u_.longData_ = u.u_.longData_;
       }
     break;
-    case Test::DataType::dtShort:
+    case ::Test::DataType::dtShort:
       {
         this->u_.shortData_ = u.u_.shortData_;
       }
     break;
-    case Test::DataType::dtString:
+    case ::Test::DataType::dtString:
       {
         new (&this->u_.stringData_) std::string;
         this->u_.stringData_ = u.u_.stringData_;
       }
     break;
-    case Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
       {
         new (&this->u_.pointData_) ::Test::Point;
         this->u_.pointData_ = u.u_.pointData_;
       }
     break;
-    case Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
       {
         new (&this->u_.trackData_) ::Test::Track;
         this->u_.trackData_ = u.u_.trackData_;
       }
     break;
-    case Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
       {
         new (&this->u_.globalData_) ::Global;
         this->u_.globalData_ = u.u_.globalData_;
@@ -624,32 +624,32 @@ inline Test::Data::Data (::Test::Data&& u)
 {
   switch (this->disc_)
   {
-  case Test::DataType::dtLong:
+  case ::Test::DataType::dtLong:
     {
       this->u_.longData_ = std::move (u.u_.longData_);
     }
     break;
-  case Test::DataType::dtShort:
+  case ::Test::DataType::dtShort:
     {
       this->u_.shortData_ = std::move (u.u_.shortData_);
     }
     break;
-  case Test::DataType::dtString:
+  case ::Test::DataType::dtString:
     {
       new (&this->u_.stringData_) std::string (std::move (u.u_.stringData_));
     }
     break;
-  case Test::DataType::dtPoint:
+  case ::Test::DataType::dtPoint:
     {
       new (&this->u_.pointData_) ::Test::Point (std::move (u.u_.pointData_));
     }
     break;
-  case Test::DataType::dtTrack:
+  case ::Test::DataType::dtTrack:
     {
       new (&this->u_.trackData_) ::Test::Track (std::move (u.u_.trackData_));
     }
     break;
-  case Test::DataType::dtGlobal:
+  case ::Test::DataType::dtGlobal:
     {
       new (&this->u_.globalData_) ::Global (std::move (u.u_.globalData_));
     }
@@ -665,66 +665,66 @@ inline void Test::Data::_d (DataType discval)
   {
     switch (this->disc_)
     {
-      case Test::DataType::dtLong:
+      case ::Test::DataType::dtLong:
       {
         switch (discval)
         {
-          case Test::DataType::dtLong:
+          case ::Test::DataType::dtLong:
             break;
           default:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
         }
       }
       break;
-      case Test::DataType::dtShort:
+      case ::Test::DataType::dtShort:
       {
         switch (discval)
         {
-          case Test::DataType::dtShort:
+          case ::Test::DataType::dtShort:
             break;
           default:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
         }
       }
       break;
-      case Test::DataType::dtString:
+      case ::Test::DataType::dtString:
       {
         switch (discval)
         {
-          case Test::DataType::dtString:
+          case ::Test::DataType::dtString:
             break;
           default:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
         }
       }
       break;
-      case Test::DataType::dtPoint:
+      case ::Test::DataType::dtPoint:
       {
         switch (discval)
         {
-          case Test::DataType::dtPoint:
+          case ::Test::DataType::dtPoint:
             break;
           default:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
         }
       }
       break;
-      case Test::DataType::dtTrack:
+      case ::Test::DataType::dtTrack:
       {
         switch (discval)
         {
-          case Test::DataType::dtTrack:
+          case ::Test::DataType::dtTrack:
             break;
           default:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
         }
       }
       break;
-      case Test::DataType::dtGlobal:
+      case ::Test::DataType::dtGlobal:
       {
         switch (discval)
         {
-          case Test::DataType::dtGlobal:
+          case ::Test::DataType::dtGlobal:
             break;
           default:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -735,12 +735,12 @@ inline void Test::Data::_d (DataType discval)
       {
         switch (discval)
         {
-          case Test::DataType::dtLong:
-          case Test::DataType::dtShort:
-          case Test::DataType::dtString:
-          case Test::DataType::dtPoint:
-          case Test::DataType::dtTrack:
-          case Test::DataType::dtGlobal:
+          case ::Test::DataType::dtLong:
+          case ::Test::DataType::dtShort:
+          case ::Test::DataType::dtString:
+          case ::Test::DataType::dtPoint:
+          case ::Test::DataType::dtTrack:
+          case ::Test::DataType::dtGlobal:
             throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
           default:
             break;
@@ -758,18 +758,18 @@ inline ::Test::DataType Test::Data::_d (void) const
 
 inline void Test::Data::longData (int32_t _longData)
 {
-  if (this->disc_ != Test::DataType::dtLong)
+  if (this->disc_ != ::Test::DataType::dtLong)
   {
     this->_clear ();
   }
   this->u_.longData_ = _longData;
-  this->disc_ = Test::DataType::dtLong;
+  this->disc_ = ::Test::DataType::dtLong;
 }
 inline int32_t Test::Data::longData (void) const
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtLong:
+    case ::Test::DataType::dtLong:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -780,7 +780,7 @@ inline int32_t& Test::Data::longData (void)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtLong:
+    case ::Test::DataType::dtLong:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -790,18 +790,18 @@ inline int32_t& Test::Data::longData (void)
 
 inline void Test::Data::shortData (int16_t _shortData)
 {
-  if (this->disc_ != Test::DataType::dtShort)
+  if (this->disc_ != ::Test::DataType::dtShort)
   {
     this->_clear ();
   }
   this->u_.shortData_ = _shortData;
-  this->disc_ = Test::DataType::dtShort;
+  this->disc_ = ::Test::DataType::dtShort;
 }
 inline int16_t Test::Data::shortData (void) const
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtShort:
+    case ::Test::DataType::dtShort:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -812,7 +812,7 @@ inline int16_t& Test::Data::shortData (void)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtShort:
+    case ::Test::DataType::dtShort:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -822,7 +822,7 @@ inline int16_t& Test::Data::shortData (void)
 
 inline void Test::Data::stringData (const std::string& _stringData)
 {
-  if (this->disc_ != Test::DataType::dtString)
+  if (this->disc_ != ::Test::DataType::dtString)
   {
     this->_clear ();
     new (&this->u_.stringData_) std::string (_stringData);
@@ -831,11 +831,11 @@ inline void Test::Data::stringData (const std::string& _stringData)
   {
     this->u_.stringData_ = _stringData;
   }
-  this->disc_ = Test::DataType::dtString;
+  this->disc_ = ::Test::DataType::dtString;
 }
 inline void Test::Data::stringData (std::string&& _stringData)
 {
-  if (this->disc_ != Test::DataType::dtString)
+  if (this->disc_ != ::Test::DataType::dtString)
   {
     this->_clear ();
     new (&this->u_.stringData_) std::string (std::move (_stringData));
@@ -844,13 +844,13 @@ inline void Test::Data::stringData (std::string&& _stringData)
   {
     this->u_.stringData_ = std::move (_stringData);
   }
-  this->disc_ = Test::DataType::dtString;
+  this->disc_ = ::Test::DataType::dtString;
 }
 inline const std::string& Test::Data::stringData (void) const
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtString:
+    case ::Test::DataType::dtString:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -861,7 +861,7 @@ inline std::string& Test::Data::stringData (void)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtString:
+    case ::Test::DataType::dtString:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -871,7 +871,7 @@ inline std::string& Test::Data::stringData (void)
 
 inline void Test::Data::pointData (const ::Test::Point& _pointData)
 {
-  if (this->disc_ != Test::DataType::dtPoint)
+  if (this->disc_ != ::Test::DataType::dtPoint)
   {
     this->_clear ();
     new (&this->u_.pointData_) ::Test::Point (_pointData);
@@ -880,11 +880,11 @@ inline void Test::Data::pointData (const ::Test::Point& _pointData)
   {
     this->u_.pointData_ = _pointData;
   }
-  this->disc_ = Test::DataType::dtPoint;
+  this->disc_ = ::Test::DataType::dtPoint;
 }
 inline void Test::Data::pointData (::Test::Point&& _pointData)
 {
-  if (this->disc_ != Test::DataType::dtPoint)
+  if (this->disc_ != ::Test::DataType::dtPoint)
   {
     this->_clear ();
     new (&this->u_.pointData_) ::Test::Point (std::move (_pointData));
@@ -893,13 +893,13 @@ inline void Test::Data::pointData (::Test::Point&& _pointData)
   {
     this->u_.pointData_ = std::move (_pointData);
   }
-  this->disc_ = Test::DataType::dtPoint;
+  this->disc_ = ::Test::DataType::dtPoint;
 }
 inline const ::Test::Point& Test::Data::pointData (void) const
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -910,7 +910,7 @@ inline ::Test::Point& Test::Data::pointData (void)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -920,7 +920,7 @@ inline ::Test::Point& Test::Data::pointData (void)
 
 inline void Test::Data::trackData (const ::Test::Track& _trackData)
 {
-  if (this->disc_ != Test::DataType::dtTrack)
+  if (this->disc_ != ::Test::DataType::dtTrack)
   {
     this->_clear ();
     new (&this->u_.trackData_) ::Test::Track (_trackData);
@@ -929,11 +929,11 @@ inline void Test::Data::trackData (const ::Test::Track& _trackData)
   {
     this->u_.trackData_ = _trackData;
   }
-  this->disc_ = Test::DataType::dtTrack;
+  this->disc_ = ::Test::DataType::dtTrack;
 }
 inline void Test::Data::trackData (::Test::Track&& _trackData)
 {
-  if (this->disc_ != Test::DataType::dtTrack)
+  if (this->disc_ != ::Test::DataType::dtTrack)
   {
     this->_clear ();
     new (&this->u_.trackData_) ::Test::Track (std::move (_trackData));
@@ -942,13 +942,13 @@ inline void Test::Data::trackData (::Test::Track&& _trackData)
   {
     this->u_.trackData_ = std::move (_trackData);
   }
-  this->disc_ = Test::DataType::dtTrack;
+  this->disc_ = ::Test::DataType::dtTrack;
 }
 inline const ::Test::Track& Test::Data::trackData (void) const
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -959,7 +959,7 @@ inline ::Test::Track& Test::Data::trackData (void)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -969,7 +969,7 @@ inline ::Test::Track& Test::Data::trackData (void)
 
 inline void Test::Data::globalData (const ::Global& _globalData)
 {
-  if (this->disc_ != Test::DataType::dtGlobal)
+  if (this->disc_ != ::Test::DataType::dtGlobal)
   {
     this->_clear ();
     new (&this->u_.globalData_) ::Global (_globalData);
@@ -978,11 +978,11 @@ inline void Test::Data::globalData (const ::Global& _globalData)
   {
     this->u_.globalData_ = _globalData;
   }
-  this->disc_ = Test::DataType::dtGlobal;
+  this->disc_ = ::Test::DataType::dtGlobal;
 }
 inline void Test::Data::globalData (::Global&& _globalData)
 {
-  if (this->disc_ != Test::DataType::dtGlobal)
+  if (this->disc_ != ::Test::DataType::dtGlobal)
   {
     this->_clear ();
     new (&this->u_.globalData_) ::Global (std::move (_globalData));
@@ -991,13 +991,13 @@ inline void Test::Data::globalData (::Global&& _globalData)
   {
     this->u_.globalData_ = std::move (_globalData);
   }
-  this->disc_ = Test::DataType::dtGlobal;
+  this->disc_ = ::Test::DataType::dtGlobal;
 }
 inline const ::Global& Test::Data::globalData (void) const
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -1008,7 +1008,7 @@ inline ::Global& Test::Data::globalData (void)
 {
   switch (this->disc_)
   {
-    case Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
       break;
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
@@ -1024,32 +1024,32 @@ inline ::Test::Data& Test::Data::operator= (const ::Test::Data& u)
     this->disc_ = u.disc_;
     switch (this->disc_)
     {
-    case Test::DataType::dtLong:
+    case ::Test::DataType::dtLong:
       {
         this->u_.longData_ = u.u_.longData_;
       }
       break;
-    case Test::DataType::dtShort:
+    case ::Test::DataType::dtShort:
       {
         this->u_.shortData_ = u.u_.shortData_;
       }
       break;
-    case Test::DataType::dtString:
+    case ::Test::DataType::dtString:
       {
         new (&this->u_.stringData_) std::string (u.u_.stringData_);
       }
       break;
-    case Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
       {
         new (&this->u_.pointData_) ::Test::Point (u.u_.pointData_);
       }
       break;
-    case Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
       {
         new (&this->u_.trackData_) ::Test::Track (u.u_.trackData_);
       }
       break;
-    case Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
       {
         new (&this->u_.globalData_) ::Global (u.u_.globalData_);
       }
@@ -1069,32 +1069,32 @@ inline ::Test::Data& Test::Data::operator= (::Test::Data&& u)
     this->disc_ = std::move (u.disc_);
     switch (this->disc_)
     {
-    case Test::DataType::dtLong:
+    case ::Test::DataType::dtLong:
       {
         this->u_.longData_ = std::move (u.u_.longData_);
       }
       break;
-    case Test::DataType::dtShort:
+    case ::Test::DataType::dtShort:
       {
         this->u_.shortData_ = std::move (u.u_.shortData_);
       }
       break;
-    case Test::DataType::dtString:
+    case ::Test::DataType::dtString:
       {
         new (&this->u_.stringData_) std::string (std::move (u.u_.stringData_));
       }
       break;
-    case Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
       {
         new (&this->u_.pointData_) ::Test::Point (std::move (u.u_.pointData_));
       }
       break;
-    case Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
       {
         new (&this->u_.trackData_) ::Test::Track (std::move (u.u_.trackData_));
       }
       break;
-    case Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
       {
         new (&this->u_.globalData_) ::Global (std::move (u.u_.globalData_));
       }
@@ -1130,32 +1130,32 @@ inline void Test::Data::_swap_u (::Test::Data& s)
   // u_ members have been guaranteed initialized identically so simply swap data
   switch (this->disc_)
   {
-    case Test::DataType::dtLong:
+    case ::Test::DataType::dtLong:
     {
       std::swap (this->u_.longData_, s.u_.longData_);
     }
     break;
-    case Test::DataType::dtShort:
+    case ::Test::DataType::dtShort:
     {
       std::swap (this->u_.shortData_, s.u_.shortData_);
     }
     break;
-    case Test::DataType::dtString:
+    case ::Test::DataType::dtString:
     {
       std::swap (this->u_.stringData_, s.u_.stringData_);
     }
     break;
-    case Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
     {
       std::swap (this->u_.pointData_, s.u_.pointData_);
     }
     break;
-    case Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
     {
       std::swap (this->u_.trackData_, s.u_.trackData_);
     }
     break;
-    case Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
     {
       std::swap (this->u_.globalData_, s.u_.globalData_);
     }
@@ -1169,30 +1169,30 @@ inline void Test::Data::_clear (void)
 {
   switch (this->disc_)
   {
-  case Test::DataType::dtLong:
+  case ::Test::DataType::dtLong:
     {
     }
     break;
-  case Test::DataType::dtShort:
+  case ::Test::DataType::dtShort:
     {
     }
     break;
-  case Test::DataType::dtString:
+  case ::Test::DataType::dtString:
     {
       this->u_.stringData_.std::string::~string ();
     }
     break;
-  case Test::DataType::dtPoint:
+  case ::Test::DataType::dtPoint:
     {
       this->u_.pointData_.::Test::Point::~Point ();
     }
     break;
-  case Test::DataType::dtTrack:
+  case ::Test::DataType::dtTrack:
     {
       this->u_.trackData_.::Test::Track::~Track ();
     }
     break;
-  case Test::DataType::dtGlobal:
+  case ::Test::DataType::dtGlobal:
     {
       this->u_.globalData_.::Global::~Global ();
     }

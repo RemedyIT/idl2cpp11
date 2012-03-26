@@ -129,7 +129,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::to_proxy (
         object_traits< ::Test::Foo>::ref_type);
     template<>
-    object_traits< ::Test::Foo>::ref_type 
+    object_traits< ::Test::Foo>::ref_type
     object_traits< ::Test::Foo>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };

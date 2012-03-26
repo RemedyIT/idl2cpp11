@@ -84,7 +84,7 @@ namespace Test
   const TName name = "wilco";
 
   // generated from StubHeaderWriter#visit_const
-  constexpr TCounter double_count = (Test::count * 2);
+  constexpr TCounter double_count = (::Test::count * 2);
 }; // namespace Test
 
 
@@ -118,7 +118,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A>::to_proxy (
         object_traits< ::A>::ref_type);
     template<>
-    object_traits< ::A>::ref_type 
+    object_traits< ::A>::ref_type
     object_traits< ::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
