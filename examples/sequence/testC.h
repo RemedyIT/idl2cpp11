@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -80,21 +81,27 @@ namespace Test
     bool b_;
     char c_;
   };// Simple
+  typedef Simple Simple_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Simple> SimpleSeq;
+  struct SimpleSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < int32_t> LongSeq;
+  struct LongSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < int32_t> BoundedLongSeq;
+  struct BoundedLongSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < bool> BoolSeq;
+  struct BoolSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < std::string> StringSeq;
+  struct StringSeq_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -102,6 +109,7 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
+  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
   namespace POA
@@ -132,6 +140,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::ref_type
     object_traits< ::Test::Foo>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Foo> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Foo>>,
+      public CORBA::object_traits < ::Test::Foo>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_TEST_FOO_TRAITS_DECL_
@@ -207,6 +227,88 @@ namespace Test
   }; // Foo
 }; // namespace Test
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
+#define _STRUCT_TEST_SIMPLE_TRAITS_
+    template<>
+    struct traits < ::Test::Simple_idl_t>
+      : IDL::common_traits< ::Test::Simple>
+    {
+    };
+#endif // _STRUCT_TEST_SIMPLE_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Test::SimpleSeq_idl_t>
+      : IDL::unbounded_traits< ::Test::SimpleSeq>,
+        IDL::alias_traits< ::Test::SimpleSeq_idl_t,
+                           ::Test::SimpleSeq>
+    {
+      typedef ::Test::Simple&   element_cdr_to;
+      typedef const ::Test::Simple&  element_cdr_from;
+
+      typedef IDL::traits< ::Test::Simple_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Test::LongSeq_idl_t>
+      : IDL::unbounded_traits< ::Test::LongSeq>,
+        IDL::alias_traits< ::Test::LongSeq_idl_t,
+                           ::Test::LongSeq>
+    {
+      typedef int32_t&   element_cdr_to;
+      typedef int32_t  element_cdr_from;
+
+      typedef IDL::traits< ::int32_t_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Test::BoundedLongSeq_idl_t>
+      : IDL::bounded_traits< ::Test::BoundedLongSeq,
+                             50U>,
+        IDL::alias_traits< ::Test::BoundedLongSeq_idl_t,
+                           ::Test::BoundedLongSeq>
+    {
+      typedef int32_t&   element_cdr_to;
+      typedef int32_t  element_cdr_from;
+
+      typedef IDL::traits< ::int32_t_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Test::BoolSeq_idl_t>
+      : IDL::unbounded_traits< ::Test::BoolSeq>,
+        IDL::alias_traits< ::Test::BoolSeq_idl_t,
+                           ::Test::BoolSeq>
+    {
+      typedef bool&   element_cdr_to;
+      typedef bool  element_cdr_from;
+
+      typedef IDL::traits< ::bool_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Test::StringSeq_idl_t>
+      : IDL::unbounded_traits< ::Test::StringSeq>,
+        IDL::alias_traits< ::Test::StringSeq_idl_t,
+                           ::Test::StringSeq>
+    {
+      typedef std::string&   element_cdr_to;
+      typedef const std::string&  element_cdr_from;
+
+      typedef IDL::traits< ::std::string_idl_t>  element_traits;
+    };
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

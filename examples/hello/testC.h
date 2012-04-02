@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -32,6 +33,7 @@ namespace Test
 #if !defined (_INTF_TEST_HELLO_FWD_)
 #define _INTF_TEST_HELLO_FWD_
   class Hello;
+  typedef Hello Hello_idl_t; // IDL traits typename
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
   namespace POA
@@ -62,6 +64,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Hello>::ref_type
     object_traits< ::Test::Hello>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Hello> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Hello>>,
+      public CORBA::object_traits < ::Test::Hello>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_TEST_HELLO_TRAITS_DECL_
@@ -117,6 +131,12 @@ namespace Test
   }; // Hello
 }; // namespace Test
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

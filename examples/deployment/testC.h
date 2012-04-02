@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -57,9 +58,11 @@ namespace Deployment
     std::string name_;
     TAOX11_NAMESPACE::CORBA::Any value_;
   };// Property
+  typedef Property Property_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Property> Properties;
+  struct Properties_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Requirement final
@@ -99,9 +102,11 @@ namespace Deployment
     std::string resourceType_;
     ::Deployment::Properties property_;
   };// Requirement
+  typedef Requirement Requirement_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Requirement> Requirements;
+  struct Requirements_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/enum.erb
   enum class SatisfierPropertyKind : uint32_t
@@ -113,6 +118,7 @@ namespace Deployment
     Attribute,
     Selection
   };// SatisfierPropertyKind
+  typedef SatisfierPropertyKind SatisfierPropertyKind_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class SatisfierProperty final
@@ -157,9 +163,11 @@ namespace Deployment
     bool dynamic_;
     TAOX11_NAMESPACE::CORBA::Any value_;
   };// SatisfierProperty
+  typedef SatisfierProperty SatisfierProperty_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < SatisfierProperty> SatisfierProperties;
+  struct SatisfierProperties_idl_t {}; // IDL traits type-id
 }; // namespace Deployment
 
 
@@ -179,6 +187,7 @@ namespace Deployment
     ExtendedPort,
     MirrorPort
   };// CCMComponentPortKind
+  typedef CCMComponentPortKind CCMComponentPortKind_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ComponentPortDescription final
@@ -255,9 +264,11 @@ namespace Deployment
     ::Deployment::CCMComponentPortKind kind_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam_;
   };// ComponentPortDescription
+  typedef ComponentPortDescription ComponentPortDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
+  struct ComponentPortDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ComponentPropertyDescription final
@@ -289,9 +300,11 @@ namespace Deployment
     std::string name_;
     TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type_;
   };// ComponentPropertyDescription
+  typedef ComponentPropertyDescription ComponentPropertyDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
+  struct ComponentPropertyDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ComponentInterfaceDescription final
@@ -373,6 +386,7 @@ namespace Deployment
     ::Deployment::ComponentPropertyDescriptions property_;
     ::Deployment::Properties infoProperty_;
   };// ComponentInterfaceDescription
+  typedef ComponentInterfaceDescription ComponentInterfaceDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class MonolithicDeploymentDescription final
@@ -426,9 +440,11 @@ namespace Deployment
     ::Deployment::Properties execParameter_;
     ::Deployment::Requirements deployRequirement_;
   };// MonolithicDeploymentDescription
+  typedef MonolithicDeploymentDescription MonolithicDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
+  struct MonolithicDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/enum.erb
   enum class ResourceUsageKind : uint32_t
@@ -439,6 +455,7 @@ namespace Deployment
     PortUsesResource,
     ResourceUsesPort
   };// ResourceUsageKind
+  typedef ResourceUsageKind ResourceUsageKind_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class InstanceResourceDeploymentDescription final
@@ -484,9 +501,11 @@ namespace Deployment
     std::string resourceName_;
     ::Deployment::Properties property_;
   };// InstanceResourceDeploymentDescription
+  typedef InstanceResourceDeploymentDescription InstanceResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
+  struct InstanceResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class InstanceDeploymentDescription final
@@ -553,9 +572,11 @@ namespace Deployment
     ::Deployment::InstanceResourceDeploymentDescriptions deployedResource_;
     ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource_;
   };// InstanceDeploymentDescription
+  typedef InstanceDeploymentDescription InstanceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
+  struct InstanceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ComponentExternalPortEndpoint final
@@ -581,9 +602,11 @@ namespace Deployment
   private:
     std::string portName_;
   };// ComponentExternalPortEndpoint
+  typedef ComponentExternalPortEndpoint ComponentExternalPortEndpoint_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
+  struct ComponentExternalPortEndpoints_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class PlanSubcomponentPortEndpoint final
@@ -627,9 +650,11 @@ namespace Deployment
     ::Deployment::CCMComponentPortKind kind_;
     uint32_t instanceRef_;
   };// PlanSubcomponentPortEndpoint
+  typedef PlanSubcomponentPortEndpoint PlanSubcomponentPortEndpoint_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
+  struct PlanSubcomponentPortEndpoints_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ExternalReferenceEndpoint final
@@ -675,9 +700,11 @@ namespace Deployment
     std::string portName_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType_;
   };// ExternalReferenceEndpoint
+  typedef ExternalReferenceEndpoint ExternalReferenceEndpoint_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
+  struct ExternalReferenceEndpoints_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ConnectionResourceDeploymentDescription final
@@ -724,9 +751,11 @@ namespace Deployment
     std::string resourceName_;
     ::Deployment::Properties property_;
   };// ConnectionResourceDeploymentDescription
+  typedef ConnectionResourceDeploymentDescription ConnectionResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
+  struct ConnectionResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class PlanConnectionDescription final
@@ -794,9 +823,11 @@ namespace Deployment
     ::Deployment::ExternalReferenceEndpoints externalReference_;
     ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource_;
   };// PlanConnectionDescription
+  typedef PlanConnectionDescription PlanConnectionDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
+  struct PlanConnectionDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class PlanSubcomponentPropertyReference final
@@ -828,9 +859,11 @@ namespace Deployment
     std::string propertyName_;
     uint32_t instanceRef_;
   };// PlanSubcomponentPropertyReference
+  typedef PlanSubcomponentPropertyReference PlanSubcomponentPropertyReference_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
+  struct PlanSubcomponentPropertyReferences_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class PlanPropertyMapping final
@@ -877,9 +910,11 @@ namespace Deployment
     std::string externalName_;
     ::Deployment::PlanSubcomponentPropertyReferences delegatesTo_;
   };// PlanPropertyMapping
+  typedef PlanPropertyMapping PlanPropertyMapping_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
+  struct PlanPropertyMappings_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ImplementationDependency final
@@ -905,9 +940,11 @@ namespace Deployment
   private:
     std::string requiredType_;
   };// ImplementationDependency
+  typedef ImplementationDependency ImplementationDependency_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
+  struct ImplementationDependencies_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ResourceDeploymentDescription final
@@ -947,9 +984,11 @@ namespace Deployment
     std::string resourceName_;
     ::Deployment::Properties property_;
   };// ResourceDeploymentDescription
+  typedef ResourceDeploymentDescription ResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
+  struct ResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ArtifactDeploymentDescription final
@@ -1017,9 +1056,11 @@ namespace Deployment
     ::Deployment::Requirements deployRequirement_;
     ::Deployment::ResourceDeploymentDescriptions deployedResource_;
   };// ArtifactDeploymentDescription
+  typedef ArtifactDeploymentDescription ArtifactDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
+  struct ArtifactDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/enum.erb
   enum class PlanLocalityKind : uint32_t
@@ -1028,6 +1069,7 @@ namespace Deployment
     PlanDifferentProcess,
     PlanNoConstraint
   };// PlanLocalityKind
+  typedef PlanLocalityKind PlanLocalityKind_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class PlanLocality final
@@ -1059,9 +1101,11 @@ namespace Deployment
     ::Deployment::PlanLocalityKind constraint_;
     ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef_;
   };// PlanLocality
+  typedef PlanLocality PlanLocality_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < PlanLocality> PlanLocalities;
+  struct PlanLocalities_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class DeploymentPlan final
@@ -1157,6 +1201,7 @@ namespace Deployment
     ::Deployment::Properties infoProperty_;
     ::Deployment::PlanLocalities localityConstraint_;
   };// DeploymentPlan
+  typedef DeploymentPlan DeploymentPlan_idl_t; // IDL traits typename
 }; // namespace Deployment
 
 
@@ -1202,12 +1247,15 @@ namespace Deployment
     std::string requiredName_;
     ::Deployment::ComponentInterfaceDescription requiredType_;
   };// ComponentPackageReference
+  typedef ComponentPackageReference ComponentPackageReference_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
+  struct ComponentPackageReferences_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
+  struct ResourceUsageKinds_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class ImplementationRequirement final
@@ -1268,9 +1316,11 @@ namespace Deployment
     std::string resourceType_;
     ::Deployment::Properties property_;
   };// ImplementationRequirement
+  typedef ImplementationRequirement ImplementationRequirement_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
+  struct ImplementationRequirements_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Capability final
@@ -1310,11 +1360,586 @@ namespace Deployment
     ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType_;
     ::Deployment::SatisfierProperties property_;
   };// Capability
+  typedef Capability Capability_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::vector < Capability> Capabilities;
+  struct Capabilities_idl_t {}; // IDL traits type-id
 }; // namespace Deployment
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_PROPERTY_TRAITS_)
+#define _STRUCT_DEPLOYMENT_PROPERTY_TRAITS_
+    template<>
+    struct traits < ::Deployment::Property_idl_t>
+      : IDL::common_traits< ::Deployment::Property>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_PROPERTY_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::Properties_idl_t>
+      : IDL::unbounded_traits< ::Deployment::Properties>,
+        IDL::alias_traits< ::Deployment::Properties_idl_t,
+                           ::Deployment::Properties>
+    {
+      typedef ::Deployment::Property&   element_cdr_to;
+      typedef const ::Deployment::Property&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::Property_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_)
+#define _STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_
+    template<>
+    struct traits < ::Deployment::Requirement_idl_t>
+      : IDL::common_traits< ::Deployment::Requirement>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::Requirements_idl_t>
+      : IDL::unbounded_traits< ::Deployment::Requirements>,
+        IDL::alias_traits< ::Deployment::Requirements_idl_t,
+                           ::Deployment::Requirements>
+    {
+      typedef ::Deployment::Requirement&   element_cdr_to;
+      typedef const ::Deployment::Requirement&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::Requirement_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/enum_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::SatisfierPropertyKind_idl_t>
+      : IDL::common_traits< ::Deployment::SatisfierPropertyKind>
+    {
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_)
+#define _STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_
+    template<>
+    struct traits < ::Deployment::SatisfierProperty_idl_t>
+      : IDL::common_traits< ::Deployment::SatisfierProperty>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::SatisfierProperties_idl_t>
+      : IDL::unbounded_traits< ::Deployment::SatisfierProperties>,
+        IDL::alias_traits< ::Deployment::SatisfierProperties_idl_t,
+                           ::Deployment::SatisfierProperties>
+    {
+      typedef ::Deployment::SatisfierProperty&   element_cdr_to;
+      typedef const ::Deployment::SatisfierProperty&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::SatisfierProperty_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/enum_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::CCMComponentPortKind_idl_t>
+      : IDL::common_traits< ::Deployment::CCMComponentPortKind>
+    {
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::ComponentPortDescription_idl_t>
+      : IDL::common_traits< ::Deployment::ComponentPortDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ComponentPortDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ComponentPortDescriptions>,
+        IDL::alias_traits< ::Deployment::ComponentPortDescriptions_idl_t,
+                           ::Deployment::ComponentPortDescriptions>
+    {
+      typedef ::Deployment::ComponentPortDescription&   element_cdr_to;
+      typedef const ::Deployment::ComponentPortDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ComponentPortDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::ComponentPropertyDescription_idl_t>
+      : IDL::common_traits< ::Deployment::ComponentPropertyDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ComponentPropertyDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ComponentPropertyDescriptions>,
+        IDL::alias_traits< ::Deployment::ComponentPropertyDescriptions_idl_t,
+                           ::Deployment::ComponentPropertyDescriptions>
+    {
+      typedef ::Deployment::ComponentPropertyDescription&   element_cdr_to;
+      typedef const ::Deployment::ComponentPropertyDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ComponentPropertyDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_COMPONENTINTERFACEDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_COMPONENTINTERFACEDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::ComponentInterfaceDescription_idl_t>
+      : IDL::common_traits< ::Deployment::ComponentInterfaceDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_COMPONENTINTERFACEDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::MonolithicDeploymentDescription_idl_t>
+      : IDL::common_traits< ::Deployment::MonolithicDeploymentDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::MonolithicDeploymentDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::MonolithicDeploymentDescriptions>,
+        IDL::alias_traits< ::Deployment::MonolithicDeploymentDescriptions_idl_t,
+                           ::Deployment::MonolithicDeploymentDescriptions>
+    {
+      typedef ::Deployment::MonolithicDeploymentDescription&   element_cdr_to;
+      typedef const ::Deployment::MonolithicDeploymentDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/enum_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ResourceUsageKind_idl_t>
+      : IDL::common_traits< ::Deployment::ResourceUsageKind>
+    {
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::InstanceResourceDeploymentDescription_idl_t>
+      : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::InstanceResourceDeploymentDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::InstanceResourceDeploymentDescriptions>,
+        IDL::alias_traits< ::Deployment::InstanceResourceDeploymentDescriptions_idl_t,
+                           ::Deployment::InstanceResourceDeploymentDescriptions>
+    {
+      typedef ::Deployment::InstanceResourceDeploymentDescription&   element_cdr_to;
+      typedef const ::Deployment::InstanceResourceDeploymentDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::InstanceDeploymentDescription_idl_t>
+      : IDL::common_traits< ::Deployment::InstanceDeploymentDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::InstanceDeploymentDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::InstanceDeploymentDescriptions>,
+        IDL::alias_traits< ::Deployment::InstanceDeploymentDescriptions_idl_t,
+                           ::Deployment::InstanceDeploymentDescriptions>
+    {
+      typedef ::Deployment::InstanceDeploymentDescription&   element_cdr_to;
+      typedef const ::Deployment::InstanceDeploymentDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_)
+#define _STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_
+    template<>
+    struct traits < ::Deployment::ComponentExternalPortEndpoint_idl_t>
+      : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoint>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ComponentExternalPortEndpoints_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ComponentExternalPortEndpoints>,
+        IDL::alias_traits< ::Deployment::ComponentExternalPortEndpoints_idl_t,
+                           ::Deployment::ComponentExternalPortEndpoints>
+    {
+      typedef ::Deployment::ComponentExternalPortEndpoint&   element_cdr_to;
+      typedef const ::Deployment::ComponentExternalPortEndpoint&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_)
+#define _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
+    template<>
+    struct traits < ::Deployment::PlanSubcomponentPortEndpoint_idl_t>
+      : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoint>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::PlanSubcomponentPortEndpoints_idl_t>
+      : IDL::unbounded_traits< ::Deployment::PlanSubcomponentPortEndpoints>,
+        IDL::alias_traits< ::Deployment::PlanSubcomponentPortEndpoints_idl_t,
+                           ::Deployment::PlanSubcomponentPortEndpoints>
+    {
+      typedef ::Deployment::PlanSubcomponentPortEndpoint&   element_cdr_to;
+      typedef const ::Deployment::PlanSubcomponentPortEndpoint&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_)
+#define _STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_
+    template<>
+    struct traits < ::Deployment::ExternalReferenceEndpoint_idl_t>
+      : IDL::common_traits< ::Deployment::ExternalReferenceEndpoint>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ExternalReferenceEndpoints_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ExternalReferenceEndpoints>,
+        IDL::alias_traits< ::Deployment::ExternalReferenceEndpoints_idl_t,
+                           ::Deployment::ExternalReferenceEndpoints>
+    {
+      typedef ::Deployment::ExternalReferenceEndpoint&   element_cdr_to;
+      typedef const ::Deployment::ExternalReferenceEndpoint&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::ConnectionResourceDeploymentDescription_idl_t>
+      : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>,
+        IDL::alias_traits< ::Deployment::ConnectionResourceDeploymentDescriptions_idl_t,
+                           ::Deployment::ConnectionResourceDeploymentDescriptions>
+    {
+      typedef ::Deployment::ConnectionResourceDeploymentDescription&   element_cdr_to;
+      typedef const ::Deployment::ConnectionResourceDeploymentDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::PlanConnectionDescription_idl_t>
+      : IDL::common_traits< ::Deployment::PlanConnectionDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::PlanConnectionDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::PlanConnectionDescriptions>,
+        IDL::alias_traits< ::Deployment::PlanConnectionDescriptions_idl_t,
+                           ::Deployment::PlanConnectionDescriptions>
+    {
+      typedef ::Deployment::PlanConnectionDescription&   element_cdr_to;
+      typedef const ::Deployment::PlanConnectionDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::PlanConnectionDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_)
+#define _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
+    template<>
+    struct traits < ::Deployment::PlanSubcomponentPropertyReference_idl_t>
+      : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReference>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::PlanSubcomponentPropertyReferences_idl_t>
+      : IDL::unbounded_traits< ::Deployment::PlanSubcomponentPropertyReferences>,
+        IDL::alias_traits< ::Deployment::PlanSubcomponentPropertyReferences_idl_t,
+                           ::Deployment::PlanSubcomponentPropertyReferences>
+    {
+      typedef ::Deployment::PlanSubcomponentPropertyReference&   element_cdr_to;
+      typedef const ::Deployment::PlanSubcomponentPropertyReference&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_)
+#define _STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_
+    template<>
+    struct traits < ::Deployment::PlanPropertyMapping_idl_t>
+      : IDL::common_traits< ::Deployment::PlanPropertyMapping>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::PlanPropertyMappings_idl_t>
+      : IDL::unbounded_traits< ::Deployment::PlanPropertyMappings>,
+        IDL::alias_traits< ::Deployment::PlanPropertyMappings_idl_t,
+                           ::Deployment::PlanPropertyMappings>
+    {
+      typedef ::Deployment::PlanPropertyMapping&   element_cdr_to;
+      typedef const ::Deployment::PlanPropertyMapping&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::PlanPropertyMapping_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_)
+#define _STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_
+    template<>
+    struct traits < ::Deployment::ImplementationDependency_idl_t>
+      : IDL::common_traits< ::Deployment::ImplementationDependency>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ImplementationDependencies_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ImplementationDependencies>,
+        IDL::alias_traits< ::Deployment::ImplementationDependencies_idl_t,
+                           ::Deployment::ImplementationDependencies>
+    {
+      typedef ::Deployment::ImplementationDependency&   element_cdr_to;
+      typedef const ::Deployment::ImplementationDependency&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ImplementationDependency_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::ResourceDeploymentDescription_idl_t>
+      : IDL::common_traits< ::Deployment::ResourceDeploymentDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ResourceDeploymentDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ResourceDeploymentDescriptions>,
+        IDL::alias_traits< ::Deployment::ResourceDeploymentDescriptions_idl_t,
+                           ::Deployment::ResourceDeploymentDescriptions>
+    {
+      typedef ::Deployment::ResourceDeploymentDescription&   element_cdr_to;
+      typedef const ::Deployment::ResourceDeploymentDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_)
+#define _STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
+    template<>
+    struct traits < ::Deployment::ArtifactDeploymentDescription_idl_t>
+      : IDL::common_traits< ::Deployment::ArtifactDeploymentDescription>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ArtifactDeploymentDescriptions_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ArtifactDeploymentDescriptions>,
+        IDL::alias_traits< ::Deployment::ArtifactDeploymentDescriptions_idl_t,
+                           ::Deployment::ArtifactDeploymentDescriptions>
+    {
+      typedef ::Deployment::ArtifactDeploymentDescription&   element_cdr_to;
+      typedef const ::Deployment::ArtifactDeploymentDescription&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/enum_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::PlanLocalityKind_idl_t>
+      : IDL::common_traits< ::Deployment::PlanLocalityKind>
+    {
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_)
+#define _STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_
+    template<>
+    struct traits < ::Deployment::PlanLocality_idl_t>
+      : IDL::common_traits< ::Deployment::PlanLocality>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::PlanLocalities_idl_t>
+      : IDL::unbounded_traits< ::Deployment::PlanLocalities>,
+        IDL::alias_traits< ::Deployment::PlanLocalities_idl_t,
+                           ::Deployment::PlanLocalities>
+    {
+      typedef ::Deployment::PlanLocality&   element_cdr_to;
+      typedef const ::Deployment::PlanLocality&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::PlanLocality_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_DEPLOYMENTPLAN_TRAITS_)
+#define _STRUCT_DEPLOYMENT_DEPLOYMENTPLAN_TRAITS_
+    template<>
+    struct traits < ::Deployment::DeploymentPlan_idl_t>
+      : IDL::common_traits< ::Deployment::DeploymentPlan>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_DEPLOYMENTPLAN_TRAITS_
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_)
+#define _STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_
+    template<>
+    struct traits < ::Deployment::ComponentPackageReference_idl_t>
+      : IDL::common_traits< ::Deployment::ComponentPackageReference>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ComponentPackageReferences_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ComponentPackageReferences>,
+        IDL::alias_traits< ::Deployment::ComponentPackageReferences_idl_t,
+                           ::Deployment::ComponentPackageReferences>
+    {
+      typedef ::Deployment::ComponentPackageReference&   element_cdr_to;
+      typedef const ::Deployment::ComponentPackageReference&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ComponentPackageReference_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ResourceUsageKinds_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ResourceUsageKinds>,
+        IDL::alias_traits< ::Deployment::ResourceUsageKinds_idl_t,
+                           ::Deployment::ResourceUsageKinds>
+    {
+      typedef ::Deployment::ResourceUsageKind&   element_cdr_to;
+      typedef ::Deployment::ResourceUsageKind  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ResourceUsageKind_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_)
+#define _STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_
+    template<>
+    struct traits < ::Deployment::ImplementationRequirement_idl_t>
+      : IDL::common_traits< ::Deployment::ImplementationRequirement>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::ImplementationRequirements_idl_t>
+      : IDL::unbounded_traits< ::Deployment::ImplementationRequirements>,
+        IDL::alias_traits< ::Deployment::ImplementationRequirements_idl_t,
+                           ::Deployment::ImplementationRequirements>
+    {
+      typedef ::Deployment::ImplementationRequirement&   element_cdr_to;
+      typedef const ::Deployment::ImplementationRequirement&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::ImplementationRequirement_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_)
+#define _STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_
+    template<>
+    struct traits < ::Deployment::Capability_idl_t>
+      : IDL::common_traits< ::Deployment::Capability>
+    {
+    };
+#endif // _STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::Deployment::Capabilities_idl_t>
+      : IDL::unbounded_traits< ::Deployment::Capabilities>,
+        IDL::alias_traits< ::Deployment::Capabilities_idl_t,
+                           ::Deployment::Capabilities>
+    {
+      typedef ::Deployment::Capability&   element_cdr_to;
+      typedef const ::Deployment::Capability&  element_cdr_from;
+
+      typedef IDL::traits< ::Deployment::Capability_idl_t>  element_traits;
+    };
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

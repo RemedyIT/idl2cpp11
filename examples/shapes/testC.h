@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -63,6 +64,7 @@ private:
   int32_t y_;
   int32_t shapesize_;
 };// ShapeType
+typedef ShapeType ShapeType_idl_t; // IDL traits typename
 
 // generated from c++/cli_hdr/struct_pre.erb
 class Attributes final
@@ -101,9 +103,50 @@ private:
   std::string color_;
   float speed_;
 };// Attributes
+typedef Attributes Attributes_idl_t; // IDL traits typename
 
 // generated from c++/cli_hdr/typedef.erb
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
+struct ShapeTypeSeq_idl_t {}; // IDL traits type-id
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_SHAPETYPE_TRAITS_)
+#define _STRUCT_SHAPETYPE_TRAITS_
+    template<>
+    struct traits < ::ShapeType_idl_t>
+      : IDL::common_traits< ::ShapeType>
+    {
+    };
+#endif // _STRUCT_SHAPETYPE_TRAITS_
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_ATTRIBUTES_TRAITS_)
+#define _STRUCT_ATTRIBUTES_TRAITS_
+    template<>
+    struct traits < ::Attributes_idl_t>
+      : IDL::common_traits< ::Attributes>
+    {
+    };
+#endif // _STRUCT_ATTRIBUTES_TRAITS_
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::ShapeTypeSeq_idl_t>
+      : IDL::unbounded_traits< ::ShapeTypeSeq>,
+        IDL::alias_traits< ::ShapeTypeSeq_idl_t,
+                           ::ShapeTypeSeq>
+    {
+      typedef ::ShapeType&   element_cdr_to;
+      typedef const ::ShapeType&  element_cdr_from;
+
+      typedef IDL::traits< ::ShapeType_idl_t>  element_traits;
+    };
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

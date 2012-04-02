@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -45,6 +46,7 @@ public:
 private:
   int32_t x_;
 };// Global
+typedef Global Global_idl_t; // IDL traits typename
 
 // generated from StubHeaderWriter#enter_module
 namespace Test
@@ -61,6 +63,7 @@ namespace Test
     dtTrack,
     dtGlobal
   };// DataType
+  typedef DataType DataType_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Point final
@@ -91,6 +94,7 @@ namespace Test
     int32_t x_;
     int32_t y_;
   };// Point
+  typedef Point Point_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class Track final
@@ -122,6 +126,7 @@ namespace Test
     int32_t id_;
     ::Test::Point p_;
   };// Track
+  typedef Track Track_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/union_pre.erb
   class Data final
@@ -188,6 +193,7 @@ namespace Test
       ::Global globalData_;
     } u_;
   }; // Data
+  typedef Data Data_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/struct_pre.erb
   class S final
@@ -212,11 +218,13 @@ namespace Test
   private:
     int32_t len_;
   };// S
+  typedef S S_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_A_FWD_)
 #define _INTF_TEST_A_FWD_
   class A;
+  typedef A A_idl_t; // IDL traits typename
   class A_proxy;
   typedef A_proxy* A_proxy_ptr;
   namespace POA
@@ -247,6 +255,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::A>::ref_type
     object_traits< ::Test::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::A> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::A>>,
+      public CORBA::object_traits < ::Test::A>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_TEST_A_TRAITS_DECL_
@@ -306,6 +326,7 @@ namespace Test
       TAOX11_CORBA::object_reference< ::Test::A> obj_;
     } u_;
   }; // U
+  typedef U U_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -313,6 +334,7 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
+  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
   namespace POA
@@ -343,6 +365,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::ref_type
     object_traits< ::Test::Foo>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Foo> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Foo>>,
+      public CORBA::object_traits < ::Test::Foo>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_TEST_FOO_TRAITS_DECL_
@@ -410,6 +444,79 @@ namespace Test
   }; // Foo
 }; // namespace Test
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_GLOBAL_TRAITS_)
+#define _STRUCT_GLOBAL_TRAITS_
+    template<>
+    struct traits < ::Global_idl_t>
+      : IDL::common_traits< ::Global>
+    {
+    };
+#endif // _STRUCT_GLOBAL_TRAITS_
+
+    // generated from c++/cli_hdr/enum_idl_traits.erb
+    template<>
+    struct traits < ::Test::DataType_idl_t>
+      : IDL::common_traits< ::Test::DataType>
+    {
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_TEST_POINT_TRAITS_)
+#define _STRUCT_TEST_POINT_TRAITS_
+    template<>
+    struct traits < ::Test::Point_idl_t>
+      : IDL::common_traits< ::Test::Point>
+    {
+    };
+#endif // _STRUCT_TEST_POINT_TRAITS_
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_TEST_TRACK_TRAITS_)
+#define _STRUCT_TEST_TRACK_TRAITS_
+    template<>
+    struct traits < ::Test::Track_idl_t>
+      : IDL::common_traits< ::Test::Track>
+    {
+    };
+#endif // _STRUCT_TEST_TRACK_TRAITS_
+
+    // generated from c++/cli_hdr/union_idl_traits.erb
+#if !defined (_UNION_TEST_DATA_TRAITS_)
+#define _UNION_TEST_DATA_TRAITS_
+    template<>
+    struct traits < ::Test::Data_idl_t>
+      : IDL::common_traits< ::Test::Data>
+    {
+    };
+#endif // _UNION_TEST_DATA_TRAITS_
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_TEST_S_TRAITS_)
+#define _STRUCT_TEST_S_TRAITS_
+    template<>
+    struct traits < ::Test::S_idl_t>
+      : IDL::common_traits< ::Test::S>
+    {
+    };
+#endif // _STRUCT_TEST_S_TRAITS_
+
+    // generated from c++/cli_hdr/union_idl_traits.erb
+#if !defined (_UNION_TEST_U_TRAITS_)
+#define _UNION_TEST_U_TRAITS_
+    template<>
+    struct traits < ::Test::U_idl_t>
+      : IDL::common_traits< ::Test::U>
+    {
+    };
+#endif // _UNION_TEST_U_TRAITS_
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -28,12 +29,15 @@ namespace Test
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::array< float, 10 > F;
+  struct F_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::array< std::string, 10 > V;
+  struct V_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
+  struct M_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -41,6 +45,7 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
+  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
   namespace POA
@@ -71,6 +76,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::ref_type
     object_traits< ::Test::Foo>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Foo> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Foo>>,
+      public CORBA::object_traits < ::Test::Foo>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_TEST_FOO_TRAITS_DECL_
@@ -124,6 +141,45 @@ namespace Test
   }; // Foo
 }; // namespace Test
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/array_idl_traits.erb
+    template<>
+    struct traits < ::Test::F_idl_t>
+      : IDL::common_traits< ::Test::F>,
+        IDL::alias_traits< ::Test::F_idl_t,
+                           ::Test::F>
+    {
+      typedef IDL::traits< ::float_idl_t>  element_traits;
+      static constexpr uint32_t dimensions = 1;
+    };
+
+    // generated from c++/cli_hdr/array_idl_traits.erb
+    template<>
+    struct traits < ::Test::V_idl_t>
+      : IDL::common_traits< ::Test::V>,
+        IDL::alias_traits< ::Test::V_idl_t,
+                           ::Test::V>
+    {
+      typedef IDL::traits< ::std::string_idl_t>  element_traits;
+      static constexpr uint32_t dimensions = 1;
+    };
+
+    // generated from c++/cli_hdr/array_idl_traits.erb
+    template<>
+    struct traits < ::Test::M_idl_t>
+      : IDL::common_traits< ::Test::M>,
+        IDL::alias_traits< ::Test::M_idl_t,
+                           ::Test::M>
+    {
+      typedef IDL::traits< ::std::string_idl_t>  element_traits;
+      static constexpr uint32_t dimensions = 3;
+    };
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

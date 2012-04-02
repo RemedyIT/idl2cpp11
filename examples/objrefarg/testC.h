@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -30,6 +31,7 @@ namespace Test
 #if !defined (_INTF_TEST_HELLO_FWD_)
 #define _INTF_TEST_HELLO_FWD_
   class Hello;
+  typedef Hello Hello_idl_t; // IDL traits typename
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
   namespace POA
@@ -61,6 +63,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Hello>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Hello> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Hello>>,
+      public CORBA::object_traits < ::Test::Hello>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
+  };
 };
 #endif // !_INTF_TEST_HELLO_TRAITS_DECL_
 
@@ -74,6 +88,7 @@ namespace Test
 #if !defined (_INTF_TEST_HELLO_FACTORY_FWD_)
 #define _INTF_TEST_HELLO_FACTORY_FWD_
   class Hello_Factory;
+  typedef Hello_Factory Hello_Factory_idl_t; // IDL traits typename
   class Hello_Factory_proxy;
   typedef Hello_Factory_proxy* Hello_Factory_proxy_ptr;
   namespace POA
@@ -104,6 +119,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Hello_Factory>::ref_type
     object_traits< ::Test::Hello_Factory>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Hello_Factory> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Hello_Factory>>,
+      public CORBA::object_traits < ::Test::Hello_Factory>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_TEST_HELLO_FACTORY_TRAITS_DECL_
@@ -207,6 +234,12 @@ namespace Test
   }; // Hello
 }; // namespace Test
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

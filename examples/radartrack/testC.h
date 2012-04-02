@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -23,6 +24,7 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++/cli_hdr/typedef.erb
 typedef std::vector < uint8_t> octetseq;
+struct octetseq_idl_t {}; // IDL traits type-id
 
 // generated from c++/cli_hdr/struct_pre.erb
 class RadarTrack final
@@ -73,6 +75,36 @@ private:
   int32_t z_;
   ::octetseq plot_;
 };// RadarTrack
+typedef RadarTrack RadarTrack_idl_t; // IDL traits typename
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    template<>
+    struct traits < ::octetseq_idl_t>
+      : IDL::unbounded_traits< ::octetseq>,
+        IDL::alias_traits< ::octetseq_idl_t,
+                           ::octetseq>
+    {
+      typedef uint8_t&   element_cdr_to;
+      typedef uint8_t  element_cdr_from;
+
+      typedef IDL::traits< ::uint8_t_idl_t>  element_traits;
+    };
+
+    // generated from c++/cli_hdr/struct_idl_traits.erb
+#if !defined (_STRUCT_RADARTRACK_TRAITS_)
+#define _STRUCT_RADARTRACK_TRAITS_
+    template<>
+    struct traits < ::RadarTrack_idl_t>
+      : IDL::common_traits< ::RadarTrack>
+    {
+    };
+#endif // _STRUCT_RADARTRACK_TRAITS_
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

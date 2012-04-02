@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -32,11 +33,25 @@ namespace Test
     B,
     C
   };// EEnum
+  typedef EEnum EEnum_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#visit_const
   constexpr EEnum my_enum = EEnum::A;
 }; // namespace Test
 
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/enum_idl_traits.erb
+    template<>
+    struct traits < ::Test::EEnum_idl_t>
+      : IDL::common_traits< ::Test::EEnum>
+    {
+    };
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

@@ -15,6 +15,7 @@
 #include /**/ "ace/pre.h"
 
 #include "tao/x11/stddef.h"
+#include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
@@ -73,9 +74,11 @@ namespace Test
 
   // generated from c++/cli_hdr/typedef.erb
   typedef int32_t TCounter;
+  typedef int32_t_idl_t TCounter_idl_t; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
   typedef std::string TName;
+  struct TName_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#visit_const
   constexpr TCounter count = 99;
@@ -94,6 +97,7 @@ namespace Test
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
 class A;
+typedef A A_idl_t; // IDL traits typename
 class A_proxy;
 typedef A_proxy* A_proxy_ptr;
 namespace POA
@@ -121,6 +125,18 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A>::ref_type
     object_traits< ::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::A> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::A>>,
+      public CORBA::object_traits < ::A>
+    {
+      static constexpr bool local = false;
+      static constexpr bool abstract = false;
+    };
   };
 };
 #endif // !_INTF_A_TRAITS_DECL_
@@ -165,6 +181,23 @@ private:
   A& operator=(A&&) = delete;
   A_proxy_ptr a_proxy_;
 }; // A
+
+// generated from StubHeaderTraitsWriter#pre_visit
+namespace TAOX11_NAMESPACE {
+  namespace IDL {
+
+    // generated from c++/cli_hdr/string_idl_traits.erb
+    template<>
+    struct traits < ::Test::TName_idl_t>
+      : IDL::bounded_traits< std::string,
+                             30U>,
+        IDL::alias_traits< ::Test::TName_idl_t,
+                           std::string>
+    {
+      typedef IDL::traits<char>     element_traits;
+    };
+  }; // IDL
+}; // TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
