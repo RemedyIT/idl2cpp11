@@ -158,9 +158,9 @@ public:
 
   // generated from c++/cli_hdr/interface_post.erb
   static TAOX11_CORBA::object_reference< A> _narrow (
-      TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> obj)
+      TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> _taox11_obj)
   {
-    return TAOX11_CORBA::object_traits< A>::narrow (obj);
+    return TAOX11_CORBA::object_traits< A>::narrow (_taox11_obj);
   }
 
 protected:

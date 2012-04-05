@@ -419,9 +419,9 @@ namespace Test
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Foo> _narrow (
-        TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> obj)
+        TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> _taox11_obj)
     {
-      return TAOX11_CORBA::object_traits< Foo>::narrow (obj);
+      return TAOX11_CORBA::object_traits< Foo>::narrow (_taox11_obj);
     }
 
   protected:
