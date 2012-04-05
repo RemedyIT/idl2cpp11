@@ -33,45 +33,45 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Simple (void);
+    inline Simple (void);
     ~Simple (void) = default;
     Simple (const Simple&) = default;
     Simple (Simple&&) = default;
-    explicit Simple (uint8_t o,
+    explicit inline Simple (uint8_t o,
                      int32_t l,
                      std::string s,
                      double d,
                      bool b,
                      char c);
-    Simple& operator= (const Simple& x);
-    Simple& operator= (Simple&& x);
+    inline Simple& operator= (const Simple& x);
+    inline Simple& operator= (Simple&& x);
 
-    void o (uint8_t _o);
-    uint8_t o (void) const;
-    uint8_t& o (void);
+    inline void o (uint8_t _o);
+    inline uint8_t o (void) const;
+    inline uint8_t& o (void);
 
-    void l (int32_t _l);
-    int32_t l (void) const;
-    int32_t& l (void);
+    inline void l (int32_t _l);
+    inline int32_t l (void) const;
+    inline int32_t& l (void);
 
-    void s (const std::string& _s);
-    void s (std::string&& _s);
-    const std::string& s (void) const;
-    std::string& s (void);
+    inline void s (const std::string& _s);
+    inline void s (std::string&& _s);
+    inline const std::string& s (void) const;
+    inline std::string& s (void);
 
-    void d (double _d);
-    double d (void) const;
-    double& d (void);
+    inline void d (double _d);
+    inline double d (void) const;
+    inline double& d (void);
 
-    void b (bool _b);
-    bool b (void) const;
-    bool& b (void);
+    inline void b (bool _b);
+    inline bool b (void) const;
+    inline bool& b (void);
 
-    void c (char _c);
-    char c (void) const;
-    char& c (void);
+    inline void c (char _c);
+    inline char c (void) const;
+    inline char& c (void);
 
-    void swap (Simple& s);
+    inline void swap (Simple& s);
 
   private:
     uint8_t o_;

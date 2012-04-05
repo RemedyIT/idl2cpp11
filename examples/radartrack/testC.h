@@ -32,41 +32,41 @@ class RadarTrack final
 public:
 
   // generated from c++/cli_hdr/struct_post.erb
-  RadarTrack (void);
+  inline RadarTrack (void);
   ~RadarTrack (void) = default;
   RadarTrack (const RadarTrack&) = default;
   RadarTrack (RadarTrack&&) = default;
-  explicit RadarTrack (std::string id,
+  explicit inline RadarTrack (std::string id,
                        int32_t x,
                        int32_t y,
                        int32_t z,
                        ::octetseq plot);
-  RadarTrack& operator= (const RadarTrack& x);
-  RadarTrack& operator= (RadarTrack&& x);
+  inline RadarTrack& operator= (const RadarTrack& x);
+  inline RadarTrack& operator= (RadarTrack&& x);
 
-  void id (const std::string& _id);
-  void id (std::string&& _id);
-  const std::string& id (void) const;
-  std::string& id (void);
+  inline void id (const std::string& _id);
+  inline void id (std::string&& _id);
+  inline const std::string& id (void) const;
+  inline std::string& id (void);
 
-  void x (int32_t _x);
-  int32_t x (void) const;
-  int32_t& x (void);
+  inline void x (int32_t _x);
+  inline int32_t x (void) const;
+  inline int32_t& x (void);
 
-  void y (int32_t _y);
-  int32_t y (void) const;
-  int32_t& y (void);
+  inline void y (int32_t _y);
+  inline int32_t y (void) const;
+  inline int32_t& y (void);
 
-  void z (int32_t _z);
-  int32_t z (void) const;
-  int32_t& z (void);
+  inline void z (int32_t _z);
+  inline int32_t z (void) const;
+  inline int32_t& z (void);
 
-  void plot (const ::octetseq& _plot);
-  void plot (::octetseq&& _plot);
-  const ::octetseq& plot (void) const;
-  ::octetseq& plot (void);
+  inline void plot (const ::octetseq& _plot);
+  inline void plot (::octetseq&& _plot);
+  inline const ::octetseq& plot (void) const;
+  inline ::octetseq& plot (void);
 
-  void swap (RadarTrack& s);
+  inline void swap (RadarTrack& s);
 
 private:
   std::string id_;

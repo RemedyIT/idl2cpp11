@@ -33,20 +33,20 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Variable (void);
+    inline Variable (void);
     ~Variable (void) = default;
     Variable (const Variable&) = default;
     Variable (Variable&&) = default;
-    explicit Variable (std::string name);
-    Variable& operator= (const Variable& x);
-    Variable& operator= (Variable&& x);
+    explicit inline Variable (std::string name);
+    inline Variable& operator= (const Variable& x);
+    inline Variable& operator= (Variable&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void swap (Variable& s);
+    inline void swap (Variable& s);
 
   private:
     std::string name_;
@@ -158,11 +158,11 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Simple (void);
+    inline Simple (void);
     ~Simple (void) = default;
     Simple (const Simple&) = default;
     Simple (Simple&&) = default;
-    explicit Simple (uint8_t o,
+    explicit inline Simple (uint8_t o,
                      int32_t l,
                      std::string s,
                      double d,
@@ -170,44 +170,44 @@ namespace Test
                      char c,
                      TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref,
                      ::Test::Variable v);
-    Simple& operator= (const Simple& x);
-    Simple& operator= (Simple&& x);
+    inline Simple& operator= (const Simple& x);
+    inline Simple& operator= (Simple&& x);
 
-    void o (uint8_t _o);
-    uint8_t o (void) const;
-    uint8_t& o (void);
+    inline void o (uint8_t _o);
+    inline uint8_t o (void) const;
+    inline uint8_t& o (void);
 
-    void l (int32_t _l);
-    int32_t l (void) const;
-    int32_t& l (void);
+    inline void l (int32_t _l);
+    inline int32_t l (void) const;
+    inline int32_t& l (void);
 
-    void s (const std::string& _s);
-    void s (std::string&& _s);
-    const std::string& s (void) const;
-    std::string& s (void);
+    inline void s (const std::string& _s);
+    inline void s (std::string&& _s);
+    inline const std::string& s (void) const;
+    inline std::string& s (void);
 
-    void d (double _d);
-    double d (void) const;
-    double& d (void);
+    inline void d (double _d);
+    inline double d (void) const;
+    inline double& d (void);
 
-    void b (bool _b);
-    bool b (void) const;
-    bool& b (void);
+    inline void b (bool _b);
+    inline bool b (void) const;
+    inline bool& b (void);
 
-    void c (char _c);
-    char c (void) const;
-    char& c (void);
+    inline void c (char _c);
+    inline char c (void) const;
+    inline char& c (void);
 
-    void bar_ref (TAOX11_CORBA::object_reference< ::Test::Bar> _bar_ref);
-    TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref (void) const;
-    TAOX11_CORBA::object_reference< ::Test::Bar>& bar_ref (void);
+    inline void bar_ref (TAOX11_CORBA::object_reference< ::Test::Bar> _bar_ref);
+    inline TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref (void) const;
+    inline TAOX11_CORBA::object_reference< ::Test::Bar>& bar_ref (void);
 
-    void v (const ::Test::Variable& _v);
-    void v (::Test::Variable&& _v);
-    const ::Test::Variable& v (void) const;
-    ::Test::Variable& v (void);
+    inline void v (const ::Test::Variable& _v);
+    inline void v (::Test::Variable&& _v);
+    inline const ::Test::Variable& v (void) const;
+    inline ::Test::Variable& v (void);
 
-    void swap (Simple& s);
+    inline void swap (Simple& s);
 
   private:
     uint8_t o_;

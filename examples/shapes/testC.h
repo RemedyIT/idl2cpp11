@@ -28,35 +28,35 @@ class ShapeType final
 public:
 
   // generated from c++/cli_hdr/struct_post.erb
-  ShapeType (void);
+  inline ShapeType (void);
   ~ShapeType (void) = default;
   ShapeType (const ShapeType&) = default;
   ShapeType (ShapeType&&) = default;
-  explicit ShapeType (std::string color,
+  explicit inline ShapeType (std::string color,
                       int32_t x,
                       int32_t y,
                       int32_t shapesize);
-  ShapeType& operator= (const ShapeType& x);
-  ShapeType& operator= (ShapeType&& x);
+  inline ShapeType& operator= (const ShapeType& x);
+  inline ShapeType& operator= (ShapeType&& x);
 
-  void color (const std::string& _color);
-  void color (std::string&& _color);
-  const std::string& color (void) const;
-  std::string& color (void);
+  inline void color (const std::string& _color);
+  inline void color (std::string&& _color);
+  inline const std::string& color (void) const;
+  inline std::string& color (void);
 
-  void x (int32_t _x);
-  int32_t x (void) const;
-  int32_t& x (void);
+  inline void x (int32_t _x);
+  inline int32_t x (void) const;
+  inline int32_t& x (void);
 
-  void y (int32_t _y);
-  int32_t y (void) const;
-  int32_t& y (void);
+  inline void y (int32_t _y);
+  inline int32_t y (void) const;
+  inline int32_t& y (void);
 
-  void shapesize (int32_t _shapesize);
-  int32_t shapesize (void) const;
-  int32_t& shapesize (void);
+  inline void shapesize (int32_t _shapesize);
+  inline int32_t shapesize (void) const;
+  inline int32_t& shapesize (void);
 
-  void swap (ShapeType& s);
+  inline void swap (ShapeType& s);
 
 private:
   std::string color_;
@@ -72,31 +72,31 @@ class Attributes final
 public:
 
   // generated from c++/cli_hdr/struct_post.erb
-  Attributes (void);
+  inline Attributes (void);
   ~Attributes (void) = default;
   Attributes (const Attributes&) = default;
   Attributes (Attributes&&) = default;
-  explicit Attributes (std::string shape,
+  explicit inline Attributes (std::string shape,
                        std::string color,
                        float speed);
-  Attributes& operator= (const Attributes& x);
-  Attributes& operator= (Attributes&& x);
+  inline Attributes& operator= (const Attributes& x);
+  inline Attributes& operator= (Attributes&& x);
 
-  void shape (const std::string& _shape);
-  void shape (std::string&& _shape);
-  const std::string& shape (void) const;
-  std::string& shape (void);
+  inline void shape (const std::string& _shape);
+  inline void shape (std::string&& _shape);
+  inline const std::string& shape (void) const;
+  inline std::string& shape (void);
 
-  void color (const std::string& _color);
-  void color (std::string&& _color);
-  const std::string& color (void) const;
-  std::string& color (void);
+  inline void color (const std::string& _color);
+  inline void color (std::string&& _color);
+  inline const std::string& color (void) const;
+  inline std::string& color (void);
 
-  void speed (float _speed);
-  float speed (void) const;
-  float& speed (void);
+  inline void speed (float _speed);
+  inline float speed (void) const;
+  inline float& speed (void);
 
-  void swap (Attributes& s);
+  inline void swap (Attributes& s);
 
 private:
   std::string shape_;

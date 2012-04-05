@@ -29,19 +29,19 @@ class Global final
 public:
 
   // generated from c++/cli_hdr/struct_post.erb
-  Global (void);
+  inline Global (void);
   ~Global (void) = default;
   Global (const Global&) = default;
   Global (Global&&) = default;
-  explicit Global (int32_t x);
-  Global& operator= (const Global& x);
-  Global& operator= (Global&& x);
+  explicit inline Global (int32_t x);
+  inline Global& operator= (const Global& x);
+  inline Global& operator= (Global&& x);
 
-  void x (int32_t _x);
-  int32_t x (void) const;
-  int32_t& x (void);
+  inline void x (int32_t _x);
+  inline int32_t x (void) const;
+  inline int32_t& x (void);
 
-  void swap (Global& s);
+  inline void swap (Global& s);
 
 private:
   int32_t x_;
@@ -71,24 +71,24 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Point (void);
+    inline Point (void);
     ~Point (void) = default;
     Point (const Point&) = default;
     Point (Point&&) = default;
-    explicit Point (int32_t x,
+    explicit inline Point (int32_t x,
                     int32_t y);
-    Point& operator= (const Point& x);
-    Point& operator= (Point&& x);
+    inline Point& operator= (const Point& x);
+    inline Point& operator= (Point&& x);
 
-    void x (int32_t _x);
-    int32_t x (void) const;
-    int32_t& x (void);
+    inline void x (int32_t _x);
+    inline int32_t x (void) const;
+    inline int32_t& x (void);
 
-    void y (int32_t _y);
-    int32_t y (void) const;
-    int32_t& y (void);
+    inline void y (int32_t _y);
+    inline int32_t y (void) const;
+    inline int32_t& y (void);
 
-    void swap (Point& s);
+    inline void swap (Point& s);
 
   private:
     int32_t x_;
@@ -102,25 +102,25 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Track (void);
+    inline Track (void);
     ~Track (void) = default;
     Track (const Track&) = default;
     Track (Track&&) = default;
-    explicit Track (int32_t id,
+    explicit inline Track (int32_t id,
                     ::Test::Point p);
-    Track& operator= (const Track& x);
-    Track& operator= (Track&& x);
+    inline Track& operator= (const Track& x);
+    inline Track& operator= (Track&& x);
 
-    void id (int32_t _id);
-    int32_t id (void) const;
-    int32_t& id (void);
+    inline void id (int32_t _id);
+    inline int32_t id (void) const;
+    inline int32_t& id (void);
 
-    void p (const ::Test::Point& _p);
-    void p (::Test::Point&& _p);
-    const ::Test::Point& p (void) const;
-    ::Test::Point& p (void);
+    inline void p (const ::Test::Point& _p);
+    inline void p (::Test::Point&& _p);
+    inline const ::Test::Point& p (void) const;
+    inline ::Test::Point& p (void);
 
-    void swap (Track& s);
+    inline void swap (Track& s);
 
   private:
     int32_t id_;
@@ -134,51 +134,51 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/union_post.erb
-    Data (void);
-    Data (const Data&);
-    Data (Data&&);
-    ~Data (void);
-    Data &operator= (const Data&);
-    Data &operator= (Data&&);
+    inline Data (void);
+    inline Data (const Data&);
+    inline Data (Data&&);
+    inline ~Data (void);
+    inline Data &operator= (const Data&);
+    inline Data &operator= (Data&&);
 
-    void _d (DataType);
-    DataType _d (void) const;
+    inline void _d (DataType);
+    inline DataType _d (void) const;
 
-    void longData (int32_t _longData);
-    int32_t longData (void) const;
-    int32_t& longData (void);
+    inline void longData (int32_t _longData);
+    inline int32_t longData (void) const;
+    inline int32_t& longData (void);
 
-    void shortData (int16_t _shortData);
-    int16_t shortData (void) const;
-    int16_t& shortData (void);
+    inline void shortData (int16_t _shortData);
+    inline int16_t shortData (void) const;
+    inline int16_t& shortData (void);
 
-    void stringData (const std::string& _stringData);
-    void stringData (std::string&& _stringData);
-    const std::string& stringData (void) const;
-    std::string& stringData (void);
+    inline void stringData (const std::string& _stringData);
+    inline void stringData (std::string&& _stringData);
+    inline const std::string& stringData (void) const;
+    inline std::string& stringData (void);
 
-    void pointData (const ::Test::Point& _pointData);
-    void pointData (::Test::Point&& _pointData);
-    const ::Test::Point& pointData (void) const;
-    ::Test::Point& pointData (void);
+    inline void pointData (const ::Test::Point& _pointData);
+    inline void pointData (::Test::Point&& _pointData);
+    inline const ::Test::Point& pointData (void) const;
+    inline ::Test::Point& pointData (void);
 
-    void trackData (const ::Test::Track& _trackData);
-    void trackData (::Test::Track&& _trackData);
-    const ::Test::Track& trackData (void) const;
-    ::Test::Track& trackData (void);
+    inline void trackData (const ::Test::Track& _trackData);
+    inline void trackData (::Test::Track&& _trackData);
+    inline const ::Test::Track& trackData (void) const;
+    inline ::Test::Track& trackData (void);
 
-    void globalData (const ::Global& _globalData);
-    void globalData (::Global&& _globalData);
-    const ::Global& globalData (void) const;
-    ::Global& globalData (void);
+    inline void globalData (const ::Global& _globalData);
+    inline void globalData (::Global&& _globalData);
+    inline const ::Global& globalData (void) const;
+    inline ::Global& globalData (void);
 
-    void _default (void);
+    inline void _default (void);
 
-    void swap (Data& s);
+    inline void swap (Data& s);
 
   private:
-    void _swap_u (Data& s);
-    void _clear (void);
+    inline void _swap_u (Data& s);
+    inline void _clear (void);
 
     DataType disc_;
     union u_type_
@@ -201,19 +201,19 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    S (void);
+    inline S (void);
     ~S (void) = default;
     S (const S&) = default;
     S (S&&) = default;
-    explicit S (int32_t len);
-    S& operator= (const S& x);
-    S& operator= (S&& x);
+    explicit inline S (int32_t len);
+    inline S& operator= (const S& x);
+    inline S& operator= (S&& x);
 
-    void len (int32_t _len);
-    int32_t len (void) const;
-    int32_t& len (void);
+    inline void len (int32_t _len);
+    inline int32_t len (void) const;
+    inline int32_t& len (void);
 
-    void swap (S& s);
+    inline void swap (S& s);
 
   private:
     int32_t len_;
@@ -281,39 +281,39 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/union_post.erb
-    U (void);
-    U (const U&);
-    U (U&&);
-    ~U (void);
-    U &operator= (const U&);
-    U &operator= (U&&);
+    inline U (void);
+    inline U (const U&);
+    inline U (U&&);
+    inline ~U (void);
+    inline U &operator= (const U&);
+    inline U &operator= (U&&);
 
-    void _d (int32_t);
-    int32_t _d (void) const;
+    inline void _d (int32_t);
+    inline int32_t _d (void) const;
 
-    void x (int32_t _x);
-    int32_t x (void) const;
-    int32_t& x (void);
+    inline void x (int32_t _x);
+    inline int32_t x (void) const;
+    inline int32_t& x (void);
 
-    void z (const std::string& _z);
-    void z (std::string&& _z);
-    const std::string& z (void) const;
-    std::string& z (void);
+    inline void z (const std::string& _z);
+    inline void z (std::string&& _z);
+    inline const std::string& z (void) const;
+    inline std::string& z (void);
 
-    void w (const ::Test::S& _w);
-    void w (::Test::S&& _w);
-    const ::Test::S& w (void) const;
-    ::Test::S& w (void);
+    inline void w (const ::Test::S& _w);
+    inline void w (::Test::S&& _w);
+    inline const ::Test::S& w (void) const;
+    inline ::Test::S& w (void);
 
-    void obj (TAOX11_CORBA::object_reference< ::Test::A> _obj);
-    TAOX11_CORBA::object_reference< ::Test::A> obj (void) const;
-    TAOX11_CORBA::object_reference< ::Test::A>& obj (void);
+    inline void obj (TAOX11_CORBA::object_reference< ::Test::A> _obj);
+    inline TAOX11_CORBA::object_reference< ::Test::A> obj (void) const;
+    inline TAOX11_CORBA::object_reference< ::Test::A>& obj (void);
 
-    void swap (U& s);
+    inline void swap (U& s);
 
   private:
-    void _swap_u (U& s);
-    void _clear (void);
+    inline void _swap_u (U& s);
+    inline void _clear (void);
 
     int32_t disc_;
     union u_type_

@@ -33,26 +33,26 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Property (void);
+    inline Property (void);
     ~Property (void) = default;
     Property (const Property&) = default;
     Property (Property&&) = default;
-    explicit Property (std::string name,
+    explicit inline Property (std::string name,
                        TAOX11_NAMESPACE::CORBA::Any value);
-    Property& operator= (const Property& x);
-    Property& operator= (Property&& x);
+    inline Property& operator= (const Property& x);
+    inline Property& operator= (Property&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
-    void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
-    const TAOX11_NAMESPACE::CORBA::Any& value (void) const;
-    TAOX11_NAMESPACE::CORBA::Any& value (void);
+    inline void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
+    inline void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
+    inline const TAOX11_NAMESPACE::CORBA::Any& value (void) const;
+    inline TAOX11_NAMESPACE::CORBA::Any& value (void);
 
-    void swap (Property& s);
+    inline void swap (Property& s);
 
   private:
     std::string name_;
@@ -70,32 +70,32 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Requirement (void);
+    inline Requirement (void);
     ~Requirement (void) = default;
     Requirement (const Requirement&) = default;
     Requirement (Requirement&&) = default;
-    explicit Requirement (std::string name,
+    explicit inline Requirement (std::string name,
                           std::string resourceType,
                           ::Deployment::Properties property);
-    Requirement& operator= (const Requirement& x);
-    Requirement& operator= (Requirement&& x);
+    inline Requirement& operator= (const Requirement& x);
+    inline Requirement& operator= (Requirement&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void resourceType (const std::string& _resourceType);
-    void resourceType (std::string&& _resourceType);
-    const std::string& resourceType (void) const;
-    std::string& resourceType (void);
+    inline void resourceType (const std::string& _resourceType);
+    inline void resourceType (std::string&& _resourceType);
+    inline const std::string& resourceType (void) const;
+    inline std::string& resourceType (void);
 
-    void property (const ::Deployment::Properties& _property);
-    void property (::Deployment::Properties&& _property);
-    const ::Deployment::Properties& property (void) const;
-    ::Deployment::Properties& property (void);
+    inline void property (const ::Deployment::Properties& _property);
+    inline void property (::Deployment::Properties&& _property);
+    inline const ::Deployment::Properties& property (void) const;
+    inline ::Deployment::Properties& property (void);
 
-    void swap (Requirement& s);
+    inline void swap (Requirement& s);
 
   private:
     std::string name_;
@@ -126,36 +126,36 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    SatisfierProperty (void);
+    inline SatisfierProperty (void);
     ~SatisfierProperty (void) = default;
     SatisfierProperty (const SatisfierProperty&) = default;
     SatisfierProperty (SatisfierProperty&&) = default;
-    explicit SatisfierProperty (std::string name,
+    explicit inline SatisfierProperty (std::string name,
                                 ::Deployment::SatisfierPropertyKind kind,
                                 bool dynamic,
                                 TAOX11_NAMESPACE::CORBA::Any value);
-    SatisfierProperty& operator= (const SatisfierProperty& x);
-    SatisfierProperty& operator= (SatisfierProperty&& x);
+    inline SatisfierProperty& operator= (const SatisfierProperty& x);
+    inline SatisfierProperty& operator= (SatisfierProperty&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void kind (::Deployment::SatisfierPropertyKind _kind);
-    ::Deployment::SatisfierPropertyKind kind (void) const;
-    ::Deployment::SatisfierPropertyKind& kind (void);
+    inline void kind (::Deployment::SatisfierPropertyKind _kind);
+    inline ::Deployment::SatisfierPropertyKind kind (void) const;
+    inline ::Deployment::SatisfierPropertyKind& kind (void);
 
-    void dynamic (bool _dynamic);
-    bool dynamic (void) const;
-    bool& dynamic (void);
+    inline void dynamic (bool _dynamic);
+    inline bool dynamic (void) const;
+    inline bool& dynamic (void);
 
-    void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
-    void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
-    const TAOX11_NAMESPACE::CORBA::Any& value (void) const;
-    TAOX11_NAMESPACE::CORBA::Any& value (void);
+    inline void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
+    inline void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
+    inline const TAOX11_NAMESPACE::CORBA::Any& value (void) const;
+    inline TAOX11_NAMESPACE::CORBA::Any& value (void);
 
-    void swap (SatisfierProperty& s);
+    inline void swap (SatisfierProperty& s);
 
   private:
     std::string name_;
@@ -195,11 +195,11 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ComponentPortDescription (void);
+    inline ComponentPortDescription (void);
     ~ComponentPortDescription (void) = default;
     ComponentPortDescription (const ComponentPortDescription&) = default;
     ComponentPortDescription (ComponentPortDescription&&) = default;
-    explicit ComponentPortDescription (std::string name,
+    explicit inline ComponentPortDescription (std::string name,
                                        std::string specificType,
                                        ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
                                        bool provider,
@@ -208,50 +208,50 @@ namespace Deployment
                                        bool optional,
                                        ::Deployment::CCMComponentPortKind kind,
                                        ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam);
-    ComponentPortDescription& operator= (const ComponentPortDescription& x);
-    ComponentPortDescription& operator= (ComponentPortDescription&& x);
+    inline ComponentPortDescription& operator= (const ComponentPortDescription& x);
+    inline ComponentPortDescription& operator= (ComponentPortDescription&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void specificType (const std::string& _specificType);
-    void specificType (std::string&& _specificType);
-    const std::string& specificType (void) const;
-    std::string& specificType (void);
+    inline void specificType (const std::string& _specificType);
+    inline void specificType (std::string&& _specificType);
+    inline const std::string& specificType (void) const;
+    inline std::string& specificType (void);
 
-    void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
-    void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void);
+    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
+    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void);
 
-    void provider (bool _provider);
-    bool provider (void) const;
-    bool& provider (void);
+    inline void provider (bool _provider);
+    inline bool provider (void) const;
+    inline bool& provider (void);
 
-    void exclusiveProvider (bool _exclusiveProvider);
-    bool exclusiveProvider (void) const;
-    bool& exclusiveProvider (void);
+    inline void exclusiveProvider (bool _exclusiveProvider);
+    inline bool exclusiveProvider (void) const;
+    inline bool& exclusiveProvider (void);
 
-    void exclusiveUser (bool _exclusiveUser);
-    bool exclusiveUser (void) const;
-    bool& exclusiveUser (void);
+    inline void exclusiveUser (bool _exclusiveUser);
+    inline bool exclusiveUser (void) const;
+    inline bool& exclusiveUser (void);
 
-    void optional (bool _optional);
-    bool optional (void) const;
-    bool& optional (void);
+    inline void optional (bool _optional);
+    inline bool optional (void) const;
+    inline bool& optional (void);
 
-    void kind (::Deployment::CCMComponentPortKind _kind);
-    ::Deployment::CCMComponentPortKind kind (void) const;
-    ::Deployment::CCMComponentPortKind& kind (void);
+    inline void kind (::Deployment::CCMComponentPortKind _kind);
+    inline ::Deployment::CCMComponentPortKind kind (void) const;
+    inline ::Deployment::CCMComponentPortKind& kind (void);
 
-    void templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _templateParam);
-    void templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _templateParam);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam (void);
+    inline void templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _templateParam);
+    inline void templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _templateParam);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam (void);
 
-    void swap (ComponentPortDescription& s);
+    inline void swap (ComponentPortDescription& s);
 
   private:
     std::string name_;
@@ -276,25 +276,25 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ComponentPropertyDescription (void);
+    inline ComponentPropertyDescription (void);
     ~ComponentPropertyDescription (void) = default;
     ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
     ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
-    explicit ComponentPropertyDescription (std::string name,
+    explicit inline ComponentPropertyDescription (std::string name,
                                            TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type);
-    ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
-    ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
+    inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
+    inline ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void type (TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> _type);
-    TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type (void) const;
-    TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode>& type (void);
+    inline void type (TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> _type);
+    inline TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type (void) const;
+    inline TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode>& type (void);
 
-    void swap (ComponentPropertyDescription& s);
+    inline void swap (ComponentPropertyDescription& s);
 
   private:
     std::string name_;
@@ -312,11 +312,11 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ComponentInterfaceDescription (void);
+    inline ComponentInterfaceDescription (void);
     ~ComponentInterfaceDescription (void) = default;
     ComponentInterfaceDescription (const ComponentInterfaceDescription&) = default;
     ComponentInterfaceDescription (ComponentInterfaceDescription&&) = default;
-    explicit ComponentInterfaceDescription (std::string label,
+    explicit inline ComponentInterfaceDescription (std::string label,
                                             std::string UUID,
                                             std::string specificType,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
@@ -325,55 +325,55 @@ namespace Deployment
                                             ::Deployment::ComponentPortDescriptions port,
                                             ::Deployment::ComponentPropertyDescriptions property,
                                             ::Deployment::Properties infoProperty);
-    ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription& x);
-    ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&& x);
+    inline ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription& x);
+    inline ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&& x);
 
-    void label (const std::string& _label);
-    void label (std::string&& _label);
-    const std::string& label (void) const;
-    std::string& label (void);
+    inline void label (const std::string& _label);
+    inline void label (std::string&& _label);
+    inline const std::string& label (void) const;
+    inline std::string& label (void);
 
-    void UUID (const std::string& _UUID);
-    void UUID (std::string&& _UUID);
-    const std::string& UUID (void) const;
-    std::string& UUID (void);
+    inline void UUID (const std::string& _UUID);
+    inline void UUID (std::string&& _UUID);
+    inline const std::string& UUID (void) const;
+    inline std::string& UUID (void);
 
-    void specificType (const std::string& _specificType);
-    void specificType (std::string&& _specificType);
-    const std::string& specificType (void) const;
-    std::string& specificType (void);
+    inline void specificType (const std::string& _specificType);
+    inline void specificType (std::string&& _specificType);
+    inline const std::string& specificType (void) const;
+    inline std::string& specificType (void);
 
-    void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
-    void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void);
+    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
+    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void);
 
-    void idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _idlFile);
-    void idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _idlFile);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile (void);
+    inline void idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _idlFile);
+    inline void idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _idlFile);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile (void);
 
-    void configProperty (const ::Deployment::Properties& _configProperty);
-    void configProperty (::Deployment::Properties&& _configProperty);
-    const ::Deployment::Properties& configProperty (void) const;
-    ::Deployment::Properties& configProperty (void);
+    inline void configProperty (const ::Deployment::Properties& _configProperty);
+    inline void configProperty (::Deployment::Properties&& _configProperty);
+    inline const ::Deployment::Properties& configProperty (void) const;
+    inline ::Deployment::Properties& configProperty (void);
 
-    void port (const ::Deployment::ComponentPortDescriptions& _port);
-    void port (::Deployment::ComponentPortDescriptions&& _port);
-    const ::Deployment::ComponentPortDescriptions& port (void) const;
-    ::Deployment::ComponentPortDescriptions& port (void);
+    inline void port (const ::Deployment::ComponentPortDescriptions& _port);
+    inline void port (::Deployment::ComponentPortDescriptions&& _port);
+    inline const ::Deployment::ComponentPortDescriptions& port (void) const;
+    inline ::Deployment::ComponentPortDescriptions& port (void);
 
-    void property (const ::Deployment::ComponentPropertyDescriptions& _property);
-    void property (::Deployment::ComponentPropertyDescriptions&& _property);
-    const ::Deployment::ComponentPropertyDescriptions& property (void) const;
-    ::Deployment::ComponentPropertyDescriptions& property (void);
+    inline void property (const ::Deployment::ComponentPropertyDescriptions& _property);
+    inline void property (::Deployment::ComponentPropertyDescriptions&& _property);
+    inline const ::Deployment::ComponentPropertyDescriptions& property (void) const;
+    inline ::Deployment::ComponentPropertyDescriptions& property (void);
 
-    void infoProperty (const ::Deployment::Properties& _infoProperty);
-    void infoProperty (::Deployment::Properties&& _infoProperty);
-    const ::Deployment::Properties& infoProperty (void) const;
-    ::Deployment::Properties& infoProperty (void);
+    inline void infoProperty (const ::Deployment::Properties& _infoProperty);
+    inline void infoProperty (::Deployment::Properties&& _infoProperty);
+    inline const ::Deployment::Properties& infoProperty (void) const;
+    inline ::Deployment::Properties& infoProperty (void);
 
-    void swap (ComponentInterfaceDescription& s);
+    inline void swap (ComponentInterfaceDescription& s);
 
   private:
     std::string label_;
@@ -394,44 +394,44 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    MonolithicDeploymentDescription (void);
+    inline MonolithicDeploymentDescription (void);
     ~MonolithicDeploymentDescription (void) = default;
     MonolithicDeploymentDescription (const MonolithicDeploymentDescription&) = default;
     MonolithicDeploymentDescription (MonolithicDeploymentDescription&&) = default;
-    explicit MonolithicDeploymentDescription (std::string name,
+    explicit inline MonolithicDeploymentDescription (std::string name,
                                               ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                               ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
                                               ::Deployment::Properties execParameter,
                                               ::Deployment::Requirements deployRequirement);
-    MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription& x);
-    MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&& x);
+    inline MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription& x);
+    inline MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
 
-    void artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _artifactRef);
-    void artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _artifactRef);
-    const ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef (void) const;
-    ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef (void);
+    inline void artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _artifactRef);
+    inline void artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _artifactRef);
+    inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef (void);
 
-    void execParameter (const ::Deployment::Properties& _execParameter);
-    void execParameter (::Deployment::Properties&& _execParameter);
-    const ::Deployment::Properties& execParameter (void) const;
-    ::Deployment::Properties& execParameter (void);
+    inline void execParameter (const ::Deployment::Properties& _execParameter);
+    inline void execParameter (::Deployment::Properties&& _execParameter);
+    inline const ::Deployment::Properties& execParameter (void) const;
+    inline ::Deployment::Properties& execParameter (void);
 
-    void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
-    void deployRequirement (::Deployment::Requirements&& _deployRequirement);
-    const ::Deployment::Requirements& deployRequirement (void) const;
-    ::Deployment::Requirements& deployRequirement (void);
+    inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
+    inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
+    inline const ::Deployment::Requirements& deployRequirement (void) const;
+    inline ::Deployment::Requirements& deployRequirement (void);
 
-    void swap (MonolithicDeploymentDescription& s);
+    inline void swap (MonolithicDeploymentDescription& s);
 
   private:
     std::string name_;
@@ -463,37 +463,37 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    InstanceResourceDeploymentDescription (void);
+    inline InstanceResourceDeploymentDescription (void);
     ~InstanceResourceDeploymentDescription (void) = default;
     InstanceResourceDeploymentDescription (const InstanceResourceDeploymentDescription&) = default;
     InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&&) = default;
-    explicit InstanceResourceDeploymentDescription (::Deployment::ResourceUsageKind resourceUsage,
+    explicit inline InstanceResourceDeploymentDescription (::Deployment::ResourceUsageKind resourceUsage,
                                                     std::string requirementName,
                                                     std::string resourceName,
                                                     ::Deployment::Properties property);
-    InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription& x);
-    InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&& x);
+    inline InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription& x);
+    inline InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&& x);
 
-    void resourceUsage (::Deployment::ResourceUsageKind _resourceUsage);
-    ::Deployment::ResourceUsageKind resourceUsage (void) const;
-    ::Deployment::ResourceUsageKind& resourceUsage (void);
+    inline void resourceUsage (::Deployment::ResourceUsageKind _resourceUsage);
+    inline ::Deployment::ResourceUsageKind resourceUsage (void) const;
+    inline ::Deployment::ResourceUsageKind& resourceUsage (void);
 
-    void requirementName (const std::string& _requirementName);
-    void requirementName (std::string&& _requirementName);
-    const std::string& requirementName (void) const;
-    std::string& requirementName (void);
+    inline void requirementName (const std::string& _requirementName);
+    inline void requirementName (std::string&& _requirementName);
+    inline const std::string& requirementName (void) const;
+    inline std::string& requirementName (void);
 
-    void resourceName (const std::string& _resourceName);
-    void resourceName (std::string&& _resourceName);
-    const std::string& resourceName (void) const;
-    std::string& resourceName (void);
+    inline void resourceName (const std::string& _resourceName);
+    inline void resourceName (std::string&& _resourceName);
+    inline const std::string& resourceName (void) const;
+    inline std::string& resourceName (void);
 
-    void property (const ::Deployment::Properties& _property);
-    void property (::Deployment::Properties&& _property);
-    const ::Deployment::Properties& property (void) const;
-    ::Deployment::Properties& property (void);
+    inline void property (const ::Deployment::Properties& _property);
+    inline void property (::Deployment::Properties&& _property);
+    inline const ::Deployment::Properties& property (void) const;
+    inline ::Deployment::Properties& property (void);
 
-    void swap (InstanceResourceDeploymentDescription& s);
+    inline void swap (InstanceResourceDeploymentDescription& s);
 
   private:
     ::Deployment::ResourceUsageKind resourceUsage_;
@@ -513,55 +513,55 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    InstanceDeploymentDescription (void);
+    inline InstanceDeploymentDescription (void);
     ~InstanceDeploymentDescription (void) = default;
     InstanceDeploymentDescription (const InstanceDeploymentDescription&) = default;
     InstanceDeploymentDescription (InstanceDeploymentDescription&&) = default;
-    explicit InstanceDeploymentDescription (std::string name,
+    explicit inline InstanceDeploymentDescription (std::string name,
                                             std::string node,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                             uint32_t implementationRef,
                                             ::Deployment::Properties configProperty,
                                             ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
                                             ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource);
-    InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription& x);
-    InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&& x);
+    inline InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription& x);
+    inline InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void node (const std::string& _node);
-    void node (std::string&& _node);
-    const std::string& node (void) const;
-    std::string& node (void);
+    inline void node (const std::string& _node);
+    inline void node (std::string&& _node);
+    inline const std::string& node (void) const;
+    inline std::string& node (void);
 
-    void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
 
-    void implementationRef (uint32_t _implementationRef);
-    uint32_t implementationRef (void) const;
-    uint32_t& implementationRef (void);
+    inline void implementationRef (uint32_t _implementationRef);
+    inline uint32_t implementationRef (void) const;
+    inline uint32_t& implementationRef (void);
 
-    void configProperty (const ::Deployment::Properties& _configProperty);
-    void configProperty (::Deployment::Properties&& _configProperty);
-    const ::Deployment::Properties& configProperty (void) const;
-    ::Deployment::Properties& configProperty (void);
+    inline void configProperty (const ::Deployment::Properties& _configProperty);
+    inline void configProperty (::Deployment::Properties&& _configProperty);
+    inline const ::Deployment::Properties& configProperty (void) const;
+    inline ::Deployment::Properties& configProperty (void);
 
-    void deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedResource);
-    void deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedResource);
-    const ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource (void) const;
-    ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource (void);
+    inline void deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedResource);
+    inline void deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedResource);
+    inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource (void) const;
+    inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource (void);
 
-    void deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedSharedResource);
-    void deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedSharedResource);
-    const ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource (void) const;
-    ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource (void);
+    inline void deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedSharedResource);
+    inline void deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedSharedResource);
+    inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource (void) const;
+    inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource (void);
 
-    void swap (InstanceDeploymentDescription& s);
+    inline void swap (InstanceDeploymentDescription& s);
 
   private:
     std::string name_;
@@ -584,20 +584,20 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ComponentExternalPortEndpoint (void);
+    inline ComponentExternalPortEndpoint (void);
     ~ComponentExternalPortEndpoint (void) = default;
     ComponentExternalPortEndpoint (const ComponentExternalPortEndpoint&) = default;
     ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&&) = default;
-    explicit ComponentExternalPortEndpoint (std::string portName);
-    ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint& x);
-    ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&& x);
+    explicit inline ComponentExternalPortEndpoint (std::string portName);
+    inline ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint& x);
+    inline ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&& x);
 
-    void portName (const std::string& _portName);
-    void portName (std::string&& _portName);
-    const std::string& portName (void) const;
-    std::string& portName (void);
+    inline void portName (const std::string& _portName);
+    inline void portName (std::string&& _portName);
+    inline const std::string& portName (void) const;
+    inline std::string& portName (void);
 
-    void swap (ComponentExternalPortEndpoint& s);
+    inline void swap (ComponentExternalPortEndpoint& s);
 
   private:
     std::string portName_;
@@ -614,35 +614,35 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    PlanSubcomponentPortEndpoint (void);
+    inline PlanSubcomponentPortEndpoint (void);
     ~PlanSubcomponentPortEndpoint (void) = default;
     PlanSubcomponentPortEndpoint (const PlanSubcomponentPortEndpoint&) = default;
     PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&&) = default;
-    explicit PlanSubcomponentPortEndpoint (std::string portName,
+    explicit inline PlanSubcomponentPortEndpoint (std::string portName,
                                            bool provider,
                                            ::Deployment::CCMComponentPortKind kind,
                                            uint32_t instanceRef);
-    PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint& x);
-    PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&& x);
+    inline PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint& x);
+    inline PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&& x);
 
-    void portName (const std::string& _portName);
-    void portName (std::string&& _portName);
-    const std::string& portName (void) const;
-    std::string& portName (void);
+    inline void portName (const std::string& _portName);
+    inline void portName (std::string&& _portName);
+    inline const std::string& portName (void) const;
+    inline std::string& portName (void);
 
-    void provider (bool _provider);
-    bool provider (void) const;
-    bool& provider (void);
+    inline void provider (bool _provider);
+    inline bool provider (void) const;
+    inline bool& provider (void);
 
-    void kind (::Deployment::CCMComponentPortKind _kind);
-    ::Deployment::CCMComponentPortKind kind (void) const;
-    ::Deployment::CCMComponentPortKind& kind (void);
+    inline void kind (::Deployment::CCMComponentPortKind _kind);
+    inline ::Deployment::CCMComponentPortKind kind (void) const;
+    inline ::Deployment::CCMComponentPortKind& kind (void);
 
-    void instanceRef (uint32_t _instanceRef);
-    uint32_t instanceRef (void) const;
-    uint32_t& instanceRef (void);
+    inline void instanceRef (uint32_t _instanceRef);
+    inline uint32_t instanceRef (void) const;
+    inline uint32_t& instanceRef (void);
 
-    void swap (PlanSubcomponentPortEndpoint& s);
+    inline void swap (PlanSubcomponentPortEndpoint& s);
 
   private:
     std::string portName_;
@@ -662,37 +662,37 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ExternalReferenceEndpoint (void);
+    inline ExternalReferenceEndpoint (void);
     ~ExternalReferenceEndpoint (void) = default;
     ExternalReferenceEndpoint (const ExternalReferenceEndpoint&) = default;
     ExternalReferenceEndpoint (ExternalReferenceEndpoint&&) = default;
-    explicit ExternalReferenceEndpoint (std::string location,
+    explicit inline ExternalReferenceEndpoint (std::string location,
                                         bool provider,
                                         std::string portName,
                                         ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType);
-    ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint& x);
-    ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&& x);
+    inline ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint& x);
+    inline ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&& x);
 
-    void location (const std::string& _location);
-    void location (std::string&& _location);
-    const std::string& location (void) const;
-    std::string& location (void);
+    inline void location (const std::string& _location);
+    inline void location (std::string&& _location);
+    inline const std::string& location (void) const;
+    inline std::string& location (void);
 
-    void provider (bool _provider);
-    bool provider (void) const;
-    bool& provider (void);
+    inline void provider (bool _provider);
+    inline bool provider (void) const;
+    inline bool& provider (void);
 
-    void portName (const std::string& _portName);
-    void portName (std::string&& _portName);
-    const std::string& portName (void) const;
-    std::string& portName (void);
+    inline void portName (const std::string& _portName);
+    inline void portName (std::string&& _portName);
+    inline const std::string& portName (void) const;
+    inline std::string& portName (void);
 
-    void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
-    void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void);
+    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
+    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType (void);
 
-    void swap (ExternalReferenceEndpoint& s);
+    inline void swap (ExternalReferenceEndpoint& s);
 
   private:
     std::string location_;
@@ -712,38 +712,38 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ConnectionResourceDeploymentDescription (void);
+    inline ConnectionResourceDeploymentDescription (void);
     ~ConnectionResourceDeploymentDescription (void) = default;
     ConnectionResourceDeploymentDescription (const ConnectionResourceDeploymentDescription&) = default;
     ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&&) = default;
-    explicit ConnectionResourceDeploymentDescription (std::string targetName,
+    explicit inline ConnectionResourceDeploymentDescription (std::string targetName,
                                                       std::string requirementName,
                                                       std::string resourceName,
                                                       ::Deployment::Properties property);
-    ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription& x);
-    ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&& x);
+    inline ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription& x);
+    inline ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&& x);
 
-    void targetName (const std::string& _targetName);
-    void targetName (std::string&& _targetName);
-    const std::string& targetName (void) const;
-    std::string& targetName (void);
+    inline void targetName (const std::string& _targetName);
+    inline void targetName (std::string&& _targetName);
+    inline const std::string& targetName (void) const;
+    inline std::string& targetName (void);
 
-    void requirementName (const std::string& _requirementName);
-    void requirementName (std::string&& _requirementName);
-    const std::string& requirementName (void) const;
-    std::string& requirementName (void);
+    inline void requirementName (const std::string& _requirementName);
+    inline void requirementName (std::string&& _requirementName);
+    inline const std::string& requirementName (void) const;
+    inline std::string& requirementName (void);
 
-    void resourceName (const std::string& _resourceName);
-    void resourceName (std::string&& _resourceName);
-    const std::string& resourceName (void) const;
-    std::string& resourceName (void);
+    inline void resourceName (const std::string& _resourceName);
+    inline void resourceName (std::string&& _resourceName);
+    inline const std::string& resourceName (void) const;
+    inline std::string& resourceName (void);
 
-    void property (const ::Deployment::Properties& _property);
-    void property (::Deployment::Properties&& _property);
-    const ::Deployment::Properties& property (void) const;
-    ::Deployment::Properties& property (void);
+    inline void property (const ::Deployment::Properties& _property);
+    inline void property (::Deployment::Properties&& _property);
+    inline const ::Deployment::Properties& property (void) const;
+    inline ::Deployment::Properties& property (void);
 
-    void swap (ConnectionResourceDeploymentDescription& s);
+    inline void swap (ConnectionResourceDeploymentDescription& s);
 
   private:
     std::string targetName_;
@@ -763,56 +763,56 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    PlanConnectionDescription (void);
+    inline PlanConnectionDescription (void);
     ~PlanConnectionDescription (void) = default;
     PlanConnectionDescription (const PlanConnectionDescription&) = default;
     PlanConnectionDescription (PlanConnectionDescription&&) = default;
-    explicit PlanConnectionDescription (std::string name,
+    explicit inline PlanConnectionDescription (std::string name,
                                         ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                         ::Deployment::Requirements deployRequirement,
                                         ::Deployment::ComponentExternalPortEndpoints externalEndpoint,
                                         ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
                                         ::Deployment::ExternalReferenceEndpoints externalReference,
                                         ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource);
-    PlanConnectionDescription& operator= (const PlanConnectionDescription& x);
-    PlanConnectionDescription& operator= (PlanConnectionDescription&& x);
+    inline PlanConnectionDescription& operator= (const PlanConnectionDescription& x);
+    inline PlanConnectionDescription& operator= (PlanConnectionDescription&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
 
-    void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
-    void deployRequirement (::Deployment::Requirements&& _deployRequirement);
-    const ::Deployment::Requirements& deployRequirement (void) const;
-    ::Deployment::Requirements& deployRequirement (void);
+    inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
+    inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
+    inline const ::Deployment::Requirements& deployRequirement (void) const;
+    inline ::Deployment::Requirements& deployRequirement (void);
 
-    void externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _externalEndpoint);
-    void externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _externalEndpoint);
-    const ::Deployment::ComponentExternalPortEndpoints& externalEndpoint (void) const;
-    ::Deployment::ComponentExternalPortEndpoints& externalEndpoint (void);
+    inline void externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _externalEndpoint);
+    inline void externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _externalEndpoint);
+    inline const ::Deployment::ComponentExternalPortEndpoints& externalEndpoint (void) const;
+    inline ::Deployment::ComponentExternalPortEndpoints& externalEndpoint (void);
 
-    void internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _internalEndpoint);
-    void internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _internalEndpoint);
-    const ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint (void) const;
-    ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint (void);
+    inline void internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _internalEndpoint);
+    inline void internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _internalEndpoint);
+    inline const ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint (void) const;
+    inline ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint (void);
 
-    void externalReference (const ::Deployment::ExternalReferenceEndpoints& _externalReference);
-    void externalReference (::Deployment::ExternalReferenceEndpoints&& _externalReference);
-    const ::Deployment::ExternalReferenceEndpoints& externalReference (void) const;
-    ::Deployment::ExternalReferenceEndpoints& externalReference (void);
+    inline void externalReference (const ::Deployment::ExternalReferenceEndpoints& _externalReference);
+    inline void externalReference (::Deployment::ExternalReferenceEndpoints&& _externalReference);
+    inline const ::Deployment::ExternalReferenceEndpoints& externalReference (void) const;
+    inline ::Deployment::ExternalReferenceEndpoints& externalReference (void);
 
-    void deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _deployedResource);
-    void deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _deployedResource);
-    const ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource (void) const;
-    ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource (void);
+    inline void deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _deployedResource);
+    inline void deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _deployedResource);
+    inline const ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource (void) const;
+    inline ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource (void);
 
-    void swap (PlanConnectionDescription& s);
+    inline void swap (PlanConnectionDescription& s);
 
   private:
     std::string name_;
@@ -835,25 +835,25 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    PlanSubcomponentPropertyReference (void);
+    inline PlanSubcomponentPropertyReference (void);
     ~PlanSubcomponentPropertyReference (void) = default;
     PlanSubcomponentPropertyReference (const PlanSubcomponentPropertyReference&) = default;
     PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&&) = default;
-    explicit PlanSubcomponentPropertyReference (std::string propertyName,
+    explicit inline PlanSubcomponentPropertyReference (std::string propertyName,
                                                 uint32_t instanceRef);
-    PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference& x);
-    PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&& x);
+    inline PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference& x);
+    inline PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&& x);
 
-    void propertyName (const std::string& _propertyName);
-    void propertyName (std::string&& _propertyName);
-    const std::string& propertyName (void) const;
-    std::string& propertyName (void);
+    inline void propertyName (const std::string& _propertyName);
+    inline void propertyName (std::string&& _propertyName);
+    inline const std::string& propertyName (void) const;
+    inline std::string& propertyName (void);
 
-    void instanceRef (uint32_t _instanceRef);
-    uint32_t instanceRef (void) const;
-    uint32_t& instanceRef (void);
+    inline void instanceRef (uint32_t _instanceRef);
+    inline uint32_t instanceRef (void) const;
+    inline uint32_t& instanceRef (void);
 
-    void swap (PlanSubcomponentPropertyReference& s);
+    inline void swap (PlanSubcomponentPropertyReference& s);
 
   private:
     std::string propertyName_;
@@ -871,38 +871,38 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    PlanPropertyMapping (void);
+    inline PlanPropertyMapping (void);
     ~PlanPropertyMapping (void) = default;
     PlanPropertyMapping (const PlanPropertyMapping&) = default;
     PlanPropertyMapping (PlanPropertyMapping&&) = default;
-    explicit PlanPropertyMapping (std::string name,
+    explicit inline PlanPropertyMapping (std::string name,
                                   ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                   std::string externalName,
                                   ::Deployment::PlanSubcomponentPropertyReferences delegatesTo);
-    PlanPropertyMapping& operator= (const PlanPropertyMapping& x);
-    PlanPropertyMapping& operator= (PlanPropertyMapping&& x);
+    inline PlanPropertyMapping& operator= (const PlanPropertyMapping& x);
+    inline PlanPropertyMapping& operator= (PlanPropertyMapping&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
 
-    void externalName (const std::string& _externalName);
-    void externalName (std::string&& _externalName);
-    const std::string& externalName (void) const;
-    std::string& externalName (void);
+    inline void externalName (const std::string& _externalName);
+    inline void externalName (std::string&& _externalName);
+    inline const std::string& externalName (void) const;
+    inline std::string& externalName (void);
 
-    void delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _delegatesTo);
-    void delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _delegatesTo);
-    const ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo (void) const;
-    ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo (void);
+    inline void delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _delegatesTo);
+    inline void delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _delegatesTo);
+    inline const ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo (void) const;
+    inline ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo (void);
 
-    void swap (PlanPropertyMapping& s);
+    inline void swap (PlanPropertyMapping& s);
 
   private:
     std::string name_;
@@ -922,20 +922,20 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ImplementationDependency (void);
+    inline ImplementationDependency (void);
     ~ImplementationDependency (void) = default;
     ImplementationDependency (const ImplementationDependency&) = default;
     ImplementationDependency (ImplementationDependency&&) = default;
-    explicit ImplementationDependency (std::string requiredType);
-    ImplementationDependency& operator= (const ImplementationDependency& x);
-    ImplementationDependency& operator= (ImplementationDependency&& x);
+    explicit inline ImplementationDependency (std::string requiredType);
+    inline ImplementationDependency& operator= (const ImplementationDependency& x);
+    inline ImplementationDependency& operator= (ImplementationDependency&& x);
 
-    void requiredType (const std::string& _requiredType);
-    void requiredType (std::string&& _requiredType);
-    const std::string& requiredType (void) const;
-    std::string& requiredType (void);
+    inline void requiredType (const std::string& _requiredType);
+    inline void requiredType (std::string&& _requiredType);
+    inline const std::string& requiredType (void) const;
+    inline std::string& requiredType (void);
 
-    void swap (ImplementationDependency& s);
+    inline void swap (ImplementationDependency& s);
 
   private:
     std::string requiredType_;
@@ -952,32 +952,32 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ResourceDeploymentDescription (void);
+    inline ResourceDeploymentDescription (void);
     ~ResourceDeploymentDescription (void) = default;
     ResourceDeploymentDescription (const ResourceDeploymentDescription&) = default;
     ResourceDeploymentDescription (ResourceDeploymentDescription&&) = default;
-    explicit ResourceDeploymentDescription (std::string requirementName,
+    explicit inline ResourceDeploymentDescription (std::string requirementName,
                                             std::string resourceName,
                                             ::Deployment::Properties property);
-    ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription& x);
-    ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&& x);
+    inline ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription& x);
+    inline ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&& x);
 
-    void requirementName (const std::string& _requirementName);
-    void requirementName (std::string&& _requirementName);
-    const std::string& requirementName (void) const;
-    std::string& requirementName (void);
+    inline void requirementName (const std::string& _requirementName);
+    inline void requirementName (std::string&& _requirementName);
+    inline const std::string& requirementName (void) const;
+    inline std::string& requirementName (void);
 
-    void resourceName (const std::string& _resourceName);
-    void resourceName (std::string&& _resourceName);
-    const std::string& resourceName (void) const;
-    std::string& resourceName (void);
+    inline void resourceName (const std::string& _resourceName);
+    inline void resourceName (std::string&& _resourceName);
+    inline const std::string& resourceName (void) const;
+    inline std::string& resourceName (void);
 
-    void property (const ::Deployment::Properties& _property);
-    void property (::Deployment::Properties&& _property);
-    const ::Deployment::Properties& property (void) const;
-    ::Deployment::Properties& property (void);
+    inline void property (const ::Deployment::Properties& _property);
+    inline void property (::Deployment::Properties&& _property);
+    inline const ::Deployment::Properties& property (void) const;
+    inline ::Deployment::Properties& property (void);
 
-    void swap (ResourceDeploymentDescription& s);
+    inline void swap (ResourceDeploymentDescription& s);
 
   private:
     std::string requirementName_;
@@ -996,56 +996,56 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ArtifactDeploymentDescription (void);
+    inline ArtifactDeploymentDescription (void);
     ~ArtifactDeploymentDescription (void) = default;
     ArtifactDeploymentDescription (const ArtifactDeploymentDescription&) = default;
     ArtifactDeploymentDescription (ArtifactDeploymentDescription&&) = default;
-    explicit ArtifactDeploymentDescription (std::string name,
+    explicit inline ArtifactDeploymentDescription (std::string name,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq location,
                                             std::string node,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                             ::Deployment::Properties execParameter,
                                             ::Deployment::Requirements deployRequirement,
                                             ::Deployment::ResourceDeploymentDescriptions deployedResource);
-    ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription& x);
-    ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&& x);
+    inline ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription& x);
+    inline ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _location);
-    void location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _location);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& location (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& location (void);
+    inline void location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _location);
+    inline void location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _location);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& location (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& location (void);
 
-    void node (const std::string& _node);
-    void node (std::string&& _node);
-    const std::string& node (void) const;
-    std::string& node (void);
+    inline void node (const std::string& _node);
+    inline void node (std::string&& _node);
+    inline const std::string& node (void) const;
+    inline std::string& node (void);
 
-    void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source (void);
 
-    void execParameter (const ::Deployment::Properties& _execParameter);
-    void execParameter (::Deployment::Properties&& _execParameter);
-    const ::Deployment::Properties& execParameter (void) const;
-    ::Deployment::Properties& execParameter (void);
+    inline void execParameter (const ::Deployment::Properties& _execParameter);
+    inline void execParameter (::Deployment::Properties&& _execParameter);
+    inline const ::Deployment::Properties& execParameter (void) const;
+    inline ::Deployment::Properties& execParameter (void);
 
-    void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
-    void deployRequirement (::Deployment::Requirements&& _deployRequirement);
-    const ::Deployment::Requirements& deployRequirement (void) const;
-    ::Deployment::Requirements& deployRequirement (void);
+    inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
+    inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
+    inline const ::Deployment::Requirements& deployRequirement (void) const;
+    inline ::Deployment::Requirements& deployRequirement (void);
 
-    void deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _deployedResource);
-    void deployedResource (::Deployment::ResourceDeploymentDescriptions&& _deployedResource);
-    const ::Deployment::ResourceDeploymentDescriptions& deployedResource (void) const;
-    ::Deployment::ResourceDeploymentDescriptions& deployedResource (void);
+    inline void deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _deployedResource);
+    inline void deployedResource (::Deployment::ResourceDeploymentDescriptions&& _deployedResource);
+    inline const ::Deployment::ResourceDeploymentDescriptions& deployedResource (void) const;
+    inline ::Deployment::ResourceDeploymentDescriptions& deployedResource (void);
 
-    void swap (ArtifactDeploymentDescription& s);
+    inline void swap (ArtifactDeploymentDescription& s);
 
   private:
     std::string name_;
@@ -1077,25 +1077,25 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    PlanLocality (void);
+    inline PlanLocality (void);
     ~PlanLocality (void) = default;
     PlanLocality (const PlanLocality&) = default;
     PlanLocality (PlanLocality&&) = default;
-    explicit PlanLocality (::Deployment::PlanLocalityKind constraint,
+    explicit inline PlanLocality (::Deployment::PlanLocalityKind constraint,
                            ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
-    PlanLocality& operator= (const PlanLocality& x);
-    PlanLocality& operator= (PlanLocality&& x);
+    inline PlanLocality& operator= (const PlanLocality& x);
+    inline PlanLocality& operator= (PlanLocality&& x);
 
-    void constraint (::Deployment::PlanLocalityKind _constraint);
-    ::Deployment::PlanLocalityKind constraint (void) const;
-    ::Deployment::PlanLocalityKind& constraint (void);
+    inline void constraint (::Deployment::PlanLocalityKind _constraint);
+    inline ::Deployment::PlanLocalityKind constraint (void) const;
+    inline ::Deployment::PlanLocalityKind& constraint (void);
 
-    void constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _constrainedInstanceRef);
-    void constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _constrainedInstanceRef);
-    const ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef (void) const;
-    ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef (void);
+    inline void constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _constrainedInstanceRef);
+    inline void constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _constrainedInstanceRef);
+    inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef (void);
 
-    void swap (PlanLocality& s);
+    inline void swap (PlanLocality& s);
 
   private:
     ::Deployment::PlanLocalityKind constraint_;
@@ -1113,11 +1113,11 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    DeploymentPlan (void);
+    inline DeploymentPlan (void);
     ~DeploymentPlan (void) = default;
     DeploymentPlan (const DeploymentPlan&) = default;
     DeploymentPlan (DeploymentPlan&&) = default;
-    explicit DeploymentPlan (std::string label,
+    explicit inline DeploymentPlan (std::string label,
                              std::string UUID,
                              ::Deployment::ComponentInterfaceDescription realizes,
                              ::Deployment::MonolithicDeploymentDescriptions implementation,
@@ -1128,65 +1128,65 @@ namespace Deployment
                              ::Deployment::ArtifactDeploymentDescriptions artifact,
                              ::Deployment::Properties infoProperty,
                              ::Deployment::PlanLocalities localityConstraint);
-    DeploymentPlan& operator= (const DeploymentPlan& x);
-    DeploymentPlan& operator= (DeploymentPlan&& x);
+    inline DeploymentPlan& operator= (const DeploymentPlan& x);
+    inline DeploymentPlan& operator= (DeploymentPlan&& x);
 
-    void label (const std::string& _label);
-    void label (std::string&& _label);
-    const std::string& label (void) const;
-    std::string& label (void);
+    inline void label (const std::string& _label);
+    inline void label (std::string&& _label);
+    inline const std::string& label (void) const;
+    inline std::string& label (void);
 
-    void UUID (const std::string& _UUID);
-    void UUID (std::string&& _UUID);
-    const std::string& UUID (void) const;
-    std::string& UUID (void);
+    inline void UUID (const std::string& _UUID);
+    inline void UUID (std::string&& _UUID);
+    inline const std::string& UUID (void) const;
+    inline std::string& UUID (void);
 
-    void realizes (const ::Deployment::ComponentInterfaceDescription& _realizes);
-    void realizes (::Deployment::ComponentInterfaceDescription&& _realizes);
-    const ::Deployment::ComponentInterfaceDescription& realizes (void) const;
-    ::Deployment::ComponentInterfaceDescription& realizes (void);
+    inline void realizes (const ::Deployment::ComponentInterfaceDescription& _realizes);
+    inline void realizes (::Deployment::ComponentInterfaceDescription&& _realizes);
+    inline const ::Deployment::ComponentInterfaceDescription& realizes (void) const;
+    inline ::Deployment::ComponentInterfaceDescription& realizes (void);
 
-    void implementation (const ::Deployment::MonolithicDeploymentDescriptions& _implementation);
-    void implementation (::Deployment::MonolithicDeploymentDescriptions&& _implementation);
-    const ::Deployment::MonolithicDeploymentDescriptions& implementation (void) const;
-    ::Deployment::MonolithicDeploymentDescriptions& implementation (void);
+    inline void implementation (const ::Deployment::MonolithicDeploymentDescriptions& _implementation);
+    inline void implementation (::Deployment::MonolithicDeploymentDescriptions&& _implementation);
+    inline const ::Deployment::MonolithicDeploymentDescriptions& implementation (void) const;
+    inline ::Deployment::MonolithicDeploymentDescriptions& implementation (void);
 
-    void instance (const ::Deployment::InstanceDeploymentDescriptions& _instance);
-    void instance (::Deployment::InstanceDeploymentDescriptions&& _instance);
-    const ::Deployment::InstanceDeploymentDescriptions& instance (void) const;
-    ::Deployment::InstanceDeploymentDescriptions& instance (void);
+    inline void instance (const ::Deployment::InstanceDeploymentDescriptions& _instance);
+    inline void instance (::Deployment::InstanceDeploymentDescriptions&& _instance);
+    inline const ::Deployment::InstanceDeploymentDescriptions& instance (void) const;
+    inline ::Deployment::InstanceDeploymentDescriptions& instance (void);
 
-    void connection (const ::Deployment::PlanConnectionDescriptions& _connection);
-    void connection (::Deployment::PlanConnectionDescriptions&& _connection);
-    const ::Deployment::PlanConnectionDescriptions& connection (void) const;
-    ::Deployment::PlanConnectionDescriptions& connection (void);
+    inline void connection (const ::Deployment::PlanConnectionDescriptions& _connection);
+    inline void connection (::Deployment::PlanConnectionDescriptions&& _connection);
+    inline const ::Deployment::PlanConnectionDescriptions& connection (void) const;
+    inline ::Deployment::PlanConnectionDescriptions& connection (void);
 
-    void externalProperty (const ::Deployment::PlanPropertyMappings& _externalProperty);
-    void externalProperty (::Deployment::PlanPropertyMappings&& _externalProperty);
-    const ::Deployment::PlanPropertyMappings& externalProperty (void) const;
-    ::Deployment::PlanPropertyMappings& externalProperty (void);
+    inline void externalProperty (const ::Deployment::PlanPropertyMappings& _externalProperty);
+    inline void externalProperty (::Deployment::PlanPropertyMappings&& _externalProperty);
+    inline const ::Deployment::PlanPropertyMappings& externalProperty (void) const;
+    inline ::Deployment::PlanPropertyMappings& externalProperty (void);
 
-    void dependsOn (const ::Deployment::ImplementationDependencies& _dependsOn);
-    void dependsOn (::Deployment::ImplementationDependencies&& _dependsOn);
-    const ::Deployment::ImplementationDependencies& dependsOn (void) const;
-    ::Deployment::ImplementationDependencies& dependsOn (void);
+    inline void dependsOn (const ::Deployment::ImplementationDependencies& _dependsOn);
+    inline void dependsOn (::Deployment::ImplementationDependencies&& _dependsOn);
+    inline const ::Deployment::ImplementationDependencies& dependsOn (void) const;
+    inline ::Deployment::ImplementationDependencies& dependsOn (void);
 
-    void artifact (const ::Deployment::ArtifactDeploymentDescriptions& _artifact);
-    void artifact (::Deployment::ArtifactDeploymentDescriptions&& _artifact);
-    const ::Deployment::ArtifactDeploymentDescriptions& artifact (void) const;
-    ::Deployment::ArtifactDeploymentDescriptions& artifact (void);
+    inline void artifact (const ::Deployment::ArtifactDeploymentDescriptions& _artifact);
+    inline void artifact (::Deployment::ArtifactDeploymentDescriptions&& _artifact);
+    inline const ::Deployment::ArtifactDeploymentDescriptions& artifact (void) const;
+    inline ::Deployment::ArtifactDeploymentDescriptions& artifact (void);
 
-    void infoProperty (const ::Deployment::Properties& _infoProperty);
-    void infoProperty (::Deployment::Properties&& _infoProperty);
-    const ::Deployment::Properties& infoProperty (void) const;
-    ::Deployment::Properties& infoProperty (void);
+    inline void infoProperty (const ::Deployment::Properties& _infoProperty);
+    inline void infoProperty (::Deployment::Properties&& _infoProperty);
+    inline const ::Deployment::Properties& infoProperty (void) const;
+    inline ::Deployment::Properties& infoProperty (void);
 
-    void localityConstraint (const ::Deployment::PlanLocalities& _localityConstraint);
-    void localityConstraint (::Deployment::PlanLocalities&& _localityConstraint);
-    const ::Deployment::PlanLocalities& localityConstraint (void) const;
-    ::Deployment::PlanLocalities& localityConstraint (void);
+    inline void localityConstraint (const ::Deployment::PlanLocalities& _localityConstraint);
+    inline void localityConstraint (::Deployment::PlanLocalities&& _localityConstraint);
+    inline const ::Deployment::PlanLocalities& localityConstraint (void) const;
+    inline ::Deployment::PlanLocalities& localityConstraint (void);
 
-    void swap (DeploymentPlan& s);
+    inline void swap (DeploymentPlan& s);
 
   private:
     std::string label_;
@@ -1215,32 +1215,32 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ComponentPackageReference (void);
+    inline ComponentPackageReference (void);
     ~ComponentPackageReference (void) = default;
     ComponentPackageReference (const ComponentPackageReference&) = default;
     ComponentPackageReference (ComponentPackageReference&&) = default;
-    explicit ComponentPackageReference (std::string requiredUUID,
+    explicit inline ComponentPackageReference (std::string requiredUUID,
                                         std::string requiredName,
                                         ::Deployment::ComponentInterfaceDescription requiredType);
-    ComponentPackageReference& operator= (const ComponentPackageReference& x);
-    ComponentPackageReference& operator= (ComponentPackageReference&& x);
+    inline ComponentPackageReference& operator= (const ComponentPackageReference& x);
+    inline ComponentPackageReference& operator= (ComponentPackageReference&& x);
 
-    void requiredUUID (const std::string& _requiredUUID);
-    void requiredUUID (std::string&& _requiredUUID);
-    const std::string& requiredUUID (void) const;
-    std::string& requiredUUID (void);
+    inline void requiredUUID (const std::string& _requiredUUID);
+    inline void requiredUUID (std::string&& _requiredUUID);
+    inline const std::string& requiredUUID (void) const;
+    inline std::string& requiredUUID (void);
 
-    void requiredName (const std::string& _requiredName);
-    void requiredName (std::string&& _requiredName);
-    const std::string& requiredName (void) const;
-    std::string& requiredName (void);
+    inline void requiredName (const std::string& _requiredName);
+    inline void requiredName (std::string&& _requiredName);
+    inline const std::string& requiredName (void) const;
+    inline std::string& requiredName (void);
 
-    void requiredType (const ::Deployment::ComponentInterfaceDescription& _requiredType);
-    void requiredType (::Deployment::ComponentInterfaceDescription&& _requiredType);
-    const ::Deployment::ComponentInterfaceDescription& requiredType (void) const;
-    ::Deployment::ComponentInterfaceDescription& requiredType (void);
+    inline void requiredType (const ::Deployment::ComponentInterfaceDescription& _requiredType);
+    inline void requiredType (::Deployment::ComponentInterfaceDescription&& _requiredType);
+    inline const ::Deployment::ComponentInterfaceDescription& requiredType (void) const;
+    inline ::Deployment::ComponentInterfaceDescription& requiredType (void);
 
-    void swap (ComponentPackageReference& s);
+    inline void swap (ComponentPackageReference& s);
 
   private:
     std::string requiredUUID_;
@@ -1263,50 +1263,50 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    ImplementationRequirement (void);
+    inline ImplementationRequirement (void);
     ~ImplementationRequirement (void) = default;
     ImplementationRequirement (const ImplementationRequirement&) = default;
     ImplementationRequirement (ImplementationRequirement&&) = default;
-    explicit ImplementationRequirement (::Deployment::ResourceUsageKinds resourceUsage,
+    explicit inline ImplementationRequirement (::Deployment::ResourceUsageKinds resourceUsage,
                                         std::string resourcePort,
                                         std::string componentPort,
                                         std::string name,
                                         std::string resourceType,
                                         ::Deployment::Properties property);
-    ImplementationRequirement& operator= (const ImplementationRequirement& x);
-    ImplementationRequirement& operator= (ImplementationRequirement&& x);
+    inline ImplementationRequirement& operator= (const ImplementationRequirement& x);
+    inline ImplementationRequirement& operator= (ImplementationRequirement&& x);
 
-    void resourceUsage (const ::Deployment::ResourceUsageKinds& _resourceUsage);
-    void resourceUsage (::Deployment::ResourceUsageKinds&& _resourceUsage);
-    const ::Deployment::ResourceUsageKinds& resourceUsage (void) const;
-    ::Deployment::ResourceUsageKinds& resourceUsage (void);
+    inline void resourceUsage (const ::Deployment::ResourceUsageKinds& _resourceUsage);
+    inline void resourceUsage (::Deployment::ResourceUsageKinds&& _resourceUsage);
+    inline const ::Deployment::ResourceUsageKinds& resourceUsage (void) const;
+    inline ::Deployment::ResourceUsageKinds& resourceUsage (void);
 
-    void resourcePort (const std::string& _resourcePort);
-    void resourcePort (std::string&& _resourcePort);
-    const std::string& resourcePort (void) const;
-    std::string& resourcePort (void);
+    inline void resourcePort (const std::string& _resourcePort);
+    inline void resourcePort (std::string&& _resourcePort);
+    inline const std::string& resourcePort (void) const;
+    inline std::string& resourcePort (void);
 
-    void componentPort (const std::string& _componentPort);
-    void componentPort (std::string&& _componentPort);
-    const std::string& componentPort (void) const;
-    std::string& componentPort (void);
+    inline void componentPort (const std::string& _componentPort);
+    inline void componentPort (std::string&& _componentPort);
+    inline const std::string& componentPort (void) const;
+    inline std::string& componentPort (void);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void resourceType (const std::string& _resourceType);
-    void resourceType (std::string&& _resourceType);
-    const std::string& resourceType (void) const;
-    std::string& resourceType (void);
+    inline void resourceType (const std::string& _resourceType);
+    inline void resourceType (std::string&& _resourceType);
+    inline const std::string& resourceType (void) const;
+    inline std::string& resourceType (void);
 
-    void property (const ::Deployment::Properties& _property);
-    void property (::Deployment::Properties&& _property);
-    const ::Deployment::Properties& property (void) const;
-    ::Deployment::Properties& property (void);
+    inline void property (const ::Deployment::Properties& _property);
+    inline void property (::Deployment::Properties&& _property);
+    inline const ::Deployment::Properties& property (void) const;
+    inline ::Deployment::Properties& property (void);
 
-    void swap (ImplementationRequirement& s);
+    inline void swap (ImplementationRequirement& s);
 
   private:
     ::Deployment::ResourceUsageKinds resourceUsage_;
@@ -1328,32 +1328,32 @@ namespace Deployment
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    Capability (void);
+    inline Capability (void);
     ~Capability (void) = default;
     Capability (const Capability&) = default;
     Capability (Capability&&) = default;
-    explicit Capability (std::string name,
+    explicit inline Capability (std::string name,
                          ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
                          ::Deployment::SatisfierProperties property);
-    Capability& operator= (const Capability& x);
-    Capability& operator= (Capability&& x);
+    inline Capability& operator= (const Capability& x);
+    inline Capability& operator= (Capability&& x);
 
-    void name (const std::string& _name);
-    void name (std::string&& _name);
-    const std::string& name (void) const;
-    std::string& name (void);
+    inline void name (const std::string& _name);
+    inline void name (std::string&& _name);
+    inline const std::string& name (void) const;
+    inline std::string& name (void);
 
-    void resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _resourceType);
-    void resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _resourceType);
-    const ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType (void) const;
-    ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType (void);
+    inline void resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _resourceType);
+    inline void resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _resourceType);
+    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType (void) const;
+    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType (void);
 
-    void property (const ::Deployment::SatisfierProperties& _property);
-    void property (::Deployment::SatisfierProperties&& _property);
-    const ::Deployment::SatisfierProperties& property (void) const;
-    ::Deployment::SatisfierProperties& property (void);
+    inline void property (const ::Deployment::SatisfierProperties& _property);
+    inline void property (::Deployment::SatisfierProperties&& _property);
+    inline const ::Deployment::SatisfierProperties& property (void) const;
+    inline ::Deployment::SatisfierProperties& property (void);
 
-    void swap (Capability& s);
+    inline void swap (Capability& s);
 
   private:
     std::string name_;

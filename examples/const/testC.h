@@ -40,19 +40,19 @@ namespace Test
   constexpr int16_t sh_val = -1023;
 
   // generated from StubHeaderWriter#visit_const
-  constexpr uint16_t ush_val = 1023;
+  constexpr uint16_t ush_val = 1023U;
 
   // generated from StubHeaderWriter#visit_const
   constexpr int32_t l_val = -81234;
 
   // generated from StubHeaderWriter#visit_const
-  constexpr uint32_t ul_val = 81234;
+  constexpr uint32_t ul_val = 81234UL;
 
   // generated from StubHeaderWriter#visit_const
-  constexpr int64_t ll_val = -12345678;
+  constexpr int64_t ll_val = -12345678LL;
 
   // generated from StubHeaderWriter#visit_const
-  constexpr uint64_t ull_val = 12345678;
+  constexpr uint64_t ull_val = 12345678ULL;
 
   // generated from StubHeaderWriter#visit_const
   constexpr float f_val = 1.23;
