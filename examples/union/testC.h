@@ -20,6 +20,7 @@
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/object.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -1855,6 +1856,210 @@ namespace std {
     m1.swap (m2);
   }
 }; // std
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const Global &);
+
+// generated from c++/cli_hdr/enum_os.erb
+std::ostream& operator<< (std::ostream& , Test::DataType);
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const Test::Point &);
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const Test::Track &);
+
+// generated from c++/cli_hdr/union_os.erb
+std::ostream& operator<< (std::ostream &, const Test::Data &);
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const Test::S &);
+
+// generated from c++/cli_hdr/interface_fwdos.erb
+#if !defined (__TAOX11_OSSTREAM_TEST_A_DECL__)
+#define __TAOX11_OSSTREAM_TEST_A_DECL__
+
+inline std::ostream& operator<< (std::ostream& strm,
+                          TAOX11_CORBA::object_reference< ::Test::A> /* _v*/)
+{
+  strm << "Test::A";
+  return strm;
+}
+#endif //__TAOX11_OSSTREAM_TEST_A_DECL__
+
+// generated from c++/cli_hdr/union_os.erb
+std::ostream& operator<< (std::ostream &, const Test::U &);
+
+// generated from c++/cli_hdr/interface_os.erb
+std::ostream& operator<< (std::ostream& ,
+                          TAOX11_CORBA::object_reference< ::Test::Foo>);
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Global &_aggregate)
+{
+  strm << "Global ("
+    << _aggregate.x ()
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/enum_os.erb
+inline std::ostream& operator<< (std::ostream& strm , Test::DataType _enumerator)
+{
+  switch (_enumerator){
+    case Test::DataType::dtEmpty: return strm << "Test::DataType::dtEmpty"; break;
+    case Test::DataType::dtLong: return strm << "Test::DataType::dtLong"; break;
+    case Test::DataType::dtShort: return strm << "Test::DataType::dtShort"; break;
+    case Test::DataType::dtString: return strm << "Test::DataType::dtString"; break;
+    case Test::DataType::dtPoint: return strm << "Test::DataType::dtPoint"; break;
+    case Test::DataType::dtTrack: return strm << "Test::DataType::dtTrack"; break;
+    case Test::DataType::dtGlobal: return strm << "Test::DataType::dtGlobal"; break;
+    default: return strm;
+  }
+}
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Test::Point &_aggregate)
+{
+  strm << "Test::Point ("
+    << _aggregate.x ()<< ","
+    << _aggregate.y ()
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Test::Track &_aggregate)
+{
+  strm << "Test::Track ("
+    << _aggregate.id ()<< ","
+    << _aggregate.p ()
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/union_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Test::Data &_tao_union)
+{
+  strm << "Test::Data(";
+  switch (_tao_union._d ())
+  {
+    case ::Test::DataType::dtLong:
+    {
+      strm << _tao_union.longData ();
+    }
+    break;
+    case ::Test::DataType::dtShort:
+    {
+      strm << _tao_union.shortData ();
+    }
+    break;
+    case ::Test::DataType::dtString:
+    {
+      strm <<  "\"" <<  _tao_union.stringData () << "\"" ;
+    }
+    break;
+    case ::Test::DataType::dtPoint:
+    {
+      strm << _tao_union.pointData ();
+    }
+    break;
+    case ::Test::DataType::dtTrack:
+    {
+      strm << _tao_union.trackData ();
+    }
+    break;
+    case ::Test::DataType::dtGlobal:
+    {
+      strm << _tao_union.globalData ();
+    }
+    break;
+    default:
+    break;
+  }
+  strm << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Test::S &_aggregate)
+{
+  strm << "Test::S ("
+    << _aggregate.len ()
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/interface_fwdos.erb
+#if !defined (__TAOX11_OSSTREAM_TEST_A_DECL__)
+#define __TAOX11_OSSTREAM_TEST_A_DECL__
+
+inline std::ostream& operator<< (std::ostream& strm,
+                          TAOX11_CORBA::object_reference< ::Test::A> /* _v*/)
+{
+  strm << "Test::A";
+  return strm;
+}
+#endif //__TAOX11_OSSTREAM_TEST_A_DECL__
+
+// generated from c++/cli_hdr/union_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Test::U &_tao_union)
+{
+  strm << "Test::U(";
+  switch (_tao_union._d ())
+  {
+    case 1:
+    {
+      strm << _tao_union.x ();
+    }
+    break;
+    case 2:
+    {
+      strm <<  "\"" <<  _tao_union.z () << "\"" ;
+    }
+    break;
+    case 3:
+    case 4:
+    {
+      strm << _tao_union.w ();
+    }
+    break;
+    default:
+    {
+      strm << _tao_union.obj ();
+    }
+    break;
+  }
+  strm << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/interface_os.erb
+#if !defined (__TAOX11_OSSTREAM_TEST_FOO_DECL__)
+#define __TAOX11_OSSTREAM_TEST_FOO_DECL__
+inline std::ostream& operator<< (std::ostream& strm ,
+                                 TAOX11_CORBA::object_reference< ::Test::Foo> _v)
+{
+  if (_v == nullptr)
+    strm << "Interface nil reference ";
+  else
+    strm << _v->_repository_id();
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_TEST_FOO_DECL__
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

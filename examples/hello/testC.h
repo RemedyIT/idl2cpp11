@@ -20,6 +20,7 @@
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/object.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -145,6 +146,25 @@ namespace std {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 }; // std
+
+// generated from c++/cli_hdr/interface_os.erb
+std::ostream& operator<< (std::ostream& ,
+                          TAOX11_CORBA::object_reference< ::Test::Hello>);
+
+// generated from c++/cli_hdr/interface_os.erb
+#if !defined (__TAOX11_OSSTREAM_TEST_HELLO_DECL__)
+#define __TAOX11_OSSTREAM_TEST_HELLO_DECL__
+inline std::ostream& operator<< (std::ostream& strm ,
+                                 TAOX11_CORBA::object_reference< ::Test::Hello> _v)
+{
+  if (_v == nullptr)
+    strm << "Interface nil reference ";
+  else
+    strm << _v->_repository_id();
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_TEST_HELLO_DECL__
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

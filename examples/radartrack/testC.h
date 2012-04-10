@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -198,6 +199,45 @@ namespace std {
     m1.swap (m2);
   }
 }; // std
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::octetseq&);
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const RadarTrack &);
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::octetseq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (uint8_t _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const RadarTrack &_aggregate)
+{
+  strm << "RadarTrack ("
+    <<  "\"" <<  _aggregate.id () << "\"" << ","
+    << _aggregate.x ()<< ","
+    << _aggregate.y ()<< ","
+    << _aggregate.z ()<< ","
+    << _aggregate.plot ()
+  << ")";
+  return strm;
+}
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

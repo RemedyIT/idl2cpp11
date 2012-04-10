@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -60,6 +61,20 @@ namespace std {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 }; // std
+
+// generated from c++/cli_hdr/enum_os.erb
+std::ostream& operator<< (std::ostream& , Test::EEnum);
+
+// generated from c++/cli_hdr/enum_os.erb
+inline std::ostream& operator<< (std::ostream& strm , Test::EEnum _enumerator)
+{
+  switch (_enumerator){
+    case Test::EEnum::A: return strm << "Test::EEnum::A"; break;
+    case Test::EEnum::B: return strm << "Test::EEnum::B"; break;
+    case Test::EEnum::C: return strm << "Test::EEnum::C"; break;
+    default: return strm;
+  }
+}
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

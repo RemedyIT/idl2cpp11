@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -294,6 +295,60 @@ namespace std {
     m1.swap (m2);
   }
 }; // std
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const ShapeType &);
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const Attributes &);
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::ShapeTypeSeq&);
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const ShapeType &_aggregate)
+{
+  strm << "ShapeType ("
+    <<  "\"" <<  _aggregate.color () << "\"" << ","
+    << _aggregate.x ()<< ","
+    << _aggregate.y ()<< ","
+    << _aggregate.shapesize ()
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Attributes &_aggregate)
+{
+  strm << "Attributes ("
+    <<  "\"" <<  _aggregate.shape () << "\"" << ","
+    <<  "\"" <<  _aggregate.color () << "\"" << ","
+    << _aggregate.speed ()
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::ShapeTypeSeq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (const ::ShapeType& _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

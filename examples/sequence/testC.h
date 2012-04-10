@@ -20,6 +20,7 @@
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/object.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -411,6 +412,149 @@ namespace std {
     m1.swap (m2);
   }
 }; // std
+
+// generated from c++/cli_hdr/struct_os.erb
+std::ostream& operator<< (std::ostream &, const Test::Simple &);
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::Test::SimpleSeq&);
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::Test::LongSeq&);
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::Test::BoundedLongSeq&);
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::Test::BoolSeq&);
+
+// generated from c++/cli_hdr/sequence_os.erb
+std::ostream& operator<< (std::ostream& , const ::Test::StringSeq&);
+
+// generated from c++/cli_hdr/interface_os.erb
+std::ostream& operator<< (std::ostream& ,
+                          TAOX11_CORBA::object_reference< ::Test::Foo>);
+
+// generated from c++/cli_hdr/struct_os.erb
+inline std::ostream& operator<< (
+    std::ostream &strm,
+    const Test::Simple &_aggregate)
+{
+  strm << "Test::Simple ("
+    <<  std::hex << "hex:" << (int)_aggregate.o () << std::dec<< ","
+    << _aggregate.l ()<< ","
+    <<  "\"" <<  _aggregate.s () << "\"" << ","
+    << _aggregate.d ()<< ","
+    << (_aggregate.b ()? "true" : "false")<< ","
+    << "'" <<  _aggregate.c () << "'" 
+  << ")";
+  return strm;
+}
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::Test::SimpleSeq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (const ::Test::Simple& _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::Test::LongSeq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (int32_t _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::Test::BoundedLongSeq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (int32_t _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::Test::BoolSeq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (bool _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
+
+// generated from c++/cli_hdr/sequence_os.erb
+#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__)
+#define __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
+inline std::ostream& operator<< (std::ostream& strm , const ::Test::StringSeq& _v)
+{
+  strm << "[";
+  bool first = true;
+  for (const std::string& _ve : _v) {
+  if(!first)
+    strm << ',';
+  first = false;
+  strm << _ve ; }
+  strm << "]";
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
+
+// generated from c++/cli_hdr/interface_os.erb
+#if !defined (__TAOX11_OSSTREAM_TEST_FOO_DECL__)
+#define __TAOX11_OSSTREAM_TEST_FOO_DECL__
+inline std::ostream& operator<< (std::ostream& strm ,
+                                 TAOX11_CORBA::object_reference< ::Test::Foo> _v)
+{
+  if (_v == nullptr)
+    strm << "Interface nil reference ";
+  else
+    strm << _v->_repository_id();
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_TEST_FOO_DECL__
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

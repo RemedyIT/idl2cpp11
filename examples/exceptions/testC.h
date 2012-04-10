@@ -21,6 +21,7 @@
 #include "tao/x11/orb.h"
 #include "tao/x11/user_exception.h"
 #include "tao/x11/object.h"
+#include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
 
@@ -315,6 +316,53 @@ inline ::Test::BooEx& Test::BooEx::operator= (::Test::BooEx&& x)
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 }; // std
+
+// generated from c++/cli_hdr/except_os.erb
+std::ostream& operator<< (std::ostream& ,const Test::FooEx&);
+
+// generated from c++/cli_hdr/except_os.erb
+std::ostream& operator<< (std::ostream& ,const Test::BooEx&);
+
+// generated from c++/cli_hdr/interface_os.erb
+std::ostream& operator<< (std::ostream& ,
+                          TAOX11_CORBA::object_reference< ::Test::Foo>);
+
+// generated from c++/cli_hdr/except_os.erb
+// ostream operator
+inline std::ostream& operator<< (std::ostream& strm ,const Test::FooEx& _exception)
+{
+  strm << "Test::FooEx ( ";
+  strm << _exception._info()<< " - ";
+  strm << "message: " <<  "\"" <<  _exception.message () << "\""  ;
+  strm << " )";
+  return strm;
+}
+
+// generated from c++/cli_hdr/except_os.erb
+// ostream operator
+inline std::ostream& operator<< (std::ostream& strm ,const Test::BooEx& _exception)
+{
+  strm << "Test::BooEx ( ";
+  strm << _exception._info()<< " - ";
+  strm << "id: " << _exception.id () ;
+  strm << " )";
+  return strm;
+}
+
+// generated from c++/cli_hdr/interface_os.erb
+#if !defined (__TAOX11_OSSTREAM_TEST_FOO_DECL__)
+#define __TAOX11_OSSTREAM_TEST_FOO_DECL__
+inline std::ostream& operator<< (std::ostream& strm ,
+                                 TAOX11_CORBA::object_reference< ::Test::Foo> _v)
+{
+  if (_v == nullptr)
+    strm << "Interface nil reference ";
+  else
+    strm << _v->_repository_id();
+  return strm;
+}
+
+#endif // __TAOX11_OSSTREAM_TEST_FOO_DECL__
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
