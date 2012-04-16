@@ -191,35 +191,20 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/array_os.erb
-
-// generated from c++/cli_hdr/array_os.erb
-
-// generated from c++/cli_hdr/array_os.erb
-
-// generated from c++/cli_hdr/interface_os.erb
-std::ostream& operator<< (std::ostream& ,
-                          TAOX11_CORBA::object_reference< ::Test::Foo>);
-
-// generated from c++/cli_hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__
-inline std::ostream& operator<< (std::ostream& strm ,
+
+#define __TAOX11_OSSTREAM_TEST_F_IMPL__
+std::ostream&
+taox11_print_Test_F (
+    std::ostream& strm ,
+    const ::Test::F& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
     const ::Test::F& _v)
 {
- strm << "Test::F";
-  strm << "[";
-  for (::Test::F::size_type i1 = 0; i1 < 10; ++i1)
-  {
-    if (i1 != 0)
-    {
-      strm << ", ";
-    }
-
-    strm << _v[i1];
-
-  }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_F (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__
@@ -227,23 +212,18 @@ inline std::ostream& operator<< (std::ostream& strm ,
 // generated from c++/cli_hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__
-inline std::ostream& operator<< (std::ostream& strm ,
+
+#define __TAOX11_OSSTREAM_TEST_V_IMPL__
+std::ostream&
+taox11_print_Test_V (
+    std::ostream& strm ,
+    const ::Test::V& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
     const ::Test::V& _v)
 {
- strm << "Test::V";
-  strm << "[";
-  for (::Test::V::size_type i1 = 0; i1 < 10; ++i1)
-  {
-    if (i1 != 0)
-    {
-      strm << ", ";
-    }
-
-    strm << _v[i1];
-
-  }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_V (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__
@@ -251,51 +231,26 @@ inline std::ostream& operator<< (std::ostream& strm ,
 // generated from c++/cli_hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__
-inline std::ostream& operator<< (std::ostream& strm ,
+
+#define __TAOX11_OSSTREAM_TEST_M_IMPL__
+std::ostream&
+taox11_print_Test_M (
+    std::ostream& strm ,
+    const ::Test::M& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
     const ::Test::M& _v)
 {
- strm << "Test::M";
-  strm << "[";
-  for (::Test::M::size_type i3 = 0; i3 < 1; ++i3)
-  {
-  strm << "[";
-  for (::Test::M::size_type i2 = 0; i2 < 2; ++i2)
-  {
-  strm << "[";
-  for (::Test::M::size_type i1 = 0; i1 < 3; ++i1)
-  {
-    if (i1 != 0)
-    {
-      strm << ", ";
-    }
-
-    strm << _v[i3][i2][i1];
-
-  }
-  strm << "]";
-  }
-  strm << "]";
-  }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_M (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__
 
 // generated from c++/cli_hdr/interface_os.erb
-#if !defined (__TAOX11_OSSTREAM_TEST_FOO_DECL__)
-#define __TAOX11_OSSTREAM_TEST_FOO_DECL__
-inline std::ostream& operator<< (std::ostream& strm ,
-                                 TAOX11_CORBA::object_reference< ::Test::Foo> _v)
-{
-  if (_v == nullptr)
-    strm << "Interface nil reference ";
-  else
-    strm << _v->_repository_id();
-  return strm;
-}
-
-#endif // __TAOX11_OSSTREAM_TEST_FOO_DECL__
+std::ostream& operator<< (
+    std::ostream& strm,
+    TAOX11_CORBA::object_reference< ::Test::Foo>);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

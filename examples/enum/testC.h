@@ -63,12 +63,11 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/enum_os.erb
-std::ostream& operator<< (std::ostream& , Test::EEnum);
-
-// generated from c++/cli_hdr/enum_os.erb
-inline std::ostream& operator<< (std::ostream& strm , Test::EEnum _enumerator)
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    ::Test::EEnum _enumerator)
 {
-  switch (_enumerator){
+  switch (_enumerator) {
     case Test::EEnum::A: return strm << "Test::EEnum::A"; break;
     case Test::EEnum::B: return strm << "Test::EEnum::B"; break;
     case Test::EEnum::C: return strm << "Test::EEnum::C"; break;

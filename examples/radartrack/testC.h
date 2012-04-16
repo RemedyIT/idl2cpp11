@@ -201,43 +201,29 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::octetseq&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const RadarTrack &);
-
-// generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::octetseq& _v)
+
+#define __TAOX11_OSSTREAM_OCTETSEQ_IMPL__
+std::ostream&
+taox11_print_octetseq (
+    std::ostream& strm ,
+    const ::octetseq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::octetseq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (uint8_t _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_octetseq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const RadarTrack &_aggregate)
-{
-  strm << "RadarTrack ("
-    <<  "\"" <<  _aggregate.id () << "\"" << ","
-    << _aggregate.x ()<< ","
-    << _aggregate.y ()<< ","
-    << _aggregate.z ()<< ","
-    << _aggregate.plot ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::RadarTrack&);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

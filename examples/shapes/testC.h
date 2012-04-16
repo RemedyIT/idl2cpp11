@@ -297,55 +297,32 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const ShapeType &);
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::ShapeType&);
 
 // generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Attributes &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::ShapeTypeSeq&);
-
-// generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const ShapeType &_aggregate)
-{
-  strm << "ShapeType ("
-    <<  "\"" <<  _aggregate.color () << "\"" << ","
-    << _aggregate.x ()<< ","
-    << _aggregate.y ()<< ","
-    << _aggregate.shapesize ()
-  << ")";
-  return strm;
-}
-
-// generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Attributes &_aggregate)
-{
-  strm << "Attributes ("
-    <<  "\"" <<  _aggregate.shape () << "\"" << ","
-    <<  "\"" <<  _aggregate.color () << "\"" << ","
-    << _aggregate.speed ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Attributes&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::ShapeTypeSeq& _v)
+
+#define __TAOX11_OSSTREAM_SHAPETYPESEQ_IMPL__
+std::ostream&
+taox11_print_ShapeTypeSeq (
+    std::ostream& strm ,
+    const ::ShapeTypeSeq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::ShapeTypeSeq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::ShapeType& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_ShapeTypeSeq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__

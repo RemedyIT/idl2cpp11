@@ -3904,223 +3904,61 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::Property &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::Properties&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::Requirement &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::Requirements&);
-
-// generated from c++/cli_hdr/enum_os.erb
-std::ostream& operator<< (std::ostream& , Deployment::SatisfierPropertyKind);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::SatisfierProperty &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::SatisfierProperties&);
-
-// generated from c++/cli_hdr/enum_os.erb
-std::ostream& operator<< (std::ostream& , Deployment::CCMComponentPortKind);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ComponentPortDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ComponentPortDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ComponentPropertyDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ComponentPropertyDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ComponentInterfaceDescription &);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::MonolithicDeploymentDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::MonolithicDeploymentDescriptions&);
-
-// generated from c++/cli_hdr/enum_os.erb
-std::ostream& operator<< (std::ostream& , Deployment::ResourceUsageKind);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::InstanceResourceDeploymentDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::InstanceResourceDeploymentDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::InstanceDeploymentDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::InstanceDeploymentDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ComponentExternalPortEndpoint &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ComponentExternalPortEndpoints&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::PlanSubcomponentPortEndpoint &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::PlanSubcomponentPortEndpoints&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ExternalReferenceEndpoint &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ExternalReferenceEndpoints&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ConnectionResourceDeploymentDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ConnectionResourceDeploymentDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::PlanConnectionDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::PlanConnectionDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::PlanSubcomponentPropertyReference &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::PlanSubcomponentPropertyReferences&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::PlanPropertyMapping &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::PlanPropertyMappings&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ImplementationDependency &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ImplementationDependencies&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ResourceDeploymentDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ResourceDeploymentDescriptions&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ArtifactDeploymentDescription &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ArtifactDeploymentDescriptions&);
-
-// generated from c++/cli_hdr/enum_os.erb
-std::ostream& operator<< (std::ostream& , Deployment::PlanLocalityKind);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::PlanLocality &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::PlanLocalities&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::DeploymentPlan &);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ComponentPackageReference &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ComponentPackageReferences&);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ResourceUsageKinds&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::ImplementationRequirement &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::ImplementationRequirements&);
-
-// generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Deployment::Capability &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Deployment::Capabilities&);
-
-// generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::Property &_aggregate)
-{
-  strm << "Deployment::Property ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.value ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::Property&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PROPERTY__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PROPERTY__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::Properties& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_PROPERTIES_IMPL__
+std::ostream&
+taox11_print_Deployment_Properties (
+    std::ostream& strm ,
+    const ::Deployment::Properties& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::Properties& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::Property& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_Properties (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PROPERTY__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::Requirement &_aggregate)
-{
-  strm << "Deployment::Requirement ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    <<  "\"" <<  _aggregate.resourceType () << "\"" << ","
-    << _aggregate.property ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::Requirement&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_REQUIREMENT__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_REQUIREMENT__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::Requirements& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_REQUIREMENTS_IMPL__
+std::ostream&
+taox11_print_Deployment_Requirements (
+    std::ostream& strm ,
+    const ::Deployment::Requirements& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::Requirements& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::Requirement& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_Requirements (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_REQUIREMENT__DECL__
 
 // generated from c++/cli_hdr/enum_os.erb
-inline std::ostream& operator<< (std::ostream& strm , Deployment::SatisfierPropertyKind _enumerator)
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    ::Deployment::SatisfierPropertyKind _enumerator)
 {
-  switch (_enumerator){
+  switch (_enumerator) {
     case Deployment::SatisfierPropertyKind::Quantity: return strm << "Deployment::SatisfierPropertyKind::Quantity"; break;
     case Deployment::SatisfierPropertyKind::Capacity: return strm << "Deployment::SatisfierPropertyKind::Capacity"; break;
     case Deployment::SatisfierPropertyKind::Minimum: return strm << "Deployment::SatisfierPropertyKind::Minimum"; break;
@@ -4132,41 +3970,36 @@ inline std::ostream& operator<< (std::ostream& strm , Deployment::SatisfierPrope
 }
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::SatisfierProperty &_aggregate)
-{
-  strm << "Deployment::SatisfierProperty ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.kind ()<< ","
-    << (_aggregate.dynamic ()? "true" : "false")<< ","
-    << _aggregate.value ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::SatisfierProperty&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_SATISFIERPROPERTY__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_SATISFIERPROPERTY__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::SatisfierProperties& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_SATISFIERPROPERTIES_IMPL__
+std::ostream&
+taox11_print_Deployment_SatisfierProperties (
+    std::ostream& strm ,
+    const ::Deployment::SatisfierProperties& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::SatisfierProperties& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::SatisfierProperty& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_SatisfierProperties (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_SATISFIERPROPERTY__DECL__
 
 // generated from c++/cli_hdr/enum_os.erb
-inline std::ostream& operator<< (std::ostream& strm , Deployment::CCMComponentPortKind _enumerator)
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    ::Deployment::CCMComponentPortKind _enumerator)
 {
-  switch (_enumerator){
+  switch (_enumerator) {
     case Deployment::CCMComponentPortKind::Facet: return strm << "Deployment::CCMComponentPortKind::Facet"; break;
     case Deployment::CCMComponentPortKind::SimplexReceptacle: return strm << "Deployment::CCMComponentPortKind::SimplexReceptacle"; break;
     case Deployment::CCMComponentPortKind::MultiplexReceptacle: return strm << "Deployment::CCMComponentPortKind::MultiplexReceptacle"; break;
@@ -4180,128 +4013,92 @@ inline std::ostream& operator<< (std::ostream& strm , Deployment::CCMComponentPo
 }
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ComponentPortDescription &_aggregate)
-{
-  strm << "Deployment::ComponentPortDescription ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    <<  "\"" <<  _aggregate.specificType () << "\"" << ","
-    << _aggregate.supportedType ()<< ","
-    << (_aggregate.provider ()? "true" : "false")<< ","
-    << (_aggregate.exclusiveProvider ()? "true" : "false")<< ","
-    << (_aggregate.exclusiveUser ()? "true" : "false")<< ","
-    << (_aggregate.optional ()? "true" : "false")<< ","
-    << _aggregate.kind ()<< ","
-    << _aggregate.templateParam ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ComponentPortDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPORTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPORTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ComponentPortDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTPORTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_ComponentPortDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::ComponentPortDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ComponentPortDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ComponentPortDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ComponentPortDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPORTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ComponentPropertyDescription &_aggregate)
-{
-  strm << "Deployment::ComponentPropertyDescription ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.type ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ComponentPropertyDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ComponentPropertyDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_ComponentPropertyDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::ComponentPropertyDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ComponentPropertyDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ComponentPropertyDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ComponentPropertyDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ComponentInterfaceDescription &_aggregate)
-{
-  strm << "Deployment::ComponentInterfaceDescription ("
-    <<  "\"" <<  _aggregate.label () << "\"" << ","
-    <<  "\"" <<  _aggregate.UUID () << "\"" << ","
-    <<  "\"" <<  _aggregate.specificType () << "\"" << ","
-    << _aggregate.supportedType ()<< ","
-    << _aggregate.idlFile ()<< ","
-    << _aggregate.configProperty ()<< ","
-    << _aggregate.port ()<< ","
-    << _aggregate.property ()<< ","
-    << _aggregate.infoProperty ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ComponentInterfaceDescription&);
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::MonolithicDeploymentDescription &_aggregate)
-{
-  strm << "Deployment::MonolithicDeploymentDescription ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.source ()<< ","
-    << _aggregate.artifactRef ()<< ","
-    << _aggregate.execParameter ()<< ","
-    << _aggregate.deployRequirement ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::MonolithicDeploymentDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::MonolithicDeploymentDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_MonolithicDeploymentDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::MonolithicDeploymentDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::MonolithicDeploymentDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::MonolithicDeploymentDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_MonolithicDeploymentDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/enum_os.erb
-inline std::ostream& operator<< (std::ostream& strm , Deployment::ResourceUsageKind _enumerator)
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    ::Deployment::ResourceUsageKind _enumerator)
 {
-  switch (_enumerator){
+  switch (_enumerator) {
     case Deployment::ResourceUsageKind::None: return strm << "Deployment::ResourceUsageKind::None"; break;
     case Deployment::ResourceUsageKind::InstanceUsesResource: return strm << "Deployment::ResourceUsageKind::InstanceUsesResource"; break;
     case Deployment::ResourceUsageKind::ResourceUsesInstance: return strm << "Deployment::ResourceUsageKind::ResourceUsesInstance"; break;
@@ -4312,393 +4109,311 @@ inline std::ostream& operator<< (std::ostream& strm , Deployment::ResourceUsageK
 }
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::InstanceResourceDeploymentDescription &_aggregate)
-{
-  strm << "Deployment::InstanceResourceDeploymentDescription ("
-    << _aggregate.resourceUsage ()<< ","
-    <<  "\"" <<  _aggregate.requirementName () << "\"" << ","
-    <<  "\"" <<  _aggregate.resourceName () << "\"" << ","
-    << _aggregate.property ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::InstanceResourceDeploymentDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_InstanceResourceDeploymentDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::InstanceResourceDeploymentDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::InstanceResourceDeploymentDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_InstanceResourceDeploymentDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::InstanceDeploymentDescription &_aggregate)
-{
-  strm << "Deployment::InstanceDeploymentDescription ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    <<  "\"" <<  _aggregate.node () << "\"" << ","
-    << _aggregate.source ()<< ","
-    << _aggregate.implementationRef ()<< ","
-    << _aggregate.configProperty ()<< ","
-    << _aggregate.deployedResource ()<< ","
-    << _aggregate.deployedSharedResource ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::InstanceDeploymentDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::InstanceDeploymentDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_InstanceDeploymentDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::InstanceDeploymentDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::InstanceDeploymentDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::InstanceDeploymentDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_InstanceDeploymentDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ComponentExternalPortEndpoint &_aggregate)
-{
-  strm << "Deployment::ComponentExternalPortEndpoint ("
-    <<  "\"" <<  _aggregate.portName () << "\"" 
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ComponentExternalPortEndpoint&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ComponentExternalPortEndpoints& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINTS_IMPL__
+std::ostream&
+taox11_print_Deployment_ComponentExternalPortEndpoints (
+    std::ostream& strm ,
+    const ::Deployment::ComponentExternalPortEndpoints& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ComponentExternalPortEndpoints& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ComponentExternalPortEndpoint& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ComponentExternalPortEndpoints (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::PlanSubcomponentPortEndpoint &_aggregate)
-{
-  strm << "Deployment::PlanSubcomponentPortEndpoint ("
-    <<  "\"" <<  _aggregate.portName () << "\"" << ","
-    << (_aggregate.provider ()? "true" : "false")<< ","
-    << _aggregate.kind ()<< ","
-    << _aggregate.instanceRef ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::PlanSubcomponentPortEndpoint&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::PlanSubcomponentPortEndpoints& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINTS_IMPL__
+std::ostream&
+taox11_print_Deployment_PlanSubcomponentPortEndpoints (
+    std::ostream& strm ,
+    const ::Deployment::PlanSubcomponentPortEndpoints& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::PlanSubcomponentPortEndpoints& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::PlanSubcomponentPortEndpoint& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_PlanSubcomponentPortEndpoints (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ExternalReferenceEndpoint &_aggregate)
-{
-  strm << "Deployment::ExternalReferenceEndpoint ("
-    <<  "\"" <<  _aggregate.location () << "\"" << ","
-    << (_aggregate.provider ()? "true" : "false")<< ","
-    <<  "\"" <<  _aggregate.portName () << "\"" << ","
-    << _aggregate.supportedType ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ExternalReferenceEndpoint&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_EXTERNALREFERENCEENDPOINT__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_EXTERNALREFERENCEENDPOINT__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ExternalReferenceEndpoints& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_EXTERNALREFERENCEENDPOINTS_IMPL__
+std::ostream&
+taox11_print_Deployment_ExternalReferenceEndpoints (
+    std::ostream& strm ,
+    const ::Deployment::ExternalReferenceEndpoints& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ExternalReferenceEndpoints& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ExternalReferenceEndpoint& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ExternalReferenceEndpoints (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_EXTERNALREFERENCEENDPOINT__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ConnectionResourceDeploymentDescription &_aggregate)
-{
-  strm << "Deployment::ConnectionResourceDeploymentDescription ("
-    <<  "\"" <<  _aggregate.targetName () << "\"" << ","
-    <<  "\"" <<  _aggregate.requirementName () << "\"" << ","
-    <<  "\"" <<  _aggregate.resourceName () << "\"" << ","
-    << _aggregate.property ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ConnectionResourceDeploymentDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ConnectionResourceDeploymentDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::ConnectionResourceDeploymentDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ConnectionResourceDeploymentDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ConnectionResourceDeploymentDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::PlanConnectionDescription &_aggregate)
-{
-  strm << "Deployment::PlanConnectionDescription ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.source ()<< ","
-    << _aggregate.deployRequirement ()<< ","
-    << _aggregate.externalEndpoint ()<< ","
-    << _aggregate.internalEndpoint ()<< ","
-    << _aggregate.externalReference ()<< ","
-    << _aggregate.deployedResource ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::PlanConnectionDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANCONNECTIONDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANCONNECTIONDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::PlanConnectionDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANCONNECTIONDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_PlanConnectionDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::PlanConnectionDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::PlanConnectionDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::PlanConnectionDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_PlanConnectionDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANCONNECTIONDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::PlanSubcomponentPropertyReference &_aggregate)
-{
-  strm << "Deployment::PlanSubcomponentPropertyReference ("
-    <<  "\"" <<  _aggregate.propertyName () << "\"" << ","
-    << _aggregate.instanceRef ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::PlanSubcomponentPropertyReference&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::PlanSubcomponentPropertyReferences& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCES_IMPL__
+std::ostream&
+taox11_print_Deployment_PlanSubcomponentPropertyReferences (
+    std::ostream& strm ,
+    const ::Deployment::PlanSubcomponentPropertyReferences& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::PlanSubcomponentPropertyReferences& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::PlanSubcomponentPropertyReference& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_PlanSubcomponentPropertyReferences (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::PlanPropertyMapping &_aggregate)
-{
-  strm << "Deployment::PlanPropertyMapping ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.source ()<< ","
-    <<  "\"" <<  _aggregate.externalName () << "\"" << ","
-    << _aggregate.delegatesTo ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::PlanPropertyMapping&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANPROPERTYMAPPING__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANPROPERTYMAPPING__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::PlanPropertyMappings& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANPROPERTYMAPPINGS_IMPL__
+std::ostream&
+taox11_print_Deployment_PlanPropertyMappings (
+    std::ostream& strm ,
+    const ::Deployment::PlanPropertyMappings& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::PlanPropertyMappings& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::PlanPropertyMapping& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_PlanPropertyMappings (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANPROPERTYMAPPING__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ImplementationDependency &_aggregate)
-{
-  strm << "Deployment::ImplementationDependency ("
-    <<  "\"" <<  _aggregate.requiredType () << "\"" 
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ImplementationDependency&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ImplementationDependencies& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_IMPLEMENTATIONDEPENDENCIES_IMPL__
+std::ostream&
+taox11_print_Deployment_ImplementationDependencies (
+    std::ostream& strm ,
+    const ::Deployment::ImplementationDependencies& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ImplementationDependencies& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ImplementationDependency& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ImplementationDependencies (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ResourceDeploymentDescription &_aggregate)
-{
-  strm << "Deployment::ResourceDeploymentDescription ("
-    <<  "\"" <<  _aggregate.requirementName () << "\"" << ","
-    <<  "\"" <<  _aggregate.resourceName () << "\"" << ","
-    << _aggregate.property ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ResourceDeploymentDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ResourceDeploymentDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_ResourceDeploymentDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::ResourceDeploymentDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ResourceDeploymentDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ResourceDeploymentDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ResourceDeploymentDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ArtifactDeploymentDescription &_aggregate)
-{
-  strm << "Deployment::ArtifactDeploymentDescription ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.location ()<< ","
-    <<  "\"" <<  _aggregate.node () << "\"" << ","
-    << _aggregate.source ()<< ","
-    << _aggregate.execParameter ()<< ","
-    << _aggregate.deployRequirement ()<< ","
-    << _aggregate.deployedResource ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ArtifactDeploymentDescription&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ArtifactDeploymentDescriptions& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTIONS_IMPL__
+std::ostream&
+taox11_print_Deployment_ArtifactDeploymentDescriptions (
+    std::ostream& strm ,
+    const ::Deployment::ArtifactDeploymentDescriptions& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ArtifactDeploymentDescriptions& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ArtifactDeploymentDescription& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ArtifactDeploymentDescriptions (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION__DECL__
 
 // generated from c++/cli_hdr/enum_os.erb
-inline std::ostream& operator<< (std::ostream& strm , Deployment::PlanLocalityKind _enumerator)
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    ::Deployment::PlanLocalityKind _enumerator)
 {
-  switch (_enumerator){
+  switch (_enumerator) {
     case Deployment::PlanLocalityKind::PlanSameProcess: return strm << "Deployment::PlanLocalityKind::PlanSameProcess"; break;
     case Deployment::PlanLocalityKind::PlanDifferentProcess: return strm << "Deployment::PlanLocalityKind::PlanDifferentProcess"; break;
     case Deployment::PlanLocalityKind::PlanNoConstraint: return strm << "Deployment::PlanLocalityKind::PlanNoConstraint"; break;
@@ -4707,83 +4422,57 @@ inline std::ostream& operator<< (std::ostream& strm , Deployment::PlanLocalityKi
 }
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::PlanLocality &_aggregate)
-{
-  strm << "Deployment::PlanLocality ("
-    << _aggregate.constraint ()<< ","
-    << _aggregate.constrainedInstanceRef ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::PlanLocality&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANLOCALITY__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANLOCALITY__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::PlanLocalities& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANLOCALITIES_IMPL__
+std::ostream&
+taox11_print_Deployment_PlanLocalities (
+    std::ostream& strm ,
+    const ::Deployment::PlanLocalities& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::PlanLocalities& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::PlanLocality& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_PlanLocalities (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANLOCALITY__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::DeploymentPlan &_aggregate)
-{
-  strm << "Deployment::DeploymentPlan ("
-    <<  "\"" <<  _aggregate.label () << "\"" << ","
-    <<  "\"" <<  _aggregate.UUID () << "\"" << ","
-    << _aggregate.realizes ()<< ","
-    << _aggregate.implementation ()<< ","
-    << _aggregate.instance ()<< ","
-    << _aggregate.connection ()<< ","
-    << _aggregate.externalProperty ()<< ","
-    << _aggregate.dependsOn ()<< ","
-    << _aggregate.artifact ()<< ","
-    << _aggregate.infoProperty ()<< ","
-    << _aggregate.localityConstraint ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::DeploymentPlan&);
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ComponentPackageReference &_aggregate)
-{
-  strm << "Deployment::ComponentPackageReference ("
-    <<  "\"" <<  _aggregate.requiredUUID () << "\"" << ","
-    <<  "\"" <<  _aggregate.requiredName () << "\"" << ","
-    << _aggregate.requiredType ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ComponentPackageReference&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPACKAGEREFERENCE__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPACKAGEREFERENCE__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ComponentPackageReferences& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTPACKAGEREFERENCES_IMPL__
+std::ostream&
+taox11_print_Deployment_ComponentPackageReferences (
+    std::ostream& strm ,
+    const ::Deployment::ComponentPackageReferences& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ComponentPackageReferences& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ComponentPackageReference& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ComponentPackageReferences (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPACKAGEREFERENCE__DECL__
@@ -4791,82 +4480,68 @@ inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::Compon
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEUSAGEKIND__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEUSAGEKIND__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ResourceUsageKinds& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_RESOURCEUSAGEKINDS_IMPL__
+std::ostream&
+taox11_print_Deployment_ResourceUsageKinds (
+    std::ostream& strm ,
+    const ::Deployment::ResourceUsageKinds& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ResourceUsageKinds& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (::Deployment::ResourceUsageKind _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ResourceUsageKinds (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEUSAGEKIND__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::ImplementationRequirement &_aggregate)
-{
-  strm << "Deployment::ImplementationRequirement ("
-    << _aggregate.resourceUsage ()<< ","
-    <<  "\"" <<  _aggregate.resourcePort () << "\"" << ","
-    <<  "\"" <<  _aggregate.componentPort () << "\"" << ","
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    <<  "\"" <<  _aggregate.resourceType () << "\"" << ","
-    << _aggregate.property ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::ImplementationRequirement&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::ImplementationRequirements& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_IMPLEMENTATIONREQUIREMENTS_IMPL__
+std::ostream&
+taox11_print_Deployment_ImplementationRequirements (
+    std::ostream& strm ,
+    const ::Deployment::ImplementationRequirements& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::ImplementationRequirements& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::ImplementationRequirement& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_ImplementationRequirements (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT__DECL__
 
 // generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Deployment::Capability &_aggregate)
-{
-  strm << "Deployment::Capability ("
-    <<  "\"" <<  _aggregate.name () << "\"" << ","
-    << _aggregate.resourceType ()<< ","
-    << _aggregate.property ()
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Deployment::Capability&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CAPABILITY__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CAPABILITY__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Deployment::Capabilities& _v)
+
+#define __TAOX11_OSSTREAM_DEPLOYMENT_CAPABILITIES_IMPL__
+std::ostream&
+taox11_print_Deployment_Capabilities (
+    std::ostream& strm ,
+    const ::Deployment::Capabilities& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Deployment::Capabilities& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Deployment::Capability& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Deployment_Capabilities (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CAPABILITY__DECL__

@@ -414,57 +414,26 @@ namespace std {
 }; // std
 
 // generated from c++/cli_hdr/struct_os.erb
-std::ostream& operator<< (std::ostream &, const Test::Simple &);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Test::SimpleSeq&);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Test::LongSeq&);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Test::BoundedLongSeq&);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Test::BoolSeq&);
-
-// generated from c++/cli_hdr/sequence_os.erb
-std::ostream& operator<< (std::ostream& , const ::Test::StringSeq&);
-
-// generated from c++/cli_hdr/interface_os.erb
-std::ostream& operator<< (std::ostream& ,
-                          TAOX11_CORBA::object_reference< ::Test::Foo>);
-
-// generated from c++/cli_hdr/struct_os.erb
-inline std::ostream& operator<< (
-    std::ostream &strm,
-    const Test::Simple &_aggregate)
-{
-  strm << "Test::Simple ("
-    <<  std::hex << "hex:" << (int)_aggregate.o () << std::dec<< ","
-    << _aggregate.l ()<< ","
-    <<  "\"" <<  _aggregate.s () << "\"" << ","
-    << _aggregate.d ()<< ","
-    << (_aggregate.b ()? "true" : "false")<< ","
-    << "'" <<  _aggregate.c () << "'" 
-  << ")";
-  return strm;
-}
+std::ostream&
+operator<< (
+    std::ostream &,
+    const ::Test::Simple&);
 
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Test::SimpleSeq& _v)
+
+#define __TAOX11_OSSTREAM_TEST_SIMPLESEQ_IMPL__
+std::ostream&
+taox11_print_Test_SimpleSeq (
+    std::ostream& strm ,
+    const ::Test::SimpleSeq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Test::SimpleSeq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const ::Test::Simple& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_SimpleSeq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
@@ -472,17 +441,18 @@ inline std::ostream& operator<< (std::ostream& strm , const ::Test::SimpleSeq& _
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Test::LongSeq& _v)
+
+#define __TAOX11_OSSTREAM_TEST_LONGSEQ_IMPL__
+std::ostream&
+taox11_print_Test_LongSeq (
+    std::ostream& strm ,
+    const ::Test::LongSeq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Test::LongSeq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (int32_t _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_LongSeq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
@@ -490,17 +460,18 @@ inline std::ostream& operator<< (std::ostream& strm , const ::Test::LongSeq& _v)
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Test::BoundedLongSeq& _v)
+
+#define __TAOX11_OSSTREAM_TEST_BOUNDEDLONGSEQ_IMPL__
+std::ostream&
+taox11_print_Test_BoundedLongSeq (
+    std::ostream& strm ,
+    const ::Test::BoundedLongSeq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Test::BoundedLongSeq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (int32_t _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_BoundedLongSeq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
@@ -508,17 +479,18 @@ inline std::ostream& operator<< (std::ostream& strm , const ::Test::BoundedLongS
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Test::BoolSeq& _v)
+
+#define __TAOX11_OSSTREAM_TEST_BOOLSEQ_IMPL__
+std::ostream&
+taox11_print_Test_BoolSeq (
+    std::ostream& strm ,
+    const ::Test::BoolSeq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Test::BoolSeq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (bool _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_BoolSeq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
@@ -526,35 +498,26 @@ inline std::ostream& operator<< (std::ostream& strm , const ::Test::BoolSeq& _v)
 // generated from c++/cli_hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
-inline std::ostream& operator<< (std::ostream& strm , const ::Test::StringSeq& _v)
+
+#define __TAOX11_OSSTREAM_TEST_STRINGSEQ_IMPL__
+std::ostream&
+taox11_print_Test_StringSeq (
+    std::ostream& strm ,
+    const ::Test::StringSeq& _v);
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const ::Test::StringSeq& _v)
 {
-  strm << "[";
-  bool first = true;
-  for (const std::string& _ve : _v) {
-  if(!first)
-    strm << ',';
-  first = false;
-  strm << _ve ; }
-  strm << "]";
-  return strm;
+  return taox11_print_Test_StringSeq (strm, _v);
 }
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
 
 // generated from c++/cli_hdr/interface_os.erb
-#if !defined (__TAOX11_OSSTREAM_TEST_FOO_DECL__)
-#define __TAOX11_OSSTREAM_TEST_FOO_DECL__
-inline std::ostream& operator<< (std::ostream& strm ,
-                                 TAOX11_CORBA::object_reference< ::Test::Foo> _v)
-{
-  if (_v == nullptr)
-    strm << "Interface nil reference ";
-  else
-    strm << _v->_repository_id();
-  return strm;
-}
-
-#endif // __TAOX11_OSSTREAM_TEST_FOO_DECL__
+std::ostream& operator<< (
+    std::ostream& strm,
+    TAOX11_CORBA::object_reference< ::Test::Foo>);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
