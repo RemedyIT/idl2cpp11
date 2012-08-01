@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 {
   try
     {
-      CORBA::object_traits<CORBA::ORB>::ref_type _orb = CORBA::ORB_init (argc, argv);
+      IDL::traits<CORBA::ORB>::ref_type _orb = CORBA::ORB_init (argc, argv);
 
       if (!_orb)
       {
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
         return 1;
       }
 
-      CORBA::object_reference<CORBA::Object> obj = _orb->string_to_object ("file://test.ior");
+      IDL::traits<CORBA::Object>::ref_type obj = _orb->string_to_object ("file://test.ior");
 
       if (obj == nullptr)
       {
