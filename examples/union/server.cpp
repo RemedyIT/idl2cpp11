@@ -14,7 +14,7 @@ main(int argc, ACE_TCHAR *argv[])
 {
   try
     {
-      CORBA::object_reference<CORBA::ORB> _orb = CORBA::ORB_init (argc, argv);
+      IDL::traits<CORBA::ORB>::ref_type _orb = CORBA::ORB_init (argc, argv);
 
       if (_orb == nullptr)
       {
@@ -22,7 +22,7 @@ main(int argc, ACE_TCHAR *argv[])
         return 1;
       }
 
-      CORBA::object_reference<CORBA::Object> obj = _orb->resolve_initial_references ("RootPOA");
+      IDL::traits<CORBA::Object>::ref_type obj = _orb->resolve_initial_references ("RootPOA");
 
       if (obj == nullptr)
       {
@@ -32,7 +32,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "retrieved RootPOA object reference" << std::endl;
 
-      CORBA::object_reference<PortableServer::POA> root_poa = PortableServer::POA::_narrow (obj);
+      IDL::traits<PortableServer::POA>::ref_type root_poa = PortableServer::POA::_narrow (obj);
 
       if (!root_poa)
       {
@@ -59,7 +59,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "activated Foo servant" << std::endl;
 
-      CORBA::object_reference<CORBA::Object> hello_obj = root_poa->id_to_reference (id);
+      IDL::traits<CORBA::Object>::ref_type hello_obj = root_poa->id_to_reference (id);
 
       if (hello_obj == nullptr)
       {
@@ -67,7 +67,7 @@ main(int argc, ACE_TCHAR *argv[])
         return 1;
       }
 
-      CORBA::object_reference<Test::Foo> hello = Test::Foo::_narrow (hello_obj);
+      IDL::traits<Test::Foo>::ref_type hello = Test::Foo::_narrow (hello_obj);
 
       if (hello == nullptr)
       {

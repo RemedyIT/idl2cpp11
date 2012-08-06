@@ -15,7 +15,7 @@ class Foo : public virtual CORBA::servant_traits<Test::Foo>::base_type
 {
 public:
   /// Constructor
-  Foo (CORBA::object_reference<CORBA::ORB> orb);
+  Foo (IDL::traits<CORBA::ORB>::ref_type orb);
 
   // = The skeleton methods
   virtual void do_it ();
@@ -30,7 +30,7 @@ public:
 private:
   /// Use an ORB reference to convert strings to objects and shutdown
   /// the application.
-  CORBA::object_reference<CORBA::ORB> orb_;
+  IDL::traits<CORBA::ORB>::ref_type orb_;
 };
 
 #include /**/ "ace/post.h"

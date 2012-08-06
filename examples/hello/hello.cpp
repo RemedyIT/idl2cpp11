@@ -6,7 +6,7 @@
  --------------------------------------------------------------------*/
 #include "hello.h"
 
-Hello::Hello (CORBA::object_reference<CORBA::ORB> orb)
+Hello::Hello (IDL::traits<CORBA::ORB>::ref_type orb)
   : orb_ (orb)
 {
 }

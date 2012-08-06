@@ -16,7 +16,7 @@ class Hello
 {
 public:
   /// Constructor
-  Hello (CORBA::object_reference<CORBA::ORB> orb);
+  Hello (IDL::traits<CORBA::ORB>::ref_type orb);
 
   // = The skeleton methods
   virtual std::string get_string (void) override;
@@ -26,7 +26,7 @@ public:
 private:
   /// Use an ORB reference to convert strings to objects and shutdown
   /// the application.
-  CORBA::object_reference<CORBA::ORB> orb_;
+  IDL::traits<CORBA::ORB>::ref_type orb_;
 };
 
 #include /**/ "ace/post.h"

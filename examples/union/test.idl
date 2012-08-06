@@ -78,4 +78,8 @@ module Test
      */
     oneway void shutdown ();
   };
+
+  interface A
+  {
+  };
 };

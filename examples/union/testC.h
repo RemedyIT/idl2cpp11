@@ -443,6 +443,46 @@ namespace Test
     Foo& operator=(Foo&&) = delete;
     Foo_proxy_ptr foo_proxy_;
   }; // Foo
+
+  // generated from StubHeaderWriter#enter_interface
+
+  // generated from c++/cli_hdr/interface_pre.erb
+  class A
+    : public virtual TAOX11_NAMESPACE::CORBA::Object
+  {
+  public:
+    template <typename T> friend struct TAOX11_CORBA::object_traits;
+
+    typedef TAOX11_CORBA::object_traits< A> _traits_type;
+    typedef TAOX11_CORBA::object_reference< A> _ref_type;
+
+    virtual const std::string& _interface_repository_id () const override;
+
+    // generated from c++/cli_hdr/interface_post.erb
+    static TAOX11_CORBA::object_reference< A> _narrow (
+        TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> _taox11_obj)
+    {
+      return TAOX11_CORBA::object_traits< A>::narrow (_taox11_obj);
+    }
+
+  protected:
+    typedef std::shared_ptr<A>   _shared_ptr_type;
+
+    template <typename _Tp1, typename, typename ...Args>
+    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+
+    explicit A (A_proxy_ptr p);
+    explicit A (A_proxy_ptr p, bool);
+    A (void);
+    ~A (void) = default;
+
+  private:
+    A(const A&) = delete;
+    A(A&&) = delete;
+    A& operator=(const A&) = delete;
+    A& operator=(A&&) = delete;
+    A_proxy_ptr a_proxy_;
+  }; // A
 }; // namespace Test
 
 
@@ -1917,6 +1957,11 @@ std::ostream& operator<< (
 std::ostream& operator<< (
     std::ostream& strm,
     TAOX11_CORBA::object_reference< ::Test::Foo>);
+
+// generated from c++/cli_hdr/interface_os.erb
+std::ostream& operator<< (
+    std::ostream& strm,
+    TAOX11_CORBA::object_reference< ::Test::A>);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
