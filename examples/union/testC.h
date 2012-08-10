@@ -306,9 +306,9 @@ namespace Test
     inline const ::Test::S& w (void) const;
     inline ::Test::S& w (void);
 
-    inline void obj (TAOX11_CORBA::object_reference< ::Test::A> _obj);
-    inline TAOX11_CORBA::object_reference< ::Test::A> obj (void) const;
-    inline TAOX11_CORBA::object_reference< ::Test::A>& obj (void);
+    inline void obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj);
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj (void) const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& obj (void);
 
     inline void swap (U& s);
 
@@ -324,7 +324,7 @@ namespace Test
       int32_t x_;
       std::string z_;
       ::Test::S w_;
-      TAOX11_CORBA::object_reference< ::Test::A> obj_;
+      TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj_;
     } u_;
   }; // U
   typedef U U_idl_t; // IDL traits typename
@@ -1400,7 +1400,7 @@ inline Test::U::u_type_::~u_type_ (void)
 inline Test::U::U (void)
   : disc_ ((-2147483647-1))
 {
-  new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A>;
+  new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
 }
 
 inline Test::U::~U (void)
@@ -1433,7 +1433,7 @@ inline Test::U::U (const ::Test::U& u)
     break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A>;
+        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
         this->u_.obj_ = u.u_.obj_;
       }
     break;
@@ -1463,7 +1463,7 @@ inline Test::U::U (::Test::U&& u)
     break;
   default:
     {
-      new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (std::move (u.u_.obj_));
+      new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
     }
     break;
   }
@@ -1665,12 +1665,12 @@ inline ::Test::S& Test::U::w (void)
   return this->u_.w_;
 }
 
-inline void Test::U::obj (TAOX11_CORBA::object_reference< ::Test::A> _obj)
+inline void Test::U::obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj)
 {
   if (this->disc_ != (-2147483647-1))
   {
     this->_clear ();
-    new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (_obj);
+    new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (_obj);
   }
   else
   {
@@ -1678,7 +1678,7 @@ inline void Test::U::obj (TAOX11_CORBA::object_reference< ::Test::A> _obj)
   }
   this->disc_ = (-2147483647-1);
 }
-inline TAOX11_CORBA::object_reference< ::Test::A> Test::U::obj (void) const
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj (void) const
 {
   switch (this->disc_)
   {
@@ -1692,7 +1692,7 @@ inline TAOX11_CORBA::object_reference< ::Test::A> Test::U::obj (void) const
   }
   return this->u_.obj_;
 }
-inline TAOX11_CORBA::object_reference< ::Test::A>& Test::U::obj (void)
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& Test::U::obj (void)
 {
   switch (this->disc_)
   {
@@ -1733,7 +1733,7 @@ inline ::Test::U& Test::U::operator= (const ::Test::U& u)
       break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (u.u_.obj_);
+        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
       }
       break;
     }
@@ -1767,7 +1767,7 @@ inline ::Test::U& Test::U::operator= (::Test::U&& u)
       break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_CORBA::object_reference< ::Test::A> (std::move (u.u_.obj_));
+        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
       }
       break;
     }
@@ -1844,7 +1844,7 @@ inline void Test::U::_clear (void)
     break;
   default:
     {
-      this->u_.obj_.TAOX11_CORBA::object_reference< ::Test::A>::~object_reference ();
+      this->u_.obj_.TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type::~object_reference ();
     }
     break;
   }
@@ -1946,7 +1946,7 @@ operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::A>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type);
 
 // generated from c++/cli_hdr/union_os.erb
 std::ostream& operator<< (
@@ -1956,12 +1956,12 @@ std::ostream& operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Foo>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::A>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

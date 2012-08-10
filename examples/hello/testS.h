@@ -48,7 +48,7 @@ namespace Test
 
       virtual bool _is_a (const std::string& logical_type_id);
 
-      TAOX11_CORBA::object_reference< ::Test::Hello> _this (void);
+      TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _this (void);
 
       virtual const std::string _interface_repository_id (void) const;
 

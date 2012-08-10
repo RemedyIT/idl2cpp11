@@ -282,7 +282,7 @@ namespace Deployment
     ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
     ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
     explicit inline ComponentPropertyDescription (std::string name,
-                                           TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type);
+                                           TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
     inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
     inline ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
 
@@ -291,15 +291,15 @@ namespace Deployment
     inline const std::string& name (void) const;
     inline std::string& name (void);
 
-    inline void type (TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> _type);
-    inline TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type (void) const;
-    inline TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode>& type (void);
+    inline void type (TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
+    inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type (void) const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type (void);
 
     inline void swap (ComponentPropertyDescription& s);
 
   private:
     std::string name_;
-    TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type_;
+    TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
   };// ComponentPropertyDescription
   typedef ComponentPropertyDescription ComponentPropertyDescription_idl_t; // IDL traits typename
 
@@ -2328,7 +2328,7 @@ inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
 {
 }
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (std::string name,
-                                                                               TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> type)
+                                                                               TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
            : name_ (std::move (name))
            , type_ (std::move (type))
 {
@@ -2339,9 +2339,9 @@ inline void Deployment::ComponentPropertyDescription::name (std::string&& _name)
 inline const std::string& Deployment::ComponentPropertyDescription::name (void) const { return this->name_; }
 inline std::string& Deployment::ComponentPropertyDescription::name (void) { return this->name_; }
 
-inline void Deployment::ComponentPropertyDescription::type (TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> _type) { this->type_ = _type; }
-inline TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode> Deployment::ComponentPropertyDescription::type (void) const { return this->type_; }
-inline TAOX11_CORBA::object_reference< ::TAOX11_NAMESPACE::CORBA::TypeCode>& Deployment::ComponentPropertyDescription::type (void) { return this->type_; }
+inline void Deployment::ComponentPropertyDescription::type (TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
+inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type (void) const { return this->type_; }
+inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type (void) { return this->type_; }
 
 inline ::Deployment::ComponentPropertyDescription& Deployment::ComponentPropertyDescription::operator= (const ::Deployment::ComponentPropertyDescription& x)
 {

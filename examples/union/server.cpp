@@ -42,7 +42,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "narrowed POA interface" << std::endl;
 
-      CORBA::object_reference<PortableServer::POAManager> poaman = root_poa->the_POAManager ();
+      IDL::traits<PortableServer::POAManager>::ref_type poaman = root_poa->the_POAManager ();
 
       if (!poaman)
       {

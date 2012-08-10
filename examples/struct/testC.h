@@ -169,7 +169,7 @@ namespace Test
                      double d,
                      bool b,
                      char c,
-                     TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref,
+                     TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref,
                      ::Test::Variable v);
     inline Simple& operator= (const Simple& x);
     inline Simple& operator= (Simple&& x);
@@ -199,9 +199,9 @@ namespace Test
     inline char c (void) const;
     inline char& c (void);
 
-    inline void bar_ref (TAOX11_CORBA::object_reference< ::Test::Bar> _bar_ref);
-    inline TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref (void) const;
-    inline TAOX11_CORBA::object_reference< ::Test::Bar>& bar_ref (void);
+    inline void bar_ref (TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type _bar_ref);
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref (void) const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type& bar_ref (void);
 
     inline void v (const ::Test::Variable& _v);
     inline void v (::Test::Variable&& _v);
@@ -217,7 +217,7 @@ namespace Test
     double d_;
     bool b_;
     char c_;
-    TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref_;
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref_;
     ::Test::Variable v_;
   };// Simple
   typedef Simple Simple_idl_t; // IDL traits typename
@@ -428,7 +428,7 @@ inline Test::Simple::Simple (uint8_t o,
                              double d,
                              bool b,
                              char c,
-                             TAOX11_CORBA::object_reference< ::Test::Bar> bar_ref,
+                             TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref,
                              ::Test::Variable v)
            : o_ (std::move (o))
            , l_ (std::move (l))
@@ -466,9 +466,9 @@ inline void Test::Simple::c (char _c) { this->c_ = _c; }
 inline char Test::Simple::c (void) const { return this->c_; }
 inline char& Test::Simple::c (void) { return this->c_; }
 
-inline void Test::Simple::bar_ref (TAOX11_CORBA::object_reference< ::Test::Bar> _bar_ref) { this->bar_ref_ = _bar_ref; }
-inline TAOX11_CORBA::object_reference< ::Test::Bar> Test::Simple::bar_ref (void) const { return this->bar_ref_; }
-inline TAOX11_CORBA::object_reference< ::Test::Bar>& Test::Simple::bar_ref (void) { return this->bar_ref_; }
+inline void Test::Simple::bar_ref (TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type _bar_ref) { this->bar_ref_ = _bar_ref; }
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type Test::Simple::bar_ref (void) const { return this->bar_ref_; }
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type& Test::Simple::bar_ref (void) { return this->bar_ref_; }
 
 inline void Test::Simple::v (const ::Test::Variable& _v) { this->v_ = _v; }
 inline void Test::Simple::v (::Test::Variable&& _v) { this->v_ = std::move (_v); }
@@ -541,7 +541,7 @@ operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Bar>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type);
 
 // generated from c++/cli_hdr/struct_os.erb
 std::ostream&
@@ -552,7 +552,7 @@ operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Foo>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

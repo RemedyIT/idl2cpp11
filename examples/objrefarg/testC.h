@@ -154,11 +154,11 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello
-    virtual TAOX11_CORBA::object_reference< ::Test::Hello> get_hello (void);
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type get_hello (void);
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello_2
-    virtual void get_hello_2 (TAOX11_CORBA::object_reference< ::Test::Hello>& hello_obj);
+    virtual void get_hello_2 (TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_CORBA::object_reference< Hello_Factory> _narrow (
@@ -253,17 +253,17 @@ namespace std {
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Hello>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type);
 
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Hello_Factory>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type);
 
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Hello>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

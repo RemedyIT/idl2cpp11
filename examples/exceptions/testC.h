@@ -330,7 +330,7 @@ std::ostream& operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_CORBA::object_reference< ::Test::Foo>);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
