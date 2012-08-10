@@ -116,10 +116,10 @@ namespace Test
              ::Test::M& p3);
 
     // generated from c++/cli_hdr/interface_post.erb
-    static TAOX11_CORBA::object_reference< Foo> _narrow (
-        TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> _taox11_obj)
+    static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (
+        TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
     {
-      return TAOX11_CORBA::object_traits< Foo>::narrow (_taox11_obj);
+      return TAOX11_NAMESPACE::IDL::traits< Foo>::narrow (_taox11_obj);
     }
 
   protected:
