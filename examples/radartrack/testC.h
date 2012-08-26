@@ -33,8 +33,8 @@ class RadarTrack final
 public:
 
   // generated from c++/cli_hdr/struct_post.erb
-  inline RadarTrack (void);
-  ~RadarTrack (void) = default;
+  inline RadarTrack ();
+  ~RadarTrack () = default;
   RadarTrack (const RadarTrack&) = default;
   RadarTrack (RadarTrack&&) = default;
   explicit inline RadarTrack (std::string id,
@@ -47,25 +47,25 @@ public:
 
   inline void id (const std::string& _id);
   inline void id (std::string&& _id);
-  inline const std::string& id (void) const;
-  inline std::string& id (void);
+  inline const std::string& id () const;
+  inline std::string& id ();
 
   inline void x (int32_t _x);
-  inline int32_t x (void) const;
-  inline int32_t& x (void);
+  inline int32_t x () const;
+  inline int32_t& x ();
 
   inline void y (int32_t _y);
-  inline int32_t y (void) const;
-  inline int32_t& y (void);
+  inline int32_t y () const;
+  inline int32_t& y ();
 
   inline void z (int32_t _z);
-  inline int32_t z (void) const;
-  inline int32_t& z (void);
+  inline int32_t z () const;
+  inline int32_t& z ();
 
   inline void plot (const ::octetseq& _plot);
   inline void plot (::octetseq&& _plot);
-  inline const ::octetseq& plot (void) const;
-  inline ::octetseq& plot (void);
+  inline const ::octetseq& plot () const;
+  inline ::octetseq& plot ();
 
   inline void swap (RadarTrack& s);
 
@@ -139,25 +139,25 @@ inline RadarTrack::RadarTrack (std::string id,
 
 inline void RadarTrack::id (const std::string& _id) { this->id_ = _id; }
 inline void RadarTrack::id (std::string&& _id) { this->id_ = std::move (_id); }
-inline const std::string& RadarTrack::id (void) const { return this->id_; }
-inline std::string& RadarTrack::id (void) { return this->id_; }
+inline const std::string& RadarTrack::id () const { return this->id_; }
+inline std::string& RadarTrack::id () { return this->id_; }
 
 inline void RadarTrack::x (int32_t _x) { this->x_ = _x; }
-inline int32_t RadarTrack::x (void) const { return this->x_; }
-inline int32_t& RadarTrack::x (void) { return this->x_; }
+inline int32_t RadarTrack::x () const { return this->x_; }
+inline int32_t& RadarTrack::x () { return this->x_; }
 
 inline void RadarTrack::y (int32_t _y) { this->y_ = _y; }
-inline int32_t RadarTrack::y (void) const { return this->y_; }
-inline int32_t& RadarTrack::y (void) { return this->y_; }
+inline int32_t RadarTrack::y () const { return this->y_; }
+inline int32_t& RadarTrack::y () { return this->y_; }
 
 inline void RadarTrack::z (int32_t _z) { this->z_ = _z; }
-inline int32_t RadarTrack::z (void) const { return this->z_; }
-inline int32_t& RadarTrack::z (void) { return this->z_; }
+inline int32_t RadarTrack::z () const { return this->z_; }
+inline int32_t& RadarTrack::z () { return this->z_; }
 
 inline void RadarTrack::plot (const ::octetseq& _plot) { this->plot_ = _plot; }
 inline void RadarTrack::plot (::octetseq&& _plot) { this->plot_ = std::move (_plot); }
-inline const ::octetseq& RadarTrack::plot (void) const { return this->plot_; }
-inline ::octetseq& RadarTrack::plot (void) { return this->plot_; }
+inline const ::octetseq& RadarTrack::plot () const { return this->plot_; }
+inline ::octetseq& RadarTrack::plot () { return this->plot_; }
 
 inline ::RadarTrack& RadarTrack::operator= (const ::RadarTrack& x)
 {

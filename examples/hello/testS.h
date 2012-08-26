@@ -33,13 +33,16 @@ namespace Test
       : public virtual TAOX11_NAMESPACE::PortableServer::Servant
     {
     public:
-      typedef TAOX11_CORBA::servant_traits< Hello>      _traits_type;
-      typedef TAOX11_CORBA::servant_reference< Hello>   _ref_type;
+      /// @name Member types
+      //@{
+      typedef TAOX11_CORBA::servant_traits< Hello>    _traits_type;
+      typedef TAOX11_CORBA::servant_reference< Hello> _ref_type;
+      //@}
 
     protected:
-      Hello (void);
+      Hello ();
       Hello (bool); // for inheritance chains
-      virtual ~Hello (void);
+      virtual ~Hello ();
 
       virtual Servant_proxy_ptr get_proxy ();
 
@@ -48,9 +51,9 @@ namespace Test
 
       virtual bool _is_a (const std::string& logical_type_id);
 
-      TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _this (void);
+      TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _this ();
 
-      virtual const std::string _interface_repository_id (void) const;
+      virtual const std::string _interface_repository_id () const;
 
       // generated from c++/srv_hdr/operation.erb
       virtual std::string get_string (void) = 0;

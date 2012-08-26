@@ -130,8 +130,8 @@ namespace Test
 
     explicit Foo (Foo_proxy_ptr p);
     explicit Foo (Foo_proxy_ptr p, bool);
-    Foo (void);
-    ~Foo (void) = default;
+    Foo ();
+    ~Foo () = default;
 
   private:
     Foo(const Foo&) = delete;

@@ -37,18 +37,18 @@ namespace Test
 
     virtual const char* what() const throw () override;
 
-    virtual void _raise (void) const override;
+    virtual void _raise () const override;
 
     virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
 
     virtual void _tao_decode (TAO_InputCDR &cdr) override;
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const override;
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
 
     // generated from c++/cli_hdr/except_post.erb
-    FooEx (void);
-    virtual ~FooEx (void) throw ();
+    FooEx ();
+    virtual ~FooEx () throw ();
     FooEx (const FooEx&) = default;
     FooEx (FooEx&&) = default;
     explicit FooEx (std::string message);
@@ -57,8 +57,8 @@ namespace Test
 
     void message (const std::string& _message);
     void message (std::string&& _message);
-    const std::string& message (void) const;
-    std::string& message (void);
+    const std::string& message () const;
+    std::string& message ();
 
   private:
     std::string message_;
@@ -73,18 +73,18 @@ namespace Test
 
     virtual const char* what() const throw () override;
 
-    virtual void _raise (void) const override;
+    virtual void _raise () const override;
 
     virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
 
     virtual void _tao_decode (TAO_InputCDR &cdr) override;
 
     /// Deep copy
-    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate (void) const override;
+    virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
 
     // generated from c++/cli_hdr/except_post.erb
-    BooEx (void);
-    virtual ~BooEx (void) throw ();
+    BooEx ();
+    virtual ~BooEx () throw ();
     BooEx (const BooEx&) = default;
     BooEx (BooEx&&) = default;
     explicit BooEx (int32_t id);
@@ -92,8 +92,8 @@ namespace Test
     BooEx& operator= (BooEx&& x);
 
     void id (int32_t _id);
-    int32_t id (void) const;
-    int32_t& id (void);
+    int32_t id () const;
+    int32_t& id ();
 
   private:
     int32_t id_;
@@ -174,10 +174,10 @@ namespace Test
     virtual void do_it (void);
 
     // generated from c++/cli_hdr/attribute.erb
-    virtual int32_t a_number(void);
+    virtual int32_t a_number();
 
     // generated from c++/cli_hdr/attribute.erb
-    virtual std::string a_string(void);
+    virtual std::string a_string();
     virtual void a_string(const std::string& _v);
 
     // generated from c++/cli_hdr/operation.erb
@@ -199,8 +199,8 @@ namespace Test
 
     explicit Foo (Foo_proxy_ptr p);
     explicit Foo (Foo_proxy_ptr p, bool);
-    Foo (void);
-    ~Foo (void) = default;
+    Foo ();
+    ~Foo () = default;
 
   private:
     Foo(const Foo&) = delete;
@@ -256,8 +256,8 @@ inline Test::FooEx::FooEx (std::string message)
 
 inline void Test::FooEx::message (const std::string& _message) { this->message_ = _message; }
 inline void Test::FooEx::message (std::string&& _message) { this->message_ = std::move (_message); }
-inline const std::string& Test::FooEx::message (void) const { return this->message_; }
-inline std::string& Test::FooEx::message (void) { return this->message_; }
+inline const std::string& Test::FooEx::message () const { return this->message_; }
+inline std::string& Test::FooEx::message () { return this->message_; }
 
 inline ::Test::FooEx& Test::FooEx::operator= (const FooEx& x)
 {
@@ -291,8 +291,8 @@ inline Test::BooEx::BooEx (int32_t id)
 }
 
 inline void Test::BooEx::id (int32_t _id) { this->id_ = _id; }
-inline int32_t Test::BooEx::id (void) const { return this->id_; }
-inline int32_t& Test::BooEx::id (void) { return this->id_; }
+inline int32_t Test::BooEx::id () const { return this->id_; }
+inline int32_t& Test::BooEx::id () { return this->id_; }
 
 inline ::Test::BooEx& Test::BooEx::operator= (const ::Test::BooEx& x)
 {

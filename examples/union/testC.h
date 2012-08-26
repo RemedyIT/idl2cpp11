@@ -30,8 +30,8 @@ class Global final
 public:
 
   // generated from c++/cli_hdr/struct_post.erb
-  inline Global (void);
-  ~Global (void) = default;
+  inline Global ();
+  ~Global () = default;
   Global (const Global&) = default;
   Global (Global&&) = default;
   explicit inline Global (int32_t x);
@@ -39,8 +39,8 @@ public:
   inline Global& operator= (Global&& x);
 
   inline void x (int32_t _x);
-  inline int32_t x (void) const;
-  inline int32_t& x (void);
+  inline int32_t x () const;
+  inline int32_t& x ();
 
   inline void swap (Global& s);
 
@@ -72,8 +72,8 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    inline Point (void);
-    ~Point (void) = default;
+    inline Point ();
+    ~Point () = default;
     Point (const Point&) = default;
     Point (Point&&) = default;
     explicit inline Point (int32_t x,
@@ -82,12 +82,12 @@ namespace Test
     inline Point& operator= (Point&& x);
 
     inline void x (int32_t _x);
-    inline int32_t x (void) const;
-    inline int32_t& x (void);
+    inline int32_t x () const;
+    inline int32_t& x ();
 
     inline void y (int32_t _y);
-    inline int32_t y (void) const;
-    inline int32_t& y (void);
+    inline int32_t y () const;
+    inline int32_t& y ();
 
     inline void swap (Point& s);
 
@@ -103,8 +103,8 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    inline Track (void);
-    ~Track (void) = default;
+    inline Track ();
+    ~Track () = default;
     Track (const Track&) = default;
     Track (Track&&) = default;
     explicit inline Track (int32_t id,
@@ -113,13 +113,13 @@ namespace Test
     inline Track& operator= (Track&& x);
 
     inline void id (int32_t _id);
-    inline int32_t id (void) const;
-    inline int32_t& id (void);
+    inline int32_t id () const;
+    inline int32_t& id ();
 
     inline void p (const ::Test::Point& _p);
     inline void p (::Test::Point&& _p);
-    inline const ::Test::Point& p (void) const;
-    inline ::Test::Point& p (void);
+    inline const ::Test::Point& p () const;
+    inline ::Test::Point& p ();
 
     inline void swap (Track& s);
 
@@ -135,57 +135,57 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/union_post.erb
-    inline Data (void);
+    inline Data ();
     inline Data (const Data&);
     inline Data (Data&&);
-    inline ~Data (void);
+    inline ~Data ();
     inline Data &operator= (const Data&);
     inline Data &operator= (Data&&);
 
     inline void _d (DataType);
-    inline DataType _d (void) const;
+    inline DataType _d () const;
 
     inline void longData (int32_t _longData);
-    inline int32_t longData (void) const;
-    inline int32_t& longData (void);
+    inline int32_t longData () const;
+    inline int32_t& longData ();
 
     inline void shortData (int16_t _shortData);
-    inline int16_t shortData (void) const;
-    inline int16_t& shortData (void);
+    inline int16_t shortData () const;
+    inline int16_t& shortData ();
 
     inline void stringData (const std::string& _stringData);
     inline void stringData (std::string&& _stringData);
-    inline const std::string& stringData (void) const;
-    inline std::string& stringData (void);
+    inline const std::string& stringData () const;
+    inline std::string& stringData ();
 
     inline void pointData (const ::Test::Point& _pointData);
     inline void pointData (::Test::Point&& _pointData);
-    inline const ::Test::Point& pointData (void) const;
-    inline ::Test::Point& pointData (void);
+    inline const ::Test::Point& pointData () const;
+    inline ::Test::Point& pointData ();
 
     inline void trackData (const ::Test::Track& _trackData);
     inline void trackData (::Test::Track&& _trackData);
-    inline const ::Test::Track& trackData (void) const;
-    inline ::Test::Track& trackData (void);
+    inline const ::Test::Track& trackData () const;
+    inline ::Test::Track& trackData ();
 
     inline void globalData (const ::Global& _globalData);
     inline void globalData (::Global&& _globalData);
-    inline const ::Global& globalData (void) const;
-    inline ::Global& globalData (void);
+    inline const ::Global& globalData () const;
+    inline ::Global& globalData ();
 
-    inline void _default (void);
+    inline void _default ();
 
     inline void swap (Data& s);
 
   private:
     inline void _swap_u (Data& s);
-    inline void _clear (void);
+    inline void _clear ();
 
     DataType disc_;
     union u_type_
     {
-      u_type_ (void);
-      ~u_type_ (void);
+      u_type_ ();
+      ~u_type_ ();
       int32_t longData_;
       int16_t shortData_;
       std::string stringData_;
@@ -202,8 +202,8 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    inline S (void);
-    ~S (void) = default;
+    inline S ();
+    ~S () = default;
     S (const S&) = default;
     S (S&&) = default;
     explicit inline S (int32_t len);
@@ -211,8 +211,8 @@ namespace Test
     inline S& operator= (S&& x);
 
     inline void len (int32_t _len);
-    inline int32_t len (void) const;
-    inline int32_t& len (void);
+    inline int32_t len () const;
+    inline int32_t& len ();
 
     inline void swap (S& s);
 
@@ -282,45 +282,45 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/union_post.erb
-    inline U (void);
+    inline U ();
     inline U (const U&);
     inline U (U&&);
-    inline ~U (void);
+    inline ~U ();
     inline U &operator= (const U&);
     inline U &operator= (U&&);
 
     inline void _d (int32_t);
-    inline int32_t _d (void) const;
+    inline int32_t _d () const;
 
     inline void x (int32_t _x);
-    inline int32_t x (void) const;
-    inline int32_t& x (void);
+    inline int32_t x () const;
+    inline int32_t& x ();
 
     inline void z (const std::string& _z);
     inline void z (std::string&& _z);
-    inline const std::string& z (void) const;
-    inline std::string& z (void);
+    inline const std::string& z () const;
+    inline std::string& z ();
 
     inline void w (const ::Test::S& _w);
     inline void w (::Test::S&& _w);
-    inline const ::Test::S& w (void) const;
-    inline ::Test::S& w (void);
+    inline const ::Test::S& w () const;
+    inline ::Test::S& w ();
 
     inline void obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj);
-    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj (void) const;
-    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& obj (void);
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj () const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& obj ();
 
     inline void swap (U& s);
 
   private:
     inline void _swap_u (U& s);
-    inline void _clear (void);
+    inline void _clear ();
 
     int32_t disc_;
     union u_type_
     {
-      u_type_ (void);
-      ~u_type_ (void);
+      u_type_ ();
+      ~u_type_ ();
       int32_t x_;
       std::string z_;
       ::Test::S w_;
@@ -433,8 +433,8 @@ namespace Test
 
     explicit Foo (Foo_proxy_ptr p);
     explicit Foo (Foo_proxy_ptr p, bool);
-    Foo (void);
-    ~Foo (void) = default;
+    Foo ();
+    ~Foo () = default;
 
   private:
     Foo(const Foo&) = delete;
@@ -473,8 +473,8 @@ namespace Test
 
     explicit A (A_proxy_ptr p);
     explicit A (A_proxy_ptr p, bool);
-    A (void);
-    ~A (void) = default;
+    A ();
+    ~A () = default;
 
   private:
     A(const A&) = delete;
@@ -598,8 +598,8 @@ inline Global::Global (int32_t x)
 }
 
 inline void Global::x (int32_t _x) { this->x_ = _x; }
-inline int32_t Global::x (void) const { return this->x_; }
-inline int32_t& Global::x (void) { return this->x_; }
+inline int32_t Global::x () const { return this->x_; }
+inline int32_t& Global::x () { return this->x_; }
 
 inline ::Global& Global::operator= (const ::Global& x)
 {
@@ -633,12 +633,12 @@ inline Test::Point::Point (int32_t x,
 }
 
 inline void Test::Point::x (int32_t _x) { this->x_ = _x; }
-inline int32_t Test::Point::x (void) const { return this->x_; }
-inline int32_t& Test::Point::x (void) { return this->x_; }
+inline int32_t Test::Point::x () const { return this->x_; }
+inline int32_t& Test::Point::x () { return this->x_; }
 
 inline void Test::Point::y (int32_t _y) { this->y_ = _y; }
-inline int32_t Test::Point::y (void) const { return this->y_; }
-inline int32_t& Test::Point::y (void) { return this->y_; }
+inline int32_t Test::Point::y () const { return this->y_; }
+inline int32_t& Test::Point::y () { return this->y_; }
 
 inline ::Test::Point& Test::Point::operator= (const ::Test::Point& x)
 {
@@ -675,13 +675,13 @@ inline Test::Track::Track (int32_t id,
 }
 
 inline void Test::Track::id (int32_t _id) { this->id_ = _id; }
-inline int32_t Test::Track::id (void) const { return this->id_; }
-inline int32_t& Test::Track::id (void) { return this->id_; }
+inline int32_t Test::Track::id () const { return this->id_; }
+inline int32_t& Test::Track::id () { return this->id_; }
 
 inline void Test::Track::p (const ::Test::Point& _p) { this->p_ = _p; }
 inline void Test::Track::p (::Test::Point&& _p) { this->p_ = std::move (_p); }
-inline const ::Test::Point& Test::Track::p (void) const { return this->p_; }
-inline ::Test::Point& Test::Track::p (void) { return this->p_; }
+inline const ::Test::Point& Test::Track::p () const { return this->p_; }
+inline ::Test::Point& Test::Track::p () { return this->p_; }
 
 inline ::Test::Track& Test::Track::operator= (const ::Test::Track& x)
 {
@@ -705,20 +705,20 @@ inline void Test::Track::swap (::Test::Track& s)
 }
 // generated from c++/cli_inl/union_inl.erb
 
-inline Test::Data::u_type_::u_type_ (void)
+inline Test::Data::u_type_::u_type_ ()
 {
 }
 
-inline Test::Data::u_type_::~u_type_ (void)
+inline Test::Data::u_type_::~u_type_ ()
 {
 }
 
-inline Test::Data::Data (void)
+inline Test::Data::Data ()
   : disc_ (::Test::DataType::dtEmpty)
 {
 }
 
-inline Test::Data::~Data (void)
+inline Test::Data::~Data ()
 {
   this->_clear ();
 }
@@ -899,7 +899,7 @@ inline void Test::Data::_d (DataType discval)
     this->disc_ = discval;
   }
 }
-inline ::Test::DataType Test::Data::_d (void) const
+inline ::Test::DataType Test::Data::_d () const
 {
   return this->disc_;
 }
@@ -913,7 +913,7 @@ inline void Test::Data::longData (int32_t _longData)
   this->u_.longData_ = _longData;
   this->disc_ = ::Test::DataType::dtLong;
 }
-inline int32_t Test::Data::longData (void) const
+inline int32_t Test::Data::longData () const
 {
   switch (this->disc_)
   {
@@ -924,7 +924,7 @@ inline int32_t Test::Data::longData (void) const
   }
   return this->u_.longData_;
 }
-inline int32_t& Test::Data::longData (void)
+inline int32_t& Test::Data::longData ()
 {
   switch (this->disc_)
   {
@@ -945,7 +945,7 @@ inline void Test::Data::shortData (int16_t _shortData)
   this->u_.shortData_ = _shortData;
   this->disc_ = ::Test::DataType::dtShort;
 }
-inline int16_t Test::Data::shortData (void) const
+inline int16_t Test::Data::shortData () const
 {
   switch (this->disc_)
   {
@@ -956,7 +956,7 @@ inline int16_t Test::Data::shortData (void) const
   }
   return this->u_.shortData_;
 }
-inline int16_t& Test::Data::shortData (void)
+inline int16_t& Test::Data::shortData ()
 {
   switch (this->disc_)
   {
@@ -994,7 +994,7 @@ inline void Test::Data::stringData (std::string&& _stringData)
   }
   this->disc_ = ::Test::DataType::dtString;
 }
-inline const std::string& Test::Data::stringData (void) const
+inline const std::string& Test::Data::stringData () const
 {
   switch (this->disc_)
   {
@@ -1005,7 +1005,7 @@ inline const std::string& Test::Data::stringData (void) const
   }
   return this->u_.stringData_;
 }
-inline std::string& Test::Data::stringData (void)
+inline std::string& Test::Data::stringData ()
 {
   switch (this->disc_)
   {
@@ -1043,7 +1043,7 @@ inline void Test::Data::pointData (::Test::Point&& _pointData)
   }
   this->disc_ = ::Test::DataType::dtPoint;
 }
-inline const ::Test::Point& Test::Data::pointData (void) const
+inline const ::Test::Point& Test::Data::pointData () const
 {
   switch (this->disc_)
   {
@@ -1054,7 +1054,7 @@ inline const ::Test::Point& Test::Data::pointData (void) const
   }
   return this->u_.pointData_;
 }
-inline ::Test::Point& Test::Data::pointData (void)
+inline ::Test::Point& Test::Data::pointData ()
 {
   switch (this->disc_)
   {
@@ -1092,7 +1092,7 @@ inline void Test::Data::trackData (::Test::Track&& _trackData)
   }
   this->disc_ = ::Test::DataType::dtTrack;
 }
-inline const ::Test::Track& Test::Data::trackData (void) const
+inline const ::Test::Track& Test::Data::trackData () const
 {
   switch (this->disc_)
   {
@@ -1103,7 +1103,7 @@ inline const ::Test::Track& Test::Data::trackData (void) const
   }
   return this->u_.trackData_;
 }
-inline ::Test::Track& Test::Data::trackData (void)
+inline ::Test::Track& Test::Data::trackData ()
 {
   switch (this->disc_)
   {
@@ -1141,7 +1141,7 @@ inline void Test::Data::globalData (::Global&& _globalData)
   }
   this->disc_ = ::Test::DataType::dtGlobal;
 }
-inline const ::Global& Test::Data::globalData (void) const
+inline const ::Global& Test::Data::globalData () const
 {
   switch (this->disc_)
   {
@@ -1152,7 +1152,7 @@ inline const ::Global& Test::Data::globalData (void) const
   }
   return this->u_.globalData_;
 }
-inline ::Global& Test::Data::globalData (void)
+inline ::Global& Test::Data::globalData ()
 {
   switch (this->disc_)
   {
@@ -1313,7 +1313,7 @@ inline void Test::Data::_swap_u (::Test::Data& s)
   }
 }
 
-inline void Test::Data::_clear (void)
+inline void Test::Data::_clear ()
 {
   switch (this->disc_)
   {
@@ -1350,7 +1350,7 @@ inline void Test::Data::_clear (void)
   }
 }
 
-inline void Test::Data::_default (void)
+inline void Test::Data::_default ()
 {
   this->_clear ();
   this->disc_ = ::Test::DataType::dtEmpty;
@@ -1367,8 +1367,8 @@ inline Test::S::S (int32_t len)
 }
 
 inline void Test::S::len (int32_t _len) { this->len_ = _len; }
-inline int32_t Test::S::len (void) const { return this->len_; }
-inline int32_t& Test::S::len (void) { return this->len_; }
+inline int32_t Test::S::len () const { return this->len_; }
+inline int32_t& Test::S::len () { return this->len_; }
 
 inline ::Test::S& Test::S::operator= (const ::Test::S& x)
 {
@@ -1389,21 +1389,21 @@ inline void Test::S::swap (::Test::S& s)
 }
 // generated from c++/cli_inl/union_inl.erb
 
-inline Test::U::u_type_::u_type_ (void)
+inline Test::U::u_type_::u_type_ ()
 {
 }
 
-inline Test::U::u_type_::~u_type_ (void)
+inline Test::U::u_type_::~u_type_ ()
 {
 }
 
-inline Test::U::U (void)
+inline Test::U::U ()
   : disc_ ((-2147483647-1))
 {
   new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
 }
 
-inline Test::U::~U (void)
+inline Test::U::~U ()
 {
   this->_clear ();
 }
@@ -1528,7 +1528,7 @@ inline void Test::U::_d (int32_t discval)
     this->disc_ = discval;
   }
 }
-inline int32_t Test::U::_d (void) const
+inline int32_t Test::U::_d () const
 {
   return this->disc_;
 }
@@ -1542,7 +1542,7 @@ inline void Test::U::x (int32_t _x)
   this->u_.x_ = _x;
   this->disc_ = 1;
 }
-inline int32_t Test::U::x (void) const
+inline int32_t Test::U::x () const
 {
   switch (this->disc_)
   {
@@ -1553,7 +1553,7 @@ inline int32_t Test::U::x (void) const
   }
   return this->u_.x_;
 }
-inline int32_t& Test::U::x (void)
+inline int32_t& Test::U::x ()
 {
   switch (this->disc_)
   {
@@ -1591,7 +1591,7 @@ inline void Test::U::z (std::string&& _z)
   }
   this->disc_ = 2;
 }
-inline const std::string& Test::U::z (void) const
+inline const std::string& Test::U::z () const
 {
   switch (this->disc_)
   {
@@ -1602,7 +1602,7 @@ inline const std::string& Test::U::z (void) const
   }
   return this->u_.z_;
 }
-inline std::string& Test::U::z (void)
+inline std::string& Test::U::z ()
 {
   switch (this->disc_)
   {
@@ -1640,7 +1640,7 @@ inline void Test::U::w (::Test::S&& _w)
   }
   this->disc_ = 3;
 }
-inline const ::Test::S& Test::U::w (void) const
+inline const ::Test::S& Test::U::w () const
 {
   switch (this->disc_)
   {
@@ -1652,7 +1652,7 @@ inline const ::Test::S& Test::U::w (void) const
   }
   return this->u_.w_;
 }
-inline ::Test::S& Test::U::w (void)
+inline ::Test::S& Test::U::w ()
 {
   switch (this->disc_)
   {
@@ -1678,7 +1678,7 @@ inline void Test::U::obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _o
   }
   this->disc_ = (-2147483647-1);
 }
-inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj (void) const
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj () const
 {
   switch (this->disc_)
   {
@@ -1692,7 +1692,7 @@ inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj (void) c
   }
   return this->u_.obj_;
 }
-inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& Test::U::obj (void)
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
 {
   switch (this->disc_)
   {
@@ -1823,7 +1823,7 @@ inline void Test::U::_swap_u (::Test::U& s)
   }
 }
 
-inline void Test::U::_clear (void)
+inline void Test::U::_clear ()
 {
   switch (this->disc_)
   {

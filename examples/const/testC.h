@@ -172,8 +172,8 @@ protected:
 
   explicit A (A_proxy_ptr p);
   explicit A (A_proxy_ptr p, bool);
-  A (void);
-  ~A (void) = default;
+  A ();
+  ~A () = default;
 
 private:
   A(const A&) = delete;

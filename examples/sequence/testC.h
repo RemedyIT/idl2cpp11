@@ -34,8 +34,8 @@ namespace Test
   public:
 
     // generated from c++/cli_hdr/struct_post.erb
-    inline Simple (void);
-    ~Simple (void) = default;
+    inline Simple ();
+    ~Simple () = default;
     Simple (const Simple&) = default;
     Simple (Simple&&) = default;
     explicit inline Simple (uint8_t o,
@@ -48,29 +48,29 @@ namespace Test
     inline Simple& operator= (Simple&& x);
 
     inline void o (uint8_t _o);
-    inline uint8_t o (void) const;
-    inline uint8_t& o (void);
+    inline uint8_t o () const;
+    inline uint8_t& o ();
 
     inline void l (int32_t _l);
-    inline int32_t l (void) const;
-    inline int32_t& l (void);
+    inline int32_t l () const;
+    inline int32_t& l ();
 
     inline void s (const std::string& _s);
     inline void s (std::string&& _s);
-    inline const std::string& s (void) const;
-    inline std::string& s (void);
+    inline const std::string& s () const;
+    inline std::string& s ();
 
     inline void d (double _d);
-    inline double d (void) const;
-    inline double& d (void);
+    inline double d () const;
+    inline double& d ();
 
     inline void b (bool _b);
-    inline bool b (void) const;
-    inline bool& b (void);
+    inline bool b () const;
+    inline bool& b ();
 
     inline void c (char _c);
-    inline char c (void) const;
-    inline char& c (void);
+    inline char c () const;
+    inline char& c ();
 
     inline void swap (Simple& s);
 
@@ -216,8 +216,8 @@ namespace Test
 
     explicit Foo (Foo_proxy_ptr p);
     explicit Foo (Foo_proxy_ptr p, bool);
-    Foo (void);
-    ~Foo (void) = default;
+    Foo ();
+    ~Foo () = default;
 
   private:
     Foo(const Foo&) = delete;
@@ -345,29 +345,29 @@ inline Test::Simple::Simple (uint8_t o,
 }
 
 inline void Test::Simple::o (uint8_t _o) { this->o_ = _o; }
-inline uint8_t Test::Simple::o (void) const { return this->o_; }
-inline uint8_t& Test::Simple::o (void) { return this->o_; }
+inline uint8_t Test::Simple::o () const { return this->o_; }
+inline uint8_t& Test::Simple::o () { return this->o_; }
 
 inline void Test::Simple::l (int32_t _l) { this->l_ = _l; }
-inline int32_t Test::Simple::l (void) const { return this->l_; }
-inline int32_t& Test::Simple::l (void) { return this->l_; }
+inline int32_t Test::Simple::l () const { return this->l_; }
+inline int32_t& Test::Simple::l () { return this->l_; }
 
 inline void Test::Simple::s (const std::string& _s) { this->s_ = _s; }
 inline void Test::Simple::s (std::string&& _s) { this->s_ = std::move (_s); }
-inline const std::string& Test::Simple::s (void) const { return this->s_; }
-inline std::string& Test::Simple::s (void) { return this->s_; }
+inline const std::string& Test::Simple::s () const { return this->s_; }
+inline std::string& Test::Simple::s () { return this->s_; }
 
 inline void Test::Simple::d (double _d) { this->d_ = _d; }
-inline double Test::Simple::d (void) const { return this->d_; }
-inline double& Test::Simple::d (void) { return this->d_; }
+inline double Test::Simple::d () const { return this->d_; }
+inline double& Test::Simple::d () { return this->d_; }
 
 inline void Test::Simple::b (bool _b) { this->b_ = _b; }
-inline bool Test::Simple::b (void) const { return this->b_; }
-inline bool& Test::Simple::b (void) { return this->b_; }
+inline bool Test::Simple::b () const { return this->b_; }
+inline bool& Test::Simple::b () { return this->b_; }
 
 inline void Test::Simple::c (char _c) { this->c_ = _c; }
-inline char Test::Simple::c (void) const { return this->c_; }
-inline char& Test::Simple::c (void) { return this->c_; }
+inline char Test::Simple::c () const { return this->c_; }
+inline char& Test::Simple::c () { return this->c_; }
 
 inline ::Test::Simple& Test::Simple::operator= (const ::Test::Simple& x)
 {

@@ -120,8 +120,8 @@ namespace Test
 
     explicit Hello (Hello_proxy_ptr p);
     explicit Hello (Hello_proxy_ptr p, bool);
-    Hello (void);
-    ~Hello (void) = default;
+    Hello ();
+    ~Hello () = default;
 
   private:
     Hello(const Hello&) = delete;

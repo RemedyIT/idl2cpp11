@@ -33,13 +33,16 @@ namespace Test
       : public virtual TAOX11_NAMESPACE::PortableServer::Servant
     {
     public:
-      typedef TAOX11_CORBA::servant_traits< Foo>      _traits_type;
-      typedef TAOX11_CORBA::servant_reference< Foo>   _ref_type;
+      /// @name Member types
+      //@{
+      typedef TAOX11_CORBA::servant_traits< Foo>    _traits_type;
+      typedef TAOX11_CORBA::servant_reference< Foo> _ref_type;
+      //@}
 
     protected:
-      Foo (void);
+      Foo ();
       Foo (bool); // for inheritance chains
-      virtual ~Foo (void);
+      virtual ~Foo ();
 
       virtual Servant_proxy_ptr get_proxy ();
 
@@ -48,18 +51,18 @@ namespace Test
 
       virtual bool _is_a (const std::string& logical_type_id);
 
-      TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this (void);
+      TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
 
-      virtual const std::string _interface_repository_id (void) const;
+      virtual const std::string _interface_repository_id () const;
 
       // generated from c++/srv_hdr/operation.erb
       virtual void do_it (void) = 0;
 
       // generated from c++/srv_hdr/attribute.erb
-      virtual int32_t a_number(void) = 0;
+      virtual int32_t a_number() = 0;
 
       // generated from c++/srv_hdr/attribute.erb
-      virtual std::string a_string(void) = 0;
+      virtual std::string a_string() = 0;
       virtual void a_string(const std::string& _v) = 0;
 
       // generated from c++/srv_hdr/operation.erb

@@ -99,8 +99,8 @@ namespace Test
   protected:
     typedef std::shared_ptr<Foo>   _shared_ptr_type;
 
-    Foo (void);
-    ~Foo (void) = default;
+    Foo ();
+    ~Foo () = default;
 
   private:
     Foo(const Foo&) = delete;

@@ -175,8 +175,8 @@ namespace Test
 
     explicit Hello_Factory (Hello_Factory_proxy_ptr p);
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool);
-    Hello_Factory (void);
-    ~Hello_Factory (void) = default;
+    Hello_Factory ();
+    ~Hello_Factory () = default;
 
   private:
     Hello_Factory(const Hello_Factory&) = delete;
@@ -223,8 +223,8 @@ namespace Test
 
     explicit Hello (Hello_proxy_ptr p);
     explicit Hello (Hello_proxy_ptr p, bool);
-    Hello (void);
-    ~Hello (void) = default;
+    Hello ();
+    ~Hello () = default;
 
   private:
     Hello(const Hello&) = delete;
