@@ -117,7 +117,7 @@ namespace TAOX11_NAMESPACE
     template<>
     object_traits< ::A>::shared_ptr_type
     object_traits< ::A>::lock_shared (
-        ::A*);
+        ::A* p);
     template<>
     const Object_proxy*
     object_traits< ::A>::to_proxy (
@@ -149,8 +149,11 @@ class A
 public:
   template <typename T> friend struct TAOX11_CORBA::object_traits;
 
-  typedef TAOX11_CORBA::object_traits< A> _traits_type;
-  typedef TAOX11_CORBA::object_reference< A> _ref_type;
+  /// @name Member types
+  //@{
+  typedef TAOX11_NAMESPACE::IDL::traits< A> _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< A>::ref_type _ref_type;
+  //@}
 
   virtual const std::string& _interface_repository_id () const override;
 

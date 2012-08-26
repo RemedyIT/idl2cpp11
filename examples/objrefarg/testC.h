@@ -54,7 +54,7 @@ namespace TAOX11_NAMESPACE
     template<>
     object_traits< ::Test::Hello>::shared_ptr_type
     object_traits< ::Test::Hello>::lock_shared (
-        ::Test::Hello*);
+        ::Test::Hello* p);
     template<>
     const Object_proxy*
     object_traits< ::Test::Hello>::to_proxy (
@@ -111,7 +111,7 @@ namespace TAOX11_NAMESPACE
     template<>
     object_traits< ::Test::Hello_Factory>::shared_ptr_type
     object_traits< ::Test::Hello_Factory>::lock_shared (
-        ::Test::Hello_Factory*);
+        ::Test::Hello_Factory* p);
     template<>
     const Object_proxy*
     object_traits< ::Test::Hello_Factory>::to_proxy (
@@ -147,8 +147,11 @@ namespace Test
   public:
     template <typename T> friend struct TAOX11_CORBA::object_traits;
 
-    typedef TAOX11_CORBA::object_traits< Hello_Factory> _traits_type;
-    typedef TAOX11_CORBA::object_reference< Hello_Factory> _ref_type;
+    /// @name Member types
+    //@{
+    typedef TAOX11_NAMESPACE::IDL::traits< Hello_Factory> _traits_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< Hello_Factory>::ref_type _ref_type;
+    //@}
 
     virtual const std::string& _interface_repository_id () const override;
 
@@ -195,8 +198,11 @@ namespace Test
   public:
     template <typename T> friend struct TAOX11_CORBA::object_traits;
 
-    typedef TAOX11_CORBA::object_traits< Hello> _traits_type;
-    typedef TAOX11_CORBA::object_reference< Hello> _ref_type;
+    /// @name Member types
+    //@{
+    typedef TAOX11_NAMESPACE::IDL::traits< Hello> _traits_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< Hello>::ref_type _ref_type;
+    //@}
 
     virtual const std::string& _interface_repository_id () const override;
 
