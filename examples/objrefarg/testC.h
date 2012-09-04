@@ -157,7 +157,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello
-    virtual TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type get_hello (void);
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type get_hello ();
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello_2
@@ -208,11 +208,11 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Hello::get_string
-    virtual std::string get_string (void);
+    virtual std::string get_string ();
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Hello::shutdown
-    virtual void shutdown (void);
+    virtual void shutdown ();
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Hello>::ref_type _narrow (

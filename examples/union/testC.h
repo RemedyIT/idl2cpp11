@@ -407,7 +407,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::return_union
-    virtual ::Test::Data return_union (void);
+    virtual ::Test::Data return_union ();
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::get_union
@@ -419,7 +419,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::shutdown
-    virtual void shutdown (void);
+    virtual void shutdown ();
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (

@@ -40,20 +40,25 @@ namespace Test
       //@}
 
     protected:
+      /// Constructor
       Foo ();
-      Foo (bool); // for inheritance chains
+
+      /// Constructor for inheritance chains
+      Foo (bool);
+
+      /// Destructor
       virtual ~Foo ();
 
-      virtual Servant_proxy_ptr get_proxy ();
+      virtual Servant_proxy_ptr get_proxy () override;
 
       template <typename T> friend class TAOX11_CORBA::servant_reference;
     public:
 
-      virtual bool _is_a (const std::string& logical_type_id);
+      virtual bool _is_a (const std::string& logical_type_id) override;
 
       TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
 
-      virtual const std::string _interface_repository_id () const;
+      virtual const std::string _interface_repository_id () const override;
 
       // generated from c++/srv_hdr/operation.erb
       virtual void do_it (void) = 0;

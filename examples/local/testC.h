@@ -91,7 +91,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::do_something
-    virtual void do_something (void) = 0;
+    virtual void do_something () = 0;
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (

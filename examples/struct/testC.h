@@ -128,7 +128,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Bar::op
-    virtual void op (void);
+    virtual void op ();
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Bar>::ref_type _narrow (
@@ -303,7 +303,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::return_struct
-    virtual ::Test::Simple return_struct (void);
+    virtual ::Test::Simple return_struct ();
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::get_struct
@@ -315,7 +315,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::shutdown
-    virtual void shutdown (void);
+    virtual void shutdown ();
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (

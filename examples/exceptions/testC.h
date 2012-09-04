@@ -174,7 +174,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::do_it
-    virtual void do_it (void);
+    virtual void do_it ();
 
     // generated from c++/cli_hdr/attribute.erb
     virtual int32_t a_number();
@@ -185,7 +185,7 @@ namespace Test
 
     // generated from c++/cli_hdr/operation.erb
     /// @copybrief Test::Foo::shutdown
-    virtual void shutdown (void);
+    virtual void shutdown ();
 
     // generated from c++/cli_hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (
