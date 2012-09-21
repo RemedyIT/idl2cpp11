@@ -148,7 +148,8 @@ public:
   //@}
 
 protected:
-  // Private state members
+  /// @name Private state members
+  //@{
   virtual void val1 (int16_t _val1) = 0;
   virtual int16_t val1 () const = 0;
   virtual int16_t& val1 () = 0;
@@ -159,6 +160,7 @@ protected:
   virtual void val5 (IDL::traits< Example>::ref_type _val5) = 0;
   virtual IDL::traits< Example>::ref_type val5 () const = 0;
   virtual IDL::traits< Example>::ref_type& val5 () = 0;
+  //@}
 
 protected:
   virtual bool
@@ -485,7 +487,8 @@ public:
   //@}
 
 protected:
-  // Private state members
+  /// @name Private state members
+  //@{
   virtual void v (int32_t _v) = 0;
   virtual int32_t v () const = 0;
   virtual int32_t& v () = 0;
@@ -496,6 +499,7 @@ protected:
   virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) = 0;
   virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const = 0;
   virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () = 0;
+  //@}
 
 protected:
   virtual bool
