@@ -105,6 +105,9 @@ namespace Test
     Foo ();
     ~Foo () = default;
 
+    /// Returns a strong client reference for the local object you are calling
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
+
   private:
     Foo(const Foo&) = delete;
     Foo(Foo&&) = delete;
