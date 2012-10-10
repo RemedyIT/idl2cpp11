@@ -1729,7 +1729,7 @@ operator<< (
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
-#include "testP.h"
+#include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
