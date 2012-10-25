@@ -1,4 +1,9 @@
-// -*- C++ -*-
+/*--------------------------------------------------------------------
+ * hello_receiver_exec.h - CIAO C++11 hello receiver component
+ *
+ * Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ --------------------------------------------------------------------*/
 
 #ifndef CIAO_HELLO_RECEIVER_EXEC_H_
 #define CIAO_HELLO_RECEIVER_EXEC_H_
