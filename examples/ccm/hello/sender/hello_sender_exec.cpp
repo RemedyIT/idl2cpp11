@@ -7,6 +7,7 @@
 
 #include "hello_sender_exec.h"
 #include "ace/OS_NS_unistd.h"
+#include "tao/x11/log.h"
 
 namespace CIAO_Hello_Sender_Impl
 {
@@ -31,86 +32,71 @@ namespace CIAO_Hello_Sender_Impl
       {
         int32_t result = my_foo_ami_->foo ("Do something synchronous",
                                                 out_str);
-        ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH):\tInvoked synchronous call (FOO)")
-                ACE_TEXT(" result <%u> answer <%C>\n"), result, out_str.c_str ()));
+
+        taox11_info << "Sender (SYNCH):\tInvoked synchronous call (FOO) "
+                    << "result <" << result << "> answer <" << out_str << std::endl;
 
         int32_t answer;
         my_foo_ami_->hello (answer);
-        ACE_DEBUG ((LM_DEBUG,
-                 ACE_TEXT("Sender (SYNCH):\tInvoked synchronous call ")
-                 ACE_TEXT("(HELLO) answer <%u>\n"), answer));
+
+        taox11_info << "Sender (SYNCH):\tInvoked synchronous call "
+                    << "(HELLO) answer <" << answer << ">" << std::endl;
 
         try
           {
             int16_t rw_attrib = my_foo_ami_->rw_attrib ();
-            ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH):\tInvoked synchronous call ")
-                ACE_TEXT("(GET_RW_ATTRIB) answer <%u>\n"), rw_attrib));
+            taox11_info << "Sender (SYNCH):\tInvoked synchronous call "
+                        << "(GET_RW_ATTRIB) answer <" << rw_attrib << ">" << std::endl;
           }
         catch (const Hello::InternalError& ex)
           {
-            ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH FOO) :\tExpected Except caught :")
-                ACE_TEXT(" <%u> <%C>\n"), ex.id (), ex.error_string ().c_str ()));
+            taox11_info << "Sender (SYNCH FOO) :\tExpected exception caught: " << ex << std::endl;
           }
 
         try
           {
             my_foo_ami_->rw_attrib (15);
-            ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH):\tInvoked synchronous call ")
-                ACE_TEXT("(SET_RW_ATTRIB) to <15>\n")));
+            taox11_info << "Sender (SYNCH):\tInvoked synchronous call "
+                        << "(SET_RW_ATTRIB) to <15>\n";
           }
         catch (const Hello::InternalError& ex)
           {
-            ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH FOO) :\tExpected Except caught :")
-                ACE_TEXT(" <%u> <%C>\n"), ex.id (), ex.error_string ().c_str ()));
+            taox11_info << "Sender (SYNCH FOO) :\tExpected exception caught :" << ex << std::endl;
           }
 
         try
           {
             int16_t ro_attrib = my_foo_ami_->ro_attrib ();
-            ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH):\tInvoked synchronous call ")
-                ACE_TEXT("(GET_RO_ATTRIB) answer <%u>\n"), ro_attrib));
+            taox11_info << "Sender (SYNCH):\tInvoked synchronous call "
+                        << "(GET_RO_ATTRIB) answer <" << ro_attrib << ">" << std::endl;
           }
         catch (const Hello::InternalError& ex)
           {
-            ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH FOO) :\tExpected Except caught :")
-                ACE_TEXT(" <%u> <%C>\n"), ex.id(), ex.error_string ().c_str ()));
+            taox11_info << "Sender (SYNCH FOO) :\tExpected exception caught :" << ex << std::endl;
           }
       }
     try
       {
         int32_t result = my_foo_ami_->foo ("", out_str);
-        ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH) :\tInvoked synchronous call result ")
-                ACE_TEXT("<%u> answer <%C>\n"), result, out_str.c_str ()));
+        taox11_info << "Sender (SYNCH) :\tInvoked synchronous call result "
+                    << "<" << result << "> answer <" << out_str << ">" << std::endl;
       }
     catch (const Hello::InternalError& ex)
       {
-        ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH FOO) :\tExpected Except caught : ")
-                ACE_TEXT("<%u> <%C>\n"), ex.id (), ex.error_string ().c_str ()));
+        taox11_info << "Sender (SYNCH FOO) :\tExpected exception caught : " << ex << std::endl;
       }
     try
       {
         my_foo_ami_->rw_attrib (0);
-        ACE_DEBUG ((LM_DEBUG,
-            ACE_TEXT("Sender (SYNCH) :\tInvoked synchronous call rw_attrib\n")));
+        taox11_info << "Sender (SYNCH) :\tInvoked synchronous call rw_attrib\n" << std::endl;
       }
     catch (const Hello::InternalError& ex)
       {
-        ACE_DEBUG ((LM_DEBUG,
-                ACE_TEXT("Sender (SYNCH RW_ATTRIB) :\tExpected Except caught :")
-                ACE_TEXT(" <%u> <%C>\n"), ex.id (), ex.error_string ().c_str ()));
+        taox11_info << "Sender (SYNCH RW_ATTRIB) :\tExpected exception caught :" << ex << std::endl;
       }
     catch (const CORBA::Exception& ex)
       {
-//         ex._tao_print_exception ("ERROR: Caught unexpected except:");
+        taox11_error << "ERROR: Caught unexpected exception: " << ex << std::endl;
       }
     return 0;
   }
