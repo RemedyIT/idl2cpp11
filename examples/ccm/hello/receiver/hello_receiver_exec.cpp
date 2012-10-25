@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------
- * hello_receiver_exec.h - CIAO C++11 hello receiver component
+ * hello_receiver_exec.cpp - CIAO C++11 hello receiver component
  *
  * Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
