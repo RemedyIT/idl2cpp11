@@ -59,7 +59,8 @@ namespace Test
     void message (std::string&& _message);
     const std::string& message () const;
     std::string& message ();
-
+  protected:
+    virtual void _info (std::ostream&) const override;
   private:
     std::string message_;
   }; // FooEx
@@ -94,7 +95,8 @@ namespace Test
     void id (int32_t _id);
     int32_t id () const;
     int32_t& id ();
-
+  protected:
+    virtual void _info (std::ostream&) const override;
   private:
     int32_t id_;
   }; // BooEx
@@ -319,16 +321,6 @@ inline ::Test::BooEx& Test::BooEx::operator= (::Test::BooEx&& x)
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 }; // std
-
-// generated from c++/cli_hdr/except_os.erb
-std::ostream& operator<< (
-    std::ostream&,
-    const ::Test::FooEx&);
-
-// generated from c++/cli_hdr/except_os.erb
-std::ostream& operator<< (
-    std::ostream&,
-    const ::Test::BooEx&);
 
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
