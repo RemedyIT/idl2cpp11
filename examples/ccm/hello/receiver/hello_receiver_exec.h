@@ -56,7 +56,6 @@ namespace CIAO_Hello_Receiver_Impl
     virtual void ccm_activate ();
     virtual void ccm_passivate ();
     virtual void ccm_remove ();
-    virtual IDL::traits<CORBA::Object>::ref_type get_facet_executor (const std::string& facet) override;
 
   private:
     IDL::traits<Hello::CCM_Receiver_Context>::ref_type context_;

@@ -154,12 +154,6 @@ namespace CIAO_Hello_Sender_Impl
   {
   }
 
-  IDL::traits<CORBA::Object>::ref_type
-  Sender_exec_i::get_facet_executor (const std::string& /*facet*/)
-  {
-    return nullptr;
-  }
-
   extern "C" HELLO_SENDER_EXEC_Export IDL::traits<Components::EnterpriseComponent>::ref_type
   create_Hello_Sender_Impl ()
   {

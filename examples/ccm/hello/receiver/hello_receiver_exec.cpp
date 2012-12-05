@@ -144,18 +144,6 @@ namespace CIAO_Hello_Receiver_Impl
   {
   }
 
-  IDL::traits<CORBA::Object>::ref_type
-  Receiver_exec_i::get_facet_executor (
-    const std::string& name)
-  {
-    if (name == "do_my_foo")
-      {
-        return this->get_do_my_foo ();
-      }
-
-    return nullptr;
-  }
-
   extern "C"  IDL::traits<Components::EnterpriseComponent>::ref_type
   create_Hello_AMI_Receiver_Impl ()
   {

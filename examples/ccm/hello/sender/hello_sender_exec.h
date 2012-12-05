@@ -60,7 +60,6 @@ namespace CIAO_Hello_Sender_Impl
     virtual void ccm_activate () override;
     virtual void ccm_passivate () override;
     virtual void ccm_remove () override;
-    virtual IDL::traits<CORBA::Object>::ref_type get_facet_executor (const std::string& facet) override;
     //@}
 
     //@{
