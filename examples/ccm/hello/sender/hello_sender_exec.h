@@ -22,12 +22,12 @@
 namespace CIAO_Hello_Sender_Impl
 {
   /// Worker thread for synchronous invocations
-  class synch_foo_generator : public ACE_Task_Base
+  class synch_foo_generator final : public ACE_Task_Base
   {
   public:
     synch_foo_generator (IDL::traits<Hello::CCM_Sender_Context>::ref_type context);
 
-    virtual int svc ();
+    virtual int svc () override;
 
   private:
     IDL::traits<Hello::CCM_Sender_Context>::ref_type ciao_context_;
@@ -37,8 +37,7 @@ namespace CIAO_Hello_Sender_Impl
    * Component Executor Implementation Class: Sender_exec_i
    */
 
-  class Sender_exec_i
-    : public CIAO_Hello_Sender_Impl::Sender_Exec
+  class Sender_exec_i final : public CIAO_Hello_Sender_Impl::Sender_Exec
   {
   public:
     Sender_exec_i ();

@@ -18,44 +18,42 @@
 
 namespace CIAO_Hello_Receiver_Impl
 {
-  class MyFoo_exec_i
-    : public Hello::CCM_MyFoo
+  class MyFoo_exec_i final : public Hello::CCM_MyFoo
   {
   public:
     MyFoo_exec_i (IDL::traits<Hello::CCM_Receiver_Context>::ref_type ctx);
     virtual ~MyFoo_exec_i ();
 
-    virtual int32_t foo (const std::string& in_str, std::string& answer);
+    virtual int32_t foo (const std::string& in_str, std::string& answer) override;
 
-    virtual void hello (int32_t& answer);
+    virtual void hello (int32_t& answer) override;
 
-    virtual int16_t rw_attrib ();
+    virtual int16_t rw_attrib () override;
 
-    virtual void rw_attrib (int16_t new_value);
+    virtual void rw_attrib (int16_t new_value) override;
 
-    virtual int16_t ro_attrib ();
+    virtual int16_t ro_attrib () override;
   private:
     IDL::traits<Hello::CCM_Receiver_Context>::ref_type ciao_context_;
     bool get_rw_;
     bool get_ro_;
   };
 
-  class Receiver_exec_i
-    : public Receiver_Exec
+  class Receiver_exec_i final  : public Receiver_Exec
   {
   public:
     Receiver_exec_i ();
     virtual ~Receiver_exec_i ();
 
-    virtual IDL::traits<Hello::CCM_MyFoo>::ref_type get_do_my_foo ();
+    virtual IDL::traits<Hello::CCM_MyFoo>::ref_type get_do_my_foo () override;
 
-    virtual void set_session_context (IDL::traits<Components::SessionContext>::ref_type ctx);
+    virtual void set_session_context (IDL::traits<Components::SessionContext>::ref_type ctx) override;
 
-    virtual void configuration_complete ();
+    virtual void configuration_complete () override;
 
-    virtual void ccm_activate ();
-    virtual void ccm_passivate ();
-    virtual void ccm_remove ();
+    virtual void ccm_activate () override;
+    virtual void ccm_passivate () override;
+    virtual void ccm_remove () override;
 
   private:
     IDL::traits<Hello::CCM_Receiver_Context>::ref_type context_;
