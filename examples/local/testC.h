@@ -106,7 +106,7 @@ namespace Test
     ~Foo () = default;
 
     /// Returns a strong client reference for the local object you are calling
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
+    IDL::traits< ::Test::Foo>::ref_type _this ();
 
   private:
     Foo(const Foo&) = delete;
@@ -134,7 +134,7 @@ namespace std {
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
+    IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++/cli_hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

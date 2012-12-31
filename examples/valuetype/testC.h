@@ -185,10 +185,10 @@ namespace obv
                       int32_t val2,
                       std::string val3,
                       IDL::traits< ::Example>::ref_type val5)
-      : val1_ (val1)
-      , val2_ (val2)
-      , val3_ (val3)
-      , val5_ (val5)
+      : val1_ (std::move (val1))
+      , val2_ (std::move (val2))
+      , val3_ (std::move (val3))
+      , val5_ (std::move (val5))
     {}
     void operator =(const Example&) = delete;
     void operator =(Example&&) = delete;
@@ -496,9 +496,9 @@ protected:
   virtual void y (::S&& _y) = 0;
   virtual const ::S& y () const = 0;
   virtual ::S& y () = 0;
-  virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () = 0;
+  virtual void z (IDL::traits< ::A>::ref_type _z) = 0;
+  virtual IDL::traits< ::A>::ref_type z () const = 0;
+  virtual IDL::traits< ::A>::ref_type& z () = 0;
   //@}
 
 protected:
@@ -525,13 +525,13 @@ namespace obv
                   ::Bytes w,
                   std::string x,
                   ::S y,
-                  TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z)
-      : t_ (t)
-      , v_ (v)
-      , w_ (w)
-      , x_ (x)
-      , y_ (y)
-      , z_ (z)
+                  IDL::traits< ::A>::ref_type z)
+      : t_ (std::move (t))
+      , v_ (std::move (v))
+      , w_ (std::move (w))
+      , x_ (std::move (x))
+      , y_ (std::move (y))
+      , z_ (std::move (z))
     {}
     void operator =(const Val&) = delete;
     void operator =(Val&&) = delete;
@@ -571,9 +571,9 @@ namespace obv
     virtual const ::S& y () const override;
     virtual ::S& y () override;
 
-    virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () override;
+    virtual void z (IDL::traits< ::A>::ref_type _z) override;
+    virtual IDL::traits< ::A>::ref_type z () const override;
+    virtual IDL::traits< ::A>::ref_type& z () override;
 
     /// Marshaling support
     virtual bool
@@ -592,7 +592,7 @@ namespace obv
     ::Bytes w_;
     std::string x_;
     ::S y_;
-    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z_;
+    IDL::traits< ::A>::ref_type z_;
   }; // Val
 
 }; // obv
@@ -685,7 +685,7 @@ public:
   { return this->value_; }
 
   virtual TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
-  _copy_value () const;
+  _copy_value () const override;
 
   static _ref_type _downcast (
       TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
@@ -890,7 +890,7 @@ public:
   { return this->value_; }
 
   virtual TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
-  _copy_value () const;
+  _copy_value () const override;
 
   static _ref_type _downcast (
       TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
@@ -1191,7 +1191,7 @@ namespace obv
     B (const B&) = default;
     B (B&&) = default;
     explicit B (int16_t data)
-      : data_ (data)
+      : data_ (std::move (data))
     {}
     void operator =(const B&) = delete;
     void operator =(B&&) = delete;
@@ -1478,18 +1478,20 @@ namespace std {
 // generated from c++/cli_inl/valuetype_inl.erb
 inline void
 Example::swap (
-    ::Example& s)
+  ::Example& s)
 {
-    std::swap (this->val1 (), s.val1 ());
-    std::swap (this->val2 (), s.val2 ());
-    std::swap (this->val3 (), s.val3 ());
-    std::swap (this->val5 (), s.val5 ());
+  std::swap (this->val1 (), s.val1 ());
+  std::swap (this->val2 (), s.val2 ());
+  std::swap (this->val3 (), s.val3 ());
+  std::swap (this->val5 (), s.val5 ());
 }
 
 inline Example::_ref_type
 Example::_downcast (
-    TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{ return _traits_type::downcast (vbref); }
+  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+{
+  return _traits_type::downcast (vbref);
+}
 
 // generated from c++/cli_inl/struct_inl.erb
 inline S::S ()
@@ -1526,20 +1528,22 @@ inline void S::swap (::S& s)
 // generated from c++/cli_inl/valuetype_inl.erb
 inline void
 Val::swap (
-    ::Val& s)
+  ::Val& s)
 {
-    std::swap (this->t (), s.t ());
-    std::swap (this->v (), s.v ());
-    std::swap (this->w (), s.w ());
-    std::swap (this->x (), s.x ());
-    std::swap (this->y (), s.y ());
-    std::swap (this->z (), s.z ());
+  std::swap (this->t (), s.t ());
+  std::swap (this->v (), s.v ());
+  std::swap (this->w (), s.w ());
+  std::swap (this->x (), s.x ());
+  std::swap (this->y (), s.y ());
+  std::swap (this->z (), s.z ());
 }
 
 inline Val::_ref_type
 Val::_downcast (
-    TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{ return _traits_type::downcast (vbref); }
+  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+{
+  return _traits_type::downcast (vbref);
+}
 
 // generated from c++/cli_inl/struct_inl.erb
 inline ColorValue2::ColorValue2 ()
@@ -1576,22 +1580,26 @@ inline void ColorValue2::swap (::ColorValue2& s)
 // generated from c++/cli_inl/valuetype_inl.erb
 inline void
 B::swap (
-    ::B& s)
+  ::B& s)
 {
-    std::swap (this->data (), s.data ());
+  std::swap (this->data (), s.data ());
 }
 
 inline B::_ref_type
 B::_downcast (
-    TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{ return _traits_type::downcast (vbref); }
+  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+{
+  return _traits_type::downcast (vbref);
+}
 
 // generated from c++/cli_inl/valuetype_inl.erb
 
 inline V::_ref_type
 V::_downcast (
-    TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{ return _traits_type::downcast (vbref); }
+  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+{
+  return _traits_type::downcast (vbref);
+}
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
@@ -1666,7 +1674,7 @@ operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type);
+    IDL::traits< ::A>::ref_type);
 
 // generated from c++/cli_hdr/valuetype_os.erb
 std::ostream&
@@ -1683,7 +1691,7 @@ operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type);
+    IDL::traits< ::X>::ref_type);
 
 // generated from c++/cli_hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -1713,7 +1721,7 @@ operator<< (
 // generated from c++/cli_hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type);
+    IDL::traits< ::A1>::ref_type);
 
 // generated from c++/cli_hdr/valuetype_os.erb
 std::ostream&
