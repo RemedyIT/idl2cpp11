@@ -237,6 +237,7 @@ namespace obv
 }; // obv
 
 // generated from c++/cli_hdr/typedef.erb
+
 typedef std::array< uint8_t, 64 > Bytes;
 struct Bytes_idl_t {}; // IDL traits type-id
 
@@ -1412,6 +1413,7 @@ namespace TAOX11_NAMESPACE {
   namespace IDL {
 
     // generated from c++/cli_hdr/array_idl_traits.erb
+
     template<>
     struct traits < ::Bytes_idl_t>
       : IDL::common_traits< ::Bytes>,

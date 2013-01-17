@@ -107,6 +107,7 @@ private:
 typedef Attributes Attributes_idl_t; // IDL traits typename
 
 // generated from c++/cli_hdr/typedef.erb
+
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
 struct ShapeTypeSeq_idl_t {}; // IDL traits type-id
 

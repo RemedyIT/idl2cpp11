@@ -74,10 +74,12 @@ namespace Test
   const std::wstring ws_val = L"widestring\n \xbf \xfe0e";
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef int32_t TCounter;
   typedef int32_t_idl_t TCounter_idl_t; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::string TName;
   struct TName_idl_t {}; // IDL traits type-id
 

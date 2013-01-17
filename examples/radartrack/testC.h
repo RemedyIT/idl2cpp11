@@ -24,6 +24,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++/cli_hdr/typedef.erb
+
 typedef std::vector < uint8_t> octetseq;
 struct octetseq_idl_t {}; // IDL traits type-id
 

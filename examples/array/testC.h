@@ -29,14 +29,17 @@ namespace Test
 {
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::array< float, 10 > F;
   struct F_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::array< std::string, 10 > V;
   struct V_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
   struct M_idl_t {}; // IDL traits type-id
 
@@ -151,6 +154,7 @@ namespace TAOX11_NAMESPACE {
   namespace IDL {
 
     // generated from c++/cli_hdr/array_idl_traits.erb
+
     template<>
     struct traits < ::Test::F_idl_t>
       : IDL::common_traits< ::Test::F>,
@@ -162,6 +166,7 @@ namespace TAOX11_NAMESPACE {
     };
 
     // generated from c++/cli_hdr/array_idl_traits.erb
+
     template<>
     struct traits < ::Test::V_idl_t>
       : IDL::common_traits< ::Test::V>,
@@ -173,6 +178,7 @@ namespace TAOX11_NAMESPACE {
     };
 
     // generated from c++/cli_hdr/array_idl_traits.erb
+
     template<>
     struct traits < ::Test::M_idl_t>
       : IDL::common_traits< ::Test::M>,

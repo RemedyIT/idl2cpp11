@@ -85,22 +85,27 @@ namespace Test
   typedef Simple Simple_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < Simple> SimpleSeq;
   struct SimpleSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < int32_t> LongSeq;
   struct LongSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < int32_t> BoundedLongSeq;
   struct BoundedLongSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < bool> BoolSeq;
   struct BoolSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < std::string> StringSeq;
   struct StringSeq_idl_t {}; // IDL traits type-id
 

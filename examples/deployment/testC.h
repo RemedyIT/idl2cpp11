@@ -62,6 +62,7 @@ namespace Deployment
   typedef Property Property_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < Property> Properties;
   struct Properties_idl_t {}; // IDL traits type-id
 
@@ -106,6 +107,7 @@ namespace Deployment
   typedef Requirement Requirement_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < Requirement> Requirements;
   struct Requirements_idl_t {}; // IDL traits type-id
 
@@ -167,6 +169,7 @@ namespace Deployment
   typedef SatisfierProperty SatisfierProperty_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < SatisfierProperty> SatisfierProperties;
   struct SatisfierProperties_idl_t {}; // IDL traits type-id
 }; // namespace Deployment
@@ -268,6 +271,7 @@ namespace Deployment
   typedef ComponentPortDescription ComponentPortDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
   struct ComponentPortDescriptions_idl_t {}; // IDL traits type-id
 
@@ -304,6 +308,7 @@ namespace Deployment
   typedef ComponentPropertyDescription ComponentPropertyDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
   struct ComponentPropertyDescriptions_idl_t {}; // IDL traits type-id
 
@@ -444,6 +449,7 @@ namespace Deployment
   typedef MonolithicDeploymentDescription MonolithicDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
   struct MonolithicDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
@@ -505,6 +511,7 @@ namespace Deployment
   typedef InstanceResourceDeploymentDescription InstanceResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
   struct InstanceResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
@@ -576,6 +583,7 @@ namespace Deployment
   typedef InstanceDeploymentDescription InstanceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
   struct InstanceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
@@ -606,6 +614,7 @@ namespace Deployment
   typedef ComponentExternalPortEndpoint ComponentExternalPortEndpoint_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
   struct ComponentExternalPortEndpoints_idl_t {}; // IDL traits type-id
 
@@ -654,6 +663,7 @@ namespace Deployment
   typedef PlanSubcomponentPortEndpoint PlanSubcomponentPortEndpoint_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
   struct PlanSubcomponentPortEndpoints_idl_t {}; // IDL traits type-id
 
@@ -704,6 +714,7 @@ namespace Deployment
   typedef ExternalReferenceEndpoint ExternalReferenceEndpoint_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
   struct ExternalReferenceEndpoints_idl_t {}; // IDL traits type-id
 
@@ -755,6 +766,7 @@ namespace Deployment
   typedef ConnectionResourceDeploymentDescription ConnectionResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
   struct ConnectionResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
@@ -827,6 +839,7 @@ namespace Deployment
   typedef PlanConnectionDescription PlanConnectionDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
   struct PlanConnectionDescriptions_idl_t {}; // IDL traits type-id
 
@@ -863,6 +876,7 @@ namespace Deployment
   typedef PlanSubcomponentPropertyReference PlanSubcomponentPropertyReference_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
   struct PlanSubcomponentPropertyReferences_idl_t {}; // IDL traits type-id
 
@@ -914,6 +928,7 @@ namespace Deployment
   typedef PlanPropertyMapping PlanPropertyMapping_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
   struct PlanPropertyMappings_idl_t {}; // IDL traits type-id
 
@@ -944,6 +959,7 @@ namespace Deployment
   typedef ImplementationDependency ImplementationDependency_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
   struct ImplementationDependencies_idl_t {}; // IDL traits type-id
 
@@ -988,6 +1004,7 @@ namespace Deployment
   typedef ResourceDeploymentDescription ResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
   struct ResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
@@ -1060,6 +1077,7 @@ namespace Deployment
   typedef ArtifactDeploymentDescription ArtifactDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
   struct ArtifactDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
@@ -1105,6 +1123,7 @@ namespace Deployment
   typedef PlanLocality PlanLocality_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < PlanLocality> PlanLocalities;
   struct PlanLocalities_idl_t {}; // IDL traits type-id
 
@@ -1251,10 +1270,12 @@ namespace Deployment
   typedef ComponentPackageReference ComponentPackageReference_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
   struct ComponentPackageReferences_idl_t {}; // IDL traits type-id
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
   struct ResourceUsageKinds_idl_t {}; // IDL traits type-id
 
@@ -1320,6 +1341,7 @@ namespace Deployment
   typedef ImplementationRequirement ImplementationRequirement_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
   struct ImplementationRequirements_idl_t {}; // IDL traits type-id
 
@@ -1364,6 +1386,7 @@ namespace Deployment
   typedef Capability Capability_idl_t; // IDL traits typename
 
   // generated from c++/cli_hdr/typedef.erb
+
   typedef std::vector < Capability> Capabilities;
   struct Capabilities_idl_t {}; // IDL traits type-id
 }; // namespace Deployment
