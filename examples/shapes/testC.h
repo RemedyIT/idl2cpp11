@@ -23,12 +23,12 @@
 
 using namespace TAOX11_NAMESPACE;
 
-// generated from c++/cli_hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre.erb
 class ShapeType final
 {
 public:
 
-  // generated from c++/cli_hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post.erb
   inline ShapeType ();
   ~ShapeType () = default;
   ShapeType (const ShapeType&) = default;
@@ -67,12 +67,12 @@ private:
 };// ShapeType
 typedef ShapeType ShapeType_idl_t; // IDL traits typename
 
-// generated from c++/cli_hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre.erb
 class Attributes final
 {
 public:
 
-  // generated from c++/cli_hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post.erb
   inline Attributes ();
   ~Attributes () = default;
   Attributes (const Attributes&) = default;
@@ -106,7 +106,7 @@ private:
 };// Attributes
 typedef Attributes Attributes_idl_t; // IDL traits typename
 
-// generated from c++/cli_hdr/typedef.erb
+// generated from c++11/templates/cli/hdr/typedef.erb
 
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
 struct ShapeTypeSeq_idl_t {}; // IDL traits type-id
@@ -115,7 +115,7 @@ struct ShapeTypeSeq_idl_t {}; // IDL traits type-id
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_SHAPETYPE_TRAITS_)
 #define _STRUCT_SHAPETYPE_TRAITS_
     template<>
@@ -125,7 +125,7 @@ namespace TAOX11_NAMESPACE {
     };
 #endif // _STRUCT_SHAPETYPE_TRAITS_
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_ATTRIBUTES_TRAITS_)
 #define _STRUCT_ATTRIBUTES_TRAITS_
     template<>
@@ -135,7 +135,7 @@ namespace TAOX11_NAMESPACE {
     };
 #endif // _STRUCT_ATTRIBUTES_TRAITS_
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::ShapeTypeSeq_idl_t>
       : IDL::unbounded_traits< ::ShapeTypeSeq>,
@@ -153,16 +153,16 @@ namespace TAOX11_NAMESPACE {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::ShapeType& m1, ::ShapeType& m2);
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::Attributes& m1, ::Attributes& m2);
 }; // std
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline ShapeType::ShapeType ()
            : color_ (std::string())
            , x_ (0)
@@ -225,7 +225,7 @@ inline void ShapeType::swap (::ShapeType& s)
   std::swap (this->shapesize_, s.shapesize_);
 }
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline Attributes::Attributes ()
            : shape_ (std::string())
            , color_ (std::string())
@@ -282,14 +282,14 @@ inline void Attributes::swap (::Attributes& s)
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::ShapeType& m1, ::ShapeType& m2)
   {
     m1.swap (m2);
   }
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::Attributes& m1, ::Attributes& m2)
   {
@@ -297,19 +297,19 @@ namespace std {
   }
 }; // std
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::ShapeType&);
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::Attributes&);
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
 
@@ -328,7 +328,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

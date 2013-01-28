@@ -19,7 +19,7 @@
 
 #include "tao/x11/portable_server/servantbase.h"
 
-// generated from c++/srv_hdr/interface_pre.erb
+// generated from c++11/templates/srv/hdr/interface_pre.erb
 namespace POA
 {
   class A_srvproxy;
@@ -57,10 +57,10 @@ namespace POA
 
     virtual const std::string _interface_repository_id () const override;
 
-    // generated from c++/srv_hdr/operation.erb
+    // generated from c++11/templates/srv/hdr/operation.erb
     virtual void op (void) = 0;
 
-    // generated from c++/srv_hdr/interface_post.erb
+    // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
     friend class POA::A_srvproxy;
 
@@ -69,7 +69,7 @@ namespace POA
 
 }; // POA
 
-// generated from c++/srv_hdr/interface_pre.erb
+// generated from c++11/templates/srv/hdr/interface_pre.erb
 namespace POA
 {
   class X_srvproxy;
@@ -107,10 +107,10 @@ namespace POA
 
     virtual const std::string _interface_repository_id () const override;
 
-    // generated from c++/srv_hdr/operation.erb
+    // generated from c++11/templates/srv/hdr/operation.erb
     virtual void op (std::string& s) = 0;
 
-    // generated from c++/srv_hdr/interface_post.erb
+    // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
     friend class POA::X_srvproxy;
 
@@ -119,7 +119,7 @@ namespace POA
 
 }; // POA
 
-// generated from c++/srv_hdr/interface_pre.erb
+// generated from c++11/templates/srv/hdr/interface_pre.erb
 namespace POA
 {
   class A1_srvproxy;
@@ -157,10 +157,10 @@ namespace POA
 
     virtual const std::string _interface_repository_id () const override;
 
-    // generated from c++/srv_hdr/operation.erb
+    // generated from c++11/templates/srv/hdr/operation.erb
     virtual void op (void) = 0;
 
-    // generated from c++/srv_hdr/interface_post.erb
+    // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
     friend class POA::A1_srvproxy;
 
@@ -169,7 +169,7 @@ namespace POA
 
 }; // POA
 
-// generated from c++/srv_hdr/valuetype_pre.erb
+// generated from c++11/templates/srv/hdr/valuetype_pre.erb
 namespace POA
 {
   class B
@@ -198,7 +198,7 @@ namespace POA
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
 
-    // generated from c++/srv_hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
     template <>
     struct servant_traits< ::A>
     {
@@ -216,7 +216,7 @@ namespace TAOX11_NAMESPACE {
       }
     };
 
-    // generated from c++/srv_hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
     template <>
     struct servant_traits< ::X>
     {
@@ -234,7 +234,7 @@ namespace TAOX11_NAMESPACE {
       }
     };
 
-    // generated from c++/srv_hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
     template <>
     struct servant_traits< ::A1>
     {
@@ -252,7 +252,7 @@ namespace TAOX11_NAMESPACE {
       }
     };
 
-    // generated from c++/srv_hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
     template <>
     struct servant_traits< ::B>
     {

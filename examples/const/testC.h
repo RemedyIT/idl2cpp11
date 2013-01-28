@@ -73,12 +73,12 @@ namespace Test
   // generated from StubHeaderWriter#visit_const
   const std::wstring ws_val = L"widestring\n \xbf \xfe0e";
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef int32_t TCounter;
   typedef int32_t_idl_t TCounter_idl_t; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::string TName;
   struct TName_idl_t {}; // IDL traits type-id
@@ -96,7 +96,7 @@ namespace Test
 
 // generated from StubHeaderWriter#enter_interface
 
-// generated from c++/cli_hdr/interface_fwd.erb
+// generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
 class A;
@@ -109,7 +109,7 @@ namespace POA
 };
 #endif // !_INTF_A_FWD_
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_A_TRAITS_DECL_)
 #define _INTF_A_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -144,7 +144,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_INTF_A_TRAITS_DECL_
 
-// generated from c++/cli_hdr/interface_pre.erb
+// generated from c++11/templates/cli/hdr/interface_pre.erb
 class A
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -162,7 +162,7 @@ public:
   // generated from StubHeaderWriter#visit_const
   static constexpr float pi = 3.14159;
 
-  // generated from c++/cli_hdr/interface_post.erb
+  // generated from c++11/templates/cli/hdr/interface_post.erb
   static TAOX11_NAMESPACE::IDL::traits< A>::ref_type _narrow (
       TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
   {
@@ -192,7 +192,7 @@ private:
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/string_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/string_idl_traits.erb
     template<>
     struct traits < ::Test::TName_idl_t>
       : IDL::bounded_traits< std::string,
@@ -213,12 +213,12 @@ namespace std {
 namespace std {
 }; // std
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A>::ref_type);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

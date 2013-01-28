@@ -27,7 +27,7 @@
 
 using namespace TAOX11_NAMESPACE;
 
-// generated from c++/cli_hdr/valuetype_fwd.erb
+// generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_EXAMPLE_FWD_)
 #define _VALUETYPE_EXAMPLE_FWD_
 
@@ -40,7 +40,7 @@ namespace obv
 
 #endif // !_VALUETYPE_EXAMPLE_FWD_
 
-// generated from c++/cli_hdr/valuetype_traits.erb
+// generated from c++11/templates/cli/hdr/valuetype_traits.erb
 #if !defined (_VALUETYPE_EXAMPLE_TRAITS_DECL_)
 #define _VALUETYPE_EXAMPLE_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -81,7 +81,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_VALUETYPE_EXAMPLE_TRAITS_DECL_
 
-// generated from c++/cli_hdr/valuetype_pre.erb
+// generated from c++11/templates/cli/hdr/valuetype_pre.erb
 class Example
   : public virtual TAOX11_CORBA::ValueBase
 {
@@ -121,7 +121,7 @@ protected:
   virtual bool _obv_unmarshal_v (TAO_InputCDR &) override;
 public:
 
-  // generated from c++/cli_hdr/valuetype_post.erb
+  // generated from c++11/templates/cli/hdr/valuetype_post.erb
 public:
   static inline const std::string& _repository_id ()
   {
@@ -132,11 +132,11 @@ public:
 
   // Operations
 
-  // generated from c++/cli_hdr/operation.erb
+  // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief Example::op1
   virtual int16_t op1 () = 0;
 
-  // generated from c++/cli_hdr/operation.erb
+  // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief Example::op2
   virtual int32_t op2 (IDL::traits< Example>::ref_type x) = 0;
 
@@ -170,7 +170,7 @@ protected:
   _obv_unmarshal_Example_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 }; // Example
 
-// generated from c++/cli_hdr/valuetype_obv.erb
+// generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
 {
   class Example
@@ -236,17 +236,17 @@ namespace obv
 
 }; // obv
 
-// generated from c++/cli_hdr/typedef.erb
+// generated from c++11/templates/cli/hdr/typedef.erb
 
 typedef std::array< uint8_t, 64 > Bytes;
 struct Bytes_idl_t {}; // IDL traits type-id
 
-// generated from c++/cli_hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre.erb
 class S final
 {
 public:
 
-  // generated from c++/cli_hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post.erb
   inline S ();
   ~S () = default;
   S (const S&) = default;
@@ -268,7 +268,7 @@ typedef S S_idl_t; // IDL traits typename
 
 // generated from StubHeaderWriter#enter_interface
 
-// generated from c++/cli_hdr/interface_fwd.erb
+// generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
 class A;
@@ -281,7 +281,7 @@ namespace POA
 };
 #endif // !_INTF_A_FWD_
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_A_TRAITS_DECL_)
 #define _INTF_A_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -316,7 +316,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_INTF_A_TRAITS_DECL_
 
-// generated from c++/cli_hdr/interface_pre.erb
+// generated from c++11/templates/cli/hdr/interface_pre.erb
 class A
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -331,11 +331,11 @@ public:
 
   virtual const std::string& _interface_repository_id () const override;
 
-  // generated from c++/cli_hdr/operation.erb
+  // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief A::op
   virtual void op ();
 
-  // generated from c++/cli_hdr/interface_post.erb
+  // generated from c++11/templates/cli/hdr/interface_post.erb
   static TAOX11_NAMESPACE::IDL::traits< A>::ref_type _narrow (
       TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
   {
@@ -361,7 +361,7 @@ private:
   A_proxy_ptr a_proxy_;
 }; // A
 
-// generated from c++/cli_hdr/valuetype_fwd.erb
+// generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_VAL_FWD_)
 #define _VALUETYPE_VAL_FWD_
 
@@ -375,7 +375,7 @@ class Val_init;
 
 #endif // !_VALUETYPE_VAL_FWD_
 
-// generated from c++/cli_hdr/valuetype_traits.erb
+// generated from c++11/templates/cli/hdr/valuetype_traits.erb
 #if !defined (_VALUETYPE_VAL_TRAITS_DECL_)
 #define _VALUETYPE_VAL_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -420,7 +420,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_VALUETYPE_VAL_TRAITS_DECL_
 
-// generated from c++/cli_hdr/valuetype_pre.erb
+// generated from c++11/templates/cli/hdr/valuetype_pre.erb
 class Val
   : public virtual TAOX11_CORBA::ValueBase
 {
@@ -463,7 +463,7 @@ protected:
   virtual bool _obv_unmarshal_v (TAO_InputCDR &) override;
 public:
 
-  // generated from c++/cli_hdr/valuetype_post.erb
+  // generated from c++11/templates/cli/hdr/valuetype_post.erb
 public:
   static inline const std::string& _repository_id ()
   {
@@ -510,7 +510,7 @@ protected:
   _obv_unmarshal_Val_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 }; // Val
 
-// generated from c++/cli_hdr/valuetype_obv.erb
+// generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
 {
   class Val
@@ -598,7 +598,7 @@ namespace obv
 
 }; // obv
 
-// generated from c++/cli_hdr/valuetype_init.erb
+// generated from c++11/templates/cli/hdr/valuetype_init.erb
 class Val_init
   : public TAOX11_CORBA::ValueFactoryBase
 {
@@ -628,11 +628,11 @@ protected:
   Val_init (Val_init&&) = default;
 }; // Val_init
 
-// generated from c++/cli_hdr/valuebox_fwd.erb
+// generated from c++11/templates/cli/hdr/valuebox_fwd.erb
 class StringValue;
 typedef StringValue StringValue_idl_t; // IDL traits typename
 
-// generated from c++/cli_hdr/valuebox_traits.erb
+// generated from c++11/templates/cli/hdr/valuebox_traits.erb
 #if !defined (_VBOX_STRINGVALUE_TRAITS_DECL_)
 #define _VBOX_STRINGVALUE_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -665,7 +665,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_VBOX_STRINGVALUE_TRAITS_DECL_
 
-// generated from c++/cli_hdr/valuebox_def.erb
+// generated from c++11/templates/cli/hdr/valuebox_def.erb
 class StringValue
   : public TAOX11_CORBA::Valuebox_T< std::string>
 {
@@ -717,7 +717,7 @@ protected:
   virtual bool _obv_marshal_v (TAO_OutputCDR &) const;
 };
 
-// generated from c++/cli_hdr/valuebox_traits.erb
+// generated from c++11/templates/cli/hdr/valuebox_traits.erb
 namespace TAOX11_NAMESPACE
 {
   namespace CORBA
@@ -733,7 +733,7 @@ namespace TAOX11_NAMESPACE
 
 // generated from StubHeaderWriter#enter_interface
 
-// generated from c++/cli_hdr/interface_fwd.erb
+// generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_X_FWD_)
 #define _INTF_X_FWD_
 class X;
@@ -746,7 +746,7 @@ namespace POA
 };
 #endif // !_INTF_X_FWD_
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_X_TRAITS_DECL_)
 #define _INTF_X_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -781,7 +781,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_INTF_X_TRAITS_DECL_
 
-// generated from c++/cli_hdr/interface_pre.erb
+// generated from c++11/templates/cli/hdr/interface_pre.erb
 class X
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -796,11 +796,11 @@ public:
 
   virtual const std::string& _interface_repository_id () const override;
 
-  // generated from c++/cli_hdr/operation.erb
+  // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief X::op
   virtual void op (std::string& s);
 
-  // generated from c++/cli_hdr/interface_post.erb
+  // generated from c++11/templates/cli/hdr/interface_post.erb
   static TAOX11_NAMESPACE::IDL::traits< X>::ref_type _narrow (
       TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
   {
@@ -826,7 +826,7 @@ private:
   X_proxy_ptr x_proxy_;
 }; // X
 
-// generated from c++/cli_hdr/enum.erb
+// generated from c++11/templates/cli/hdr/enum.erb
 enum class Color : uint32_t
 {
   red,
@@ -835,11 +835,11 @@ enum class Color : uint32_t
 };// Color
 typedef Color Color_idl_t; // IDL traits typename
 
-// generated from c++/cli_hdr/valuebox_fwd.erb
+// generated from c++11/templates/cli/hdr/valuebox_fwd.erb
 class ColorValue;
 typedef ColorValue ColorValue_idl_t; // IDL traits typename
 
-// generated from c++/cli_hdr/valuebox_traits.erb
+// generated from c++11/templates/cli/hdr/valuebox_traits.erb
 #if !defined (_VBOX_COLORVALUE_TRAITS_DECL_)
 #define _VBOX_COLORVALUE_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -872,7 +872,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_VBOX_COLORVALUE_TRAITS_DECL_
 
-// generated from c++/cli_hdr/valuebox_def.erb
+// generated from c++11/templates/cli/hdr/valuebox_def.erb
 class ColorValue
   : public TAOX11_CORBA::Valuebox_T< ::Color>
 {
@@ -922,7 +922,7 @@ protected:
   virtual bool _obv_marshal_v (TAO_OutputCDR &) const;
 };
 
-// generated from c++/cli_hdr/valuebox_traits.erb
+// generated from c++11/templates/cli/hdr/valuebox_traits.erb
 namespace TAOX11_NAMESPACE
 {
   namespace CORBA
@@ -936,12 +936,12 @@ namespace TAOX11_NAMESPACE
   };
 };
 
-// generated from c++/cli_hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre.erb
 class ColorValue2 final
 {
 public:
 
-  // generated from c++/cli_hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post.erb
   inline ColorValue2 ();
   ~ColorValue2 () = default;
   ColorValue2 (const ColorValue2&) = default;
@@ -963,7 +963,7 @@ typedef ColorValue2 ColorValue2_idl_t; // IDL traits typename
 
 // generated from StubHeaderWriter#enter_interface
 
-// generated from c++/cli_hdr/interface_fwd.erb
+// generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_A1_FWD_)
 #define _INTF_A1_FWD_
 class A1;
@@ -976,7 +976,7 @@ namespace POA
 };
 #endif // !_INTF_A1_FWD_
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_A1_TRAITS_DECL_)
 #define _INTF_A1_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -1011,7 +1011,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_INTF_A1_TRAITS_DECL_
 
-// generated from c++/cli_hdr/interface_pre.erb
+// generated from c++11/templates/cli/hdr/interface_pre.erb
 class A1
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -1026,11 +1026,11 @@ public:
 
   virtual const std::string& _interface_repository_id () const override;
 
-  // generated from c++/cli_hdr/operation.erb
+  // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief A1::op
   virtual void op ();
 
-  // generated from c++/cli_hdr/interface_post.erb
+  // generated from c++11/templates/cli/hdr/interface_post.erb
   static TAOX11_NAMESPACE::IDL::traits< A1>::ref_type _narrow (
       TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
   {
@@ -1056,7 +1056,7 @@ private:
   A1_proxy_ptr a1_proxy_;
 }; // A1
 
-// generated from c++/cli_hdr/valuetype_fwd.erb
+// generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_B_FWD_)
 #define _VALUETYPE_B_FWD_
 
@@ -1069,7 +1069,7 @@ namespace obv
 
 #endif // !_VALUETYPE_B_FWD_
 
-// generated from c++/cli_hdr/valuetype_traits.erb
+// generated from c++11/templates/cli/hdr/valuetype_traits.erb
 #if !defined (_VALUETYPE_B_TRAITS_DECL_)
 #define _VALUETYPE_B_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -1110,7 +1110,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_VALUETYPE_B_TRAITS_DECL_
 
-// generated from c++/cli_hdr/valuetype_pre.erb
+// generated from c++11/templates/cli/hdr/valuetype_pre.erb
 class B
   : public virtual TAOX11_CORBA::ValueBase
 {
@@ -1150,7 +1150,7 @@ protected:
   virtual bool _obv_unmarshal_v (TAO_InputCDR &) override;
 public:
 
-  // generated from c++/cli_hdr/valuetype_post.erb
+  // generated from c++11/templates/cli/hdr/valuetype_post.erb
 public:
   static inline const std::string& _repository_id ()
   {
@@ -1161,7 +1161,7 @@ public:
 
   // Operations
 
-  // generated from c++/cli_hdr/operation.erb
+  // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief A1::op
   virtual void op () = 0;
 
@@ -1180,7 +1180,7 @@ protected:
   _obv_unmarshal_B_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 }; // B
 
-// generated from c++/cli_hdr/valuetype_obv.erb
+// generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
 {
   class B
@@ -1223,7 +1223,7 @@ namespace obv
 
 }; // obv
 
-// generated from c++/cli_hdr/valuetype_fwd.erb
+// generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_V_FWD_)
 #define _VALUETYPE_V_FWD_
 
@@ -1237,7 +1237,7 @@ class V_init;
 
 #endif // !_VALUETYPE_V_FWD_
 
-// generated from c++/cli_hdr/valuetype_traits.erb
+// generated from c++11/templates/cli/hdr/valuetype_traits.erb
 #if !defined (_VALUETYPE_V_TRAITS_DECL_)
 #define _VALUETYPE_V_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -1282,7 +1282,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_VALUETYPE_V_TRAITS_DECL_
 
-// generated from c++/cli_hdr/valuetype_pre.erb
+// generated from c++11/templates/cli/hdr/valuetype_pre.erb
 class V
   : public virtual TAOX11_CORBA::ValueBase
 {
@@ -1325,7 +1325,7 @@ protected:
   virtual bool _obv_unmarshal_v (TAO_InputCDR &) override;
 public:
 
-  // generated from c++/cli_hdr/valuetype_post.erb
+  // generated from c++11/templates/cli/hdr/valuetype_post.erb
 public:
   static inline const std::string& _repository_id ()
   {
@@ -1342,7 +1342,7 @@ protected:
   _obv_unmarshal_V_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 }; // V
 
-// generated from c++/cli_hdr/valuetype_obv.erb
+// generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
 {
   class V
@@ -1374,7 +1374,7 @@ namespace obv
 
 }; // obv
 
-// generated from c++/cli_hdr/valuetype_init.erb
+// generated from c++11/templates/cli/hdr/valuetype_init.erb
 class V_init
   : public TAOX11_CORBA::ValueFactoryBase
 {
@@ -1412,7 +1412,7 @@ protected:
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
 
     template<>
     struct traits < ::Bytes_idl_t>
@@ -1424,7 +1424,7 @@ namespace TAOX11_NAMESPACE {
       static constexpr uint32_t dimensions = 1;
     };
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_S_TRAITS_)
 #define _STRUCT_S_TRAITS_
     template<>
@@ -1434,14 +1434,14 @@ namespace TAOX11_NAMESPACE {
     };
 #endif // _STRUCT_S_TRAITS_
 
-    // generated from c++/cli_hdr/enum_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
     struct traits < ::Color_idl_t>
       : IDL::common_traits< ::Color>
     {
     };
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_COLORVALUE2_TRAITS_)
 #define _STRUCT_COLORVALUE2_TRAITS_
     template<>
@@ -1456,28 +1456,28 @@ namespace TAOX11_NAMESPACE {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/valuetype_std.erb
+  // generated from c++11/templates/cli/hdr/valuetype_std.erb
   template <>
   void swap (::Example& m1, ::Example& m2);
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::S& m1, ::S& m2);
 
-  // generated from c++/cli_hdr/valuetype_std.erb
+  // generated from c++11/templates/cli/hdr/valuetype_std.erb
   template <>
   void swap (::Val& m1, ::Val& m2);
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::ColorValue2& m1, ::ColorValue2& m2);
 
-  // generated from c++/cli_hdr/valuetype_std.erb
+  // generated from c++11/templates/cli/hdr/valuetype_std.erb
   template <>
   void swap (::B& m1, ::B& m2);
 }; // std
 
-// generated from c++/cli_inl/valuetype_inl.erb
+// generated from c++11/templates/cli/inl/valuetype_inl.erb
 inline void
 Example::swap (
   ::Example& s)
@@ -1495,7 +1495,7 @@ Example::_downcast (
   return _traits_type::downcast (vbref);
 }
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline S::S ()
            : value_ (0)
 {
@@ -1527,7 +1527,7 @@ inline void S::swap (::S& s)
   std::swap (this->value_, s.value_);
 }
 
-// generated from c++/cli_inl/valuetype_inl.erb
+// generated from c++11/templates/cli/inl/valuetype_inl.erb
 inline void
 Val::swap (
   ::Val& s)
@@ -1547,7 +1547,7 @@ Val::_downcast (
   return _traits_type::downcast (vbref);
 }
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline ColorValue2::ColorValue2 ()
            : col_ (::Color::red)
 {
@@ -1579,7 +1579,7 @@ inline void ColorValue2::swap (::ColorValue2& s)
   std::swap (this->col_, s.col_);
 }
 
-// generated from c++/cli_inl/valuetype_inl.erb
+// generated from c++11/templates/cli/inl/valuetype_inl.erb
 inline void
 B::swap (
   ::B& s)
@@ -1594,7 +1594,7 @@ B::_downcast (
   return _traits_type::downcast (vbref);
 }
 
-// generated from c++/cli_inl/valuetype_inl.erb
+// generated from c++11/templates/cli/inl/valuetype_inl.erb
 
 inline V::_ref_type
 V::_downcast (
@@ -1606,35 +1606,35 @@ V::_downcast (
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/valuetype_std.erb
+  // generated from c++11/templates/cli/hdr/valuetype_std.erb
   template <>
   inline void swap (::Example& m1, ::Example& m2)
   {
     m1.swap (m2);
   }
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::S& m1, ::S& m2)
   {
     m1.swap (m2);
   }
 
-  // generated from c++/cli_hdr/valuetype_std.erb
+  // generated from c++11/templates/cli/hdr/valuetype_std.erb
   template <>
   inline void swap (::Val& m1, ::Val& m2)
   {
     m1.swap (m2);
   }
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::ColorValue2& m1, ::ColorValue2& m2)
   {
     m1.swap (m2);
   }
 
-  // generated from c++/cli_hdr/valuetype_std.erb
+  // generated from c++11/templates/cli/hdr/valuetype_std.erb
   template <>
   inline void swap (::B& m1, ::B& m2)
   {
@@ -1642,13 +1642,13 @@ namespace std {
   }
 }; // std
 
-// generated from c++/cli_hdr/valuetype_os.erb
+// generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
     IDL::traits< ::Example>::ref_type);
 
-// generated from c++/cli_hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_UINT8_T_64__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_UINT8_T_64__DECL__
 
@@ -1667,35 +1667,35 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_UINT8_T_64__DECL__
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::S&);
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A>::ref_type);
 
-// generated from c++/cli_hdr/valuetype_os.erb
+// generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
     IDL::traits< ::Val>::ref_type);
 
-// generated from c++/cli_hdr/valuebox_os.erb
+// generated from c++11/templates/cli/hdr/valuebox_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
     TAOX11_NAMESPACE::IDL::traits< ::StringValue>::ref_type);
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::X>::ref_type);
 
-// generated from c++/cli_hdr/enum_os.erb
+// generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
     ::Color _enumerator)
@@ -1708,36 +1708,36 @@ inline std::ostream& operator<< (
   }
 }
 
-// generated from c++/cli_hdr/valuebox_os.erb
+// generated from c++11/templates/cli/hdr/valuebox_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
     TAOX11_NAMESPACE::IDL::traits< ::ColorValue>::ref_type);
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::ColorValue2&);
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A1>::ref_type);
 
-// generated from c++/cli_hdr/valuetype_os.erb
+// generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
     IDL::traits< ::B>::ref_type);
 
-// generated from c++/cli_hdr/valuetype_os.erb
+// generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
     IDL::traits< ::V>::ref_type);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

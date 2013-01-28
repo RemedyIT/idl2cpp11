@@ -28,12 +28,12 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++/cli_hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Simple final
   {
   public:
 
-    // generated from c++/cli_hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post.erb
     inline Simple ();
     ~Simple () = default;
     Simple (const Simple&) = default;
@@ -84,34 +84,34 @@ namespace Test
   };// Simple
   typedef Simple Simple_idl_t; // IDL traits typename
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < Simple> SimpleSeq;
   struct SimpleSeq_idl_t {}; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < int32_t> LongSeq;
   struct LongSeq_idl_t {}; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < int32_t> BoundedLongSeq;
   struct BoundedLongSeq_idl_t {}; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < bool> BoolSeq;
   struct BoolSeq_idl_t {}; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < std::string> StringSeq;
   struct StringSeq_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++/cli_hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -127,7 +127,7 @@ namespace Test
 }; // Test
 // entering CxxWriterBase#at_global_scope
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -166,7 +166,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++/cli_hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre.erb
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -181,35 +181,35 @@ namespace Test
 
     virtual const std::string& _interface_repository_id () const override;
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::test_long_seq
     virtual ::Test::LongSeq test_long_seq (const ::Test::LongSeq& sin,
                                    ::Test::LongSeq& sinout,
                                    ::Test::LongSeq& sout);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::test_bool_seq
     virtual ::Test::BoolSeq test_bool_seq (const ::Test::BoolSeq& sin,
                                    ::Test::BoolSeq& sinout,
                                    ::Test::BoolSeq& sout);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::test_string_seq
     virtual ::Test::StringSeq test_string_seq (const ::Test::StringSeq& sin,
                                        ::Test::StringSeq& sinout,
                                        ::Test::StringSeq& sout);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::test_struct_seq
     virtual ::Test::SimpleSeq test_struct_seq (const ::Test::SimpleSeq& sin,
                                        ::Test::SimpleSeq& sinout,
                                        ::Test::SimpleSeq& sout);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::shutdown
     virtual void shutdown ();
 
-    // generated from c++/cli_hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (
         TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
     {
@@ -241,7 +241,7 @@ namespace Test
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
 #define _STRUCT_TEST_SIMPLE_TRAITS_
     template<>
@@ -251,7 +251,7 @@ namespace TAOX11_NAMESPACE {
     };
 #endif // _STRUCT_TEST_SIMPLE_TRAITS_
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::Test::SimpleSeq_idl_t>
       : IDL::unbounded_traits< ::Test::SimpleSeq>,
@@ -264,7 +264,7 @@ namespace TAOX11_NAMESPACE {
       typedef IDL::traits< ::Test::Simple_idl_t>  element_traits;
     };
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::Test::LongSeq_idl_t>
       : IDL::unbounded_traits< ::Test::LongSeq>,
@@ -277,7 +277,7 @@ namespace TAOX11_NAMESPACE {
       typedef IDL::traits< ::int32_t_idl_t>  element_traits;
     };
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::Test::BoundedLongSeq_idl_t>
       : IDL::bounded_traits< ::Test::BoundedLongSeq,
@@ -291,7 +291,7 @@ namespace TAOX11_NAMESPACE {
       typedef IDL::traits< ::int32_t_idl_t>  element_traits;
     };
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::Test::BoolSeq_idl_t>
       : IDL::unbounded_traits< ::Test::BoolSeq>,
@@ -304,7 +304,7 @@ namespace TAOX11_NAMESPACE {
       typedef IDL::traits< ::bool_idl_t>  element_traits;
     };
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::Test::StringSeq_idl_t>
       : IDL::unbounded_traits< ::Test::StringSeq>,
@@ -322,12 +322,12 @@ namespace TAOX11_NAMESPACE {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::Test::Simple& m1, ::Test::Simple& m2);
 }; // std
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Simple::Simple ()
            : o_ (0)
            , l_ (0)
@@ -413,7 +413,7 @@ inline void Test::Simple::swap (::Test::Simple& s)
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::Test::Simple& m1, ::Test::Simple& m2)
   {
@@ -421,13 +421,13 @@ namespace std {
   }
 }; // std
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::Test::Simple&);
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
 
@@ -446,7 +446,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
 
@@ -465,7 +465,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
 
@@ -484,7 +484,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
 
@@ -503,7 +503,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
 
@@ -522,12 +522,12 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

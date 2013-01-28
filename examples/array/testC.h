@@ -28,24 +28,24 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::array< float, 10 > F;
   struct F_idl_t {}; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::array< std::string, 10 > V;
   struct V_idl_t {}; // IDL traits type-id
 
-  // generated from c++/cli_hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
   struct M_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++/cli_hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -61,7 +61,7 @@ namespace Test
 }; // Test
 // entering CxxWriterBase#at_global_scope
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -100,7 +100,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++/cli_hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre.erb
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -115,13 +115,13 @@ namespace Test
 
     virtual const std::string& _interface_repository_id () const override;
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::op
     virtual void op (const ::Test::F& p1,
              ::Test::V& p2,
              ::Test::M& p3);
 
-    // generated from c++/cli_hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (
         TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
     {
@@ -153,7 +153,7 @@ namespace Test
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
 
     template<>
     struct traits < ::Test::F_idl_t>
@@ -165,7 +165,7 @@ namespace TAOX11_NAMESPACE {
       static constexpr uint32_t dimensions = 1;
     };
 
-    // generated from c++/cli_hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
 
     template<>
     struct traits < ::Test::V_idl_t>
@@ -177,7 +177,7 @@ namespace TAOX11_NAMESPACE {
       static constexpr uint32_t dimensions = 1;
     };
 
-    // generated from c++/cli_hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
 
     template<>
     struct traits < ::Test::M_idl_t>
@@ -199,7 +199,7 @@ namespace std {
 namespace std {
 }; // std
 
-// generated from c++/cli_hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__
 
@@ -218,7 +218,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__
 
-// generated from c++/cli_hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__
 
@@ -237,7 +237,7 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__
 
-// generated from c++/cli_hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__)
 #define __TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__
 
@@ -256,12 +256,12 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

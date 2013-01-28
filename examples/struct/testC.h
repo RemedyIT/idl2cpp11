@@ -28,12 +28,12 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++/cli_hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Variable final
   {
   public:
 
-    // generated from c++/cli_hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post.erb
     inline Variable ();
     ~Variable () = default;
     Variable (const Variable&) = default;
@@ -56,7 +56,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++/cli_hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_BAR_FWD_)
 #define _INTF_TEST_BAR_FWD_
   class Bar;
@@ -72,7 +72,7 @@ namespace Test
 }; // Test
 // entering CxxWriterBase#at_global_scope
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_BAR_TRAITS_DECL_)
 #define _INTF_TEST_BAR_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -111,7 +111,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++/cli_hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre.erb
   class Bar
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -126,11 +126,11 @@ namespace Test
 
     virtual const std::string& _interface_repository_id () const override;
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Bar::op
     virtual void op ();
 
-    // generated from c++/cli_hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Bar>::ref_type _narrow (
         TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
     {
@@ -156,12 +156,12 @@ namespace Test
     Bar_proxy_ptr bar_proxy_;
   }; // Bar
 
-  // generated from c++/cli_hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Simple final
   {
   public:
 
-    // generated from c++/cli_hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post.erb
     inline Simple ();
     ~Simple () = default;
     Simple (const Simple&) = default;
@@ -227,7 +227,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++/cli_hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -243,7 +243,7 @@ namespace Test
 }; // Test
 // entering CxxWriterBase#at_global_scope
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -282,7 +282,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++/cli_hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre.erb
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -297,27 +297,27 @@ namespace Test
 
     virtual const std::string& _interface_repository_id () const override;
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::pass_struct
     virtual bool pass_struct (const ::Test::Simple& s);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::return_struct
     virtual ::Test::Simple return_struct ();
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::get_struct
     virtual bool get_struct (::Test::Simple& s);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::update_struct
     virtual bool update_struct (::Test::Simple& s);
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::shutdown
     virtual void shutdown ();
 
-    // generated from c++/cli_hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (
         TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
     {
@@ -349,7 +349,7 @@ namespace Test
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_TEST_VARIABLE_TRAITS_)
 #define _STRUCT_TEST_VARIABLE_TRAITS_
     template<>
@@ -359,7 +359,7 @@ namespace TAOX11_NAMESPACE {
     };
 #endif // _STRUCT_TEST_VARIABLE_TRAITS_
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
 #define _STRUCT_TEST_SIMPLE_TRAITS_
     template<>
@@ -374,16 +374,16 @@ namespace TAOX11_NAMESPACE {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::Test::Variable& m1, ::Test::Variable& m2);
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::Test::Simple& m1, ::Test::Simple& m2);
 }; // std
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Variable::Variable ()
            : name_ (std::string())
 {
@@ -416,7 +416,7 @@ inline void Test::Variable::swap (::Test::Variable& s)
   std::swap (this->name_, s.name_);
 }
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Simple::Simple ()
            : o_ (0)
            , l_ (0)
@@ -523,14 +523,14 @@ inline void Test::Simple::swap (::Test::Simple& s)
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::Test::Variable& m1, ::Test::Variable& m2)
   {
     m1.swap (m2);
   }
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::Test::Simple& m1, ::Test::Simple& m2)
   {
@@ -538,29 +538,29 @@ namespace std {
   }
 }; // std
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::Test::Variable&);
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Bar>::ref_type);
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::Test::Simple&);
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

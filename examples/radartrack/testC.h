@@ -23,17 +23,17 @@
 
 using namespace TAOX11_NAMESPACE;
 
-// generated from c++/cli_hdr/typedef.erb
+// generated from c++11/templates/cli/hdr/typedef.erb
 
 typedef std::vector < uint8_t> octetseq;
 struct octetseq_idl_t {}; // IDL traits type-id
 
-// generated from c++/cli_hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre.erb
 class RadarTrack final
 {
 public:
 
-  // generated from c++/cli_hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post.erb
   inline RadarTrack ();
   ~RadarTrack () = default;
   RadarTrack (const RadarTrack&) = default;
@@ -83,7 +83,7 @@ typedef RadarTrack RadarTrack_idl_t; // IDL traits typename
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     template<>
     struct traits < ::octetseq_idl_t>
       : IDL::unbounded_traits< ::octetseq>,
@@ -96,7 +96,7 @@ namespace TAOX11_NAMESPACE {
       typedef IDL::traits< ::uint8_t_idl_t>  element_traits;
     };
 
-    // generated from c++/cli_hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_RADARTRACK_TRAITS_)
 #define _STRUCT_RADARTRACK_TRAITS_
     template<>
@@ -111,12 +111,12 @@ namespace TAOX11_NAMESPACE {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::RadarTrack& m1, ::RadarTrack& m2);
 }; // std
 
-// generated from c++/cli_inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl.erb
 inline RadarTrack::RadarTrack ()
            : id_ (std::string())
            , x_ (0)
@@ -193,7 +193,7 @@ inline void RadarTrack::swap (::RadarTrack& s)
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++/cli_hdr/struct_std.erb
+  // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::RadarTrack& m1, ::RadarTrack& m2)
   {
@@ -201,7 +201,7 @@ namespace std {
   }
 }; // std
 
-// generated from c++/cli_hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os.erb
 #if !defined (__TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__)
 #define __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
 
@@ -220,13 +220,13 @@ inline std::ostream& operator<< (
 
 #endif // __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
 
-// generated from c++/cli_hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
 operator<< (
     std::ostream &,
     const ::RadarTrack&);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

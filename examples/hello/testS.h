@@ -23,7 +23,7 @@
 namespace Test
 {
 
-  // generated from c++/srv_hdr/interface_pre.erb
+  // generated from c++11/templates/srv/hdr/interface_pre.erb
   namespace POA
   {
     class Hello_srvproxy;
@@ -61,13 +61,13 @@ namespace Test
 
       virtual const std::string _interface_repository_id () const override;
 
-      // generated from c++/srv_hdr/operation.erb
+      // generated from c++11/templates/srv/hdr/operation.erb
       virtual std::string get_string (void) = 0;
 
-      // generated from c++/srv_hdr/operation.erb
+      // generated from c++11/templates/srv/hdr/operation.erb
       virtual void shutdown (void) = 0;
 
-      // generated from c++/srv_hdr/interface_post.erb
+      // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
       friend class POA::Hello_srvproxy;
 
@@ -82,7 +82,7 @@ namespace Test
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
 
-    // generated from c++/srv_hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
     template <>
     struct servant_traits< ::Test::Hello>
     {

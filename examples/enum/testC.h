@@ -27,7 +27,7 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++/cli_hdr/enum.erb
+  // generated from c++11/templates/cli/hdr/enum.erb
   enum class EEnum : uint32_t
   {
     A,
@@ -45,7 +45,7 @@ namespace Test
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
-    // generated from c++/cli_hdr/enum_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
     struct traits < ::Test::EEnum_idl_t>
       : IDL::common_traits< ::Test::EEnum>
@@ -62,7 +62,7 @@ namespace std {
 namespace std {
 }; // std
 
-// generated from c++/cli_hdr/enum_os.erb
+// generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
     ::Test::EEnum _enumerator)
@@ -75,7 +75,7 @@ inline std::ostream& operator<< (
   }
 }
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif

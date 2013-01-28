@@ -30,7 +30,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++/cli_hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_HELLO_FWD_)
 #define _INTF_TEST_HELLO_FWD_
   class Hello;
@@ -46,7 +46,7 @@ namespace Test
 }; // Test
 // entering CxxWriterBase#at_global_scope
 
-// generated from c++/cli_hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_HELLO_TRAITS_DECL_)
 #define _INTF_TEST_HELLO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -85,7 +85,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++/cli_hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre.erb
   class Hello
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -100,15 +100,15 @@ namespace Test
 
     virtual const std::string& _interface_repository_id () const override;
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello::get_string
     virtual std::string get_string ();
 
-    // generated from c++/cli_hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello::shutdown
     virtual void shutdown ();
 
-    // generated from c++/cli_hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post.erb
     static TAOX11_NAMESPACE::IDL::traits< Hello>::ref_type _narrow (
         TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
     {
@@ -150,12 +150,12 @@ namespace std {
 namespace std {
 }; // std
 
-// generated from c++/cli_hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Hello>::ref_type);
 
-// generated from c++/cli_hdr/post.erb
+// generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
