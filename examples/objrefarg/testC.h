@@ -35,10 +35,6 @@ namespace Test
   typedef Hello Hello_idl_t; // IDL traits typename
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
-  namespace POA
-  {
-    class Hello;
-  };
 #endif // !_INTF_TEST_HELLO_FWD_
   // generated from CxxWriterBase#at_global_scope
 }; // Test
@@ -92,10 +88,6 @@ namespace Test
   typedef Hello_Factory Hello_Factory_idl_t; // IDL traits typename
   class Hello_Factory_proxy;
   typedef Hello_Factory_proxy* Hello_Factory_proxy_ptr;
-  namespace POA
-  {
-    class Hello_Factory;
-  };
 #endif // !_INTF_TEST_HELLO_FACTORY_FWD_
   // generated from CxxWriterBase#at_global_scope
 }; // Test

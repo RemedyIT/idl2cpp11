@@ -35,7 +35,6 @@ namespace Test
 #define _INTF_TEST_FOO_FWD_
   class Foo;
   typedef Foo Foo_idl_t; // IDL traits typename
-
 #endif // !_INTF_TEST_FOO_FWD_
   // generated from CxxWriterBase#at_global_scope
 }; // Test

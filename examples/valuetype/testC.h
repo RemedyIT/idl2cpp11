@@ -275,10 +275,6 @@ class A;
 typedef A A_idl_t; // IDL traits typename
 class A_proxy;
 typedef A_proxy* A_proxy_ptr;
-namespace POA
-{
-  class A;
-};
 #endif // !_INTF_A_FWD_
 
 // generated from c++11/templates/cli/hdr/interface_object_traits.erb
@@ -740,10 +736,6 @@ class X;
 typedef X X_idl_t; // IDL traits typename
 class X_proxy;
 typedef X_proxy* X_proxy_ptr;
-namespace POA
-{
-  class X;
-};
 #endif // !_INTF_X_FWD_
 
 // generated from c++11/templates/cli/hdr/interface_object_traits.erb
@@ -970,10 +962,6 @@ class A1;
 typedef A1 A1_idl_t; // IDL traits typename
 class A1_proxy;
 typedef A1_proxy* A1_proxy_ptr;
-namespace POA
-{
-  class A1;
-};
 #endif // !_INTF_A1_FWD_
 
 // generated from c++11/templates/cli/hdr/interface_object_traits.erb

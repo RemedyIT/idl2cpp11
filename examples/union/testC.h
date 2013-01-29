@@ -228,10 +228,6 @@ namespace Test
   typedef A A_idl_t; // IDL traits typename
   class A_proxy;
   typedef A_proxy* A_proxy_ptr;
-  namespace POA
-  {
-    class A;
-  };
 #endif // !_INTF_TEST_A_FWD_
   // generated from CxxWriterBase#at_global_scope
 }; // Test
@@ -338,10 +334,6 @@ namespace Test
   typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
-  namespace POA
-  {
-    class Foo;
-  };
 #endif // !_INTF_TEST_FOO_FWD_
   // generated from CxxWriterBase#at_global_scope
 }; // Test
