@@ -156,12 +156,6 @@ namespace Test
     virtual void get_hello_2 (IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
-    static TAOX11_NAMESPACE::IDL::traits< Hello_Factory>::ref_type _narrow (
-        TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
-    {
-      return TAOX11_NAMESPACE::IDL::traits< Hello_Factory>::narrow (_taox11_obj);
-    }
-
   protected:
     typedef std::shared_ptr<Hello_Factory>   _shared_ptr_type;
 
@@ -207,12 +201,6 @@ namespace Test
     virtual void shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
-    static TAOX11_NAMESPACE::IDL::traits< Hello>::ref_type _narrow (
-        TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
-    {
-      return TAOX11_NAMESPACE::IDL::traits< Hello>::narrow (_taox11_obj);
-    }
-
   protected:
     typedef std::shared_ptr<Hello>   _shared_ptr_type;
 

@@ -71,11 +71,11 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      IDL::traits<Test::Foo>::ref_type foo = Test::Foo::_narrow (obj);
+      IDL::traits<Test::Foo>::ref_type foo = IDL::traits<Test::Foo>::narrow (obj);
 
       if (!foo)
       {
-        std::cerr << "ERROR: Test::Foo::narrow (obj) returned nil object." << std::endl;
+        std::cerr << "ERROR: IDL::traits<Test::Foo>::narrow (obj) returned nil object." << std::endl;
         return 1;
       }
 

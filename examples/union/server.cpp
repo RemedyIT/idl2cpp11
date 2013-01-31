@@ -67,11 +67,11 @@ main(int argc, ACE_TCHAR *argv[])
         return 1;
       }
 
-      IDL::traits<Test::Foo>::ref_type hello = Test::Foo::_narrow (hello_obj);
+      IDL::traits<Test::Foo>::ref_type hello = IDL::traits<Test::Foo>::narrow (hello_obj);
 
       if (hello == nullptr)
       {
-        std::cerr << "ERROR: Test::Foo::narrow (hello_obj) returned nil reference." << std::endl;
+        std::cerr << "ERROR: IDL::traits<Test::Foo>::narrow (hello_obj) returned nil reference." << std::endl;
         return 1;
       }
 

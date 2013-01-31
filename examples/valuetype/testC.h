@@ -332,12 +332,6 @@ public:
   virtual void op ();
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
-  static TAOX11_NAMESPACE::IDL::traits< A>::ref_type _narrow (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
-  {
-    return TAOX11_NAMESPACE::IDL::traits< A>::narrow (_taox11_obj);
-  }
-
 protected:
   typedef std::shared_ptr<A>   _shared_ptr_type;
 
@@ -611,12 +605,6 @@ public:
 
   virtual const std::string& _obv_repository_id () const override;
 
-  static TAOX11_CORBA::object_reference< Val> _narrow (
-      TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> obj)
-  {
-    return TAOX11_CORBA::object_traits< Val>::narrow (obj);
-  }
-
 protected:
   Val_init () = default;
   ~Val_init () = default;
@@ -793,12 +781,6 @@ public:
   virtual void op (std::string& s);
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
-  static TAOX11_NAMESPACE::IDL::traits< X>::ref_type _narrow (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
-  {
-    return TAOX11_NAMESPACE::IDL::traits< X>::narrow (_taox11_obj);
-  }
-
 protected:
   typedef std::shared_ptr<X>   _shared_ptr_type;
 
@@ -1019,12 +1001,6 @@ public:
   virtual void op ();
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
-  static TAOX11_NAMESPACE::IDL::traits< A1>::ref_type _narrow (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
-  {
-    return TAOX11_NAMESPACE::IDL::traits< A1>::narrow (_taox11_obj);
-  }
-
 protected:
   typedef std::shared_ptr<A1>   _shared_ptr_type;
 
@@ -1382,12 +1358,6 @@ public:
                 const std::string& p) = 0;
 
   virtual const std::string& _obv_repository_id () const override;
-
-  static TAOX11_CORBA::object_reference< V> _narrow (
-      TAOX11_CORBA::object_reference<TAOX11_NAMESPACE::CORBA::Object> obj)
-  {
-    return TAOX11_CORBA::object_traits< V>::narrow (obj);
-  }
 
 protected:
   V_init () = default;

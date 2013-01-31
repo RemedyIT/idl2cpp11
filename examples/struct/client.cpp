@@ -41,17 +41,17 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      IDL::traits<Test::Foo>::ref_type foo = Test::Foo::_narrow (obj);
+      IDL::traits<Test::Foo>::ref_type foo = IDL::traits<Test::Foo>::narrow (obj);
 
       if (!foo)
       {
-        std::cerr << "ERROR: Test::Foo::narrow (obj) returned nil object." << std::endl;
+        std::cerr << "ERROR: IDL::traits<Test::Foo>::narrow (obj) returned nil object." << std::endl;
         return 1;
       }
 
       std::cout << "narrowed Foo interface" << std::endl;
 
-      CORBA::object_reference<Test::Bar> bar;
+      IDL::traits<Test::Bar>::ref_type bar;
       Test::Variable v;
       Test::Simple simple (32, 12345, "test", 3.45, true, 'A', bar, v);
 

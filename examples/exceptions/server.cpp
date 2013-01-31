@@ -33,11 +33,11 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "retrieved RootPOA object reference" << std::endl;
 
-      IDL::traits<PortableServer::POA>::ref_type root_poa = PortableServer::POA::_narrow (obj);
+      IDL::traits<PortableServer::POA>::ref_type root_poa = IDL::traits<PortableServer::POA>::narrow (obj);
 
       if (!root_poa)
       {
-        std::cerr << "ERROR: PortableServer::POA::narrow (obj) returned nil object." << std::endl;
+        std::cerr << "ERROR: IDL::traits<PortableServer::POA>::narrow (obj) returned nil object." << std::endl;
         return 1;
       }
 
@@ -68,11 +68,11 @@ main(int argc, ACE_TCHAR *argv[])
         return 1;
       }
 
-      IDL::traits<Test::Foo>::ref_type hello = Test::Foo::_narrow (hello_obj);
+      IDL::traits<Test::Foo>::ref_type hello = IDL::traits<Test::Foo>::narrow (hello_obj);
 
       if (hello == nullptr)
       {
-        std::cerr << "ERROR: Test::Foo::narrow (hello_obj) returned nil reference." << std::endl;
+        std::cerr << "ERROR: IDL::traits<Test::Foo>::narrow (hello_obj) returned nil reference." << std::endl;
         return 1;
       }
 

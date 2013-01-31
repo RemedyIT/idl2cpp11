@@ -118,12 +118,6 @@ namespace Test
              ::Test::M& p3);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
-    static TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _narrow (
-        TAOX11_NAMESPACE::IDL::traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type _taox11_obj)
-    {
-      return TAOX11_NAMESPACE::IDL::traits< Foo>::narrow (_taox11_obj);
-    }
-
   protected:
     typedef std::shared_ptr<Foo>   _shared_ptr_type;
 

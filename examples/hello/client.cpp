@@ -30,11 +30,11 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      Test::Hello::_ref_type hello = Test::Hello::_narrow (obj);
+      IDL::traits<Test::Hello>::ref_type hello = IDL::traits<Test::Hello>::narrow (obj);
 
       if (!hello)
       {
-        std::cerr << "ERROR: Test::Hello::_narrow (obj) returned nil object." << std::endl;
+        std::cerr << "ERROR: IDL::traits<Test::Hello>::narrow (obj) returned nil object." << std::endl;
         return 1;
       }
 

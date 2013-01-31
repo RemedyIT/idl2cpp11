@@ -31,17 +31,17 @@ int main(int argc, char* argv[])
 
       std::cout << "retrieved object reference" << std::endl;
 
-      CORBA::object_reference<Test::Hello_Factory> hello_factory = Test::Hello_Factory::_narrow (obj);
+      IDL::traits<Test::Hello_Factory>::ref_type hello_factory = IDL::traits<Test::Hello_Factory>::narrow (obj);
 
       if (hello_factory == nullptr)
       {
-        std::cerr << "ERROR: Test::Hello::narrow (obj) returned nil object." << std::endl;
+        std::cerr << "ERROR: IDL::traits<Test::Hello_Factory>::narrow (obj) returned nil object." << std::endl;
         return 1;
       }
 
       std::cout << "narrowed Hello_Factory interface" << std::endl;
 
-      CORBA::object_reference<Test::Hello> hello = hello_factory->get_hello ();
+      IDL::traits<Test::Hello>::ref_type hello = hello_factory->get_hello ();
 
       if (hello == nullptr)
       {
@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
 
       std::cout << "hello->get_string () returned " << hello->get_string () << std::endl;
 
-      CORBA::object_reference<Test::Hello> hello_2;
+      IDL::traits<Test::Hello>::ref_type hello_2;
       hello_factory->get_hello_2 (hello_2);
 
       if (hello_2 == nullptr)

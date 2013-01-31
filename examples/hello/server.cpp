@@ -67,7 +67,7 @@ main(int argc, ACE_TCHAR *argv[])
         return 1;
       }
 
-      IDL::traits<Test::Hello>::ref_type hello = Test::Hello::_narrow (hello_obj);
+      IDL::traits<Test::Hello>::ref_type hello = IDL::traits<Test::Hello>::narrow (hello_obj);
 
       std::string ior = _orb->object_to_string (hello);
 
