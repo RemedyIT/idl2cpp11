@@ -62,10 +62,10 @@ namespace Test
       virtual const std::string _interface_repository_id () const override;
 
       // generated from c++11/templates/srv/hdr/operation.erb
-      virtual std::string get_string (void) = 0;
+      virtual std::string get_string () = 0;
 
       // generated from c++11/templates/srv/hdr/operation.erb
-      virtual void shutdown (void) = 0;
+      virtual void shutdown () = 0;
 
       // generated from c++11/templates/srv/hdr/interface_post.erb
     private:

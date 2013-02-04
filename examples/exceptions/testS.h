@@ -62,7 +62,7 @@ namespace Test
       virtual const std::string _interface_repository_id () const override;
 
       // generated from c++11/templates/srv/hdr/operation.erb
-      virtual void do_it (void) = 0;
+      virtual void do_it () = 0;
 
       // generated from c++11/templates/srv/hdr/attribute.erb
       virtual int32_t a_number() = 0;
@@ -72,7 +72,7 @@ namespace Test
       virtual void a_string(const std::string& _v) = 0;
 
       // generated from c++11/templates/srv/hdr/operation.erb
-      virtual void shutdown (void) = 0;
+      virtual void shutdown () = 0;
 
       // generated from c++11/templates/srv/hdr/interface_post.erb
     private:

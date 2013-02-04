@@ -58,7 +58,7 @@ namespace POA
     virtual const std::string _interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
-    virtual void op (void) = 0;
+    virtual void op () = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
@@ -158,7 +158,7 @@ namespace POA
     virtual const std::string _interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
-    virtual void op (void) = 0;
+    virtual void op () = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
