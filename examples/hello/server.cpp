@@ -32,7 +32,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       std::cout << "retrieved RootPOA object reference" << std::endl;
 
-      IDL::traits<PortableServer::POA>::ref_type root_poa = PortableServer::POA::_narrow (obj);
+      IDL::traits<PortableServer::POA>::ref_type root_poa = IDL::traits<PortableServer::POA>::narrow (obj);
 
       if (!root_poa)
       {
