@@ -117,11 +117,6 @@ namespace CIAO_Hello_Receiver_Impl
     IDL::traits<Components::SessionContext>::ref_type ctx)
   {
     this->context_ = IDL::traits<Hello::CCM_Receiver_Context>::narrow (ctx);
-
-    if (!this->context_)
-      {
-        throw ::CORBA::INTERNAL ();
-      }
   }
 
   void

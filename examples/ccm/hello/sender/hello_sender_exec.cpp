@@ -94,7 +94,7 @@ namespace CIAO_Hello_Sender_Impl
       {
         taox11_info << "Sender (SYNCH RW_ATTRIB) :\tExpected exception caught :" << ex << std::endl;
       }
-    catch (const CORBA::Exception& ex)
+    catch (const std::exception& ex)
       {
         taox11_error << "ERROR: Caught unexpected exception: " << ex << std::endl;
       }
@@ -126,9 +126,6 @@ namespace CIAO_Hello_Sender_Impl
     this->ciao_context_ =
       IDL::traits<Hello::CCM_Sender_Context>::narrow (ctx);
     if (!this->ciao_context_)
-      {
-        throw CORBA::INTERNAL ();
-      }
   }
 
   void
