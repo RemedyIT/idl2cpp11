@@ -44,7 +44,7 @@ namespace Test
       Foo ();
 
       /// Constructor for inheritance chains
-      Foo (bool);
+      explicit Foo (bool);
 
       /// Destructor
       virtual ~Foo ();
@@ -62,6 +62,7 @@ namespace Test
       virtual const std::string _interface_repository_id () const override;
 
       // generated from c++11/templates/srv/hdr/operation.erb
+      /// @copybrief Test::Foo::do_it
       virtual void do_it () = 0;
 
       // generated from c++11/templates/srv/hdr/attribute.erb
@@ -72,10 +73,15 @@ namespace Test
       virtual void a_string(const std::string& _v) = 0;
 
       // generated from c++11/templates/srv/hdr/operation.erb
+      /// @copybrief Test::Foo::shutdown
       virtual void shutdown () = 0;
 
       // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
+      Foo (const Foo&) = delete;
+      Foo (Foo&&) = delete;
+      Foo& operator= (const Foo&) = delete;
+      Foo& operator= (Foo&&) = delete;
       friend class POA::Foo_srvproxy;
 
       POA::Foo_srvproxy_ptr foo_srvproxy_;

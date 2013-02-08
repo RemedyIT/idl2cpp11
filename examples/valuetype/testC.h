@@ -100,6 +100,7 @@ public:
       TAO_InputCDR &strm,
       _ref_type &vbox);
 
+
 protected:
   typedef std::shared_ptr<Example> _shared_ptr_type;
 
@@ -429,6 +430,7 @@ public:
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
       _ref_type &vbox);
+
 
 protected:
   friend class Val_init;
@@ -1093,6 +1095,7 @@ public:
       TAO_InputCDR &strm,
       _ref_type &vbox);
 
+
 protected:
   typedef std::shared_ptr<B> _shared_ptr_type;
 
@@ -1265,6 +1268,7 @@ public:
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
       _ref_type &vbox);
+
 
 protected:
   friend class V_init;

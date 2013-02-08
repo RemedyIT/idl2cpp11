@@ -44,7 +44,7 @@ namespace Test
       Hello ();
 
       /// Constructor for inheritance chains
-      Hello (bool);
+      explicit Hello (bool);
 
       /// Destructor
       virtual ~Hello ();
@@ -62,13 +62,19 @@ namespace Test
       virtual const std::string _interface_repository_id () const override;
 
       // generated from c++11/templates/srv/hdr/operation.erb
+      /// @copybrief Test::Hello::get_string
       virtual std::string get_string () = 0;
 
       // generated from c++11/templates/srv/hdr/operation.erb
+      /// @copybrief Test::Hello::shutdown
       virtual void shutdown () = 0;
 
       // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
+      Hello (const Hello&) = delete;
+      Hello (Hello&&) = delete;
+      Hello& operator= (const Hello&) = delete;
+      Hello& operator= (Hello&&) = delete;
       friend class POA::Hello_srvproxy;
 
       POA::Hello_srvproxy_ptr hello_srvproxy_;

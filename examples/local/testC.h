@@ -103,10 +103,10 @@ namespace Test
     IDL::traits< ::Test::Foo>::ref_type _this ();
 
   private:
-    Foo(const Foo&) = delete;
-    Foo(Foo&&) = delete;
-    Foo& operator=(const Foo&) = delete;
-    Foo& operator=(Foo&&) = delete;
+    Foo (const Foo&) = delete;
+    Foo (Foo&&) = delete;
+    Foo& operator= (const Foo&) = delete;
+    Foo& operator= (Foo&&) = delete;
   }; // Foo
 }; // namespace Test
 

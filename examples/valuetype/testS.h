@@ -40,7 +40,7 @@ namespace POA
     A ();
 
     /// Constructor for inheritance chains
-    A (bool);
+    explicit A (bool);
 
     /// Destructor
     virtual ~A ();
@@ -58,10 +58,15 @@ namespace POA
     virtual const std::string _interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
+    /// @copybrief A::op
     virtual void op () = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
+    A (const A&) = delete;
+    A (A&&) = delete;
+    A& operator= (const A&) = delete;
+    A& operator= (A&&) = delete;
     friend class POA::A_srvproxy;
 
     POA::A_srvproxy_ptr a_srvproxy_;
@@ -90,7 +95,7 @@ namespace POA
     X ();
 
     /// Constructor for inheritance chains
-    X (bool);
+    explicit X (bool);
 
     /// Destructor
     virtual ~X ();
@@ -108,10 +113,15 @@ namespace POA
     virtual const std::string _interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
+    /// @copybrief X::op
     virtual void op (std::string& s) = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
+    X (const X&) = delete;
+    X (X&&) = delete;
+    X& operator= (const X&) = delete;
+    X& operator= (X&&) = delete;
     friend class POA::X_srvproxy;
 
     POA::X_srvproxy_ptr x_srvproxy_;
@@ -140,7 +150,7 @@ namespace POA
     A1 ();
 
     /// Constructor for inheritance chains
-    A1 (bool);
+    explicit A1 (bool);
 
     /// Destructor
     virtual ~A1 ();
@@ -158,10 +168,15 @@ namespace POA
     virtual const std::string _interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
+    /// @copybrief A1::op
     virtual void op () = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
+    A1 (const A1&) = delete;
+    A1 (A1&&) = delete;
+    A1& operator= (const A1&) = delete;
+    A1& operator= (A1&&) = delete;
     friend class POA::A1_srvproxy;
 
     POA::A1_srvproxy_ptr a1_srvproxy_;
