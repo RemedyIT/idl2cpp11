@@ -391,8 +391,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    virtual const std::string& _interface_repository_id () const override;
-
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::pass_union
     virtual bool pass_union (const ::Test::Data& s);
@@ -447,8 +445,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< A> _traits_type;
     typedef TAOX11_NAMESPACE::IDL::traits< A>::ref_type _ref_type;
     //@}
-
-    virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:

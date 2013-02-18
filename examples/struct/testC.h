@@ -120,8 +120,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Bar>::ref_type _ref_type;
     //@}
 
-    virtual const std::string& _interface_repository_id () const override;
-
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Bar::op
     virtual void op ();
@@ -280,8 +278,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Foo> _traits_type;
     typedef TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _ref_type;
     //@}
-
-    virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::pass_struct

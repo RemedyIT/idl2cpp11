@@ -175,8 +175,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    virtual const std::string& _interface_repository_id () const override;
-
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Foo::test_long_seq
     virtual ::Test::LongSeq test_long_seq (const ::Test::LongSeq& sin,

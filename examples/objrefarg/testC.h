@@ -145,8 +145,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Hello_Factory>::ref_type _ref_type;
     //@}
 
-    virtual const std::string& _interface_repository_id () const override;
-
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello
     virtual IDL::traits< ::Test::Hello>::ref_type get_hello ();
@@ -189,8 +187,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Hello> _traits_type;
     typedef TAOX11_NAMESPACE::IDL::traits< Hello>::ref_type _ref_type;
     //@}
-
-    virtual const std::string& _interface_repository_id () const override;
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello::get_string

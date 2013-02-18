@@ -84,8 +84,6 @@ namespace Test
     typedef TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    virtual const std::string& _interface_repository_id () const override;
-
     virtual bool _is_a (const std::string& local_type_id) override;
 
     // generated from c++11/templates/cli/hdr/operation.erb

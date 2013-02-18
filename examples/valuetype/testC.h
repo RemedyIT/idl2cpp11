@@ -326,8 +326,6 @@ public:
   typedef TAOX11_NAMESPACE::IDL::traits< A>::ref_type _ref_type;
   //@}
 
-  virtual const std::string& _interface_repository_id () const override;
-
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief A::op
   virtual void op ();
@@ -776,8 +774,6 @@ public:
   typedef TAOX11_NAMESPACE::IDL::traits< X>::ref_type _ref_type;
   //@}
 
-  virtual const std::string& _interface_repository_id () const override;
-
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief X::op
   virtual void op (std::string& s);
@@ -995,8 +991,6 @@ public:
   typedef TAOX11_NAMESPACE::IDL::traits< A1> _traits_type;
   typedef TAOX11_NAMESPACE::IDL::traits< A1>::ref_type _ref_type;
   //@}
-
-  virtual const std::string& _interface_repository_id () const override;
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief A1::op

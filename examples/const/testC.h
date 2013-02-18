@@ -153,8 +153,6 @@ public:
   typedef TAOX11_NAMESPACE::IDL::traits< A>::ref_type _ref_type;
   //@}
 
-  virtual const std::string& _interface_repository_id () const override;
-
   // generated from StubHeaderWriter#visit_const
   static constexpr float pi = 3.14159;
 
