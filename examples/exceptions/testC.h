@@ -35,8 +35,6 @@ namespace Test
   {
   public:
 
-    virtual const char* what() const throw () override;
-
     virtual void _raise () const override;
 
     virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
@@ -71,8 +69,6 @@ namespace Test
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
   public:
-
-    virtual const char* what() const throw () override;
 
     virtual void _raise () const override;
 
