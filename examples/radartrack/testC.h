@@ -26,7 +26,6 @@ using namespace TAOX11_NAMESPACE;
 // generated from c++11/templates/cli/hdr/typedef.erb
 
 typedef std::vector < uint8_t> octetseq;
-struct octetseq_idl_t {}; // IDL traits type-id
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 class RadarTrack final
@@ -77,30 +76,35 @@ private:
   int32_t z_;
   ::octetseq plot_;
 };// RadarTrack
-typedef RadarTrack RadarTrack_idl_t; // IDL traits typename
 
 // generated from StubHeaderTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
   namespace IDL {
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < uint8_t>
+    // MD5            : 4A0D4FA0CECD59978705BEC31A31D5CB
+#if !defined(_ALIAS_4A0D4FA0CECD59978705BEC31A31D5CB_TRAITS_DECL_)
+#define _ALIAS_4A0D4FA0CECD59978705BEC31A31D5CB_TRAITS_DECL_
+
     template<>
-    struct traits < ::octetseq_idl_t>
-      : IDL::unbounded_traits< ::octetseq>,
-        IDL::alias_traits< ::octetseq_idl_t,
-                           ::octetseq>
+    struct traits < ::octetseq>
+      : IDL::common_traits< ::octetseq>
+      , IDL::bounded_traits< ::octetseq>
     {
       typedef uint8_t&   element_cdr_to;
       typedef uint8_t  element_cdr_from;
 
-      typedef IDL::traits< ::uint8_t_idl_t>  element_traits;
+      typedef IDL::traits< uint8_t>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_RADARTRACK_TRAITS_)
 #define _STRUCT_RADARTRACK_TRAITS_
     template<>
-    struct traits < ::RadarTrack_idl_t>
+    struct traits < ::RadarTrack>
       : IDL::common_traits< ::RadarTrack>
     {
     };
@@ -202,10 +206,12 @@ namespace std {
 }; // std
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
+// Unaliased type : std::vector < uint8_t>
+// MD5            : 4A0D4FA0CECD59978705BEC31A31D5CB
+#if !defined (_ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_)
+#define _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
 
-#define __TAOX11_OSSTREAM_OCTETSEQ_IMPL__
+#define _ALIAS_OSTREAM_octetseq_IMPL_
 std::ostream&
 taox11_print_octetseq (
     std::ostream& strm ,
@@ -218,7 +224,7 @@ inline std::ostream& operator<< (
   return taox11_print_octetseq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_UINT8_T__DECL__
+#endif // _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&

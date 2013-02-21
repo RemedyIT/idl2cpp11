@@ -32,7 +32,6 @@ using namespace TAOX11_NAMESPACE;
 #define _VALUETYPE_EXAMPLE_FWD_
 
 class Example;
-typedef Example Example_idl_t; // IDL traits typename
 namespace obv
 {
   class Example;
@@ -70,7 +69,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::Example_idl_t>
+    struct traits < ::Example>
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::Example>>,
         public CORBA::valuetype_traits < ::Example>
     {
@@ -139,7 +138,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief Example::op2
-  virtual int32_t op2 (IDL::traits< Example>::ref_type x) = 0;
+  virtual int32_t op2 (TAOX11_NAMESPACE::IDL::traits< Example>::ref_type x) = 0;
 
   /// @name Public state members
   //@{
@@ -158,9 +157,9 @@ protected:
   virtual void val3 (std::string&& _val3) = 0;
   virtual const std::string& val3 () const = 0;
   virtual std::string& val3 () = 0;
-  virtual void val5 (IDL::traits< Example>::ref_type _val5) = 0;
-  virtual IDL::traits< Example>::ref_type val5 () const = 0;
-  virtual IDL::traits< Example>::ref_type& val5 () = 0;
+  virtual void val5 (TAOX11_NAMESPACE::IDL::traits< Example>::ref_type _val5) = 0;
+  virtual TAOX11_NAMESPACE::IDL::traits< Example>::ref_type val5 () const = 0;
+  virtual TAOX11_NAMESPACE::IDL::traits< Example>::ref_type& val5 () = 0;
   //@}
 
 protected:
@@ -185,7 +184,7 @@ namespace obv
     explicit Example (int16_t val1,
                       int32_t val2,
                       std::string val3,
-                      IDL::traits< ::Example>::ref_type val5)
+                      TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type val5)
       : val1_ (std::move (val1))
       , val2_ (std::move (val2))
       , val3_ (std::move (val3))
@@ -213,9 +212,9 @@ namespace obv
     virtual const std::string& val3 () const override;
     virtual std::string& val3 () override;
 
-    virtual void val5 (IDL::traits< ::Example>::ref_type _val5) override;
-    virtual IDL::traits< ::Example>::ref_type val5 () const override;
-    virtual IDL::traits< ::Example>::ref_type& val5 () override;
+    virtual void val5 (TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type _val5) override;
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type val5 () const override;
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type& val5 () override;
 
     /// Marshaling support
     virtual bool
@@ -232,7 +231,7 @@ namespace obv
     int16_t val1_;
     int32_t val2_;
     std::string val3_;
-    IDL::traits< ::Example>::ref_type val5_;
+    TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type val5_;
   }; // Example
 
 }; // obv
@@ -240,7 +239,6 @@ namespace obv
 // generated from c++11/templates/cli/hdr/typedef.erb
 
 typedef std::array< uint8_t, 64 > Bytes;
-struct Bytes_idl_t {}; // IDL traits type-id
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 class S final
@@ -265,7 +263,6 @@ public:
 private:
   int32_t value_;
 };// S
-typedef S S_idl_t; // IDL traits typename
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -273,7 +270,6 @@ typedef S S_idl_t; // IDL traits typename
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
 class A;
-typedef A A_idl_t; // IDL traits typename
 class A_proxy;
 typedef A_proxy* A_proxy_ptr;
 #endif // !_INTF_A_FWD_
@@ -355,7 +351,6 @@ private:
 #define _VALUETYPE_VAL_FWD_
 
 class Val;
-typedef Val Val_idl_t; // IDL traits typename
 namespace obv
 {
   class Val;
@@ -398,7 +393,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::Val_idl_t>
+    struct traits < ::Val>
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::Val>>,
         public CORBA::valuetype_traits < ::Val>
     {
@@ -464,9 +459,9 @@ public:
 
   /// @name Public state members
   //@{
-  virtual void t (IDL::traits< Val>::ref_type _t) = 0;
-  virtual IDL::traits< Val>::ref_type t () const = 0;
-  virtual IDL::traits< Val>::ref_type& t () = 0;
+  virtual void t (TAOX11_NAMESPACE::IDL::traits< Val>::ref_type _t) = 0;
+  virtual TAOX11_NAMESPACE::IDL::traits< Val>::ref_type t () const = 0;
+  virtual TAOX11_NAMESPACE::IDL::traits< Val>::ref_type& t () = 0;
   virtual void w (const ::Bytes& _w) = 0;
   virtual void w (::Bytes&& _w) = 0;
   virtual const ::Bytes& w () const = 0;
@@ -487,9 +482,9 @@ protected:
   virtual void y (::S&& _y) = 0;
   virtual const ::S& y () const = 0;
   virtual ::S& y () = 0;
-  virtual void z (IDL::traits< ::A>::ref_type _z) = 0;
-  virtual IDL::traits< ::A>::ref_type z () const = 0;
-  virtual IDL::traits< ::A>::ref_type& z () = 0;
+  virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) = 0;
+  virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const = 0;
+  virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () = 0;
   //@}
 
 protected:
@@ -511,12 +506,12 @@ namespace obv
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
-    explicit Val (IDL::traits< ::Val>::ref_type t,
+    explicit Val (TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type t,
                   int32_t v,
                   ::Bytes w,
                   std::string x,
                   ::S y,
-                  IDL::traits< ::A>::ref_type z)
+                  TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z)
       : t_ (std::move (t))
       , v_ (std::move (v))
       , w_ (std::move (w))
@@ -536,9 +531,9 @@ namespace obv
 
     /// @name Public state members
     //@{
-    virtual void t (IDL::traits< ::Val>::ref_type _t) override;
-    virtual IDL::traits< ::Val>::ref_type t () const override;
-    virtual IDL::traits< ::Val>::ref_type& t () override;
+    virtual void t (TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type _t) override;
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type t () const override;
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type& t () override;
 
     virtual void w (const ::Bytes& _w) override;
     virtual void w (::Bytes&& _w) override;
@@ -562,9 +557,9 @@ namespace obv
     virtual const ::S& y () const override;
     virtual ::S& y () override;
 
-    virtual void z (IDL::traits< ::A>::ref_type _z) override;
-    virtual IDL::traits< ::A>::ref_type z () const override;
-    virtual IDL::traits< ::A>::ref_type& z () override;
+    virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) override;
+    virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const override;
+    virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () override;
 
     /// Marshaling support
     virtual bool
@@ -578,12 +573,12 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    IDL::traits< ::Val>::ref_type t_;
+    TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type t_;
     int32_t v_;
     ::Bytes w_;
     std::string x_;
     ::S y_;
-    IDL::traits< ::A>::ref_type z_;
+    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z_;
   }; // Val
 
 }; // obv
@@ -614,7 +609,6 @@ protected:
 
 // generated from c++11/templates/cli/hdr/valuebox_fwd.erb
 class StringValue;
-typedef StringValue StringValue_idl_t; // IDL traits typename
 
 // generated from c++11/templates/cli/hdr/valuebox_traits.erb
 #if !defined (_VBOX_STRINGVALUE_TRAITS_DECL_)
@@ -639,11 +633,11 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::StringValue_idl_t>
+    struct traits < ::StringValue>
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::StringValue>>,
         public CORBA::valuetype_traits < ::StringValue>
     {
-      typedef IDL::traits< ::std::string_idl_t>  boxed_traits;
+      typedef IDL::traits< std::string>  boxed_traits;
     };
   };
 };
@@ -721,7 +715,6 @@ namespace TAOX11_NAMESPACE
 #if !defined (_INTF_X_FWD_)
 #define _INTF_X_FWD_
 class X;
-typedef X X_idl_t; // IDL traits typename
 class X_proxy;
 typedef X_proxy* X_proxy_ptr;
 #endif // !_INTF_X_FWD_
@@ -805,11 +798,9 @@ enum class Color : uint32_t
   green,
   blue
 };// Color
-typedef Color Color_idl_t; // IDL traits typename
 
 // generated from c++11/templates/cli/hdr/valuebox_fwd.erb
 class ColorValue;
-typedef ColorValue ColorValue_idl_t; // IDL traits typename
 
 // generated from c++11/templates/cli/hdr/valuebox_traits.erb
 #if !defined (_VBOX_COLORVALUE_TRAITS_DECL_)
@@ -834,11 +825,11 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::ColorValue_idl_t>
+    struct traits < ::ColorValue>
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::ColorValue>>,
         public CORBA::valuetype_traits < ::ColorValue>
     {
-      typedef IDL::traits< ::Color_idl_t>  boxed_traits;
+      typedef IDL::traits< ::Color>  boxed_traits;
     };
   };
 };
@@ -931,7 +922,6 @@ public:
 private:
   ::Color col_;
 };// ColorValue2
-typedef ColorValue2 ColorValue2_idl_t; // IDL traits typename
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -939,7 +929,6 @@ typedef ColorValue2 ColorValue2_idl_t; // IDL traits typename
 #if !defined (_INTF_A1_FWD_)
 #define _INTF_A1_FWD_
 class A1;
-typedef A1 A1_idl_t; // IDL traits typename
 class A1_proxy;
 typedef A1_proxy* A1_proxy_ptr;
 #endif // !_INTF_A1_FWD_
@@ -1021,7 +1010,6 @@ private:
 #define _VALUETYPE_B_FWD_
 
 class B;
-typedef B B_idl_t; // IDL traits typename
 namespace obv
 {
   class B;
@@ -1059,7 +1047,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::B_idl_t>
+    struct traits < ::B>
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::B>>,
         public CORBA::valuetype_traits < ::B>
     {
@@ -1189,7 +1177,6 @@ namespace obv
 #define _VALUETYPE_V_FWD_
 
 class V;
-typedef V V_idl_t; // IDL traits typename
 namespace obv
 {
   class V;
@@ -1232,7 +1219,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::V_idl_t>
+    struct traits < ::V>
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::V>>,
         public CORBA::valuetype_traits < ::V>
     {
@@ -1345,13 +1332,13 @@ public:
   typedef TAOX11_NAMESPACE::IDL::traits< V>::factory_ref_type _ref_type;
 
   template <typename T> friend struct TAOX11_CORBA::object_traits;
-  virtual IDL::traits< ::V>::ref_type
+  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
   create_bool (bool b) = 0;
-  virtual IDL::traits< ::V>::ref_type
+  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
   create_char (char c) = 0;
-  virtual IDL::traits< ::V>::ref_type
+  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
   create_octet (uint8_t o) = 0;
-  virtual IDL::traits< ::V>::ref_type
+  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
   create_other (int16_t s,
                 const std::string& p) = 0;
 
@@ -1369,22 +1356,26 @@ namespace TAOX11_NAMESPACE {
   namespace IDL {
 
     // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // Unaliased type : std::array< uint8_t, 64 >
+    // MD5            : 765CC766CD2500C237586E8ED6B5F8D0
+#if !defined(_ALIAS_765CC766CD2500C237586E8ED6B5F8D0_TRAITS_DECL_)
+#define _ALIAS_765CC766CD2500C237586E8ED6B5F8D0_TRAITS_DECL_
 
     template<>
-    struct traits < ::Bytes_idl_t>
-      : IDL::common_traits< ::Bytes>,
-        IDL::alias_traits< ::Bytes_idl_t,
-                           ::Bytes>
+    struct traits < ::Bytes>
+      : IDL::common_traits< ::Bytes>
     {
-      typedef IDL::traits< ::uint8_t_idl_t>  element_traits;
+      typedef IDL::traits< uint8_t>  element_traits;
       static constexpr uint32_t dimensions = 1;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_S_TRAITS_)
 #define _STRUCT_S_TRAITS_
     template<>
-    struct traits < ::S_idl_t>
+    struct traits < ::S>
       : IDL::common_traits< ::S>
     {
     };
@@ -1392,7 +1383,7 @@ namespace TAOX11_NAMESPACE {
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Color_idl_t>
+    struct traits < ::Color>
       : IDL::common_traits< ::Color>
     {
     };
@@ -1401,7 +1392,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_COLORVALUE2_TRAITS_)
 #define _STRUCT_COLORVALUE2_TRAITS_
     template<>
-    struct traits < ::ColorValue2_idl_t>
+    struct traits < ::ColorValue2>
       : IDL::common_traits< ::ColorValue2>
     {
     };
@@ -1602,13 +1593,15 @@ namespace std {
 std::ostream&
 operator<< (
     std::ostream& ,
-    IDL::traits< ::Example>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type);
 
 // generated from c++11/templates/cli/hdr/array_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_ARRAY_UINT8_T_64__DECL__)
-#define __TAOX11_OSSTREAM_STD_ARRAY_UINT8_T_64__DECL__
+// Unaliased type : std::array< uint8_t, 64 >
+// MD5            : 765CC766CD2500C237586E8ED6B5F8D0
+#if !defined (_ALIAS_OSTREAM_765CC766CD2500C237586E8ED6B5F8D0_DECL_)
+#define _ALIAS_OSTREAM_765CC766CD2500C237586E8ED6B5F8D0_DECL_
 
-#define __TAOX11_OSSTREAM_BYTES_IMPL__
+#define _ALIAS_OSTREAM_Bytes_IMPL_
 std::ostream&
 taox11_print_Bytes (
     std::ostream& strm ,
@@ -1621,7 +1614,7 @@ inline std::ostream& operator<< (
   return taox11_print_Bytes (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_ARRAY_UINT8_T_64__DECL__
+#endif // _ALIAS_OSTREAM_765CC766CD2500C237586E8ED6B5F8D0_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -1632,13 +1625,13 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::A>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    IDL::traits< ::Val>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuebox_os.erb
 std::ostream&
@@ -1649,7 +1642,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::X>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type);
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -1679,19 +1672,19 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::A1>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    IDL::traits< ::B>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::B>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    IDL::traits< ::V>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

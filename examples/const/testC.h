@@ -76,12 +76,10 @@ namespace Test
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef int32_t TCounter;
-  typedef int32_t_idl_t TCounter_idl_t; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::string TName;
-  struct TName_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#visit_const
   constexpr TCounter count = 99;
@@ -100,7 +98,6 @@ namespace Test
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
 class A;
-typedef A A_idl_t; // IDL traits typename
 class A_proxy;
 typedef A_proxy* A_proxy_ptr;
 #endif // !_INTF_A_FWD_
@@ -179,17 +176,6 @@ private:
 // generated from StubHeaderTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
   namespace IDL {
-
-    // generated from c++11/templates/cli/hdr/string_idl_traits.erb
-    template<>
-    struct traits < ::Test::TName_idl_t>
-      : IDL::bounded_traits< std::string,
-                             30U>,
-        IDL::alias_traits< ::Test::TName_idl_t,
-                           std::string>
-    {
-      typedef IDL::traits<char>     element_traits;
-    };
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -204,7 +190,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::A>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

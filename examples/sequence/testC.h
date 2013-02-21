@@ -82,32 +82,26 @@ namespace Test
     bool b_;
     char c_;
   };// Simple
-  typedef Simple Simple_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < Simple> SimpleSeq;
-  struct SimpleSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < int32_t> LongSeq;
-  struct LongSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < int32_t> BoundedLongSeq;
-  struct BoundedLongSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < bool> BoolSeq;
-  struct BoolSeq_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < std::string> StringSeq;
-  struct StringSeq_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -115,7 +109,6 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
-  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
 #endif // !_INTF_TEST_FOO_FWD_
@@ -233,77 +226,106 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
 #define _STRUCT_TEST_SIMPLE_TRAITS_
     template<>
-    struct traits < ::Test::Simple_idl_t>
+    struct traits < ::Test::Simple>
       : IDL::common_traits< ::Test::Simple>
     {
     };
 #endif // _STRUCT_TEST_SIMPLE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Test::Simple>
+    // MD5            : 97E065F0B22B38AFDF68FAC50C0D18D3
+#if !defined(_ALIAS_97E065F0B22B38AFDF68FAC50C0D18D3_TRAITS_DECL_)
+#define _ALIAS_97E065F0B22B38AFDF68FAC50C0D18D3_TRAITS_DECL_
+
     template<>
-    struct traits < ::Test::SimpleSeq_idl_t>
-      : IDL::unbounded_traits< ::Test::SimpleSeq>,
-        IDL::alias_traits< ::Test::SimpleSeq_idl_t,
-                           ::Test::SimpleSeq>
+    struct traits < ::Test::SimpleSeq>
+      : IDL::common_traits< ::Test::SimpleSeq>
+      , IDL::bounded_traits< ::Test::SimpleSeq>
     {
       typedef ::Test::Simple&   element_cdr_to;
       typedef const ::Test::Simple&  element_cdr_from;
 
-      typedef IDL::traits< ::Test::Simple_idl_t>  element_traits;
+      typedef IDL::traits< ::Test::Simple>  element_traits;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < int32_t>
+    // MD5            : EF22CCD494B5C3FED94E904D67A99E15
+#if !defined(_ALIAS_EF22CCD494B5C3FED94E904D67A99E15_TRAITS_DECL_)
+#define _ALIAS_EF22CCD494B5C3FED94E904D67A99E15_TRAITS_DECL_
+
     template<>
-    struct traits < ::Test::LongSeq_idl_t>
-      : IDL::unbounded_traits< ::Test::LongSeq>,
-        IDL::alias_traits< ::Test::LongSeq_idl_t,
-                           ::Test::LongSeq>
+    struct traits < ::Test::LongSeq>
+      : IDL::common_traits< ::Test::LongSeq>
+      , IDL::bounded_traits< ::Test::LongSeq>
     {
       typedef int32_t&   element_cdr_to;
       typedef int32_t  element_cdr_from;
 
-      typedef IDL::traits< ::int32_t_idl_t>  element_traits;
+      typedef IDL::traits< int32_t>  element_traits;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < int32_t>
+    // MD5            : EF22CCD494B5C3FED94E904D67A99E15
+#if !defined(_ALIAS_EF22CCD494B5C3FED94E904D67A99E15_TRAITS_DECL_)
+#define _ALIAS_EF22CCD494B5C3FED94E904D67A99E15_TRAITS_DECL_
+
     template<>
-    struct traits < ::Test::BoundedLongSeq_idl_t>
-      : IDL::bounded_traits< ::Test::BoundedLongSeq,
-                             50U>,
-        IDL::alias_traits< ::Test::BoundedLongSeq_idl_t,
-                           ::Test::BoundedLongSeq>
+    struct traits < ::Test::BoundedLongSeq>
+      : IDL::common_traits< ::Test::BoundedLongSeq>
+      , IDL::bounded_traits< ::Test::BoundedLongSeq>
     {
       typedef int32_t&   element_cdr_to;
       typedef int32_t  element_cdr_from;
 
-      typedef IDL::traits< ::int32_t_idl_t>  element_traits;
+      typedef IDL::traits< int32_t>  element_traits;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < bool>
+    // MD5            : 9234E6936FE22252495CDEA48F87A0D3
+#if !defined(_ALIAS_9234E6936FE22252495CDEA48F87A0D3_TRAITS_DECL_)
+#define _ALIAS_9234E6936FE22252495CDEA48F87A0D3_TRAITS_DECL_
+
     template<>
-    struct traits < ::Test::BoolSeq_idl_t>
-      : IDL::unbounded_traits< ::Test::BoolSeq>,
-        IDL::alias_traits< ::Test::BoolSeq_idl_t,
-                           ::Test::BoolSeq>
+    struct traits < ::Test::BoolSeq>
+      : IDL::common_traits< ::Test::BoolSeq>
+      , IDL::bounded_traits< ::Test::BoolSeq>
     {
       typedef bool&   element_cdr_to;
       typedef bool  element_cdr_from;
 
-      typedef IDL::traits< ::bool_idl_t>  element_traits;
+      typedef IDL::traits< bool>  element_traits;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < std::string>
+    // MD5            : E501B88938184788967D036078062640
+#if !defined(_ALIAS_E501B88938184788967D036078062640_TRAITS_DECL_)
+#define _ALIAS_E501B88938184788967D036078062640_TRAITS_DECL_
+
     template<>
-    struct traits < ::Test::StringSeq_idl_t>
-      : IDL::unbounded_traits< ::Test::StringSeq>,
-        IDL::alias_traits< ::Test::StringSeq_idl_t,
-                           ::Test::StringSeq>
+    struct traits < ::Test::StringSeq>
+      : IDL::common_traits< ::Test::StringSeq>
+      , IDL::bounded_traits< ::Test::StringSeq>
     {
       typedef std::string&   element_cdr_to;
       typedef const std::string&  element_cdr_from;
 
-      typedef IDL::traits< ::std::string_idl_t>  element_traits;
+      typedef IDL::traits< std::string>  element_traits;
     };
+
+#endif
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -416,10 +438,12 @@ operator<< (
     const ::Test::Simple&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
+// Unaliased type : std::vector < ::Test::Simple>
+// MD5            : 97E065F0B22B38AFDF68FAC50C0D18D3
+#if !defined (_ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_)
+#define _ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_SIMPLESEQ_IMPL__
+#define _ALIAS_OSTREAM_Test_SimpleSeq_IMPL_
 std::ostream&
 taox11_print_Test_SimpleSeq (
     std::ostream& strm ,
@@ -432,13 +456,15 @@ inline std::ostream& operator<< (
   return taox11_print_Test_SimpleSeq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_TEST_SIMPLE__DECL__
+#endif // _ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+// Unaliased type : std::vector < int32_t>
+// MD5            : EF22CCD494B5C3FED94E904D67A99E15
+#if !defined (_ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_)
+#define _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_LONGSEQ_IMPL__
+#define _ALIAS_OSTREAM_Test_LongSeq_IMPL_
 std::ostream&
 taox11_print_Test_LongSeq (
     std::ostream& strm ,
@@ -451,13 +477,15 @@ inline std::ostream& operator<< (
   return taox11_print_Test_LongSeq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+#endif // _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+// Unaliased type : std::vector < int32_t>
+// MD5            : EF22CCD494B5C3FED94E904D67A99E15
+#if !defined (_ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_)
+#define _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_BOUNDEDLONGSEQ_IMPL__
+#define _ALIAS_OSTREAM_Test_BoundedLongSeq_IMPL_
 std::ostream&
 taox11_print_Test_BoundedLongSeq (
     std::ostream& strm ,
@@ -470,13 +498,15 @@ inline std::ostream& operator<< (
   return taox11_print_Test_BoundedLongSeq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_INT32_T__DECL__
+#endif // _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
+// Unaliased type : std::vector < bool>
+// MD5            : 9234E6936FE22252495CDEA48F87A0D3
+#if !defined (_ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_)
+#define _ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_BOOLSEQ_IMPL__
+#define _ALIAS_OSTREAM_Test_BoolSeq_IMPL_
 std::ostream&
 taox11_print_Test_BoolSeq (
     std::ostream& strm ,
@@ -489,13 +519,15 @@ inline std::ostream& operator<< (
   return taox11_print_Test_BoolSeq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_BOOL__DECL__
+#endif // _ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
+// Unaliased type : std::vector < std::string>
+// MD5            : E501B88938184788967D036078062640
+#if !defined (_ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_)
+#define _ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_STRINGSEQ_IMPL__
+#define _ALIAS_OSTREAM_Test_StringSeq_IMPL_
 std::ostream&
 taox11_print_Test_StringSeq (
     std::ostream& strm ,
@@ -508,12 +540,12 @@ inline std::ostream& operator<< (
   return taox11_print_Test_StringSeq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_STD_STRING__DECL__
+#endif // _ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

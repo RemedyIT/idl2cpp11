@@ -34,7 +34,6 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
-  typedef Foo Foo_idl_t; // IDL traits typename
 #endif // !_INTF_TEST_FOO_FWD_
   // generated from CxxWriterBase#at_global_scope
 }; // Test
@@ -98,7 +97,7 @@ namespace Test
     ~Foo () = default;
 
     /// Returns a strong client reference for the local object you are calling
-    IDL::traits< ::Test::Foo>::ref_type _this ();
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
 
   private:
     Foo (const Foo&) = delete;
@@ -126,7 +125,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

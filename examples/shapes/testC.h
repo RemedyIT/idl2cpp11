@@ -65,7 +65,6 @@ private:
   int32_t y_;
   int32_t shapesize_;
 };// ShapeType
-typedef ShapeType ShapeType_idl_t; // IDL traits typename
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 class Attributes final
@@ -104,12 +103,10 @@ private:
   std::string color_;
   float speed_;
 };// Attributes
-typedef Attributes Attributes_idl_t; // IDL traits typename
 
 // generated from c++11/templates/cli/hdr/typedef.erb
 
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
-struct ShapeTypeSeq_idl_t {}; // IDL traits type-id
 
 // generated from StubHeaderTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
@@ -119,7 +116,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_SHAPETYPE_TRAITS_)
 #define _STRUCT_SHAPETYPE_TRAITS_
     template<>
-    struct traits < ::ShapeType_idl_t>
+    struct traits < ::ShapeType>
       : IDL::common_traits< ::ShapeType>
     {
     };
@@ -129,24 +126,30 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_ATTRIBUTES_TRAITS_)
 #define _STRUCT_ATTRIBUTES_TRAITS_
     template<>
-    struct traits < ::Attributes_idl_t>
+    struct traits < ::Attributes>
       : IDL::common_traits< ::Attributes>
     {
     };
 #endif // _STRUCT_ATTRIBUTES_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::ShapeType>
+    // MD5            : 577F3F73FFE5DD88BB19C22312215F43
+#if !defined(_ALIAS_577F3F73FFE5DD88BB19C22312215F43_TRAITS_DECL_)
+#define _ALIAS_577F3F73FFE5DD88BB19C22312215F43_TRAITS_DECL_
+
     template<>
-    struct traits < ::ShapeTypeSeq_idl_t>
-      : IDL::unbounded_traits< ::ShapeTypeSeq>,
-        IDL::alias_traits< ::ShapeTypeSeq_idl_t,
-                           ::ShapeTypeSeq>
+    struct traits < ::ShapeTypeSeq>
+      : IDL::common_traits< ::ShapeTypeSeq>
+      , IDL::bounded_traits< ::ShapeTypeSeq>
     {
       typedef ::ShapeType&   element_cdr_to;
       typedef const ::ShapeType&  element_cdr_from;
 
-      typedef IDL::traits< ::ShapeType_idl_t>  element_traits;
+      typedef IDL::traits< ::ShapeType>  element_traits;
     };
+
+#endif
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -310,10 +313,12 @@ operator<< (
     const ::Attributes&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
+// Unaliased type : std::vector < ::ShapeType>
+// MD5            : 577F3F73FFE5DD88BB19C22312215F43
+#if !defined (_ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_)
+#define _ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_
 
-#define __TAOX11_OSSTREAM_SHAPETYPESEQ_IMPL__
+#define _ALIAS_OSTREAM_ShapeTypeSeq_IMPL_
 std::ostream&
 taox11_print_ShapeTypeSeq (
     std::ostream& strm ,
@@ -326,7 +331,7 @@ inline std::ostream& operator<< (
   return taox11_print_ShapeTypeSeq (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_SHAPETYPE__DECL__
+#endif // _ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

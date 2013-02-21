@@ -34,7 +34,6 @@ namespace Test
     B,
     C
   };// EEnum
-  typedef EEnum EEnum_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#visit_const
   constexpr EEnum my_enum = EEnum::A;
@@ -47,7 +46,7 @@ namespace TAOX11_NAMESPACE {
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Test::EEnum_idl_t>
+    struct traits < ::Test::EEnum>
       : IDL::common_traits< ::Test::EEnum>
     {
     };

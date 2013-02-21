@@ -31,17 +31,14 @@ namespace Test
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::array< float, 10 > F;
-  struct F_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::array< std::string, 10 > V;
-  struct V_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
-  struct M_idl_t {}; // IDL traits type-id
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -49,7 +46,6 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
-  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
 #endif // !_INTF_TEST_FOO_FWD_
@@ -142,40 +138,52 @@ namespace TAOX11_NAMESPACE {
   namespace IDL {
 
     // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // Unaliased type : std::array< float, 10 >
+    // MD5            : ABF04919D09ABF9A218FEAC04AA202DD
+#if !defined(_ALIAS_ABF04919D09ABF9A218FEAC04AA202DD_TRAITS_DECL_)
+#define _ALIAS_ABF04919D09ABF9A218FEAC04AA202DD_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::F_idl_t>
-      : IDL::common_traits< ::Test::F>,
-        IDL::alias_traits< ::Test::F_idl_t,
-                           ::Test::F>
+    struct traits < ::Test::F>
+      : IDL::common_traits< ::Test::F>
     {
-      typedef IDL::traits< ::float_idl_t>  element_traits;
+      typedef IDL::traits< float>  element_traits;
       static constexpr uint32_t dimensions = 1;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // Unaliased type : std::array< std::string, 10 >
+    // MD5            : 0586A70043E3B0103619F928C5EC3EA6
+#if !defined(_ALIAS_0586A70043E3B0103619F928C5EC3EA6_TRAITS_DECL_)
+#define _ALIAS_0586A70043E3B0103619F928C5EC3EA6_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::V_idl_t>
-      : IDL::common_traits< ::Test::V>,
-        IDL::alias_traits< ::Test::V_idl_t,
-                           ::Test::V>
+    struct traits < ::Test::V>
+      : IDL::common_traits< ::Test::V>
     {
-      typedef IDL::traits< ::std::string_idl_t>  element_traits;
+      typedef IDL::traits< std::string>  element_traits;
       static constexpr uint32_t dimensions = 1;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // Unaliased type : std::array< std::array< std::array< std::string, 3 >, 2 >, 1 >
+    // MD5            : BA0460710F246455F8D8DCE031B10605
+#if !defined(_ALIAS_BA0460710F246455F8D8DCE031B10605_TRAITS_DECL_)
+#define _ALIAS_BA0460710F246455F8D8DCE031B10605_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::M_idl_t>
-      : IDL::common_traits< ::Test::M>,
-        IDL::alias_traits< ::Test::M_idl_t,
-                           ::Test::M>
+    struct traits < ::Test::M>
+      : IDL::common_traits< ::Test::M>
     {
-      typedef IDL::traits< ::std::string_idl_t>  element_traits;
+      typedef IDL::traits< std::string>  element_traits;
       static constexpr uint32_t dimensions = 3;
     };
+
+#endif
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -188,10 +196,12 @@ namespace std {
 }; // std
 
 // generated from c++11/templates/cli/hdr/array_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__)
-#define __TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__
+// Unaliased type : std::array< float, 10 >
+// MD5            : ABF04919D09ABF9A218FEAC04AA202DD
+#if !defined (_ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_)
+#define _ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_F_IMPL__
+#define _ALIAS_OSTREAM_Test_F_IMPL_
 std::ostream&
 taox11_print_Test_F (
     std::ostream& strm ,
@@ -204,13 +214,15 @@ inline std::ostream& operator<< (
   return taox11_print_Test_F (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_ARRAY_FLOAT_10__DECL__
+#endif // _ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_
 
 // generated from c++11/templates/cli/hdr/array_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__)
-#define __TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__
+// Unaliased type : std::array< std::string, 10 >
+// MD5            : 0586A70043E3B0103619F928C5EC3EA6
+#if !defined (_ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_)
+#define _ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_V_IMPL__
+#define _ALIAS_OSTREAM_Test_V_IMPL_
 std::ostream&
 taox11_print_Test_V (
     std::ostream& strm ,
@@ -223,13 +235,15 @@ inline std::ostream& operator<< (
   return taox11_print_Test_V (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_ARRAY_STD_STRING_10__DECL__
+#endif // _ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_
 
 // generated from c++11/templates/cli/hdr/array_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__)
-#define __TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__
+// Unaliased type : std::array< std::array< std::array< std::string, 3 >, 2 >, 1 >
+// MD5            : BA0460710F246455F8D8DCE031B10605
+#if !defined (_ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_)
+#define _ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_
 
-#define __TAOX11_OSSTREAM_TEST_M_IMPL__
+#define _ALIAS_OSTREAM_Test_M_IMPL_
 std::ostream&
 taox11_print_Test_M (
     std::ostream& strm ,
@@ -242,12 +256,12 @@ inline std::ostream& operator<< (
   return taox11_print_Test_M (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_ARRAY_STD_ARRAY_STD_ARRAY_STD_STRING_3_2_1__DECL__
+#endif // _ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

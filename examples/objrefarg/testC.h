@@ -32,7 +32,6 @@ namespace Test
 #if !defined (_INTF_TEST_HELLO_FWD_)
 #define _INTF_TEST_HELLO_FWD_
   class Hello;
-  typedef Hello Hello_idl_t; // IDL traits typename
   class Hello_proxy;
   typedef Hello_proxy* Hello_proxy_ptr;
 #endif // !_INTF_TEST_HELLO_FWD_
@@ -85,7 +84,6 @@ namespace Test
 #if !defined (_INTF_TEST_HELLO_FACTORY_FWD_)
 #define _INTF_TEST_HELLO_FACTORY_FWD_
   class Hello_Factory;
-  typedef Hello_Factory Hello_Factory_idl_t; // IDL traits typename
   class Hello_Factory_proxy;
   typedef Hello_Factory_proxy* Hello_Factory_proxy_ptr;
 #endif // !_INTF_TEST_HELLO_FACTORY_FWD_
@@ -147,11 +145,11 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello
-    virtual IDL::traits< ::Test::Hello>::ref_type get_hello ();
+    virtual TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type get_hello ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello_2
-    virtual void get_hello_2 (IDL::traits< ::Test::Hello>::ref_type& hello_obj);
+    virtual void get_hello_2 (TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -235,17 +233,17 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Hello>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Hello_Factory>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Hello>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

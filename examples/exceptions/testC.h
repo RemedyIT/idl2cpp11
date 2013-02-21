@@ -62,7 +62,6 @@ namespace Test
   private:
     std::string message_;
   }; // FooEx
-  typedef FooEx FooEx_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/except_pre.erb
   class BooEx final
@@ -96,7 +95,6 @@ namespace Test
   private:
     int32_t id_;
   }; // BooEx
-  typedef BooEx BooEx_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -104,7 +102,6 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
-  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
 #endif // !_INTF_TEST_FOO_FWD_
@@ -209,7 +206,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_FOOEX_TRAITS_)
 #define _STRUCT_TEST_FOOEX_TRAITS_
     template<>
-    struct traits < ::Test::FooEx_idl_t>
+    struct traits < ::Test::FooEx>
       : IDL::common_traits< ::Test::FooEx>
     {
     };
@@ -219,7 +216,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_BOOEX_TRAITS_)
 #define _STRUCT_TEST_BOOEX_TRAITS_
     template<>
-    struct traits < ::Test::BooEx_idl_t>
+    struct traits < ::Test::BooEx>
       : IDL::common_traits< ::Test::BooEx>
     {
     };
@@ -309,7 +306,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

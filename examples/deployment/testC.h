@@ -59,12 +59,10 @@ namespace Deployment
     std::string name_;
     TAOX11_NAMESPACE::CORBA::Any value_;
   };// Property
-  typedef Property Property_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < Property> Properties;
-  struct Properties_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Requirement final
@@ -104,12 +102,10 @@ namespace Deployment
     std::string resourceType_;
     ::Deployment::Properties property_;
   };// Requirement
-  typedef Requirement Requirement_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < Requirement> Requirements;
-  struct Requirements_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/enum.erb
   enum class SatisfierPropertyKind : uint32_t
@@ -121,7 +117,6 @@ namespace Deployment
     Attribute,
     Selection
   };// SatisfierPropertyKind
-  typedef SatisfierPropertyKind SatisfierPropertyKind_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class SatisfierProperty final
@@ -166,12 +161,10 @@ namespace Deployment
     bool dynamic_;
     TAOX11_NAMESPACE::CORBA::Any value_;
   };// SatisfierProperty
-  typedef SatisfierProperty SatisfierProperty_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < SatisfierProperty> SatisfierProperties;
-  struct SatisfierProperties_idl_t {}; // IDL traits type-id
 }; // namespace Deployment
 
 
@@ -191,7 +184,6 @@ namespace Deployment
     ExtendedPort,
     MirrorPort
   };// CCMComponentPortKind
-  typedef CCMComponentPortKind CCMComponentPortKind_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ComponentPortDescription final
@@ -268,12 +260,10 @@ namespace Deployment
     ::Deployment::CCMComponentPortKind kind_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam_;
   };// ComponentPortDescription
-  typedef ComponentPortDescription ComponentPortDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
-  struct ComponentPortDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ComponentPropertyDescription final
@@ -286,7 +276,7 @@ namespace Deployment
     ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
     ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
     explicit inline ComponentPropertyDescription (std::string name,
-                                           IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
+                                           TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
     inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
     inline ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
 
@@ -295,22 +285,20 @@ namespace Deployment
     inline const std::string& name () const;
     inline std::string& name ();
 
-    inline void type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
-    inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
-    inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
+    inline void type (TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
+    inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
 
     inline void swap (ComponentPropertyDescription& s);
 
   private:
     std::string name_;
-    IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
+    TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
   };// ComponentPropertyDescription
-  typedef ComponentPropertyDescription ComponentPropertyDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
-  struct ComponentPropertyDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ComponentInterfaceDescription final
@@ -392,7 +380,6 @@ namespace Deployment
     ::Deployment::ComponentPropertyDescriptions property_;
     ::Deployment::Properties infoProperty_;
   };// ComponentInterfaceDescription
-  typedef ComponentInterfaceDescription ComponentInterfaceDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class MonolithicDeploymentDescription final
@@ -446,12 +433,10 @@ namespace Deployment
     ::Deployment::Properties execParameter_;
     ::Deployment::Requirements deployRequirement_;
   };// MonolithicDeploymentDescription
-  typedef MonolithicDeploymentDescription MonolithicDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
-  struct MonolithicDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/enum.erb
   enum class ResourceUsageKind : uint32_t
@@ -462,7 +447,6 @@ namespace Deployment
     PortUsesResource,
     ResourceUsesPort
   };// ResourceUsageKind
-  typedef ResourceUsageKind ResourceUsageKind_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class InstanceResourceDeploymentDescription final
@@ -508,12 +492,10 @@ namespace Deployment
     std::string resourceName_;
     ::Deployment::Properties property_;
   };// InstanceResourceDeploymentDescription
-  typedef InstanceResourceDeploymentDescription InstanceResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
-  struct InstanceResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class InstanceDeploymentDescription final
@@ -580,12 +562,10 @@ namespace Deployment
     ::Deployment::InstanceResourceDeploymentDescriptions deployedResource_;
     ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource_;
   };// InstanceDeploymentDescription
-  typedef InstanceDeploymentDescription InstanceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
-  struct InstanceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ComponentExternalPortEndpoint final
@@ -611,12 +591,10 @@ namespace Deployment
   private:
     std::string portName_;
   };// ComponentExternalPortEndpoint
-  typedef ComponentExternalPortEndpoint ComponentExternalPortEndpoint_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
-  struct ComponentExternalPortEndpoints_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class PlanSubcomponentPortEndpoint final
@@ -660,12 +638,10 @@ namespace Deployment
     ::Deployment::CCMComponentPortKind kind_;
     uint32_t instanceRef_;
   };// PlanSubcomponentPortEndpoint
-  typedef PlanSubcomponentPortEndpoint PlanSubcomponentPortEndpoint_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
-  struct PlanSubcomponentPortEndpoints_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ExternalReferenceEndpoint final
@@ -711,12 +687,10 @@ namespace Deployment
     std::string portName_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType_;
   };// ExternalReferenceEndpoint
-  typedef ExternalReferenceEndpoint ExternalReferenceEndpoint_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
-  struct ExternalReferenceEndpoints_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ConnectionResourceDeploymentDescription final
@@ -763,12 +737,10 @@ namespace Deployment
     std::string resourceName_;
     ::Deployment::Properties property_;
   };// ConnectionResourceDeploymentDescription
-  typedef ConnectionResourceDeploymentDescription ConnectionResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
-  struct ConnectionResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class PlanConnectionDescription final
@@ -836,12 +808,10 @@ namespace Deployment
     ::Deployment::ExternalReferenceEndpoints externalReference_;
     ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource_;
   };// PlanConnectionDescription
-  typedef PlanConnectionDescription PlanConnectionDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
-  struct PlanConnectionDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class PlanSubcomponentPropertyReference final
@@ -873,12 +843,10 @@ namespace Deployment
     std::string propertyName_;
     uint32_t instanceRef_;
   };// PlanSubcomponentPropertyReference
-  typedef PlanSubcomponentPropertyReference PlanSubcomponentPropertyReference_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
-  struct PlanSubcomponentPropertyReferences_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class PlanPropertyMapping final
@@ -925,12 +893,10 @@ namespace Deployment
     std::string externalName_;
     ::Deployment::PlanSubcomponentPropertyReferences delegatesTo_;
   };// PlanPropertyMapping
-  typedef PlanPropertyMapping PlanPropertyMapping_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
-  struct PlanPropertyMappings_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ImplementationDependency final
@@ -956,12 +922,10 @@ namespace Deployment
   private:
     std::string requiredType_;
   };// ImplementationDependency
-  typedef ImplementationDependency ImplementationDependency_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
-  struct ImplementationDependencies_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ResourceDeploymentDescription final
@@ -1001,12 +965,10 @@ namespace Deployment
     std::string resourceName_;
     ::Deployment::Properties property_;
   };// ResourceDeploymentDescription
-  typedef ResourceDeploymentDescription ResourceDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
-  struct ResourceDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ArtifactDeploymentDescription final
@@ -1074,12 +1036,10 @@ namespace Deployment
     ::Deployment::Requirements deployRequirement_;
     ::Deployment::ResourceDeploymentDescriptions deployedResource_;
   };// ArtifactDeploymentDescription
-  typedef ArtifactDeploymentDescription ArtifactDeploymentDescription_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
-  struct ArtifactDeploymentDescriptions_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/enum.erb
   enum class PlanLocalityKind : uint32_t
@@ -1088,7 +1048,6 @@ namespace Deployment
     PlanDifferentProcess,
     PlanNoConstraint
   };// PlanLocalityKind
-  typedef PlanLocalityKind PlanLocalityKind_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class PlanLocality final
@@ -1120,12 +1079,10 @@ namespace Deployment
     ::Deployment::PlanLocalityKind constraint_;
     ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef_;
   };// PlanLocality
-  typedef PlanLocality PlanLocality_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < PlanLocality> PlanLocalities;
-  struct PlanLocalities_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class DeploymentPlan final
@@ -1221,7 +1178,6 @@ namespace Deployment
     ::Deployment::Properties infoProperty_;
     ::Deployment::PlanLocalities localityConstraint_;
   };// DeploymentPlan
-  typedef DeploymentPlan DeploymentPlan_idl_t; // IDL traits typename
 }; // namespace Deployment
 
 
@@ -1267,17 +1223,14 @@ namespace Deployment
     std::string requiredName_;
     ::Deployment::ComponentInterfaceDescription requiredType_;
   };// ComponentPackageReference
-  typedef ComponentPackageReference ComponentPackageReference_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
-  struct ComponentPackageReferences_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
-  struct ResourceUsageKinds_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class ImplementationRequirement final
@@ -1338,12 +1291,10 @@ namespace Deployment
     std::string resourceType_;
     ::Deployment::Properties property_;
   };// ImplementationRequirement
-  typedef ImplementationRequirement ImplementationRequirement_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
-  struct ImplementationRequirements_idl_t {}; // IDL traits type-id
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Capability final
@@ -1383,12 +1334,10 @@ namespace Deployment
     ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType_;
     ::Deployment::SatisfierProperties property_;
   };// Capability
-  typedef Capability Capability_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
   typedef std::vector < Capability> Capabilities;
-  struct Capabilities_idl_t {}; // IDL traits type-id
 }; // namespace Deployment
 
 
@@ -1400,51 +1349,63 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_PROPERTY_TRAITS_)
 #define _STRUCT_DEPLOYMENT_PROPERTY_TRAITS_
     template<>
-    struct traits < ::Deployment::Property_idl_t>
+    struct traits < ::Deployment::Property>
       : IDL::common_traits< ::Deployment::Property>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_PROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::Property>
+    // MD5            : 9FA54C1D0A4E5ABC4A2486AD7C463745
+#if !defined(_ALIAS_9FA54C1D0A4E5ABC4A2486AD7C463745_TRAITS_DECL_)
+#define _ALIAS_9FA54C1D0A4E5ABC4A2486AD7C463745_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::Properties_idl_t>
-      : IDL::unbounded_traits< ::Deployment::Properties>,
-        IDL::alias_traits< ::Deployment::Properties_idl_t,
-                           ::Deployment::Properties>
+    struct traits < ::Deployment::Properties>
+      : IDL::common_traits< ::Deployment::Properties>
+      , IDL::bounded_traits< ::Deployment::Properties>
     {
       typedef ::Deployment::Property&   element_cdr_to;
       typedef const ::Deployment::Property&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::Property_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::Property>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_)
 #define _STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_
     template<>
-    struct traits < ::Deployment::Requirement_idl_t>
+    struct traits < ::Deployment::Requirement>
       : IDL::common_traits< ::Deployment::Requirement>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::Requirement>
+    // MD5            : B5D61CF43DC976264FCA09DAEF6B439D
+#if !defined(_ALIAS_B5D61CF43DC976264FCA09DAEF6B439D_TRAITS_DECL_)
+#define _ALIAS_B5D61CF43DC976264FCA09DAEF6B439D_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::Requirements_idl_t>
-      : IDL::unbounded_traits< ::Deployment::Requirements>,
-        IDL::alias_traits< ::Deployment::Requirements_idl_t,
-                           ::Deployment::Requirements>
+    struct traits < ::Deployment::Requirements>
+      : IDL::common_traits< ::Deployment::Requirements>
+      , IDL::bounded_traits< ::Deployment::Requirements>
     {
       typedef ::Deployment::Requirement&   element_cdr_to;
       typedef const ::Deployment::Requirement&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::Requirement_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::Requirement>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Deployment::SatisfierPropertyKind_idl_t>
+    struct traits < ::Deployment::SatisfierPropertyKind>
       : IDL::common_traits< ::Deployment::SatisfierPropertyKind>
     {
     };
@@ -1453,28 +1414,34 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_)
 #define _STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_
     template<>
-    struct traits < ::Deployment::SatisfierProperty_idl_t>
+    struct traits < ::Deployment::SatisfierProperty>
       : IDL::common_traits< ::Deployment::SatisfierProperty>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::SatisfierProperty>
+    // MD5            : AAB77A9CDD8FCC93D26F3C8F9DA5CB57
+#if !defined(_ALIAS_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_TRAITS_DECL_)
+#define _ALIAS_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::SatisfierProperties_idl_t>
-      : IDL::unbounded_traits< ::Deployment::SatisfierProperties>,
-        IDL::alias_traits< ::Deployment::SatisfierProperties_idl_t,
-                           ::Deployment::SatisfierProperties>
+    struct traits < ::Deployment::SatisfierProperties>
+      : IDL::common_traits< ::Deployment::SatisfierProperties>
+      , IDL::bounded_traits< ::Deployment::SatisfierProperties>
     {
       typedef ::Deployment::SatisfierProperty&   element_cdr_to;
       typedef const ::Deployment::SatisfierProperty&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::SatisfierProperty_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::SatisfierProperty>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Deployment::CCMComponentPortKind_idl_t>
+    struct traits < ::Deployment::CCMComponentPortKind>
       : IDL::common_traits< ::Deployment::CCMComponentPortKind>
     {
     };
@@ -1483,53 +1450,65 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentPortDescription_idl_t>
+    struct traits < ::Deployment::ComponentPortDescription>
       : IDL::common_traits< ::Deployment::ComponentPortDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ComponentPortDescription>
+    // MD5            : C5E370E71060EF02CAD31E10FF9B9A83
+#if !defined(_ALIAS_C5E370E71060EF02CAD31E10FF9B9A83_TRAITS_DECL_)
+#define _ALIAS_C5E370E71060EF02CAD31E10FF9B9A83_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ComponentPortDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ComponentPortDescriptions>,
-        IDL::alias_traits< ::Deployment::ComponentPortDescriptions_idl_t,
-                           ::Deployment::ComponentPortDescriptions>
+    struct traits < ::Deployment::ComponentPortDescriptions>
+      : IDL::common_traits< ::Deployment::ComponentPortDescriptions>
+      , IDL::bounded_traits< ::Deployment::ComponentPortDescriptions>
     {
       typedef ::Deployment::ComponentPortDescription&   element_cdr_to;
       typedef const ::Deployment::ComponentPortDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ComponentPortDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ComponentPortDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentPropertyDescription_idl_t>
+    struct traits < ::Deployment::ComponentPropertyDescription>
       : IDL::common_traits< ::Deployment::ComponentPropertyDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ComponentPropertyDescription>
+    // MD5            : C38B325CAEA1E1A5249DC3C8B0654824
+#if !defined(_ALIAS_C38B325CAEA1E1A5249DC3C8B0654824_TRAITS_DECL_)
+#define _ALIAS_C38B325CAEA1E1A5249DC3C8B0654824_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ComponentPropertyDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ComponentPropertyDescriptions>,
-        IDL::alias_traits< ::Deployment::ComponentPropertyDescriptions_idl_t,
-                           ::Deployment::ComponentPropertyDescriptions>
+    struct traits < ::Deployment::ComponentPropertyDescriptions>
+      : IDL::common_traits< ::Deployment::ComponentPropertyDescriptions>
+      , IDL::bounded_traits< ::Deployment::ComponentPropertyDescriptions>
     {
       typedef ::Deployment::ComponentPropertyDescription&   element_cdr_to;
       typedef const ::Deployment::ComponentPropertyDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ComponentPropertyDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ComponentPropertyDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_COMPONENTINTERFACEDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_COMPONENTINTERFACEDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentInterfaceDescription_idl_t>
+    struct traits < ::Deployment::ComponentInterfaceDescription>
       : IDL::common_traits< ::Deployment::ComponentInterfaceDescription>
     {
     };
@@ -1539,28 +1518,34 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::MonolithicDeploymentDescription_idl_t>
+    struct traits < ::Deployment::MonolithicDeploymentDescription>
       : IDL::common_traits< ::Deployment::MonolithicDeploymentDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::MonolithicDeploymentDescription>
+    // MD5            : 80C54C15F1FCF891188F93122A3F1653
+#if !defined(_ALIAS_80C54C15F1FCF891188F93122A3F1653_TRAITS_DECL_)
+#define _ALIAS_80C54C15F1FCF891188F93122A3F1653_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::MonolithicDeploymentDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::MonolithicDeploymentDescriptions>,
-        IDL::alias_traits< ::Deployment::MonolithicDeploymentDescriptions_idl_t,
-                           ::Deployment::MonolithicDeploymentDescriptions>
+    struct traits < ::Deployment::MonolithicDeploymentDescriptions>
+      : IDL::common_traits< ::Deployment::MonolithicDeploymentDescriptions>
+      , IDL::bounded_traits< ::Deployment::MonolithicDeploymentDescriptions>
     {
       typedef ::Deployment::MonolithicDeploymentDescription&   element_cdr_to;
       typedef const ::Deployment::MonolithicDeploymentDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Deployment::ResourceUsageKind_idl_t>
+    struct traits < ::Deployment::ResourceUsageKind>
       : IDL::common_traits< ::Deployment::ResourceUsageKind>
     {
     };
@@ -1569,281 +1554,353 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::InstanceResourceDeploymentDescription_idl_t>
+    struct traits < ::Deployment::InstanceResourceDeploymentDescription>
       : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::InstanceResourceDeploymentDescription>
+    // MD5            : EECAFA244583FB042136539EF2209665
+#if !defined(_ALIAS_EECAFA244583FB042136539EF2209665_TRAITS_DECL_)
+#define _ALIAS_EECAFA244583FB042136539EF2209665_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::InstanceResourceDeploymentDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::InstanceResourceDeploymentDescriptions>,
-        IDL::alias_traits< ::Deployment::InstanceResourceDeploymentDescriptions_idl_t,
-                           ::Deployment::InstanceResourceDeploymentDescriptions>
+    struct traits < ::Deployment::InstanceResourceDeploymentDescriptions>
+      : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
+      , IDL::bounded_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
     {
       typedef ::Deployment::InstanceResourceDeploymentDescription&   element_cdr_to;
       typedef const ::Deployment::InstanceResourceDeploymentDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::InstanceDeploymentDescription_idl_t>
+    struct traits < ::Deployment::InstanceDeploymentDescription>
       : IDL::common_traits< ::Deployment::InstanceDeploymentDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::InstanceDeploymentDescription>
+    // MD5            : 5DAB54D520633DBBAAC64AB44B5264EF
+#if !defined(_ALIAS_5DAB54D520633DBBAAC64AB44B5264EF_TRAITS_DECL_)
+#define _ALIAS_5DAB54D520633DBBAAC64AB44B5264EF_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::InstanceDeploymentDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::InstanceDeploymentDescriptions>,
-        IDL::alias_traits< ::Deployment::InstanceDeploymentDescriptions_idl_t,
-                           ::Deployment::InstanceDeploymentDescriptions>
+    struct traits < ::Deployment::InstanceDeploymentDescriptions>
+      : IDL::common_traits< ::Deployment::InstanceDeploymentDescriptions>
+      , IDL::bounded_traits< ::Deployment::InstanceDeploymentDescriptions>
     {
       typedef ::Deployment::InstanceDeploymentDescription&   element_cdr_to;
       typedef const ::Deployment::InstanceDeploymentDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_)
 #define _STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentExternalPortEndpoint_idl_t>
+    struct traits < ::Deployment::ComponentExternalPortEndpoint>
       : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoint>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ComponentExternalPortEndpoint>
+    // MD5            : D55B5CF95C9426C6D2C98C3A5D478A08
+#if !defined(_ALIAS_D55B5CF95C9426C6D2C98C3A5D478A08_TRAITS_DECL_)
+#define _ALIAS_D55B5CF95C9426C6D2C98C3A5D478A08_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ComponentExternalPortEndpoints_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ComponentExternalPortEndpoints>,
-        IDL::alias_traits< ::Deployment::ComponentExternalPortEndpoints_idl_t,
-                           ::Deployment::ComponentExternalPortEndpoints>
+    struct traits < ::Deployment::ComponentExternalPortEndpoints>
+      : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoints>
+      , IDL::bounded_traits< ::Deployment::ComponentExternalPortEndpoints>
     {
       typedef ::Deployment::ComponentExternalPortEndpoint&   element_cdr_to;
       typedef const ::Deployment::ComponentExternalPortEndpoint&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_)
 #define _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPortEndpoint_idl_t>
+    struct traits < ::Deployment::PlanSubcomponentPortEndpoint>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoint>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::PlanSubcomponentPortEndpoint>
+    // MD5            : B166E528DC38CC7B9823B4A707AF73F7
+#if !defined(_ALIAS_B166E528DC38CC7B9823B4A707AF73F7_TRAITS_DECL_)
+#define _ALIAS_B166E528DC38CC7B9823B4A707AF73F7_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPortEndpoints_idl_t>
-      : IDL::unbounded_traits< ::Deployment::PlanSubcomponentPortEndpoints>,
-        IDL::alias_traits< ::Deployment::PlanSubcomponentPortEndpoints_idl_t,
-                           ::Deployment::PlanSubcomponentPortEndpoints>
+    struct traits < ::Deployment::PlanSubcomponentPortEndpoints>
+      : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoints>
+      , IDL::bounded_traits< ::Deployment::PlanSubcomponentPortEndpoints>
     {
       typedef ::Deployment::PlanSubcomponentPortEndpoint&   element_cdr_to;
       typedef const ::Deployment::PlanSubcomponentPortEndpoint&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_)
 #define _STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_
     template<>
-    struct traits < ::Deployment::ExternalReferenceEndpoint_idl_t>
+    struct traits < ::Deployment::ExternalReferenceEndpoint>
       : IDL::common_traits< ::Deployment::ExternalReferenceEndpoint>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ExternalReferenceEndpoint>
+    // MD5            : 05A01CE11A8BFF9D44BAB053FE399734
+#if !defined(_ALIAS_05A01CE11A8BFF9D44BAB053FE399734_TRAITS_DECL_)
+#define _ALIAS_05A01CE11A8BFF9D44BAB053FE399734_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ExternalReferenceEndpoints_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ExternalReferenceEndpoints>,
-        IDL::alias_traits< ::Deployment::ExternalReferenceEndpoints_idl_t,
-                           ::Deployment::ExternalReferenceEndpoints>
+    struct traits < ::Deployment::ExternalReferenceEndpoints>
+      : IDL::common_traits< ::Deployment::ExternalReferenceEndpoints>
+      , IDL::bounded_traits< ::Deployment::ExternalReferenceEndpoints>
     {
       typedef ::Deployment::ExternalReferenceEndpoint&   element_cdr_to;
       typedef const ::Deployment::ExternalReferenceEndpoint&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ConnectionResourceDeploymentDescription_idl_t>
+    struct traits < ::Deployment::ConnectionResourceDeploymentDescription>
       : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ConnectionResourceDeploymentDescription>
+    // MD5            : AF4F2101DCE0C79A0EDE886BDCAFC611
+#if !defined(_ALIAS_AF4F2101DCE0C79A0EDE886BDCAFC611_TRAITS_DECL_)
+#define _ALIAS_AF4F2101DCE0C79A0EDE886BDCAFC611_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>,
-        IDL::alias_traits< ::Deployment::ConnectionResourceDeploymentDescriptions_idl_t,
-                           ::Deployment::ConnectionResourceDeploymentDescriptions>
+    struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions>
+      : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
+      , IDL::bounded_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
     {
       typedef ::Deployment::ConnectionResourceDeploymentDescription&   element_cdr_to;
       typedef const ::Deployment::ConnectionResourceDeploymentDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanConnectionDescription_idl_t>
+    struct traits < ::Deployment::PlanConnectionDescription>
       : IDL::common_traits< ::Deployment::PlanConnectionDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::PlanConnectionDescription>
+    // MD5            : CFA31BAC8967655A8F41210E634352C1
+#if !defined(_ALIAS_CFA31BAC8967655A8F41210E634352C1_TRAITS_DECL_)
+#define _ALIAS_CFA31BAC8967655A8F41210E634352C1_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::PlanConnectionDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::PlanConnectionDescriptions>,
-        IDL::alias_traits< ::Deployment::PlanConnectionDescriptions_idl_t,
-                           ::Deployment::PlanConnectionDescriptions>
+    struct traits < ::Deployment::PlanConnectionDescriptions>
+      : IDL::common_traits< ::Deployment::PlanConnectionDescriptions>
+      , IDL::bounded_traits< ::Deployment::PlanConnectionDescriptions>
     {
       typedef ::Deployment::PlanConnectionDescription&   element_cdr_to;
       typedef const ::Deployment::PlanConnectionDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::PlanConnectionDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::PlanConnectionDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_)
 #define _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPropertyReference_idl_t>
+    struct traits < ::Deployment::PlanSubcomponentPropertyReference>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReference>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::PlanSubcomponentPropertyReference>
+    // MD5            : AEBC73EB559A636E52F4DAEA9332277F
+#if !defined(_ALIAS_AEBC73EB559A636E52F4DAEA9332277F_TRAITS_DECL_)
+#define _ALIAS_AEBC73EB559A636E52F4DAEA9332277F_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPropertyReferences_idl_t>
-      : IDL::unbounded_traits< ::Deployment::PlanSubcomponentPropertyReferences>,
-        IDL::alias_traits< ::Deployment::PlanSubcomponentPropertyReferences_idl_t,
-                           ::Deployment::PlanSubcomponentPropertyReferences>
+    struct traits < ::Deployment::PlanSubcomponentPropertyReferences>
+      : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReferences>
+      , IDL::bounded_traits< ::Deployment::PlanSubcomponentPropertyReferences>
     {
       typedef ::Deployment::PlanSubcomponentPropertyReference&   element_cdr_to;
       typedef const ::Deployment::PlanSubcomponentPropertyReference&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_)
 #define _STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanPropertyMapping_idl_t>
+    struct traits < ::Deployment::PlanPropertyMapping>
       : IDL::common_traits< ::Deployment::PlanPropertyMapping>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::PlanPropertyMapping>
+    // MD5            : F12B7FF5B966394695A4C3B62A60769E
+#if !defined(_ALIAS_F12B7FF5B966394695A4C3B62A60769E_TRAITS_DECL_)
+#define _ALIAS_F12B7FF5B966394695A4C3B62A60769E_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::PlanPropertyMappings_idl_t>
-      : IDL::unbounded_traits< ::Deployment::PlanPropertyMappings>,
-        IDL::alias_traits< ::Deployment::PlanPropertyMappings_idl_t,
-                           ::Deployment::PlanPropertyMappings>
+    struct traits < ::Deployment::PlanPropertyMappings>
+      : IDL::common_traits< ::Deployment::PlanPropertyMappings>
+      , IDL::bounded_traits< ::Deployment::PlanPropertyMappings>
     {
       typedef ::Deployment::PlanPropertyMapping&   element_cdr_to;
       typedef const ::Deployment::PlanPropertyMapping&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::PlanPropertyMapping_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::PlanPropertyMapping>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_)
 #define _STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_
     template<>
-    struct traits < ::Deployment::ImplementationDependency_idl_t>
+    struct traits < ::Deployment::ImplementationDependency>
       : IDL::common_traits< ::Deployment::ImplementationDependency>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ImplementationDependency>
+    // MD5            : 99A76A2AEA0FB19B92F7E3C2DE89FFF6
+#if !defined(_ALIAS_99A76A2AEA0FB19B92F7E3C2DE89FFF6_TRAITS_DECL_)
+#define _ALIAS_99A76A2AEA0FB19B92F7E3C2DE89FFF6_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ImplementationDependencies_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ImplementationDependencies>,
-        IDL::alias_traits< ::Deployment::ImplementationDependencies_idl_t,
-                           ::Deployment::ImplementationDependencies>
+    struct traits < ::Deployment::ImplementationDependencies>
+      : IDL::common_traits< ::Deployment::ImplementationDependencies>
+      , IDL::bounded_traits< ::Deployment::ImplementationDependencies>
     {
       typedef ::Deployment::ImplementationDependency&   element_cdr_to;
       typedef const ::Deployment::ImplementationDependency&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ImplementationDependency_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ImplementationDependency>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ResourceDeploymentDescription_idl_t>
+    struct traits < ::Deployment::ResourceDeploymentDescription>
       : IDL::common_traits< ::Deployment::ResourceDeploymentDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ResourceDeploymentDescription>
+    // MD5            : DF993C9C6EABFC782FDDA1D9B825B8FC
+#if !defined(_ALIAS_DF993C9C6EABFC782FDDA1D9B825B8FC_TRAITS_DECL_)
+#define _ALIAS_DF993C9C6EABFC782FDDA1D9B825B8FC_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ResourceDeploymentDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ResourceDeploymentDescriptions>,
-        IDL::alias_traits< ::Deployment::ResourceDeploymentDescriptions_idl_t,
-                           ::Deployment::ResourceDeploymentDescriptions>
+    struct traits < ::Deployment::ResourceDeploymentDescriptions>
+      : IDL::common_traits< ::Deployment::ResourceDeploymentDescriptions>
+      , IDL::bounded_traits< ::Deployment::ResourceDeploymentDescriptions>
     {
       typedef ::Deployment::ResourceDeploymentDescription&   element_cdr_to;
       typedef const ::Deployment::ResourceDeploymentDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ArtifactDeploymentDescription_idl_t>
+    struct traits < ::Deployment::ArtifactDeploymentDescription>
       : IDL::common_traits< ::Deployment::ArtifactDeploymentDescription>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ArtifactDeploymentDescription>
+    // MD5            : 9366314FF053E4C8C2B7FE26CA476674
+#if !defined(_ALIAS_9366314FF053E4C8C2B7FE26CA476674_TRAITS_DECL_)
+#define _ALIAS_9366314FF053E4C8C2B7FE26CA476674_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ArtifactDeploymentDescriptions_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ArtifactDeploymentDescriptions>,
-        IDL::alias_traits< ::Deployment::ArtifactDeploymentDescriptions_idl_t,
-                           ::Deployment::ArtifactDeploymentDescriptions>
+    struct traits < ::Deployment::ArtifactDeploymentDescriptions>
+      : IDL::common_traits< ::Deployment::ArtifactDeploymentDescriptions>
+      , IDL::bounded_traits< ::Deployment::ArtifactDeploymentDescriptions>
     {
       typedef ::Deployment::ArtifactDeploymentDescription&   element_cdr_to;
       typedef const ::Deployment::ArtifactDeploymentDescription&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Deployment::PlanLocalityKind_idl_t>
+    struct traits < ::Deployment::PlanLocalityKind>
       : IDL::common_traits< ::Deployment::PlanLocalityKind>
     {
     };
@@ -1852,30 +1909,36 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_)
 #define _STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanLocality_idl_t>
+    struct traits < ::Deployment::PlanLocality>
       : IDL::common_traits< ::Deployment::PlanLocality>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::PlanLocality>
+    // MD5            : DDE38066805242B88FC17943CB38328B
+#if !defined(_ALIAS_DDE38066805242B88FC17943CB38328B_TRAITS_DECL_)
+#define _ALIAS_DDE38066805242B88FC17943CB38328B_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::PlanLocalities_idl_t>
-      : IDL::unbounded_traits< ::Deployment::PlanLocalities>,
-        IDL::alias_traits< ::Deployment::PlanLocalities_idl_t,
-                           ::Deployment::PlanLocalities>
+    struct traits < ::Deployment::PlanLocalities>
+      : IDL::common_traits< ::Deployment::PlanLocalities>
+      , IDL::bounded_traits< ::Deployment::PlanLocalities>
     {
       typedef ::Deployment::PlanLocality&   element_cdr_to;
       typedef const ::Deployment::PlanLocality&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::PlanLocality_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::PlanLocality>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_DEPLOYMENTPLAN_TRAITS_)
 #define _STRUCT_DEPLOYMENT_DEPLOYMENTPLAN_TRAITS_
     template<>
-    struct traits < ::Deployment::DeploymentPlan_idl_t>
+    struct traits < ::Deployment::DeploymentPlan>
       : IDL::common_traits< ::Deployment::DeploymentPlan>
     {
     };
@@ -1885,83 +1948,107 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_)
 #define _STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentPackageReference_idl_t>
+    struct traits < ::Deployment::ComponentPackageReference>
       : IDL::common_traits< ::Deployment::ComponentPackageReference>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ComponentPackageReference>
+    // MD5            : 0C9FEC96A49604B9CC5DF59C48DE88F1
+#if !defined(_ALIAS_0C9FEC96A49604B9CC5DF59C48DE88F1_TRAITS_DECL_)
+#define _ALIAS_0C9FEC96A49604B9CC5DF59C48DE88F1_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ComponentPackageReferences_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ComponentPackageReferences>,
-        IDL::alias_traits< ::Deployment::ComponentPackageReferences_idl_t,
-                           ::Deployment::ComponentPackageReferences>
+    struct traits < ::Deployment::ComponentPackageReferences>
+      : IDL::common_traits< ::Deployment::ComponentPackageReferences>
+      , IDL::bounded_traits< ::Deployment::ComponentPackageReferences>
     {
       typedef ::Deployment::ComponentPackageReference&   element_cdr_to;
       typedef const ::Deployment::ComponentPackageReference&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ComponentPackageReference_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ComponentPackageReference>  element_traits;
     };
 
+#endif
+
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ResourceUsageKind>
+    // MD5            : 25B5A7D7E8D2341751079BEB8A44717A
+#if !defined(_ALIAS_25B5A7D7E8D2341751079BEB8A44717A_TRAITS_DECL_)
+#define _ALIAS_25B5A7D7E8D2341751079BEB8A44717A_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ResourceUsageKinds_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ResourceUsageKinds>,
-        IDL::alias_traits< ::Deployment::ResourceUsageKinds_idl_t,
-                           ::Deployment::ResourceUsageKinds>
+    struct traits < ::Deployment::ResourceUsageKinds>
+      : IDL::common_traits< ::Deployment::ResourceUsageKinds>
+      , IDL::bounded_traits< ::Deployment::ResourceUsageKinds>
     {
       typedef ::Deployment::ResourceUsageKind&   element_cdr_to;
       typedef ::Deployment::ResourceUsageKind  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ResourceUsageKind_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ResourceUsageKind>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_)
 #define _STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_
     template<>
-    struct traits < ::Deployment::ImplementationRequirement_idl_t>
+    struct traits < ::Deployment::ImplementationRequirement>
       : IDL::common_traits< ::Deployment::ImplementationRequirement>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::ImplementationRequirement>
+    // MD5            : 58B3838A8CD6CA5F0D66B307C6BD6467
+#if !defined(_ALIAS_58B3838A8CD6CA5F0D66B307C6BD6467_TRAITS_DECL_)
+#define _ALIAS_58B3838A8CD6CA5F0D66B307C6BD6467_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::ImplementationRequirements_idl_t>
-      : IDL::unbounded_traits< ::Deployment::ImplementationRequirements>,
-        IDL::alias_traits< ::Deployment::ImplementationRequirements_idl_t,
-                           ::Deployment::ImplementationRequirements>
+    struct traits < ::Deployment::ImplementationRequirements>
+      : IDL::common_traits< ::Deployment::ImplementationRequirements>
+      , IDL::bounded_traits< ::Deployment::ImplementationRequirements>
     {
       typedef ::Deployment::ImplementationRequirement&   element_cdr_to;
       typedef const ::Deployment::ImplementationRequirement&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::ImplementationRequirement_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::ImplementationRequirement>  element_traits;
     };
+
+#endif
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_)
 #define _STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_
     template<>
-    struct traits < ::Deployment::Capability_idl_t>
+    struct traits < ::Deployment::Capability>
       : IDL::common_traits< ::Deployment::Capability>
     {
     };
 #endif // _STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // Unaliased type : std::vector < ::Deployment::Capability>
+    // MD5            : 67A5FF62ED49ECC3F7373CDDDBC3DFAD
+#if !defined(_ALIAS_67A5FF62ED49ECC3F7373CDDDBC3DFAD_TRAITS_DECL_)
+#define _ALIAS_67A5FF62ED49ECC3F7373CDDDBC3DFAD_TRAITS_DECL_
+
     template<>
-    struct traits < ::Deployment::Capabilities_idl_t>
-      : IDL::unbounded_traits< ::Deployment::Capabilities>,
-        IDL::alias_traits< ::Deployment::Capabilities_idl_t,
-                           ::Deployment::Capabilities>
+    struct traits < ::Deployment::Capabilities>
+      : IDL::common_traits< ::Deployment::Capabilities>
+      , IDL::bounded_traits< ::Deployment::Capabilities>
     {
       typedef ::Deployment::Capability&   element_cdr_to;
       typedef const ::Deployment::Capability&  element_cdr_from;
 
-      typedef IDL::traits< ::Deployment::Capability_idl_t>  element_traits;
+      typedef IDL::traits< ::Deployment::Capability>  element_traits;
     };
+
+#endif
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -2351,7 +2438,7 @@ inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
 {
 }
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (std::string name,
-                                                                               IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
+                                                                               TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
            : name_ (std::move (name))
            , type_ (std::move (type))
 {
@@ -2362,9 +2449,9 @@ inline void Deployment::ComponentPropertyDescription::name (std::string&& _name)
 inline const std::string& Deployment::ComponentPropertyDescription::name () const { return this->name_; }
 inline std::string& Deployment::ComponentPropertyDescription::name () { return this->name_; }
 
-inline void Deployment::ComponentPropertyDescription::type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
-inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
-inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
+inline void Deployment::ComponentPropertyDescription::type (TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
+inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
+inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
 
 inline ::Deployment::ComponentPropertyDescription& Deployment::ComponentPropertyDescription::operator= (const ::Deployment::ComponentPropertyDescription& x)
 {
@@ -3933,10 +4020,12 @@ operator<< (
     const ::Deployment::Property&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PROPERTY__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PROPERTY__DECL__
+// Unaliased type : std::vector < ::Deployment::Property>
+// MD5            : 9FA54C1D0A4E5ABC4A2486AD7C463745
+#if !defined (_ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_)
+#define _ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_PROPERTIES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_Properties_IMPL_
 std::ostream&
 taox11_print_Deployment_Properties (
     std::ostream& strm ,
@@ -3949,7 +4038,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_Properties (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PROPERTY__DECL__
+#endif // _ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -3958,10 +4047,12 @@ operator<< (
     const ::Deployment::Requirement&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_REQUIREMENT__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_REQUIREMENT__DECL__
+// Unaliased type : std::vector < ::Deployment::Requirement>
+// MD5            : B5D61CF43DC976264FCA09DAEF6B439D
+#if !defined (_ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_)
+#define _ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_REQUIREMENTS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_Requirements_IMPL_
 std::ostream&
 taox11_print_Deployment_Requirements (
     std::ostream& strm ,
@@ -3974,7 +4065,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_Requirements (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_REQUIREMENT__DECL__
+#endif // _ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -3999,10 +4090,12 @@ operator<< (
     const ::Deployment::SatisfierProperty&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_SATISFIERPROPERTY__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_SATISFIERPROPERTY__DECL__
+// Unaliased type : std::vector < ::Deployment::SatisfierProperty>
+// MD5            : AAB77A9CDD8FCC93D26F3C8F9DA5CB57
+#if !defined (_ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_)
+#define _ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_SATISFIERPROPERTIES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_SatisfierProperties_IMPL_
 std::ostream&
 taox11_print_Deployment_SatisfierProperties (
     std::ostream& strm ,
@@ -4015,7 +4108,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_SatisfierProperties (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_SATISFIERPROPERTY__DECL__
+#endif // _ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -4042,10 +4135,12 @@ operator<< (
     const ::Deployment::ComponentPortDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPORTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPORTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::ComponentPortDescription>
+// MD5            : C5E370E71060EF02CAD31E10FF9B9A83
+#if !defined (_ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_)
+#define _ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTPORTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ComponentPortDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentPortDescriptions (
     std::ostream& strm ,
@@ -4058,7 +4153,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ComponentPortDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPORTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4067,10 +4162,12 @@ operator<< (
     const ::Deployment::ComponentPropertyDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::ComponentPropertyDescription>
+// MD5            : C38B325CAEA1E1A5249DC3C8B0654824
+#if !defined (_ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_)
+#define _ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ComponentPropertyDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentPropertyDescriptions (
     std::ostream& strm ,
@@ -4083,7 +4180,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ComponentPropertyDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4098,10 +4195,12 @@ operator<< (
     const ::Deployment::MonolithicDeploymentDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::MonolithicDeploymentDescription>
+// MD5            : 80C54C15F1FCF891188F93122A3F1653
+#if !defined (_ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_)
+#define _ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_MonolithicDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_MonolithicDeploymentDescriptions (
     std::ostream& strm ,
@@ -4114,7 +4213,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_MonolithicDeploymentDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -4138,10 +4237,12 @@ operator<< (
     const ::Deployment::InstanceResourceDeploymentDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::InstanceResourceDeploymentDescription>
+// MD5            : EECAFA244583FB042136539EF2209665
+#if !defined (_ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_)
+#define _ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_InstanceResourceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_InstanceResourceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4154,7 +4255,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_InstanceResourceDeploymentDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4163,10 +4264,12 @@ operator<< (
     const ::Deployment::InstanceDeploymentDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::InstanceDeploymentDescription>
+// MD5            : 5DAB54D520633DBBAAC64AB44B5264EF
+#if !defined (_ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_)
+#define _ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_InstanceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_InstanceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4179,7 +4282,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_InstanceDeploymentDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4188,10 +4291,12 @@ operator<< (
     const ::Deployment::ComponentExternalPortEndpoint&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT__DECL__
+// Unaliased type : std::vector < ::Deployment::ComponentExternalPortEndpoint>
+// MD5            : D55B5CF95C9426C6D2C98C3A5D478A08
+#if !defined (_ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_)
+#define _ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINTS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ComponentExternalPortEndpoints_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentExternalPortEndpoints (
     std::ostream& strm ,
@@ -4204,7 +4309,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ComponentExternalPortEndpoints (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT__DECL__
+#endif // _ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4213,10 +4318,12 @@ operator<< (
     const ::Deployment::PlanSubcomponentPortEndpoint&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT__DECL__
+// Unaliased type : std::vector < ::Deployment::PlanSubcomponentPortEndpoint>
+// MD5            : B166E528DC38CC7B9823B4A707AF73F7
+#if !defined (_ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_)
+#define _ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINTS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_PlanSubcomponentPortEndpoints_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanSubcomponentPortEndpoints (
     std::ostream& strm ,
@@ -4229,7 +4336,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_PlanSubcomponentPortEndpoints (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT__DECL__
+#endif // _ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4238,10 +4345,12 @@ operator<< (
     const ::Deployment::ExternalReferenceEndpoint&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_EXTERNALREFERENCEENDPOINT__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_EXTERNALREFERENCEENDPOINT__DECL__
+// Unaliased type : std::vector < ::Deployment::ExternalReferenceEndpoint>
+// MD5            : 05A01CE11A8BFF9D44BAB053FE399734
+#if !defined (_ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_)
+#define _ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_EXTERNALREFERENCEENDPOINTS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ExternalReferenceEndpoints_IMPL_
 std::ostream&
 taox11_print_Deployment_ExternalReferenceEndpoints (
     std::ostream& strm ,
@@ -4254,7 +4363,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ExternalReferenceEndpoints (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_EXTERNALREFERENCEENDPOINT__DECL__
+#endif // _ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4263,10 +4372,12 @@ operator<< (
     const ::Deployment::ConnectionResourceDeploymentDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::ConnectionResourceDeploymentDescription>
+// MD5            : AF4F2101DCE0C79A0EDE886BDCAFC611
+#if !defined (_ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_)
+#define _ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ConnectionResourceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4279,7 +4390,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4288,10 +4399,12 @@ operator<< (
     const ::Deployment::PlanConnectionDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANCONNECTIONDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANCONNECTIONDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::PlanConnectionDescription>
+// MD5            : CFA31BAC8967655A8F41210E634352C1
+#if !defined (_ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_)
+#define _ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANCONNECTIONDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_PlanConnectionDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanConnectionDescriptions (
     std::ostream& strm ,
@@ -4304,7 +4417,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_PlanConnectionDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANCONNECTIONDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4313,10 +4426,12 @@ operator<< (
     const ::Deployment::PlanSubcomponentPropertyReference&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE__DECL__
+// Unaliased type : std::vector < ::Deployment::PlanSubcomponentPropertyReference>
+// MD5            : AEBC73EB559A636E52F4DAEA9332277F
+#if !defined (_ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_)
+#define _ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_PlanSubcomponentPropertyReferences_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanSubcomponentPropertyReferences (
     std::ostream& strm ,
@@ -4329,7 +4444,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_PlanSubcomponentPropertyReferences (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE__DECL__
+#endif // _ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4338,10 +4453,12 @@ operator<< (
     const ::Deployment::PlanPropertyMapping&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANPROPERTYMAPPING__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANPROPERTYMAPPING__DECL__
+// Unaliased type : std::vector < ::Deployment::PlanPropertyMapping>
+// MD5            : F12B7FF5B966394695A4C3B62A60769E
+#if !defined (_ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_)
+#define _ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANPROPERTYMAPPINGS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_PlanPropertyMappings_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanPropertyMappings (
     std::ostream& strm ,
@@ -4354,7 +4471,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_PlanPropertyMappings (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANPROPERTYMAPPING__DECL__
+#endif // _ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4363,10 +4480,12 @@ operator<< (
     const ::Deployment::ImplementationDependency&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY__DECL__
+// Unaliased type : std::vector < ::Deployment::ImplementationDependency>
+// MD5            : 99A76A2AEA0FB19B92F7E3C2DE89FFF6
+#if !defined (_ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_)
+#define _ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_IMPLEMENTATIONDEPENDENCIES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ImplementationDependencies_IMPL_
 std::ostream&
 taox11_print_Deployment_ImplementationDependencies (
     std::ostream& strm ,
@@ -4379,7 +4498,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ImplementationDependencies (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY__DECL__
+#endif // _ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4388,10 +4507,12 @@ operator<< (
     const ::Deployment::ResourceDeploymentDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::ResourceDeploymentDescription>
+// MD5            : DF993C9C6EABFC782FDDA1D9B825B8FC
+#if !defined (_ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_)
+#define _ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ResourceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ResourceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4404,7 +4525,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ResourceDeploymentDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4413,10 +4534,12 @@ operator<< (
     const ::Deployment::ArtifactDeploymentDescription&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION__DECL__
+// Unaliased type : std::vector < ::Deployment::ArtifactDeploymentDescription>
+// MD5            : 9366314FF053E4C8C2B7FE26CA476674
+#if !defined (_ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_)
+#define _ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTIONS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ArtifactDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ArtifactDeploymentDescriptions (
     std::ostream& strm ,
@@ -4429,7 +4552,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ArtifactDeploymentDescriptions (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION__DECL__
+#endif // _ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -4451,10 +4574,12 @@ operator<< (
     const ::Deployment::PlanLocality&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANLOCALITY__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANLOCALITY__DECL__
+// Unaliased type : std::vector < ::Deployment::PlanLocality>
+// MD5            : DDE38066805242B88FC17943CB38328B
+#if !defined (_ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_)
+#define _ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_PLANLOCALITIES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_PlanLocalities_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanLocalities (
     std::ostream& strm ,
@@ -4467,7 +4592,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_PlanLocalities (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_PLANLOCALITY__DECL__
+#endif // _ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4482,10 +4607,12 @@ operator<< (
     const ::Deployment::ComponentPackageReference&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPACKAGEREFERENCE__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPACKAGEREFERENCE__DECL__
+// Unaliased type : std::vector < ::Deployment::ComponentPackageReference>
+// MD5            : 0C9FEC96A49604B9CC5DF59C48DE88F1
+#if !defined (_ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_)
+#define _ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_COMPONENTPACKAGEREFERENCES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ComponentPackageReferences_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentPackageReferences (
     std::ostream& strm ,
@@ -4498,13 +4625,15 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ComponentPackageReferences (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_COMPONENTPACKAGEREFERENCE__DECL__
+#endif // _ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEUSAGEKIND__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEUSAGEKIND__DECL__
+// Unaliased type : std::vector < ::Deployment::ResourceUsageKind>
+// MD5            : 25B5A7D7E8D2341751079BEB8A44717A
+#if !defined (_ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_)
+#define _ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_RESOURCEUSAGEKINDS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ResourceUsageKinds_IMPL_
 std::ostream&
 taox11_print_Deployment_ResourceUsageKinds (
     std::ostream& strm ,
@@ -4517,7 +4646,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ResourceUsageKinds (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_RESOURCEUSAGEKIND__DECL__
+#endif // _ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4526,10 +4655,12 @@ operator<< (
     const ::Deployment::ImplementationRequirement&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT__DECL__
+// Unaliased type : std::vector < ::Deployment::ImplementationRequirement>
+// MD5            : 58B3838A8CD6CA5F0D66B307C6BD6467
+#if !defined (_ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_)
+#define _ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_IMPLEMENTATIONREQUIREMENTS_IMPL__
+#define _ALIAS_OSTREAM_Deployment_ImplementationRequirements_IMPL_
 std::ostream&
 taox11_print_Deployment_ImplementationRequirements (
     std::ostream& strm ,
@@ -4542,7 +4673,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_ImplementationRequirements (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT__DECL__
+#endif // _ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -4551,10 +4682,12 @@ operator<< (
     const ::Deployment::Capability&);
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
-#if !defined (__TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CAPABILITY__DECL__)
-#define __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CAPABILITY__DECL__
+// Unaliased type : std::vector < ::Deployment::Capability>
+// MD5            : 67A5FF62ED49ECC3F7373CDDDBC3DFAD
+#if !defined (_ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_)
+#define _ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_
 
-#define __TAOX11_OSSTREAM_DEPLOYMENT_CAPABILITIES_IMPL__
+#define _ALIAS_OSTREAM_Deployment_Capabilities_IMPL_
 std::ostream&
 taox11_print_Deployment_Capabilities (
     std::ostream& strm ,
@@ -4567,7 +4700,7 @@ inline std::ostream& operator<< (
   return taox11_print_Deployment_Capabilities (strm, _v);
 }
 
-#endif // __TAOX11_OSSTREAM_STD_VECTOR_DEPLOYMENT_CAPABILITY__DECL__
+#endif // _ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

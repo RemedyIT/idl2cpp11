@@ -52,7 +52,6 @@ namespace Test
   private:
     std::string name_;
   };// Variable
-  typedef Variable Variable_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -60,7 +59,6 @@ namespace Test
 #if !defined (_INTF_TEST_BAR_FWD_)
 #define _INTF_TEST_BAR_FWD_
   class Bar;
-  typedef Bar Bar_idl_t; // IDL traits typename
   class Bar_proxy;
   typedef Bar_proxy* Bar_proxy_ptr;
 #endif // !_INTF_TEST_BAR_FWD_
@@ -160,7 +158,7 @@ namespace Test
                      double d,
                      bool b,
                      char c,
-                     IDL::traits< ::Test::Bar>::ref_type bar_ref,
+                     TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref,
                      ::Test::Variable v);
     inline Simple& operator= (const Simple& x);
     inline Simple& operator= (Simple&& x);
@@ -190,9 +188,9 @@ namespace Test
     inline char c () const;
     inline char& c ();
 
-    inline void bar_ref (IDL::traits< ::Test::Bar>::ref_type _bar_ref);
-    inline IDL::traits< ::Test::Bar>::ref_type bar_ref () const;
-    inline IDL::traits< ::Test::Bar>::ref_type& bar_ref ();
+    inline void bar_ref (TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type _bar_ref);
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref () const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type& bar_ref ();
 
     inline void v (const ::Test::Variable& _v);
     inline void v (::Test::Variable&& _v);
@@ -208,10 +206,9 @@ namespace Test
     double d_;
     bool b_;
     char c_;
-    IDL::traits< ::Test::Bar>::ref_type bar_ref_;
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref_;
     ::Test::Variable v_;
   };// Simple
-  typedef Simple Simple_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -219,7 +216,6 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
-  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
 #endif // !_INTF_TEST_FOO_FWD_
@@ -329,7 +325,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_VARIABLE_TRAITS_)
 #define _STRUCT_TEST_VARIABLE_TRAITS_
     template<>
-    struct traits < ::Test::Variable_idl_t>
+    struct traits < ::Test::Variable>
       : IDL::common_traits< ::Test::Variable>
     {
     };
@@ -339,7 +335,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
 #define _STRUCT_TEST_SIMPLE_TRAITS_
     template<>
-    struct traits < ::Test::Simple_idl_t>
+    struct traits < ::Test::Simple>
       : IDL::common_traits< ::Test::Simple>
     {
     };
@@ -410,7 +406,7 @@ inline Test::Simple::Simple (uint8_t o,
                              double d,
                              bool b,
                              char c,
-                             IDL::traits< ::Test::Bar>::ref_type bar_ref,
+                             TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type bar_ref,
                              ::Test::Variable v)
            : o_ (std::move (o))
            , l_ (std::move (l))
@@ -448,9 +444,9 @@ inline void Test::Simple::c (char _c) { this->c_ = _c; }
 inline char Test::Simple::c () const { return this->c_; }
 inline char& Test::Simple::c () { return this->c_; }
 
-inline void Test::Simple::bar_ref (IDL::traits< ::Test::Bar>::ref_type _bar_ref) { this->bar_ref_ = _bar_ref; }
-inline IDL::traits< ::Test::Bar>::ref_type Test::Simple::bar_ref () const { return this->bar_ref_; }
-inline IDL::traits< ::Test::Bar>::ref_type& Test::Simple::bar_ref () { return this->bar_ref_; }
+inline void Test::Simple::bar_ref (TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type _bar_ref) { this->bar_ref_ = _bar_ref; }
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type Test::Simple::bar_ref () const { return this->bar_ref_; }
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type& Test::Simple::bar_ref () { return this->bar_ref_; }
 
 inline void Test::Simple::v (const ::Test::Variable& _v) { this->v_ = _v; }
 inline void Test::Simple::v (::Test::Variable&& _v) { this->v_ = std::move (_v); }
@@ -523,7 +519,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Bar>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Bar>::ref_type);
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -534,7 +530,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

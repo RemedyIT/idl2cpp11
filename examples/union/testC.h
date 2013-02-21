@@ -47,7 +47,6 @@ public:
 private:
   int32_t x_;
 };// Global
-typedef Global Global_idl_t; // IDL traits typename
 
 // generated from StubHeaderWriter#enter_module
 namespace Test
@@ -64,7 +63,6 @@ namespace Test
     dtTrack,
     dtGlobal
   };// DataType
-  typedef DataType DataType_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Point final
@@ -95,7 +93,6 @@ namespace Test
     int32_t x_;
     int32_t y_;
   };// Point
-  typedef Point Point_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class Track final
@@ -127,7 +124,6 @@ namespace Test
     int32_t id_;
     ::Test::Point p_;
   };// Track
-  typedef Track Track_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/union_pre.erb
   class Data final
@@ -194,7 +190,6 @@ namespace Test
       ::Global globalData_;
     } u_;
   }; // Data
-  typedef Data Data_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
   class S final
@@ -219,13 +214,11 @@ namespace Test
   private:
     int32_t len_;
   };// S
-  typedef S S_idl_t; // IDL traits typename
 
   // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_A_FWD_)
 #define _INTF_TEST_A_FWD_
   class A;
-  typedef A A_idl_t; // IDL traits typename
   class A_proxy;
   typedef A_proxy* A_proxy_ptr;
 #endif // !_INTF_TEST_A_FWD_
@@ -302,9 +295,9 @@ namespace Test
     inline const ::Test::S& w () const;
     inline ::Test::S& w ();
 
-    inline void obj (IDL::traits< ::Test::A>::ref_type _obj);
-    inline IDL::traits< ::Test::A>::ref_type obj () const;
-    inline IDL::traits< ::Test::A>::ref_type& obj ();
+    inline void obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj);
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj () const;
+    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& obj ();
 
     inline void swap (U& s);
 
@@ -320,10 +313,9 @@ namespace Test
       int32_t x_;
       std::string z_;
       ::Test::S w_;
-      IDL::traits< ::Test::A>::ref_type obj_;
+      TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj_;
     } u_;
   }; // U
-  typedef U U_idl_t; // IDL traits typename
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -331,7 +323,6 @@ namespace Test
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
-  typedef Foo Foo_idl_t; // IDL traits typename
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
 #endif // !_INTF_TEST_FOO_FWD_
@@ -476,7 +467,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_GLOBAL_TRAITS_)
 #define _STRUCT_GLOBAL_TRAITS_
     template<>
-    struct traits < ::Global_idl_t>
+    struct traits < ::Global>
       : IDL::common_traits< ::Global>
     {
     };
@@ -484,7 +475,7 @@ namespace TAOX11_NAMESPACE {
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
     template<>
-    struct traits < ::Test::DataType_idl_t>
+    struct traits < ::Test::DataType>
       : IDL::common_traits< ::Test::DataType>
     {
     };
@@ -493,7 +484,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_POINT_TRAITS_)
 #define _STRUCT_TEST_POINT_TRAITS_
     template<>
-    struct traits < ::Test::Point_idl_t>
+    struct traits < ::Test::Point>
       : IDL::common_traits< ::Test::Point>
     {
     };
@@ -503,7 +494,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_TRACK_TRAITS_)
 #define _STRUCT_TEST_TRACK_TRAITS_
     template<>
-    struct traits < ::Test::Track_idl_t>
+    struct traits < ::Test::Track>
       : IDL::common_traits< ::Test::Track>
     {
     };
@@ -513,7 +504,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_UNION_TEST_DATA_TRAITS_)
 #define _UNION_TEST_DATA_TRAITS_
     template<>
-    struct traits < ::Test::Data_idl_t>
+    struct traits < ::Test::Data>
       : IDL::common_traits< ::Test::Data>
     {
     };
@@ -523,7 +514,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_STRUCT_TEST_S_TRAITS_)
 #define _STRUCT_TEST_S_TRAITS_
     template<>
-    struct traits < ::Test::S_idl_t>
+    struct traits < ::Test::S>
       : IDL::common_traits< ::Test::S>
     {
     };
@@ -533,7 +524,7 @@ namespace TAOX11_NAMESPACE {
 #if !defined (_UNION_TEST_U_TRAITS_)
 #define _UNION_TEST_U_TRAITS_
     template<>
-    struct traits < ::Test::U_idl_t>
+    struct traits < ::Test::U>
       : IDL::common_traits< ::Test::U>
     {
     };
@@ -1382,7 +1373,7 @@ inline Test::U::u_type_::~u_type_ ()
 inline Test::U::U ()
   : disc_ ((-2147483647-1))
 {
-  new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type;
+  new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
 }
 
 inline Test::U::~U ()
@@ -1415,7 +1406,7 @@ inline Test::U::U (const ::Test::U& u)
     break;
     default:
       {
-        new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type;
+        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
         this->u_.obj_ = u.u_.obj_;
       }
     break;
@@ -1445,7 +1436,7 @@ inline Test::U::U (::Test::U&& u)
     break;
   default:
     {
-      new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
+      new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
     }
     break;
   }
@@ -1647,12 +1638,12 @@ inline ::Test::S& Test::U::w ()
   return this->u_.w_;
 }
 
-inline void Test::U::obj (IDL::traits< ::Test::A>::ref_type _obj)
+inline void Test::U::obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj)
 {
   if (this->disc_ != (-2147483647-1))
   {
     this->_clear ();
-    new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (_obj);
+    new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (_obj);
   }
   else
   {
@@ -1660,7 +1651,7 @@ inline void Test::U::obj (IDL::traits< ::Test::A>::ref_type _obj)
   }
   this->disc_ = (-2147483647-1);
 }
-inline IDL::traits< ::Test::A>::ref_type Test::U::obj () const
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj () const
 {
   switch (this->disc_)
   {
@@ -1674,7 +1665,7 @@ inline IDL::traits< ::Test::A>::ref_type Test::U::obj () const
   }
   return this->u_.obj_;
 }
-inline IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
+inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
 {
   switch (this->disc_)
   {
@@ -1715,7 +1706,7 @@ inline ::Test::U& Test::U::operator= (const ::Test::U& u)
       break;
     default:
       {
-        new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
+        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
       }
       break;
     }
@@ -1749,7 +1740,7 @@ inline ::Test::U& Test::U::operator= (::Test::U&& u)
       break;
     default:
       {
-        new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
+        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
       }
       break;
     }
@@ -1826,7 +1817,7 @@ inline void Test::U::_clear ()
     break;
   default:
     {
-      this->u_.obj_.IDL::traits< ::Test::A>::ref_type::~object_reference ();
+      this->u_.obj_.TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type::~object_reference ();
     }
     break;
   }
@@ -1928,7 +1919,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::A>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/union_os.erb
 std::ostream& operator<< (
@@ -1938,12 +1929,12 @@ std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    IDL::traits< ::Test::A>::ref_type);
+    TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

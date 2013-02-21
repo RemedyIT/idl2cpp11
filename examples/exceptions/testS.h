@@ -57,7 +57,7 @@ namespace Test
       virtual bool _is_a (const std::string& logical_type_id) override;
 
       /// Returns a strong client reference for the servant you are calling
-      IDL::traits< ::Test::Foo>::ref_type _this ();
+      TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
 
       virtual const std::string _interface_repository_id () const override;
 
