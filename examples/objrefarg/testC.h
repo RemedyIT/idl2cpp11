@@ -139,8 +139,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< Hello_Factory> _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< Hello_Factory>::ref_type _ref_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type _traits_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type _ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
@@ -182,8 +182,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< Hello> _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< Hello>::ref_type _ref_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _traits_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb

@@ -87,9 +87,9 @@ class Example
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits<Example>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<Example> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<Example>::obv_type _obv_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Example>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Example> _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Example>::obv_type _obv_type;
   //@}
 
   static _ref_type _downcast (
@@ -318,8 +318,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< A> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< A>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _ref_type;
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -411,10 +411,10 @@ class Val
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits<Val>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<Val> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<Val>::factory_type _factory_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<Val>::obv_type _obv_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Val>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Val> _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Val>::factory_type _factory_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< Val>::obv_type _obv_type;
   //@}
 
   static _ref_type _downcast (
@@ -763,8 +763,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< X> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< X>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type _ref_type;
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -977,8 +977,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< A1> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< A1>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type _ref_type;
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -1065,9 +1065,9 @@ class B
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits<B>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<B> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<B>::obv_type _obv_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< B>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< B> _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< B>::obv_type _obv_type;
   //@}
 
   static _ref_type _downcast (
@@ -1237,10 +1237,10 @@ class V
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits<V>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<V> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<V>::factory_type _factory_type;
-  typedef TAOX11_NAMESPACE::IDL::traits<V>::obv_type _obv_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< V>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< V> _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< V>::factory_type _factory_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< V>::obv_type _obv_type;
   //@}
 
   static _ref_type _downcast (

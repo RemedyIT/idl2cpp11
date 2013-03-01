@@ -79,8 +79,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< Foo> _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< Foo>::ref_type _ref_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _traits_type;
+    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _ref_type;
     //@}
 
     virtual bool _is_a (const std::string& local_type_id) override;

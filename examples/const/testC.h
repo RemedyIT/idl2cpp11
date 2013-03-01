@@ -146,8 +146,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< A> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< A>::ref_type _ref_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _traits_type;
+  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _ref_type;
   //@}
 
   // generated from StubHeaderWriter#visit_const
