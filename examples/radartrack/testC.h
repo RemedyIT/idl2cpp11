@@ -90,11 +90,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::octetseq>
       : IDL::common_traits< ::octetseq>
-      , IDL::bounded_traits< ::octetseq>
     {
-      typedef uint8_t&   element_cdr_to;
-      typedef uint8_t  element_cdr_from;
-
       typedef IDL::traits< uint8_t>  element_traits;
     };
 

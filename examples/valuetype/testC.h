@@ -87,13 +87,13 @@ class Example
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< Example>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< Example> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< Example>::obv_type _obv_type;
+  typedef TAOX11_IDL::traits< Example>               _traits_type;
+  typedef TAOX11_IDL::traits< Example>::ref_type     _ref_type;
+  typedef TAOX11_IDL::traits< Example>::obv_type     _obv_type;
   //@}
 
   static _ref_type _downcast (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
+      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -138,7 +138,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copybrief Example::op2
-  virtual int32_t op2 (TAOX11_NAMESPACE::IDL::traits< Example>::ref_type x) = 0;
+  virtual int32_t op2 (TAOX11_IDL::traits< Example>::ref_type x) = 0;
 
   /// @name Public state members
   //@{
@@ -157,9 +157,9 @@ protected:
   virtual void val3 (std::string&& _val3) = 0;
   virtual const std::string& val3 () const = 0;
   virtual std::string& val3 () = 0;
-  virtual void val5 (TAOX11_NAMESPACE::IDL::traits< Example>::ref_type _val5) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< Example>::ref_type val5 () const = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< Example>::ref_type& val5 () = 0;
+  virtual void val5 (TAOX11_IDL::traits< Example>::ref_type _val5) = 0;
+  virtual TAOX11_IDL::traits< Example>::ref_type val5 () const = 0;
+  virtual TAOX11_IDL::traits< Example>::ref_type& val5 () = 0;
   //@}
 
 protected:
@@ -184,7 +184,7 @@ namespace obv
     explicit Example (int16_t val1,
                       int32_t val2,
                       std::string val3,
-                      TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type val5)
+                      TAOX11_IDL::traits< ::Example>::ref_type val5)
       : val1_ (std::move (val1))
       , val2_ (std::move (val2))
       , val3_ (std::move (val3))
@@ -212,9 +212,9 @@ namespace obv
     virtual const std::string& val3 () const override;
     virtual std::string& val3 () override;
 
-    virtual void val5 (TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type _val5) override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type val5 () const override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type& val5 () override;
+    virtual void val5 (TAOX11_IDL::traits< ::Example>::ref_type _val5) override;
+    virtual TAOX11_IDL::traits< ::Example>::ref_type val5 () const override;
+    virtual TAOX11_IDL::traits< ::Example>::ref_type& val5 () override;
 
     /// Marshaling support
     virtual bool
@@ -231,7 +231,7 @@ namespace obv
     int16_t val1_;
     int32_t val2_;
     std::string val3_;
-    TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type val5_;
+    TAOX11_IDL::traits< ::Example>::ref_type val5_;
   }; // Example
 
 }; // obv
@@ -318,8 +318,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _ref_type;
+  typedef TAOX11_IDL::traits< A>           _traits_type;
+  typedef TAOX11_IDL::traits< A>::ref_type _ref_type;
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -366,6 +366,26 @@ namespace TAOX11_NAMESPACE
 {
   namespace CORBA
   {
+    template<>
+     object_traits< ::Val_init>::shared_ptr_type
+    object_traits< ::Val_init>::lock_shared (
+        ::Val_init*);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Val_init> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Val_init>>,
+      public CORBA::object_traits < ::Val_init>
+    {
+      static constexpr bool abstract = false;
+      static constexpr bool local = true;
+    };
+  };
+
+  namespace CORBA
+  {
     template <>
     struct valuetype_traits< ::Val>
     {
@@ -379,8 +399,10 @@ namespace TAOX11_NAMESPACE
           obv_type;
       typedef ::Val_init
           factory_type;
-      typedef object_reference < ::Val_init>
+      typedef TAOX11_IDL::traits< ::Val_init>::ref_type
           factory_ref_type;
+      typedef TAOX11_IDL::traits< ::Val_init>::weak_ref_type
+          weak_factory_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Val*, _Tp1*>::value>::type>
       static ref_type downcast (valuetype_reference<_Tp1> base)
@@ -411,14 +433,14 @@ class Val
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< Val>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< Val> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< Val>::factory_type _factory_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< Val>::obv_type _obv_type;
+  typedef TAOX11_IDL::traits< Val>               _traits_type;
+  typedef TAOX11_IDL::traits< Val>::ref_type     _ref_type;
+  typedef TAOX11_IDL::traits< Val>::factory_type _factory_type;
+  typedef TAOX11_IDL::traits< Val>::obv_type     _obv_type;
   //@}
 
   static _ref_type _downcast (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
+      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -459,9 +481,9 @@ public:
 
   /// @name Public state members
   //@{
-  virtual void t (TAOX11_NAMESPACE::IDL::traits< Val>::ref_type _t) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< Val>::ref_type t () const = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< Val>::ref_type& t () = 0;
+  virtual void t (TAOX11_IDL::traits< Val>::ref_type _t) = 0;
+  virtual TAOX11_IDL::traits< Val>::ref_type t () const = 0;
+  virtual TAOX11_IDL::traits< Val>::ref_type& t () = 0;
   virtual void w (const ::Bytes& _w) = 0;
   virtual void w (::Bytes&& _w) = 0;
   virtual const ::Bytes& w () const = 0;
@@ -482,9 +504,9 @@ protected:
   virtual void y (::S&& _y) = 0;
   virtual const ::S& y () const = 0;
   virtual ::S& y () = 0;
-  virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () = 0;
+  virtual void z (TAOX11_IDL::traits< ::A>::ref_type _z) = 0;
+  virtual TAOX11_IDL::traits< ::A>::ref_type z () const = 0;
+  virtual TAOX11_IDL::traits< ::A>::ref_type& z () = 0;
   //@}
 
 protected:
@@ -506,12 +528,12 @@ namespace obv
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
-    explicit Val (TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type t,
+    explicit Val (TAOX11_IDL::traits< ::Val>::ref_type t,
                   int32_t v,
                   ::Bytes w,
                   std::string x,
                   ::S y,
-                  TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z)
+                  TAOX11_IDL::traits< ::A>::ref_type z)
       : t_ (std::move (t))
       , v_ (std::move (v))
       , w_ (std::move (w))
@@ -526,14 +548,14 @@ namespace obv
     template <typename _Tp1, typename, typename ...Args>
     friend TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-    virtual TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
+    virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
     _copy_value () const override;
 
     /// @name Public state members
     //@{
-    virtual void t (TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type _t) override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type t () const override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type& t () override;
+    virtual void t (TAOX11_IDL::traits< ::Val>::ref_type _t) override;
+    virtual TAOX11_IDL::traits< ::Val>::ref_type t () const override;
+    virtual TAOX11_IDL::traits< ::Val>::ref_type& t () override;
 
     virtual void w (const ::Bytes& _w) override;
     virtual void w (::Bytes&& _w) override;
@@ -557,9 +579,9 @@ namespace obv
     virtual const ::S& y () const override;
     virtual ::S& y () override;
 
-    virtual void z (TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _z) override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z () const override;
-    virtual TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type& z () override;
+    virtual void z (TAOX11_IDL::traits< ::A>::ref_type _z) override;
+    virtual TAOX11_IDL::traits< ::A>::ref_type z () const override;
+    virtual TAOX11_IDL::traits< ::A>::ref_type& z () override;
 
     /// Marshaling support
     virtual bool
@@ -573,12 +595,12 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type t_;
+    TAOX11_IDL::traits< ::Val>::ref_type t_;
     int32_t v_;
     ::Bytes w_;
     std::string x_;
     ::S y_;
-    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type z_;
+    TAOX11_IDL::traits< ::A>::ref_type z_;
   }; // Val
 
 }; // obv
@@ -588,14 +610,14 @@ class Val_init
   : public TAOX11_CORBA::ValueFactoryBase
 {
 public:
-  typedef TAOX11_CORBA::object_traits< Val_init> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< Val>::factory_ref_type _ref_type;
+  typedef TAOX11_IDL::traits< Val_init>           _traits_type;
+  typedef TAOX11_IDL::traits< Val_init>::ref_type _ref_type;
 
   template <typename T> friend struct TAOX11_CORBA::object_traits;
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-  virtual TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
+  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   create_for_unmarshal () override;
 
   virtual const std::string& _obv_repository_id () const override;
@@ -663,11 +685,11 @@ public:
   std::string& _value ()
   { return this->value_; }
 
-  virtual TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
+  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   _copy_value () const override;
 
   static _ref_type _downcast (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
   { return _traits_type::downcast (vbref); }
 
   static bool _obv_unmarshal (
@@ -763,8 +785,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type _ref_type;
+  typedef TAOX11_IDL::traits< X>           _traits_type;
+  typedef TAOX11_IDL::traits< X>::ref_type _ref_type;
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -853,11 +875,11 @@ public:
   ::Color& _value ()
   { return this->value_; }
 
-  virtual TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
+  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   _copy_value () const override;
 
   static _ref_type _downcast (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
   { return _traits_type::downcast (vbref); }
 
   static bool _obv_unmarshal (
@@ -977,8 +999,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type _ref_type;
+  typedef TAOX11_IDL::traits< A1>           _traits_type;
+  typedef TAOX11_IDL::traits< A1>::ref_type _ref_type;
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -1065,13 +1087,13 @@ class B
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< B>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< B> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< B>::obv_type _obv_type;
+  typedef TAOX11_IDL::traits< B>               _traits_type;
+  typedef TAOX11_IDL::traits< B>::ref_type     _ref_type;
+  typedef TAOX11_IDL::traits< B>::obv_type     _obv_type;
   //@}
 
   static _ref_type _downcast (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
+      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -1192,6 +1214,26 @@ namespace TAOX11_NAMESPACE
 {
   namespace CORBA
   {
+    template<>
+     object_traits< ::V_init>::shared_ptr_type
+    object_traits< ::V_init>::lock_shared (
+        ::V_init*);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::V_init> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::V_init>>,
+      public CORBA::object_traits < ::V_init>
+    {
+      static constexpr bool abstract = false;
+      static constexpr bool local = true;
+    };
+  };
+
+  namespace CORBA
+  {
     template <>
     struct valuetype_traits< ::V>
     {
@@ -1205,8 +1247,10 @@ namespace TAOX11_NAMESPACE
           obv_type;
       typedef ::V_init
           factory_type;
-      typedef object_reference < ::V_init>
+      typedef TAOX11_IDL::traits< ::V_init>::ref_type
           factory_ref_type;
+      typedef TAOX11_IDL::traits< ::V_init>::weak_ref_type
+          weak_factory_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::V*, _Tp1*>::value>::type>
       static ref_type downcast (valuetype_reference<_Tp1> base)
@@ -1237,14 +1281,14 @@ class V
 public:
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< V>::ref_type _ref_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< V> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< V>::factory_type _factory_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< V>::obv_type _obv_type;
+  typedef TAOX11_IDL::traits< V>               _traits_type;
+  typedef TAOX11_IDL::traits< V>::ref_type     _ref_type;
+  typedef TAOX11_IDL::traits< V>::factory_type _factory_type;
+  typedef TAOX11_IDL::traits< V>::obv_type     _obv_type;
   //@}
 
   static _ref_type _downcast (
-      TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
+      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -1328,17 +1372,17 @@ class V_init
   : public TAOX11_CORBA::ValueFactoryBase
 {
 public:
-  typedef TAOX11_CORBA::object_traits< V_init> _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< V>::factory_ref_type _ref_type;
+  typedef TAOX11_IDL::traits< V_init>           _traits_type;
+  typedef TAOX11_IDL::traits< V_init>::ref_type _ref_type;
 
   template <typename T> friend struct TAOX11_CORBA::object_traits;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
+  virtual TAOX11_IDL::traits< ::V>::ref_type
   create_bool (bool b) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
+  virtual TAOX11_IDL::traits< ::V>::ref_type
   create_char (char c) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
+  virtual TAOX11_IDL::traits< ::V>::ref_type
   create_octet (uint8_t o) = 0;
-  virtual TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type
+  virtual TAOX11_IDL::traits< ::V>::ref_type
   create_other (int16_t s,
                 const std::string& p) = 0;
 
@@ -1437,7 +1481,7 @@ Example::swap (
 
 inline Example::_ref_type
 Example::_downcast (
-  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
 {
   return _traits_type::downcast (vbref);
 }
@@ -1489,7 +1533,7 @@ Val::swap (
 
 inline Val::_ref_type
 Val::_downcast (
-  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
 {
   return _traits_type::downcast (vbref);
 }
@@ -1536,7 +1580,7 @@ B::swap (
 
 inline B::_ref_type
 B::_downcast (
-  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
 {
   return _traits_type::downcast (vbref);
 }
@@ -1545,7 +1589,7 @@ B::_downcast (
 
 inline V::_ref_type
 V::_downcast (
-  TAOX11_NAMESPACE::IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
+  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
 {
   return _traits_type::downcast (vbref);
 }
@@ -1593,7 +1637,7 @@ namespace std {
 std::ostream&
 operator<< (
     std::ostream& ,
-    TAOX11_NAMESPACE::IDL::traits< ::Example>::ref_type);
+    TAOX11_IDL::traits< ::Example>::ref_type);
 
 // generated from c++11/templates/cli/hdr/array_os.erb
 // Unaliased type : std::array< uint8_t, 64 >
@@ -1625,24 +1669,24 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type);
+    TAOX11_IDL::traits< ::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    TAOX11_NAMESPACE::IDL::traits< ::Val>::ref_type);
+    TAOX11_IDL::traits< ::Val>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuebox_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    TAOX11_NAMESPACE::IDL::traits< ::StringValue>::ref_type);
+    TAOX11_IDL::traits< ::StringValue>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::X>::ref_type);
+    TAOX11_IDL::traits< ::X>::ref_type);
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -1661,7 +1705,7 @@ inline std::ostream& operator<< (
 std::ostream&
 operator<< (
     std::ostream& ,
-    TAOX11_NAMESPACE::IDL::traits< ::ColorValue>::ref_type);
+    TAOX11_IDL::traits< ::ColorValue>::ref_type);
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 std::ostream&
@@ -1672,19 +1716,19 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::A1>::ref_type);
+    TAOX11_IDL::traits< ::A1>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    TAOX11_NAMESPACE::IDL::traits< ::B>::ref_type);
+    TAOX11_IDL::traits< ::B>::ref_type);
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 std::ostream&
 operator<< (
     std::ostream& ,
-    TAOX11_NAMESPACE::IDL::traits< ::V>::ref_type);
+    TAOX11_IDL::traits< ::V>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

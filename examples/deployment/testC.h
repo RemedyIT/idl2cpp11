@@ -276,7 +276,7 @@ namespace Deployment
     ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
     ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
     explicit inline ComponentPropertyDescription (std::string name,
-                                           TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
+                                           TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
     inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
     inline ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
 
@@ -285,15 +285,15 @@ namespace Deployment
     inline const std::string& name () const;
     inline std::string& name ();
 
-    inline void type (TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
-    inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
-    inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
+    inline void type (TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
+    inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
+    inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
 
     inline void swap (ComponentPropertyDescription& s);
 
   private:
     std::string name_;
-    TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
+    TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
   };// ComponentPropertyDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -1364,11 +1364,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::Properties>
       : IDL::common_traits< ::Deployment::Properties>
-      , IDL::bounded_traits< ::Deployment::Properties>
     {
-      typedef ::Deployment::Property&   element_cdr_to;
-      typedef const ::Deployment::Property&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::Property>  element_traits;
     };
 
@@ -1393,11 +1389,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::Requirements>
       : IDL::common_traits< ::Deployment::Requirements>
-      , IDL::bounded_traits< ::Deployment::Requirements>
     {
-      typedef ::Deployment::Requirement&   element_cdr_to;
-      typedef const ::Deployment::Requirement&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::Requirement>  element_traits;
     };
 
@@ -1429,11 +1421,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::SatisfierProperties>
       : IDL::common_traits< ::Deployment::SatisfierProperties>
-      , IDL::bounded_traits< ::Deployment::SatisfierProperties>
     {
-      typedef ::Deployment::SatisfierProperty&   element_cdr_to;
-      typedef const ::Deployment::SatisfierProperty&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::SatisfierProperty>  element_traits;
     };
 
@@ -1465,11 +1453,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ComponentPortDescriptions>
       : IDL::common_traits< ::Deployment::ComponentPortDescriptions>
-      , IDL::bounded_traits< ::Deployment::ComponentPortDescriptions>
     {
-      typedef ::Deployment::ComponentPortDescription&   element_cdr_to;
-      typedef const ::Deployment::ComponentPortDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ComponentPortDescription>  element_traits;
     };
 
@@ -1494,11 +1478,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ComponentPropertyDescriptions>
       : IDL::common_traits< ::Deployment::ComponentPropertyDescriptions>
-      , IDL::bounded_traits< ::Deployment::ComponentPropertyDescriptions>
     {
-      typedef ::Deployment::ComponentPropertyDescription&   element_cdr_to;
-      typedef const ::Deployment::ComponentPropertyDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ComponentPropertyDescription>  element_traits;
     };
 
@@ -1533,11 +1513,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::MonolithicDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::MonolithicDeploymentDescriptions>
-      , IDL::bounded_traits< ::Deployment::MonolithicDeploymentDescriptions>
     {
-      typedef ::Deployment::MonolithicDeploymentDescription&   element_cdr_to;
-      typedef const ::Deployment::MonolithicDeploymentDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription>  element_traits;
     };
 
@@ -1569,11 +1545,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::InstanceResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
-      , IDL::bounded_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
     {
-      typedef ::Deployment::InstanceResourceDeploymentDescription&   element_cdr_to;
-      typedef const ::Deployment::InstanceResourceDeploymentDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>  element_traits;
     };
 
@@ -1598,11 +1570,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::InstanceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::InstanceDeploymentDescriptions>
-      , IDL::bounded_traits< ::Deployment::InstanceDeploymentDescriptions>
     {
-      typedef ::Deployment::InstanceDeploymentDescription&   element_cdr_to;
-      typedef const ::Deployment::InstanceDeploymentDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::InstanceDeploymentDescription>  element_traits;
     };
 
@@ -1627,11 +1595,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ComponentExternalPortEndpoints>
       : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoints>
-      , IDL::bounded_traits< ::Deployment::ComponentExternalPortEndpoints>
     {
-      typedef ::Deployment::ComponentExternalPortEndpoint&   element_cdr_to;
-      typedef const ::Deployment::ComponentExternalPortEndpoint&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint>  element_traits;
     };
 
@@ -1656,11 +1620,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::PlanSubcomponentPortEndpoints>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoints>
-      , IDL::bounded_traits< ::Deployment::PlanSubcomponentPortEndpoints>
     {
-      typedef ::Deployment::PlanSubcomponentPortEndpoint&   element_cdr_to;
-      typedef const ::Deployment::PlanSubcomponentPortEndpoint&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>  element_traits;
     };
 
@@ -1685,11 +1645,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ExternalReferenceEndpoints>
       : IDL::common_traits< ::Deployment::ExternalReferenceEndpoints>
-      , IDL::bounded_traits< ::Deployment::ExternalReferenceEndpoints>
     {
-      typedef ::Deployment::ExternalReferenceEndpoint&   element_cdr_to;
-      typedef const ::Deployment::ExternalReferenceEndpoint&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint>  element_traits;
     };
 
@@ -1714,11 +1670,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
-      , IDL::bounded_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
     {
-      typedef ::Deployment::ConnectionResourceDeploymentDescription&   element_cdr_to;
-      typedef const ::Deployment::ConnectionResourceDeploymentDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>  element_traits;
     };
 
@@ -1743,11 +1695,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::PlanConnectionDescriptions>
       : IDL::common_traits< ::Deployment::PlanConnectionDescriptions>
-      , IDL::bounded_traits< ::Deployment::PlanConnectionDescriptions>
     {
-      typedef ::Deployment::PlanConnectionDescription&   element_cdr_to;
-      typedef const ::Deployment::PlanConnectionDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::PlanConnectionDescription>  element_traits;
     };
 
@@ -1772,11 +1720,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::PlanSubcomponentPropertyReferences>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReferences>
-      , IDL::bounded_traits< ::Deployment::PlanSubcomponentPropertyReferences>
     {
-      typedef ::Deployment::PlanSubcomponentPropertyReference&   element_cdr_to;
-      typedef const ::Deployment::PlanSubcomponentPropertyReference&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>  element_traits;
     };
 
@@ -1801,11 +1745,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::PlanPropertyMappings>
       : IDL::common_traits< ::Deployment::PlanPropertyMappings>
-      , IDL::bounded_traits< ::Deployment::PlanPropertyMappings>
     {
-      typedef ::Deployment::PlanPropertyMapping&   element_cdr_to;
-      typedef const ::Deployment::PlanPropertyMapping&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::PlanPropertyMapping>  element_traits;
     };
 
@@ -1830,11 +1770,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ImplementationDependencies>
       : IDL::common_traits< ::Deployment::ImplementationDependencies>
-      , IDL::bounded_traits< ::Deployment::ImplementationDependencies>
     {
-      typedef ::Deployment::ImplementationDependency&   element_cdr_to;
-      typedef const ::Deployment::ImplementationDependency&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ImplementationDependency>  element_traits;
     };
 
@@ -1859,11 +1795,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ResourceDeploymentDescriptions>
-      , IDL::bounded_traits< ::Deployment::ResourceDeploymentDescriptions>
     {
-      typedef ::Deployment::ResourceDeploymentDescription&   element_cdr_to;
-      typedef const ::Deployment::ResourceDeploymentDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ResourceDeploymentDescription>  element_traits;
     };
 
@@ -1888,11 +1820,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ArtifactDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ArtifactDeploymentDescriptions>
-      , IDL::bounded_traits< ::Deployment::ArtifactDeploymentDescriptions>
     {
-      typedef ::Deployment::ArtifactDeploymentDescription&   element_cdr_to;
-      typedef const ::Deployment::ArtifactDeploymentDescription&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription>  element_traits;
     };
 
@@ -1924,11 +1852,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::PlanLocalities>
       : IDL::common_traits< ::Deployment::PlanLocalities>
-      , IDL::bounded_traits< ::Deployment::PlanLocalities>
     {
-      typedef ::Deployment::PlanLocality&   element_cdr_to;
-      typedef const ::Deployment::PlanLocality&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::PlanLocality>  element_traits;
     };
 
@@ -1963,11 +1887,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ComponentPackageReferences>
       : IDL::common_traits< ::Deployment::ComponentPackageReferences>
-      , IDL::bounded_traits< ::Deployment::ComponentPackageReferences>
     {
-      typedef ::Deployment::ComponentPackageReference&   element_cdr_to;
-      typedef const ::Deployment::ComponentPackageReference&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ComponentPackageReference>  element_traits;
     };
 
@@ -1982,11 +1902,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ResourceUsageKinds>
       : IDL::common_traits< ::Deployment::ResourceUsageKinds>
-      , IDL::bounded_traits< ::Deployment::ResourceUsageKinds>
     {
-      typedef ::Deployment::ResourceUsageKind&   element_cdr_to;
-      typedef ::Deployment::ResourceUsageKind  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ResourceUsageKind>  element_traits;
     };
 
@@ -2011,11 +1927,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::ImplementationRequirements>
       : IDL::common_traits< ::Deployment::ImplementationRequirements>
-      , IDL::bounded_traits< ::Deployment::ImplementationRequirements>
     {
-      typedef ::Deployment::ImplementationRequirement&   element_cdr_to;
-      typedef const ::Deployment::ImplementationRequirement&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::ImplementationRequirement>  element_traits;
     };
 
@@ -2040,11 +1952,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::Deployment::Capabilities>
       : IDL::common_traits< ::Deployment::Capabilities>
-      , IDL::bounded_traits< ::Deployment::Capabilities>
     {
-      typedef ::Deployment::Capability&   element_cdr_to;
-      typedef const ::Deployment::Capability&  element_cdr_from;
-
       typedef IDL::traits< ::Deployment::Capability>  element_traits;
     };
 
@@ -2438,7 +2346,7 @@ inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
 {
 }
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (std::string name,
-                                                                               TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
+                                                                               TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
            : name_ (std::move (name))
            , type_ (std::move (type))
 {
@@ -2449,9 +2357,9 @@ inline void Deployment::ComponentPropertyDescription::name (std::string&& _name)
 inline const std::string& Deployment::ComponentPropertyDescription::name () const { return this->name_; }
 inline std::string& Deployment::ComponentPropertyDescription::name () { return this->name_; }
 
-inline void Deployment::ComponentPropertyDescription::type (TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
-inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
-inline TAOX11_NAMESPACE::IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
+inline void Deployment::ComponentPropertyDescription::type (TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
+inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
+inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
 
 inline ::Deployment::ComponentPropertyDescription& Deployment::ComponentPropertyDescription::operator= (const ::Deployment::ComponentPropertyDescription& x)
 {

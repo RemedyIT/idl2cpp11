@@ -295,9 +295,9 @@ namespace Test
     inline const ::Test::S& w () const;
     inline ::Test::S& w ();
 
-    inline void obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj);
-    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj () const;
-    inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& obj ();
+    inline void obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj);
+    inline TAOX11_IDL::traits< ::Test::A>::ref_type obj () const;
+    inline TAOX11_IDL::traits< ::Test::A>::ref_type& obj ();
 
     inline void swap (U& s);
 
@@ -313,7 +313,7 @@ namespace Test
       int32_t x_;
       std::string z_;
       ::Test::S w_;
-      TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type obj_;
+      TAOX11_IDL::traits< ::Test::A>::ref_type obj_;
     } u_;
   }; // U
 
@@ -378,8 +378,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _ref_type;
+    typedef TAOX11_IDL::traits< Foo>           _traits_type;
+    typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
@@ -433,8 +433,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _ref_type;
+    typedef TAOX11_IDL::traits< A>           _traits_type;
+    typedef TAOX11_IDL::traits< A>::ref_type _ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -1373,7 +1373,7 @@ inline Test::U::u_type_::~u_type_ ()
 inline Test::U::U ()
   : disc_ ((-2147483647-1))
 {
-  new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
+  new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type;
 }
 
 inline Test::U::~U ()
@@ -1406,7 +1406,7 @@ inline Test::U::U (const ::Test::U& u)
     break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type;
+        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type;
         this->u_.obj_ = u.u_.obj_;
       }
     break;
@@ -1436,7 +1436,7 @@ inline Test::U::U (::Test::U&& u)
     break;
   default:
     {
-      new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
+      new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
     }
     break;
   }
@@ -1638,12 +1638,12 @@ inline ::Test::S& Test::U::w ()
   return this->u_.w_;
 }
 
-inline void Test::U::obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _obj)
+inline void Test::U::obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj)
 {
   if (this->disc_ != (-2147483647-1))
   {
     this->_clear ();
-    new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (_obj);
+    new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (_obj);
   }
   else
   {
@@ -1651,7 +1651,7 @@ inline void Test::U::obj (TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type _o
   }
   this->disc_ = (-2147483647-1);
 }
-inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj () const
+inline TAOX11_IDL::traits< ::Test::A>::ref_type Test::U::obj () const
 {
   switch (this->disc_)
   {
@@ -1665,7 +1665,7 @@ inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type Test::U::obj () const
   }
   return this->u_.obj_;
 }
-inline TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
+inline TAOX11_IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
 {
   switch (this->disc_)
   {
@@ -1706,7 +1706,7 @@ inline ::Test::U& Test::U::operator= (const ::Test::U& u)
       break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
+        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
       }
       break;
     }
@@ -1740,7 +1740,7 @@ inline ::Test::U& Test::U::operator= (::Test::U&& u)
       break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
+        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
       }
       break;
     }
@@ -1817,7 +1817,7 @@ inline void Test::U::_clear ()
     break;
   default:
     {
-      this->u_.obj_.TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type::~object_reference ();
+      this->u_.obj_.TAOX11_IDL::traits< ::Test::A>::ref_type::~object_reference ();
     }
     break;
   }
@@ -1919,7 +1919,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type);
+    TAOX11_IDL::traits< ::Test::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/union_os.erb
 std::ostream& operator<< (
@@ -1929,12 +1929,12 @@ std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::A>::ref_type);
+    TAOX11_IDL::traits< ::Test::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

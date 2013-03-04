@@ -79,8 +79,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _ref_type;
+    typedef TAOX11_IDL::traits< Foo>           _traits_type;
+    typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
     virtual bool _is_a (const std::string& local_type_id) override;
@@ -97,7 +97,7 @@ namespace Test
     ~Foo () = default;
 
     /// Returns a strong client reference for the local object you are calling
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type _this ();
+    TAOX11_IDL::traits< ::Test::Foo>::ref_type _this ();
 
   private:
     Foo (const Foo&) = delete;
@@ -125,7 +125,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Foo>::ref_type);
+    TAOX11_IDL::traits< ::Test::Foo>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

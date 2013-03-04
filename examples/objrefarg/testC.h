@@ -139,17 +139,17 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type _ref_type;
+    typedef TAOX11_IDL::traits< Hello_Factory>           _traits_type;
+    typedef TAOX11_IDL::traits< Hello_Factory>::ref_type _ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello
-    virtual TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type get_hello ();
+    virtual TAOX11_IDL::traits< ::Test::Hello>::ref_type get_hello ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copybrief Test::Hello_Factory::get_hello_2
-    virtual void get_hello_2 (TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type& hello_obj);
+    virtual void get_hello_2 (TAOX11_IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -182,8 +182,8 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _traits_type;
-    typedef TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type _ref_type;
+    typedef TAOX11_IDL::traits< Hello>           _traits_type;
+    typedef TAOX11_IDL::traits< Hello>::ref_type _ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
@@ -233,17 +233,17 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type);
+    TAOX11_IDL::traits< ::Test::Hello>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello_Factory>::ref_type);
+    TAOX11_IDL::traits< ::Test::Hello_Factory>::ref_type);
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::Test::Hello>::ref_type);
+    TAOX11_IDL::traits< ::Test::Hello>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)

@@ -141,11 +141,7 @@ namespace TAOX11_NAMESPACE {
     template<>
     struct traits < ::ShapeTypeSeq>
       : IDL::common_traits< ::ShapeTypeSeq>
-      , IDL::bounded_traits< ::ShapeTypeSeq>
     {
-      typedef ::ShapeType&   element_cdr_to;
-      typedef const ::ShapeType&  element_cdr_from;
-
       typedef IDL::traits< ::ShapeType>  element_traits;
     };
 

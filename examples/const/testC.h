@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/bounded_string_t.h"
 #include "tao/x11/object.h"
 #include "tao/x11/corba_ostream.h"
 
@@ -79,7 +80,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef.erb
 
-  typedef std::string TName;
+  typedef TAOX11_IDL::bounded_basic_string<char, 30> TName;
 
   // generated from StubHeaderWriter#visit_const
   constexpr TCounter count = 99;
@@ -146,8 +147,8 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _traits_type;
-  typedef TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type _ref_type;
+  typedef TAOX11_IDL::traits< A>           _traits_type;
+  typedef TAOX11_IDL::traits< A>::ref_type _ref_type;
   //@}
 
   // generated from StubHeaderWriter#visit_const
@@ -176,6 +177,22 @@ private:
 // generated from StubHeaderTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
   namespace IDL {
+
+    // generated from c++11/templates/cli/hdr/string_idl_traits.erb
+    // Unaliased type : TAOX11_IDL::bounded_basic_string<char, 30>
+    // MD5            : 4FC4252C9D149C59A6F97B9D11EF60DC
+#if !defined(_ALIAS_4FC4252C9D149C59A6F97B9D11EF60DC_TRAITS_DECL_)
+#define _ALIAS_4FC4252C9D149C59A6F97B9D11EF60DC_TRAITS_DECL_
+
+    template<>
+    struct traits < TAOX11_IDL::bounded_basic_string<char, 30>>
+      : IDL::common_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
+      , IDL::bounded_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
+    {
+      typedef IDL::traits<char>  element_traits;
+    };
+
+#endif
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -190,7 +207,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_NAMESPACE::IDL::traits< ::A>::ref_type);
+    TAOX11_IDL::traits< ::A>::ref_type);
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
