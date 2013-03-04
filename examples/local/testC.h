@@ -61,6 +61,8 @@ namespace TAOX11_NAMESPACE
     {
       static constexpr bool local = true;
       static constexpr bool abstract = false;
+
+      typedef ::Test::Foo base_type;
     };
   };
 };
