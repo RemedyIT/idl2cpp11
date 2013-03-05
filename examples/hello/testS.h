@@ -19,6 +19,7 @@
 
 #include "tao/x11/portable_server/servantbase.h"
 
+
 // generated from ServantHeaderWriter#enter_module
 namespace Test
 {
@@ -100,9 +101,9 @@ namespace TAOX11_NAMESPACE {
           weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Test::POA::Hello*, _Tp1*>::value>::type>
-      static ref_type downcast (servant_reference<_Tp1> base)
+      static ref_type narrow (servant_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
   }; // CORBA

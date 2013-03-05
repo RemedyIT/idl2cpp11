@@ -19,6 +19,7 @@
 
 #include "tao/x11/portable_server/servantbase.h"
 
+
 // generated from c++11/templates/srv/hdr/interface_pre.erb
 namespace POA
 {
@@ -225,9 +226,9 @@ namespace TAOX11_NAMESPACE {
           weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::A*, _Tp1*>::value>::type>
-      static ref_type downcast (servant_reference<_Tp1> base)
+      static ref_type narrow (servant_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
 
@@ -243,9 +244,9 @@ namespace TAOX11_NAMESPACE {
           weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::X*, _Tp1*>::value>::type>
-      static ref_type downcast (servant_reference<_Tp1> base)
+      static ref_type narrow (servant_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
 
@@ -261,9 +262,9 @@ namespace TAOX11_NAMESPACE {
           weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::A1*, _Tp1*>::value>::type>
-      static ref_type downcast (servant_reference<_Tp1> base)
+      static ref_type narrow (servant_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
 
@@ -279,9 +280,9 @@ namespace TAOX11_NAMESPACE {
           weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::B*, _Tp1*>::value>::type>
-      static ref_type downcast (servant_reference<_Tp1> base)
+      static ref_type narrow (servant_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
   }; // CORBA

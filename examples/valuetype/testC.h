@@ -59,9 +59,9 @@ namespace TAOX11_NAMESPACE
           obv_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Example*, _Tp1*>::value>::type>
-      static ref_type downcast (valuetype_reference<_Tp1> base)
+      static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
   };
@@ -91,9 +91,6 @@ public:
   typedef TAOX11_IDL::traits< Example>::ref_type     _ref_type;
   typedef TAOX11_IDL::traits< Example>::obv_type     _obv_type;
   //@}
-
-  static _ref_type _downcast (
-      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -405,9 +402,9 @@ namespace TAOX11_NAMESPACE
           weak_factory_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Val*, _Tp1*>::value>::type>
-      static ref_type downcast (valuetype_reference<_Tp1> base)
+      static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
   };
@@ -438,9 +435,6 @@ public:
   typedef TAOX11_IDL::traits< Val>::factory_type _factory_type;
   typedef TAOX11_IDL::traits< Val>::obv_type     _obv_type;
   //@}
-
-  static _ref_type _downcast (
-      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -647,7 +641,7 @@ namespace TAOX11_NAMESPACE
       typedef weak_valuetype_reference< ::StringValue>
           weak_ref_type;
 
-      static ref_type downcast (
+      static ref_type narrow (
           valuetype_reference<ValueBase>);
     };
   };
@@ -688,10 +682,6 @@ public:
   virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   _copy_value () const override;
 
-  static _ref_type _downcast (
-      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-  { return _traits_type::downcast (vbref); }
-
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
       _ref_type &vbox);
@@ -723,10 +713,10 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     inline valuetype_traits< ::StringValue>::ref_type
-    valuetype_traits< ::StringValue>::downcast (
+    valuetype_traits< ::StringValue>::narrow (
           valuetype_reference<ValueBase> vbref)
     {
-      return ref_type::_downcast (vbref);
+      return ref_type::_narrow (vbref);
     }
   };
 };
@@ -839,7 +829,7 @@ namespace TAOX11_NAMESPACE
       typedef weak_valuetype_reference< ::ColorValue>
           weak_ref_type;
 
-      static ref_type downcast (
+      static ref_type narrow (
           valuetype_reference<ValueBase>);
     };
   };
@@ -878,10 +868,6 @@ public:
   virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   _copy_value () const override;
 
-  static _ref_type _downcast (
-      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-  { return _traits_type::downcast (vbref); }
-
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
       _ref_type &vbox);
@@ -913,10 +899,10 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     inline valuetype_traits< ::ColorValue>::ref_type
-    valuetype_traits< ::ColorValue>::downcast (
+    valuetype_traits< ::ColorValue>::narrow (
           valuetype_reference<ValueBase> vbref)
     {
-      return ref_type::_downcast (vbref);
+      return ref_type::_narrow (vbref);
     }
   };
 };
@@ -1059,9 +1045,9 @@ namespace TAOX11_NAMESPACE
           obv_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::B*, _Tp1*>::value>::type>
-      static ref_type downcast (valuetype_reference<_Tp1> base)
+      static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
   };
@@ -1091,9 +1077,6 @@ public:
   typedef TAOX11_IDL::traits< B>::ref_type     _ref_type;
   typedef TAOX11_IDL::traits< B>::obv_type     _obv_type;
   //@}
-
-  static _ref_type _downcast (
-      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -1253,9 +1236,9 @@ namespace TAOX11_NAMESPACE
           weak_factory_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::V*, _Tp1*>::value>::type>
-      static ref_type downcast (valuetype_reference<_Tp1> base)
+      static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_downcast (base);
+        return ref_type::_narrow (base);
       }
     };
   };
@@ -1286,9 +1269,6 @@ public:
   typedef TAOX11_IDL::traits< V>::factory_type _factory_type;
   typedef TAOX11_IDL::traits< V>::obv_type     _obv_type;
   //@}
-
-  static _ref_type _downcast (
-      TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref);
 
   static bool _obv_unmarshal (
       TAO_InputCDR &strm,
@@ -1479,13 +1459,6 @@ Example::swap (
   std::swap (this->val5 (), s.val5 ());
 }
 
-inline Example::_ref_type
-Example::_downcast (
-  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{
-  return _traits_type::downcast (vbref);
-}
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline S::S ()
            : value_ (0)
@@ -1531,13 +1504,6 @@ Val::swap (
   std::swap (this->z (), s.z ());
 }
 
-inline Val::_ref_type
-Val::_downcast (
-  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{
-  return _traits_type::downcast (vbref);
-}
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ColorValue2::ColorValue2 ()
            : col_ (::Color::red)
@@ -1578,21 +1544,7 @@ B::swap (
   std::swap (this->data (), s.data ());
 }
 
-inline B::_ref_type
-B::_downcast (
-  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{
-  return _traits_type::downcast (vbref);
-}
-
 // generated from c++11/templates/cli/inl/valuetype_inl.erb
-
-inline V::_ref_type
-V::_downcast (
-  TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type vbref)
-{
-  return _traits_type::downcast (vbref);
-}
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {

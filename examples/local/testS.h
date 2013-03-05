@@ -19,6 +19,7 @@
 
 #include "tao/x11/portable_server/servantbase.h"
 
+
 // generated from ServantHeaderWriter#enter_module
 namespace Test
 {

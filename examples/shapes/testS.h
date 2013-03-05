@@ -19,6 +19,7 @@
 
 #include "tao/x11/portable_server/servantbase.h"
 
+
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
