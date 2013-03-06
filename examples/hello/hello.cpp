@@ -1,9 +1,12 @@
-/*--------------------------------------------------------------------
- * hello.cpp - CORBA C++11 client application
+/*!
+ * @file   hello.cpp
+ * @author
  *
- * Copyright (c) Remedy IT Expertise BV
+ * @brief  CORBA C++11 client application
+ *
+ * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
- --------------------------------------------------------------------*/
+ */
 #include "hello.h"
 
 Hello::Hello (IDL::traits<CORBA::ORB>::ref_type orb)

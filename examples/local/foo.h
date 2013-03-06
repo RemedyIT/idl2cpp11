@@ -1,9 +1,12 @@
-/*--------------------------------------------------------------------
- * foo.h - CORBA C++11
+/*!
+ * @file   foo.h
+ * @author
  *
- * Copyright (c) Remedy IT Expertise BV
+ * @brief  CORBA C++11
+ *
+ * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
- --------------------------------------------------------------------*/
+ */
 
 #include "testC.h"
 

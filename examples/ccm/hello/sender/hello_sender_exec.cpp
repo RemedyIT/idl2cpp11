@@ -1,9 +1,12 @@
-/*--------------------------------------------------------------------
- * hello_sender_exec.cpp - CIAO C++11 hello sender component
+/*!
+ * @file   hello_sender_exec.cpp
+ * @author
  *
- * Copyright (c) Remedy IT Expertise BV
+ * @brief  CIAO C++11 hello sender component
+ *
+ * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
- --------------------------------------------------------------------*/
+ */
 
 #include "hello_sender_exec.h"
 #include "ace/OS_NS_unistd.h"
