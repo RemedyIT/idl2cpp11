@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_INCLUDED__
-#define __RIDL_TESTS_H_INCLUDED__
+#ifndef __RIDL_TESTS_H_0_07080539026921528_INCLUDED__
+#define __RIDL_TESTS_H_0_07080539026921528_INCLUDED__
 
 #include "testC.h"
 
@@ -60,7 +60,7 @@ namespace Test
       /// Returns a strong client reference for the servant you are calling
       TAOX11_IDL::traits< ::Test::Hello>::ref_type _this ();
 
-      virtual const std::string _interface_repository_id () const override;
+      virtual const std::string &_interface_repository_id () const override;
 
       // generated from c++11/templates/srv/hdr/operation.erb
       /// @copybrief Test::Hello::get_string
@@ -109,6 +109,6 @@ namespace TAOX11_NAMESPACE {
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#endif // __RIDL_TESTS_H_INCLUDED__
+#endif // __RIDL_TESTS_H_0_07080539026921528_INCLUDED__
 
 // -*- END -*-
