@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_0_45410861461006546_INCLUDED__
-#define __RIDL_TESTC_H_0_45410861461006546_INCLUDED__
+#ifndef __RIDL_TESTC_H_IFBGBEHE_INCLUDED__
+#define __RIDL_TESTC_H_IFBGBEHE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -187,6 +187,8 @@ namespace obv
       , val3_ (std::move (val3))
       , val5_ (std::move (val5))
     {}
+
+  private:
     void operator =(const Example&) = delete;
     void operator =(Example&&) = delete;
 
@@ -535,6 +537,8 @@ namespace obv
       , y_ (std::move (y))
       , z_ (std::move (z))
     {}
+
+  private:
     void operator =(const Val&) = delete;
     void operator =(Val&&) = delete;
 
@@ -1148,6 +1152,8 @@ namespace obv
     explicit B (int16_t data)
       : data_ (std::move (data))
     {}
+
+  private:
     void operator =(const B&) = delete;
     void operator =(B&&) = delete;
 
@@ -1326,6 +1332,8 @@ namespace obv
     ~V () = default;
     V (const V&) = default;
     V (V&&) = default;
+
+  private:
     void operator =(const V&) = delete;
     void operator =(V&&) = delete;
 
@@ -1689,6 +1697,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_0_45410861461006546_INCLUDED__
+#endif // __RIDL_TESTC_H_IFBGBEHE_INCLUDED__
 
 // -*- END -*-
