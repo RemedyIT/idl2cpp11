@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJFIAAJA_INCLUDED__
-#define __RIDL_TESTC_H_JJFIAAJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FEJFGGDE_INCLUDED__
+#define __RIDL_TESTC_H_FEJFGGDE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/array_os_t.h"
 #include "tao/x11/object.h"
 #include "tao/x11/corba_ostream.h"
 
@@ -201,17 +202,14 @@ namespace std {
 #if !defined (_ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_)
 #define _ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_
 
-#define _ALIAS_OSTREAM_Test_F_IMPL_
-std::ostream&
-taox11_print_Test_F (
-    std::ostream& strm ,
-    const ::Test::F& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::F& _v)
 {
-  return taox11_print_Test_F (strm, _v);
+  strm << "std::array< float, 10 >";
+  return taox11_array_printer<0U,
+                              ::Test::F::value_type,
+                              10>::p (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_
@@ -222,17 +220,14 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_)
 #define _ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_
 
-#define _ALIAS_OSTREAM_Test_V_IMPL_
-std::ostream&
-taox11_print_Test_V (
-    std::ostream& strm ,
-    const ::Test::V& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::V& _v)
 {
-  return taox11_print_Test_V (strm, _v);
+  strm << "std::array< std::string, 10 >";
+  return taox11_array_printer<0U,
+                              ::Test::V::value_type,
+                              10>::p (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_
@@ -243,17 +238,14 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_)
 #define _ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_
 
-#define _ALIAS_OSTREAM_Test_M_IMPL_
-std::ostream&
-taox11_print_Test_M (
-    std::ostream& strm ,
-    const ::Test::M& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::M& _v)
 {
-  return taox11_print_Test_M (strm, _v);
+  strm << "std::array< std::array< std::array< std::string, 3 >, 2 >, 1 >";
+  return taox11_array_printer<2U,
+                              ::Test::M::value_type,
+                              1>::p (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_
@@ -270,6 +262,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_JJFIAAJA_INCLUDED__
+#endif // __RIDL_TESTC_H_FEJFGGDE_INCLUDED__
 
 // -*- END -*-

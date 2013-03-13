@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HAHHHEAA_INCLUDED__
-#define __RIDL_TESTC_H_HAHHHEAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_CJDCEAHF_INCLUDED__
+#define __RIDL_TESTC_H_CJDCEAHF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -230,12 +230,12 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::FooEx::FooEx ()
-  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "Test::FooEx")
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
   , message_ (std::string())
 {
 }
 inline Test::FooEx::FooEx (std::string message)
-  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "Test::FooEx")
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
   , message_ (std::move (message))
 {
 }
@@ -266,12 +266,12 @@ inline ::Test::FooEx& Test::FooEx::operator= (::Test::FooEx&& x)
 
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::BooEx::BooEx ()
-  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "Test::BooEx")
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "BooEx")
   , id_ (0)
 {
 }
 inline Test::BooEx::BooEx (int32_t id)
-  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "Test::BooEx")
+  : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "BooEx")
   , id_ (std::move (id))
 {
 }
@@ -315,6 +315,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_HAHHHEAA_INCLUDED__
+#endif // __RIDL_TESTC_H_CJDCEAHF_INCLUDED__
 
 // -*- END -*-

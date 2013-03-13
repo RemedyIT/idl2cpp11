@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFEEAIGC_INCLUDED__
-#define __RIDL_TESTC_H_BFEEAIGC_INCLUDED__
+#ifndef __RIDL_TESTC_H_FBABBBHE_INCLUDED__
+#define __RIDL_TESTC_H_FBABBBHE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/sequence_os_t.h"
 #include "tao/x11/bounded_vector_t.h"
 #include "tao/x11/object.h"
 #include "tao/x11/corba_ostream.h"
@@ -425,7 +426,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_)
 #define _ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_
 
-#define _ALIAS_OSTREAM_Test_SimpleSeq_IMPL_
 std::ostream&
 taox11_print_Test_SimpleSeq (
     std::ostream& strm ,
@@ -435,7 +435,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::SimpleSeq& _v)
 {
-  return taox11_print_Test_SimpleSeq (strm, _v);
+  strm << "std::vector < ::Test::Simple>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_
@@ -446,7 +447,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_)
 #define _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
 
-#define _ALIAS_OSTREAM_Test_LongSeq_IMPL_
 std::ostream&
 taox11_print_Test_LongSeq (
     std::ostream& strm ,
@@ -456,7 +456,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::LongSeq& _v)
 {
-  return taox11_print_Test_LongSeq (strm, _v);
+  strm << "std::vector < int32_t>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
@@ -467,7 +468,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_EA3216C5DC0F6B49D119DC64CDBA69CA_DECL_)
 #define _ALIAS_OSTREAM_EA3216C5DC0F6B49D119DC64CDBA69CA_DECL_
 
-#define _ALIAS_OSTREAM_Test_BoundedLongSeq_IMPL_
 std::ostream&
 taox11_print_Test_BoundedLongSeq (
     std::ostream& strm ,
@@ -477,7 +477,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::BoundedLongSeq& _v)
 {
-  return taox11_print_Test_BoundedLongSeq (strm, _v);
+  strm << "IDL::bounded_vector < int32_t, 50>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_EA3216C5DC0F6B49D119DC64CDBA69CA_DECL_
@@ -488,7 +489,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_)
 #define _ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_
 
-#define _ALIAS_OSTREAM_Test_BoolSeq_IMPL_
 std::ostream&
 taox11_print_Test_BoolSeq (
     std::ostream& strm ,
@@ -498,7 +498,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::BoolSeq& _v)
 {
-  return taox11_print_Test_BoolSeq (strm, _v);
+  strm << "std::vector < bool>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_
@@ -509,7 +510,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_)
 #define _ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_
 
-#define _ALIAS_OSTREAM_Test_StringSeq_IMPL_
 std::ostream&
 taox11_print_Test_StringSeq (
     std::ostream& strm ,
@@ -519,7 +519,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::StringSeq& _v)
 {
-  return taox11_print_Test_StringSeq (strm, _v);
+  strm << "std::vector < std::string>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_
@@ -536,6 +537,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BFEEAIGC_INCLUDED__
+#endif // __RIDL_TESTC_H_FBABBBHE_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BIBDBJAA_INCLUDED__
-#define __RIDL_TESTC_H_BIBDBJAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHEFJFJJ_INCLUDED__
+#define __RIDL_TESTC_H_EHEFJFJJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1931,11 +1931,6 @@ std::ostream& operator<< (
     std::ostream& strm,
     TAOX11_IDL::traits< ::Test::Foo>::ref_type);
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
-std::ostream& operator<< (
-    std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::A>::ref_type);
-
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -1943,6 +1938,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BIBDBJAA_INCLUDED__
+#endif // __RIDL_TESTC_H_EHEFJFJJ_INCLUDED__
 
 // -*- END -*-

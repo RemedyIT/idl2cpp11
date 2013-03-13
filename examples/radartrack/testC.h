@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GIBHAJAI_INCLUDED__
-#define __RIDL_TESTC_H_GIBHAJAI_INCLUDED__
+#ifndef __RIDL_TESTC_H_JHIFBGJB_INCLUDED__
+#define __RIDL_TESTC_H_JHIFBGJB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/sequence_os_t.h"
 #include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
@@ -207,7 +208,6 @@ namespace std {
 #if !defined (_ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_)
 #define _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
 
-#define _ALIAS_OSTREAM_octetseq_IMPL_
 std::ostream&
 taox11_print_octetseq (
     std::ostream& strm ,
@@ -217,7 +217,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::octetseq& _v)
 {
-  return taox11_print_octetseq (strm, _v);
+  strm << "std::vector < uint8_t>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
@@ -235,6 +236,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_GIBHAJAI_INCLUDED__
+#endif // __RIDL_TESTC_H_JHIFBGJB_INCLUDED__
 
 // -*- END -*-

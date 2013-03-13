@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JAGJGCIJ_INCLUDED__
-#define __RIDL_TESTC_H_JAGJGCIJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDEACDHE_INCLUDED__
+#define __RIDL_TESTC_H_IDEACDHE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -19,6 +19,7 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/sequence_os_t.h"
 #include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
@@ -314,7 +315,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_)
 #define _ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_
 
-#define _ALIAS_OSTREAM_ShapeTypeSeq_IMPL_
 std::ostream&
 taox11_print_ShapeTypeSeq (
     std::ostream& strm ,
@@ -324,7 +324,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::ShapeTypeSeq& _v)
 {
-  return taox11_print_ShapeTypeSeq (strm, _v);
+  strm << "std::vector < ::ShapeType>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_
@@ -336,6 +337,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_JAGJGCIJ_INCLUDED__
+#endif // __RIDL_TESTC_H_IDEACDHE_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CHEEIEEG_INCLUDED__
-#define __RIDL_TESTC_H_CHEEIEEG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IHCIIJEF_INCLUDED__
+#define __RIDL_TESTC_H_IHCIIJEF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -20,6 +20,7 @@
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/anytypecode/any.h"
+#include "tao/x11/sequence_os_t.h"
 #include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
@@ -3933,7 +3934,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_)
 #define _ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_Properties_IMPL_
 std::ostream&
 taox11_print_Deployment_Properties (
     std::ostream& strm ,
@@ -3943,7 +3943,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Properties& _v)
 {
-  return taox11_print_Deployment_Properties (strm, _v);
+  strm << "std::vector < ::Deployment::Property>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_
@@ -3960,7 +3961,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_)
 #define _ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_Requirements_IMPL_
 std::ostream&
 taox11_print_Deployment_Requirements (
     std::ostream& strm ,
@@ -3970,7 +3970,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Requirements& _v)
 {
-  return taox11_print_Deployment_Requirements (strm, _v);
+  strm << "std::vector < ::Deployment::Requirement>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_
@@ -4003,7 +4004,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_)
 #define _ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_SatisfierProperties_IMPL_
 std::ostream&
 taox11_print_Deployment_SatisfierProperties (
     std::ostream& strm ,
@@ -4013,7 +4013,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::SatisfierProperties& _v)
 {
-  return taox11_print_Deployment_SatisfierProperties (strm, _v);
+  strm << "std::vector < ::Deployment::SatisfierProperty>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_
@@ -4048,7 +4049,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_)
 #define _ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ComponentPortDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentPortDescriptions (
     std::ostream& strm ,
@@ -4058,7 +4058,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPortDescriptions& _v)
 {
-  return taox11_print_Deployment_ComponentPortDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::ComponentPortDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_
@@ -4075,7 +4076,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_)
 #define _ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ComponentPropertyDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentPropertyDescriptions (
     std::ostream& strm ,
@@ -4085,7 +4085,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPropertyDescriptions& _v)
 {
-  return taox11_print_Deployment_ComponentPropertyDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::ComponentPropertyDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_
@@ -4108,7 +4109,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_)
 #define _ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_MonolithicDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_MonolithicDeploymentDescriptions (
     std::ostream& strm ,
@@ -4118,7 +4118,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::MonolithicDeploymentDescriptions& _v)
 {
-  return taox11_print_Deployment_MonolithicDeploymentDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::MonolithicDeploymentDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_
@@ -4150,7 +4151,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_)
 #define _ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_InstanceResourceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_InstanceResourceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4160,7 +4160,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
 {
-  return taox11_print_Deployment_InstanceResourceDeploymentDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::InstanceResourceDeploymentDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_
@@ -4177,7 +4178,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_)
 #define _ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_InstanceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_InstanceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4187,7 +4187,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceDeploymentDescriptions& _v)
 {
-  return taox11_print_Deployment_InstanceDeploymentDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::InstanceDeploymentDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_
@@ -4204,7 +4205,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_)
 #define _ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ComponentExternalPortEndpoints_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentExternalPortEndpoints (
     std::ostream& strm ,
@@ -4214,7 +4214,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentExternalPortEndpoints& _v)
 {
-  return taox11_print_Deployment_ComponentExternalPortEndpoints (strm, _v);
+  strm << "std::vector < ::Deployment::ComponentExternalPortEndpoint>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_
@@ -4231,7 +4232,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_)
 #define _ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_PlanSubcomponentPortEndpoints_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanSubcomponentPortEndpoints (
     std::ostream& strm ,
@@ -4241,7 +4241,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPortEndpoints& _v)
 {
-  return taox11_print_Deployment_PlanSubcomponentPortEndpoints (strm, _v);
+  strm << "std::vector < ::Deployment::PlanSubcomponentPortEndpoint>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_
@@ -4258,7 +4259,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_)
 #define _ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ExternalReferenceEndpoints_IMPL_
 std::ostream&
 taox11_print_Deployment_ExternalReferenceEndpoints (
     std::ostream& strm ,
@@ -4268,7 +4268,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ExternalReferenceEndpoints& _v)
 {
-  return taox11_print_Deployment_ExternalReferenceEndpoints (strm, _v);
+  strm << "std::vector < ::Deployment::ExternalReferenceEndpoint>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_
@@ -4285,7 +4286,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_)
 #define _ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ConnectionResourceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4295,7 +4295,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ConnectionResourceDeploymentDescriptions& _v)
 {
-  return taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::ConnectionResourceDeploymentDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_
@@ -4312,7 +4313,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_)
 #define _ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_PlanConnectionDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanConnectionDescriptions (
     std::ostream& strm ,
@@ -4322,7 +4322,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanConnectionDescriptions& _v)
 {
-  return taox11_print_Deployment_PlanConnectionDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::PlanConnectionDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_
@@ -4339,7 +4340,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_)
 #define _ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_PlanSubcomponentPropertyReferences_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanSubcomponentPropertyReferences (
     std::ostream& strm ,
@@ -4349,7 +4349,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPropertyReferences& _v)
 {
-  return taox11_print_Deployment_PlanSubcomponentPropertyReferences (strm, _v);
+  strm << "std::vector < ::Deployment::PlanSubcomponentPropertyReference>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_
@@ -4366,7 +4367,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_)
 #define _ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_PlanPropertyMappings_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanPropertyMappings (
     std::ostream& strm ,
@@ -4376,7 +4376,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanPropertyMappings& _v)
 {
-  return taox11_print_Deployment_PlanPropertyMappings (strm, _v);
+  strm << "std::vector < ::Deployment::PlanPropertyMapping>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_
@@ -4393,7 +4394,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_)
 #define _ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ImplementationDependencies_IMPL_
 std::ostream&
 taox11_print_Deployment_ImplementationDependencies (
     std::ostream& strm ,
@@ -4403,7 +4403,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationDependencies& _v)
 {
-  return taox11_print_Deployment_ImplementationDependencies (strm, _v);
+  strm << "std::vector < ::Deployment::ImplementationDependency>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_
@@ -4420,7 +4421,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_)
 #define _ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ResourceDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ResourceDeploymentDescriptions (
     std::ostream& strm ,
@@ -4430,7 +4430,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceDeploymentDescriptions& _v)
 {
-  return taox11_print_Deployment_ResourceDeploymentDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::ResourceDeploymentDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_
@@ -4447,7 +4448,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_)
 #define _ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ArtifactDeploymentDescriptions_IMPL_
 std::ostream&
 taox11_print_Deployment_ArtifactDeploymentDescriptions (
     std::ostream& strm ,
@@ -4457,7 +4457,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ArtifactDeploymentDescriptions& _v)
 {
-  return taox11_print_Deployment_ArtifactDeploymentDescriptions (strm, _v);
+  strm << "std::vector < ::Deployment::ArtifactDeploymentDescription>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_
@@ -4487,7 +4488,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_)
 #define _ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_PlanLocalities_IMPL_
 std::ostream&
 taox11_print_Deployment_PlanLocalities (
     std::ostream& strm ,
@@ -4497,7 +4497,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanLocalities& _v)
 {
-  return taox11_print_Deployment_PlanLocalities (strm, _v);
+  strm << "std::vector < ::Deployment::PlanLocality>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_
@@ -4520,7 +4521,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_)
 #define _ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ComponentPackageReferences_IMPL_
 std::ostream&
 taox11_print_Deployment_ComponentPackageReferences (
     std::ostream& strm ,
@@ -4530,7 +4530,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPackageReferences& _v)
 {
-  return taox11_print_Deployment_ComponentPackageReferences (strm, _v);
+  strm << "std::vector < ::Deployment::ComponentPackageReference>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_
@@ -4541,7 +4542,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_)
 #define _ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ResourceUsageKinds_IMPL_
 std::ostream&
 taox11_print_Deployment_ResourceUsageKinds (
     std::ostream& strm ,
@@ -4551,7 +4551,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceUsageKinds& _v)
 {
-  return taox11_print_Deployment_ResourceUsageKinds (strm, _v);
+  strm << "std::vector < ::Deployment::ResourceUsageKind>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_
@@ -4568,7 +4569,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_)
 #define _ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_ImplementationRequirements_IMPL_
 std::ostream&
 taox11_print_Deployment_ImplementationRequirements (
     std::ostream& strm ,
@@ -4578,7 +4578,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationRequirements& _v)
 {
-  return taox11_print_Deployment_ImplementationRequirements (strm, _v);
+  strm << "std::vector < ::Deployment::ImplementationRequirement>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_
@@ -4595,7 +4596,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_)
 #define _ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_
 
-#define _ALIAS_OSTREAM_Deployment_Capabilities_IMPL_
 std::ostream&
 taox11_print_Deployment_Capabilities (
     std::ostream& strm ,
@@ -4605,7 +4605,8 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Capabilities& _v)
 {
-  return taox11_print_Deployment_Capabilities (strm, _v);
+  strm << "std::vector < ::Deployment::Capability>";
+  return taox11_print_sequence (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_
@@ -4617,6 +4618,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_CHEEIEEG_INCLUDED__
+#endif // __RIDL_TESTC_H_IHCIIJEF_INCLUDED__
 
 // -*- END -*-

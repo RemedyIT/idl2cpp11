@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IFBGBEHE_INCLUDED__
-#define __RIDL_TESTC_H_IFBGBEHE_INCLUDED__
+#ifndef __RIDL_TESTC_H_HJFEBGEJ_INCLUDED__
+#define __RIDL_TESTC_H_HJFEBGEJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -21,6 +21,7 @@
 #include "tao/x11/orb.h"
 #include "tao/x11/valuetype/value_base.h"
 #include "tao/x11/valuetype/value_factory_base.h"
+#include "tao/x11/array_os_t.h"
 #include "tao/x11/object.h"
 #include "tao/x11/valuetype/value_box_t.h"
 #include "tao/x11/corba_ostream.h"
@@ -1605,17 +1606,14 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_765CC766CD2500C237586E8ED6B5F8D0_DECL_)
 #define _ALIAS_OSTREAM_765CC766CD2500C237586E8ED6B5F8D0_DECL_
 
-#define _ALIAS_OSTREAM_Bytes_IMPL_
-std::ostream&
-taox11_print_Bytes (
-    std::ostream& strm ,
-    const ::Bytes& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Bytes& _v)
 {
-  return taox11_print_Bytes (strm, _v);
+  strm << "std::array< uint8_t, 64 >";
+  return taox11_array_printer<0U,
+                              ::Bytes::value_type,
+                              64>::p (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_765CC766CD2500C237586E8ED6B5F8D0_DECL_
@@ -1697,6 +1695,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_IFBGBEHE_INCLUDED__
+#endif // __RIDL_TESTC_H_HJFEBGEJ_INCLUDED__
 
 // -*- END -*-
