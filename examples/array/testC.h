@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FEJFGGDE_INCLUDED__
-#define __RIDL_TESTC_H_FEJFGGDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_EEIEEICA_INCLUDED__
+#define __RIDL_TESTC_H_EEIEEICA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -262,6 +262,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_FEJFGGDE_INCLUDED__
+#endif // __RIDL_TESTC_H_EEIEEICA_INCLUDED__
 
 // -*- END -*-

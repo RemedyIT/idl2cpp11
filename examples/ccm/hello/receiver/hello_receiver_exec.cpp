@@ -1,4 +1,4 @@
-/*!
+/**
  * @file   hello_receiver_exec.cpp
  * @author
  *
