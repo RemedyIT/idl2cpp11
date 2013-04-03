@@ -1,0 +1,20 @@
+/**
+ * @file   test.idl
+ * @author
+ *
+ * @brief  DDS Shapes example
+ *
+ * @copyright Copyright (c) Remedy IT Expertise BV
+ * Chamber of commerce Rotterdam nr.276339, The Netherlands
+ */
+
+#pragma DCPS_DATA_TYPE "ShapeType"
+#pragma DCPS_DATA_KEY "ShapeType color"
+
+struct ShapeType {
+  string color;
+  long x;
+  long y;
+  long shapesize;
+};
+
