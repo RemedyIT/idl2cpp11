@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDJAJGAA_INCLUDED__
-#define __RIDL_TESTC_H_BDJAJGAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BDADGIDI_INCLUDED__
+#define __RIDL_TESTC_H_BDADGIDI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -25,7 +25,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
-class ShapeType final
+class ShapeType
 {
 public:
 
@@ -68,7 +68,7 @@ private:
 };// ShapeType
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
-class Attributes final
+class Attributes
 {
 public:
 
@@ -337,6 +337,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BDJAJGAA_INCLUDED__
+#endif // __RIDL_TESTC_H_BDADGIDI_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BIJHGJBD_INCLUDED__
-#define __RIDL_TESTC_H_BIJHGJBD_INCLUDED__
+#ifndef __RIDL_TESTC_H_BBICDDDB_INCLUDED__
+#define __RIDL_TESTC_H_BBICDDDB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -30,7 +30,7 @@ namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class Property final
+  class Property
   {
   public:
 
@@ -66,7 +66,7 @@ namespace Deployment
   typedef std::vector < Property> Properties;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class Requirement final
+  class Requirement
   {
   public:
 
@@ -120,7 +120,7 @@ namespace Deployment
   };// SatisfierPropertyKind
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class SatisfierProperty final
+  class SatisfierProperty
   {
   public:
 
@@ -187,7 +187,7 @@ namespace Deployment
   };// CCMComponentPortKind
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ComponentPortDescription final
+  class ComponentPortDescription
   {
   public:
 
@@ -267,7 +267,7 @@ namespace Deployment
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ComponentPropertyDescription final
+  class ComponentPropertyDescription
   {
   public:
 
@@ -302,7 +302,7 @@ namespace Deployment
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ComponentInterfaceDescription final
+  class ComponentInterfaceDescription
   {
   public:
 
@@ -383,7 +383,7 @@ namespace Deployment
   };// ComponentInterfaceDescription
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class MonolithicDeploymentDescription final
+  class MonolithicDeploymentDescription
   {
   public:
 
@@ -450,7 +450,7 @@ namespace Deployment
   };// ResourceUsageKind
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class InstanceResourceDeploymentDescription final
+  class InstanceResourceDeploymentDescription
   {
   public:
 
@@ -499,7 +499,7 @@ namespace Deployment
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class InstanceDeploymentDescription final
+  class InstanceDeploymentDescription
   {
   public:
 
@@ -569,7 +569,7 @@ namespace Deployment
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ComponentExternalPortEndpoint final
+  class ComponentExternalPortEndpoint
   {
   public:
 
@@ -598,7 +598,7 @@ namespace Deployment
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class PlanSubcomponentPortEndpoint final
+  class PlanSubcomponentPortEndpoint
   {
   public:
 
@@ -645,7 +645,7 @@ namespace Deployment
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ExternalReferenceEndpoint final
+  class ExternalReferenceEndpoint
   {
   public:
 
@@ -694,7 +694,7 @@ namespace Deployment
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ConnectionResourceDeploymentDescription final
+  class ConnectionResourceDeploymentDescription
   {
   public:
 
@@ -744,7 +744,7 @@ namespace Deployment
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class PlanConnectionDescription final
+  class PlanConnectionDescription
   {
   public:
 
@@ -815,7 +815,7 @@ namespace Deployment
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class PlanSubcomponentPropertyReference final
+  class PlanSubcomponentPropertyReference
   {
   public:
 
@@ -850,7 +850,7 @@ namespace Deployment
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class PlanPropertyMapping final
+  class PlanPropertyMapping
   {
   public:
 
@@ -900,7 +900,7 @@ namespace Deployment
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ImplementationDependency final
+  class ImplementationDependency
   {
   public:
 
@@ -929,7 +929,7 @@ namespace Deployment
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ResourceDeploymentDescription final
+  class ResourceDeploymentDescription
   {
   public:
 
@@ -972,7 +972,7 @@ namespace Deployment
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ArtifactDeploymentDescription final
+  class ArtifactDeploymentDescription
   {
   public:
 
@@ -1051,7 +1051,7 @@ namespace Deployment
   };// PlanLocalityKind
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class PlanLocality final
+  class PlanLocality
   {
   public:
 
@@ -1086,7 +1086,7 @@ namespace Deployment
   typedef std::vector < PlanLocality> PlanLocalities;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class DeploymentPlan final
+  class DeploymentPlan
   {
   public:
 
@@ -1187,7 +1187,7 @@ namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ComponentPackageReference final
+  class ComponentPackageReference
   {
   public:
 
@@ -1234,7 +1234,7 @@ namespace Deployment
   typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class ImplementationRequirement final
+  class ImplementationRequirement
   {
   public:
 
@@ -1298,7 +1298,7 @@ namespace Deployment
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class Capability final
+  class Capability
   {
   public:
 
@@ -4618,6 +4618,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BIJHGJBD_INCLUDED__
+#endif // __RIDL_TESTC_H_BBICDDDB_INCLUDED__
 
 // -*- END -*-

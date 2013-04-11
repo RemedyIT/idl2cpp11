@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CHCCJBFB_INCLUDED__
-#define __RIDL_TESTC_H_CHCCJBFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_EBDFFIIH_INCLUDED__
+#define __RIDL_TESTC_H_EBDFFIIH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -74,8 +74,8 @@ namespace TAOX11_NAMESPACE
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::Example>>,
         public CORBA::valuetype_traits < ::Example>
     {
-      static constexpr bool abstract = false;
-      static constexpr bool truncatable = false;
+      typedef std::false_type is_abstract;
+      typedef std::false_type is_truncatable;
     };
   };
 };
@@ -241,7 +241,7 @@ namespace obv
 typedef std::array< uint8_t, 64 > Bytes;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
-class S final
+class S
 {
 public:
 
@@ -302,8 +302,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::A>>,
       public CORBA::object_traits < ::A>
     {
-      static constexpr bool local = false;
-      static constexpr bool abstract = false;
+      typedef std::false_type is_local;
+      typedef std::false_type is_abstract;
     };
   };
 };
@@ -379,8 +379,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::Val_init>>,
       public CORBA::object_traits < ::Val_init>
     {
-      static constexpr bool abstract = false;
-      static constexpr bool local = true;
+      typedef std::false_type is_abstract;
+      typedef std::true_type is_local;
     };
   };
 
@@ -419,8 +419,8 @@ namespace TAOX11_NAMESPACE
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::Val>>,
         public CORBA::valuetype_traits < ::Val>
     {
-      static constexpr bool abstract = false;
-      static constexpr bool truncatable = false;
+      typedef std::false_type is_abstract;
+      typedef std::false_type is_truncatable;
     };
   };
 };
@@ -764,8 +764,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::X>>,
       public CORBA::object_traits < ::X>
     {
-      static constexpr bool local = false;
-      static constexpr bool abstract = false;
+      typedef std::false_type is_local;
+      typedef std::false_type is_abstract;
     };
   };
 };
@@ -913,7 +913,7 @@ namespace TAOX11_NAMESPACE
 };
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
-class ColorValue2 final
+class ColorValue2
 {
 public:
 
@@ -974,8 +974,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::A1>>,
       public CORBA::object_traits < ::A1>
     {
-      static constexpr bool local = false;
-      static constexpr bool abstract = false;
+      typedef std::false_type is_local;
+      typedef std::false_type is_abstract;
     };
   };
 };
@@ -1064,8 +1064,8 @@ namespace TAOX11_NAMESPACE
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::B>>,
         public CORBA::valuetype_traits < ::B>
     {
-      static constexpr bool abstract = false;
-      static constexpr bool truncatable = false;
+      typedef std::false_type is_abstract;
+      typedef std::false_type is_truncatable;
     };
   };
 };
@@ -1217,8 +1217,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::V_init>>,
       public CORBA::object_traits < ::V_init>
     {
-      static constexpr bool abstract = false;
-      static constexpr bool local = true;
+      typedef std::false_type is_abstract;
+      typedef std::true_type is_local;
     };
   };
 
@@ -1257,8 +1257,8 @@ namespace TAOX11_NAMESPACE
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::V>>,
         public CORBA::valuetype_traits < ::V>
     {
-      static constexpr bool abstract = false;
-      static constexpr bool truncatable = false;
+      typedef std::false_type is_abstract;
+      typedef std::false_type is_truncatable;
     };
   };
 };
@@ -1695,6 +1695,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_CHCCJBFB_INCLUDED__
+#endif // __RIDL_TESTC_H_EBDFFIIH_INCLUDED__
 
 // -*- END -*-

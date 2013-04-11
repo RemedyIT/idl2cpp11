@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BCAABDII_INCLUDED__
-#define __RIDL_TESTC_H_BCAABDII_INCLUDED__
+#ifndef __RIDL_TESTC_H_CAHEDJEA_INCLUDED__
+#define __RIDL_TESTC_H_CAHEDJEA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -29,7 +29,7 @@ using namespace TAOX11_NAMESPACE;
 typedef std::vector < uint8_t> octetseq;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
-class RadarTrack final
+class RadarTrack
 {
 public:
 
@@ -236,6 +236,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BCAABDII_INCLUDED__
+#endif // __RIDL_TESTC_H_CAHEDJEA_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HDAGFGJA_INCLUDED__
-#define __RIDL_TESTC_H_HDAGFGJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_ICDGEGGA_INCLUDED__
+#define __RIDL_TESTC_H_ICDGEGGA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -29,7 +29,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class Variable final
+  class Variable
   {
   public:
 
@@ -94,8 +94,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::Test::Bar>>,
       public CORBA::object_traits < ::Test::Bar>
     {
-      static constexpr bool local = false;
-      static constexpr bool abstract = false;
+      typedef std::false_type is_local;
+      typedef std::false_type is_abstract;
     };
   };
 };
@@ -143,7 +143,7 @@ namespace Test
   }; // Bar
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
-  class Simple final
+  class Simple
   {
   public:
 
@@ -251,8 +251,8 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::Test::Foo>>,
       public CORBA::object_traits < ::Test::Foo>
     {
-      static constexpr bool local = false;
-      static constexpr bool abstract = false;
+      typedef std::false_type is_local;
+      typedef std::false_type is_abstract;
     };
   };
 };
@@ -539,6 +539,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_HDAGFGJA_INCLUDED__
+#endif // __RIDL_TESTC_H_ICDGEGGA_INCLUDED__
 
 // -*- END -*-
