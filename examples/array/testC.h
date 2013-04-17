@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DJAEAGBG_INCLUDED__
-#define __RIDL_TESTC_H_DJAEAGBG_INCLUDED__
+#ifndef __RIDL_TESTC_H_GJJFIIGF_INCLUDED__
+#define __RIDL_TESTC_H_GJJFIIGF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -135,8 +135,10 @@ namespace Test
 
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/array_idl_traits.erb
     // Unaliased type : std::array< float, 10 >
@@ -148,8 +150,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::F>
       : IDL::common_traits< ::Test::F>
     {
-      typedef IDL::traits< float>  element_traits;
-      static constexpr uint32_t dimensions = 1;
+      typedef IDL::traits< float> element_traits;
+      typedef std::integral_constant<uint32_t, 1> dimensions;
     };
 
 #endif
@@ -164,8 +166,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::V>
       : IDL::common_traits< ::Test::V>
     {
-      typedef IDL::traits< std::string>  element_traits;
-      static constexpr uint32_t dimensions = 1;
+      typedef IDL::traits< std::string> element_traits;
+      typedef std::integral_constant<uint32_t, 1> dimensions;
     };
 
 #endif
@@ -180,8 +182,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::M>
       : IDL::common_traits< ::Test::M>
     {
-      typedef IDL::traits< std::string>  element_traits;
-      static constexpr uint32_t dimensions = 3;
+      typedef IDL::traits< std::string> element_traits;
+      typedef std::integral_constant<uint32_t, 3> dimensions;
     };
 
 #endif
@@ -262,6 +264,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_DJAEAGBG_INCLUDED__
+#endif // __RIDL_TESTC_H_GJJFIIGF_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFAEJFAJ_INCLUDED__
-#define __RIDL_TESTC_H_BFAEJFAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_EJJBIICH_INCLUDED__
+#define __RIDL_TESTC_H_EJJBIICH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -199,8 +199,10 @@ namespace Test
 
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_TEST_FOOEX_TRAITS_)
@@ -315,6 +317,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BFAEJFAJ_INCLUDED__
+#endif // __RIDL_TESTC_H_EJJBIICH_INCLUDED__
 
 // -*- END -*-

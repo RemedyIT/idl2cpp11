@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BBICDDDB_INCLUDED__
-#define __RIDL_TESTC_H_BBICDDDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_BJEIFBDI_INCLUDED__
+#define __RIDL_TESTC_H_BJEIFBDI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1343,8 +1343,10 @@ namespace Deployment
 
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_PROPERTY_TRAITS_)
@@ -1366,7 +1368,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::Properties>
       : IDL::common_traits< ::Deployment::Properties>
     {
-      typedef IDL::traits< ::Deployment::Property>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::Property> element_traits;
     };
 
 #endif
@@ -1391,7 +1394,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::Requirements>
       : IDL::common_traits< ::Deployment::Requirements>
     {
-      typedef IDL::traits< ::Deployment::Requirement>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::Requirement> element_traits;
     };
 
 #endif
@@ -1423,7 +1427,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::SatisfierProperties>
       : IDL::common_traits< ::Deployment::SatisfierProperties>
     {
-      typedef IDL::traits< ::Deployment::SatisfierProperty>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::SatisfierProperty> element_traits;
     };
 
 #endif
@@ -1455,7 +1460,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ComponentPortDescriptions>
       : IDL::common_traits< ::Deployment::ComponentPortDescriptions>
     {
-      typedef IDL::traits< ::Deployment::ComponentPortDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ComponentPortDescription> element_traits;
     };
 
 #endif
@@ -1480,7 +1486,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ComponentPropertyDescriptions>
       : IDL::common_traits< ::Deployment::ComponentPropertyDescriptions>
     {
-      typedef IDL::traits< ::Deployment::ComponentPropertyDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ComponentPropertyDescription> element_traits;
     };
 
 #endif
@@ -1515,7 +1522,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::MonolithicDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::MonolithicDeploymentDescriptions>
     {
-      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription> element_traits;
     };
 
 #endif
@@ -1547,7 +1555,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::InstanceResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
     {
-      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription> element_traits;
     };
 
 #endif
@@ -1572,7 +1581,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::InstanceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::InstanceDeploymentDescriptions>
     {
-      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription> element_traits;
     };
 
 #endif
@@ -1597,7 +1607,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ComponentExternalPortEndpoints>
       : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoints>
     {
-      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint> element_traits;
     };
 
 #endif
@@ -1622,7 +1633,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::PlanSubcomponentPortEndpoints>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoints>
     {
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint> element_traits;
     };
 
 #endif
@@ -1647,7 +1659,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ExternalReferenceEndpoints>
       : IDL::common_traits< ::Deployment::ExternalReferenceEndpoints>
     {
-      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint> element_traits;
     };
 
 #endif
@@ -1672,7 +1685,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
     {
-      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription> element_traits;
     };
 
 #endif
@@ -1697,7 +1711,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::PlanConnectionDescriptions>
       : IDL::common_traits< ::Deployment::PlanConnectionDescriptions>
     {
-      typedef IDL::traits< ::Deployment::PlanConnectionDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::PlanConnectionDescription> element_traits;
     };
 
 #endif
@@ -1722,7 +1737,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::PlanSubcomponentPropertyReferences>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReferences>
     {
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference> element_traits;
     };
 
 #endif
@@ -1747,7 +1763,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::PlanPropertyMappings>
       : IDL::common_traits< ::Deployment::PlanPropertyMappings>
     {
-      typedef IDL::traits< ::Deployment::PlanPropertyMapping>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::PlanPropertyMapping> element_traits;
     };
 
 #endif
@@ -1772,7 +1789,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ImplementationDependencies>
       : IDL::common_traits< ::Deployment::ImplementationDependencies>
     {
-      typedef IDL::traits< ::Deployment::ImplementationDependency>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ImplementationDependency> element_traits;
     };
 
 #endif
@@ -1797,7 +1815,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ResourceDeploymentDescriptions>
     {
-      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription> element_traits;
     };
 
 #endif
@@ -1822,7 +1841,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ArtifactDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ArtifactDeploymentDescriptions>
     {
-      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription> element_traits;
     };
 
 #endif
@@ -1854,7 +1874,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::PlanLocalities>
       : IDL::common_traits< ::Deployment::PlanLocalities>
     {
-      typedef IDL::traits< ::Deployment::PlanLocality>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::PlanLocality> element_traits;
     };
 
 #endif
@@ -1889,7 +1910,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ComponentPackageReferences>
       : IDL::common_traits< ::Deployment::ComponentPackageReferences>
     {
-      typedef IDL::traits< ::Deployment::ComponentPackageReference>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ComponentPackageReference> element_traits;
     };
 
 #endif
@@ -1904,7 +1926,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ResourceUsageKinds>
       : IDL::common_traits< ::Deployment::ResourceUsageKinds>
     {
-      typedef IDL::traits< ::Deployment::ResourceUsageKind>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ResourceUsageKind> element_traits;
     };
 
 #endif
@@ -1929,7 +1952,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::ImplementationRequirements>
       : IDL::common_traits< ::Deployment::ImplementationRequirements>
     {
-      typedef IDL::traits< ::Deployment::ImplementationRequirement>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::ImplementationRequirement> element_traits;
     };
 
 #endif
@@ -1954,7 +1978,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Deployment::Capabilities>
       : IDL::common_traits< ::Deployment::Capabilities>
     {
-      typedef IDL::traits< ::Deployment::Capability>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Deployment::Capability> element_traits;
     };
 
 #endif
@@ -4618,6 +4643,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BBICDDDB_INCLUDED__
+#endif // __RIDL_TESTC_H_BJEIFBDI_INCLUDED__
 
 // -*- END -*-

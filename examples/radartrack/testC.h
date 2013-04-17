@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CAHEDJEA_INCLUDED__
-#define __RIDL_TESTC_H_CAHEDJEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHEBDBBB_INCLUDED__
+#define __RIDL_TESTC_H_GHEBDBBB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -79,8 +79,10 @@ private:
 };// RadarTrack
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
     // Unaliased type : std::vector < uint8_t>
@@ -92,7 +94,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::octetseq>
       : IDL::common_traits< ::octetseq>
     {
-      typedef IDL::traits< uint8_t>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< uint8_t> element_traits;
     };
 
 #endif
@@ -236,6 +239,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_CAHEDJEA_INCLUDED__
+#endif // __RIDL_TESTC_H_GHEBDBBB_INCLUDED__
 
 // -*- END -*-

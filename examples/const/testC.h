@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JGGECGBB_INCLUDED__
-#define __RIDL_TESTC_H_JGGECGBB_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBAJACAA_INCLUDED__
+#define __RIDL_TESTC_H_IBAJACAA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -20,6 +20,7 @@
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/bounded_string_t.h"
+#include "tao/x11/bounded_type_traits_t.h"
 #include "tao/x11/object.h"
 #include "tao/x11/corba_ostream.h"
 
@@ -175,8 +176,10 @@ private:
 }; // A
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/string_idl_traits.erb
     // Unaliased type : TAOX11_IDL::bounded_basic_string<char, 30>
@@ -189,7 +192,8 @@ namespace TAOX11_NAMESPACE {
       : IDL::common_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
       , IDL::bounded_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
     {
-      typedef IDL::traits<char>  element_traits;
+      typedef std::true_type is_bounded;
+      typedef IDL::traits<char> element_traits;
     };
 
 #endif
@@ -216,6 +220,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_JGGECGBB_INCLUDED__
+#endif // __RIDL_TESTC_H_IBAJACAA_INCLUDED__
 
 // -*- END -*-

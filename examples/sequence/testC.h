@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BBGHGFFA_INCLUDED__
-#define __RIDL_TESTC_H_BBGHGFFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_CFCADEGE_INCLUDED__
+#define __RIDL_TESTC_H_CFCADEGE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -21,6 +21,7 @@
 #include "tao/x11/orb.h"
 #include "tao/x11/sequence_os_t.h"
 #include "tao/x11/bounded_vector_t.h"
+#include "tao/x11/bounded_type_traits_t.h"
 #include "tao/x11/object.h"
 #include "tao/x11/corba_ostream.h"
 
@@ -221,8 +222,10 @@ namespace Test
 
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
@@ -244,7 +247,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::SimpleSeq>
       : IDL::common_traits< ::Test::SimpleSeq>
     {
-      typedef IDL::traits< ::Test::Simple>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::Test::Simple> element_traits;
     };
 
 #endif
@@ -259,7 +263,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::LongSeq>
       : IDL::common_traits< ::Test::LongSeq>
     {
-      typedef IDL::traits< int32_t>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< int32_t> element_traits;
     };
 
 #endif
@@ -275,7 +280,8 @@ namespace TAOX11_NAMESPACE {
       : IDL::common_traits< ::Test::BoundedLongSeq>
       , IDL::bounded_traits< ::Test::BoundedLongSeq>
     {
-      typedef IDL::traits< int32_t>  element_traits;
+      typedef std::true_type is_bounded;
+      typedef IDL::traits< int32_t> element_traits;
     };
 
 #endif
@@ -290,7 +296,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::BoolSeq>
       : IDL::common_traits< ::Test::BoolSeq>
     {
-      typedef IDL::traits< bool>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< bool> element_traits;
     };
 
 #endif
@@ -305,7 +312,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Test::StringSeq>
       : IDL::common_traits< ::Test::StringSeq>
     {
-      typedef IDL::traits< std::string>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< std::string> element_traits;
     };
 
 #endif
@@ -537,6 +545,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BBGHGFFA_INCLUDED__
+#endif // __RIDL_TESTC_H_CFCADEGE_INCLUDED__
 
 // -*- END -*-

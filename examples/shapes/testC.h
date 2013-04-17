@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDADGIDI_INCLUDED__
-#define __RIDL_TESTC_H_BDADGIDI_INCLUDED__
+#ifndef __RIDL_TESTC_H_GGIFHJAA_INCLUDED__
+#define __RIDL_TESTC_H_GGIFHJAA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -110,8 +110,10 @@ private:
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_SHAPETYPE_TRAITS_)
@@ -143,7 +145,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::ShapeTypeSeq>
       : IDL::common_traits< ::ShapeTypeSeq>
     {
-      typedef IDL::traits< ::ShapeType>  element_traits;
+      typedef std::false_type is_bounded;
+      typedef IDL::traits< ::ShapeType> element_traits;
     };
 
 #endif
@@ -337,6 +340,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BDADGIDI_INCLUDED__
+#endif // __RIDL_TESTC_H_GGIFHJAA_INCLUDED__
 
 // -*- END -*-

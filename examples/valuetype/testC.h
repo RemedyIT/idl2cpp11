@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EBDFFIIH_INCLUDED__
-#define __RIDL_TESTC_H_EBDFFIIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_GAJHADGI_INCLUDED__
+#define __RIDL_TESTC_H_GAJHADGI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1385,8 +1385,10 @@ protected:
 }; // V_init
 
 // generated from StubHeaderTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace IDL {
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
 
     // generated from c++11/templates/cli/hdr/array_idl_traits.erb
     // Unaliased type : std::array< uint8_t, 64 >
@@ -1398,8 +1400,8 @@ namespace TAOX11_NAMESPACE {
     struct traits < ::Bytes>
       : IDL::common_traits< ::Bytes>
     {
-      typedef IDL::traits< uint8_t>  element_traits;
-      static constexpr uint32_t dimensions = 1;
+      typedef IDL::traits< uint8_t> element_traits;
+      typedef std::integral_constant<uint32_t, 1> dimensions;
     };
 
 #endif
@@ -1695,6 +1697,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_EBDFFIIH_INCLUDED__
+#endif // __RIDL_TESTC_H_GAJHADGI_INCLUDED__
 
 // -*- END -*-
