@@ -36,4 +36,6 @@ module Test
 interface A
 {
   const float pi = 3.14159;
+  typedef fixed<10,3> fixed_type;
+  const fixed_type pi2 = 3.14159;
 };

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBAJACAA_INCLUDED__
-#define __RIDL_TESTC_H_IBAJACAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_ICFDHADD_INCLUDED__
+#define __RIDL_TESTC_H_ICFDHADD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -22,6 +22,7 @@
 #include "tao/x11/bounded_string_t.h"
 #include "tao/x11/bounded_type_traits_t.h"
 #include "tao/x11/object.h"
+#include "tao/x11/fixed_t.h"
 #include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
@@ -155,6 +156,13 @@ public:
   // generated from StubHeaderWriter#visit_const
   static constexpr float pi = 3.14159;
 
+  // generated from c++11/templates/cli/hdr/typedef.erb
+
+  typedef TAOX11_IDL::Fixed <10, 3> fixed_type;
+
+  // generated from StubHeaderWriter#visit_const
+  static constexpr fixed_type pi2 = 3.14159;
+
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
   typedef std::shared_ptr<A>   _shared_ptr_type;
@@ -220,6 +228,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_IBAJACAA_INCLUDED__
+#endif // __RIDL_TESTC_H_ICFDHADD_INCLUDED__
 
 // -*- END -*-
