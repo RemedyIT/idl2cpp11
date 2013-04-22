@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BJEIFBDI_INCLUDED__
-#define __RIDL_TESTC_H_BJEIFBDI_INCLUDED__
+#ifndef __RIDL_TESTC_H_EACCFBHE_INCLUDED__
+#define __RIDL_TESTC_H_EACCFBHE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -62,7 +62,6 @@ namespace Deployment
   };// Property
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < Property> Properties;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -105,7 +104,6 @@ namespace Deployment
   };// Requirement
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < Requirement> Requirements;
 
   // generated from c++11/templates/cli/hdr/enum.erb
@@ -164,7 +162,6 @@ namespace Deployment
   };// SatisfierProperty
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < SatisfierProperty> SatisfierProperties;
 }; // namespace Deployment
 
@@ -263,7 +260,6 @@ namespace Deployment
   };// ComponentPortDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -298,7 +294,6 @@ namespace Deployment
   };// ComponentPropertyDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -436,7 +431,6 @@ namespace Deployment
   };// MonolithicDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/enum.erb
@@ -495,7 +489,6 @@ namespace Deployment
   };// InstanceResourceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -565,7 +558,6 @@ namespace Deployment
   };// InstanceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -594,7 +586,6 @@ namespace Deployment
   };// ComponentExternalPortEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -641,7 +632,6 @@ namespace Deployment
   };// PlanSubcomponentPortEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -690,7 +680,6 @@ namespace Deployment
   };// ExternalReferenceEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -740,7 +729,6 @@ namespace Deployment
   };// ConnectionResourceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -811,7 +799,6 @@ namespace Deployment
   };// PlanConnectionDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -846,7 +833,6 @@ namespace Deployment
   };// PlanSubcomponentPropertyReference
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -896,7 +882,6 @@ namespace Deployment
   };// PlanPropertyMapping
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -925,7 +910,6 @@ namespace Deployment
   };// ImplementationDependency
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -968,7 +952,6 @@ namespace Deployment
   };// ResourceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -1039,7 +1022,6 @@ namespace Deployment
   };// ArtifactDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/enum.erb
@@ -1082,7 +1064,6 @@ namespace Deployment
   };// PlanLocality
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < PlanLocality> PlanLocalities;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -1226,11 +1207,9 @@ namespace Deployment
   };// ComponentPackageReference
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -1294,7 +1273,6 @@ namespace Deployment
   };// ImplementationRequirement
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -1337,7 +1315,6 @@ namespace Deployment
   };// Capability
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < Capability> Capabilities;
 }; // namespace Deployment
 
@@ -4643,6 +4620,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BJEIFBDI_INCLUDED__
+#endif // __RIDL_TESTC_H_EACCFBHE_INCLUDED__
 
 // -*- END -*-

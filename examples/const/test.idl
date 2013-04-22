@@ -1,6 +1,6 @@
 /*!
  * @file   test.idl
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  CORBA C++11 test idl
  *
@@ -31,11 +31,11 @@ module Test
   const TCounter count = 99;
   const TName name = "wilco";
   const TCounter double_count = count * 2;
+  typedef fixed<10,3> fixed_type;
+  const fixed_type pi2 = 3.14159;
 };
 
 interface A
 {
   const float pi = 3.14159;
-  typedef fixed<10,3> fixed_type;
-  const fixed_type pi2 = 3.14159;
 };

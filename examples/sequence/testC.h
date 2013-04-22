@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CFCADEGE_INCLUDED__
-#define __RIDL_TESTC_H_CFCADEGE_INCLUDED__
+#ifndef __RIDL_TESTC_H_JCGFJDDH_INCLUDED__
+#define __RIDL_TESTC_H_JCGFJDDH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -87,23 +87,18 @@ namespace Test
   };// Simple
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < Simple> SimpleSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < int32_t> LongSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef TAOX11_IDL::bounded_vector < int32_t, 50> BoundedLongSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < bool> BoolSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef std::vector < std::string> StringSeq;
 
   // generated from StubHeaderWriter#enter_interface
@@ -545,6 +540,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_CFCADEGE_INCLUDED__
+#endif // __RIDL_TESTC_H_JCGFJDDH_INCLUDED__
 
 // -*- END -*-

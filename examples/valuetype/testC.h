@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GAJHADGI_INCLUDED__
-#define __RIDL_TESTC_H_GAJHADGI_INCLUDED__
+#ifndef __RIDL_TESTC_H_FFBHBDHH_INCLUDED__
+#define __RIDL_TESTC_H_FFBHBDHH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -237,7 +237,6 @@ namespace obv
 }; // obv
 
 // generated from c++11/templates/cli/hdr/typedef.erb
-
 typedef std::array< uint8_t, 64 > Bytes;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -1697,6 +1696,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_GAJHADGI_INCLUDED__
+#endif // __RIDL_TESTC_H_FFBHBDHH_INCLUDED__
 
 // -*- END -*-

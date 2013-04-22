@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ICFDHADD_INCLUDED__
-#define __RIDL_TESTC_H_ICFDHADD_INCLUDED__
+#ifndef __RIDL_TESTC_H_HHAFEFGE_INCLUDED__
+#define __RIDL_TESTC_H_HHAFEFGE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -21,8 +21,8 @@
 #include "tao/x11/orb.h"
 #include "tao/x11/bounded_string_t.h"
 #include "tao/x11/bounded_type_traits_t.h"
-#include "tao/x11/object.h"
 #include "tao/x11/fixed_t.h"
+#include "tao/x11/object.h"
 #include "tao/x11/corba_ostream.h"
 
 using namespace TAOX11_NAMESPACE;
@@ -77,11 +77,9 @@ namespace Test
   const std::wstring ws_val = L"widestring\n \xbf \xfe0e";
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef int32_t TCounter;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-
   typedef TAOX11_IDL::bounded_basic_string<char, 30> TName;
 
   // generated from StubHeaderWriter#visit_const
@@ -92,6 +90,12 @@ namespace Test
 
   // generated from StubHeaderWriter#visit_const
   constexpr TCounter double_count = (::Test::count * 2);
+
+  // generated from c++11/templates/cli/hdr/typedef.erb
+  typedef TAOX11_IDL::Fixed <10, 3> fixed_type;
+
+  // generated from StubHeaderWriter#visit_const
+  const fixed_type pi2;
 }; // namespace Test
 
 
@@ -156,13 +160,6 @@ public:
   // generated from StubHeaderWriter#visit_const
   static constexpr float pi = 3.14159;
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
-
-  typedef TAOX11_IDL::Fixed <10, 3> fixed_type;
-
-  // generated from StubHeaderWriter#visit_const
-  static constexpr fixed_type pi2 = 3.14159;
-
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
   typedef std::shared_ptr<A>   _shared_ptr_type;
@@ -205,6 +202,22 @@ namespace TAOX11_NAMESPACE
     };
 
 #endif
+
+    // generated from c++11/templates/cli/hdr/fixed_idl_traits.erb
+    // Unaliased type : TAOX11_IDL::Fixed <10, 3>
+    // MD5            : 088F017398EF128A378BD61C927CEAD5
+#if !defined(_ALIAS_088F017398EF128A378BD61C927CEAD5_TRAITS_DECL_)
+#define _ALIAS_088F017398EF128A378BD61C927CEAD5_TRAITS_DECL_
+
+    template<>
+    struct traits < TAOX11_IDL::Fixed <10, 3>>
+      : IDL::common_traits< TAOX11_IDL::Fixed <10, 3>>
+    {
+      typedef std::integral_constant< uint16_t, 10 > digits;
+      typedef std::integral_constant< uint16_t, 3 > scale;
+    };
+
+#endif
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -215,6 +228,23 @@ namespace std {
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 }; // std
+
+// generated from c++11/templates/cli/hdr/fixed_os.erb
+// Unaliased type : TAOX11_IDL::Fixed <10, 3>
+// MD5            : 088F017398EF128A378BD61C927CEAD5
+#if !defined (_ALIAS_OSTREAM_088F017398EF128A378BD61C927CEAD5_DECL_)
+#define _ALIAS_OSTREAM_088F017398EF128A378BD61C927CEAD5_DECL_
+
+inline std::ostream& operator<< (
+    std::ostream& strm,
+    const TAOX11_IDL::Fixed <10, 3>& _f)
+{
+  strm << "IDL::Fixed <10, 3> "
+    << _f.to_string ();
+  return strm;
+}
+
+#endif // _ALIAS_OSTREAM_088F017398EF128A378BD61C927CEAD5_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 std::ostream& operator<< (
@@ -228,6 +258,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_ICFDHADD_INCLUDED__
+#endif // __RIDL_TESTC_H_HHAFEFGE_INCLUDED__
 
 // -*- END -*-

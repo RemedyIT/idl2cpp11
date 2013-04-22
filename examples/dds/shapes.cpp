@@ -31,7 +31,7 @@ int main (int, char*[])
                                 OpenDDS::DCPS::DEFAULT_STATUS_MASK);
 
       DDS::TopicQos topic_qos;
-      std::string topic_name = "SQUARE";
+      std::string topic_name ("SQUARE");
 
       // Get the default QOS
       participant->get_default_topic_qos(topic_qos);

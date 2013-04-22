@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GHEBDBBB_INCLUDED__
-#define __RIDL_TESTC_H_GHEBDBBB_INCLUDED__
+#ifndef __RIDL_TESTC_H_GECHGEEG_INCLUDED__
+#define __RIDL_TESTC_H_GECHGEEG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -25,7 +25,6 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/typedef.erb
-
 typedef std::vector < uint8_t> octetseq;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -239,6 +238,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_GHEBDBBB_INCLUDED__
+#endif // __RIDL_TESTC_H_GECHGEEG_INCLUDED__
 
 // -*- END -*-
