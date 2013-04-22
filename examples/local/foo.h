@@ -10,7 +10,7 @@
 
 #include "testC.h"
 
-class Foo_impl : public virtual Test::Foo
+class Foo_impl : public virtual IDL::traits<Test::Foo>::base_type
 {
 public:
   virtual void do_something (void) override;

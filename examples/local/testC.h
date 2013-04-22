@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFCGJAAA_INCLUDED__
-#define __RIDL_TESTC_H_BFCGJAAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BIBFEFFA_INCLUDED__
+#define __RIDL_TESTC_H_BIBFEFFA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -107,6 +107,86 @@ namespace Test
     Foo& operator= (const Foo&) = delete;
     Foo& operator= (Foo&&) = delete;
   }; // Foo
+
+  // generated from StubHeaderWriter#enter_interface
+
+  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+#if !defined (_INTF_TEST_BAR_FWD_)
+#define _INTF_TEST_BAR_FWD_
+  class Bar;
+#endif // !_INTF_TEST_BAR_FWD_
+  // generated from CxxWriterBase#at_global_scope
+}; // Test
+// entering CxxWriterBase#at_global_scope
+
+// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+#if !defined (_INTF_TEST_BAR_TRAITS_DECL_)
+#define _INTF_TEST_BAR_TRAITS_DECL_
+namespace TAOX11_NAMESPACE
+{
+  namespace CORBA
+  {
+    template<>
+    object_traits< ::Test::Bar>::shared_ptr_type
+    object_traits< ::Test::Bar>::lock_shared (
+        ::Test::Bar* p);
+  };
+
+  namespace IDL
+  {
+    template<>
+    struct traits < ::Test::Bar> :
+      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Bar>>,
+      public CORBA::object_traits < ::Test::Bar>
+    {
+      typedef std::true_type is_local;
+      typedef std::false_type is_abstract;
+
+      typedef ::Test::Bar base_type;
+    };
+  };
+};
+#endif // !_INTF_TEST_BAR_TRAITS_DECL_
+
+// leaving CxxWriterBase#at_global_scope
+namespace Test
+{
+
+  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  class Bar
+    : public virtual TAOX11_NAMESPACE::CORBA::LocalObject
+  {
+  public:
+    template <typename T> friend struct TAOX11_CORBA::object_traits;
+
+    /// @name Member types
+    //@{
+    typedef TAOX11_IDL::traits< Bar>           _traits_type;
+    typedef TAOX11_IDL::traits< Bar>::ref_type _ref_type;
+    //@}
+
+    virtual bool _is_a (const std::string& local_type_id) override;
+
+    // generated from c++11/templates/cli/hdr/operation.erb
+    /// @copybrief Test::Bar::do_foo
+    virtual void do_foo (TAOX11_IDL::traits< ::Test::Foo>::ref_type f) = 0;
+
+    // generated from c++11/templates/cli/hdr/interface_post.erb
+  protected:
+    typedef std::shared_ptr<Bar>   _shared_ptr_type;
+
+    Bar ();
+    ~Bar () = default;
+
+    /// Returns a strong client reference for the local object you are calling
+    TAOX11_IDL::traits< ::Test::Bar>::ref_type _this ();
+
+  private:
+    Bar (const Bar&) = delete;
+    Bar (Bar&&) = delete;
+    Bar& operator= (const Bar&) = delete;
+    Bar& operator= (Bar&&) = delete;
+  }; // Bar
 }; // namespace Test
 
 
@@ -131,6 +211,11 @@ std::ostream& operator<< (
     std::ostream& strm,
     TAOX11_IDL::traits< ::Test::Foo>::ref_type);
 
+// generated from c++11/templates/cli/hdr/interface_os.erb
+std::ostream& operator<< (
+    std::ostream& strm,
+    TAOX11_IDL::traits< ::Test::Bar>::ref_type);
+
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -138,6 +223,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_BFCGJAAA_INCLUDED__
+#endif // __RIDL_TESTC_H_BIBFEFFA_INCLUDED__
 
 // -*- END -*-

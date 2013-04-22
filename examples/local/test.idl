@@ -15,4 +15,9 @@ module Test
   {
     void do_something ();
   };
+
+  local interface Bar
+  {
+    void do_foo (in Foo f);
+  };
 };
