@@ -1,6 +1,6 @@
 /**
  * @file   shapes.cpp
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  Shapes DataWriter example using the IDL to C++11
  *         language mapping

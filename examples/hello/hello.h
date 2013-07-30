@@ -1,6 +1,6 @@
 /*!
  * @file   hello.h
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  CORBA C++11 client application
  *

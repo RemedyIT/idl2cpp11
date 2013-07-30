@@ -1,6 +1,6 @@
 /*!
  * @file   foo.cpp
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  CORBA C++11
  *

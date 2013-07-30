@@ -1,6 +1,6 @@
 /*!
  * @file   client.cpp
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  C++11 client application
  *

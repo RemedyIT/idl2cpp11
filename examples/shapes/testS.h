@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_GDJABJHC_INCLUDED__
-#define __RIDL_TESTS_H_GDJABJHC_INCLUDED__
+#ifndef __RIDL_TESTS_H_EHABBEEC_INCLUDED__
+#define __RIDL_TESTS_H_EHABBEEC_INCLUDED__
 
 #include "testC.h"
 
@@ -20,12 +20,18 @@
 #include "tao/x11/portable_server/servantbase.h"
 
 
+#include "tao/x11/versionx11.h"
+
+#if TAOX11_MAJOR_VERSION != 0 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 1
+#error This file was generated with another TAOX11 version (0.6.1). Please re-generate.
+#endif
+
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#endif // __RIDL_TESTS_H_GDJABJHC_INCLUDED__
+#endif // __RIDL_TESTS_H_EHABBEEC_INCLUDED__
 
 // -*- END -*-

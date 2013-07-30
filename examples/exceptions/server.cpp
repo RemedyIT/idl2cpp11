@@ -1,6 +1,6 @@
 /*!
  * @file   server.cpp
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands

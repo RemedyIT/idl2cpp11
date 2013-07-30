@@ -1,6 +1,6 @@
 /*!
  * @file   hello_sender_exec.cpp
- * @author
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  CIAO C++11 hello sender component
  *
