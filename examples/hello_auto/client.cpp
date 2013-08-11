@@ -15,37 +15,18 @@ int main(int argc, char* argv[])
 {
   try
     {
-      auto _orb = CORBA::ORB_init (argc, argv);
-
-      if (!_orb)
-      {
-        std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned nil ORB." << std::endl;
-        return 1;
-      }
-
-      auto obj = _orb->string_to_object ("file://test.ior");
-
-      if (obj == nullptr)
-      {
-        std::cerr << "ERROR: string_to_object(<ior>) returned nil reference." << std::endl;
-        return 1;
-      }
+      auto orb = CORBA::ORB_init (argc, argv);
+      auto obj = orb->string_to_object ("file://test.ior");
 
       std::cout << "retrieved object reference" << std::endl;
 
       auto hello = IDL::traits<Test::Hello>::narrow (obj);
 
-      if (!hello)
-      {
-        std::cerr << "ERROR: IDL::traits<Test::Hello>::narrow (obj) returned nil object." << std::endl;
-        return 1;
-      }
-
       std::cout << "narrowed Hello interface" << std::endl;
 
       std::cout << "hello->get_string () returned " << hello->get_string () << std::endl;
 
-      std::cout << "shutting down...";
+      std::cout << "shutting down the server...";
 
       hello->shutdown ();
 
