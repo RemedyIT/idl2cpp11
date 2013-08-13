@@ -26,10 +26,6 @@ int main(int argc, char* argv[])
 
       std::cout << "hello->get_string () returned " << hello->get_string () << std::endl;
 
-      std::cout << "shutting down the server...";
-
-      hello->shutdown ();
-
       std::cout << std::endl;
     }
   catch (const std::exception& e)

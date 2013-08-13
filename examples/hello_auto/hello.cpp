@@ -19,9 +19,3 @@ Hello::get_string (void)
 {
   return "Hello there!";
 }
-
-void
-Hello::shutdown (void)
-{
-  this->orb_->shutdown (false);
-}

@@ -16,11 +16,5 @@ module Test
   {
     /// Return a simple string
     string get_string ();
-
-    /// A method to shutdown the ORB
-    /**
-     * This method is used to simplify the test shutdown process
-     */
-    oneway void shutdown ();
   };
 };
