@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HJGDIEAJ_INCLUDED__
-#define __RIDL_TESTC_H_HJGDIEAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_JGEFJIFA_INCLUDED__
+#define __RIDL_TESTC_H_JGEFJIFA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -113,8 +113,8 @@ protected:
   ~Example () = default;
   Example (const Example&) = default;
   Example (Example&&) = default;
-  void operator =(const Example&) = delete;
-  void operator =(Example&&) = delete;
+  Example& operator= (const Example&) = delete;
+  Example& operator= (Example&&) = delete;
 
   virtual const std::string& _obv_repository_id () const override;
   virtual void _obv_get_truncatable_repo_ids (std::vector<std::string const*>&) const override;
@@ -196,8 +196,8 @@ namespace obv
     {}
 
   private:
-    void operator =(const Example&) = delete;
-    void operator =(Example&&) = delete;
+    Example& operator= (const Example&) = delete;
+    Example& operator= (Example&&) = delete;
 
   public:
     /// @name Public state members
@@ -460,8 +460,8 @@ protected:
   ~Val () = default;
   Val (const Val&) = default;
   Val (Val&&) = default;
-  void operator =(const Val&) = delete;
-  void operator =(Val&&) = delete;
+  Val& operator= (const Val&) = delete;
+  Val& operator= (Val&&) = delete;
 
   virtual const std::string& _obv_repository_id () const override;
   virtual void _obv_get_truncatable_repo_ids (std::vector<std::string const*>&) const override;
@@ -545,8 +545,8 @@ namespace obv
     {}
 
   private:
-    void operator =(const Val&) = delete;
-    void operator =(Val&&) = delete;
+    Val& operator= (const Val&) = delete;
+    Val& operator= (Val&&) = delete;
 
   public:
     template <typename _Tp1, typename, typename ...Args>
@@ -709,8 +709,8 @@ protected:
     : TAOX11_CORBA::Valuebox_T< std::string> (v)
   {}
   ~StringValue () = default;
-  void operator =(const StringValue&) = delete;
-  void operator =(StringValue&&) = delete;
+  StringValue& operator= (const StringValue&) = delete;
+  StringValue& operator= (StringValue&&) = delete;
 
   virtual const std::string& _obv_repository_id () const;
 
@@ -895,8 +895,8 @@ protected:
     : TAOX11_CORBA::Valuebox_T< ::Color> (v)
   {}
   ~ColorValue () = default;
-  void operator =(const ColorValue&) = delete;
-  void operator =(ColorValue&&) = delete;
+  ColorValue& operator= (const ColorValue&) = delete;
+  ColorValue& operator= (ColorValue&&) = delete;
 
   virtual const std::string& _obv_repository_id () const;
 
@@ -1102,8 +1102,8 @@ protected:
   ~B () = default;
   B (const B&) = default;
   B (B&&) = default;
-  void operator =(const B&) = delete;
-  void operator =(B&&) = delete;
+  B& operator= (const B&) = delete;
+  B& operator= (B&&) = delete;
 
   virtual const std::string& _obv_repository_id () const override;
   virtual void _obv_get_truncatable_repo_ids (std::vector<std::string const*>&) const override;
@@ -1160,8 +1160,8 @@ namespace obv
     {}
 
   private:
-    void operator =(const B&) = delete;
-    void operator =(B&&) = delete;
+    B& operator= (const B&) = delete;
+    B& operator= (B&&) = delete;
 
   public:
     /// @name Public state members
@@ -1298,8 +1298,8 @@ protected:
   ~V () = default;
   V (const V&) = default;
   V (V&&) = default;
-  void operator =(const V&) = delete;
-  void operator =(V&&) = delete;
+  V& operator= (const V&) = delete;
+  V& operator= (V&&) = delete;
 
   virtual const std::string& _obv_repository_id () const override;
   virtual void _obv_get_truncatable_repo_ids (std::vector<std::string const*>&) const override;
@@ -1340,8 +1340,8 @@ namespace obv
     V (V&&) = default;
 
   private:
-    void operator =(const V&) = delete;
-    void operator =(V&&) = delete;
+    V& operator= (const V&) = delete;
+    V& operator= (V&&) = delete;
 
   public:
   protected:
@@ -1702,6 +1702,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_HJGDIEAJ_INCLUDED__
+#endif // __RIDL_TESTC_H_JGEFJIFA_INCLUDED__
 
 // -*- END -*-
