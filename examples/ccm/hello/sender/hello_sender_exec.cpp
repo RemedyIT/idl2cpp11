@@ -139,7 +139,9 @@ namespace CIAO_Hello_Sender_Impl
   void
   Sender_exec_i::ccm_activate ()
   {
+    // FUZZ: disable check_new_delete
     std::unique_ptr<synch_foo_generator> l (new synch_foo_generator (this->ciao_context_));
+    // FUZZ: enable check_new_delete
     this->synch_foo_gen_ = std::move(l);
     this->synch_foo_gen_->activate (THR_NEW_LWP | THR_JOINABLE, 1);
   }
