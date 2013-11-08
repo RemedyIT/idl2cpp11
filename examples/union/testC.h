@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GJCHGBCC_INCLUDED__
-#define __RIDL_TESTC_H_GJCHGBCC_INCLUDED__
+#ifndef __RIDL_TESTC_H_HCFEAHGA_INCLUDED__
+#define __RIDL_TESTC_H_HCFEAHGA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,13 +24,15 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+/// @copydoc Global
 class Global
 {
 public:
@@ -44,9 +46,12 @@ public:
   inline Global& operator= (const Global& x);
   inline Global& operator= (Global&& x);
 
+  /// @copydoc Global::x
+  //@{
   inline void x (int32_t _x);
   inline int32_t x () const;
   inline int32_t& x ();
+  //@}
 
   inline void swap (Global& s);
 
@@ -59,6 +64,8 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/enum.erb
+
+  /// @copydoc Test::DataType
   enum class DataType : uint32_t
   {
     dtEmpty,
@@ -70,7 +77,10 @@ namespace Test
     dtGlobal
   };// DataType
 
+
   // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+  /// @copydoc Test::Point
   class Point
   {
   public:
@@ -85,13 +95,19 @@ namespace Test
     inline Point& operator= (const Point& x);
     inline Point& operator= (Point&& x);
 
+    /// @copydoc Test::Point::x
+    //@{
     inline void x (int32_t _x);
     inline int32_t x () const;
     inline int32_t& x ();
+    //@}
 
+    /// @copydoc Test::Point::y
+    //@{
     inline void y (int32_t _y);
     inline int32_t y () const;
     inline int32_t& y ();
+    //@}
 
     inline void swap (Point& s);
 
@@ -101,6 +117,8 @@ namespace Test
   };// Point
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+  /// @copydoc Test::Track
   class Track
   {
   public:
@@ -115,14 +133,20 @@ namespace Test
     inline Track& operator= (const Track& x);
     inline Track& operator= (Track&& x);
 
+    /// @copydoc Test::Track::id
+    //@{
     inline void id (int32_t _id);
     inline int32_t id () const;
     inline int32_t& id ();
+    //@}
 
+    /// @copydoc Test::Track::p
+    //@{
     inline void p (const ::Test::Point& _p);
     inline void p (::Test::Point&& _p);
     inline const ::Test::Point& p () const;
     inline ::Test::Point& p ();
+    //@}
 
     inline void swap (Track& s);
 
@@ -132,6 +156,8 @@ namespace Test
   };// Track
 
   // generated from c++11/templates/cli/hdr/union_pre.erb
+
+  /// @copydoc Test::Data
   class Data
   {
   public:
@@ -147,33 +173,51 @@ namespace Test
     inline void _d (DataType);
     inline DataType _d () const;
 
+    /// @copydoc Test::Data::longData
+    //@{
     inline void longData (int32_t _longData);
     inline int32_t longData () const;
     inline int32_t& longData ();
+    //@}
 
+    /// @copydoc Test::Data::shortData
+    //@{
     inline void shortData (int16_t _shortData);
     inline int16_t shortData () const;
     inline int16_t& shortData ();
+    //@}
 
+    /// @copydoc Test::Data::stringData
+    //@{
     inline void stringData (const std::string& _stringData);
     inline void stringData (std::string&& _stringData);
     inline const std::string& stringData () const;
     inline std::string& stringData ();
+    //@}
 
+    /// @copydoc Test::Data::pointData
+    //@{
     inline void pointData (const ::Test::Point& _pointData);
     inline void pointData (::Test::Point&& _pointData);
     inline const ::Test::Point& pointData () const;
     inline ::Test::Point& pointData ();
+    //@}
 
+    /// @copydoc Test::Data::trackData
+    //@{
     inline void trackData (const ::Test::Track& _trackData);
     inline void trackData (::Test::Track&& _trackData);
     inline const ::Test::Track& trackData () const;
     inline ::Test::Track& trackData ();
+    //@}
 
+    /// @copydoc Test::Data::globalData
+    //@{
     inline void globalData (const ::Global& _globalData);
     inline void globalData (::Global&& _globalData);
     inline const ::Global& globalData () const;
     inline ::Global& globalData ();
+    //@}
 
     inline void _default ();
 
@@ -198,6 +242,8 @@ namespace Test
   }; // Data
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+  /// @copydoc Test::S
   class S
   {
   public:
@@ -211,9 +257,12 @@ namespace Test
     inline S& operator= (const S& x);
     inline S& operator= (S&& x);
 
+    /// @copydoc Test::S::len
+    //@{
     inline void len (int32_t _len);
     inline int32_t len () const;
     inline int32_t& len ();
+    //@}
 
     inline void swap (S& s);
 
@@ -272,6 +321,8 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/union_pre.erb
+
+  /// @copydoc Test::U
   class U
   {
   public:
@@ -287,23 +338,35 @@ namespace Test
     inline void _d (int32_t);
     inline int32_t _d () const;
 
+    /// @copydoc Test::U::x
+    //@{
     inline void x (int32_t _x);
     inline int32_t x () const;
     inline int32_t& x ();
+    //@}
 
+    /// @copydoc Test::U::z
+    //@{
     inline void z (const std::string& _z);
     inline void z (std::string&& _z);
     inline const std::string& z () const;
     inline std::string& z ();
+    //@}
 
+    /// @copydoc Test::U::w
+    //@{
     inline void w (const ::Test::S& _w);
     inline void w (::Test::S&& _w);
     inline const ::Test::S& w () const;
     inline ::Test::S& w ();
+    //@}
 
+    /// @copydoc Test::U::obj
+    //@{
     inline void obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj);
     inline TAOX11_IDL::traits< ::Test::A>::ref_type obj () const;
     inline TAOX11_IDL::traits< ::Test::A>::ref_type& obj ();
+    //@}
 
     inline void swap (U& s);
 
@@ -389,23 +452,23 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::pass_union
+    /// @copydoc Test::Foo::pass_union
     virtual bool pass_union (const ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::return_union
+    /// @copydoc Test::Foo::return_union
     virtual ::Test::Data return_union ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::get_union
+    /// @copydoc Test::Foo::get_union
     virtual bool get_union (::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::update_union
+    /// @copydoc Test::Foo::update_union
     virtual bool update_union (::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::shutdown
+    /// @copydoc Test::Foo::shutdown
     virtual void shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -589,6 +652,7 @@ inline ::Global& Global::operator= (const ::Global& x)
   }
   return *this;
 }
+
 inline ::Global& Global::operator= (::Global&& x)
 {
   this->x_ = std::move (x.x_);
@@ -629,6 +693,7 @@ inline ::Test::Point& Test::Point::operator= (const ::Test::Point& x)
   }
   return *this;
 }
+
 inline ::Test::Point& Test::Point::operator= (::Test::Point&& x)
 {
   this->x_ = std::move (x.x_);
@@ -672,6 +737,7 @@ inline ::Test::Track& Test::Track::operator= (const ::Test::Track& x)
   }
   return *this;
 }
+
 inline ::Test::Track& Test::Track::operator= (::Test::Track&& x)
 {
   this->id_ = std::move (x.id_);
@@ -1358,6 +1424,7 @@ inline ::Test::S& Test::S::operator= (const ::Test::S& x)
   }
   return *this;
 }
+
 inline ::Test::S& Test::S::operator= (::Test::S&& x)
 {
   this->len_ = std::move (x.len_);
@@ -1946,6 +2013,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_GJCHGBCC_INCLUDED__
+#endif // __RIDL_TESTC_H_HCFEAHGA_INCLUDED__
 
 // -*- END -*-

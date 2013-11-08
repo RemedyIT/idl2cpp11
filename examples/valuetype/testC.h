@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JGEFJIFA_INCLUDED__
-#define __RIDL_TESTC_H_JGEFJIFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDHAJFHB_INCLUDED__
+#define __RIDL_TESTC_H_EDHAJFHB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -28,8 +28,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -137,11 +137,11 @@ public:
   // Operations
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copybrief Example::op1
+  /// @copydoc Example::op1
   virtual int16_t op1 () = 0;
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copybrief Example::op2
+  /// @copydoc Example::op2
   virtual int32_t op2 (TAOX11_IDL::traits< Example>::ref_type x) = 0;
 
   /// @name Public state members
@@ -243,9 +243,12 @@ namespace obv
 }; // obv
 
 // generated from c++11/templates/cli/hdr/typedef.erb
+/// @copydoc Bytes
 typedef std::array< uint8_t, 64 > Bytes;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+/// @copydoc S
 class S
 {
 public:
@@ -259,9 +262,12 @@ public:
   inline S& operator= (const S& x);
   inline S& operator= (S&& x);
 
+  /// @copydoc S::value
+  //@{
   inline void value (int32_t _value);
   inline int32_t value () const;
   inline int32_t& value ();
+  //@}
 
   inline void swap (S& s);
 
@@ -328,7 +334,7 @@ public:
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copybrief A::op
+  /// @copydoc A::op
   virtual void op ();
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -790,7 +796,7 @@ public:
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copybrief X::op
+  /// @copydoc X::op
   virtual void op (std::string& s);
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -814,12 +820,15 @@ private:
 }; // X
 
 // generated from c++11/templates/cli/hdr/enum.erb
+
+/// @copydoc Color
 enum class Color : uint32_t
 {
   red,
   green,
   blue
 };// Color
+
 
 // generated from c++11/templates/cli/hdr/valuebox_fwd.erb
 class ColorValue;
@@ -918,6 +927,8 @@ namespace TAOX11_NAMESPACE
 };
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+/// @copydoc ColorValue2
 class ColorValue2
 {
 public:
@@ -931,9 +942,12 @@ public:
   inline ColorValue2& operator= (const ColorValue2& x);
   inline ColorValue2& operator= (ColorValue2&& x);
 
+  /// @copydoc ColorValue2::col
+  //@{
   inline void col (::Color _col);
   inline ::Color col () const;
   inline ::Color& col ();
+  //@}
 
   inline void swap (ColorValue2& s);
 
@@ -1000,7 +1014,7 @@ public:
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copybrief A1::op
+  /// @copydoc A1::op
   virtual void op ();
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -1126,7 +1140,7 @@ public:
   // Operations
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copybrief A1::op
+  /// @copydoc A1::op
   virtual void op () = 0;
 
   /// @name Public state members
@@ -1496,6 +1510,7 @@ inline ::S& S::operator= (const ::S& x)
   }
   return *this;
 }
+
 inline ::S& S::operator= (::S&& x)
 {
   this->value_ = std::move (x.value_);
@@ -1541,6 +1556,7 @@ inline ::ColorValue2& ColorValue2::operator= (const ::ColorValue2& x)
   }
   return *this;
 }
+
 inline ::ColorValue2& ColorValue2::operator= (::ColorValue2&& x)
 {
   this->col_ = std::move (x.col_);
@@ -1702,6 +1718,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_JGEFJIFA_INCLUDED__
+#endif // __RIDL_TESTC_H_EDHAJFHB_INCLUDED__
 
 // -*- END -*-

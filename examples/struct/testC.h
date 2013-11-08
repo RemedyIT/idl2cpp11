@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GDECDCEA_INCLUDED__
-#define __RIDL_TESTC_H_GDECDCEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_CFBCCAFC_INCLUDED__
+#define __RIDL_TESTC_H_CFBCCAFC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,8 +24,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -35,6 +35,8 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+  /// @copydoc Test::Variable
   class Variable
   {
   public:
@@ -48,10 +50,13 @@ namespace Test
     inline Variable& operator= (const Variable& x);
     inline Variable& operator= (Variable&& x);
 
+    /// @copydoc Test::Variable::name
+    //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
     inline const std::string& name () const;
     inline std::string& name ();
+    //@}
 
     inline void swap (Variable& s);
 
@@ -125,7 +130,7 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Bar::op
+    /// @copydoc Test::Bar::op
     virtual void op ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -149,6 +154,8 @@ namespace Test
   }; // Bar
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+  /// @copydoc Test::Simple
   class Simple
   {
   public:
@@ -169,39 +176,63 @@ namespace Test
     inline Simple& operator= (const Simple& x);
     inline Simple& operator= (Simple&& x);
 
+    /// @copydoc Test::Simple::o
+    //@{
     inline void o (uint8_t _o);
     inline uint8_t o () const;
     inline uint8_t& o ();
+    //@}
 
+    /// @copydoc Test::Simple::l
+    //@{
     inline void l (int32_t _l);
     inline int32_t l () const;
     inline int32_t& l ();
+    //@}
 
+    /// @copydoc Test::Simple::s
+    //@{
     inline void s (const std::string& _s);
     inline void s (std::string&& _s);
     inline const std::string& s () const;
     inline std::string& s ();
+    //@}
 
+    /// @copydoc Test::Simple::d
+    //@{
     inline void d (double _d);
     inline double d () const;
     inline double& d ();
+    //@}
 
+    /// @copydoc Test::Simple::b
+    //@{
     inline void b (bool _b);
     inline bool b () const;
     inline bool& b ();
+    //@}
 
+    /// @copydoc Test::Simple::c
+    //@{
     inline void c (char _c);
     inline char c () const;
     inline char& c ();
+    //@}
 
+    /// @copydoc Test::Simple::bar_ref
+    //@{
     inline void bar_ref (TAOX11_IDL::traits< ::Test::Bar>::ref_type _bar_ref);
     inline TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref () const;
     inline TAOX11_IDL::traits< ::Test::Bar>::ref_type& bar_ref ();
+    //@}
 
+    /// @copydoc Test::Simple::v
+    //@{
     inline void v (const ::Test::Variable& _v);
     inline void v (::Test::Variable&& _v);
     inline const ::Test::Variable& v () const;
     inline ::Test::Variable& v ();
+    //@}
 
     inline void swap (Simple& s);
 
@@ -282,23 +313,23 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::pass_struct
+    /// @copydoc Test::Foo::pass_struct
     virtual bool pass_struct (const ::Test::Simple& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::return_struct
+    /// @copydoc Test::Foo::return_struct
     virtual ::Test::Simple return_struct ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::get_struct
+    /// @copydoc Test::Foo::get_struct
     virtual bool get_struct (::Test::Simple& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::update_struct
+    /// @copydoc Test::Foo::update_struct
     virtual bool update_struct (::Test::Simple& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::shutdown
+    /// @copydoc Test::Foo::shutdown
     virtual void shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -385,6 +416,7 @@ inline ::Test::Variable& Test::Variable::operator= (const ::Test::Variable& x)
   }
   return *this;
 }
+
 inline ::Test::Variable& Test::Variable::operator= (::Test::Variable&& x)
 {
   this->name_ = std::move (x.name_);
@@ -475,6 +507,7 @@ inline ::Test::Simple& Test::Simple::operator= (const ::Test::Simple& x)
   }
   return *this;
 }
+
 inline ::Test::Simple& Test::Simple::operator= (::Test::Simple&& x)
 {
   this->o_ = std::move (x.o_);
@@ -547,6 +580,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_GDECDCEA_INCLUDED__
+#endif // __RIDL_TESTC_H_CFBCCAFC_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGCCHBFC_INCLUDED__
-#define __RIDL_TESTC_H_GGCCHBFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GJCHDFCA_INCLUDED__
+#define __RIDL_TESTC_H_GJCHDFCA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -25,8 +25,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -36,12 +36,15 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::F
   typedef std::array< float, 10 > F;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::V
   typedef std::array< std::string, 10 > V;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::M
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
 
   // generated from StubHeaderWriter#enter_interface
@@ -110,7 +113,7 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::op
+    /// @copydoc Test::Foo::op
     virtual void op (const ::Test::F& p1,
              ::Test::V& p2,
              ::Test::M& p3);
@@ -267,6 +270,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_GGCCHBFC_INCLUDED__
+#endif // __RIDL_TESTC_H_GJCHDFCA_INCLUDED__
 
 // -*- END -*-

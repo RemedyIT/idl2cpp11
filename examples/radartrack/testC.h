@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JIAIDGCB_INCLUDED__
-#define __RIDL_TESTC_H_JIAIDGCB_INCLUDED__
+#ifndef __RIDL_TESTC_H_CEBDGJIA_INCLUDED__
+#define __RIDL_TESTC_H_CEBDGJIA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,16 +24,19 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/typedef.erb
+/// @copydoc octetseq
 typedef std::vector < uint8_t> octetseq;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+/// @copydoc RadarTrack
 class RadarTrack
 {
 public:
@@ -51,27 +54,42 @@ public:
   inline RadarTrack& operator= (const RadarTrack& x);
   inline RadarTrack& operator= (RadarTrack&& x);
 
+  /// @copydoc RadarTrack::id
+  //@{
   inline void id (const std::string& _id);
   inline void id (std::string&& _id);
   inline const std::string& id () const;
   inline std::string& id ();
+  //@}
 
+  /// @copydoc RadarTrack::x
+  //@{
   inline void x (int32_t _x);
   inline int32_t x () const;
   inline int32_t& x ();
+  //@}
 
+  /// @copydoc RadarTrack::y
+  //@{
   inline void y (int32_t _y);
   inline int32_t y () const;
   inline int32_t& y ();
+  //@}
 
+  /// @copydoc RadarTrack::z
+  //@{
   inline void z (int32_t _z);
   inline int32_t z () const;
   inline int32_t& z ();
+  //@}
 
+  /// @copydoc RadarTrack::plot
+  //@{
   inline void plot (const ::octetseq& _plot);
   inline void plot (::octetseq&& _plot);
   inline const ::octetseq& plot () const;
   inline ::octetseq& plot ();
+  //@}
 
   inline void swap (RadarTrack& s);
 
@@ -180,6 +198,7 @@ inline ::RadarTrack& RadarTrack::operator= (const ::RadarTrack& x)
   }
   return *this;
 }
+
 inline ::RadarTrack& RadarTrack::operator= (::RadarTrack&& x)
 {
   this->id_ = std::move (x.id_);
@@ -244,6 +263,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_JIAIDGCB_INCLUDED__
+#endif // __RIDL_TESTC_H_CEBDGJIA_INCLUDED__
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EEFBFBAH_INCLUDED__
-#define __RIDL_TESTC_H_EEFBFBAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_EJBBHGAB_INCLUDED__
+#define __RIDL_TESTC_H_EJBBHGAB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -27,8 +27,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -38,6 +38,8 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+  /// @copydoc Test::Simple
   class Simple
   {
   public:
@@ -56,30 +58,48 @@ namespace Test
     inline Simple& operator= (const Simple& x);
     inline Simple& operator= (Simple&& x);
 
+    /// @copydoc Test::Simple::o
+    //@{
     inline void o (uint8_t _o);
     inline uint8_t o () const;
     inline uint8_t& o ();
+    //@}
 
+    /// @copydoc Test::Simple::l
+    //@{
     inline void l (int32_t _l);
     inline int32_t l () const;
     inline int32_t& l ();
+    //@}
 
+    /// @copydoc Test::Simple::s
+    //@{
     inline void s (const std::string& _s);
     inline void s (std::string&& _s);
     inline const std::string& s () const;
     inline std::string& s ();
+    //@}
 
+    /// @copydoc Test::Simple::d
+    //@{
     inline void d (double _d);
     inline double d () const;
     inline double& d ();
+    //@}
 
+    /// @copydoc Test::Simple::b
+    //@{
     inline void b (bool _b);
     inline bool b () const;
     inline bool& b ();
+    //@}
 
+    /// @copydoc Test::Simple::c
+    //@{
     inline void c (char _c);
     inline char c () const;
     inline char& c ();
+    //@}
 
     inline void swap (Simple& s);
 
@@ -93,18 +113,23 @@ namespace Test
   };// Simple
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::SimpleSeq
   typedef std::vector < Simple> SimpleSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::LongSeq
   typedef std::vector < int32_t> LongSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::BoundedLongSeq
   typedef TAOX11_IDL::bounded_vector < int32_t, 50> BoundedLongSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::BoolSeq
   typedef std::vector < bool> BoolSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::StringSeq
   typedef std::vector < std::string> StringSeq;
 
   // generated from StubHeaderWriter#enter_interface
@@ -173,31 +198,31 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::test_long_seq
+    /// @copydoc Test::Foo::test_long_seq
     virtual ::Test::LongSeq test_long_seq (const ::Test::LongSeq& sin,
                                    ::Test::LongSeq& sinout,
                                    ::Test::LongSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::test_bool_seq
+    /// @copydoc Test::Foo::test_bool_seq
     virtual ::Test::BoolSeq test_bool_seq (const ::Test::BoolSeq& sin,
                                    ::Test::BoolSeq& sinout,
                                    ::Test::BoolSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::test_string_seq
+    /// @copydoc Test::Foo::test_string_seq
     virtual ::Test::StringSeq test_string_seq (const ::Test::StringSeq& sin,
                                        ::Test::StringSeq& sinout,
                                        ::Test::StringSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::test_struct_seq
+    /// @copydoc Test::Foo::test_struct_seq
     virtual ::Test::SimpleSeq test_struct_seq (const ::Test::SimpleSeq& sin,
                                        ::Test::SimpleSeq& sinout,
                                        ::Test::SimpleSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Foo::shutdown
+    /// @copydoc Test::Foo::shutdown
     virtual void shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -391,6 +416,7 @@ inline ::Test::Simple& Test::Simple::operator= (const ::Test::Simple& x)
   }
   return *this;
 }
+
 inline ::Test::Simple& Test::Simple::operator= (::Test::Simple&& x)
 {
   this->o_ = std::move (x.o_);
@@ -546,6 +572,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_EEFBFBAH_INCLUDED__
+#endif // __RIDL_TESTC_H_EJBBHGAB_INCLUDED__
 
 // -*- END -*-

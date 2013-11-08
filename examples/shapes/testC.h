@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DDDDGDFB_INCLUDED__
-#define __RIDL_TESTC_H_DDDDGDFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_HCFJCGAA_INCLUDED__
+#define __RIDL_TESTC_H_HCFJCGAA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,13 +24,15 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+/// @copydoc ShapeType
 class ShapeType
 {
 public:
@@ -47,22 +49,34 @@ public:
   inline ShapeType& operator= (const ShapeType& x);
   inline ShapeType& operator= (ShapeType&& x);
 
+  /// @copydoc ShapeType::color
+  //@{
   inline void color (const std::string& _color);
   inline void color (std::string&& _color);
   inline const std::string& color () const;
   inline std::string& color ();
+  //@}
 
+  /// @copydoc ShapeType::x
+  //@{
   inline void x (int32_t _x);
   inline int32_t x () const;
   inline int32_t& x ();
+  //@}
 
+  /// @copydoc ShapeType::y
+  //@{
   inline void y (int32_t _y);
   inline int32_t y () const;
   inline int32_t& y ();
+  //@}
 
+  /// @copydoc ShapeType::shapesize
+  //@{
   inline void shapesize (int32_t _shapesize);
   inline int32_t shapesize () const;
   inline int32_t& shapesize ();
+  //@}
 
   inline void swap (ShapeType& s);
 
@@ -74,6 +88,8 @@ private:
 };// ShapeType
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
+
+/// @copydoc Attributes
 class Attributes
 {
 public:
@@ -89,19 +105,28 @@ public:
   inline Attributes& operator= (const Attributes& x);
   inline Attributes& operator= (Attributes&& x);
 
+  /// @copydoc Attributes::shape
+  //@{
   inline void shape (const std::string& _shape);
   inline void shape (std::string&& _shape);
   inline const std::string& shape () const;
   inline std::string& shape ();
+  //@}
 
+  /// @copydoc Attributes::color
+  //@{
   inline void color (const std::string& _color);
   inline void color (std::string&& _color);
   inline const std::string& color () const;
   inline std::string& color ();
+  //@}
 
+  /// @copydoc Attributes::speed
+  //@{
   inline void speed (float _speed);
   inline float speed () const;
   inline float& speed ();
+  //@}
 
   inline void swap (Attributes& s);
 
@@ -112,6 +137,7 @@ private:
 };// Attributes
 
 // generated from c++11/templates/cli/hdr/typedef.erb
+/// @copydoc ShapeTypeSeq
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
 
 // generated from StubHeaderTraitsWriter#pre_visit
@@ -216,6 +242,7 @@ inline ::ShapeType& ShapeType::operator= (const ::ShapeType& x)
   }
   return *this;
 }
+
 inline ::ShapeType& ShapeType::operator= (::ShapeType&& x)
 {
   this->color_ = std::move (x.color_);
@@ -272,6 +299,7 @@ inline ::Attributes& Attributes::operator= (const ::Attributes& x)
   }
   return *this;
 }
+
 inline ::Attributes& Attributes::operator= (::Attributes&& x)
 {
   this->shape_ = std::move (x.shape_);
@@ -345,6 +373,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_DDDDGDFB_INCLUDED__
+#endif // __RIDL_TESTC_H_HCFJCGAA_INCLUDED__
 
 // -*- END -*-

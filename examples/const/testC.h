@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IHDGIAIC_INCLUDED__
-#define __RIDL_TESTC_H_IHDGIAIC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GCBGAHFC_INCLUDED__
+#define __RIDL_TESTC_H_GCBGAHFC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -27,8 +27,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -83,9 +83,11 @@ namespace Test
   const std::wstring ws_val = L"widestring\n \xbf \xfe0e";
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::TCounter
   typedef int32_t TCounter;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::TName
   typedef TAOX11_IDL::bounded_basic_string<char, 30> TName;
 
   // generated from StubHeaderWriter#visit_const
@@ -98,6 +100,7 @@ namespace Test
   constexpr TCounter double_count = (::Test::count * 2);
 
   // generated from c++11/templates/cli/hdr/typedef.erb
+  /// @copydoc Test::fixed_type
   typedef TAOX11_IDL::Fixed <10, 3> fixed_type;
 
   // generated from StubHeaderWriter#visit_const
@@ -264,6 +267,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_IHDGIAIC_INCLUDED__
+#endif // __RIDL_TESTC_H_GCBGAHFC_INCLUDED__
 
 // -*- END -*-

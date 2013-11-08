@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FACECFHF_INCLUDED__
-#define __RIDL_TESTC_H_FACECFHF_INCLUDED__
+#ifndef __RIDL_TESTC_H_HIHCBAJE_INCLUDED__
+#define __RIDL_TESTC_H_HIHCBAJE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,8 +24,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 2 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.2.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.3.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -150,11 +150,11 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Hello_Factory::get_hello
+    /// @copydoc Test::Hello_Factory::get_hello
     virtual TAOX11_IDL::traits< ::Test::Hello>::ref_type get_hello ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Hello_Factory::get_hello_2
+    /// @copydoc Test::Hello_Factory::get_hello_2
     virtual void get_hello_2 (TAOX11_IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -193,11 +193,11 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Hello::get_string
+    /// @copydoc Test::Hello::get_string
     virtual std::string get_string ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copybrief Test::Hello::shutdown
+    /// @copydoc Test::Hello::shutdown
     virtual void shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -255,6 +255,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_FACECFHF_INCLUDED__
+#endif // __RIDL_TESTC_H_HIHCBAJE_INCLUDED__
 
 // -*- END -*-
