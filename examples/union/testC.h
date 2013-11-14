@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCFEAHGA_INCLUDED__
-#define __RIDL_TESTC_H_HCFEAHGA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EGICIJGE_INCLUDED__
+#define __RIDL_TESTC_H_EGICIJGE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -277,9 +277,9 @@ namespace Test
   class A_proxy;
   typedef A_proxy* A_proxy_ptr;
 #endif // !_INTF_TEST_A_FWD_
-  // generated from CxxWriterBase#at_global_scope
+  // generated from Base::CodeWriter#at_global_scope
 }; // Test
-// entering CxxWriterBase#at_global_scope
+// entering Base::CodeWriter#at_global_scope
 
 // generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_A_TRAITS_DECL_)
@@ -316,7 +316,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_INTF_TEST_A_TRAITS_DECL_
 
-// leaving CxxWriterBase#at_global_scope
+// leaving Base::CodeWriter#at_global_scope
 namespace Test
 {
 
@@ -395,9 +395,9 @@ namespace Test
   class Foo_proxy;
   typedef Foo_proxy* Foo_proxy_ptr;
 #endif // !_INTF_TEST_FOO_FWD_
-  // generated from CxxWriterBase#at_global_scope
+  // generated from Base::CodeWriter#at_global_scope
 }; // Test
-// entering CxxWriterBase#at_global_scope
+// entering Base::CodeWriter#at_global_scope
 
 // generated from c++11/templates/cli/hdr/interface_object_traits.erb
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
@@ -434,7 +434,7 @@ namespace TAOX11_NAMESPACE
 };
 #endif // !_INTF_TEST_FOO_TRAITS_DECL_
 
-// leaving CxxWriterBase#at_global_scope
+// leaving Base::CodeWriter#at_global_scope
 namespace Test
 {
 
@@ -2013,6 +2013,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif // __RIDL_TESTC_H_HCFEAHGA_INCLUDED__
+#endif /* __RIDL_TESTC_H_EGICIJGE_INCLUDED__ */
 
 // -*- END -*-
