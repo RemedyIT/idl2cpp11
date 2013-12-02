@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFGCJIJB_INCLUDED__
-#define __RIDL_TESTC_H_BFGCJIJB_INCLUDED__
+#ifndef __RIDL_TESTC_H_JJDEDBGC_INCLUDED__
+#define __RIDL_TESTC_H_JJDEDBGC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -166,7 +166,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::F>
       : IDL::common_traits< ::Test::F>
     {
+      /// IDL::traits<> for the element of the array
       typedef IDL::traits< float> element_traits;
+      /// std::integral_constant type of value_type uint32_t
+      /// indicating the number of dimensions of the array
       typedef std::integral_constant<uint32_t, 1> dimensions;
     };
 
@@ -182,7 +185,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::V>
       : IDL::common_traits< ::Test::V>
     {
+      /// IDL::traits<> for the element of the array
       typedef IDL::traits< std::string> element_traits;
+      /// std::integral_constant type of value_type uint32_t
+      /// indicating the number of dimensions of the array
       typedef std::integral_constant<uint32_t, 1> dimensions;
     };
 
@@ -198,7 +204,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::M>
       : IDL::common_traits< ::Test::M>
     {
+      /// IDL::traits<> for the element of the array
       typedef IDL::traits< std::string> element_traits;
+      /// std::integral_constant type of value_type uint32_t
+      /// indicating the number of dimensions of the array
       typedef std::integral_constant<uint32_t, 3> dimensions;
     };
 
@@ -280,6 +289,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BFGCJIJB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JJDEDBGC_INCLUDED__ */
 
 // -*- END -*-

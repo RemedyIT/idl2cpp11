@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DGGBGCGH_INCLUDED__
-#define __RIDL_TESTC_H_DGGBGCGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_IIAFICFE_INCLUDED__
+#define __RIDL_TESTC_H_IIAFICFE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -283,7 +283,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::SimpleSeq>
       : IDL::common_traits< ::Test::SimpleSeq>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Test::Simple> element_traits;
     };
 
@@ -299,7 +302,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::LongSeq>
       : IDL::common_traits< ::Test::LongSeq>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< int32_t> element_traits;
     };
 
@@ -316,7 +322,10 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits< ::Test::BoundedLongSeq>
       , IDL::bounded_traits< ::Test::BoundedLongSeq>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::true_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< int32_t> element_traits;
     };
 
@@ -332,7 +341,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::BoolSeq>
       : IDL::common_traits< ::Test::BoolSeq>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< bool> element_traits;
     };
 
@@ -348,7 +360,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::StringSeq>
       : IDL::common_traits< ::Test::StringSeq>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< std::string> element_traits;
     };
 
@@ -582,6 +597,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DGGBGCGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IIAFICFE_INCLUDED__ */
 
 // -*- END -*-

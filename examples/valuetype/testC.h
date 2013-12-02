@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HFEDGDCC_INCLUDED__
-#define __RIDL_TESTC_H_HFEDGDCC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GFDHCDAF_INCLUDED__
+#define __RIDL_TESTC_H_GFDHCDAF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1465,7 +1465,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Bytes>
       : IDL::common_traits< ::Bytes>
     {
+      /// IDL::traits<> for the element of the array
       typedef IDL::traits< uint8_t> element_traits;
+      /// std::integral_constant type of value_type uint32_t
+      /// indicating the number of dimensions of the array
       typedef std::integral_constant<uint32_t, 1> dimensions;
     };
 
@@ -1764,6 +1767,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HFEDGDCC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GFDHCDAF_INCLUDED__ */
 
 // -*- END -*-

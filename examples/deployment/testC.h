@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGJAEADC_INCLUDED__
-#define __RIDL_TESTC_H_GGJAEADC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GCDAHAHA_INCLUDED__
+#define __RIDL_TESTC_H_GCDAHAHA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1755,7 +1755,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::Properties>
       : IDL::common_traits< ::Deployment::Properties>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::Property> element_traits;
     };
 
@@ -1781,7 +1784,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::Requirements>
       : IDL::common_traits< ::Deployment::Requirements>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::Requirement> element_traits;
     };
 
@@ -1814,7 +1820,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::SatisfierProperties>
       : IDL::common_traits< ::Deployment::SatisfierProperties>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::SatisfierProperty> element_traits;
     };
 
@@ -1847,7 +1856,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentPortDescriptions>
       : IDL::common_traits< ::Deployment::ComponentPortDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentPortDescription> element_traits;
     };
 
@@ -1873,7 +1885,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentPropertyDescriptions>
       : IDL::common_traits< ::Deployment::ComponentPropertyDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentPropertyDescription> element_traits;
     };
 
@@ -1909,7 +1924,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::MonolithicDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::MonolithicDeploymentDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription> element_traits;
     };
 
@@ -1942,7 +1960,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::InstanceResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription> element_traits;
     };
 
@@ -1968,7 +1989,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::InstanceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::InstanceDeploymentDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::InstanceDeploymentDescription> element_traits;
     };
 
@@ -1994,7 +2018,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentExternalPortEndpoints>
       : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoints>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint> element_traits;
     };
 
@@ -2020,7 +2047,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanSubcomponentPortEndpoints>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoints>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint> element_traits;
     };
 
@@ -2046,7 +2076,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ExternalReferenceEndpoints>
       : IDL::common_traits< ::Deployment::ExternalReferenceEndpoints>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint> element_traits;
     };
 
@@ -2072,7 +2105,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription> element_traits;
     };
 
@@ -2098,7 +2134,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanConnectionDescriptions>
       : IDL::common_traits< ::Deployment::PlanConnectionDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanConnectionDescription> element_traits;
     };
 
@@ -2124,7 +2163,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanSubcomponentPropertyReferences>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReferences>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference> element_traits;
     };
 
@@ -2150,7 +2192,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanPropertyMappings>
       : IDL::common_traits< ::Deployment::PlanPropertyMappings>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanPropertyMapping> element_traits;
     };
 
@@ -2176,7 +2221,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ImplementationDependencies>
       : IDL::common_traits< ::Deployment::ImplementationDependencies>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ImplementationDependency> element_traits;
     };
 
@@ -2202,7 +2250,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ResourceDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ResourceDeploymentDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ResourceDeploymentDescription> element_traits;
     };
 
@@ -2228,7 +2279,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ArtifactDeploymentDescriptions>
       : IDL::common_traits< ::Deployment::ArtifactDeploymentDescriptions>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription> element_traits;
     };
 
@@ -2261,7 +2315,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanLocalities>
       : IDL::common_traits< ::Deployment::PlanLocalities>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanLocality> element_traits;
     };
 
@@ -2297,7 +2354,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentPackageReferences>
       : IDL::common_traits< ::Deployment::ComponentPackageReferences>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentPackageReference> element_traits;
     };
 
@@ -2313,7 +2373,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ResourceUsageKinds>
       : IDL::common_traits< ::Deployment::ResourceUsageKinds>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ResourceUsageKind> element_traits;
     };
 
@@ -2339,7 +2402,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ImplementationRequirements>
       : IDL::common_traits< ::Deployment::ImplementationRequirements>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ImplementationRequirement> element_traits;
     };
 
@@ -2365,7 +2431,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::Capabilities>
       : IDL::common_traits< ::Deployment::Capabilities>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::Capability> element_traits;
     };
 
@@ -5054,6 +5123,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGJAEADC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GCDAHAHA_INCLUDED__ */
 
 // -*- END -*-

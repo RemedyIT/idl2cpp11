@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DIAGBHJA_INCLUDED__
-#define __RIDL_TESTC_H_DIAGBHJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BDHEFGEA_INCLUDED__
+#define __RIDL_TESTC_H_BDHEFGEA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -176,7 +176,10 @@ namespace TAOX11_NAMESPACE
     struct traits < ::ShapeTypeSeq>
       : IDL::common_traits< ::ShapeTypeSeq>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this sequence is declared as bounded
       typedef std::false_type is_bounded;
+      /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::ShapeType> element_traits;
     };
 
@@ -373,6 +376,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DIAGBHJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BDHEFGEA_INCLUDED__ */
 
 // -*- END -*-

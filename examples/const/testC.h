@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EGBCDJJC_INCLUDED__
-#define __RIDL_TESTC_H_EGBCDJJC_INCLUDED__
+#ifndef __RIDL_TESTC_H_EBBFFDJA_INCLUDED__
+#define __RIDL_TESTC_H_EBBFFDJA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -216,7 +216,10 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
       , IDL::bounded_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
     {
+      /// std::false_type or std::true_type type indicating whether
+      /// this string is declared as bounded
       typedef std::true_type is_bounded;
+      /// IDL::traits<> for the element of the string
       typedef IDL::traits<char> element_traits;
     };
 
@@ -277,6 +280,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EGBCDJJC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EBBFFDJA_INCLUDED__ */
 
 // -*- END -*-
