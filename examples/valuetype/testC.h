@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGAIGHAD_INCLUDED__
-#define __RIDL_TESTC_H_GGAIGHAD_INCLUDED__
+#ifndef __RIDL_TESTC_H_HFEDGDCC_INCLUDED__
+#define __RIDL_TESTC_H_HFEDGDCC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -58,8 +58,10 @@ namespace TAOX11_NAMESPACE
     {
       typedef ::Example
           base_type;
+      /// Strong reference type
       typedef valuetype_reference< ::Example>
           ref_type;
+      /// Weak reference type
       typedef weak_valuetype_reference< ::Example>
           weak_ref_type;
       typedef ::obv::Example
@@ -95,6 +97,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< Example>               _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< Example>::ref_type     _ref_type;
   typedef TAOX11_IDL::traits< Example>::obv_type     _obv_type;
   //@}
@@ -334,6 +337,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< A>           _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< A>::ref_type _ref_type;
   //@}
 
@@ -411,8 +415,10 @@ namespace TAOX11_NAMESPACE
     {
       typedef ::Val
           base_type;
+      /// Strong reference type
       typedef valuetype_reference< ::Val>
           ref_type;
+      /// Weak reference type
       typedef weak_valuetype_reference< ::Val>
           weak_ref_type;
       typedef ::obv::Val
@@ -454,6 +460,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< Val>               _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< Val>::ref_type     _ref_type;
   typedef TAOX11_IDL::traits< Val>::factory_type _factory_type;
   typedef TAOX11_IDL::traits< Val>::obv_type     _obv_type;
@@ -661,8 +668,10 @@ namespace TAOX11_NAMESPACE
     template<>
     struct valuetype_traits< ::StringValue>
     {
+      /// Strong reference type
       typedef valuetype_reference< ::StringValue>
           ref_type;
+      /// Weak reference type
       typedef weak_valuetype_reference< ::StringValue>
           weak_ref_type;
 
@@ -805,6 +814,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< X>           _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< X>::ref_type _ref_type;
   //@}
 
@@ -861,8 +871,10 @@ namespace TAOX11_NAMESPACE
     template<>
     struct valuetype_traits< ::ColorValue>
     {
+      /// Strong reference type
       typedef valuetype_reference< ::ColorValue>
           ref_type;
+      /// Weak reference type
       typedef weak_valuetype_reference< ::ColorValue>
           weak_ref_type;
 
@@ -1032,6 +1044,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< A1>           _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< A1>::ref_type _ref_type;
   //@}
 
@@ -1088,8 +1101,10 @@ namespace TAOX11_NAMESPACE
     {
       typedef ::B
           base_type;
+      /// Strong reference type
       typedef valuetype_reference< ::B>
           ref_type;
+      /// Weak reference type
       typedef weak_valuetype_reference< ::B>
           weak_ref_type;
       typedef ::obv::B
@@ -1125,6 +1140,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< B>               _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< B>::ref_type     _ref_type;
   typedef TAOX11_IDL::traits< B>::obv_type     _obv_type;
   //@}
@@ -1275,8 +1291,10 @@ namespace TAOX11_NAMESPACE
     {
       typedef ::V
           base_type;
+      /// Strong reference type
       typedef valuetype_reference< ::V>
           ref_type;
+      /// Weak reference type
       typedef weak_valuetype_reference< ::V>
           weak_ref_type;
       typedef ::obv::V
@@ -1318,6 +1336,7 @@ public:
   /// @name Member types
   //@{
   typedef TAOX11_IDL::traits< V>               _traits_type;
+  /// Strong reference type
   typedef TAOX11_IDL::traits< V>::ref_type     _ref_type;
   typedef TAOX11_IDL::traits< V>::factory_type _factory_type;
   typedef TAOX11_IDL::traits< V>::obv_type     _obv_type;
@@ -1745,6 +1764,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGAIGHAD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HFEDGDCC_INCLUDED__ */
 
 // -*- END -*-

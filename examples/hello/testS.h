@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_CJDAFFJJ_INCLUDED__
-#define __RIDL_TESTS_H_CJDAFFJJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_EIJGBHDB_INCLUDED__
+#define __RIDL_TESTS_H_EIJGBHDB_INCLUDED__
 
 #include "testC.h"
 
@@ -102,8 +102,10 @@ namespace TAOX11_NAMESPACE {
     {
       typedef ::Test::POA::Hello
           base_type;
+      /// Strong reference type
       typedef TAOX11_CORBA::servant_reference< ::Test::POA::Hello>
           ref_type;
+      /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::Test::POA::Hello>
           weak_ref_type;
       template <typename _Tp1, typename = typename
@@ -116,6 +118,6 @@ namespace TAOX11_NAMESPACE {
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CJDAFFJJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_EIJGBHDB_INCLUDED__ */
 
 // -*- END -*-

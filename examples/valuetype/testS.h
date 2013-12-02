@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_DFJJDEAG_INCLUDED__
-#define __RIDL_TESTS_H_DFJJDEAG_INCLUDED__
+#ifndef __RIDL_TESTS_H_JGEFDAGJ_INCLUDED__
+#define __RIDL_TESTS_H_JGEFDAGJ_INCLUDED__
 
 #include "testC.h"
 
@@ -229,8 +229,10 @@ namespace TAOX11_NAMESPACE {
     {
       typedef ::POA::A
           base_type;
+      /// Strong reference type
       typedef TAOX11_CORBA::servant_reference< ::POA::A>
           ref_type;
+      /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::A>
           weak_ref_type;
       template <typename _Tp1, typename = typename
@@ -247,8 +249,10 @@ namespace TAOX11_NAMESPACE {
     {
       typedef ::POA::X
           base_type;
+      /// Strong reference type
       typedef TAOX11_CORBA::servant_reference< ::POA::X>
           ref_type;
+      /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::X>
           weak_ref_type;
       template <typename _Tp1, typename = typename
@@ -265,8 +269,10 @@ namespace TAOX11_NAMESPACE {
     {
       typedef ::POA::A1
           base_type;
+      /// Strong reference type
       typedef TAOX11_CORBA::servant_reference< ::POA::A1>
           ref_type;
+      /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::A1>
           weak_ref_type;
       template <typename _Tp1, typename = typename
@@ -283,8 +289,10 @@ namespace TAOX11_NAMESPACE {
     {
       typedef ::POA::B
           base_type;
+      /// Strong reference type
       typedef TAOX11_CORBA::servant_reference< ::POA::B>
           ref_type;
+      /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::B>
           weak_ref_type;
       template <typename _Tp1, typename = typename
@@ -297,6 +305,6 @@ namespace TAOX11_NAMESPACE {
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_DFJJDEAG_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_JGEFDAGJ_INCLUDED__ */
 
 // -*- END -*-

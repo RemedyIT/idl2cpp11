@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BJEGHJFE_INCLUDED__
-#define __RIDL_TESTC_H_BJEGHJFE_INCLUDED__
+#ifndef __RIDL_TESTC_H_BFGCJIJB_INCLUDED__
+#define __RIDL_TESTC_H_BFGCJIJB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -113,6 +113,7 @@ namespace Test
     /// @name Member types
     //@{
     typedef TAOX11_IDL::traits< Foo>           _traits_type;
+    /// Strong reference type
     typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
@@ -279,6 +280,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BJEGHJFE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BFGCJIJB_INCLUDED__ */
 
 // -*- END -*-
