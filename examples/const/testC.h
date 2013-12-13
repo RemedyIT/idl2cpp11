@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EBBFFDJA_INCLUDED__
-#define __RIDL_TESTC_H_EBBFFDJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BJHABFHC_INCLUDED__
+#define __RIDL_TESTC_H_BJHABFHC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -34,52 +34,68 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Test
 namespace Test
 {
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ch_val
   constexpr char ch_val = 'a';
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::wch_val
   constexpr wchar_t wch_val = L'X';
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::oct_val
   constexpr uint8_t oct_val = 123;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::sh_val
   constexpr int16_t sh_val = -1023;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ush_val
   constexpr uint16_t ush_val = 1023U;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::l_val
   constexpr int32_t l_val = -81234;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ul_val
   constexpr uint32_t ul_val = 81234UL;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ll_val
   constexpr int64_t ll_val = -12345678LL;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ull_val
   constexpr uint64_t ull_val = 12345678ULL;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::f_val
   constexpr float f_val = 1.23;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::d_val
   constexpr double d_val = 454.23;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ld_val
   constexpr long double ld_val = 678.91;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::b_val
   constexpr bool b_val = true;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::s_val
   const std::string s_val = "text";
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::ws_val
   const std::wstring ws_val = L"widestring\n \xbf \xfe0e";
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -91,12 +107,15 @@ namespace Test
   typedef TAOX11_IDL::bounded_basic_string<char, 30> TName;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::count
   constexpr TCounter count = 99;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::name
   const TName name = "wilco";
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::double_count
   constexpr TCounter double_count = (::Test::count * 2);
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -104,6 +123,7 @@ namespace Test
   typedef TAOX11_IDL::Fixed <10, 3> fixed_type;
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::pi2
   const fixed_type pi2;
 }; // namespace Test
 
@@ -158,6 +178,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_A_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
+/// @copydoc A
 class A
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -172,6 +193,7 @@ public:
   //@}
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc A::pi
   static constexpr float pi = 3.14159;
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
@@ -280,6 +302,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EBBFFDJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BJHABFHC_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBBHIAHG_INCLUDED__
-#define __RIDL_TESTC_H_IBBHIAHG_INCLUDED__
+#ifndef __RIDL_TESTC_H_BDCGHBAA_INCLUDED__
+#define __RIDL_TESTC_H_BDCGHBAA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -60,6 +60,7 @@ private:
 };// Global
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Test
 namespace Test
 {
 
@@ -68,12 +69,19 @@ namespace Test
   /// @copydoc Test::DataType
   enum class DataType : uint32_t
   {
+    ///@copydoc Test::dtEmpty
     dtEmpty,
+    ///@copydoc Test::dtLong
     dtLong,
+    ///@copydoc Test::dtShort
     dtShort,
+    ///@copydoc Test::dtString
     dtString,
+    ///@copydoc Test::dtPoint
     dtPoint,
+    ///@copydoc Test::dtTrack
     dtTrack,
+    ///@copydoc Test::dtGlobal
     dtGlobal
   };// DataType
 
@@ -447,6 +455,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
+  /// @copydoc Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -508,6 +517,7 @@ namespace Test
   // generated from StubHeaderWriter#enter_interface
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
+  /// @copydoc Test::A
   class A
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -2060,6 +2070,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IBBHIAHG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BDCGHBAA_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EJCJCIGH_INCLUDED__
-#define __RIDL_TESTC_H_EJCJCIGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_DDEFAIAD_INCLUDED__
+#define __RIDL_TESTC_H_DDEFAIAD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -32,10 +32,12 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Test
 namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/except_pre.erb
+  /// @copydoc Test::FooEx
   class FooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
@@ -59,17 +61,23 @@ namespace Test
     FooEx& operator= (const FooEx& x);
     FooEx& operator= (FooEx&& x);
 
+    /// @copydoc Test::FooEx::message
+    //@{
     void message (const std::string& _message);
     void message (std::string&& _message);
     const std::string& message () const;
     std::string& message ();
+    //@}
+
   protected:
     virtual void _info (std::ostream&) const override;
+
   private:
     std::string message_;
   }; // FooEx
 
   // generated from c++11/templates/cli/hdr/except_pre.erb
+  /// @copydoc Test::BooEx
   class BooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
@@ -93,11 +101,16 @@ namespace Test
     BooEx& operator= (const BooEx& x);
     BooEx& operator= (BooEx&& x);
 
+    /// @copydoc Test::BooEx::id
+    //@{
     void id (int32_t _id);
     int32_t id () const;
     int32_t& id ();
+    //@}
+
   protected:
     virtual void _info (std::ostream&) const override;
+
   private:
     int32_t id_;
   }; // BooEx
@@ -159,6 +172,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
+  /// @copydoc Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -182,8 +196,10 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/attribute.erb
     /// @copydoc Test::Foo::a_string
+    //@{
     virtual std::string a_string();
     virtual void a_string(const std::string& _v);
+    //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::shutdown
@@ -339,6 +355,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EJCJCIGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DDEFAIAD_INCLUDED__ */
 
 // -*- END -*-

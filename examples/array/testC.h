@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJDEDBGC_INCLUDED__
-#define __RIDL_TESTC_H_JJDEDBGC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GGFGIHBJ_INCLUDED__
+#define __RIDL_TESTC_H_GGFGIHBJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -32,6 +32,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Test
 namespace Test
 {
 
@@ -104,6 +105,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
+  /// @copydoc Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -289,6 +291,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJDEDBGC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GGFGIHBJ_INCLUDED__ */
 
 // -*- END -*-

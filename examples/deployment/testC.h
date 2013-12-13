@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GCDAHAHA_INCLUDED__
-#define __RIDL_TESTC_H_GCDAHAHA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JGAHCAAA_INCLUDED__
+#define __RIDL_TESTC_H_JGAHCAAA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -32,6 +32,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Deployment
 namespace Deployment
 {
 
@@ -138,11 +139,17 @@ namespace Deployment
   /// @copydoc Deployment::SatisfierPropertyKind
   enum class SatisfierPropertyKind : uint32_t
   {
+    ///@copydoc Deployment::Quantity
     Quantity,
+    ///@copydoc Deployment::Capacity
     Capacity,
+    ///@copydoc Deployment::Minimum
     Minimum,
+    ///@copydoc Deployment::Maximum
     Maximum,
+    ///@copydoc Deployment::Attribute
     Attribute,
+    ///@copydoc Deployment::Selection
     Selection
   };// SatisfierPropertyKind
 
@@ -212,6 +219,7 @@ namespace Deployment
 
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Deployment
 namespace Deployment
 {
 
@@ -220,13 +228,21 @@ namespace Deployment
   /// @copydoc Deployment::CCMComponentPortKind
   enum class CCMComponentPortKind : uint32_t
   {
+    ///@copydoc Deployment::Facet
     Facet,
+    ///@copydoc Deployment::SimplexReceptacle
     SimplexReceptacle,
+    ///@copydoc Deployment::MultiplexReceptacle
     MultiplexReceptacle,
+    ///@copydoc Deployment::EventEmitter
     EventEmitter,
+    ///@copydoc Deployment::EventPublisher
     EventPublisher,
+    ///@copydoc Deployment::EventConsumer
     EventConsumer,
+    ///@copydoc Deployment::ExtendedPort
     ExtendedPort,
+    ///@copydoc Deployment::MirrorPort
     MirrorPort
   };// CCMComponentPortKind
 
@@ -572,10 +588,15 @@ namespace Deployment
   /// @copydoc Deployment::ResourceUsageKind
   enum class ResourceUsageKind : uint32_t
   {
+    ///@copydoc Deployment::None
     None,
+    ///@copydoc Deployment::InstanceUsesResource
     InstanceUsesResource,
+    ///@copydoc Deployment::ResourceUsesInstance
     ResourceUsesInstance,
+    ///@copydoc Deployment::PortUsesResource
     PortUsesResource,
+    ///@copydoc Deployment::ResourceUsesPort
     ResourceUsesPort
   };// ResourceUsageKind
 
@@ -1346,8 +1367,11 @@ namespace Deployment
   /// @copydoc Deployment::PlanLocalityKind
   enum class PlanLocalityKind : uint32_t
   {
+    ///@copydoc Deployment::PlanSameProcess
     PlanSameProcess,
+    ///@copydoc Deployment::PlanDifferentProcess
     PlanDifferentProcess,
+    ///@copydoc Deployment::PlanNoConstraint
     PlanNoConstraint
   };// PlanLocalityKind
 
@@ -1528,6 +1552,7 @@ namespace Deployment
 
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Deployment
 namespace Deployment
 {
 
@@ -5123,6 +5148,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GCDAHAHA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JGAHCAAA_INCLUDED__ */
 
 // -*- END -*-

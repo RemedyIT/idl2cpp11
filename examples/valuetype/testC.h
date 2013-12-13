@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFDHCDAF_INCLUDED__
-#define __RIDL_TESTC_H_GFDHCDAF_INCLUDED__
+#ifndef __RIDL_TESTC_H_IGJBGABJ_INCLUDED__
+#define __RIDL_TESTC_H_IGJBGABJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -328,6 +328,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_A_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
+/// @copydoc A
 class A
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -805,6 +806,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_X_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
+/// @copydoc X
 class X
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -852,8 +854,11 @@ private:
 /// @copydoc Color
 enum class Color : uint32_t
 {
+  ///@copydoc red
   red,
+  ///@copydoc green
   green,
+  ///@copydoc blue
   blue
 };// Color
 
@@ -1035,6 +1040,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_A1_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
+/// @copydoc A1
 class A1
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -1767,6 +1773,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GFDHCDAF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IGJBGABJ_INCLUDED__ */
 
 // -*- END -*-

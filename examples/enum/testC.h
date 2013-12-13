@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ICFBGDFC_INCLUDED__
-#define __RIDL_TESTC_H_ICFBGDFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBFFAEJG_INCLUDED__
+#define __RIDL_TESTC_H_IBFFAEJG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -30,6 +30,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
+/// @copydoc Test
 namespace Test
 {
 
@@ -38,13 +39,17 @@ namespace Test
   /// @copydoc Test::EEnum
   enum class EEnum : uint32_t
   {
+    ///@copydoc Test::A
     A,
+    ///@copydoc Test::B
     B,
+    ///@copydoc Test::C
     C
   };// EEnum
 
 
   // generated from StubHeaderWriter#visit_const
+  /// @copydoc Test::my_enum
   constexpr EEnum my_enum = EEnum::A;
 }; // namespace Test
 
@@ -92,6 +97,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ICFBGDFC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBFFAEJG_INCLUDED__ */
 
 // -*- END -*-
