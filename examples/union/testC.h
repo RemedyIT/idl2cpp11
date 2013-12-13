@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDCGHBAA_INCLUDED__
-#define __RIDL_TESTC_H_BDCGHBAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DJDGIDCA_INCLUDED__
+#define __RIDL_TESTC_H_DJDGIDCA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -171,64 +171,120 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/union_post.erb
+    /// Default constructor creating an unitialized union
     inline Data ();
+    /// Copy constructor
     inline Data (const Data&);
+    /// Move constructor
     inline Data (Data&&);
+    /// Destructor
     inline ~Data ();
+    /// Copy assignment operator
     inline Data &operator= (const Data&);
+    /// Move assignment operator
     inline Data &operator= (Data&&);
 
+    /// Set the discriminator. Only possible to set it to a
+    /// value within the same current union member, otherwise
+    /// a BAD_PARAM exception is thrown
     inline void _d (DataType);
+    /// Get the discriminator
     inline DataType _d () const;
 
     /// @copydoc Test::Data::longData
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void longData (int32_t _longData);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline int32_t longData () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline int32_t& longData ();
     //@}
 
     /// @copydoc Test::Data::shortData
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void shortData (int16_t _shortData);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline int16_t shortData () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline int16_t& shortData ();
     //@}
 
     /// @copydoc Test::Data::stringData
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void stringData (const std::string& _stringData);
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void stringData (std::string&& _stringData);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline const std::string& stringData () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline std::string& stringData ();
     //@}
 
     /// @copydoc Test::Data::pointData
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void pointData (const ::Test::Point& _pointData);
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void pointData (::Test::Point&& _pointData);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline const ::Test::Point& pointData () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline ::Test::Point& pointData ();
     //@}
 
     /// @copydoc Test::Data::trackData
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void trackData (const ::Test::Track& _trackData);
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void trackData (::Test::Track&& _trackData);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline const ::Test::Track& trackData () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline ::Test::Track& trackData ();
     //@}
 
     /// @copydoc Test::Data::globalData
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void globalData (const ::Global& _globalData);
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void globalData (::Global&& _globalData);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline const ::Global& globalData () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline ::Global& globalData ();
     //@}
 
+    /// Modifier that sets the union to a legal default value
     inline void _default ();
 
+    /// Exchange the value of union in an efficient matter
     inline void swap (Data& s);
 
   private:
@@ -340,46 +396,86 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/union_post.erb
+    /// Default constructor creating an union initialized to
+    /// the default cause
     inline U ();
+    /// Copy constructor
     inline U (const U&);
+    /// Move constructor
     inline U (U&&);
+    /// Destructor
     inline ~U ();
+    /// Copy assignment operator
     inline U &operator= (const U&);
+    /// Move assignment operator
     inline U &operator= (U&&);
 
+    /// Set the discriminator. Only possible to set it to a
+    /// value within the same current union member, otherwise
+    /// a BAD_PARAM exception is thrown
     inline void _d (int32_t);
+    /// Get the discriminator
     inline int32_t _d () const;
 
     /// @copydoc Test::U::x
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void x (int32_t _x);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline int32_t x () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline int32_t& x ();
     //@}
 
     /// @copydoc Test::U::z
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void z (const std::string& _z);
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void z (std::string&& _z);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline const std::string& z () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline std::string& z ();
     //@}
 
     /// @copydoc Test::U::w
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void w (const ::Test::S& _w);
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void w (::Test::S&& _w);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline const ::Test::S& w () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline ::Test::S& w ();
     //@}
 
     /// @copydoc Test::U::obj
     //@{
+    /// Set the value of the union, the discriminator is automatically
+    /// set to the correct value
     inline void obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj);
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline TAOX11_IDL::traits< ::Test::A>::ref_type obj () const;
+    /// Get the value of the union, if the discriminator doesn't match a
+    /// BAD_PARAM exception is thrown
     inline TAOX11_IDL::traits< ::Test::A>::ref_type& obj ();
     //@}
 
+    /// Exchange the value of union in an efficient matter
     inline void swap (U& s);
 
   private:
@@ -2070,6 +2166,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BDCGHBAA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DJDGIDCA_INCLUDED__ */
 
 // -*- END -*-
