@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IDHEEFHD_INCLUDED__
-#define __RIDL_TESTC_H_IDHEEFHD_INCLUDED__
+#ifndef __RIDL_TESTC_H_EGGDJBEC_INCLUDED__
+#define __RIDL_TESTC_H_EGGDJBEC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -42,16 +42,23 @@ class RadarTrack
 public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
+  /// Default constructor
   inline RadarTrack ();
+  /// Destructor
   ~RadarTrack () = default;
-  RadarTrack (const RadarTrack&) = default;
-  RadarTrack (RadarTrack&&) = default;
+  /// Copy constructor
+  RadarTrack (const RadarTrack& x) = default;
+  /// Move constructor
+  RadarTrack (RadarTrack&& x) = default;
+  /// Constructor which accepts value for all members
   explicit inline RadarTrack (std::string id,
                        int32_t x,
                        int32_t y,
                        int32_t z,
                        ::octetseq plot);
+  /// Copy assignment operator
   inline RadarTrack& operator= (const RadarTrack& x);
+  /// Move assignment operator
   inline RadarTrack& operator= (RadarTrack&& x);
 
   /// @copydoc RadarTrack::id
@@ -91,6 +98,7 @@ public:
   inline ::octetseq& plot ();
   //@}
 
+  /// Exchange the value of two structs in an efficient matter
   inline void swap (RadarTrack& s);
 
 private:
@@ -266,6 +274,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IDHEEFHD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EGGDJBEC_INCLUDED__ */
 
 // -*- END -*-

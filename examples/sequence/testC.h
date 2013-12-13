@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FDGAFDDB_INCLUDED__
-#define __RIDL_TESTC_H_FDGAFDDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHDDGCID_INCLUDED__
+#define __RIDL_TESTC_H_FHDDGCID_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -46,17 +46,24 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Simple ();
+    /// Destructor
     ~Simple () = default;
-    Simple (const Simple&) = default;
-    Simple (Simple&&) = default;
+    /// Copy constructor
+    Simple (const Simple& x) = default;
+    /// Move constructor
+    Simple (Simple&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Simple (uint8_t o,
                      int32_t l,
                      std::string s,
                      double d,
                      bool b,
                      char c);
+    /// Copy assignment operator
     inline Simple& operator= (const Simple& x);
+    /// Move assignment operator
     inline Simple& operator= (Simple&& x);
 
     /// @copydoc Test::Simple::o
@@ -102,6 +109,7 @@ namespace Test
     inline char& c ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Simple& s);
 
   private:
@@ -599,6 +607,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FDGAFDDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHDDGCID_INCLUDED__ */
 
 // -*- END -*-

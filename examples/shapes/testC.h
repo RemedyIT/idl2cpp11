@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IIHGHADG_INCLUDED__
-#define __RIDL_TESTC_H_IIHGHADG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBJGFAIB_INCLUDED__
+#define __RIDL_TESTC_H_IBJGFAIB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -38,15 +38,22 @@ class ShapeType
 public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
+  /// Default constructor
   inline ShapeType ();
+  /// Destructor
   ~ShapeType () = default;
-  ShapeType (const ShapeType&) = default;
-  ShapeType (ShapeType&&) = default;
+  /// Copy constructor
+  ShapeType (const ShapeType& x) = default;
+  /// Move constructor
+  ShapeType (ShapeType&& x) = default;
+  /// Constructor which accepts value for all members
   explicit inline ShapeType (std::string color,
                       int32_t x,
                       int32_t y,
                       int32_t shapesize);
+  /// Copy assignment operator
   inline ShapeType& operator= (const ShapeType& x);
+  /// Move assignment operator
   inline ShapeType& operator= (ShapeType&& x);
 
   /// @copydoc ShapeType::color
@@ -78,6 +85,7 @@ public:
   inline int32_t& shapesize ();
   //@}
 
+  /// Exchange the value of two structs in an efficient matter
   inline void swap (ShapeType& s);
 
 private:
@@ -95,14 +103,21 @@ class Attributes
 public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
+  /// Default constructor
   inline Attributes ();
+  /// Destructor
   ~Attributes () = default;
-  Attributes (const Attributes&) = default;
-  Attributes (Attributes&&) = default;
+  /// Copy constructor
+  Attributes (const Attributes& x) = default;
+  /// Move constructor
+  Attributes (Attributes&& x) = default;
+  /// Constructor which accepts value for all members
   explicit inline Attributes (std::string shape,
                        std::string color,
                        float speed);
+  /// Copy assignment operator
   inline Attributes& operator= (const Attributes& x);
+  /// Move assignment operator
   inline Attributes& operator= (Attributes&& x);
 
   /// @copydoc Attributes::shape
@@ -128,6 +143,7 @@ public:
   inline float& speed ();
   //@}
 
+  /// Exchange the value of two structs in an efficient matter
   inline void swap (Attributes& s);
 
 private:
@@ -376,6 +392,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IIHGHADG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBJGFAIB_INCLUDED__ */
 
 // -*- END -*-

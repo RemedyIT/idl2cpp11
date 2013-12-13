@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CGJBAHDB_INCLUDED__
-#define __RIDL_TESTC_H_CGJBAHDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_BBFCIBEA_INCLUDED__
+#define __RIDL_TESTC_H_BBFCIBEA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -38,12 +38,19 @@ class Global
 public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
+  /// Default constructor
   inline Global ();
+  /// Destructor
   ~Global () = default;
-  Global (const Global&) = default;
-  Global (Global&&) = default;
+  /// Copy constructor
+  Global (const Global& x) = default;
+  /// Move constructor
+  Global (Global&& x) = default;
+  /// Constructor which accepts value for all members
   explicit inline Global (int32_t x);
+  /// Copy assignment operator
   inline Global& operator= (const Global& x);
+  /// Move assignment operator
   inline Global& operator= (Global&& x);
 
   /// @copydoc Global::x
@@ -53,6 +60,7 @@ public:
   inline int32_t& x ();
   //@}
 
+  /// Exchange the value of two structs in an efficient matter
   inline void swap (Global& s);
 
 private:
@@ -94,13 +102,20 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Point ();
+    /// Destructor
     ~Point () = default;
-    Point (const Point&) = default;
-    Point (Point&&) = default;
+    /// Copy constructor
+    Point (const Point& x) = default;
+    /// Move constructor
+    Point (Point&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Point (int32_t x,
                     int32_t y);
+    /// Copy assignment operator
     inline Point& operator= (const Point& x);
+    /// Move assignment operator
     inline Point& operator= (Point&& x);
 
     /// @copydoc Test::Point::x
@@ -117,6 +132,7 @@ namespace Test
     inline int32_t& y ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Point& s);
 
   private:
@@ -132,13 +148,20 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Track ();
+    /// Destructor
     ~Track () = default;
-    Track (const Track&) = default;
-    Track (Track&&) = default;
+    /// Copy constructor
+    Track (const Track& x) = default;
+    /// Move constructor
+    Track (Track&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Track (int32_t id,
                     ::Test::Point p);
+    /// Copy assignment operator
     inline Track& operator= (const Track& x);
+    /// Move assignment operator
     inline Track& operator= (Track&& x);
 
     /// @copydoc Test::Track::id
@@ -156,6 +179,7 @@ namespace Test
     inline ::Test::Point& p ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Track& s);
 
   private:
@@ -285,7 +309,7 @@ namespace Test
     /// Modifier that sets the union to a legal default value
     inline void _default ();
 
-    /// Exchange the value of union in an efficient matter
+    /// Exchange the value of two unions in an efficient matter
     inline void swap (Data& s);
 
   private:
@@ -314,12 +338,19 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline S ();
+    /// Destructor
     ~S () = default;
-    S (const S&) = default;
-    S (S&&) = default;
+    /// Copy constructor
+    S (const S& x) = default;
+    /// Move constructor
+    S (S&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline S (int32_t len);
+    /// Copy assignment operator
     inline S& operator= (const S& x);
+    /// Move assignment operator
     inline S& operator= (S&& x);
 
     /// @copydoc Test::S::len
@@ -329,6 +360,7 @@ namespace Test
     inline int32_t& len ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (S& s);
 
   private:
@@ -476,7 +508,7 @@ namespace Test
     inline TAOX11_IDL::traits< ::Test::A>::ref_type& obj ();
     //@}
 
-    /// Exchange the value of union in an efficient matter
+    /// Exchange the value of two unions in an efficient matter
     inline void swap (U& s);
 
   private:
@@ -2167,6 +2199,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CGJBAHDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BBFCIBEA_INCLUDED__ */
 
 // -*- END -*-

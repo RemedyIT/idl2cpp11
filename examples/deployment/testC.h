@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IIDGJEIA_INCLUDED__
-#define __RIDL_TESTC_H_IIDGJEIA_INCLUDED__
+#ifndef __RIDL_TESTC_H_CEBDJBJF_INCLUDED__
+#define __RIDL_TESTC_H_CEBDJBJF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -44,13 +44,20 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Property ();
+    /// Destructor
     ~Property () = default;
-    Property (const Property&) = default;
-    Property (Property&&) = default;
+    /// Copy constructor
+    Property (const Property& x) = default;
+    /// Move constructor
+    Property (Property&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Property (std::string name,
                        TAOX11_NAMESPACE::CORBA::Any value);
+    /// Copy assignment operator
     inline Property& operator= (const Property& x);
+    /// Move assignment operator
     inline Property& operator= (Property&& x);
 
     /// @copydoc Deployment::Property::name
@@ -69,6 +76,7 @@ namespace Deployment
     inline TAOX11_NAMESPACE::CORBA::Any& value ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Property& s);
 
   private:
@@ -88,14 +96,21 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Requirement ();
+    /// Destructor
     ~Requirement () = default;
-    Requirement (const Requirement&) = default;
-    Requirement (Requirement&&) = default;
+    /// Copy constructor
+    Requirement (const Requirement& x) = default;
+    /// Move constructor
+    Requirement (Requirement&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Requirement (std::string name,
                           std::string resourceType,
                           ::Deployment::Properties property);
+    /// Copy assignment operator
     inline Requirement& operator= (const Requirement& x);
+    /// Move assignment operator
     inline Requirement& operator= (Requirement&& x);
 
     /// @copydoc Deployment::Requirement::name
@@ -122,6 +137,7 @@ namespace Deployment
     inline ::Deployment::Properties& property ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Requirement& s);
 
   private:
@@ -162,15 +178,22 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline SatisfierProperty ();
+    /// Destructor
     ~SatisfierProperty () = default;
-    SatisfierProperty (const SatisfierProperty&) = default;
-    SatisfierProperty (SatisfierProperty&&) = default;
+    /// Copy constructor
+    SatisfierProperty (const SatisfierProperty& x) = default;
+    /// Move constructor
+    SatisfierProperty (SatisfierProperty&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline SatisfierProperty (std::string name,
                                 ::Deployment::SatisfierPropertyKind kind,
                                 bool dynamic,
                                 TAOX11_NAMESPACE::CORBA::Any value);
+    /// Copy assignment operator
     inline SatisfierProperty& operator= (const SatisfierProperty& x);
+    /// Move assignment operator
     inline SatisfierProperty& operator= (SatisfierProperty&& x);
 
     /// @copydoc Deployment::SatisfierProperty::name
@@ -203,6 +226,7 @@ namespace Deployment
     inline TAOX11_NAMESPACE::CORBA::Any& value ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (SatisfierProperty& s);
 
   private:
@@ -255,10 +279,15 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ComponentPortDescription ();
+    /// Destructor
     ~ComponentPortDescription () = default;
-    ComponentPortDescription (const ComponentPortDescription&) = default;
-    ComponentPortDescription (ComponentPortDescription&&) = default;
+    /// Copy constructor
+    ComponentPortDescription (const ComponentPortDescription& x) = default;
+    /// Move constructor
+    ComponentPortDescription (ComponentPortDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ComponentPortDescription (std::string name,
                                        std::string specificType,
                                        ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
@@ -268,7 +297,9 @@ namespace Deployment
                                        bool optional,
                                        ::Deployment::CCMComponentPortKind kind,
                                        ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam);
+    /// Copy assignment operator
     inline ComponentPortDescription& operator= (const ComponentPortDescription& x);
+    /// Move assignment operator
     inline ComponentPortDescription& operator= (ComponentPortDescription&& x);
 
     /// @copydoc Deployment::ComponentPortDescription::name
@@ -338,6 +369,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ComponentPortDescription& s);
 
   private:
@@ -364,13 +396,20 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ComponentPropertyDescription ();
+    /// Destructor
     ~ComponentPropertyDescription () = default;
-    ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
-    ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
+    /// Copy constructor
+    ComponentPropertyDescription (const ComponentPropertyDescription& x) = default;
+    /// Move constructor
+    ComponentPropertyDescription (ComponentPropertyDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ComponentPropertyDescription (std::string name,
                                            TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
+    /// Copy assignment operator
     inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
+    /// Move assignment operator
     inline ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
 
     /// @copydoc Deployment::ComponentPropertyDescription::name
@@ -388,6 +427,7 @@ namespace Deployment
     inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ComponentPropertyDescription& s);
 
   private:
@@ -407,10 +447,15 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ComponentInterfaceDescription ();
+    /// Destructor
     ~ComponentInterfaceDescription () = default;
-    ComponentInterfaceDescription (const ComponentInterfaceDescription&) = default;
-    ComponentInterfaceDescription (ComponentInterfaceDescription&&) = default;
+    /// Copy constructor
+    ComponentInterfaceDescription (const ComponentInterfaceDescription& x) = default;
+    /// Move constructor
+    ComponentInterfaceDescription (ComponentInterfaceDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ComponentInterfaceDescription (std::string label,
                                             std::string UUID,
                                             std::string specificType,
@@ -420,7 +465,9 @@ namespace Deployment
                                             ::Deployment::ComponentPortDescriptions port,
                                             ::Deployment::ComponentPropertyDescriptions property,
                                             ::Deployment::Properties infoProperty);
+    /// Copy assignment operator
     inline ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription& x);
+    /// Move assignment operator
     inline ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&& x);
 
     /// @copydoc Deployment::ComponentInterfaceDescription::label
@@ -495,6 +542,7 @@ namespace Deployment
     inline ::Deployment::Properties& infoProperty ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ComponentInterfaceDescription& s);
 
   private:
@@ -517,16 +565,23 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline MonolithicDeploymentDescription ();
+    /// Destructor
     ~MonolithicDeploymentDescription () = default;
-    MonolithicDeploymentDescription (const MonolithicDeploymentDescription&) = default;
-    MonolithicDeploymentDescription (MonolithicDeploymentDescription&&) = default;
+    /// Copy constructor
+    MonolithicDeploymentDescription (const MonolithicDeploymentDescription& x) = default;
+    /// Move constructor
+    MonolithicDeploymentDescription (MonolithicDeploymentDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline MonolithicDeploymentDescription (std::string name,
                                               ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                               ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
                                               ::Deployment::Properties execParameter,
                                               ::Deployment::Requirements deployRequirement);
+    /// Copy assignment operator
     inline MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription& x);
+    /// Move assignment operator
     inline MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&& x);
 
     /// @copydoc Deployment::MonolithicDeploymentDescription::name
@@ -569,6 +624,7 @@ namespace Deployment
     inline ::Deployment::Requirements& deployRequirement ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (MonolithicDeploymentDescription& s);
 
   private:
@@ -609,15 +665,22 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline InstanceResourceDeploymentDescription ();
+    /// Destructor
     ~InstanceResourceDeploymentDescription () = default;
-    InstanceResourceDeploymentDescription (const InstanceResourceDeploymentDescription&) = default;
-    InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&&) = default;
+    /// Copy constructor
+    InstanceResourceDeploymentDescription (const InstanceResourceDeploymentDescription& x) = default;
+    /// Move constructor
+    InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline InstanceResourceDeploymentDescription (::Deployment::ResourceUsageKind resourceUsage,
                                                     std::string requirementName,
                                                     std::string resourceName,
                                                     ::Deployment::Properties property);
+    /// Copy assignment operator
     inline InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription& x);
+    /// Move assignment operator
     inline InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&& x);
 
     /// @copydoc Deployment::InstanceResourceDeploymentDescription::resourceUsage
@@ -651,6 +714,7 @@ namespace Deployment
     inline ::Deployment::Properties& property ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (InstanceResourceDeploymentDescription& s);
 
   private:
@@ -672,10 +736,15 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline InstanceDeploymentDescription ();
+    /// Destructor
     ~InstanceDeploymentDescription () = default;
-    InstanceDeploymentDescription (const InstanceDeploymentDescription&) = default;
-    InstanceDeploymentDescription (InstanceDeploymentDescription&&) = default;
+    /// Copy constructor
+    InstanceDeploymentDescription (const InstanceDeploymentDescription& x) = default;
+    /// Move constructor
+    InstanceDeploymentDescription (InstanceDeploymentDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline InstanceDeploymentDescription (std::string name,
                                             std::string node,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -683,7 +752,9 @@ namespace Deployment
                                             ::Deployment::Properties configProperty,
                                             ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
                                             ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource);
+    /// Copy assignment operator
     inline InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription& x);
+    /// Move assignment operator
     inline InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&& x);
 
     /// @copydoc Deployment::InstanceDeploymentDescription::name
@@ -741,6 +812,7 @@ namespace Deployment
     inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (InstanceDeploymentDescription& s);
 
   private:
@@ -765,12 +837,19 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ComponentExternalPortEndpoint ();
+    /// Destructor
     ~ComponentExternalPortEndpoint () = default;
-    ComponentExternalPortEndpoint (const ComponentExternalPortEndpoint&) = default;
-    ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&&) = default;
+    /// Copy constructor
+    ComponentExternalPortEndpoint (const ComponentExternalPortEndpoint& x) = default;
+    /// Move constructor
+    ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ComponentExternalPortEndpoint (std::string portName);
+    /// Copy assignment operator
     inline ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint& x);
+    /// Move assignment operator
     inline ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&& x);
 
     /// @copydoc Deployment::ComponentExternalPortEndpoint::portName
@@ -781,6 +860,7 @@ namespace Deployment
     inline std::string& portName ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ComponentExternalPortEndpoint& s);
 
   private:
@@ -799,15 +879,22 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline PlanSubcomponentPortEndpoint ();
+    /// Destructor
     ~PlanSubcomponentPortEndpoint () = default;
-    PlanSubcomponentPortEndpoint (const PlanSubcomponentPortEndpoint&) = default;
-    PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&&) = default;
+    /// Copy constructor
+    PlanSubcomponentPortEndpoint (const PlanSubcomponentPortEndpoint& x) = default;
+    /// Move constructor
+    PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPortEndpoint (std::string portName,
                                            bool provider,
                                            ::Deployment::CCMComponentPortKind kind,
                                            uint32_t instanceRef);
+    /// Copy assignment operator
     inline PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint& x);
+    /// Move assignment operator
     inline PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&& x);
 
     /// @copydoc Deployment::PlanSubcomponentPortEndpoint::portName
@@ -839,6 +926,7 @@ namespace Deployment
     inline uint32_t& instanceRef ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (PlanSubcomponentPortEndpoint& s);
 
   private:
@@ -860,15 +948,22 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ExternalReferenceEndpoint ();
+    /// Destructor
     ~ExternalReferenceEndpoint () = default;
-    ExternalReferenceEndpoint (const ExternalReferenceEndpoint&) = default;
-    ExternalReferenceEndpoint (ExternalReferenceEndpoint&&) = default;
+    /// Copy constructor
+    ExternalReferenceEndpoint (const ExternalReferenceEndpoint& x) = default;
+    /// Move constructor
+    ExternalReferenceEndpoint (ExternalReferenceEndpoint&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ExternalReferenceEndpoint (std::string location,
                                         bool provider,
                                         std::string portName,
                                         ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType);
+    /// Copy assignment operator
     inline ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint& x);
+    /// Move assignment operator
     inline ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&& x);
 
     /// @copydoc Deployment::ExternalReferenceEndpoint::location
@@ -902,6 +997,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ExternalReferenceEndpoint& s);
 
   private:
@@ -923,15 +1019,22 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ConnectionResourceDeploymentDescription ();
+    /// Destructor
     ~ConnectionResourceDeploymentDescription () = default;
-    ConnectionResourceDeploymentDescription (const ConnectionResourceDeploymentDescription&) = default;
-    ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&&) = default;
+    /// Copy constructor
+    ConnectionResourceDeploymentDescription (const ConnectionResourceDeploymentDescription& x) = default;
+    /// Move constructor
+    ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ConnectionResourceDeploymentDescription (std::string targetName,
                                                       std::string requirementName,
                                                       std::string resourceName,
                                                       ::Deployment::Properties property);
+    /// Copy assignment operator
     inline ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription& x);
+    /// Move assignment operator
     inline ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&& x);
 
     /// @copydoc Deployment::ConnectionResourceDeploymentDescription::targetName
@@ -966,6 +1069,7 @@ namespace Deployment
     inline ::Deployment::Properties& property ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ConnectionResourceDeploymentDescription& s);
 
   private:
@@ -987,10 +1091,15 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline PlanConnectionDescription ();
+    /// Destructor
     ~PlanConnectionDescription () = default;
-    PlanConnectionDescription (const PlanConnectionDescription&) = default;
-    PlanConnectionDescription (PlanConnectionDescription&&) = default;
+    /// Copy constructor
+    PlanConnectionDescription (const PlanConnectionDescription& x) = default;
+    /// Move constructor
+    PlanConnectionDescription (PlanConnectionDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline PlanConnectionDescription (std::string name,
                                         ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                         ::Deployment::Requirements deployRequirement,
@@ -998,7 +1107,9 @@ namespace Deployment
                                         ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
                                         ::Deployment::ExternalReferenceEndpoints externalReference,
                                         ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource);
+    /// Copy assignment operator
     inline PlanConnectionDescription& operator= (const PlanConnectionDescription& x);
+    /// Move assignment operator
     inline PlanConnectionDescription& operator= (PlanConnectionDescription&& x);
 
     /// @copydoc Deployment::PlanConnectionDescription::name
@@ -1057,6 +1168,7 @@ namespace Deployment
     inline ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (PlanConnectionDescription& s);
 
   private:
@@ -1081,13 +1193,20 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline PlanSubcomponentPropertyReference ();
+    /// Destructor
     ~PlanSubcomponentPropertyReference () = default;
-    PlanSubcomponentPropertyReference (const PlanSubcomponentPropertyReference&) = default;
-    PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&&) = default;
+    /// Copy constructor
+    PlanSubcomponentPropertyReference (const PlanSubcomponentPropertyReference& x) = default;
+    /// Move constructor
+    PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPropertyReference (std::string propertyName,
                                                 uint32_t instanceRef);
+    /// Copy assignment operator
     inline PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference& x);
+    /// Move assignment operator
     inline PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&& x);
 
     /// @copydoc Deployment::PlanSubcomponentPropertyReference::propertyName
@@ -1105,6 +1224,7 @@ namespace Deployment
     inline uint32_t& instanceRef ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (PlanSubcomponentPropertyReference& s);
 
   private:
@@ -1124,15 +1244,22 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline PlanPropertyMapping ();
+    /// Destructor
     ~PlanPropertyMapping () = default;
-    PlanPropertyMapping (const PlanPropertyMapping&) = default;
-    PlanPropertyMapping (PlanPropertyMapping&&) = default;
+    /// Copy constructor
+    PlanPropertyMapping (const PlanPropertyMapping& x) = default;
+    /// Move constructor
+    PlanPropertyMapping (PlanPropertyMapping&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline PlanPropertyMapping (std::string name,
                                   ::TAOX11_NAMESPACE::CORBA::StringSeq source,
                                   std::string externalName,
                                   ::Deployment::PlanSubcomponentPropertyReferences delegatesTo);
+    /// Copy assignment operator
     inline PlanPropertyMapping& operator= (const PlanPropertyMapping& x);
+    /// Move assignment operator
     inline PlanPropertyMapping& operator= (PlanPropertyMapping&& x);
 
     /// @copydoc Deployment::PlanPropertyMapping::name
@@ -1167,6 +1294,7 @@ namespace Deployment
     inline ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (PlanPropertyMapping& s);
 
   private:
@@ -1188,12 +1316,19 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ImplementationDependency ();
+    /// Destructor
     ~ImplementationDependency () = default;
-    ImplementationDependency (const ImplementationDependency&) = default;
-    ImplementationDependency (ImplementationDependency&&) = default;
+    /// Copy constructor
+    ImplementationDependency (const ImplementationDependency& x) = default;
+    /// Move constructor
+    ImplementationDependency (ImplementationDependency&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ImplementationDependency (std::string requiredType);
+    /// Copy assignment operator
     inline ImplementationDependency& operator= (const ImplementationDependency& x);
+    /// Move assignment operator
     inline ImplementationDependency& operator= (ImplementationDependency&& x);
 
     /// @copydoc Deployment::ImplementationDependency::requiredType
@@ -1204,6 +1339,7 @@ namespace Deployment
     inline std::string& requiredType ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ImplementationDependency& s);
 
   private:
@@ -1222,14 +1358,21 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ResourceDeploymentDescription ();
+    /// Destructor
     ~ResourceDeploymentDescription () = default;
-    ResourceDeploymentDescription (const ResourceDeploymentDescription&) = default;
-    ResourceDeploymentDescription (ResourceDeploymentDescription&&) = default;
+    /// Copy constructor
+    ResourceDeploymentDescription (const ResourceDeploymentDescription& x) = default;
+    /// Move constructor
+    ResourceDeploymentDescription (ResourceDeploymentDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ResourceDeploymentDescription (std::string requirementName,
                                             std::string resourceName,
                                             ::Deployment::Properties property);
+    /// Copy assignment operator
     inline ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription& x);
+    /// Move assignment operator
     inline ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&& x);
 
     /// @copydoc Deployment::ResourceDeploymentDescription::requirementName
@@ -1256,6 +1399,7 @@ namespace Deployment
     inline ::Deployment::Properties& property ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ResourceDeploymentDescription& s);
 
   private:
@@ -1276,10 +1420,15 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ArtifactDeploymentDescription ();
+    /// Destructor
     ~ArtifactDeploymentDescription () = default;
-    ArtifactDeploymentDescription (const ArtifactDeploymentDescription&) = default;
-    ArtifactDeploymentDescription (ArtifactDeploymentDescription&&) = default;
+    /// Copy constructor
+    ArtifactDeploymentDescription (const ArtifactDeploymentDescription& x) = default;
+    /// Move constructor
+    ArtifactDeploymentDescription (ArtifactDeploymentDescription&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ArtifactDeploymentDescription (std::string name,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq location,
                                             std::string node,
@@ -1287,7 +1436,9 @@ namespace Deployment
                                             ::Deployment::Properties execParameter,
                                             ::Deployment::Requirements deployRequirement,
                                             ::Deployment::ResourceDeploymentDescriptions deployedResource);
+    /// Copy assignment operator
     inline ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription& x);
+    /// Move assignment operator
     inline ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&& x);
 
     /// @copydoc Deployment::ArtifactDeploymentDescription::name
@@ -1346,6 +1497,7 @@ namespace Deployment
     inline ::Deployment::ResourceDeploymentDescriptions& deployedResource ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ArtifactDeploymentDescription& s);
 
   private:
@@ -1384,13 +1536,20 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline PlanLocality ();
+    /// Destructor
     ~PlanLocality () = default;
-    PlanLocality (const PlanLocality&) = default;
-    PlanLocality (PlanLocality&&) = default;
+    /// Copy constructor
+    PlanLocality (const PlanLocality& x) = default;
+    /// Move constructor
+    PlanLocality (PlanLocality&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline PlanLocality (::Deployment::PlanLocalityKind constraint,
                            ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
+    /// Copy assignment operator
     inline PlanLocality& operator= (const PlanLocality& x);
+    /// Move assignment operator
     inline PlanLocality& operator= (PlanLocality&& x);
 
     /// @copydoc Deployment::PlanLocality::constraint
@@ -1408,6 +1567,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (PlanLocality& s);
 
   private:
@@ -1427,10 +1587,15 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline DeploymentPlan ();
+    /// Destructor
     ~DeploymentPlan () = default;
-    DeploymentPlan (const DeploymentPlan&) = default;
-    DeploymentPlan (DeploymentPlan&&) = default;
+    /// Copy constructor
+    DeploymentPlan (const DeploymentPlan& x) = default;
+    /// Move constructor
+    DeploymentPlan (DeploymentPlan&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline DeploymentPlan (std::string label,
                              std::string UUID,
                              ::Deployment::ComponentInterfaceDescription realizes,
@@ -1442,7 +1607,9 @@ namespace Deployment
                              ::Deployment::ArtifactDeploymentDescriptions artifact,
                              ::Deployment::Properties infoProperty,
                              ::Deployment::PlanLocalities localityConstraint);
+    /// Copy assignment operator
     inline DeploymentPlan& operator= (const DeploymentPlan& x);
+    /// Move assignment operator
     inline DeploymentPlan& operator= (DeploymentPlan&& x);
 
     /// @copydoc Deployment::DeploymentPlan::label
@@ -1533,6 +1700,7 @@ namespace Deployment
     inline ::Deployment::PlanLocalities& localityConstraint ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (DeploymentPlan& s);
 
   private:
@@ -1564,14 +1732,21 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ComponentPackageReference ();
+    /// Destructor
     ~ComponentPackageReference () = default;
-    ComponentPackageReference (const ComponentPackageReference&) = default;
-    ComponentPackageReference (ComponentPackageReference&&) = default;
+    /// Copy constructor
+    ComponentPackageReference (const ComponentPackageReference& x) = default;
+    /// Move constructor
+    ComponentPackageReference (ComponentPackageReference&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ComponentPackageReference (std::string requiredUUID,
                                         std::string requiredName,
                                         ::Deployment::ComponentInterfaceDescription requiredType);
+    /// Copy assignment operator
     inline ComponentPackageReference& operator= (const ComponentPackageReference& x);
+    /// Move assignment operator
     inline ComponentPackageReference& operator= (ComponentPackageReference&& x);
 
     /// @copydoc Deployment::ComponentPackageReference::requiredUUID
@@ -1598,6 +1773,7 @@ namespace Deployment
     inline ::Deployment::ComponentInterfaceDescription& requiredType ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ComponentPackageReference& s);
 
   private:
@@ -1622,17 +1798,24 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline ImplementationRequirement ();
+    /// Destructor
     ~ImplementationRequirement () = default;
-    ImplementationRequirement (const ImplementationRequirement&) = default;
-    ImplementationRequirement (ImplementationRequirement&&) = default;
+    /// Copy constructor
+    ImplementationRequirement (const ImplementationRequirement& x) = default;
+    /// Move constructor
+    ImplementationRequirement (ImplementationRequirement&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline ImplementationRequirement (::Deployment::ResourceUsageKinds resourceUsage,
                                         std::string resourcePort,
                                         std::string componentPort,
                                         std::string name,
                                         std::string resourceType,
                                         ::Deployment::Properties property);
+    /// Copy assignment operator
     inline ImplementationRequirement& operator= (const ImplementationRequirement& x);
+    /// Move assignment operator
     inline ImplementationRequirement& operator= (ImplementationRequirement&& x);
 
     /// @copydoc Deployment::ImplementationRequirement::resourceUsage
@@ -1683,6 +1866,7 @@ namespace Deployment
     inline ::Deployment::Properties& property ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (ImplementationRequirement& s);
 
   private:
@@ -1706,14 +1890,21 @@ namespace Deployment
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Capability ();
+    /// Destructor
     ~Capability () = default;
-    Capability (const Capability&) = default;
-    Capability (Capability&&) = default;
+    /// Copy constructor
+    Capability (const Capability& x) = default;
+    /// Move constructor
+    Capability (Capability&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Capability (std::string name,
                          ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
                          ::Deployment::SatisfierProperties property);
+    /// Copy assignment operator
     inline Capability& operator= (const Capability& x);
+    /// Move assignment operator
     inline Capability& operator= (Capability&& x);
 
     /// @copydoc Deployment::Capability::name
@@ -1740,6 +1931,7 @@ namespace Deployment
     inline ::Deployment::SatisfierProperties& property ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Capability& s);
 
   private:
@@ -5148,6 +5340,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IIDGJEIA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CEBDJBJF_INCLUDED__ */
 
 // -*- END -*-

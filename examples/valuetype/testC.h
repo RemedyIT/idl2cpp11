@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EAABBAFE_INCLUDED__
-#define __RIDL_TESTC_H_EAABBAFE_INCLUDED__
+#ifndef __RIDL_TESTC_H_CJEDAGEF_INCLUDED__
+#define __RIDL_TESTC_H_CJEDAGEF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -257,12 +257,19 @@ class S
 public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
+  /// Default constructor
   inline S ();
+  /// Destructor
   ~S () = default;
-  S (const S&) = default;
-  S (S&&) = default;
+  /// Copy constructor
+  S (const S& x) = default;
+  /// Move constructor
+  S (S&& x) = default;
+  /// Constructor which accepts value for all members
   explicit inline S (int32_t value);
+  /// Copy assignment operator
   inline S& operator= (const S& x);
+  /// Move assignment operator
   inline S& operator= (S&& x);
 
   /// @copydoc S::value
@@ -272,6 +279,7 @@ public:
   inline int32_t& value ();
   //@}
 
+  /// Exchange the value of two structs in an efficient matter
   inline void swap (S& s);
 
 private:
@@ -969,12 +977,19 @@ class ColorValue2
 public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
+  /// Default constructor
   inline ColorValue2 ();
+  /// Destructor
   ~ColorValue2 () = default;
-  ColorValue2 (const ColorValue2&) = default;
-  ColorValue2 (ColorValue2&&) = default;
+  /// Copy constructor
+  ColorValue2 (const ColorValue2& x) = default;
+  /// Move constructor
+  ColorValue2 (ColorValue2&& x) = default;
+  /// Constructor which accepts value for all members
   explicit inline ColorValue2 (::Color col);
+  /// Copy assignment operator
   inline ColorValue2& operator= (const ColorValue2& x);
+  /// Move assignment operator
   inline ColorValue2& operator= (ColorValue2&& x);
 
   /// @copydoc ColorValue2::col
@@ -984,6 +999,7 @@ public:
   inline ::Color& col ();
   //@}
 
+  /// Exchange the value of two structs in an efficient matter
   inline void swap (ColorValue2& s);
 
 private:
@@ -1773,6 +1789,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EAABBAFE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CJEDAGEF_INCLUDED__ */
 
 // -*- END -*-

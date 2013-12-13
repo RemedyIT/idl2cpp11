@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHJFHCJE_INCLUDED__
-#define __RIDL_TESTC_H_FHJFHCJE_INCLUDED__
+#ifndef __RIDL_TESTC_H_GJAABEDB_INCLUDED__
+#define __RIDL_TESTC_H_GJAABEDB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -43,12 +43,19 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Variable ();
+    /// Destructor
     ~Variable () = default;
-    Variable (const Variable&) = default;
-    Variable (Variable&&) = default;
+    /// Copy constructor
+    Variable (const Variable& x) = default;
+    /// Move constructor
+    Variable (Variable&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Variable (std::string name);
+    /// Copy assignment operator
     inline Variable& operator= (const Variable& x);
+    /// Move assignment operator
     inline Variable& operator= (Variable&& x);
 
     /// @copydoc Test::Variable::name
@@ -59,6 +66,7 @@ namespace Test
     inline std::string& name ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Variable& s);
 
   private:
@@ -173,10 +181,15 @@ namespace Test
   public:
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
+    /// Default constructor
     inline Simple ();
+    /// Destructor
     ~Simple () = default;
-    Simple (const Simple&) = default;
-    Simple (Simple&&) = default;
+    /// Copy constructor
+    Simple (const Simple& x) = default;
+    /// Move constructor
+    Simple (Simple&& x) = default;
+    /// Constructor which accepts value for all members
     explicit inline Simple (uint8_t o,
                      int32_t l,
                      std::string s,
@@ -185,7 +198,9 @@ namespace Test
                      char c,
                      TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
                      ::Test::Variable v);
+    /// Copy assignment operator
     inline Simple& operator= (const Simple& x);
+    /// Move assignment operator
     inline Simple& operator= (Simple&& x);
 
     /// @copydoc Test::Simple::o
@@ -246,6 +261,7 @@ namespace Test
     inline ::Test::Variable& v ();
     //@}
 
+    /// Exchange the value of two structs in an efficient matter
     inline void swap (Simple& s);
 
   private:
@@ -603,6 +619,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHJFHCJE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GJAABEDB_INCLUDED__ */
 
 // -*- END -*-
