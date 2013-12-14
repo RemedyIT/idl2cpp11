@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EGGDJBEC_INCLUDED__
-#define __RIDL_TESTC_H_EGGDJBEC_INCLUDED__
+#ifndef __RIDL_TESTC_H_DIACDBGA_INCLUDED__
+#define __RIDL_TESTC_H_DIACDBGA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -47,9 +47,9 @@ public:
   /// Destructor
   ~RadarTrack () = default;
   /// Copy constructor
-  RadarTrack (const RadarTrack& x) = default;
+  RadarTrack (const RadarTrack&) = default;
   /// Move constructor
-  RadarTrack (RadarTrack&& x) = default;
+  RadarTrack (RadarTrack&&) = default;
   /// Constructor which accepts value for all members
   explicit inline RadarTrack (std::string id,
                        int32_t x,
@@ -274,6 +274,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EGGDJBEC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DIACDBGA_INCLUDED__ */
 
 // -*- END -*-

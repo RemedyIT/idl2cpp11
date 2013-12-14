@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CEBDJBJF_INCLUDED__
-#define __RIDL_TESTC_H_CEBDJBJF_INCLUDED__
+#ifndef __RIDL_TESTC_H_HEBBCGGF_INCLUDED__
+#define __RIDL_TESTC_H_HEBBCGGF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -49,9 +49,9 @@ namespace Deployment
     /// Destructor
     ~Property () = default;
     /// Copy constructor
-    Property (const Property& x) = default;
+    Property (const Property&) = default;
     /// Move constructor
-    Property (Property&& x) = default;
+    Property (Property&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Property (std::string name,
                        TAOX11_NAMESPACE::CORBA::Any value);
@@ -101,9 +101,9 @@ namespace Deployment
     /// Destructor
     ~Requirement () = default;
     /// Copy constructor
-    Requirement (const Requirement& x) = default;
+    Requirement (const Requirement&) = default;
     /// Move constructor
-    Requirement (Requirement&& x) = default;
+    Requirement (Requirement&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Requirement (std::string name,
                           std::string resourceType,
@@ -183,9 +183,9 @@ namespace Deployment
     /// Destructor
     ~SatisfierProperty () = default;
     /// Copy constructor
-    SatisfierProperty (const SatisfierProperty& x) = default;
+    SatisfierProperty (const SatisfierProperty&) = default;
     /// Move constructor
-    SatisfierProperty (SatisfierProperty&& x) = default;
+    SatisfierProperty (SatisfierProperty&&) = default;
     /// Constructor which accepts value for all members
     explicit inline SatisfierProperty (std::string name,
                                 ::Deployment::SatisfierPropertyKind kind,
@@ -284,9 +284,9 @@ namespace Deployment
     /// Destructor
     ~ComponentPortDescription () = default;
     /// Copy constructor
-    ComponentPortDescription (const ComponentPortDescription& x) = default;
+    ComponentPortDescription (const ComponentPortDescription&) = default;
     /// Move constructor
-    ComponentPortDescription (ComponentPortDescription&& x) = default;
+    ComponentPortDescription (ComponentPortDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPortDescription (std::string name,
                                        std::string specificType,
@@ -401,9 +401,9 @@ namespace Deployment
     /// Destructor
     ~ComponentPropertyDescription () = default;
     /// Copy constructor
-    ComponentPropertyDescription (const ComponentPropertyDescription& x) = default;
+    ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
     /// Move constructor
-    ComponentPropertyDescription (ComponentPropertyDescription&& x) = default;
+    ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPropertyDescription (std::string name,
                                            TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
@@ -452,9 +452,9 @@ namespace Deployment
     /// Destructor
     ~ComponentInterfaceDescription () = default;
     /// Copy constructor
-    ComponentInterfaceDescription (const ComponentInterfaceDescription& x) = default;
+    ComponentInterfaceDescription (const ComponentInterfaceDescription&) = default;
     /// Move constructor
-    ComponentInterfaceDescription (ComponentInterfaceDescription&& x) = default;
+    ComponentInterfaceDescription (ComponentInterfaceDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentInterfaceDescription (std::string label,
                                             std::string UUID,
@@ -570,9 +570,9 @@ namespace Deployment
     /// Destructor
     ~MonolithicDeploymentDescription () = default;
     /// Copy constructor
-    MonolithicDeploymentDescription (const MonolithicDeploymentDescription& x) = default;
+    MonolithicDeploymentDescription (const MonolithicDeploymentDescription&) = default;
     /// Move constructor
-    MonolithicDeploymentDescription (MonolithicDeploymentDescription&& x) = default;
+    MonolithicDeploymentDescription (MonolithicDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline MonolithicDeploymentDescription (std::string name,
                                               ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -670,9 +670,9 @@ namespace Deployment
     /// Destructor
     ~InstanceResourceDeploymentDescription () = default;
     /// Copy constructor
-    InstanceResourceDeploymentDescription (const InstanceResourceDeploymentDescription& x) = default;
+    InstanceResourceDeploymentDescription (const InstanceResourceDeploymentDescription&) = default;
     /// Move constructor
-    InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&& x) = default;
+    InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline InstanceResourceDeploymentDescription (::Deployment::ResourceUsageKind resourceUsage,
                                                     std::string requirementName,
@@ -741,9 +741,9 @@ namespace Deployment
     /// Destructor
     ~InstanceDeploymentDescription () = default;
     /// Copy constructor
-    InstanceDeploymentDescription (const InstanceDeploymentDescription& x) = default;
+    InstanceDeploymentDescription (const InstanceDeploymentDescription&) = default;
     /// Move constructor
-    InstanceDeploymentDescription (InstanceDeploymentDescription&& x) = default;
+    InstanceDeploymentDescription (InstanceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline InstanceDeploymentDescription (std::string name,
                                             std::string node,
@@ -842,9 +842,9 @@ namespace Deployment
     /// Destructor
     ~ComponentExternalPortEndpoint () = default;
     /// Copy constructor
-    ComponentExternalPortEndpoint (const ComponentExternalPortEndpoint& x) = default;
+    ComponentExternalPortEndpoint (const ComponentExternalPortEndpoint&) = default;
     /// Move constructor
-    ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&& x) = default;
+    ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentExternalPortEndpoint (std::string portName);
     /// Copy assignment operator
@@ -884,9 +884,9 @@ namespace Deployment
     /// Destructor
     ~PlanSubcomponentPortEndpoint () = default;
     /// Copy constructor
-    PlanSubcomponentPortEndpoint (const PlanSubcomponentPortEndpoint& x) = default;
+    PlanSubcomponentPortEndpoint (const PlanSubcomponentPortEndpoint&) = default;
     /// Move constructor
-    PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&& x) = default;
+    PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPortEndpoint (std::string portName,
                                            bool provider,
@@ -953,9 +953,9 @@ namespace Deployment
     /// Destructor
     ~ExternalReferenceEndpoint () = default;
     /// Copy constructor
-    ExternalReferenceEndpoint (const ExternalReferenceEndpoint& x) = default;
+    ExternalReferenceEndpoint (const ExternalReferenceEndpoint&) = default;
     /// Move constructor
-    ExternalReferenceEndpoint (ExternalReferenceEndpoint&& x) = default;
+    ExternalReferenceEndpoint (ExternalReferenceEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ExternalReferenceEndpoint (std::string location,
                                         bool provider,
@@ -1024,9 +1024,9 @@ namespace Deployment
     /// Destructor
     ~ConnectionResourceDeploymentDescription () = default;
     /// Copy constructor
-    ConnectionResourceDeploymentDescription (const ConnectionResourceDeploymentDescription& x) = default;
+    ConnectionResourceDeploymentDescription (const ConnectionResourceDeploymentDescription&) = default;
     /// Move constructor
-    ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&& x) = default;
+    ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ConnectionResourceDeploymentDescription (std::string targetName,
                                                       std::string requirementName,
@@ -1096,9 +1096,9 @@ namespace Deployment
     /// Destructor
     ~PlanConnectionDescription () = default;
     /// Copy constructor
-    PlanConnectionDescription (const PlanConnectionDescription& x) = default;
+    PlanConnectionDescription (const PlanConnectionDescription&) = default;
     /// Move constructor
-    PlanConnectionDescription (PlanConnectionDescription&& x) = default;
+    PlanConnectionDescription (PlanConnectionDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanConnectionDescription (std::string name,
                                         ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -1198,9 +1198,9 @@ namespace Deployment
     /// Destructor
     ~PlanSubcomponentPropertyReference () = default;
     /// Copy constructor
-    PlanSubcomponentPropertyReference (const PlanSubcomponentPropertyReference& x) = default;
+    PlanSubcomponentPropertyReference (const PlanSubcomponentPropertyReference&) = default;
     /// Move constructor
-    PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&& x) = default;
+    PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPropertyReference (std::string propertyName,
                                                 uint32_t instanceRef);
@@ -1249,9 +1249,9 @@ namespace Deployment
     /// Destructor
     ~PlanPropertyMapping () = default;
     /// Copy constructor
-    PlanPropertyMapping (const PlanPropertyMapping& x) = default;
+    PlanPropertyMapping (const PlanPropertyMapping&) = default;
     /// Move constructor
-    PlanPropertyMapping (PlanPropertyMapping&& x) = default;
+    PlanPropertyMapping (PlanPropertyMapping&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanPropertyMapping (std::string name,
                                   ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -1321,9 +1321,9 @@ namespace Deployment
     /// Destructor
     ~ImplementationDependency () = default;
     /// Copy constructor
-    ImplementationDependency (const ImplementationDependency& x) = default;
+    ImplementationDependency (const ImplementationDependency&) = default;
     /// Move constructor
-    ImplementationDependency (ImplementationDependency&& x) = default;
+    ImplementationDependency (ImplementationDependency&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ImplementationDependency (std::string requiredType);
     /// Copy assignment operator
@@ -1363,9 +1363,9 @@ namespace Deployment
     /// Destructor
     ~ResourceDeploymentDescription () = default;
     /// Copy constructor
-    ResourceDeploymentDescription (const ResourceDeploymentDescription& x) = default;
+    ResourceDeploymentDescription (const ResourceDeploymentDescription&) = default;
     /// Move constructor
-    ResourceDeploymentDescription (ResourceDeploymentDescription&& x) = default;
+    ResourceDeploymentDescription (ResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ResourceDeploymentDescription (std::string requirementName,
                                             std::string resourceName,
@@ -1425,9 +1425,9 @@ namespace Deployment
     /// Destructor
     ~ArtifactDeploymentDescription () = default;
     /// Copy constructor
-    ArtifactDeploymentDescription (const ArtifactDeploymentDescription& x) = default;
+    ArtifactDeploymentDescription (const ArtifactDeploymentDescription&) = default;
     /// Move constructor
-    ArtifactDeploymentDescription (ArtifactDeploymentDescription&& x) = default;
+    ArtifactDeploymentDescription (ArtifactDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ArtifactDeploymentDescription (std::string name,
                                             ::TAOX11_NAMESPACE::CORBA::StringSeq location,
@@ -1541,9 +1541,9 @@ namespace Deployment
     /// Destructor
     ~PlanLocality () = default;
     /// Copy constructor
-    PlanLocality (const PlanLocality& x) = default;
+    PlanLocality (const PlanLocality&) = default;
     /// Move constructor
-    PlanLocality (PlanLocality&& x) = default;
+    PlanLocality (PlanLocality&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanLocality (::Deployment::PlanLocalityKind constraint,
                            ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
@@ -1592,9 +1592,9 @@ namespace Deployment
     /// Destructor
     ~DeploymentPlan () = default;
     /// Copy constructor
-    DeploymentPlan (const DeploymentPlan& x) = default;
+    DeploymentPlan (const DeploymentPlan&) = default;
     /// Move constructor
-    DeploymentPlan (DeploymentPlan&& x) = default;
+    DeploymentPlan (DeploymentPlan&&) = default;
     /// Constructor which accepts value for all members
     explicit inline DeploymentPlan (std::string label,
                              std::string UUID,
@@ -1737,9 +1737,9 @@ namespace Deployment
     /// Destructor
     ~ComponentPackageReference () = default;
     /// Copy constructor
-    ComponentPackageReference (const ComponentPackageReference& x) = default;
+    ComponentPackageReference (const ComponentPackageReference&) = default;
     /// Move constructor
-    ComponentPackageReference (ComponentPackageReference&& x) = default;
+    ComponentPackageReference (ComponentPackageReference&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPackageReference (std::string requiredUUID,
                                         std::string requiredName,
@@ -1803,9 +1803,9 @@ namespace Deployment
     /// Destructor
     ~ImplementationRequirement () = default;
     /// Copy constructor
-    ImplementationRequirement (const ImplementationRequirement& x) = default;
+    ImplementationRequirement (const ImplementationRequirement&) = default;
     /// Move constructor
-    ImplementationRequirement (ImplementationRequirement&& x) = default;
+    ImplementationRequirement (ImplementationRequirement&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ImplementationRequirement (::Deployment::ResourceUsageKinds resourceUsage,
                                         std::string resourcePort,
@@ -1895,9 +1895,9 @@ namespace Deployment
     /// Destructor
     ~Capability () = default;
     /// Copy constructor
-    Capability (const Capability& x) = default;
+    Capability (const Capability&) = default;
     /// Move constructor
-    Capability (Capability&& x) = default;
+    Capability (Capability&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Capability (std::string name,
                          ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
@@ -5340,6 +5340,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CEBDJBJF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HEBBCGGF_INCLUDED__ */
 
 // -*- END -*-

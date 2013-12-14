@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CJEDAGEF_INCLUDED__
-#define __RIDL_TESTC_H_CJEDAGEF_INCLUDED__
+#ifndef __RIDL_TESTC_H_HGFHCEIH_INCLUDED__
+#define __RIDL_TESTC_H_HGFHCEIH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -262,9 +262,9 @@ public:
   /// Destructor
   ~S () = default;
   /// Copy constructor
-  S (const S& x) = default;
+  S (const S&) = default;
   /// Move constructor
-  S (S&& x) = default;
+  S (S&&) = default;
   /// Constructor which accepts value for all members
   explicit inline S (int32_t value);
   /// Copy assignment operator
@@ -982,9 +982,9 @@ public:
   /// Destructor
   ~ColorValue2 () = default;
   /// Copy constructor
-  ColorValue2 (const ColorValue2& x) = default;
+  ColorValue2 (const ColorValue2&) = default;
   /// Move constructor
-  ColorValue2 (ColorValue2&& x) = default;
+  ColorValue2 (ColorValue2&&) = default;
   /// Constructor which accepts value for all members
   explicit inline ColorValue2 (::Color col);
   /// Copy assignment operator
@@ -1789,6 +1789,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CJEDAGEF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HGFHCEIH_INCLUDED__ */
 
 // -*- END -*-

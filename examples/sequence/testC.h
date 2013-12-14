@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHDDGCID_INCLUDED__
-#define __RIDL_TESTC_H_FHDDGCID_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDECBAEJ_INCLUDED__
+#define __RIDL_TESTC_H_HDECBAEJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -51,9 +51,9 @@ namespace Test
     /// Destructor
     ~Simple () = default;
     /// Copy constructor
-    Simple (const Simple& x) = default;
+    Simple (const Simple&) = default;
     /// Move constructor
-    Simple (Simple&& x) = default;
+    Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Simple (uint8_t o,
                      int32_t l,
@@ -607,6 +607,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHDDGCID_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDECBAEJ_INCLUDED__ */
 
 // -*- END -*-

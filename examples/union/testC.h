@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BBFCIBEA_INCLUDED__
-#define __RIDL_TESTC_H_BBFCIBEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JHFCCBEE_INCLUDED__
+#define __RIDL_TESTC_H_JHFCCBEE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -43,9 +43,9 @@ public:
   /// Destructor
   ~Global () = default;
   /// Copy constructor
-  Global (const Global& x) = default;
+  Global (const Global&) = default;
   /// Move constructor
-  Global (Global&& x) = default;
+  Global (Global&&) = default;
   /// Constructor which accepts value for all members
   explicit inline Global (int32_t x);
   /// Copy assignment operator
@@ -107,9 +107,9 @@ namespace Test
     /// Destructor
     ~Point () = default;
     /// Copy constructor
-    Point (const Point& x) = default;
+    Point (const Point&) = default;
     /// Move constructor
-    Point (Point&& x) = default;
+    Point (Point&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Point (int32_t x,
                     int32_t y);
@@ -153,9 +153,9 @@ namespace Test
     /// Destructor
     ~Track () = default;
     /// Copy constructor
-    Track (const Track& x) = default;
+    Track (const Track&) = default;
     /// Move constructor
-    Track (Track&& x) = default;
+    Track (Track&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Track (int32_t id,
                     ::Test::Point p);
@@ -343,9 +343,9 @@ namespace Test
     /// Destructor
     ~S () = default;
     /// Copy constructor
-    S (const S& x) = default;
+    S (const S&) = default;
     /// Move constructor
-    S (S&& x) = default;
+    S (S&&) = default;
     /// Constructor which accepts value for all members
     explicit inline S (int32_t len);
     /// Copy assignment operator
@@ -2199,6 +2199,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BBFCIBEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JHFCCBEE_INCLUDED__ */
 
 // -*- END -*-

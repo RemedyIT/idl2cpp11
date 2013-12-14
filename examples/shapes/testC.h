@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBJGFAIB_INCLUDED__
-#define __RIDL_TESTC_H_IBJGFAIB_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIHGBFCC_INCLUDED__
+#define __RIDL_TESTC_H_CIHGBFCC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -43,9 +43,9 @@ public:
   /// Destructor
   ~ShapeType () = default;
   /// Copy constructor
-  ShapeType (const ShapeType& x) = default;
+  ShapeType (const ShapeType&) = default;
   /// Move constructor
-  ShapeType (ShapeType&& x) = default;
+  ShapeType (ShapeType&&) = default;
   /// Constructor which accepts value for all members
   explicit inline ShapeType (std::string color,
                       int32_t x,
@@ -108,9 +108,9 @@ public:
   /// Destructor
   ~Attributes () = default;
   /// Copy constructor
-  Attributes (const Attributes& x) = default;
+  Attributes (const Attributes&) = default;
   /// Move constructor
-  Attributes (Attributes&& x) = default;
+  Attributes (Attributes&&) = default;
   /// Constructor which accepts value for all members
   explicit inline Attributes (std::string shape,
                        std::string color,
@@ -392,6 +392,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IBJGFAIB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIHGBFCC_INCLUDED__ */
 
 // -*- END -*-
