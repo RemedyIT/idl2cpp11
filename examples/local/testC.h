@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JGDBFGDJ_INCLUDED__
-#define __RIDL_TESTC_H_JGDBFGDJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_HCHFJIBC_INCLUDED__
+#define __RIDL_TESTC_H_HCHFJIBC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -112,7 +112,7 @@ namespace Test
 
     /// Default constructor
     Foo ();
-    /// Default destructor
+    /// Destructor
     ~Foo () = default;
 
     /// Returns a strong client reference for the local object you are calling
@@ -205,7 +205,7 @@ namespace Test
 
     /// Default constructor
     Bar ();
-    /// Default destructor
+    /// Destructor
     ~Bar () = default;
 
     /// Returns a strong client reference for the local object you are calling
@@ -256,6 +256,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JGDBFGDJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HCHFJIBC_INCLUDED__ */
 
 // -*- END -*-

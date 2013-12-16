@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HEBCJGAJ_INCLUDED__
-#define __RIDL_TESTC_H_HEBCJGAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_HBBADHFD_INCLUDED__
+#define __RIDL_TESTC_H_HBBADHFD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -136,7 +136,7 @@ namespace Test
     explicit Foo (Foo_proxy_ptr p, bool);
     /// Default constructor
     Foo ();
-    /// Default destructor
+    /// Destructor
     ~Foo () = default;
 
   private:
@@ -291,6 +291,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HEBCJGAJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HBBADHFD_INCLUDED__ */
 
 // -*- END -*-

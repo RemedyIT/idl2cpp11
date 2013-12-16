@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CBAIGJGH_INCLUDED__
-#define __RIDL_TESTC_H_CBAIGJGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_EEJFEJFJ_INCLUDED__
+#define __RIDL_TESTC_H_EEJFEJFJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -179,7 +179,7 @@ namespace Test
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool);
     /// Default constructor
     Hello_Factory ();
-    /// Default destructor
+    /// Destructor
     ~Hello_Factory () = default;
 
   private:
@@ -229,7 +229,7 @@ namespace Test
     explicit Hello (Hello_proxy_ptr p, bool);
     /// Default constructor
     Hello ();
-    /// Default destructor
+    /// Destructor
     ~Hello () = default;
 
   private:
@@ -278,6 +278,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CBAIGJGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EEJFEJFJ_INCLUDED__ */
 
 // -*- END -*-

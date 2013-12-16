@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HGFHCEIH_INCLUDED__
-#define __RIDL_TESTC_H_HGFHCEIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JEDGIGFA_INCLUDED__
+#define __RIDL_TESTC_H_JEDGIGFA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -365,7 +365,7 @@ protected:
   explicit A (A_proxy_ptr p, bool);
   /// Default constructor
   A ();
-  /// Default destructor
+  /// Destructor
   ~A () = default;
 
 private:
@@ -843,7 +843,7 @@ protected:
   explicit X (X_proxy_ptr p, bool);
   /// Default constructor
   X ();
-  /// Default destructor
+  /// Destructor
   ~X () = default;
 
 private:
@@ -1085,7 +1085,7 @@ protected:
   explicit A1 (A1_proxy_ptr p, bool);
   /// Default constructor
   A1 ();
-  /// Default destructor
+  /// Destructor
   ~A1 () = default;
 
 private:
@@ -1789,6 +1789,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HGFHCEIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JEDGIGFA_INCLUDED__ */
 
 // -*- END -*-
