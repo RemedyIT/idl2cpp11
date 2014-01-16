@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CFDFIEGG_INCLUDED__
-#define __RIDL_TESTC_H_CFDFIEGG_INCLUDED__
+#ifndef __RIDL_TESTC_H_CBGHGBFD_INCLUDED__
+#define __RIDL_TESTC_H_CBGHGBFD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -48,6 +48,7 @@ namespace Test
     virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
 
     virtual void _tao_decode (TAO_InputCDR &cdr) override;
+
 
     /// Deep copy
     virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
@@ -88,6 +89,7 @@ namespace Test
     virtual void _tao_encode (TAO_OutputCDR &cdr) const override;
 
     virtual void _tao_decode (TAO_InputCDR &cdr) override;
+
 
     /// Deep copy
     virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
@@ -355,6 +357,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CFDFIEGG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CBGHGBFD_INCLUDED__ */
 
 // -*- END -*-

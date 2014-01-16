@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HHBGHDHJ_INCLUDED__
-#define __RIDL_TESTC_H_HHBGHDHJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_DABHFAII_INCLUDED__
+#define __RIDL_TESTC_H_DABHFAII_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -77,19 +77,19 @@ namespace Test
   /// @copydoc Test::DataType
   enum class DataType : uint32_t
   {
-    ///@copydoc Test::dtEmpty
+    /// @copydoc Test::DataType::dtEmpty
     dtEmpty,
-    ///@copydoc Test::dtLong
+    /// @copydoc Test::DataType::dtLong
     dtLong,
-    ///@copydoc Test::dtShort
+    /// @copydoc Test::DataType::dtShort
     dtShort,
-    ///@copydoc Test::dtString
+    /// @copydoc Test::DataType::dtString
     dtString,
-    ///@copydoc Test::dtPoint
+    /// @copydoc Test::DataType::dtPoint
     dtPoint,
-    ///@copydoc Test::dtTrack
+    /// @copydoc Test::DataType::dtTrack
     dtTrack,
-    ///@copydoc Test::dtGlobal
+    /// @copydoc Test::DataType::dtGlobal
     dtGlobal
   };// DataType
 
@@ -2199,6 +2199,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HHBGHDHJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DABHFAII_INCLUDED__ */
 
 // -*- END -*-

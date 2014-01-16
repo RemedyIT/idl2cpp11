@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JEDGIGFA_INCLUDED__
-#define __RIDL_TESTC_H_JEDGIGFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JIDGJDCI_INCLUDED__
+#define __RIDL_TESTC_H_JIDGJDCI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -862,11 +862,11 @@ private:
 /// @copydoc Color
 enum class Color : uint32_t
 {
-  ///@copydoc red
+  /// @copydoc Color::red
   red,
-  ///@copydoc green
+  /// @copydoc Color::green
   green,
-  ///@copydoc blue
+  /// @copydoc Color::blue
   blue
 };// Color
 
@@ -1789,6 +1789,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JEDGIGFA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JIDGJDCI_INCLUDED__ */
 
 // -*- END -*-

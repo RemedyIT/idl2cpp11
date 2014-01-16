@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DGACEEGH_INCLUDED__
-#define __RIDL_TESTC_H_DGACEEGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JBAHDJEC_INCLUDED__
+#define __RIDL_TESTC_H_JBAHDJEC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -155,17 +155,17 @@ namespace Deployment
   /// @copydoc Deployment::SatisfierPropertyKind
   enum class SatisfierPropertyKind : uint32_t
   {
-    ///@copydoc Deployment::Quantity
+    /// @copydoc Deployment::SatisfierPropertyKind::Quantity
     Quantity,
-    ///@copydoc Deployment::Capacity
+    /// @copydoc Deployment::SatisfierPropertyKind::Capacity
     Capacity,
-    ///@copydoc Deployment::Minimum
+    /// @copydoc Deployment::SatisfierPropertyKind::Minimum
     Minimum,
-    ///@copydoc Deployment::Maximum
+    /// @copydoc Deployment::SatisfierPropertyKind::Maximum
     Maximum,
-    ///@copydoc Deployment::Attribute
+    /// @copydoc Deployment::SatisfierPropertyKind::Attribute
     Attribute,
-    ///@copydoc Deployment::Selection
+    /// @copydoc Deployment::SatisfierPropertyKind::Selection
     Selection
   };// SatisfierPropertyKind
 
@@ -252,21 +252,21 @@ namespace Deployment
   /// @copydoc Deployment::CCMComponentPortKind
   enum class CCMComponentPortKind : uint32_t
   {
-    ///@copydoc Deployment::Facet
+    /// @copydoc Deployment::CCMComponentPortKind::Facet
     Facet,
-    ///@copydoc Deployment::SimplexReceptacle
+    /// @copydoc Deployment::CCMComponentPortKind::SimplexReceptacle
     SimplexReceptacle,
-    ///@copydoc Deployment::MultiplexReceptacle
+    /// @copydoc Deployment::CCMComponentPortKind::MultiplexReceptacle
     MultiplexReceptacle,
-    ///@copydoc Deployment::EventEmitter
+    /// @copydoc Deployment::CCMComponentPortKind::EventEmitter
     EventEmitter,
-    ///@copydoc Deployment::EventPublisher
+    /// @copydoc Deployment::CCMComponentPortKind::EventPublisher
     EventPublisher,
-    ///@copydoc Deployment::EventConsumer
+    /// @copydoc Deployment::CCMComponentPortKind::EventConsumer
     EventConsumer,
-    ///@copydoc Deployment::ExtendedPort
+    /// @copydoc Deployment::CCMComponentPortKind::ExtendedPort
     ExtendedPort,
-    ///@copydoc Deployment::MirrorPort
+    /// @copydoc Deployment::CCMComponentPortKind::MirrorPort
     MirrorPort
   };// CCMComponentPortKind
 
@@ -644,15 +644,15 @@ namespace Deployment
   /// @copydoc Deployment::ResourceUsageKind
   enum class ResourceUsageKind : uint32_t
   {
-    ///@copydoc Deployment::None
+    /// @copydoc Deployment::ResourceUsageKind::None
     None,
-    ///@copydoc Deployment::InstanceUsesResource
+    /// @copydoc Deployment::ResourceUsageKind::InstanceUsesResource
     InstanceUsesResource,
-    ///@copydoc Deployment::ResourceUsesInstance
+    /// @copydoc Deployment::ResourceUsageKind::ResourceUsesInstance
     ResourceUsesInstance,
-    ///@copydoc Deployment::PortUsesResource
+    /// @copydoc Deployment::ResourceUsageKind::PortUsesResource
     PortUsesResource,
-    ///@copydoc Deployment::ResourceUsesPort
+    /// @copydoc Deployment::ResourceUsageKind::ResourceUsesPort
     ResourceUsesPort
   };// ResourceUsageKind
 
@@ -1519,11 +1519,11 @@ namespace Deployment
   /// @copydoc Deployment::PlanLocalityKind
   enum class PlanLocalityKind : uint32_t
   {
-    ///@copydoc Deployment::PlanSameProcess
+    /// @copydoc Deployment::PlanLocalityKind::PlanSameProcess
     PlanSameProcess,
-    ///@copydoc Deployment::PlanDifferentProcess
+    /// @copydoc Deployment::PlanLocalityKind::PlanDifferentProcess
     PlanDifferentProcess,
-    ///@copydoc Deployment::PlanNoConstraint
+    /// @copydoc Deployment::PlanLocalityKind::PlanNoConstraint
     PlanNoConstraint
   };// PlanLocalityKind
 
@@ -5340,6 +5340,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DGACEEGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JBAHDJEC_INCLUDED__ */
 
 // -*- END -*-

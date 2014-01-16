@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_IFHGHDBC_INCLUDED__
-#define __RIDL_TESTS_H_IFHGHDBC_INCLUDED__
+#ifndef __RIDL_TESTS_H_DDFCJIBA_INCLUDED__
+#define __RIDL_TESTS_H_DDFCJIBA_INCLUDED__
 
 #include "testC.h"
 
@@ -18,7 +18,6 @@
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
 #include "tao/x11/portable_server/servantbase.h"
-
 
 #include "tao/x11/versionx11.h"
 
@@ -125,6 +124,6 @@ namespace TAOX11_NAMESPACE {
   }; // CORBA
 }; // TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_IFHGHDBC_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_DDFCJIBA_INCLUDED__ */
 
 // -*- END -*-
