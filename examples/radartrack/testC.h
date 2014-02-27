@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HHHCDDJA_INCLUDED__
-#define __RIDL_TESTC_H_HHHCDDJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DJIIFEDE_INCLUDED__
+#define __RIDL_TESTC_H_DJIIFEDE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -246,11 +246,6 @@ namespace std {
 #if !defined (_ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_)
 #define _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
 
-std::ostream&
-taox11_print_octetseq (
-    std::ostream& strm ,
-    const ::octetseq& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::octetseq& _v)
@@ -274,6 +269,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HHHCDDJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DJIIFEDE_INCLUDED__ */
 
 // -*- END -*-

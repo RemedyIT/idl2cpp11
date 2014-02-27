@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JBAHDJEC_INCLUDED__
-#define __RIDL_TESTC_H_JBAHDJEC_INCLUDED__
+#ifndef __RIDL_TESTC_H_JACGBDGJ_INCLUDED__
+#define __RIDL_TESTC_H_JACGBDGJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -4656,11 +4656,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_)
 #define _ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_
 
-std::ostream&
-taox11_print_Deployment_Properties (
-    std::ostream& strm ,
-    const ::Deployment::Properties& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Properties& _v)
@@ -4682,11 +4677,6 @@ operator<< (
 // MD5            : B5D61CF43DC976264FCA09DAEF6B439D
 #if !defined (_ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_)
 #define _ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_
-
-std::ostream&
-taox11_print_Deployment_Requirements (
-    std::ostream& strm ,
-    const ::Deployment::Requirements& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -4725,11 +4715,6 @@ operator<< (
 // MD5            : AAB77A9CDD8FCC93D26F3C8F9DA5CB57
 #if !defined (_ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_)
 #define _ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_
-
-std::ostream&
-taox11_print_Deployment_SatisfierProperties (
-    std::ostream& strm ,
-    const ::Deployment::SatisfierProperties& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -4771,11 +4756,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_)
 #define _ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_
 
-std::ostream&
-taox11_print_Deployment_ComponentPortDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::ComponentPortDescriptions& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPortDescriptions& _v)
@@ -4797,11 +4777,6 @@ operator<< (
 // MD5            : C38B325CAEA1E1A5249DC3C8B0654824
 #if !defined (_ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_)
 #define _ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_
-
-std::ostream&
-taox11_print_Deployment_ComponentPropertyDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::ComponentPropertyDescriptions& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -4830,11 +4805,6 @@ operator<< (
 // MD5            : 80C54C15F1FCF891188F93122A3F1653
 #if !defined (_ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_)
 #define _ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_
-
-std::ostream&
-taox11_print_Deployment_MonolithicDeploymentDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::MonolithicDeploymentDescriptions& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -4873,11 +4843,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_)
 #define _ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_
 
-std::ostream&
-taox11_print_Deployment_InstanceResourceDeploymentDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::InstanceResourceDeploymentDescriptions& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
@@ -4899,11 +4864,6 @@ operator<< (
 // MD5            : 5DAB54D520633DBBAAC64AB44B5264EF
 #if !defined (_ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_)
 #define _ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_
-
-std::ostream&
-taox11_print_Deployment_InstanceDeploymentDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::InstanceDeploymentDescriptions& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -4927,11 +4887,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_)
 #define _ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_
 
-std::ostream&
-taox11_print_Deployment_ComponentExternalPortEndpoints (
-    std::ostream& strm ,
-    const ::Deployment::ComponentExternalPortEndpoints& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentExternalPortEndpoints& _v)
@@ -4953,11 +4908,6 @@ operator<< (
 // MD5            : B166E528DC38CC7B9823B4A707AF73F7
 #if !defined (_ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_)
 #define _ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_
-
-std::ostream&
-taox11_print_Deployment_PlanSubcomponentPortEndpoints (
-    std::ostream& strm ,
-    const ::Deployment::PlanSubcomponentPortEndpoints& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -4981,11 +4931,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_)
 #define _ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_
 
-std::ostream&
-taox11_print_Deployment_ExternalReferenceEndpoints (
-    std::ostream& strm ,
-    const ::Deployment::ExternalReferenceEndpoints& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ExternalReferenceEndpoints& _v)
@@ -5007,11 +4952,6 @@ operator<< (
 // MD5            : AF4F2101DCE0C79A0EDE886BDCAFC611
 #if !defined (_ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_)
 #define _ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_
-
-std::ostream&
-taox11_print_Deployment_ConnectionResourceDeploymentDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::ConnectionResourceDeploymentDescriptions& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -5035,11 +4975,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_)
 #define _ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_
 
-std::ostream&
-taox11_print_Deployment_PlanConnectionDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::PlanConnectionDescriptions& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanConnectionDescriptions& _v)
@@ -5061,11 +4996,6 @@ operator<< (
 // MD5            : AEBC73EB559A636E52F4DAEA9332277F
 #if !defined (_ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_)
 #define _ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_
-
-std::ostream&
-taox11_print_Deployment_PlanSubcomponentPropertyReferences (
-    std::ostream& strm ,
-    const ::Deployment::PlanSubcomponentPropertyReferences& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -5089,11 +5019,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_)
 #define _ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_
 
-std::ostream&
-taox11_print_Deployment_PlanPropertyMappings (
-    std::ostream& strm ,
-    const ::Deployment::PlanPropertyMappings& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanPropertyMappings& _v)
@@ -5115,11 +5040,6 @@ operator<< (
 // MD5            : 99A76A2AEA0FB19B92F7E3C2DE89FFF6
 #if !defined (_ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_)
 #define _ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_
-
-std::ostream&
-taox11_print_Deployment_ImplementationDependencies (
-    std::ostream& strm ,
-    const ::Deployment::ImplementationDependencies& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -5143,11 +5063,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_)
 #define _ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_
 
-std::ostream&
-taox11_print_Deployment_ResourceDeploymentDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::ResourceDeploymentDescriptions& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceDeploymentDescriptions& _v)
@@ -5169,11 +5084,6 @@ operator<< (
 // MD5            : 9366314FF053E4C8C2B7FE26CA476674
 #if !defined (_ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_)
 #define _ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_
-
-std::ostream&
-taox11_print_Deployment_ArtifactDeploymentDescriptions (
-    std::ostream& strm ,
-    const ::Deployment::ArtifactDeploymentDescriptions& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -5210,11 +5120,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_)
 #define _ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_
 
-std::ostream&
-taox11_print_Deployment_PlanLocalities (
-    std::ostream& strm ,
-    const ::Deployment::PlanLocalities& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanLocalities& _v)
@@ -5243,11 +5148,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_)
 #define _ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_
 
-std::ostream&
-taox11_print_Deployment_ComponentPackageReferences (
-    std::ostream& strm ,
-    const ::Deployment::ComponentPackageReferences& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPackageReferences& _v)
@@ -5263,11 +5163,6 @@ inline std::ostream& operator<< (
 // MD5            : 25B5A7D7E8D2341751079BEB8A44717A
 #if !defined (_ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_)
 #define _ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_
-
-std::ostream&
-taox11_print_Deployment_ResourceUsageKinds (
-    std::ostream& strm ,
-    const ::Deployment::ResourceUsageKinds& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -5291,11 +5186,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_)
 #define _ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_
 
-std::ostream&
-taox11_print_Deployment_ImplementationRequirements (
-    std::ostream& strm ,
-    const ::Deployment::ImplementationRequirements& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationRequirements& _v)
@@ -5318,11 +5208,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_)
 #define _ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_
 
-std::ostream&
-taox11_print_Deployment_Capabilities (
-    std::ostream& strm ,
-    const ::Deployment::Capabilities& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Capabilities& _v)
@@ -5340,6 +5225,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JBAHDJEC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JACGBDGJ_INCLUDED__ */
 
 // -*- END -*-

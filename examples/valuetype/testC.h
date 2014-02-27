@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JIDGJDCI_INCLUDED__
-#define __RIDL_TESTC_H_JIDGJDCI_INCLUDED__
+#ifndef __RIDL_TESTC_H_FDFCIAIA_INCLUDED__
+#define __RIDL_TESTC_H_FDFCIAIA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -135,8 +135,6 @@ public:
     return __example_repository_id;
   }
 
-  void swap (Example& s);
-
   // Operations
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -184,7 +182,7 @@ namespace obv
     : public virtual ::Example
   {
   protected:
-    Example () = default;
+    inline Example ();
     ~Example () = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
@@ -510,8 +508,6 @@ public:
     return __val_repository_id;
   }
 
-  void swap (Val& s);
-
   /// @name Public state members
   //@{
   virtual void t (TAOX11_IDL::traits< Val>::ref_type _t) = 0;
@@ -557,7 +553,7 @@ namespace obv
     : public virtual ::Val
   {
   protected:
-    Val () = default;
+    inline Val ();
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
@@ -1200,8 +1196,6 @@ public:
     return __b_repository_id;
   }
 
-  void swap (B& s);
-
   // Operations
 
   // generated from c++11/templates/cli/hdr/operation.erb
@@ -1230,7 +1224,7 @@ namespace obv
     : public virtual ::B
   {
   protected:
-    B () = default;
+    inline B ();
     ~B () = default;
     B (const B&) = default;
     B (B&&) = default;
@@ -1400,7 +1394,6 @@ public:
   }
 
 
-
 protected:
   virtual bool
   _obv_marshal_V_v (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
@@ -1528,36 +1521,23 @@ namespace TAOX11_NAMESPACE
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
 
-  // generated from c++11/templates/cli/hdr/valuetype_std.erb
-  template <>
-  void swap (::Example& m1, ::Example& m2);
-
   // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::S& m1, ::S& m2);
 
-  // generated from c++11/templates/cli/hdr/valuetype_std.erb
-  template <>
-  void swap (::Val& m1, ::Val& m2);
-
   // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::ColorValue2& m1, ::ColorValue2& m2);
-
-  // generated from c++11/templates/cli/hdr/valuetype_std.erb
-  template <>
-  void swap (::B& m1, ::B& m2);
 }; // std
 
 // generated from c++11/templates/cli/inl/valuetype_inl.erb
-inline void
-Example::swap (
-  ::Example& s)
+inline ::obv::Example::Example ()
+  : ::Example ()
+  , val1_ (0)
+  , val2_ (0)
+  , val3_ (std::string())
+  , val5_ (nullptr)
 {
-  std::swap (this->val1 (), s.val1 ());
-  std::swap (this->val2 (), s.val2 ());
-  std::swap (this->val3 (), s.val3 ());
-  std::swap (this->val5 (), s.val5 ());
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
@@ -1594,16 +1574,15 @@ inline void S::swap (::S& s)
 }
 
 // generated from c++11/templates/cli/inl/valuetype_inl.erb
-inline void
-Val::swap (
-  ::Val& s)
+inline ::obv::Val::Val ()
+  : ::Val ()
+  , t_ (nullptr)
+  , v_ (0)
+  , w_ (std::array< uint8_t, 64 > ())
+  , x_ (std::string())
+  , y_ (::S ())
+  , z_ (nullptr)
 {
-  std::swap (this->t (), s.t ());
-  std::swap (this->v (), s.v ());
-  std::swap (this->w (), s.w ());
-  std::swap (this->x (), s.x ());
-  std::swap (this->y (), s.y ());
-  std::swap (this->z (), s.z ());
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
@@ -1640,24 +1619,15 @@ inline void ColorValue2::swap (::ColorValue2& s)
 }
 
 // generated from c++11/templates/cli/inl/valuetype_inl.erb
-inline void
-B::swap (
-  ::B& s)
+inline ::obv::B::B ()
+  : ::B ()
+  , data_ (0)
 {
-  std::swap (this->data (), s.data ());
 }
 
-// generated from c++11/templates/cli/inl/valuetype_inl.erb
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
-
-  // generated from c++11/templates/cli/hdr/valuetype_std.erb
-  template <>
-  inline void swap (::Example& m1, ::Example& m2)
-  {
-    m1.swap (m2);
-  }
 
   // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
@@ -1666,23 +1636,9 @@ namespace std {
     m1.swap (m2);
   }
 
-  // generated from c++11/templates/cli/hdr/valuetype_std.erb
-  template <>
-  inline void swap (::Val& m1, ::Val& m2)
-  {
-    m1.swap (m2);
-  }
-
   // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   inline void swap (::ColorValue2& m1, ::ColorValue2& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/valuetype_std.erb
-  template <>
-  inline void swap (::B& m1, ::B& m2)
   {
     m1.swap (m2);
   }
@@ -1789,6 +1745,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JIDGJDCI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FDFCIAIA_INCLUDED__ */
 
 // -*- END -*-

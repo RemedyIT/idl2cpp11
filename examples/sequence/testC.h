@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FDABBHAC_INCLUDED__
-#define __RIDL_TESTC_H_FDABBHAC_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDBGDGGB_INCLUDED__
+#define __RIDL_TESTC_H_HDBGDGGB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -496,11 +496,6 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_)
 #define _ALIAS_OSTREAM_97E065F0B22B38AFDF68FAC50C0D18D3_DECL_
 
-std::ostream&
-taox11_print_Test_SimpleSeq (
-    std::ostream& strm ,
-    const ::Test::SimpleSeq& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::SimpleSeq& _v)
@@ -516,11 +511,6 @@ inline std::ostream& operator<< (
 // MD5            : EF22CCD494B5C3FED94E904D67A99E15
 #if !defined (_ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_)
 #define _ALIAS_OSTREAM_EF22CCD494B5C3FED94E904D67A99E15_DECL_
-
-std::ostream&
-taox11_print_Test_LongSeq (
-    std::ostream& strm ,
-    const ::Test::LongSeq& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -538,11 +528,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_EA3216C5DC0F6B49D119DC64CDBA69CA_DECL_)
 #define _ALIAS_OSTREAM_EA3216C5DC0F6B49D119DC64CDBA69CA_DECL_
 
-std::ostream&
-taox11_print_Test_BoundedLongSeq (
-    std::ostream& strm ,
-    const ::Test::BoundedLongSeq& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::BoundedLongSeq& _v)
@@ -559,11 +544,6 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_)
 #define _ALIAS_OSTREAM_9234E6936FE22252495CDEA48F87A0D3_DECL_
 
-std::ostream&
-taox11_print_Test_BoolSeq (
-    std::ostream& strm ,
-    const ::Test::BoolSeq& _v);
-
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::BoolSeq& _v)
@@ -579,11 +559,6 @@ inline std::ostream& operator<< (
 // MD5            : E501B88938184788967D036078062640
 #if !defined (_ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_)
 #define _ALIAS_OSTREAM_E501B88938184788967D036078062640_DECL_
-
-std::ostream&
-taox11_print_Test_StringSeq (
-    std::ostream& strm ,
-    const ::Test::StringSeq& _v);
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -607,6 +582,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FDABBHAC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDBGDGGB_INCLUDED__ */
 
 // -*- END -*-
