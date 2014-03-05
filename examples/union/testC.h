@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JAIGDHEB_INCLUDED__
-#define __RIDL_TESTC_H_JAIGDHEB_INCLUDED__
+#ifndef __RIDL_TESTC_H_HFBAIAAI_INCLUDED__
+#define __RIDL_TESTC_H_HFBAIAAI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -47,7 +47,8 @@ public:
   /// Move constructor
   Global (Global&&) = default;
   /// Constructor which accepts value for all members
-  explicit inline Global (int32_t x);
+  explicit inline Global (
+                   int32_t x);
   /// Copy assignment operator
   inline Global& operator= (const Global& x);
   /// Move assignment operator
@@ -111,7 +112,8 @@ namespace Test
     /// Move constructor
     Point (Point&&) = default;
     /// Constructor which accepts value for all members
-    explicit inline Point (int32_t x,
+    explicit inline Point (
+                    int32_t x,
                     int32_t y);
     /// Copy assignment operator
     inline Point& operator= (const Point& x);
@@ -157,7 +159,8 @@ namespace Test
     /// Move constructor
     Track (Track&&) = default;
     /// Constructor which accepts value for all members
-    explicit inline Track (int32_t id,
+    explicit inline Track (
+                    int32_t id,
                     ::Test::Point p);
     /// Copy assignment operator
     inline Track& operator= (const Track& x);
@@ -347,7 +350,8 @@ namespace Test
     /// Move constructor
     S (S&&) = default;
     /// Constructor which accepts value for all members
-    explicit inline S (int32_t len);
+    explicit inline S (
+                int32_t len);
     /// Copy assignment operator
     inline S& operator= (const S& x);
     /// Move assignment operator
@@ -1336,11 +1340,12 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Global::Global ()
-           : x_ (0)
+  : x_ (0)
 {
 }
-inline Global::Global (int32_t x)
-           : x_ (std::move (x))
+inline Global::Global (
+                 int32_t x)
+  : x_ (std::move (x))
 {
 }
 
@@ -1369,14 +1374,15 @@ inline void Global::swap (::Global& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Point::Point ()
-           : x_ (0)
-           , y_ (0)
+  : x_ (0)
+  , y_ (0)
 {
 }
-inline Test::Point::Point (int32_t x,
-                           int32_t y)
-           : x_ (std::move (x))
-           , y_ (std::move (y))
+inline Test::Point::Point (
+                      int32_t x,
+                      int32_t y)
+  : x_ (std::move (x))
+  , y_ (std::move (y))
 {
 }
 
@@ -1412,14 +1418,15 @@ inline void Test::Point::swap (::Test::Point& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Track::Track ()
-           : id_ (0)
-           , p_ (::Test::Point ())
+  : id_ (0)
+  , p_ (::Test::Point ())
 {
 }
-inline Test::Track::Track (int32_t id,
-                           ::Test::Point p)
-           : id_ (std::move (id))
-           , p_ (std::move (p))
+inline Test::Track::Track (
+                      int32_t id,
+                      ::Test::Point p)
+  : id_ (std::move (id))
+  , p_ (std::move (p))
 {
 }
 
@@ -2125,11 +2132,12 @@ inline void Test::Data::_default ()
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::S::S ()
-           : len_ (0)
+  : len_ (0)
 {
 }
-inline Test::S::S (int32_t len)
-           : len_ (std::move (len))
+inline Test::S::S (
+                  int32_t len)
+  : len_ (std::move (len))
 {
 }
 
@@ -2766,6 +2774,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JAIGDHEB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HFBAIAAI_INCLUDED__ */
 
 // -*- END -*-

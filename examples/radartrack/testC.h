@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJJDGGBF_INCLUDED__
-#define __RIDL_TESTC_H_JJJDGGBF_INCLUDED__
+#ifndef __RIDL_TESTC_H_EGIDJHII_INCLUDED__
+#define __RIDL_TESTC_H_EGIDJHII_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -50,7 +50,8 @@ public:
   /// Move constructor
   RadarTrack (RadarTrack&&) = default;
   /// Constructor which accepts value for all members
-  explicit inline RadarTrack (std::string id,
+  explicit inline RadarTrack (
+                       std::string id,
                        int32_t x,
                        int32_t y,
                        int32_t z,
@@ -245,23 +246,24 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline RadarTrack::RadarTrack ()
-           : id_ (std::string())
-           , x_ (0)
-           , y_ (0)
-           , z_ (0)
-           , plot_ (std::vector < uint8_t> ())
+  : id_ (std::string())
+  , x_ (0)
+  , y_ (0)
+  , z_ (0)
+  , plot_ (std::vector < uint8_t> ())
 {
 }
-inline RadarTrack::RadarTrack (std::string id,
-                               int32_t x,
-                               int32_t y,
-                               int32_t z,
-                               ::octetseq plot)
-           : id_ (std::move (id))
-           , x_ (std::move (x))
-           , y_ (std::move (y))
-           , z_ (std::move (z))
-           , plot_ (std::move (plot))
+inline RadarTrack::RadarTrack (
+                     std::string id,
+                     int32_t x,
+                     int32_t y,
+                     int32_t z,
+                     ::octetseq plot)
+  : id_ (std::move (id))
+  , x_ (std::move (x))
+  , y_ (std::move (y))
+  , z_ (std::move (z))
+  , plot_ (std::move (plot))
 {
 }
 
@@ -361,6 +363,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJJDGGBF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EGIDJHII_INCLUDED__ */
 
 // -*- END -*-

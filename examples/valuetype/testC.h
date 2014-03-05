@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFFBFDFC_INCLUDED__
-#define __RIDL_TESTC_H_GFFBFDFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_BHEHEDJD_INCLUDED__
+#define __RIDL_TESTC_H_BHEHEDJD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -275,7 +275,8 @@ public:
   /// Move constructor
   S (S&&) = default;
   /// Constructor which accepts value for all members
-  explicit inline S (int32_t value);
+  explicit inline S (
+              int32_t value);
   /// Copy assignment operator
   inline S& operator= (const S& x);
   /// Move assignment operator
@@ -1048,7 +1049,8 @@ public:
   /// Move constructor
   ColorValue2 (ColorValue2&&) = default;
   /// Constructor which accepts value for all members
-  explicit inline ColorValue2 (::Color col);
+  explicit inline ColorValue2 (
+                        ::Color col);
   /// Copy assignment operator
   inline ColorValue2& operator= (const ColorValue2& x);
   /// Move assignment operator
@@ -2199,11 +2201,12 @@ inline ::obv::Example::Example ()
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline S::S ()
-           : value_ (0)
+  : value_ (0)
 {
 }
-inline S::S (int32_t value)
-           : value_ (std::move (value))
+inline S::S (
+            int32_t value)
+  : value_ (std::move (value))
 {
 }
 
@@ -2244,11 +2247,12 @@ inline ::obv::Val::Val ()
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ColorValue2::ColorValue2 ()
-           : col_ (::Color::red)
+  : col_ (::Color::red)
 {
 }
-inline ColorValue2::ColorValue2 (::Color col)
-           : col_ (std::move (col))
+inline ColorValue2::ColorValue2 (
+                      ::Color col)
+  : col_ (std::move (col))
 {
 }
 
@@ -2438,6 +2442,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GFFBFDFC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BHEHEDJD_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EJJHFCCJ_INCLUDED__
-#define __RIDL_TESTC_H_EJJHFCCJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_GDGHDGCF_INCLUDED__
+#define __RIDL_TESTC_H_GDGHDGCF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -54,7 +54,8 @@ namespace Test
     /// Move constructor
     Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
-    explicit inline Simple (uint8_t o,
+    explicit inline Simple (
+                     uint8_t o,
                      int32_t l,
                      std::string s,
                      double d,
@@ -650,26 +651,27 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Simple::Simple ()
-           : o_ (0)
-           , l_ (0)
-           , s_ (std::string())
-           , d_ (0.0)
-           , b_ (false)
-           , c_ ('\0')
+  : o_ (0)
+  , l_ (0)
+  , s_ (std::string())
+  , d_ (0.0)
+  , b_ (false)
+  , c_ ('\0')
 {
 }
-inline Test::Simple::Simple (uint8_t o,
-                             int32_t l,
-                             std::string s,
-                             double d,
-                             bool b,
-                             char c)
-           : o_ (std::move (o))
-           , l_ (std::move (l))
-           , s_ (std::move (s))
-           , d_ (std::move (d))
-           , b_ (std::move (b))
-           , c_ (std::move (c))
+inline Test::Simple::Simple (
+                       uint8_t o,
+                       int32_t l,
+                       std::string s,
+                       double d,
+                       bool b,
+                       char c)
+  : o_ (std::move (o))
+  , l_ (std::move (l))
+  , s_ (std::move (s))
+  , d_ (std::move (d))
+  , b_ (std::move (b))
+  , c_ (std::move (c))
 {
 }
 
@@ -844,6 +846,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EJJHFCCJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GDGHDGCF_INCLUDED__ */
 
 // -*- END -*-

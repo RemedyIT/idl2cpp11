@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IJCEDDAF_INCLUDED__
-#define __RIDL_TESTC_H_IJCEDDAF_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHAIEHDE_INCLUDED__
+#define __RIDL_TESTC_H_EHAIEHDE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -52,7 +52,8 @@ namespace Test
     /// Move constructor
     Variable (Variable&&) = default;
     /// Constructor which accepts value for all members
-    explicit inline Variable (std::string name);
+    explicit inline Variable (
+                       std::string name);
     /// Copy assignment operator
     inline Variable& operator= (const Variable& x);
     /// Move assignment operator
@@ -201,7 +202,8 @@ namespace Test
     /// Move constructor
     Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
-    explicit inline Simple (uint8_t o,
+    explicit inline Simple (
+                     uint8_t o,
                      int32_t l,
                      std::string s,
                      double d,
@@ -664,11 +666,12 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Variable::Variable ()
-           : name_ (std::string())
+  : name_ (std::string())
 {
 }
-inline Test::Variable::Variable (std::string name)
-           : name_ (std::move (name))
+inline Test::Variable::Variable (
+                         std::string name)
+  : name_ (std::move (name))
 {
 }
 
@@ -698,32 +701,33 @@ inline void Test::Variable::swap (::Test::Variable& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Simple::Simple ()
-           : o_ (0)
-           , l_ (0)
-           , s_ (std::string())
-           , d_ (0.0)
-           , b_ (false)
-           , c_ ('\0')
-           , bar_ref_ (nullptr)
-           , v_ (::Test::Variable ())
+  : o_ (0)
+  , l_ (0)
+  , s_ (std::string())
+  , d_ (0.0)
+  , b_ (false)
+  , c_ ('\0')
+  , bar_ref_ (nullptr)
+  , v_ (::Test::Variable ())
 {
 }
-inline Test::Simple::Simple (uint8_t o,
-                             int32_t l,
-                             std::string s,
-                             double d,
-                             bool b,
-                             char c,
-                             TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
-                             ::Test::Variable v)
-           : o_ (std::move (o))
-           , l_ (std::move (l))
-           , s_ (std::move (s))
-           , d_ (std::move (d))
-           , b_ (std::move (b))
-           , c_ (std::move (c))
-           , bar_ref_ (std::move (bar_ref))
-           , v_ (std::move (v))
+inline Test::Simple::Simple (
+                       uint8_t o,
+                       int32_t l,
+                       std::string s,
+                       double d,
+                       bool b,
+                       char c,
+                       TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
+                       ::Test::Variable v)
+  : o_ (std::move (o))
+  , l_ (std::move (l))
+  , s_ (std::move (s))
+  , d_ (std::move (d))
+  , b_ (std::move (b))
+  , c_ (std::move (c))
+  , bar_ref_ (std::move (bar_ref))
+  , v_ (std::move (v))
 {
 }
 
@@ -864,6 +868,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IJCEDDAF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHAIEHDE_INCLUDED__ */
 
 // -*- END -*-

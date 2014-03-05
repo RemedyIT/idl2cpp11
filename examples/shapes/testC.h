@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DDHGEJAH_INCLUDED__
-#define __RIDL_TESTC_H_DDHGEJAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_CCDCAJAJ_INCLUDED__
+#define __RIDL_TESTC_H_CCDCAJAJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -46,7 +46,8 @@ public:
   /// Move constructor
   ShapeType (ShapeType&&) = default;
   /// Constructor which accepts value for all members
-  explicit inline ShapeType (std::string color,
+  explicit inline ShapeType (
+                      std::string color,
                       int32_t x,
                       int32_t y,
                       int32_t shapesize);
@@ -111,7 +112,8 @@ public:
   /// Move constructor
   Attributes (Attributes&&) = default;
   /// Constructor which accepts value for all members
-  explicit inline Attributes (std::string shape,
+  explicit inline Attributes (
+                       std::string shape,
                        std::string color,
                        float speed);
   /// Copy assignment operator
@@ -357,20 +359,21 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ShapeType::ShapeType ()
-           : color_ (std::string())
-           , x_ (0)
-           , y_ (0)
-           , shapesize_ (0)
+  : color_ (std::string())
+  , x_ (0)
+  , y_ (0)
+  , shapesize_ (0)
 {
 }
-inline ShapeType::ShapeType (std::string color,
-                             int32_t x,
-                             int32_t y,
-                             int32_t shapesize)
-           : color_ (std::move (color))
-           , x_ (std::move (x))
-           , y_ (std::move (y))
-           , shapesize_ (std::move (shapesize))
+inline ShapeType::ShapeType (
+                    std::string color,
+                    int32_t x,
+                    int32_t y,
+                    int32_t shapesize)
+  : color_ (std::move (color))
+  , x_ (std::move (x))
+  , y_ (std::move (y))
+  , shapesize_ (std::move (shapesize))
 {
 }
 
@@ -421,17 +424,18 @@ inline void ShapeType::swap (::ShapeType& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Attributes::Attributes ()
-           : shape_ (std::string())
-           , color_ (std::string())
-           , speed_ (0.0)
+  : shape_ (std::string())
+  , color_ (std::string())
+  , speed_ (0.0)
 {
 }
-inline Attributes::Attributes (std::string shape,
-                               std::string color,
-                               float speed)
-           : shape_ (std::move (shape))
-           , color_ (std::move (color))
-           , speed_ (std::move (speed))
+inline Attributes::Attributes (
+                     std::string shape,
+                     std::string color,
+                     float speed)
+  : shape_ (std::move (shape))
+  , color_ (std::move (color))
+  , speed_ (std::move (speed))
 {
 }
 
@@ -534,6 +538,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DDHGEJAH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CCDCAJAJ_INCLUDED__ */
 
 // -*- END -*-
