@@ -11,17 +11,6 @@
 #include "testC.h"
 #include <iostream>
 
-void dump(const Test::Simple& s)
-{
-  std::cout << "Simple ("
-            << s.o () << ", "
-            << s.l () << ", "
-            << s.s () << ", "
-            << s.d () << ", "
-            << s.b () << ", "
-            << s.c () << ")";
-}
-
 int main(int argc, char* argv[])
 {
   try
@@ -64,12 +53,12 @@ int main(int argc, char* argv[])
         return 1;
       }
 
-      std::cout << "successfully called Foo::pass_struct ("; dump (simple); std::cout << ")" << std::endl;
+      std::cout << "successfully called Foo::pass_struct ("<< simple << ")" << std::endl;
 
       // Not a copy here but a move!
       Test::Simple simple2 = foo->return_struct();
 
-      std::cout << "successfully called Foo::return_struct() => "; dump (simple2); std::cout << std::endl;
+      std::cout << "successfully called Foo::return_struct() => " << simple2 << std::endl;
 
       Test::Simple simple3;
 
@@ -79,7 +68,7 @@ int main(int argc, char* argv[])
         return 1;
       }
 
-      std::cout << "successfully called Foo::get_struct ("; dump (simple3); std::cout << ")" << std::endl;
+      std::cout << "successfully called Foo::get_struct (" << simple3 << ")" << std::endl;
 
       // This is a copy (as intended).
       Test::Simple simple4 (simple3);
@@ -91,7 +80,7 @@ int main(int argc, char* argv[])
         return 1;
       }
 
-      std::cout << "successfully called Foo::update_struct ("; dump (simple3); std::cout << ") => "; dump (simple4); std::cout << std::endl;
+      std::cout << "successfully called Foo::update_struct (" << simple3<< ") => " << simple4 << std::endl;
 
       std::cout << "shutting down...";
 
