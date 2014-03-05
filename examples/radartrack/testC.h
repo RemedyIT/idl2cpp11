@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DJIIFEDE_INCLUDED__
-#define __RIDL_TESTC_H_DJIIFEDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_FAAJIGBD_INCLUDED__
+#define __RIDL_TESTC_H_FAAJIGBD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -19,7 +19,6 @@
 #include "tao/x11/corba.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
-#include "tao/x11/sequence_os_t.h"
 #include "tao/x11/corba_ostream.h"
 
 #include "tao/x11/versionx11.h"
@@ -109,7 +108,7 @@ private:
   ::octetseq plot_;
 };// RadarTrack
 
-// generated from StubHeaderTraitsWriter#pre_visit
+// generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE
 {
   namespace IDL
@@ -130,7 +129,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< uint8_t> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::octetseq>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::octetseq>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::octetseq, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::octetseq>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -141,8 +168,70 @@ namespace TAOX11_NAMESPACE
     struct traits < ::RadarTrack>
       : IDL::common_traits< ::RadarTrack>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::RadarTrack, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::RadarTrack>::__Writer<Fmt>);
 #endif // _STRUCT_RADARTRACK_TRAITS_
+  }; // IDL
+}; // TAOX11_NAMESPACE
+
+// generated from StubHeaderIDLTraitsDefWriter#pre_visit
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::RadarTrack, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::RadarTrack& val_)
+      {
+        return os_ << "RadarTrack"
+                   << '{'
+                   << "id=" << IDL::traits< std::string>::write(val_.id ())
+                   << ",x=" << IDL::traits< int32_t>::write(val_.x ())
+                   << ",y=" << IDL::traits< int32_t>::write(val_.y ())
+                   << ",z=" << IDL::traits< int32_t>::write(val_.z ())
+                   << ",plot=" << IDL::traits< ::octetseq>::write(val_.plot ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::RadarTrack>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::RadarTrack>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::RadarTrack, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::RadarTrack>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -250,17 +339,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::octetseq& _v)
 {
-  strm << "std::vector < uint8_t>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::octetseq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::RadarTrack&);
+    std::ostream& strm,
+    const ::RadarTrack& _v)
+{
+  return IDL::traits< ::RadarTrack>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
@@ -269,6 +361,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DJIIFEDE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FAAJIGBD_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJFEFHCJ_INCLUDED__
-#define __RIDL_TESTC_H_JJFEFHCJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_GJBFIHFJ_INCLUDED__
+#define __RIDL_TESTC_H_GJBFIHFJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -120,7 +120,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef.erb
   /// @copydoc Test::fixed_type
-  typedef TAOX11_IDL::Fixed <10, 3> fixed_type;
+  typedef TAOX11_NAMESPACE::IDL::Fixed <10, 3> fixed_type;
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc Test::pi2
@@ -172,6 +172,17 @@ namespace TAOX11_NAMESPACE
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as abstract
       typedef std::false_type is_abstract;
+
+      template <typename OStrm_, typename Formatter = formatter< ::A, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
   };
 };
@@ -221,7 +232,7 @@ private:
   //@}
 }; // A
 
-// generated from StubHeaderTraitsWriter#pre_visit
+// generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE
 {
   namespace IDL
@@ -243,25 +254,148 @@ namespace TAOX11_NAMESPACE
       typedef std::true_type is_bounded;
       /// IDL::traits<> for the element of the string
       typedef IDL::traits<char> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< TAOX11_IDL::bounded_basic_string<char, 30>, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
     // generated from c++11/templates/cli/hdr/fixed_idl_traits.erb
-    // Unaliased type : TAOX11_IDL::Fixed <10, 3>
-    // MD5            : 088F017398EF128A378BD61C927CEAD5
-#if !defined(_ALIAS_088F017398EF128A378BD61C927CEAD5_TRAITS_DECL_)
-#define _ALIAS_088F017398EF128A378BD61C927CEAD5_TRAITS_DECL_
+    // Unaliased type : TAOX11_NAMESPACE::IDL::Fixed <10, 3>
+    // MD5            : 26C447B68D082EEA72A00BE046CE87A7
+#if !defined(_ALIAS_26C447B68D082EEA72A00BE046CE87A7_TRAITS_DECL_)
+#define _ALIAS_26C447B68D082EEA72A00BE046CE87A7_TRAITS_DECL_
 
     template<>
-    struct traits < TAOX11_IDL::Fixed <10, 3>>
-      : IDL::common_traits< TAOX11_IDL::Fixed <10, 3>>
+    struct traits < TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
+      : IDL::common_traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
     {
       typedef std::integral_constant< uint16_t, 10 > digits;
       typedef std::integral_constant< uint16_t, 3 > scale;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
 
+    template <typename OStrm_>
+    struct formatter< TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const TAOX11_NAMESPACE::IDL::Fixed <10, 3>& val_)
+      {
+        os_ << "IDL::Fixed <10, 3> "
+          << val_.to_string ();
+        return os_;
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
 #endif
+
+    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+#if !defined (_INTF_FMT_A_TRAITS_DECL_)
+#define _INTF_FMT_A_TRAITS_DECL_
+    template <typename OStrm_>
+    struct formatter< ::A, OStrm_>
+    {
+      OStrm_& operator ()(
+          OStrm_& ,
+          TAOX11_IDL::traits< ::A>::ref_type);
+    };
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::A>::__Writer<Fmt>);
+#endif // !_INTF_FMT_A_TRAITS_DECL_
+  }; // IDL
+}; // TAOX11_NAMESPACE
+
+// generated from StubHeaderIDLTraitsDefWriter#pre_visit
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
+
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    template <typename OStrm_>
+    inline OStrm_&
+    formatter< ::A, OStrm_>::operator ()(
+          OStrm_& os_,
+          TAOX11_IDL::traits< ::A>::ref_type val_)
+    {
+      return os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
+                        val_,
+                        "A");
+    }
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::A>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::A>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::A, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::A>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -274,26 +408,28 @@ namespace std {
 }; // std
 
 // generated from c++11/templates/cli/hdr/fixed_os.erb
-// Unaliased type : TAOX11_IDL::Fixed <10, 3>
-// MD5            : 088F017398EF128A378BD61C927CEAD5
-#if !defined (_ALIAS_OSTREAM_088F017398EF128A378BD61C927CEAD5_DECL_)
-#define _ALIAS_OSTREAM_088F017398EF128A378BD61C927CEAD5_DECL_
+// Unaliased type : TAOX11_NAMESPACE::IDL::Fixed <10, 3>
+// MD5            : 26C447B68D082EEA72A00BE046CE87A7
+#if !defined (_ALIAS_OSTREAM_26C447B68D082EEA72A00BE046CE87A7_DECL_)
+#define _ALIAS_OSTREAM_26C447B68D082EEA72A00BE046CE87A7_DECL_
 
 inline std::ostream& operator<< (
     std::ostream& strm,
-    const TAOX11_IDL::Fixed <10, 3>& _f)
+    const TAOX11_NAMESPACE::IDL::Fixed <10, 3>& _v)
 {
-  strm << "IDL::Fixed <10, 3> "
-    << _f.to_string ();
-  return strm;
+  return IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_088F017398EF128A378BD61C927CEAD5_DECL_
+#endif // _ALIAS_OSTREAM_26C447B68D082EEA72A00BE046CE87A7_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
-std::ostream& operator<< (
+inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::A>::ref_type);
+    TAOX11_IDL::traits< ::A>::ref_type _v)
+{
+  return IDL::traits< ::A>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
@@ -302,6 +438,6 @@ std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJFEFHCJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GJBFIHFJ_INCLUDED__ */
 
 // -*- END -*-

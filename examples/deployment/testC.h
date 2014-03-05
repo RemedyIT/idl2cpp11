@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JACGBDGJ_INCLUDED__
-#define __RIDL_TESTC_H_JACGBDGJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_HBGAHADJ_INCLUDED__
+#define __RIDL_TESTC_H_HBGAHADJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -20,7 +20,6 @@
 #include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/anytypecode/any.h"
-#include "tao/x11/sequence_os_t.h"
 #include "tao/x11/corba_ostream.h"
 
 #include "tao/x11/versionx11.h"
@@ -1946,7 +1945,7 @@ namespace Deployment
 }; // namespace Deployment
 
 
-// generated from StubHeaderTraitsWriter#pre_visit
+// generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE
 {
   namespace IDL
@@ -1959,7 +1958,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::Property>
       : IDL::common_traits< ::Deployment::Property>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::Property, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::Property>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_PROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -1977,7 +1994,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::Property> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::Properties>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::Properties>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::Properties, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::Properties>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -1988,7 +2033,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::Requirement>
       : IDL::common_traits< ::Deployment::Requirement>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::Requirement, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::Requirement>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_REQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2006,7 +2069,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::Requirement> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::Requirements>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::Requirements>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::Requirements, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::Requirements>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2015,7 +2106,54 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::SatisfierPropertyKind>
       : IDL::common_traits< ::Deployment::SatisfierPropertyKind>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::SatisfierPropertyKind, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          ::Deployment::SatisfierPropertyKind val_)
+      {
+        switch (val_)
+        {
+          case Deployment::SatisfierPropertyKind::Quantity: return os_ << "Deployment::SatisfierPropertyKind::Quantity"; break;
+          case Deployment::SatisfierPropertyKind::Capacity: return os_ << "Deployment::SatisfierPropertyKind::Capacity"; break;
+          case Deployment::SatisfierPropertyKind::Minimum: return os_ << "Deployment::SatisfierPropertyKind::Minimum"; break;
+          case Deployment::SatisfierPropertyKind::Maximum: return os_ << "Deployment::SatisfierPropertyKind::Maximum"; break;
+          case Deployment::SatisfierPropertyKind::Attribute: return os_ << "Deployment::SatisfierPropertyKind::Attribute"; break;
+          case Deployment::SatisfierPropertyKind::Selection: return os_ << "Deployment::SatisfierPropertyKind::Selection"; break;
+          default: return os_;
+        }
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::SatisfierPropertyKind, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::SatisfierPropertyKind>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_)
@@ -2024,7 +2162,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::SatisfierProperty>
       : IDL::common_traits< ::Deployment::SatisfierProperty>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::SatisfierProperty, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_SATISFIERPROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2042,7 +2198,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::SatisfierProperty> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::SatisfierProperties, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::SatisfierProperties>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2051,7 +2235,56 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::CCMComponentPortKind>
       : IDL::common_traits< ::Deployment::CCMComponentPortKind>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::CCMComponentPortKind, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          ::Deployment::CCMComponentPortKind val_)
+      {
+        switch (val_)
+        {
+          case Deployment::CCMComponentPortKind::Facet: return os_ << "Deployment::CCMComponentPortKind::Facet"; break;
+          case Deployment::CCMComponentPortKind::SimplexReceptacle: return os_ << "Deployment::CCMComponentPortKind::SimplexReceptacle"; break;
+          case Deployment::CCMComponentPortKind::MultiplexReceptacle: return os_ << "Deployment::CCMComponentPortKind::MultiplexReceptacle"; break;
+          case Deployment::CCMComponentPortKind::EventEmitter: return os_ << "Deployment::CCMComponentPortKind::EventEmitter"; break;
+          case Deployment::CCMComponentPortKind::EventPublisher: return os_ << "Deployment::CCMComponentPortKind::EventPublisher"; break;
+          case Deployment::CCMComponentPortKind::EventConsumer: return os_ << "Deployment::CCMComponentPortKind::EventConsumer"; break;
+          case Deployment::CCMComponentPortKind::ExtendedPort: return os_ << "Deployment::CCMComponentPortKind::ExtendedPort"; break;
+          case Deployment::CCMComponentPortKind::MirrorPort: return os_ << "Deployment::CCMComponentPortKind::MirrorPort"; break;
+          default: return os_;
+        }
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::CCMComponentPortKind, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::CCMComponentPortKind>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_)
@@ -2060,7 +2293,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentPortDescription>
       : IDL::common_traits< ::Deployment::ComponentPortDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentPortDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_COMPONENTPORTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2078,7 +2329,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentPortDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentPortDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentPortDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2089,7 +2368,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentPropertyDescription>
       : IDL::common_traits< ::Deployment::ComponentPropertyDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentPropertyDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_COMPONENTPROPERTYDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2107,7 +2404,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentPropertyDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentPropertyDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2118,7 +2443,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentInterfaceDescription>
       : IDL::common_traits< ::Deployment::ComponentInterfaceDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_COMPONENTINTERFACEDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
@@ -2128,7 +2471,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::MonolithicDeploymentDescription>
       : IDL::common_traits< ::Deployment::MonolithicDeploymentDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2146,7 +2507,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::MonolithicDeploymentDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2155,7 +2544,53 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ResourceUsageKind>
       : IDL::common_traits< ::Deployment::ResourceUsageKind>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ResourceUsageKind, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          ::Deployment::ResourceUsageKind val_)
+      {
+        switch (val_)
+        {
+          case Deployment::ResourceUsageKind::None: return os_ << "Deployment::ResourceUsageKind::None"; break;
+          case Deployment::ResourceUsageKind::InstanceUsesResource: return os_ << "Deployment::ResourceUsageKind::InstanceUsesResource"; break;
+          case Deployment::ResourceUsageKind::ResourceUsesInstance: return os_ << "Deployment::ResourceUsageKind::ResourceUsesInstance"; break;
+          case Deployment::ResourceUsageKind::PortUsesResource: return os_ << "Deployment::ResourceUsageKind::PortUsesResource"; break;
+          case Deployment::ResourceUsageKind::ResourceUsesPort: return os_ << "Deployment::ResourceUsageKind::ResourceUsesPort"; break;
+          default: return os_;
+        }
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ResourceUsageKind, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ResourceUsageKind>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
@@ -2164,7 +2599,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::InstanceResourceDeploymentDescription>
       : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2182,7 +2635,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::InstanceResourceDeploymentDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2193,7 +2674,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::InstanceDeploymentDescription>
       : IDL::common_traits< ::Deployment::InstanceDeploymentDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2211,7 +2710,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::InstanceDeploymentDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::InstanceDeploymentDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2222,7 +2749,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentExternalPortEndpoint>
       : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoint>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_COMPONENTEXTERNALPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2240,7 +2785,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentExternalPortEndpoints, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2251,7 +2824,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanSubcomponentPortEndpoint>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoint>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2269,7 +2860,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanSubcomponentPortEndpoints, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2280,7 +2899,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ExternalReferenceEndpoint>
       : IDL::common_traits< ::Deployment::ExternalReferenceEndpoint>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_EXTERNALREFERENCEENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2298,7 +2935,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ExternalReferenceEndpoints, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2309,7 +2974,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ConnectionResourceDeploymentDescription>
       : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2327,7 +3010,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ConnectionResourceDeploymentDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2338,7 +3049,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanConnectionDescription>
       : IDL::common_traits< ::Deployment::PlanConnectionDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanConnectionDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_PLANCONNECTIONDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2356,7 +3085,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanConnectionDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanConnectionDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanConnectionDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2367,7 +3124,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanSubcomponentPropertyReference>
       : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReference>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2385,7 +3160,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanSubcomponentPropertyReferences, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2396,7 +3199,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanPropertyMapping>
       : IDL::common_traits< ::Deployment::PlanPropertyMapping>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanPropertyMapping, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_PLANPROPERTYMAPPING_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2414,7 +3235,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanPropertyMapping> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanPropertyMappings, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanPropertyMappings>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2425,7 +3274,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ImplementationDependency>
       : IDL::common_traits< ::Deployment::ImplementationDependency>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ImplementationDependency, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_IMPLEMENTATIONDEPENDENCY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2443,7 +3310,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ImplementationDependency> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ImplementationDependencies, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ImplementationDependencies>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2454,7 +3349,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ResourceDeploymentDescription>
       : IDL::common_traits< ::Deployment::ResourceDeploymentDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2472,7 +3385,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ResourceDeploymentDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ResourceDeploymentDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2483,7 +3424,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ArtifactDeploymentDescription>
       : IDL::common_traits< ::Deployment::ArtifactDeploymentDescription>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2501,7 +3460,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ArtifactDeploymentDescriptions, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2510,7 +3497,51 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanLocalityKind>
       : IDL::common_traits< ::Deployment::PlanLocalityKind>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanLocalityKind, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          ::Deployment::PlanLocalityKind val_)
+      {
+        switch (val_)
+        {
+          case Deployment::PlanLocalityKind::PlanSameProcess: return os_ << "Deployment::PlanLocalityKind::PlanSameProcess"; break;
+          case Deployment::PlanLocalityKind::PlanDifferentProcess: return os_ << "Deployment::PlanLocalityKind::PlanDifferentProcess"; break;
+          case Deployment::PlanLocalityKind::PlanNoConstraint: return os_ << "Deployment::PlanLocalityKind::PlanNoConstraint"; break;
+          default: return os_;
+        }
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanLocalityKind, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanLocalityKind>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
 #if !defined (_STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_)
@@ -2519,7 +3550,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::PlanLocality>
       : IDL::common_traits< ::Deployment::PlanLocality>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanLocality, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_PLANLOCALITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2537,7 +3586,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::PlanLocality> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanLocalities, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanLocalities>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2548,7 +3625,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::DeploymentPlan>
       : IDL::common_traits< ::Deployment::DeploymentPlan>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::DeploymentPlan, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_DEPLOYMENTPLAN_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
@@ -2558,7 +3653,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ComponentPackageReference>
       : IDL::common_traits< ::Deployment::ComponentPackageReference>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentPackageReference, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_COMPONENTPACKAGEREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2576,7 +3689,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ComponentPackageReference> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentPackageReferences, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentPackageReferences>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2595,7 +3736,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ResourceUsageKind> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ResourceUsageKinds, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ResourceUsageKinds>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2606,7 +3775,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::ImplementationRequirement>
       : IDL::common_traits< ::Deployment::ImplementationRequirement>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ImplementationRequirement, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_IMPLEMENTATIONREQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2624,7 +3811,35 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::ImplementationRequirement> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ImplementationRequirements, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ImplementationRequirements>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
 
 #endif
 
@@ -2635,7 +3850,25 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Deployment::Capability>
       : IDL::common_traits< ::Deployment::Capability>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Deployment::Capability, OStrm_>;
+
+    template <typename OStrm_, typename Fmt>
+    OStrm_& operator <<(
+        OStrm_&,
+        IDL::traits< ::Deployment::Capability>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT_CAPABILITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
@@ -2653,9 +3886,896 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_bounded;
       /// IDL::traits<> for the element of the sequence
       typedef IDL::traits< ::Deployment::Capability> element_traits;
+
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
 
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::Capabilities, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::Capabilities>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
 #endif
+  }; // IDL
+}; // TAOX11_NAMESPACE
+
+// generated from StubHeaderIDLTraitsDefWriter#pre_visit
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::Property, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::Property& val_)
+      {
+        return os_ << "Deployment::Property"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::Property>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::Property>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::Property, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::Property>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::Requirement, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::Requirement& val_)
+      {
+        return os_ << "Deployment::Requirement"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
+                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::Requirement>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::Requirement>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::Requirement, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::Requirement>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::SatisfierProperty, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::SatisfierProperty& val_)
+      {
+        return os_ << "Deployment::SatisfierProperty"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",kind=" << IDL::traits< ::Deployment::SatisfierPropertyKind>::write(val_.kind ())
+                   << ",dynamic=" << IDL::traits< bool>::write(val_.dynamic ())
+                   << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::SatisfierProperty, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::SatisfierProperty>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentPortDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ComponentPortDescription& val_)
+      {
+        return os_ << "Deployment::ComponentPortDescription"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
+                   << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+                   << ",provider=" << IDL::traits< bool>::write(val_.provider ())
+                   << ",exclusiveProvider=" << IDL::traits< bool>::write(val_.exclusiveProvider ())
+                   << ",exclusiveUser=" << IDL::traits< bool>::write(val_.exclusiveUser ())
+                   << ",optional=" << IDL::traits< bool>::write(val_.optional ())
+                   << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
+                   << ",templateParam=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.templateParam ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentPortDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentPortDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentPropertyDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ComponentPropertyDescription& val_)
+      {
+        return os_ << "Deployment::ComponentPropertyDescription"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",type=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::write(val_.type ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentPropertyDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentPropertyDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ComponentInterfaceDescription& val_)
+      {
+        return os_ << "Deployment::ComponentInterfaceDescription"
+                   << '{'
+                   << "label=" << IDL::traits< std::string>::write(val_.label ())
+                   << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
+                   << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
+                   << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+                   << ",idlFile=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.idlFile ())
+                   << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
+                   << ",port=" << IDL::traits< ::Deployment::ComponentPortDescriptions>::write(val_.port ())
+                   << ",property=" << IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write(val_.property ())
+                   << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentInterfaceDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::MonolithicDeploymentDescription& val_)
+      {
+        return os_ << "Deployment::MonolithicDeploymentDescription"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+                   << ",artifactRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.artifactRef ())
+                   << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
+                   << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::MonolithicDeploymentDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::InstanceResourceDeploymentDescription& val_)
+      {
+        return os_ << "Deployment::InstanceResourceDeploymentDescription"
+                   << '{'
+                   << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKind>::write(val_.resourceUsage ())
+                   << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
+                   << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
+                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::InstanceDeploymentDescription& val_)
+      {
+        return os_ << "Deployment::InstanceDeploymentDescription"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",node=" << IDL::traits< std::string>::write(val_.node ())
+                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+                   << ",implementationRef=" << IDL::traits< uint32_t>::write(val_.implementationRef ())
+                   << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
+                   << ",deployedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedResource ())
+                   << ",deployedSharedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedSharedResource ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::InstanceDeploymentDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ComponentExternalPortEndpoint& val_)
+      {
+        return os_ << "Deployment::ComponentExternalPortEndpoint"
+                   << '{'
+                   << "portName=" << IDL::traits< std::string>::write(val_.portName ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::PlanSubcomponentPortEndpoint& val_)
+      {
+        return os_ << "Deployment::PlanSubcomponentPortEndpoint"
+                   << '{'
+                   << "portName=" << IDL::traits< std::string>::write(val_.portName ())
+                   << ",provider=" << IDL::traits< bool>::write(val_.provider ())
+                   << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
+                   << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ExternalReferenceEndpoint& val_)
+      {
+        return os_ << "Deployment::ExternalReferenceEndpoint"
+                   << '{'
+                   << "location=" << IDL::traits< std::string>::write(val_.location ())
+                   << ",provider=" << IDL::traits< bool>::write(val_.provider ())
+                   << ",portName=" << IDL::traits< std::string>::write(val_.portName ())
+                   << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ExternalReferenceEndpoint>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ConnectionResourceDeploymentDescription& val_)
+      {
+        return os_ << "Deployment::ConnectionResourceDeploymentDescription"
+                   << '{'
+                   << "targetName=" << IDL::traits< std::string>::write(val_.targetName ())
+                   << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
+                   << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
+                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanConnectionDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::PlanConnectionDescription& val_)
+      {
+        return os_ << "Deployment::PlanConnectionDescription"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+                   << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+                   << ",externalEndpoint=" << IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write(val_.externalEndpoint ())
+                   << ",internalEndpoint=" << IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write(val_.internalEndpoint ())
+                   << ",externalReference=" << IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write(val_.externalReference ())
+                   << ",deployedResource=" << IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write(val_.deployedResource ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanConnectionDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanConnectionDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::PlanSubcomponentPropertyReference& val_)
+      {
+        return os_ << "Deployment::PlanSubcomponentPropertyReference"
+                   << '{'
+                   << "propertyName=" << IDL::traits< std::string>::write(val_.propertyName ())
+                   << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanPropertyMapping, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::PlanPropertyMapping& val_)
+      {
+        return os_ << "Deployment::PlanPropertyMapping"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+                   << ",externalName=" << IDL::traits< std::string>::write(val_.externalName ())
+                   << ",delegatesTo=" << IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write(val_.delegatesTo ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanPropertyMapping, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanPropertyMapping>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ImplementationDependency, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ImplementationDependency& val_)
+      {
+        return os_ << "Deployment::ImplementationDependency"
+                   << '{'
+                   << "requiredType=" << IDL::traits< std::string>::write(val_.requiredType ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ImplementationDependency, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ImplementationDependency>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ResourceDeploymentDescription& val_)
+      {
+        return os_ << "Deployment::ResourceDeploymentDescription"
+                   << '{'
+                   << "requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
+                   << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
+                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ResourceDeploymentDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ArtifactDeploymentDescription& val_)
+      {
+        return os_ << "Deployment::ArtifactDeploymentDescription"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",location=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.location ())
+                   << ",node=" << IDL::traits< std::string>::write(val_.node ())
+                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+                   << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
+                   << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+                   << ",deployedResource=" << IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write(val_.deployedResource ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ArtifactDeploymentDescription>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::PlanLocality, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::PlanLocality& val_)
+      {
+        return os_ << "Deployment::PlanLocality"
+                   << '{'
+                   << "constraint=" << IDL::traits< ::Deployment::PlanLocalityKind>::write(val_.constraint ())
+                   << ",constrainedInstanceRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.constrainedInstanceRef ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::PlanLocality, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::PlanLocality>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::DeploymentPlan, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::DeploymentPlan& val_)
+      {
+        return os_ << "Deployment::DeploymentPlan"
+                   << '{'
+                   << "label=" << IDL::traits< std::string>::write(val_.label ())
+                   << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
+                   << ",realizes=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.realizes ())
+                   << ",implementation=" << IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write(val_.implementation ())
+                   << ",instance=" << IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write(val_.instance ())
+                   << ",connection=" << IDL::traits< ::Deployment::PlanConnectionDescriptions>::write(val_.connection ())
+                   << ",externalProperty=" << IDL::traits< ::Deployment::PlanPropertyMappings>::write(val_.externalProperty ())
+                   << ",dependsOn=" << IDL::traits< ::Deployment::ImplementationDependencies>::write(val_.dependsOn ())
+                   << ",artifact=" << IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write(val_.artifact ())
+                   << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
+                   << ",localityConstraint=" << IDL::traits< ::Deployment::PlanLocalities>::write(val_.localityConstraint ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::DeploymentPlan, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::DeploymentPlan>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ComponentPackageReference, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ComponentPackageReference& val_)
+      {
+        return os_ << "Deployment::ComponentPackageReference"
+                   << '{'
+                   << "requiredUUID=" << IDL::traits< std::string>::write(val_.requiredUUID ())
+                   << ",requiredName=" << IDL::traits< std::string>::write(val_.requiredName ())
+                   << ",requiredType=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.requiredType ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ComponentPackageReference, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ComponentPackageReference>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::ImplementationRequirement, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::ImplementationRequirement& val_)
+      {
+        return os_ << "Deployment::ImplementationRequirement"
+                   << '{'
+                   << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKinds>::write(val_.resourceUsage ())
+                   << ",resourcePort=" << IDL::traits< std::string>::write(val_.resourcePort ())
+                   << ",componentPort=" << IDL::traits< std::string>::write(val_.componentPort ())
+                   << ",name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
+                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::ImplementationRequirement, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::ImplementationRequirement>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    template <typename OStrm_>
+    struct formatter< ::Deployment::Capability, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          const ::Deployment::Capability& val_)
+      {
+        return os_ << "Deployment::Capability"
+                   << '{'
+                   << "name=" << IDL::traits< std::string>::write(val_.name ())
+                   << ",resourceType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.resourceType ())
+                   << ",property=" << IDL::traits< ::Deployment::SatisfierProperties>::write(val_.property ())
+                   << '}';
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Deployment::Capability>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Deployment::Capability>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Deployment::Capability, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Deployment::Capability>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -4645,10 +6765,14 @@ namespace std {
 }; // std
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::Property&);
+    std::ostream& strm,
+    const ::Deployment::Property& _v)
+{
+  return IDL::traits< ::Deployment::Property>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::Property>
@@ -4660,17 +6784,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Properties& _v)
 {
-  strm << "std::vector < ::Deployment::Property>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::Properties>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_9FA54C1D0A4E5ABC4A2486AD7C463745_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::Requirement&);
+    std::ostream& strm,
+    const ::Deployment::Requirement& _v)
+{
+  return IDL::traits< ::Deployment::Requirement>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::Requirement>
@@ -4682,8 +6809,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Requirements& _v)
 {
-  strm << "std::vector < ::Deployment::Requirement>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::Requirements>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_B5D61CF43DC976264FCA09DAEF6B439D_DECL_
@@ -4691,24 +6817,20 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    ::Deployment::SatisfierPropertyKind _enumerator)
+    ::Deployment::SatisfierPropertyKind _v)
 {
-  switch (_enumerator) {
-    case Deployment::SatisfierPropertyKind::Quantity: return strm << "Deployment::SatisfierPropertyKind::Quantity"; break;
-    case Deployment::SatisfierPropertyKind::Capacity: return strm << "Deployment::SatisfierPropertyKind::Capacity"; break;
-    case Deployment::SatisfierPropertyKind::Minimum: return strm << "Deployment::SatisfierPropertyKind::Minimum"; break;
-    case Deployment::SatisfierPropertyKind::Maximum: return strm << "Deployment::SatisfierPropertyKind::Maximum"; break;
-    case Deployment::SatisfierPropertyKind::Attribute: return strm << "Deployment::SatisfierPropertyKind::Attribute"; break;
-    case Deployment::SatisfierPropertyKind::Selection: return strm << "Deployment::SatisfierPropertyKind::Selection"; break;
-    default: return strm;
-  }
+  return IDL::traits< ::Deployment::SatisfierPropertyKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::SatisfierProperty&);
+    std::ostream& strm,
+    const ::Deployment::SatisfierProperty& _v)
+{
+  return IDL::traits< ::Deployment::SatisfierProperty>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::SatisfierProperty>
@@ -4720,8 +6842,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::SatisfierProperties& _v)
 {
-  strm << "std::vector < ::Deployment::SatisfierProperty>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::SatisfierProperties>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AAB77A9CDD8FCC93D26F3C8F9DA5CB57_DECL_
@@ -4729,26 +6850,20 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    ::Deployment::CCMComponentPortKind _enumerator)
+    ::Deployment::CCMComponentPortKind _v)
 {
-  switch (_enumerator) {
-    case Deployment::CCMComponentPortKind::Facet: return strm << "Deployment::CCMComponentPortKind::Facet"; break;
-    case Deployment::CCMComponentPortKind::SimplexReceptacle: return strm << "Deployment::CCMComponentPortKind::SimplexReceptacle"; break;
-    case Deployment::CCMComponentPortKind::MultiplexReceptacle: return strm << "Deployment::CCMComponentPortKind::MultiplexReceptacle"; break;
-    case Deployment::CCMComponentPortKind::EventEmitter: return strm << "Deployment::CCMComponentPortKind::EventEmitter"; break;
-    case Deployment::CCMComponentPortKind::EventPublisher: return strm << "Deployment::CCMComponentPortKind::EventPublisher"; break;
-    case Deployment::CCMComponentPortKind::EventConsumer: return strm << "Deployment::CCMComponentPortKind::EventConsumer"; break;
-    case Deployment::CCMComponentPortKind::ExtendedPort: return strm << "Deployment::CCMComponentPortKind::ExtendedPort"; break;
-    case Deployment::CCMComponentPortKind::MirrorPort: return strm << "Deployment::CCMComponentPortKind::MirrorPort"; break;
-    default: return strm;
-  }
+  return IDL::traits< ::Deployment::CCMComponentPortKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ComponentPortDescription&);
+    std::ostream& strm,
+    const ::Deployment::ComponentPortDescription& _v)
+{
+  return IDL::traits< ::Deployment::ComponentPortDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentPortDescription>
@@ -4760,17 +6875,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPortDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::ComponentPortDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ComponentPortDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_C5E370E71060EF02CAD31E10FF9B9A83_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ComponentPropertyDescription&);
+    std::ostream& strm,
+    const ::Deployment::ComponentPropertyDescription& _v)
+{
+  return IDL::traits< ::Deployment::ComponentPropertyDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentPropertyDescription>
@@ -4782,23 +6900,30 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPropertyDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::ComponentPropertyDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_C38B325CAEA1E1A5249DC3C8B0654824_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ComponentInterfaceDescription&);
+    std::ostream& strm,
+    const ::Deployment::ComponentInterfaceDescription& _v)
+{
+  return IDL::traits< ::Deployment::ComponentInterfaceDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::MonolithicDeploymentDescription&);
+    std::ostream& strm,
+    const ::Deployment::MonolithicDeploymentDescription& _v)
+{
+  return IDL::traits< ::Deployment::MonolithicDeploymentDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::MonolithicDeploymentDescription>
@@ -4810,8 +6935,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::MonolithicDeploymentDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::MonolithicDeploymentDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_80C54C15F1FCF891188F93122A3F1653_DECL_
@@ -4819,23 +6943,20 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    ::Deployment::ResourceUsageKind _enumerator)
+    ::Deployment::ResourceUsageKind _v)
 {
-  switch (_enumerator) {
-    case Deployment::ResourceUsageKind::None: return strm << "Deployment::ResourceUsageKind::None"; break;
-    case Deployment::ResourceUsageKind::InstanceUsesResource: return strm << "Deployment::ResourceUsageKind::InstanceUsesResource"; break;
-    case Deployment::ResourceUsageKind::ResourceUsesInstance: return strm << "Deployment::ResourceUsageKind::ResourceUsesInstance"; break;
-    case Deployment::ResourceUsageKind::PortUsesResource: return strm << "Deployment::ResourceUsageKind::PortUsesResource"; break;
-    case Deployment::ResourceUsageKind::ResourceUsesPort: return strm << "Deployment::ResourceUsageKind::ResourceUsesPort"; break;
-    default: return strm;
-  }
+  return IDL::traits< ::Deployment::ResourceUsageKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::InstanceResourceDeploymentDescription&);
+    std::ostream& strm,
+    const ::Deployment::InstanceResourceDeploymentDescription& _v)
+{
+  return IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::InstanceResourceDeploymentDescription>
@@ -4847,17 +6968,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::InstanceResourceDeploymentDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_EECAFA244583FB042136539EF2209665_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::InstanceDeploymentDescription&);
+    std::ostream& strm,
+    const ::Deployment::InstanceDeploymentDescription& _v)
+{
+  return IDL::traits< ::Deployment::InstanceDeploymentDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::InstanceDeploymentDescription>
@@ -4869,17 +6993,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceDeploymentDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::InstanceDeploymentDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_5DAB54D520633DBBAAC64AB44B5264EF_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ComponentExternalPortEndpoint&);
+    std::ostream& strm,
+    const ::Deployment::ComponentExternalPortEndpoint& _v)
+{
+  return IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentExternalPortEndpoint>
@@ -4891,17 +7018,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentExternalPortEndpoints& _v)
 {
-  strm << "std::vector < ::Deployment::ComponentExternalPortEndpoint>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_D55B5CF95C9426C6D2C98C3A5D478A08_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::PlanSubcomponentPortEndpoint&);
+    std::ostream& strm,
+    const ::Deployment::PlanSubcomponentPortEndpoint& _v)
+{
+  return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanSubcomponentPortEndpoint>
@@ -4913,17 +7043,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPortEndpoints& _v)
 {
-  strm << "std::vector < ::Deployment::PlanSubcomponentPortEndpoint>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_B166E528DC38CC7B9823B4A707AF73F7_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ExternalReferenceEndpoint&);
+    std::ostream& strm,
+    const ::Deployment::ExternalReferenceEndpoint& _v)
+{
+  return IDL::traits< ::Deployment::ExternalReferenceEndpoint>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ExternalReferenceEndpoint>
@@ -4935,17 +7068,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ExternalReferenceEndpoints& _v)
 {
-  strm << "std::vector < ::Deployment::ExternalReferenceEndpoint>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_05A01CE11A8BFF9D44BAB053FE399734_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ConnectionResourceDeploymentDescription&);
+    std::ostream& strm,
+    const ::Deployment::ConnectionResourceDeploymentDescription& _v)
+{
+  return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ConnectionResourceDeploymentDescription>
@@ -4957,17 +7093,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ConnectionResourceDeploymentDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::ConnectionResourceDeploymentDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AF4F2101DCE0C79A0EDE886BDCAFC611_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::PlanConnectionDescription&);
+    std::ostream& strm,
+    const ::Deployment::PlanConnectionDescription& _v)
+{
+  return IDL::traits< ::Deployment::PlanConnectionDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanConnectionDescription>
@@ -4979,17 +7118,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanConnectionDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::PlanConnectionDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::PlanConnectionDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_CFA31BAC8967655A8F41210E634352C1_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::PlanSubcomponentPropertyReference&);
+    std::ostream& strm,
+    const ::Deployment::PlanSubcomponentPropertyReference& _v)
+{
+  return IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanSubcomponentPropertyReference>
@@ -5001,17 +7143,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPropertyReferences& _v)
 {
-  strm << "std::vector < ::Deployment::PlanSubcomponentPropertyReference>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AEBC73EB559A636E52F4DAEA9332277F_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::PlanPropertyMapping&);
+    std::ostream& strm,
+    const ::Deployment::PlanPropertyMapping& _v)
+{
+  return IDL::traits< ::Deployment::PlanPropertyMapping>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanPropertyMapping>
@@ -5023,17 +7168,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanPropertyMappings& _v)
 {
-  strm << "std::vector < ::Deployment::PlanPropertyMapping>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::PlanPropertyMappings>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_F12B7FF5B966394695A4C3B62A60769E_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ImplementationDependency&);
+    std::ostream& strm,
+    const ::Deployment::ImplementationDependency& _v)
+{
+  return IDL::traits< ::Deployment::ImplementationDependency>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ImplementationDependency>
@@ -5045,17 +7193,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationDependencies& _v)
 {
-  strm << "std::vector < ::Deployment::ImplementationDependency>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ImplementationDependencies>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_99A76A2AEA0FB19B92F7E3C2DE89FFF6_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ResourceDeploymentDescription&);
+    std::ostream& strm,
+    const ::Deployment::ResourceDeploymentDescription& _v)
+{
+  return IDL::traits< ::Deployment::ResourceDeploymentDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ResourceDeploymentDescription>
@@ -5067,17 +7218,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceDeploymentDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::ResourceDeploymentDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_DF993C9C6EABFC782FDDA1D9B825B8FC_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ArtifactDeploymentDescription&);
+    std::ostream& strm,
+    const ::Deployment::ArtifactDeploymentDescription& _v)
+{
+  return IDL::traits< ::Deployment::ArtifactDeploymentDescription>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ArtifactDeploymentDescription>
@@ -5089,8 +7243,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ArtifactDeploymentDescriptions& _v)
 {
-  strm << "std::vector < ::Deployment::ArtifactDeploymentDescription>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_9366314FF053E4C8C2B7FE26CA476674_DECL_
@@ -5098,21 +7251,20 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    ::Deployment::PlanLocalityKind _enumerator)
+    ::Deployment::PlanLocalityKind _v)
 {
-  switch (_enumerator) {
-    case Deployment::PlanLocalityKind::PlanSameProcess: return strm << "Deployment::PlanLocalityKind::PlanSameProcess"; break;
-    case Deployment::PlanLocalityKind::PlanDifferentProcess: return strm << "Deployment::PlanLocalityKind::PlanDifferentProcess"; break;
-    case Deployment::PlanLocalityKind::PlanNoConstraint: return strm << "Deployment::PlanLocalityKind::PlanNoConstraint"; break;
-    default: return strm;
-  }
+  return IDL::traits< ::Deployment::PlanLocalityKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::PlanLocality&);
+    std::ostream& strm,
+    const ::Deployment::PlanLocality& _v)
+{
+  return IDL::traits< ::Deployment::PlanLocality>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanLocality>
@@ -5124,23 +7276,30 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanLocalities& _v)
 {
-  strm << "std::vector < ::Deployment::PlanLocality>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::PlanLocalities>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_DDE38066805242B88FC17943CB38328B_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::DeploymentPlan&);
+    std::ostream& strm,
+    const ::Deployment::DeploymentPlan& _v)
+{
+  return IDL::traits< ::Deployment::DeploymentPlan>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ComponentPackageReference&);
+    std::ostream& strm,
+    const ::Deployment::ComponentPackageReference& _v)
+{
+  return IDL::traits< ::Deployment::ComponentPackageReference>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentPackageReference>
@@ -5152,8 +7311,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPackageReferences& _v)
 {
-  strm << "std::vector < ::Deployment::ComponentPackageReference>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ComponentPackageReferences>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_0C9FEC96A49604B9CC5DF59C48DE88F1_DECL_
@@ -5168,17 +7326,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceUsageKinds& _v)
 {
-  strm << "std::vector < ::Deployment::ResourceUsageKind>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ResourceUsageKinds>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_25B5A7D7E8D2341751079BEB8A44717A_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::ImplementationRequirement&);
+    std::ostream& strm,
+    const ::Deployment::ImplementationRequirement& _v)
+{
+  return IDL::traits< ::Deployment::ImplementationRequirement>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ImplementationRequirement>
@@ -5190,17 +7351,20 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationRequirements& _v)
 {
-  strm << "std::vector < ::Deployment::ImplementationRequirement>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::ImplementationRequirements>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_58B3838A8CD6CA5F0D66B307C6BD6467_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
-std::ostream&
+inline std::ostream&
 operator<< (
-    std::ostream &,
-    const ::Deployment::Capability&);
+    std::ostream& strm,
+    const ::Deployment::Capability& _v)
+{
+  return IDL::traits< ::Deployment::Capability>::write_on (strm, _v);
+}
+
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::Capability>
@@ -5212,8 +7376,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Capabilities& _v)
 {
-  strm << "std::vector < ::Deployment::Capability>";
-  return taox11_print_sequence (strm, _v);
+  return IDL::traits< ::Deployment::Capabilities>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_67A5FF62ED49ECC3F7373CDDDBC3DFAD_DECL_
@@ -5225,6 +7388,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JACGBDGJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HBGAHADJ_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BJDJHJDF_INCLUDED__
-#define __RIDL_TESTC_H_BJDJHJDF_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHGJAJBC_INCLUDED__
+#define __RIDL_TESTC_H_FHGJAJBC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -54,7 +54,7 @@ namespace Test
 }; // namespace Test
 
 
-// generated from StubHeaderTraitsWriter#pre_visit
+// generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE
 {
   namespace IDL
@@ -65,7 +65,59 @@ namespace TAOX11_NAMESPACE
     struct traits < ::Test::EEnum>
       : IDL::common_traits< ::Test::EEnum>
     {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(
+          OStrm_& os_, in_type val_,
+          Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
+
+    template <typename OStrm_>
+    struct formatter< ::Test::EEnum, OStrm_>
+    {
+      inline OStrm_& operator ()(
+          OStrm_& os_,
+          ::Test::EEnum val_)
+      {
+        switch (val_)
+        {
+          case Test::EEnum::A: return os_ << "Test::EEnum::A"; break;
+          case Test::EEnum::B: return os_ << "Test::EEnum::B"; break;
+          case Test::EEnum::C: return os_ << "Test::EEnum::C"; break;
+          default: return os_;
+        }
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(
+        OStrm_& os,
+        IDL::traits< ::Test::EEnum>::__Writer<Fmt> w)
+    {
+      typedef IDL::traits< ::Test::EEnum>::__Writer<Fmt> writer_t;
+      typedef typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter< ::Test::EEnum, OStrm_>,
+                          typename writer_t::formatter_t>::type formatter_t;
+      return IDL::traits< ::Test::EEnum>::write_on (
+          os, w.val_,
+          formatter_t ());
+    }
+  }; // IDL
+}; // TAOX11_NAMESPACE
+
+// generated from StubHeaderIDLTraitsDefWriter#pre_visit
+namespace TAOX11_NAMESPACE
+{
+  namespace IDL
+  {
   }; // IDL
 }; // TAOX11_NAMESPACE
 
@@ -80,14 +132,9 @@ namespace std {
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    ::Test::EEnum _enumerator)
+    ::Test::EEnum _v)
 {
-  switch (_enumerator) {
-    case Test::EEnum::A: return strm << "Test::EEnum::A"; break;
-    case Test::EEnum::B: return strm << "Test::EEnum::B"; break;
-    case Test::EEnum::C: return strm << "Test::EEnum::C"; break;
-    default: return strm;
-  }
+  return IDL::traits< ::Test::EEnum>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/post.erb
@@ -97,6 +144,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BJDJHJDF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHGJAJBC_INCLUDED__ */
 
 // -*- END -*-
