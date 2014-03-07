@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BHEGHGFA_INCLUDED__
-#define __RIDL_TESTC_H_BHEGHGFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_GDFBFDJA_INCLUDED__
+#define __RIDL_TESTC_H_GDFBFDJA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -58,7 +58,8 @@ namespace Test
     virtual ~FooEx () throw ();
     FooEx (const FooEx&) = default;
     FooEx (FooEx&&) = default;
-    explicit FooEx (std::string message);
+    explicit FooEx (
+                    std::string message);
     FooEx& operator= (const FooEx& x);
     FooEx& operator= (FooEx&& x);
 
@@ -99,7 +100,8 @@ namespace Test
     virtual ~BooEx () throw ();
     BooEx (const BooEx&) = default;
     BooEx (BooEx&&) = default;
-    explicit BooEx (int32_t id);
+    explicit BooEx (
+                    int32_t id);
     BooEx& operator= (const BooEx& x);
     BooEx& operator= (BooEx&& x);
 
@@ -438,7 +440,8 @@ inline Test::FooEx::FooEx ()
 {
 }
 
-inline Test::FooEx::FooEx (std::string message)
+inline Test::FooEx::FooEx (
+                      std::string message)
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
   , message_ (std::move (message))
 {
@@ -476,7 +479,8 @@ inline Test::BooEx::BooEx ()
 {
 }
 
-inline Test::BooEx::BooEx (int32_t id)
+inline Test::BooEx::BooEx (
+                      int32_t id)
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "BooEx")
   , id_ (std::move (id))
 {
@@ -526,6 +530,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BHEGHGFA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GDFBFDJA_INCLUDED__ */
 
 // -*- END -*-
