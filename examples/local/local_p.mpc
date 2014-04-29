@@ -22,6 +22,4 @@ project(*client): taox11_portableserver {
     testC.cpp
     testS.cpp
   }
-  IDL_Files {
-  }
 }

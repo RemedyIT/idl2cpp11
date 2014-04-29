@@ -22,8 +22,6 @@ project(*hello_Server): taox11_server {
     testC.cpp
     testS.cpp
   }
-  IDL_Files {
-  }
 }
 
 project(*hello_Client): taox11_client {
@@ -33,8 +31,6 @@ project(*hello_Client): taox11_client {
   }
   Source_Files {
     testC.cpp
-  }
-  IDL_Files {
   }
 }
 

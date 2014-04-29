@@ -20,6 +20,4 @@ project(*objrefarg_Client): taox11_client {
   Source_Files {
     testC.cpp
   }
-  IDL_Files {
-  }
 }
