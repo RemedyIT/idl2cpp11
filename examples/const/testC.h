@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GBDCBFGH_INCLUDED__
-#define __RIDL_TESTC_H_GBDCBFGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_ECIAIGGG_INCLUDED__
+#define __RIDL_TESTC_H_ECIAIGGG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -76,7 +76,7 @@ namespace Test
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc Test::f_val
-  constexpr float f_val = 1.23;
+  constexpr float f_val = 1.23F;
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc Test::d_val
@@ -84,7 +84,7 @@ namespace Test
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc Test::ld_val
-  constexpr long double ld_val = 678.91;
+  constexpr long double ld_val = 678.91L;
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc Test::b_val
@@ -205,7 +205,7 @@ public:
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc A::pi
-  static constexpr float pi = 3.14159;
+  static constexpr float pi = 3.14159F;
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
@@ -438,6 +438,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GBDCBFGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_ECIAIGGG_INCLUDED__ */
 
 // -*- END -*-
