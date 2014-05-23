@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_EAGHFADA_INCLUDED__
-#define __RIDL_TESTS_H_EAGHFADA_INCLUDED__
+#ifndef __RIDL_TESTS_H_JEFDDEEJ_INCLUDED__
+#define __RIDL_TESTS_H_JEFDDEEJ_INCLUDED__
 
 #include "testC.h"
 
@@ -21,8 +21,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 4 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.4.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.3.1). Please re-generate.
 #endif
 
 // generated from c++11/templates/srv/hdr/interface_pre.erb
@@ -79,7 +79,7 @@ namespace POA
     POA::A_srvproxy_ptr a_srvproxy_;
   };
 
-}; // POA
+} // namespace POA
 
 // generated from c++11/templates/srv/hdr/interface_pre.erb
 namespace POA
@@ -135,7 +135,7 @@ namespace POA
     POA::X_srvproxy_ptr x_srvproxy_;
   };
 
-}; // POA
+} // namespace POA
 
 // generated from c++11/templates/srv/hdr/interface_pre.erb
 namespace POA
@@ -191,7 +191,7 @@ namespace POA
     POA::A1_srvproxy_ptr a1_srvproxy_;
   };
 
-}; // POA
+} // namespace POA
 
 // generated from c++11/templates/srv/hdr/valuetype_pre.erb
 namespace POA
@@ -301,9 +301,9 @@ namespace TAOX11_NAMESPACE {
         return ref_type::_narrow (base);
       }
     };
-  }; // CORBA
-}; // TAOX11_NAMESPACE
+  } // namespace CORBA
+} // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_EAGHFADA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_JEFDDEEJ_INCLUDED__ */
 
 // -*- END -*-

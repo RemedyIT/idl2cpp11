@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_BGGJJBHA_INCLUDED__
-#define __RIDL_TESTS_H_BGGJJBHA_INCLUDED__
+#ifndef __RIDL_TESTS_H_GGGFJFJD_INCLUDED__
+#define __RIDL_TESTS_H_GGGFJFJD_INCLUDED__
 
 #include "testC.h"
 
@@ -21,16 +21,16 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 4 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.4.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.3.1). Please re-generate.
 #endif
 
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
-  }; // CORBA
-}; // TAOX11_NAMESPACE
+  } // namespace CORBA
+} // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_BGGJJBHA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GGGFJFJD_INCLUDED__ */
 
 // -*- END -*-

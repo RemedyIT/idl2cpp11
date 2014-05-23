@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HJDCGFCF_INCLUDED__
-#define __RIDL_TESTC_H_HJDCGFCF_INCLUDED__
+#ifndef __RIDL_TESTC_H_FECADIFI_INCLUDED__
+#define __RIDL_TESTC_H_FECADIFI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -28,8 +28,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 4 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.4.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.3.1). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -42,7 +42,7 @@ class Example;
 namespace obv
 {
   class Example;
-};
+} // namespace obv
 
 #endif // !_VALUETYPE_EXAMPLE_FWD_
 
@@ -73,7 +73,7 @@ namespace TAOX11_NAMESPACE
         return ref_type::_narrow (base);
       }
     };
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -96,8 +96,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_VALUETYPE_EXAMPLE_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuetype_pre.erb
@@ -251,8 +251,7 @@ namespace obv
     std::string val3_;
     TAOX11_IDL::traits< ::Example>::ref_type val5_;
   }; // Example
-
-}; // obv
+} // namespace obv
 
 // generated from c++11/templates/cli/hdr/typedef.erb
 /// @copydoc Bytes
@@ -325,7 +324,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A>::ref_type
     object_traits< ::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -352,8 +351,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_INTF_A_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
@@ -408,7 +407,7 @@ class Val;
 namespace obv
 {
   class Val;
-};
+} // namespace obv
 class Val_init;
 
 #endif // !_VALUETYPE_VAL_FWD_
@@ -424,7 +423,7 @@ namespace TAOX11_NAMESPACE
      object_traits< ::Val_init>::shared_ptr_type
     object_traits< ::Val_init>::lock_shared (
         ::Val_init*);
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -436,7 +435,7 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_abstract;
       typedef std::true_type is_local;
     };
-  };
+  } // namespace IDL
 
   namespace CORBA
   {
@@ -466,7 +465,7 @@ namespace TAOX11_NAMESPACE
         return ref_type::_narrow (base);
       }
     };
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -489,8 +488,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_VALUETYPE_VAL_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuetype_pre.erb
@@ -667,8 +666,7 @@ namespace obv
     ::S y_;
     TAOX11_IDL::traits< ::A>::ref_type z_;
   }; // Val
-
-}; // obv
+} // namespace obv
 
 // generated from c++11/templates/cli/hdr/valuetype_init.erb
 class Val_init
@@ -717,7 +715,7 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (
           valuetype_reference<ValueBase>);
     };
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -739,8 +737,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_VBOX_STRINGVALUE_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuebox_def.erb
@@ -802,8 +800,8 @@ namespace TAOX11_NAMESPACE
     {
       return ref_type::_narrow (vbref);
     }
-  };
-};
+  } // namespace CORBA
+} // namespace TAOX11_NAMESPACE
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -834,7 +832,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::X>::ref_type
     object_traits< ::X>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -861,8 +859,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_INTF_X_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
@@ -946,7 +944,7 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (
           valuetype_reference<ValueBase>);
     };
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -968,8 +966,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_VBOX_COLORVALUE_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuebox_def.erb
@@ -1029,8 +1027,8 @@ namespace TAOX11_NAMESPACE
     {
       return ref_type::_narrow (vbref);
     }
-  };
-};
+  } // namespace CORBA
+} // namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
@@ -1099,7 +1097,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A1>::ref_type
     object_traits< ::A1>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -1126,8 +1124,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_INTF_A1_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
@@ -1182,7 +1180,7 @@ class B;
 namespace obv
 {
   class B;
-};
+} // namespace obv
 
 #endif // !_VALUETYPE_B_FWD_
 
@@ -1213,7 +1211,7 @@ namespace TAOX11_NAMESPACE
         return ref_type::_narrow (base);
       }
     };
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -1236,8 +1234,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_VALUETYPE_B_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuetype_pre.erb
@@ -1349,8 +1347,7 @@ namespace obv
   private:
     int16_t data_;
   }; // B
-
-}; // obv
+} // namespace obv
 
 // generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_V_FWD_)
@@ -1360,7 +1357,7 @@ class V;
 namespace obv
 {
   class V;
-};
+} // namespace obv
 class V_init;
 
 #endif // !_VALUETYPE_V_FWD_
@@ -1376,7 +1373,7 @@ namespace TAOX11_NAMESPACE
      object_traits< ::V_init>::shared_ptr_type
     object_traits< ::V_init>::lock_shared (
         ::V_init*);
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -1388,7 +1385,7 @@ namespace TAOX11_NAMESPACE
       typedef std::false_type is_abstract;
       typedef std::true_type is_local;
     };
-  };
+  } // namespace IDL
 
   namespace CORBA
   {
@@ -1418,7 +1415,7 @@ namespace TAOX11_NAMESPACE
         return ref_type::_narrow (base);
       }
     };
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -1441,8 +1438,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_VALUETYPE_V_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuetype_pre.erb
@@ -1534,8 +1531,7 @@ namespace obv
 
   private:
   }; // V
-
-}; // obv
+} // namespace obv
 
 // generated from c++11/templates/cli/hdr/valuetype_init.erb
 class V_init
@@ -1887,8 +1883,8 @@ namespace TAOX11_NAMESPACE
         OStrm_&,
         IDL::traits< ::V>::__Writer<Fmt>);
 #endif // !_VALUETYPE_V_IDL_TRAITS_DECL_
-  }; // IDL
-}; // TAOX11_NAMESPACE
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
 namespace TAOX11_NAMESPACE
@@ -2174,8 +2170,8 @@ namespace TAOX11_NAMESPACE
           os, w.val_,
           formatter_t ());
     }
-  }; // IDL
-}; // TAOX11_NAMESPACE
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
@@ -2187,7 +2183,7 @@ namespace std {
   // generated from c++11/templates/cli/hdr/struct_std.erb
   template <>
   void swap (::ColorValue2& m1, ::ColorValue2& m2);
-}; // std
+} // namespace std
 
 // generated from c++11/templates/cli/inl/valuetype_inl.erb
 inline ::obv::Example::Example ()
@@ -2303,7 +2299,7 @@ namespace std {
   {
     m1.swap (m2);
   }
-}; // std
+} // namespace std
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 inline std::ostream&
@@ -2348,7 +2344,6 @@ inline std::ostream& operator<< (
   return IDL::traits< ::A>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 inline std::ostream&
 operator<< (
@@ -2376,7 +2371,6 @@ inline std::ostream& operator<< (
 {
   return IDL::traits< ::X>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
@@ -2414,7 +2408,6 @@ inline std::ostream& operator<< (
   return IDL::traits< ::A1>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 inline std::ostream&
 operator<< (
@@ -2442,6 +2435,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HJDCGFCF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FECADIFI_INCLUDED__ */
 
 // -*- END -*-

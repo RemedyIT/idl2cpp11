@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGGGCCEC_INCLUDED__
-#define __RIDL_TESTC_H_GGGGCCEC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IFDBEFDC_INCLUDED__
+#define __RIDL_TESTC_H_IFDBEFDC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -27,8 +27,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 4 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.4.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 3 || TAOX11_BETA_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.3.1). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -125,7 +125,7 @@ namespace Test
   // generated from StubHeaderWriter#visit_const
   /// @copydoc Test::pi2
   const fixed_type pi2;
-}; // namespace Test
+} // namespace Test
 
 
 // generated from StubHeaderWriter#enter_interface
@@ -157,7 +157,7 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A>::ref_type
     object_traits< ::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
-  };
+  } // namespace CORBA
 
   namespace IDL
   {
@@ -184,8 +184,8 @@ namespace TAOX11_NAMESPACE
       template <typename Formatter = std::false_type>
       static inline __Writer<Formatter> write (in_type val) { return {val} ; }
     };
-  };
-};
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 #endif // !_INTF_A_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
@@ -359,8 +359,8 @@ namespace TAOX11_NAMESPACE
         OStrm_&,
         IDL::traits< ::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A_TRAITS_DECL_
-  }; // IDL
-}; // TAOX11_NAMESPACE
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
 namespace TAOX11_NAMESPACE
@@ -396,16 +396,16 @@ namespace TAOX11_NAMESPACE
           os, w.val_,
           formatter_t ());
     }
-  }; // IDL
-}; // TAOX11_NAMESPACE
+  } // namespace IDL
+} // namespace TAOX11_NAMESPACE
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
-}; // std
+} // namespace std
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
-}; // std
+} // namespace std
 
 // generated from c++11/templates/cli/hdr/fixed_os.erb
 // Unaliased type : TAOX11_NAMESPACE::IDL::Fixed <10, 3>
@@ -430,7 +430,6 @@ inline std::ostream& operator<< (
   return IDL::traits< ::A>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -438,6 +437,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGGGCCEC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IFDBEFDC_INCLUDED__ */
 
 // -*- END -*-
