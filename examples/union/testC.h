@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GAICHGHG_INCLUDED__
-#define __RIDL_TESTC_H_GAICHGHG_INCLUDED__
+#ifndef __RIDL_TESTC_H_EADBFHCA_INCLUDED__
+#define __RIDL_TESTC_H_EADBFHCA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -48,7 +48,7 @@ public:
   Global (Global&&) = default;
   /// Constructor which accepts value for all members
   explicit inline Global (
-                   int32_t x);
+    int32_t x);
   /// Copy assignment operator
   inline Global& operator= (const Global& x);
   /// Move assignment operator
@@ -113,8 +113,8 @@ namespace Test
     Point (Point&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Point (
-                    int32_t x,
-                    int32_t y);
+      int32_t x,
+      int32_t y);
     /// Copy assignment operator
     inline Point& operator= (const Point& x);
     /// Move assignment operator
@@ -160,8 +160,8 @@ namespace Test
     Track (Track&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Track (
-                    int32_t id,
-                    ::Test::Point p);
+      int32_t id,
+      ::Test::Point p);
     /// Copy assignment operator
     inline Track& operator= (const Track& x);
     /// Move assignment operator
@@ -351,7 +351,7 @@ namespace Test
     S (S&&) = default;
     /// Constructor which accepts value for all members
     explicit inline S (
-                int32_t len);
+      int32_t len);
     /// Copy assignment operator
     inline S& operator= (const S& x);
     /// Move assignment operator
@@ -2772,6 +2772,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GAICHGHG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EADBFHCA_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GCJEFIII_INCLUDED__
-#define __RIDL_TESTC_H_GCJEFIII_INCLUDED__
+#ifndef __RIDL_TESTC_H_GCGBDFDH_INCLUDED__
+#define __RIDL_TESTC_H_GCGBDFDH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -47,10 +47,10 @@ public:
   ShapeType (ShapeType&&) = default;
   /// Constructor which accepts value for all members
   explicit inline ShapeType (
-                      std::string color,
-                      int32_t x,
-                      int32_t y,
-                      int32_t shapesize);
+    std::string color,
+    int32_t x,
+    int32_t y,
+    int32_t shapesize);
   /// Copy assignment operator
   inline ShapeType& operator= (const ShapeType& x);
   /// Move assignment operator
@@ -113,9 +113,9 @@ public:
   Attributes (Attributes&&) = default;
   /// Constructor which accepts value for all members
   explicit inline Attributes (
-                       std::string shape,
-                       std::string color,
-                       float speed);
+    std::string shape,
+    std::string color,
+    float speed);
   /// Copy assignment operator
   inline Attributes& operator= (const Attributes& x);
   /// Move assignment operator
@@ -538,6 +538,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GCJEFIII_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GCGBDFDH_INCLUDED__ */
 
 // -*- END -*-

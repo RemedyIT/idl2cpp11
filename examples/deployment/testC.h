@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FDHGCEDF_INCLUDED__
-#define __RIDL_TESTC_H_FDHGCEDF_INCLUDED__
+#ifndef __RIDL_TESTC_H_EBGDHFEB_INCLUDED__
+#define __RIDL_TESTC_H_EBGDHFEB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -53,8 +53,8 @@ namespace Deployment
     Property (Property&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Property (
-                       std::string name,
-                       TAOX11_NAMESPACE::CORBA::Any value);
+      std::string name,
+      TAOX11_NAMESPACE::CORBA::Any value);
     /// Copy assignment operator
     inline Property& operator= (const Property& x);
     /// Move assignment operator
@@ -106,9 +106,9 @@ namespace Deployment
     Requirement (Requirement&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Requirement (
-                          std::string name,
-                          std::string resourceType,
-                          ::Deployment::Properties property);
+      std::string name,
+      std::string resourceType,
+      ::Deployment::Properties property);
     /// Copy assignment operator
     inline Requirement& operator= (const Requirement& x);
     /// Move assignment operator
@@ -189,10 +189,10 @@ namespace Deployment
     SatisfierProperty (SatisfierProperty&&) = default;
     /// Constructor which accepts value for all members
     explicit inline SatisfierProperty (
-                                std::string name,
-                                ::Deployment::SatisfierPropertyKind kind,
-                                bool dynamic,
-                                TAOX11_NAMESPACE::CORBA::Any value);
+      std::string name,
+      ::Deployment::SatisfierPropertyKind kind,
+      bool dynamic,
+      TAOX11_NAMESPACE::CORBA::Any value);
     /// Copy assignment operator
     inline SatisfierProperty& operator= (const SatisfierProperty& x);
     /// Move assignment operator
@@ -291,15 +291,15 @@ namespace Deployment
     ComponentPortDescription (ComponentPortDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPortDescription (
-                                       std::string name,
-                                       std::string specificType,
-                                       ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
-                                       bool provider,
-                                       bool exclusiveProvider,
-                                       bool exclusiveUser,
-                                       bool optional,
-                                       ::Deployment::CCMComponentPortKind kind,
-                                       ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam);
+      std::string name,
+      std::string specificType,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
+      bool provider,
+      bool exclusiveProvider,
+      bool exclusiveUser,
+      bool optional,
+      ::Deployment::CCMComponentPortKind kind,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam);
     /// Copy assignment operator
     inline ComponentPortDescription& operator= (const ComponentPortDescription& x);
     /// Move assignment operator
@@ -409,8 +409,8 @@ namespace Deployment
     ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPropertyDescription (
-                                           std::string name,
-                                           TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
+      std::string name,
+      TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
     /// Copy assignment operator
     inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
     /// Move assignment operator
@@ -461,15 +461,15 @@ namespace Deployment
     ComponentInterfaceDescription (ComponentInterfaceDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentInterfaceDescription (
-                                            std::string label,
-                                            std::string UUID,
-                                            std::string specificType,
-                                            ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
-                                            ::TAOX11_NAMESPACE::CORBA::StringSeq idlFile,
-                                            ::Deployment::Properties configProperty,
-                                            ::Deployment::ComponentPortDescriptions port,
-                                            ::Deployment::ComponentPropertyDescriptions property,
-                                            ::Deployment::Properties infoProperty);
+      std::string label,
+      std::string UUID,
+      std::string specificType,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq idlFile,
+      ::Deployment::Properties configProperty,
+      ::Deployment::ComponentPortDescriptions port,
+      ::Deployment::ComponentPropertyDescriptions property,
+      ::Deployment::Properties infoProperty);
     /// Copy assignment operator
     inline ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription& x);
     /// Move assignment operator
@@ -580,11 +580,11 @@ namespace Deployment
     MonolithicDeploymentDescription (MonolithicDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline MonolithicDeploymentDescription (
-                                              std::string name,
-                                              ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                              ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
-                                              ::Deployment::Properties execParameter,
-                                              ::Deployment::Requirements deployRequirement);
+      std::string name,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+      ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
+      ::Deployment::Properties execParameter,
+      ::Deployment::Requirements deployRequirement);
     /// Copy assignment operator
     inline MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription& x);
     /// Move assignment operator
@@ -681,10 +681,10 @@ namespace Deployment
     InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline InstanceResourceDeploymentDescription (
-                                                    ::Deployment::ResourceUsageKind resourceUsage,
-                                                    std::string requirementName,
-                                                    std::string resourceName,
-                                                    ::Deployment::Properties property);
+      ::Deployment::ResourceUsageKind resourceUsage,
+      std::string requirementName,
+      std::string resourceName,
+      ::Deployment::Properties property);
     /// Copy assignment operator
     inline InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription& x);
     /// Move assignment operator
@@ -753,13 +753,13 @@ namespace Deployment
     InstanceDeploymentDescription (InstanceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline InstanceDeploymentDescription (
-                                            std::string name,
-                                            std::string node,
-                                            ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                            uint32_t implementationRef,
-                                            ::Deployment::Properties configProperty,
-                                            ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
-                                            ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource);
+      std::string name,
+      std::string node,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+      uint32_t implementationRef,
+      ::Deployment::Properties configProperty,
+      ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
+      ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource);
     /// Copy assignment operator
     inline InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription& x);
     /// Move assignment operator
@@ -855,7 +855,7 @@ namespace Deployment
     ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentExternalPortEndpoint (
-                                            std::string portName);
+      std::string portName);
     /// Copy assignment operator
     inline ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint& x);
     /// Move assignment operator
@@ -898,10 +898,10 @@ namespace Deployment
     PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPortEndpoint (
-                                           std::string portName,
-                                           bool provider,
-                                           ::Deployment::CCMComponentPortKind kind,
-                                           uint32_t instanceRef);
+      std::string portName,
+      bool provider,
+      ::Deployment::CCMComponentPortKind kind,
+      uint32_t instanceRef);
     /// Copy assignment operator
     inline PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint& x);
     /// Move assignment operator
@@ -968,10 +968,10 @@ namespace Deployment
     ExternalReferenceEndpoint (ExternalReferenceEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ExternalReferenceEndpoint (
-                                        std::string location,
-                                        bool provider,
-                                        std::string portName,
-                                        ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType);
+      std::string location,
+      bool provider,
+      std::string portName,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType);
     /// Copy assignment operator
     inline ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint& x);
     /// Move assignment operator
@@ -1040,10 +1040,10 @@ namespace Deployment
     ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ConnectionResourceDeploymentDescription (
-                                                      std::string targetName,
-                                                      std::string requirementName,
-                                                      std::string resourceName,
-                                                      ::Deployment::Properties property);
+      std::string targetName,
+      std::string requirementName,
+      std::string resourceName,
+      ::Deployment::Properties property);
     /// Copy assignment operator
     inline ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription& x);
     /// Move assignment operator
@@ -1113,13 +1113,13 @@ namespace Deployment
     PlanConnectionDescription (PlanConnectionDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanConnectionDescription (
-                                        std::string name,
-                                        ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                        ::Deployment::Requirements deployRequirement,
-                                        ::Deployment::ComponentExternalPortEndpoints externalEndpoint,
-                                        ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
-                                        ::Deployment::ExternalReferenceEndpoints externalReference,
-                                        ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource);
+      std::string name,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+      ::Deployment::Requirements deployRequirement,
+      ::Deployment::ComponentExternalPortEndpoints externalEndpoint,
+      ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
+      ::Deployment::ExternalReferenceEndpoints externalReference,
+      ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource);
     /// Copy assignment operator
     inline PlanConnectionDescription& operator= (const PlanConnectionDescription& x);
     /// Move assignment operator
@@ -1216,8 +1216,8 @@ namespace Deployment
     PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPropertyReference (
-                                                std::string propertyName,
-                                                uint32_t instanceRef);
+      std::string propertyName,
+      uint32_t instanceRef);
     /// Copy assignment operator
     inline PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference& x);
     /// Move assignment operator
@@ -1268,10 +1268,10 @@ namespace Deployment
     PlanPropertyMapping (PlanPropertyMapping&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanPropertyMapping (
-                                  std::string name,
-                                  ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                  std::string externalName,
-                                  ::Deployment::PlanSubcomponentPropertyReferences delegatesTo);
+      std::string name,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+      std::string externalName,
+      ::Deployment::PlanSubcomponentPropertyReferences delegatesTo);
     /// Copy assignment operator
     inline PlanPropertyMapping& operator= (const PlanPropertyMapping& x);
     /// Move assignment operator
@@ -1341,7 +1341,7 @@ namespace Deployment
     ImplementationDependency (ImplementationDependency&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ImplementationDependency (
-                                       std::string requiredType);
+      std::string requiredType);
     /// Copy assignment operator
     inline ImplementationDependency& operator= (const ImplementationDependency& x);
     /// Move assignment operator
@@ -1384,9 +1384,9 @@ namespace Deployment
     ResourceDeploymentDescription (ResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ResourceDeploymentDescription (
-                                            std::string requirementName,
-                                            std::string resourceName,
-                                            ::Deployment::Properties property);
+      std::string requirementName,
+      std::string resourceName,
+      ::Deployment::Properties property);
     /// Copy assignment operator
     inline ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription& x);
     /// Move assignment operator
@@ -1447,13 +1447,13 @@ namespace Deployment
     ArtifactDeploymentDescription (ArtifactDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ArtifactDeploymentDescription (
-                                            std::string name,
-                                            ::TAOX11_NAMESPACE::CORBA::StringSeq location,
-                                            std::string node,
-                                            ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                            ::Deployment::Properties execParameter,
-                                            ::Deployment::Requirements deployRequirement,
-                                            ::Deployment::ResourceDeploymentDescriptions deployedResource);
+      std::string name,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq location,
+      std::string node,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+      ::Deployment::Properties execParameter,
+      ::Deployment::Requirements deployRequirement,
+      ::Deployment::ResourceDeploymentDescriptions deployedResource);
     /// Copy assignment operator
     inline ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription& x);
     /// Move assignment operator
@@ -1564,8 +1564,8 @@ namespace Deployment
     PlanLocality (PlanLocality&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanLocality (
-                           ::Deployment::PlanLocalityKind constraint,
-                           ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
+      ::Deployment::PlanLocalityKind constraint,
+      ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
     /// Copy assignment operator
     inline PlanLocality& operator= (const PlanLocality& x);
     /// Move assignment operator
@@ -1616,17 +1616,17 @@ namespace Deployment
     DeploymentPlan (DeploymentPlan&&) = default;
     /// Constructor which accepts value for all members
     explicit inline DeploymentPlan (
-                             std::string label,
-                             std::string UUID,
-                             ::Deployment::ComponentInterfaceDescription realizes,
-                             ::Deployment::MonolithicDeploymentDescriptions implementation,
-                             ::Deployment::InstanceDeploymentDescriptions instance,
-                             ::Deployment::PlanConnectionDescriptions connection,
-                             ::Deployment::PlanPropertyMappings externalProperty,
-                             ::Deployment::ImplementationDependencies dependsOn,
-                             ::Deployment::ArtifactDeploymentDescriptions artifact,
-                             ::Deployment::Properties infoProperty,
-                             ::Deployment::PlanLocalities localityConstraint);
+      std::string label,
+      std::string UUID,
+      ::Deployment::ComponentInterfaceDescription realizes,
+      ::Deployment::MonolithicDeploymentDescriptions implementation,
+      ::Deployment::InstanceDeploymentDescriptions instance,
+      ::Deployment::PlanConnectionDescriptions connection,
+      ::Deployment::PlanPropertyMappings externalProperty,
+      ::Deployment::ImplementationDependencies dependsOn,
+      ::Deployment::ArtifactDeploymentDescriptions artifact,
+      ::Deployment::Properties infoProperty,
+      ::Deployment::PlanLocalities localityConstraint);
     /// Copy assignment operator
     inline DeploymentPlan& operator= (const DeploymentPlan& x);
     /// Move assignment operator
@@ -1762,9 +1762,9 @@ namespace Deployment
     ComponentPackageReference (ComponentPackageReference&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPackageReference (
-                                        std::string requiredUUID,
-                                        std::string requiredName,
-                                        ::Deployment::ComponentInterfaceDescription requiredType);
+      std::string requiredUUID,
+      std::string requiredName,
+      ::Deployment::ComponentInterfaceDescription requiredType);
     /// Copy assignment operator
     inline ComponentPackageReference& operator= (const ComponentPackageReference& x);
     /// Move assignment operator
@@ -1829,12 +1829,12 @@ namespace Deployment
     ImplementationRequirement (ImplementationRequirement&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ImplementationRequirement (
-                                        ::Deployment::ResourceUsageKinds resourceUsage,
-                                        std::string resourcePort,
-                                        std::string componentPort,
-                                        std::string name,
-                                        std::string resourceType,
-                                        ::Deployment::Properties property);
+      ::Deployment::ResourceUsageKinds resourceUsage,
+      std::string resourcePort,
+      std::string componentPort,
+      std::string name,
+      std::string resourceType,
+      ::Deployment::Properties property);
     /// Copy assignment operator
     inline ImplementationRequirement& operator= (const ImplementationRequirement& x);
     /// Move assignment operator
@@ -1922,9 +1922,9 @@ namespace Deployment
     Capability (Capability&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Capability (
-                         std::string name,
-                         ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
-                         ::Deployment::SatisfierProperties property);
+      std::string name,
+      ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
+      ::Deployment::SatisfierProperties property);
     /// Copy assignment operator
     inline Capability& operator= (const Capability& x);
     /// Move assignment operator
@@ -7436,6 +7436,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FDHGCEDF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EBGDHFEB_INCLUDED__ */
 
 // -*- END -*-

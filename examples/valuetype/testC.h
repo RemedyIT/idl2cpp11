@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FDBDHGIH_INCLUDED__
-#define __RIDL_TESTC_H_FDBDHGIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDEDJJID_INCLUDED__
+#define __RIDL_TESTC_H_EDEDJJID_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -275,7 +275,7 @@ public:
   S (S&&) = default;
   /// Constructor which accepts value for all members
   explicit inline S (
-              int32_t value);
+    int32_t value);
   /// Copy assignment operator
   inline S& operator= (const S& x);
   /// Move assignment operator
@@ -1048,7 +1048,7 @@ public:
   ColorValue2 (ColorValue2&&) = default;
   /// Constructor which accepts value for all members
   explicit inline ColorValue2 (
-                        ::Color col);
+    ::Color col);
   /// Copy assignment operator
   inline ColorValue2& operator= (const ColorValue2& x);
   /// Move assignment operator
@@ -2431,6 +2431,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FDBDHGIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDEDJJID_INCLUDED__ */
 
 // -*- END -*-

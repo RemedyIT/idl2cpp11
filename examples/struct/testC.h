@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BCGDBBDA_INCLUDED__
-#define __RIDL_TESTC_H_BCGDBBDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BGGIFEDA_INCLUDED__
+#define __RIDL_TESTC_H_BGGIFEDA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -53,7 +53,7 @@ namespace Test
     Variable (Variable&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Variable (
-                       std::string name);
+      std::string name);
     /// Copy assignment operator
     inline Variable& operator= (const Variable& x);
     /// Move assignment operator
@@ -203,14 +203,14 @@ namespace Test
     Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Simple (
-                     uint8_t o,
-                     int32_t l,
-                     std::string s,
-                     double d,
-                     bool b,
-                     char c,
-                     TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
-                     ::Test::Variable v);
+      uint8_t o,
+      int32_t l,
+      std::string s,
+      double d,
+      bool b,
+      char c,
+      TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
+      ::Test::Variable v);
     /// Copy assignment operator
     inline Simple& operator= (const Simple& x);
     /// Move assignment operator
@@ -866,6 +866,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BCGDBBDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BGGIFEDA_INCLUDED__ */
 
 // -*- END -*-

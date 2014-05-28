@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFIAEHHD_INCLUDED__
-#define __RIDL_TESTC_H_JFIAEHHD_INCLUDED__
+#ifndef __RIDL_TESTC_H_BJEFJDAG_INCLUDED__
+#define __RIDL_TESTC_H_BJEFJDAG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -51,11 +51,11 @@ public:
   RadarTrack (RadarTrack&&) = default;
   /// Constructor which accepts value for all members
   explicit inline RadarTrack (
-                       std::string id,
-                       int32_t x,
-                       int32_t y,
-                       int32_t z,
-                       ::octetseq plot);
+    std::string id,
+    int32_t x,
+    int32_t y,
+    int32_t z,
+    ::octetseq plot);
   /// Copy assignment operator
   inline RadarTrack& operator= (const RadarTrack& x);
   /// Move assignment operator
@@ -363,6 +363,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFIAEHHD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BJEFJDAG_INCLUDED__ */
 
 // -*- END -*-

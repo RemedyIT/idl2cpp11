@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EEAEDHGG_INCLUDED__
-#define __RIDL_TESTC_H_EEAEDHGG_INCLUDED__
+#ifndef __RIDL_TESTC_H_CEEBAJAI_INCLUDED__
+#define __RIDL_TESTC_H_CEEBAJAI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -55,12 +55,12 @@ namespace Test
     Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Simple (
-                     uint8_t o,
-                     int32_t l,
-                     std::string s,
-                     double d,
-                     bool b,
-                     char c);
+      uint8_t o,
+      int32_t l,
+      std::string s,
+      double d,
+      bool b,
+      char c);
     /// Copy assignment operator
     inline Simple& operator= (const Simple& x);
     /// Move assignment operator
@@ -845,6 +845,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EEAEDHGG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CEEBAJAI_INCLUDED__ */
 
 // -*- END -*-
