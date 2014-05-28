@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_JEFDDEEJ_INCLUDED__
-#define __RIDL_TESTS_H_JEFDDEEJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_GBBEFIIA_INCLUDED__
+#define __RIDL_TESTS_H_GBBEFIIA_INCLUDED__
 
 #include "testC.h"
 
@@ -209,14 +209,16 @@ namespace POA
 
   protected:
     typedef std::shared_ptr<B>  _shared_ptr_type;
+    /// Constructor
     B ();
+    /// Destructor
     virtual ~B ();
 
     template <typename T> friend class TAOX11_CORBA::servant_reference;
 
     TAOX11_NAMESPACE::PortableServer::Servant::_shared_ptr_type _lock_shared ();
   };
-};
+} // namespace POA
 
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE {
@@ -304,6 +306,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_JEFDDEEJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GBBEFIIA_INCLUDED__ */
 
 // -*- END -*-

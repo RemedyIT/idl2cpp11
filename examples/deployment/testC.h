@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HBBFEIFA_INCLUDED__
-#define __RIDL_TESTC_H_HBBFEIFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FDHGCEDF_INCLUDED__
+#define __RIDL_TESTC_H_FDHGCEDF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -4910,8 +4910,8 @@ inline Deployment::Property::Property ()
 {
 }
 inline Deployment::Property::Property (
-                               std::string name,
-                               TAOX11_NAMESPACE::CORBA::Any value)
+  std::string name,
+  TAOX11_NAMESPACE::CORBA::Any value)
   : name_ (std::move (name))
   , value_ (std::move (value))
 {
@@ -4957,9 +4957,9 @@ inline Deployment::Requirement::Requirement ()
 {
 }
 inline Deployment::Requirement::Requirement (
-                                  std::string name,
-                                  std::string resourceType,
-                                  ::Deployment::Properties property)
+  std::string name,
+  std::string resourceType,
+  ::Deployment::Properties property)
   : name_ (std::move (name))
   , resourceType_ (std::move (resourceType))
   , property_ (std::move (property))
@@ -5015,10 +5015,10 @@ inline Deployment::SatisfierProperty::SatisfierProperty ()
 {
 }
 inline Deployment::SatisfierProperty::SatisfierProperty (
-                                        std::string name,
-                                        ::Deployment::SatisfierPropertyKind kind,
-                                        bool dynamic,
-                                        TAOX11_NAMESPACE::CORBA::Any value)
+  std::string name,
+  ::Deployment::SatisfierPropertyKind kind,
+  bool dynamic,
+  TAOX11_NAMESPACE::CORBA::Any value)
   : name_ (std::move (name))
   , kind_ (std::move (kind))
   , dynamic_ (std::move (dynamic))
@@ -5086,15 +5086,15 @@ inline Deployment::ComponentPortDescription::ComponentPortDescription ()
 {
 }
 inline Deployment::ComponentPortDescription::ComponentPortDescription (
-                                               std::string name,
-                                               std::string specificType,
-                                               ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
-                                               bool provider,
-                                               bool exclusiveProvider,
-                                               bool exclusiveUser,
-                                               bool optional,
-                                               CCMComponentPortKind kind,
-                                               ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam)
+  std::string name,
+  std::string specificType,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
+  bool provider,
+  bool exclusiveProvider,
+  bool exclusiveUser,
+  bool optional,
+  CCMComponentPortKind kind,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam)
   : name_ (std::move (name))
   , specificType_ (std::move (specificType))
   , supportedType_ (std::move (supportedType))
@@ -5197,8 +5197,8 @@ inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
 {
 }
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (
-                                                   std::string name,
-                                                   TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
+  std::string name,
+  TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
   : name_ (std::move (name))
   , type_ (std::move (type))
 {
@@ -5249,15 +5249,15 @@ inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription 
 {
 }
 inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription (
-                                                    std::string label,
-                                                    std::string UUID,
-                                                    std::string specificType,
-                                                    ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
-                                                    ::TAOX11_NAMESPACE::CORBA::StringSeq idlFile,
-                                                    ::Deployment::Properties configProperty,
-                                                    ::Deployment::ComponentPortDescriptions port,
-                                                    ::Deployment::ComponentPropertyDescriptions property,
-                                                    ::Deployment::Properties infoProperty)
+  std::string label,
+  std::string UUID,
+  std::string specificType,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq idlFile,
+  ::Deployment::Properties configProperty,
+  ::Deployment::ComponentPortDescriptions port,
+  ::Deployment::ComponentPropertyDescriptions property,
+  ::Deployment::Properties infoProperty)
   : label_ (std::move (label))
   , UUID_ (std::move (UUID))
   , specificType_ (std::move (specificType))
@@ -5368,11 +5368,11 @@ inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescript
 {
 }
 inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription (
-                                                      std::string name,
-                                                      ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                                      ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
-                                                      ::Deployment::Properties execParameter,
-                                                      ::Deployment::Requirements deployRequirement)
+  std::string name,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+  ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
+  ::Deployment::Properties execParameter,
+  ::Deployment::Requirements deployRequirement)
   : name_ (std::move (name))
   , source_ (std::move (source))
   , artifactRef_ (std::move (artifactRef))
@@ -5446,10 +5446,10 @@ inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploy
 {
 }
 inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription (
-                                                            ::Deployment::ResourceUsageKind resourceUsage,
-                                                            std::string requirementName,
-                                                            std::string resourceName,
-                                                            ::Deployment::Properties property)
+  ::Deployment::ResourceUsageKind resourceUsage,
+  std::string requirementName,
+  std::string resourceName,
+  ::Deployment::Properties property)
   : resourceUsage_ (std::move (resourceUsage))
   , requirementName_ (std::move (requirementName))
   , resourceName_ (std::move (resourceName))
@@ -5516,13 +5516,13 @@ inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription 
 {
 }
 inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription (
-                                                    std::string name,
-                                                    std::string node,
-                                                    ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                                    uint32_t implementationRef,
-                                                    ::Deployment::Properties configProperty,
-                                                    ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
-                                                    ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource)
+  std::string name,
+  std::string node,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+  uint32_t implementationRef,
+  ::Deployment::Properties configProperty,
+  ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
+  ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource)
   : name_ (std::move (name))
   , node_ (std::move (node))
   , source_ (std::move (source))
@@ -5610,7 +5610,7 @@ inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint 
 {
 }
 inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint (
-                                                    std::string portName)
+  std::string portName)
   : portName_ (std::move (portName))
 {
 }
@@ -5648,10 +5648,10 @@ inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint ()
 {
 }
 inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint (
-                                                   std::string portName,
-                                                   bool provider,
-                                                   ::Deployment::CCMComponentPortKind kind,
-                                                   uint32_t instanceRef)
+  std::string portName,
+  bool provider,
+  ::Deployment::CCMComponentPortKind kind,
+  uint32_t instanceRef)
   : portName_ (std::move (portName))
   , provider_ (std::move (provider))
   , kind_ (std::move (kind))
@@ -5713,10 +5713,10 @@ inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint ()
 {
 }
 inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint (
-                                                std::string location,
-                                                bool provider,
-                                                std::string portName,
-                                                ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType)
+  std::string location,
+  bool provider,
+  std::string portName,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType)
   : location_ (std::move (location))
   , provider_ (std::move (provider))
   , portName_ (std::move (portName))
@@ -5780,10 +5780,10 @@ inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDe
 {
 }
 inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription (
-                                                              std::string targetName,
-                                                              std::string requirementName,
-                                                              std::string resourceName,
-                                                              ::Deployment::Properties property)
+  std::string targetName,
+  std::string requirementName,
+  std::string resourceName,
+  ::Deployment::Properties property)
   : targetName_ (std::move (targetName))
   , requirementName_ (std::move (requirementName))
   , resourceName_ (std::move (resourceName))
@@ -5851,13 +5851,13 @@ inline Deployment::PlanConnectionDescription::PlanConnectionDescription ()
 {
 }
 inline Deployment::PlanConnectionDescription::PlanConnectionDescription (
-                                                std::string name,
-                                                ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                                ::Deployment::Requirements deployRequirement,
-                                                ::Deployment::ComponentExternalPortEndpoints externalEndpoint,
-                                                ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
-                                                ::Deployment::ExternalReferenceEndpoints externalReference,
-                                                ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource)
+  std::string name,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+  ::Deployment::Requirements deployRequirement,
+  ::Deployment::ComponentExternalPortEndpoints externalEndpoint,
+  ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
+  ::Deployment::ExternalReferenceEndpoints externalReference,
+  ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource)
   : name_ (std::move (name))
   , source_ (std::move (source))
   , deployRequirement_ (std::move (deployRequirement))
@@ -5947,8 +5947,8 @@ inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyRe
 {
 }
 inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyReference (
-                                                        std::string propertyName,
-                                                        uint32_t instanceRef)
+  std::string propertyName,
+  uint32_t instanceRef)
   : propertyName_ (std::move (propertyName))
   , instanceRef_ (std::move (instanceRef))
 {
@@ -5994,10 +5994,10 @@ inline Deployment::PlanPropertyMapping::PlanPropertyMapping ()
 {
 }
 inline Deployment::PlanPropertyMapping::PlanPropertyMapping (
-                                          std::string name,
-                                          ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                          std::string externalName,
-                                          ::Deployment::PlanSubcomponentPropertyReferences delegatesTo)
+  std::string name,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+  std::string externalName,
+  ::Deployment::PlanSubcomponentPropertyReferences delegatesTo)
   : name_ (std::move (name))
   , source_ (std::move (source))
   , externalName_ (std::move (externalName))
@@ -6059,7 +6059,7 @@ inline Deployment::ImplementationDependency::ImplementationDependency ()
 {
 }
 inline Deployment::ImplementationDependency::ImplementationDependency (
-                                               std::string requiredType)
+  std::string requiredType)
   : requiredType_ (std::move (requiredType))
 {
 }
@@ -6096,9 +6096,9 @@ inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription 
 {
 }
 inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription (
-                                                    std::string requirementName,
-                                                    std::string resourceName,
-                                                    ::Deployment::Properties property)
+  std::string requirementName,
+  std::string resourceName,
+  ::Deployment::Properties property)
   : requirementName_ (std::move (requirementName))
   , resourceName_ (std::move (resourceName))
   , property_ (std::move (property))
@@ -6157,13 +6157,13 @@ inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription 
 {
 }
 inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription (
-                                                    std::string name,
-                                                    ::TAOX11_NAMESPACE::CORBA::StringSeq location,
-                                                    std::string node,
-                                                    ::TAOX11_NAMESPACE::CORBA::StringSeq source,
-                                                    ::Deployment::Properties execParameter,
-                                                    ::Deployment::Requirements deployRequirement,
-                                                    ::Deployment::ResourceDeploymentDescriptions deployedResource)
+  std::string name,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq location,
+  std::string node,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq source,
+  ::Deployment::Properties execParameter,
+  ::Deployment::Requirements deployRequirement,
+  ::Deployment::ResourceDeploymentDescriptions deployedResource)
   : name_ (std::move (name))
   , location_ (std::move (location))
   , node_ (std::move (node))
@@ -6253,8 +6253,8 @@ inline Deployment::PlanLocality::PlanLocality ()
 {
 }
 inline Deployment::PlanLocality::PlanLocality (
-                                   ::Deployment::PlanLocalityKind constraint,
-                                   ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef)
+  ::Deployment::PlanLocalityKind constraint,
+  ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef)
   : constraint_ (std::move (constraint))
   , constrainedInstanceRef_ (std::move (constrainedInstanceRef))
 {
@@ -6307,17 +6307,17 @@ inline Deployment::DeploymentPlan::DeploymentPlan ()
 {
 }
 inline Deployment::DeploymentPlan::DeploymentPlan (
-                                     std::string label,
-                                     std::string UUID,
-                                     ::Deployment::ComponentInterfaceDescription realizes,
-                                     ::Deployment::MonolithicDeploymentDescriptions implementation,
-                                     ::Deployment::InstanceDeploymentDescriptions instance,
-                                     ::Deployment::PlanConnectionDescriptions connection,
-                                     ::Deployment::PlanPropertyMappings externalProperty,
-                                     ::Deployment::ImplementationDependencies dependsOn,
-                                     ::Deployment::ArtifactDeploymentDescriptions artifact,
-                                     ::Deployment::Properties infoProperty,
-                                     ::Deployment::PlanLocalities localityConstraint)
+  std::string label,
+  std::string UUID,
+  ::Deployment::ComponentInterfaceDescription realizes,
+  ::Deployment::MonolithicDeploymentDescriptions implementation,
+  ::Deployment::InstanceDeploymentDescriptions instance,
+  ::Deployment::PlanConnectionDescriptions connection,
+  ::Deployment::PlanPropertyMappings externalProperty,
+  ::Deployment::ImplementationDependencies dependsOn,
+  ::Deployment::ArtifactDeploymentDescriptions artifact,
+  ::Deployment::Properties infoProperty,
+  ::Deployment::PlanLocalities localityConstraint)
   : label_ (std::move (label))
   , UUID_ (std::move (UUID))
   , realizes_ (std::move (realizes))
@@ -6444,9 +6444,9 @@ inline Deployment::ComponentPackageReference::ComponentPackageReference ()
 {
 }
 inline Deployment::ComponentPackageReference::ComponentPackageReference (
-                                                std::string requiredUUID,
-                                                std::string requiredName,
-                                                ::Deployment::ComponentInterfaceDescription requiredType)
+  std::string requiredUUID,
+  std::string requiredName,
+  ::Deployment::ComponentInterfaceDescription requiredType)
   : requiredUUID_ (std::move (requiredUUID))
   , requiredName_ (std::move (requiredName))
   , requiredType_ (std::move (requiredType))
@@ -6504,12 +6504,12 @@ inline Deployment::ImplementationRequirement::ImplementationRequirement ()
 {
 }
 inline Deployment::ImplementationRequirement::ImplementationRequirement (
-                                                ::Deployment::ResourceUsageKinds resourceUsage,
-                                                std::string resourcePort,
-                                                std::string componentPort,
-                                                std::string name,
-                                                std::string resourceType,
-                                                ::Deployment::Properties property)
+  ::Deployment::ResourceUsageKinds resourceUsage,
+  std::string resourcePort,
+  std::string componentPort,
+  std::string name,
+  std::string resourceType,
+  ::Deployment::Properties property)
   : resourceUsage_ (std::move (resourceUsage))
   , resourcePort_ (std::move (resourcePort))
   , componentPort_ (std::move (componentPort))
@@ -6591,9 +6591,9 @@ inline Deployment::Capability::Capability ()
 {
 }
 inline Deployment::Capability::Capability (
-                                 std::string name,
-                                 ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
-                                 ::Deployment::SatisfierProperties property)
+  std::string name,
+  ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
+  ::Deployment::SatisfierProperties property)
   : name_ (std::move (name))
   , resourceType_ (std::move (resourceType))
   , property_ (std::move (property))
@@ -7436,6 +7436,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HBBFEIFA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FDHGCEDF_INCLUDED__ */
 
 // -*- END -*-

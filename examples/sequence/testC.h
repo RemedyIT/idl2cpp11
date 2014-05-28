@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BHABHFIC_INCLUDED__
-#define __RIDL_TESTC_H_BHABHFIC_INCLUDED__
+#ifndef __RIDL_TESTC_H_EEAEDHGG_INCLUDED__
+#define __RIDL_TESTC_H_EEAEDHGG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -660,12 +660,12 @@ inline Test::Simple::Simple ()
 {
 }
 inline Test::Simple::Simple (
-                       uint8_t o,
-                       int32_t l,
-                       std::string s,
-                       double d,
-                       bool b,
-                       char c)
+  uint8_t o,
+  int32_t l,
+  std::string s,
+  double d,
+  bool b,
+  char c)
   : o_ (std::move (o))
   , l_ (std::move (l))
   , s_ (std::move (s))
@@ -845,6 +845,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BHABHFIC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EEAEDHGG_INCLUDED__ */
 
 // -*- END -*-

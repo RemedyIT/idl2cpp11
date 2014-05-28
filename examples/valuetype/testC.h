@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FECADIFI_INCLUDED__
-#define __RIDL_TESTC_H_FECADIFI_INCLUDED__
+#ifndef __RIDL_TESTC_H_FDBDHGIH_INCLUDED__
+#define __RIDL_TESTC_H_FDBDHGIH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -2201,7 +2201,7 @@ inline S::S ()
 {
 }
 inline S::S (
-            int32_t value)
+  int32_t value)
   : value_ (std::move (value))
 {
 }
@@ -2247,7 +2247,7 @@ inline ColorValue2::ColorValue2 ()
 {
 }
 inline ColorValue2::ColorValue2 (
-                      ::Color col)
+  ::Color col)
   : col_ (std::move (col))
 {
 }
@@ -2310,7 +2310,6 @@ operator<< (
   return IDL::traits< ::Example>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/array_os.erb
 // Unaliased type : std::array< uint8_t, 64 >
 // MD5            : 765CC766CD2500C237586E8ED6B5F8D0
@@ -2352,7 +2351,6 @@ operator<< (
 {
   return IDL::traits< ::Val>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/valuebox_os.erb
 inline std::ostream&
@@ -2417,7 +2415,6 @@ operator<< (
   return IDL::traits< ::B>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 inline std::ostream&
 operator<< (
@@ -2427,7 +2424,6 @@ operator<< (
   return IDL::traits< ::V>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -2435,6 +2431,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FECADIFI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FDBDHGIH_INCLUDED__ */
 
 // -*- END -*-

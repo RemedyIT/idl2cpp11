@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCAHIJDA_INCLUDED__
-#define __RIDL_TESTC_H_HCAHIJDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFIAEHHD_INCLUDED__
+#define __RIDL_TESTC_H_JFIAEHHD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -254,11 +254,11 @@ inline RadarTrack::RadarTrack ()
 {
 }
 inline RadarTrack::RadarTrack (
-                     std::string id,
-                     int32_t x,
-                     int32_t y,
-                     int32_t z,
-                     ::octetseq plot)
+  std::string id,
+  int32_t x,
+  int32_t y,
+  int32_t z,
+  ::octetseq plot)
   : id_ (std::move (id))
   , x_ (std::move (x))
   , y_ (std::move (y))
@@ -363,6 +363,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HCAHIJDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFIAEHHD_INCLUDED__ */
 
 // -*- END -*-

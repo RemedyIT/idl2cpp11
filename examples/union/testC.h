@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GBHHIJDH_INCLUDED__
-#define __RIDL_TESTC_H_GBHHIJDH_INCLUDED__
+#ifndef __RIDL_TESTC_H_GAICHGHG_INCLUDED__
+#define __RIDL_TESTC_H_GAICHGHG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1344,7 +1344,7 @@ inline Global::Global ()
 {
 }
 inline Global::Global (
-                 int32_t x)
+  int32_t x)
   : x_ (std::move (x))
 {
 }
@@ -1379,8 +1379,8 @@ inline Test::Point::Point ()
 {
 }
 inline Test::Point::Point (
-                      int32_t x,
-                      int32_t y)
+  int32_t x,
+  int32_t y)
   : x_ (std::move (x))
   , y_ (std::move (y))
 {
@@ -1423,8 +1423,8 @@ inline Test::Track::Track ()
 {
 }
 inline Test::Track::Track (
-                      int32_t id,
-                      ::Test::Point p)
+  int32_t id,
+  ::Test::Point p)
   : id_ (std::move (id))
   , p_ (std::move (p))
 {
@@ -2136,7 +2136,7 @@ inline Test::S::S ()
 {
 }
 inline Test::S::S (
-                  int32_t len)
+  int32_t len)
   : len_ (std::move (len))
 {
 }
@@ -2772,6 +2772,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GBHHIJDH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GAICHGHG_INCLUDED__ */
 
 // -*- END -*-

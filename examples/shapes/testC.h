@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BEEIAGHA_INCLUDED__
-#define __RIDL_TESTC_H_BEEIAGHA_INCLUDED__
+#ifndef __RIDL_TESTC_H_GCJEFIII_INCLUDED__
+#define __RIDL_TESTC_H_GCJEFIII_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -366,10 +366,10 @@ inline ShapeType::ShapeType ()
 {
 }
 inline ShapeType::ShapeType (
-                    std::string color,
-                    int32_t x,
-                    int32_t y,
-                    int32_t shapesize)
+  std::string color,
+  int32_t x,
+  int32_t y,
+  int32_t shapesize)
   : color_ (std::move (color))
   , x_ (std::move (x))
   , y_ (std::move (y))
@@ -430,9 +430,9 @@ inline Attributes::Attributes ()
 {
 }
 inline Attributes::Attributes (
-                     std::string shape,
-                     std::string color,
-                     float speed)
+  std::string shape,
+  std::string color,
+  float speed)
   : shape_ (std::move (shape))
   , color_ (std::move (color))
   , speed_ (std::move (speed))
@@ -538,6 +538,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BEEIAGHA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GCJEFIII_INCLUDED__ */
 
 // -*- END -*-
