@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_CBEIDDFJ_INCLUDED__
-#define __RIDL_TESTS_H_CBEIDDFJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_GHIACIHH_INCLUDED__
+#define __RIDL_TESTS_H_GHIACIHH_INCLUDED__
 
 #include "testC.h"
 
@@ -83,8 +83,8 @@ namespace Test
       POA::Hello_srvproxy_ptr hello_srvproxy_;
     };
 
-  }; // POA
-}; // namespace Test
+  } // namespace POA
+} // namespace Test
 
 
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
@@ -110,9 +110,9 @@ namespace TAOX11_NAMESPACE {
         return ref_type::_narrow (base);
       }
     };
-  }; // CORBA
-}; // TAOX11_NAMESPACE
+  } // namespace CORBA
+} // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CBEIDDFJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GHIACIHH_INCLUDED__ */
 
 // -*- END -*-
