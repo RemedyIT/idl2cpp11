@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GAGEHGFC_INCLUDED__
-#define __RIDL_TESTC_H_GAGEHGFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_EFGGFDDE_INCLUDED__
+#define __RIDL_TESTC_H_EFGGFDDE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1419,7 +1419,7 @@ inline void Test::Point::swap (::Test::Point& s)
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Track::Track ()
   : id_ (0)
-  , p_ (::Test::Point ())
+  , p_ ()
 {
 }
 inline Test::Track::Track (
@@ -2772,6 +2772,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GAGEHGFC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EFGGFDDE_INCLUDED__ */
 
 // -*- END -*-

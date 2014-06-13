@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EHHJJJGA_INCLUDED__
-#define __RIDL_TESTC_H_EHHJJJGA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DDGAGDAD_INCLUDED__
+#define __RIDL_TESTC_H_DDGAGDAD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -4905,8 +4905,8 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::Property::Property ()
-  : name_ (std::string())
-  , value_ (TAOX11_NAMESPACE::CORBA::Any ())
+  : name_ ()
+  , value_ ()
 {
 }
 inline Deployment::Property::Property (
@@ -4951,9 +4951,9 @@ inline void Deployment::Property::swap (::Deployment::Property& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::Requirement::Requirement ()
-  : name_ (std::string())
-  , resourceType_ (std::string())
-  , property_ (std::vector < ::Deployment::Property> ())
+  : name_ ()
+  , resourceType_ ()
+  , property_ ()
 {
 }
 inline Deployment::Requirement::Requirement (
@@ -5008,10 +5008,10 @@ inline void Deployment::Requirement::swap (::Deployment::Requirement& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::SatisfierProperty::SatisfierProperty ()
-  : name_ (std::string())
+  : name_ ()
   , kind_ (::Deployment::SatisfierPropertyKind::Quantity)
   , dynamic_ (false)
-  , value_ (TAOX11_NAMESPACE::CORBA::Any ())
+  , value_ ()
 {
 }
 inline Deployment::SatisfierProperty::SatisfierProperty (
@@ -5074,15 +5074,15 @@ inline void Deployment::SatisfierProperty::swap (::Deployment::SatisfierProperty
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPortDescription::ComponentPortDescription ()
-  : name_ (std::string())
-  , specificType_ (std::string())
-  , supportedType_ (std::vector < std::string> ())
+  : name_ ()
+  , specificType_ ()
+  , supportedType_ ()
   , provider_ (false)
   , exclusiveProvider_ (false)
   , exclusiveUser_ (false)
   , optional_ (false)
   , kind_ (::Deployment::CCMComponentPortKind::Facet)
-  , templateParam_ (std::vector < std::string> ())
+  , templateParam_ ()
 {
 }
 inline Deployment::ComponentPortDescription::ComponentPortDescription (
@@ -5192,7 +5192,7 @@ inline void Deployment::ComponentPortDescription::swap (::Deployment::ComponentP
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
-  : name_ (std::string())
+  : name_ ()
   , type_ (nullptr)
 {
 }
@@ -5237,15 +5237,15 @@ inline void Deployment::ComponentPropertyDescription::swap (::Deployment::Compon
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription ()
-  : label_ (std::string())
-  , UUID_ (std::string())
-  , specificType_ (std::string())
-  , supportedType_ (std::vector < std::string> ())
-  , idlFile_ (std::vector < std::string> ())
-  , configProperty_ (std::vector < ::Deployment::Property> ())
-  , port_ (std::vector < ::Deployment::ComponentPortDescription> ())
-  , property_ (std::vector < ::Deployment::ComponentPropertyDescription> ())
-  , infoProperty_ (std::vector < ::Deployment::Property> ())
+  : label_ ()
+  , UUID_ ()
+  , specificType_ ()
+  , supportedType_ ()
+  , idlFile_ ()
+  , configProperty_ ()
+  , port_ ()
+  , property_ ()
+  , infoProperty_ ()
 {
 }
 inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription (
@@ -5360,11 +5360,11 @@ inline void Deployment::ComponentInterfaceDescription::swap (::Deployment::Compo
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription ()
-  : name_ (std::string())
-  , source_ (std::vector < std::string> ())
-  , artifactRef_ (std::vector < uint32_t> ())
-  , execParameter_ (std::vector < ::Deployment::Property> ())
-  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
+  : name_ ()
+  , source_ ()
+  , artifactRef_ ()
+  , execParameter_ ()
+  , deployRequirement_ ()
 {
 }
 inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription (
@@ -5440,9 +5440,9 @@ inline void Deployment::MonolithicDeploymentDescription::swap (::Deployment::Mon
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription ()
   : resourceUsage_ (::Deployment::ResourceUsageKind::None)
-  , requirementName_ (std::string())
-  , resourceName_ (std::string())
-  , property_ (std::vector < ::Deployment::Property> ())
+  , requirementName_ ()
+  , resourceName_ ()
+  , property_ ()
 {
 }
 inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription (
@@ -5506,13 +5506,13 @@ inline void Deployment::InstanceResourceDeploymentDescription::swap (::Deploymen
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription ()
-  : name_ (std::string())
-  , node_ (std::string())
-  , source_ (std::vector < std::string> ())
+  : name_ ()
+  , node_ ()
+  , source_ ()
   , implementationRef_ (0)
-  , configProperty_ (std::vector < ::Deployment::Property> ())
-  , deployedResource_ (std::vector < ::Deployment::InstanceResourceDeploymentDescription> ())
-  , deployedSharedResource_ (std::vector < ::Deployment::InstanceResourceDeploymentDescription> ())
+  , configProperty_ ()
+  , deployedResource_ ()
+  , deployedSharedResource_ ()
 {
 }
 inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription (
@@ -5606,7 +5606,7 @@ inline void Deployment::InstanceDeploymentDescription::swap (::Deployment::Insta
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint ()
-  : portName_ (std::string())
+  : portName_ ()
 {
 }
 inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint (
@@ -5641,7 +5641,7 @@ inline void Deployment::ComponentExternalPortEndpoint::swap (::Deployment::Compo
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint ()
-  : portName_ (std::string())
+  : portName_ ()
   , provider_ (false)
   , kind_ (::Deployment::CCMComponentPortKind::Facet)
   , instanceRef_ (0)
@@ -5706,10 +5706,10 @@ inline void Deployment::PlanSubcomponentPortEndpoint::swap (::Deployment::PlanSu
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint ()
-  : location_ (std::string())
+  : location_ ()
   , provider_ (false)
-  , portName_ (std::string())
-  , supportedType_ (std::vector < std::string> ())
+  , portName_ ()
+  , supportedType_ ()
 {
 }
 inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint (
@@ -5773,10 +5773,10 @@ inline void Deployment::ExternalReferenceEndpoint::swap (::Deployment::ExternalR
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription ()
-  : targetName_ (std::string())
-  , requirementName_ (std::string())
-  , resourceName_ (std::string())
-  , property_ (std::vector < ::Deployment::Property> ())
+  : targetName_ ()
+  , requirementName_ ()
+  , resourceName_ ()
+  , property_ ()
 {
 }
 inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription (
@@ -5841,13 +5841,13 @@ inline void Deployment::ConnectionResourceDeploymentDescription::swap (::Deploym
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanConnectionDescription::PlanConnectionDescription ()
-  : name_ (std::string())
-  , source_ (std::vector < std::string> ())
-  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
-  , externalEndpoint_ (std::vector < ::Deployment::ComponentExternalPortEndpoint> ())
-  , internalEndpoint_ (std::vector < ::Deployment::PlanSubcomponentPortEndpoint> ())
-  , externalReference_ (std::vector < ::Deployment::ExternalReferenceEndpoint> ())
-  , deployedResource_ (std::vector < ::Deployment::ConnectionResourceDeploymentDescription> ())
+  : name_ ()
+  , source_ ()
+  , deployRequirement_ ()
+  , externalEndpoint_ ()
+  , internalEndpoint_ ()
+  , externalReference_ ()
+  , deployedResource_ ()
 {
 }
 inline Deployment::PlanConnectionDescription::PlanConnectionDescription (
@@ -5942,7 +5942,7 @@ inline void Deployment::PlanConnectionDescription::swap (::Deployment::PlanConne
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyReference ()
-  : propertyName_ (std::string())
+  : propertyName_ ()
   , instanceRef_ (0)
 {
 }
@@ -5987,10 +5987,10 @@ inline void Deployment::PlanSubcomponentPropertyReference::swap (::Deployment::P
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanPropertyMapping::PlanPropertyMapping ()
-  : name_ (std::string())
-  , source_ (std::vector < std::string> ())
-  , externalName_ (std::string())
-  , delegatesTo_ (std::vector < ::Deployment::PlanSubcomponentPropertyReference> ())
+  : name_ ()
+  , source_ ()
+  , externalName_ ()
+  , delegatesTo_ ()
 {
 }
 inline Deployment::PlanPropertyMapping::PlanPropertyMapping (
@@ -6055,7 +6055,7 @@ inline void Deployment::PlanPropertyMapping::swap (::Deployment::PlanPropertyMap
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ImplementationDependency::ImplementationDependency ()
-  : requiredType_ (std::string())
+  : requiredType_ ()
 {
 }
 inline Deployment::ImplementationDependency::ImplementationDependency (
@@ -6090,9 +6090,9 @@ inline void Deployment::ImplementationDependency::swap (::Deployment::Implementa
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription ()
-  : requirementName_ (std::string())
-  , resourceName_ (std::string())
-  , property_ (std::vector < ::Deployment::Property> ())
+  : requirementName_ ()
+  , resourceName_ ()
+  , property_ ()
 {
 }
 inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription (
@@ -6147,13 +6147,13 @@ inline void Deployment::ResourceDeploymentDescription::swap (::Deployment::Resou
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription ()
-  : name_ (std::string())
-  , location_ (std::vector < std::string> ())
-  , node_ (std::string())
-  , source_ (std::vector < std::string> ())
-  , execParameter_ (std::vector < ::Deployment::Property> ())
-  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
-  , deployedResource_ (std::vector < ::Deployment::ResourceDeploymentDescription> ())
+  : name_ ()
+  , location_ ()
+  , node_ ()
+  , source_ ()
+  , execParameter_ ()
+  , deployRequirement_ ()
+  , deployedResource_ ()
 {
 }
 inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription (
@@ -6249,7 +6249,7 @@ inline void Deployment::ArtifactDeploymentDescription::swap (::Deployment::Artif
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanLocality::PlanLocality ()
   : constraint_ (::Deployment::PlanLocalityKind::PlanSameProcess)
-  , constrainedInstanceRef_ (std::vector < uint32_t> ())
+  , constrainedInstanceRef_ ()
 {
 }
 inline Deployment::PlanLocality::PlanLocality (
@@ -6293,17 +6293,17 @@ inline void Deployment::PlanLocality::swap (::Deployment::PlanLocality& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::DeploymentPlan::DeploymentPlan ()
-  : label_ (std::string())
-  , UUID_ (std::string())
-  , realizes_ (::Deployment::ComponentInterfaceDescription ())
-  , implementation_ (std::vector < ::Deployment::MonolithicDeploymentDescription> ())
-  , instance_ (std::vector < ::Deployment::InstanceDeploymentDescription> ())
-  , connection_ (std::vector < ::Deployment::PlanConnectionDescription> ())
-  , externalProperty_ (std::vector < ::Deployment::PlanPropertyMapping> ())
-  , dependsOn_ (std::vector < ::Deployment::ImplementationDependency> ())
-  , artifact_ (std::vector < ::Deployment::ArtifactDeploymentDescription> ())
-  , infoProperty_ (std::vector < ::Deployment::Property> ())
-  , localityConstraint_ (std::vector < ::Deployment::PlanLocality> ())
+  : label_ ()
+  , UUID_ ()
+  , realizes_ ()
+  , implementation_ ()
+  , instance_ ()
+  , connection_ ()
+  , externalProperty_ ()
+  , dependsOn_ ()
+  , artifact_ ()
+  , infoProperty_ ()
+  , localityConstraint_ ()
 {
 }
 inline Deployment::DeploymentPlan::DeploymentPlan (
@@ -6438,9 +6438,9 @@ inline void Deployment::DeploymentPlan::swap (::Deployment::DeploymentPlan& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPackageReference::ComponentPackageReference ()
-  : requiredUUID_ (std::string())
-  , requiredName_ (std::string())
-  , requiredType_ (::Deployment::ComponentInterfaceDescription ())
+  : requiredUUID_ ()
+  , requiredName_ ()
+  , requiredType_ ()
 {
 }
 inline Deployment::ComponentPackageReference::ComponentPackageReference (
@@ -6495,12 +6495,12 @@ inline void Deployment::ComponentPackageReference::swap (::Deployment::Component
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ImplementationRequirement::ImplementationRequirement ()
-  : resourceUsage_ (std::vector < ::Deployment::ResourceUsageKind> ())
-  , resourcePort_ (std::string())
-  , componentPort_ (std::string())
-  , name_ (std::string())
-  , resourceType_ (std::string())
-  , property_ (std::vector < ::Deployment::Property> ())
+  : resourceUsage_ ()
+  , resourcePort_ ()
+  , componentPort_ ()
+  , name_ ()
+  , resourceType_ ()
+  , property_ ()
 {
 }
 inline Deployment::ImplementationRequirement::ImplementationRequirement (
@@ -6585,9 +6585,9 @@ inline void Deployment::ImplementationRequirement::swap (::Deployment::Implement
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::Capability::Capability ()
-  : name_ (std::string())
-  , resourceType_ (std::vector < std::string> ())
-  , property_ (std::vector < ::Deployment::SatisfierProperty> ())
+  : name_ ()
+  , resourceType_ ()
+  , property_ ()
 {
 }
 inline Deployment::Capability::Capability (
@@ -7436,6 +7436,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EHHJJJGA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DDGAGDAD_INCLUDED__ */
 
 // -*- END -*-

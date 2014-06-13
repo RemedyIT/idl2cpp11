@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CAIAHIJB_INCLUDED__
-#define __RIDL_TESTC_H_CAIAHIJB_INCLUDED__
+#ifndef __RIDL_TESTC_H_ECDAAFDJ_INCLUDED__
+#define __RIDL_TESTC_H_ECDAAFDJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -246,11 +246,11 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline RadarTrack::RadarTrack ()
-  : id_ (std::string())
+  : id_ ()
   , x_ (0)
   , y_ (0)
   , z_ (0)
-  , plot_ (std::vector < uint8_t> ())
+  , plot_ ()
 {
 }
 inline RadarTrack::RadarTrack (
@@ -363,6 +363,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CAIAHIJB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_ECDAAFDJ_INCLUDED__ */
 
 // -*- END -*-

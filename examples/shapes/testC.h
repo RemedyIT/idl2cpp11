@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DIDFIBAG_INCLUDED__
-#define __RIDL_TESTC_H_DIDFIBAG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IAIICFJF_INCLUDED__
+#define __RIDL_TESTC_H_IAIICFJF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -359,7 +359,7 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ShapeType::ShapeType ()
-  : color_ (std::string())
+  : color_ ()
   , x_ (0)
   , y_ (0)
   , shapesize_ (0)
@@ -424,8 +424,8 @@ inline void ShapeType::swap (::ShapeType& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Attributes::Attributes ()
-  : shape_ (std::string())
-  , color_ (std::string())
+  : shape_ ()
+  , color_ ()
   , speed_ (0.0)
 {
 }
@@ -538,6 +538,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DIDFIBAG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IAIICFJF_INCLUDED__ */
 
 // -*- END -*-

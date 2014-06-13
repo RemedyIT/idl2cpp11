@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFCEFADA_INCLUDED__
-#define __RIDL_TESTC_H_GFCEFADA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDCACHIB_INCLUDED__
+#define __RIDL_TESTC_H_HDCACHIB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -2190,7 +2190,7 @@ inline ::obv::Example::Example ()
   : ::Example ()
   , val1_ (0)
   , val2_ (0)
-  , val3_ (std::string())
+  , val3_ ()
   , val5_ (nullptr)
 {
 }
@@ -2234,9 +2234,9 @@ inline ::obv::Val::Val ()
   : ::Val ()
   , t_ (nullptr)
   , v_ (0)
-  , w_ (std::array< uint8_t, 64 > ())
-  , x_ (std::string())
-  , y_ (::S ())
+  , w_ ()
+  , x_ ()
+  , y_ ()
   , z_ (nullptr)
 {
 }
@@ -2431,6 +2431,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GFCEFADA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDCACHIB_INCLUDED__ */
 
 // -*- END -*-

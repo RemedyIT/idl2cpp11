@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CJJEGHFF_INCLUDED__
-#define __RIDL_TESTC_H_CJJEGHFF_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDGGGFHA_INCLUDED__
+#define __RIDL_TESTC_H_IDGGGFHA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -666,7 +666,7 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Variable::Variable ()
-  : name_ (std::string())
+  : name_ ()
 {
 }
 inline Test::Variable::Variable (
@@ -703,12 +703,12 @@ inline void Test::Variable::swap (::Test::Variable& s)
 inline Test::Simple::Simple ()
   : o_ (0)
   , l_ (0)
-  , s_ (std::string())
+  , s_ ()
   , d_ (0.0)
   , b_ (false)
   , c_ ('\0')
   , bar_ref_ (nullptr)
-  , v_ (::Test::Variable ())
+  , v_ ()
 {
 }
 inline Test::Simple::Simple (
@@ -866,6 +866,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CJJEGHFF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IDGGGFHA_INCLUDED__ */
 
 // -*- END -*-

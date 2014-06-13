@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BBFCGDBF_INCLUDED__
-#define __RIDL_TESTC_H_BBFCGDBF_INCLUDED__
+#ifndef __RIDL_TESTC_H_GAJHJFAH_INCLUDED__
+#define __RIDL_TESTC_H_GAJHJFAH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -653,7 +653,7 @@ namespace std {
 inline Test::Simple::Simple ()
   : o_ (0)
   , l_ (0)
-  , s_ (std::string())
+  , s_ ()
   , d_ (0.0)
   , b_ (false)
   , c_ ('\0')
@@ -845,6 +845,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BBFCGDBF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GAJHJFAH_INCLUDED__ */
 
 // -*- END -*-

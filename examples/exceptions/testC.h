@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDBIHFIE_INCLUDED__
-#define __RIDL_TESTC_H_BDBIHFIE_INCLUDED__
+#ifndef __RIDL_TESTC_H_ECGHHAJH_INCLUDED__
+#define __RIDL_TESTC_H_ECGHHAJH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -436,7 +436,7 @@ namespace std {
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::FooEx::FooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
-  , message_ (std::string())
+  , message_ ()
 {
 }
 
@@ -529,6 +529,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BDBIHFIE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_ECGHHAJH_INCLUDED__ */
 
 // -*- END -*-
