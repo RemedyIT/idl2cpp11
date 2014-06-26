@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IDGGGFHA_INCLUDED__
-#define __RIDL_TESTC_H_IDGGGFHA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HFEBEICF_INCLUDED__
+#define __RIDL_TESTC_H_HFEBEICF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -55,9 +55,9 @@ namespace Test
     explicit inline Variable (
       std::string name);
     /// Copy assignment operator
-    inline Variable& operator= (const Variable& x);
+    Variable& operator= (const Variable&) = default;
     /// Move assignment operator
-    inline Variable& operator= (Variable&& x);
+    Variable& operator= (Variable&&) = default;
 
     /// @copydoc Test::Variable::name
     //@{
@@ -212,9 +212,9 @@ namespace Test
       TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
       ::Test::Variable v);
     /// Copy assignment operator
-    inline Simple& operator= (const Simple& x);
+    Simple& operator= (const Simple&) = default;
     /// Move assignment operator
-    inline Simple& operator= (Simple&& x);
+    Simple& operator= (Simple&&) = default;
 
     /// @copydoc Test::Simple::o
     //@{
@@ -666,7 +666,7 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Variable::Variable ()
-  : name_ ()
+  : name_ (std::string ())
 {
 }
 inline Test::Variable::Variable (
@@ -680,20 +680,6 @@ inline void Test::Variable::name (std::string&& _name) { this->name_ = std::move
 inline const std::string& Test::Variable::name () const { return this->name_; }
 inline std::string& Test::Variable::name () { return this->name_; }
 
-inline ::Test::Variable& Test::Variable::operator= (const ::Test::Variable& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-  }
-  return *this;
-}
-
-inline ::Test::Variable& Test::Variable::operator= (::Test::Variable&& x)
-{
-  this->name_ = std::move (x.name_);
-  return *this;
-}
-
 inline void Test::Variable::swap (::Test::Variable& s)
 {
   std::swap (this->name_, s.name_);
@@ -703,12 +689,12 @@ inline void Test::Variable::swap (::Test::Variable& s)
 inline Test::Simple::Simple ()
   : o_ (0)
   , l_ (0)
-  , s_ ()
+  , s_ (std::string ())
   , d_ (0.0)
   , b_ (false)
   , c_ ('\0')
   , bar_ref_ (nullptr)
-  , v_ ()
+  , v_ (::Test::Variable ())
 {
 }
 inline Test::Simple::Simple (
@@ -765,34 +751,6 @@ inline void Test::Simple::v (::Test::Variable&& _v) { this->v_ = std::move (_v);
 inline const ::Test::Variable& Test::Simple::v () const { return this->v_; }
 inline ::Test::Variable& Test::Simple::v () { return this->v_; }
 
-inline ::Test::Simple& Test::Simple::operator= (const ::Test::Simple& x)
-{
-  if (this != &x) {
-    this->o_ = x.o_;
-    this->l_ = x.l_;
-    this->s_ = x.s_;
-    this->d_ = x.d_;
-    this->b_ = x.b_;
-    this->c_ = x.c_;
-    this->bar_ref_ = x.bar_ref_;
-    this->v_ = x.v_;
-  }
-  return *this;
-}
-
-inline ::Test::Simple& Test::Simple::operator= (::Test::Simple&& x)
-{
-  this->o_ = std::move (x.o_);
-  this->l_ = std::move (x.l_);
-  this->s_ = std::move (x.s_);
-  this->d_ = std::move (x.d_);
-  this->b_ = std::move (x.b_);
-  this->c_ = std::move (x.c_);
-  this->bar_ref_ = std::move (x.bar_ref_);
-  this->v_ = std::move (x.v_);
-  return *this;
-}
-
 inline void Test::Simple::swap (::Test::Simple& s)
 {
   std::swap (this->o_, s.o_);
@@ -832,7 +790,6 @@ operator<< (
   return IDL::traits< ::Test::Variable>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -850,7 +807,6 @@ operator<< (
   return IDL::traits< ::Test::Simple>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -866,6 +822,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IDGGGFHA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HFEBEICF_INCLUDED__ */
 
 // -*- END -*-

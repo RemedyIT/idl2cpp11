@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ECGHHAJH_INCLUDED__
-#define __RIDL_TESTC_H_ECGHHAJH_INCLUDED__
+#ifndef __RIDL_TESTC_H_EEJGBAGA_INCLUDED__
+#define __RIDL_TESTC_H_EEJGBAGA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -60,8 +60,8 @@ namespace Test
     FooEx (FooEx&&) = default;
     explicit FooEx (
                     std::string message);
-    FooEx& operator= (const FooEx& x);
-    FooEx& operator= (FooEx&& x);
+    FooEx& operator= (const FooEx&) = default;
+    FooEx& operator= (FooEx&&) = default;
 
     /// @copydoc Test::FooEx::message
     //@{
@@ -102,8 +102,8 @@ namespace Test
     BooEx (BooEx&&) = default;
     explicit BooEx (
                     int32_t id);
-    BooEx& operator= (const BooEx& x);
-    BooEx& operator= (BooEx&& x);
+    BooEx& operator= (const BooEx&) = default;
+    BooEx& operator= (BooEx&&) = default;
 
     /// @copydoc Test::BooEx::id
     //@{
@@ -436,7 +436,7 @@ namespace std {
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::FooEx::FooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
-  , message_ ()
+  , message_ (std::string ())
 {
 }
 
@@ -452,25 +452,6 @@ inline void Test::FooEx::message (std::string&& _message) { this->message_ = std
 inline const std::string& Test::FooEx::message () const { return this->message_; }
 inline std::string& Test::FooEx::message () { return this->message_; }
 
-inline ::Test::FooEx& Test::FooEx::operator= (const FooEx& x)
-{
-  if (this != &x)
-  {
-    this->UserException::operator = (x);
-    this->message_ = x.message_;
-  }
-  return *this;
-}
-
-inline ::Test::FooEx& Test::FooEx::operator= (::Test::FooEx&& x)
-{
-  if (this != &x)
-  {
-    this->UserException::operator = (x);
-    this->message_ = std::move (x.message_);
-  }
-  return *this;
-}
 
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::BooEx::BooEx ()
@@ -490,25 +471,6 @@ inline void Test::BooEx::id (int32_t _id) { this->id_ = _id; }
 inline int32_t Test::BooEx::id () const { return this->id_; }
 inline int32_t& Test::BooEx::id () { return this->id_; }
 
-inline ::Test::BooEx& Test::BooEx::operator= (const ::Test::BooEx& x)
-{
-  if (this != &x)
-  {
-    this->UserException::operator = (x);
-    this->id_ = x.id_;
-  }
-  return *this;
-}
-
-inline ::Test::BooEx& Test::BooEx::operator= (::Test::BooEx&& x)
-{
-  if (this != &x)
-  {
-    this->UserException::operator = (x);
-    this->id_ = std::move (x.id_);
-  }
-  return *this;
-}
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
@@ -529,6 +491,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ECGHHAJH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EEJGBAGA_INCLUDED__ */
 
 // -*- END -*-

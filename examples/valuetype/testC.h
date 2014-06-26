@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HDCACHIB_INCLUDED__
-#define __RIDL_TESTC_H_HDCACHIB_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDBJBACJ_INCLUDED__
+#define __RIDL_TESTC_H_EDBJBACJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -277,9 +277,9 @@ public:
   explicit inline S (
     int32_t value);
   /// Copy assignment operator
-  inline S& operator= (const S& x);
+  S& operator= (const S&) = default;
   /// Move assignment operator
-  inline S& operator= (S&& x);
+  S& operator= (S&&) = default;
 
   /// @copydoc S::value
   //@{
@@ -1050,9 +1050,9 @@ public:
   explicit inline ColorValue2 (
     ::Color col);
   /// Copy assignment operator
-  inline ColorValue2& operator= (const ColorValue2& x);
+  ColorValue2& operator= (const ColorValue2&) = default;
   /// Move assignment operator
-  inline ColorValue2& operator= (ColorValue2&& x);
+  ColorValue2& operator= (ColorValue2&&) = default;
 
   /// @copydoc ColorValue2::col
   //@{
@@ -2190,7 +2190,7 @@ inline ::obv::Example::Example ()
   : ::Example ()
   , val1_ (0)
   , val2_ (0)
-  , val3_ ()
+  , val3_ (std::string ())
   , val5_ (nullptr)
 {
 }
@@ -2210,20 +2210,6 @@ inline void S::value (int32_t _value) { this->value_ = _value; }
 inline int32_t S::value () const { return this->value_; }
 inline int32_t& S::value () { return this->value_; }
 
-inline ::S& S::operator= (const ::S& x)
-{
-  if (this != &x) {
-    this->value_ = x.value_;
-  }
-  return *this;
-}
-
-inline ::S& S::operator= (::S&& x)
-{
-  this->value_ = std::move (x.value_);
-  return *this;
-}
-
 inline void S::swap (::S& s)
 {
   std::swap (this->value_, s.value_);
@@ -2234,9 +2220,9 @@ inline ::obv::Val::Val ()
   : ::Val ()
   , t_ (nullptr)
   , v_ (0)
-  , w_ ()
-  , x_ ()
-  , y_ ()
+  , w_ (std::array< uint8_t, 64 > ())
+  , x_ (std::string ())
+  , y_ (::S ())
   , z_ (nullptr)
 {
 }
@@ -2255,20 +2241,6 @@ inline ColorValue2::ColorValue2 (
 inline void ColorValue2::col (::Color _col) { this->col_ = _col; }
 inline ::Color ColorValue2::col () const { return this->col_; }
 inline ::Color& ColorValue2::col () { return this->col_; }
-
-inline ::ColorValue2& ColorValue2::operator= (const ::ColorValue2& x)
-{
-  if (this != &x) {
-    this->col_ = x.col_;
-  }
-  return *this;
-}
-
-inline ::ColorValue2& ColorValue2::operator= (::ColorValue2&& x)
-{
-  this->col_ = std::move (x.col_);
-  return *this;
-}
 
 inline void ColorValue2::swap (::ColorValue2& s)
 {
@@ -2334,7 +2306,6 @@ operator<< (
   return IDL::traits< ::S>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -2397,7 +2368,6 @@ operator<< (
   return IDL::traits< ::ColorValue2>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -2431,6 +2401,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HDCACHIB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDBJBACJ_INCLUDED__ */
 
 // -*- END -*-

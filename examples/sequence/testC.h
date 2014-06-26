@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GAJHJFAH_INCLUDED__
-#define __RIDL_TESTC_H_GAJHJFAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_DIAJIGJJ_INCLUDED__
+#define __RIDL_TESTC_H_DIAJIGJJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -62,9 +62,9 @@ namespace Test
       bool b,
       char c);
     /// Copy assignment operator
-    inline Simple& operator= (const Simple& x);
+    Simple& operator= (const Simple&) = default;
     /// Move assignment operator
-    inline Simple& operator= (Simple&& x);
+    Simple& operator= (Simple&&) = default;
 
     /// @copydoc Test::Simple::o
     //@{
@@ -653,7 +653,7 @@ namespace std {
 inline Test::Simple::Simple ()
   : o_ (0)
   , l_ (0)
-  , s_ ()
+  , s_ (std::string ())
   , d_ (0.0)
   , b_ (false)
   , c_ ('\0')
@@ -700,30 +700,6 @@ inline void Test::Simple::c (char _c) { this->c_ = _c; }
 inline char Test::Simple::c () const { return this->c_; }
 inline char& Test::Simple::c () { return this->c_; }
 
-inline ::Test::Simple& Test::Simple::operator= (const ::Test::Simple& x)
-{
-  if (this != &x) {
-    this->o_ = x.o_;
-    this->l_ = x.l_;
-    this->s_ = x.s_;
-    this->d_ = x.d_;
-    this->b_ = x.b_;
-    this->c_ = x.c_;
-  }
-  return *this;
-}
-
-inline ::Test::Simple& Test::Simple::operator= (::Test::Simple&& x)
-{
-  this->o_ = std::move (x.o_);
-  this->l_ = std::move (x.l_);
-  this->s_ = std::move (x.s_);
-  this->d_ = std::move (x.d_);
-  this->b_ = std::move (x.b_);
-  this->c_ = std::move (x.c_);
-  return *this;
-}
-
 inline void Test::Simple::swap (::Test::Simple& s)
 {
   std::swap (this->o_, s.o_);
@@ -753,7 +729,6 @@ operator<< (
 {
   return IDL::traits< ::Test::Simple>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Test::Simple>
@@ -845,6 +820,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GAJHJFAH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DIAJIGJJ_INCLUDED__ */
 
 // -*- END -*-

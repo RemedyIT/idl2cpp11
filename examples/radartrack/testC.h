@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ECDAAFDJ_INCLUDED__
-#define __RIDL_TESTC_H_ECDAAFDJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_HAAHFCBG_INCLUDED__
+#define __RIDL_TESTC_H_HAAHFCBG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -57,9 +57,9 @@ public:
     int32_t z,
     ::octetseq plot);
   /// Copy assignment operator
-  inline RadarTrack& operator= (const RadarTrack& x);
+  RadarTrack& operator= (const RadarTrack&) = default;
   /// Move assignment operator
-  inline RadarTrack& operator= (RadarTrack&& x);
+  RadarTrack& operator= (RadarTrack&&) = default;
 
   /// @copydoc RadarTrack::id
   //@{
@@ -246,11 +246,11 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline RadarTrack::RadarTrack ()
-  : id_ ()
+  : id_ (std::string ())
   , x_ (0)
   , y_ (0)
   , z_ (0)
-  , plot_ ()
+  , plot_ (std::vector < uint8_t> ())
 {
 }
 inline RadarTrack::RadarTrack (
@@ -288,28 +288,6 @@ inline void RadarTrack::plot (const ::octetseq& _plot) { this->plot_ = _plot; }
 inline void RadarTrack::plot (::octetseq&& _plot) { this->plot_ = std::move (_plot); }
 inline const ::octetseq& RadarTrack::plot () const { return this->plot_; }
 inline ::octetseq& RadarTrack::plot () { return this->plot_; }
-
-inline ::RadarTrack& RadarTrack::operator= (const ::RadarTrack& x)
-{
-  if (this != &x) {
-    this->id_ = x.id_;
-    this->x_ = x.x_;
-    this->y_ = x.y_;
-    this->z_ = x.z_;
-    this->plot_ = x.plot_;
-  }
-  return *this;
-}
-
-inline ::RadarTrack& RadarTrack::operator= (::RadarTrack&& x)
-{
-  this->id_ = std::move (x.id_);
-  this->x_ = std::move (x.x_);
-  this->y_ = std::move (x.y_);
-  this->z_ = std::move (x.z_);
-  this->plot_ = std::move (x.plot_);
-  return *this;
-}
 
 inline void RadarTrack::swap (::RadarTrack& s)
 {
@@ -355,7 +333,6 @@ operator<< (
   return IDL::traits< ::RadarTrack>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/post.erb
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -363,6 +340,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ECDAAFDJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HAAHFCBG_INCLUDED__ */
 
 // -*- END -*-

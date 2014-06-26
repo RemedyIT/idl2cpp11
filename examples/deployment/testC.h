@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DDGAGDAD_INCLUDED__
-#define __RIDL_TESTC_H_DDGAGDAD_INCLUDED__
+#ifndef __RIDL_TESTC_H_IGGEGEFB_INCLUDED__
+#define __RIDL_TESTC_H_IGGEGEFB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -56,9 +56,9 @@ namespace Deployment
       std::string name,
       TAOX11_NAMESPACE::CORBA::Any value);
     /// Copy assignment operator
-    inline Property& operator= (const Property& x);
+    Property& operator= (const Property&) = default;
     /// Move assignment operator
-    inline Property& operator= (Property&& x);
+    Property& operator= (Property&&) = default;
 
     /// @copydoc Deployment::Property::name
     //@{
@@ -110,9 +110,9 @@ namespace Deployment
       std::string resourceType,
       ::Deployment::Properties property);
     /// Copy assignment operator
-    inline Requirement& operator= (const Requirement& x);
+    Requirement& operator= (const Requirement&) = default;
     /// Move assignment operator
-    inline Requirement& operator= (Requirement&& x);
+    Requirement& operator= (Requirement&&) = default;
 
     /// @copydoc Deployment::Requirement::name
     //@{
@@ -194,9 +194,9 @@ namespace Deployment
       bool dynamic,
       TAOX11_NAMESPACE::CORBA::Any value);
     /// Copy assignment operator
-    inline SatisfierProperty& operator= (const SatisfierProperty& x);
+    SatisfierProperty& operator= (const SatisfierProperty&) = default;
     /// Move assignment operator
-    inline SatisfierProperty& operator= (SatisfierProperty&& x);
+    SatisfierProperty& operator= (SatisfierProperty&&) = default;
 
     /// @copydoc Deployment::SatisfierProperty::name
     //@{
@@ -301,9 +301,9 @@ namespace Deployment
       ::Deployment::CCMComponentPortKind kind,
       ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam);
     /// Copy assignment operator
-    inline ComponentPortDescription& operator= (const ComponentPortDescription& x);
+    ComponentPortDescription& operator= (const ComponentPortDescription&) = default;
     /// Move assignment operator
-    inline ComponentPortDescription& operator= (ComponentPortDescription&& x);
+    ComponentPortDescription& operator= (ComponentPortDescription&&) = default;
 
     /// @copydoc Deployment::ComponentPortDescription::name
     //@{
@@ -412,9 +412,9 @@ namespace Deployment
       std::string name,
       TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
     /// Copy assignment operator
-    inline ComponentPropertyDescription& operator= (const ComponentPropertyDescription& x);
+    ComponentPropertyDescription& operator= (const ComponentPropertyDescription&) = default;
     /// Move assignment operator
-    inline ComponentPropertyDescription& operator= (ComponentPropertyDescription&& x);
+    ComponentPropertyDescription& operator= (ComponentPropertyDescription&&) = default;
 
     /// @copydoc Deployment::ComponentPropertyDescription::name
     //@{
@@ -471,9 +471,9 @@ namespace Deployment
       ::Deployment::ComponentPropertyDescriptions property,
       ::Deployment::Properties infoProperty);
     /// Copy assignment operator
-    inline ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription& x);
+    ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription&) = default;
     /// Move assignment operator
-    inline ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&& x);
+    ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&&) = default;
 
     /// @copydoc Deployment::ComponentInterfaceDescription::label
     //@{
@@ -586,9 +586,9 @@ namespace Deployment
       ::Deployment::Properties execParameter,
       ::Deployment::Requirements deployRequirement);
     /// Copy assignment operator
-    inline MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription& x);
+    MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription&) = default;
     /// Move assignment operator
-    inline MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&& x);
+    MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&&) = default;
 
     /// @copydoc Deployment::MonolithicDeploymentDescription::name
     //@{
@@ -686,9 +686,9 @@ namespace Deployment
       std::string resourceName,
       ::Deployment::Properties property);
     /// Copy assignment operator
-    inline InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription& x);
+    InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription&) = default;
     /// Move assignment operator
-    inline InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&& x);
+    InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&&) = default;
 
     /// @copydoc Deployment::InstanceResourceDeploymentDescription::resourceUsage
     //@{
@@ -761,9 +761,9 @@ namespace Deployment
       ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
       ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource);
     /// Copy assignment operator
-    inline InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription& x);
+    InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription&) = default;
     /// Move assignment operator
-    inline InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&& x);
+    InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&&) = default;
 
     /// @copydoc Deployment::InstanceDeploymentDescription::name
     //@{
@@ -857,9 +857,9 @@ namespace Deployment
     explicit inline ComponentExternalPortEndpoint (
       std::string portName);
     /// Copy assignment operator
-    inline ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint& x);
+    ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint&) = default;
     /// Move assignment operator
-    inline ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&& x);
+    ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&&) = default;
 
     /// @copydoc Deployment::ComponentExternalPortEndpoint::portName
     //@{
@@ -903,9 +903,9 @@ namespace Deployment
       ::Deployment::CCMComponentPortKind kind,
       uint32_t instanceRef);
     /// Copy assignment operator
-    inline PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint& x);
+    PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint&) = default;
     /// Move assignment operator
-    inline PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&& x);
+    PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&&) = default;
 
     /// @copydoc Deployment::PlanSubcomponentPortEndpoint::portName
     //@{
@@ -973,9 +973,9 @@ namespace Deployment
       std::string portName,
       ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType);
     /// Copy assignment operator
-    inline ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint& x);
+    ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint&) = default;
     /// Move assignment operator
-    inline ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&& x);
+    ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&&) = default;
 
     /// @copydoc Deployment::ExternalReferenceEndpoint::location
     //@{
@@ -1045,9 +1045,9 @@ namespace Deployment
       std::string resourceName,
       ::Deployment::Properties property);
     /// Copy assignment operator
-    inline ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription& x);
+    ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription&) = default;
     /// Move assignment operator
-    inline ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&& x);
+    ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&&) = default;
 
     /// @copydoc Deployment::ConnectionResourceDeploymentDescription::targetName
     //@{
@@ -1121,9 +1121,9 @@ namespace Deployment
       ::Deployment::ExternalReferenceEndpoints externalReference,
       ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource);
     /// Copy assignment operator
-    inline PlanConnectionDescription& operator= (const PlanConnectionDescription& x);
+    PlanConnectionDescription& operator= (const PlanConnectionDescription&) = default;
     /// Move assignment operator
-    inline PlanConnectionDescription& operator= (PlanConnectionDescription&& x);
+    PlanConnectionDescription& operator= (PlanConnectionDescription&&) = default;
 
     /// @copydoc Deployment::PlanConnectionDescription::name
     //@{
@@ -1219,9 +1219,9 @@ namespace Deployment
       std::string propertyName,
       uint32_t instanceRef);
     /// Copy assignment operator
-    inline PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference& x);
+    PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference&) = default;
     /// Move assignment operator
-    inline PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&& x);
+    PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&&) = default;
 
     /// @copydoc Deployment::PlanSubcomponentPropertyReference::propertyName
     //@{
@@ -1273,9 +1273,9 @@ namespace Deployment
       std::string externalName,
       ::Deployment::PlanSubcomponentPropertyReferences delegatesTo);
     /// Copy assignment operator
-    inline PlanPropertyMapping& operator= (const PlanPropertyMapping& x);
+    PlanPropertyMapping& operator= (const PlanPropertyMapping&) = default;
     /// Move assignment operator
-    inline PlanPropertyMapping& operator= (PlanPropertyMapping&& x);
+    PlanPropertyMapping& operator= (PlanPropertyMapping&&) = default;
 
     /// @copydoc Deployment::PlanPropertyMapping::name
     //@{
@@ -1343,9 +1343,9 @@ namespace Deployment
     explicit inline ImplementationDependency (
       std::string requiredType);
     /// Copy assignment operator
-    inline ImplementationDependency& operator= (const ImplementationDependency& x);
+    ImplementationDependency& operator= (const ImplementationDependency&) = default;
     /// Move assignment operator
-    inline ImplementationDependency& operator= (ImplementationDependency&& x);
+    ImplementationDependency& operator= (ImplementationDependency&&) = default;
 
     /// @copydoc Deployment::ImplementationDependency::requiredType
     //@{
@@ -1388,9 +1388,9 @@ namespace Deployment
       std::string resourceName,
       ::Deployment::Properties property);
     /// Copy assignment operator
-    inline ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription& x);
+    ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription&) = default;
     /// Move assignment operator
-    inline ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&& x);
+    ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&&) = default;
 
     /// @copydoc Deployment::ResourceDeploymentDescription::requirementName
     //@{
@@ -1455,9 +1455,9 @@ namespace Deployment
       ::Deployment::Requirements deployRequirement,
       ::Deployment::ResourceDeploymentDescriptions deployedResource);
     /// Copy assignment operator
-    inline ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription& x);
+    ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription&) = default;
     /// Move assignment operator
-    inline ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&& x);
+    ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&&) = default;
 
     /// @copydoc Deployment::ArtifactDeploymentDescription::name
     //@{
@@ -1567,9 +1567,9 @@ namespace Deployment
       ::Deployment::PlanLocalityKind constraint,
       ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
     /// Copy assignment operator
-    inline PlanLocality& operator= (const PlanLocality& x);
+    PlanLocality& operator= (const PlanLocality&) = default;
     /// Move assignment operator
-    inline PlanLocality& operator= (PlanLocality&& x);
+    PlanLocality& operator= (PlanLocality&&) = default;
 
     /// @copydoc Deployment::PlanLocality::constraint
     //@{
@@ -1628,9 +1628,9 @@ namespace Deployment
       ::Deployment::Properties infoProperty,
       ::Deployment::PlanLocalities localityConstraint);
     /// Copy assignment operator
-    inline DeploymentPlan& operator= (const DeploymentPlan& x);
+    DeploymentPlan& operator= (const DeploymentPlan&) = default;
     /// Move assignment operator
-    inline DeploymentPlan& operator= (DeploymentPlan&& x);
+    DeploymentPlan& operator= (DeploymentPlan&&) = default;
 
     /// @copydoc Deployment::DeploymentPlan::label
     //@{
@@ -1766,9 +1766,9 @@ namespace Deployment
       std::string requiredName,
       ::Deployment::ComponentInterfaceDescription requiredType);
     /// Copy assignment operator
-    inline ComponentPackageReference& operator= (const ComponentPackageReference& x);
+    ComponentPackageReference& operator= (const ComponentPackageReference&) = default;
     /// Move assignment operator
-    inline ComponentPackageReference& operator= (ComponentPackageReference&& x);
+    ComponentPackageReference& operator= (ComponentPackageReference&&) = default;
 
     /// @copydoc Deployment::ComponentPackageReference::requiredUUID
     //@{
@@ -1836,9 +1836,9 @@ namespace Deployment
       std::string resourceType,
       ::Deployment::Properties property);
     /// Copy assignment operator
-    inline ImplementationRequirement& operator= (const ImplementationRequirement& x);
+    ImplementationRequirement& operator= (const ImplementationRequirement&) = default;
     /// Move assignment operator
-    inline ImplementationRequirement& operator= (ImplementationRequirement&& x);
+    ImplementationRequirement& operator= (ImplementationRequirement&&) = default;
 
     /// @copydoc Deployment::ImplementationRequirement::resourceUsage
     //@{
@@ -1926,9 +1926,9 @@ namespace Deployment
       ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
       ::Deployment::SatisfierProperties property);
     /// Copy assignment operator
-    inline Capability& operator= (const Capability& x);
+    Capability& operator= (const Capability&) = default;
     /// Move assignment operator
-    inline Capability& operator= (Capability&& x);
+    Capability& operator= (Capability&&) = default;
 
     /// @copydoc Deployment::Capability::name
     //@{
@@ -4905,8 +4905,8 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::Property::Property ()
-  : name_ ()
-  , value_ ()
+  : name_ (std::string ())
+  , value_ (TAOX11_NAMESPACE::CORBA::Any ())
 {
 }
 inline Deployment::Property::Property (
@@ -4927,22 +4927,6 @@ inline void Deployment::Property::value (TAOX11_NAMESPACE::CORBA::Any&& _value) 
 inline const TAOX11_NAMESPACE::CORBA::Any& Deployment::Property::value () const { return this->value_; }
 inline TAOX11_NAMESPACE::CORBA::Any& Deployment::Property::value () { return this->value_; }
 
-inline ::Deployment::Property& Deployment::Property::operator= (const ::Deployment::Property& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->value_ = x.value_;
-  }
-  return *this;
-}
-
-inline ::Deployment::Property& Deployment::Property::operator= (::Deployment::Property&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->value_ = std::move (x.value_);
-  return *this;
-}
-
 inline void Deployment::Property::swap (::Deployment::Property& s)
 {
   std::swap (this->name_, s.name_);
@@ -4951,9 +4935,9 @@ inline void Deployment::Property::swap (::Deployment::Property& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::Requirement::Requirement ()
-  : name_ ()
-  , resourceType_ ()
-  , property_ ()
+  : name_ (std::string ())
+  , resourceType_ (std::string ())
+  , property_ (std::vector < ::Deployment::Property> ())
 {
 }
 inline Deployment::Requirement::Requirement (
@@ -4981,24 +4965,6 @@ inline void Deployment::Requirement::property (::Deployment::Properties&& _prope
 inline const ::Deployment::Properties& Deployment::Requirement::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::Requirement::property () { return this->property_; }
 
-inline ::Deployment::Requirement& Deployment::Requirement::operator= (const ::Deployment::Requirement& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->resourceType_ = x.resourceType_;
-    this->property_ = x.property_;
-  }
-  return *this;
-}
-
-inline ::Deployment::Requirement& Deployment::Requirement::operator= (::Deployment::Requirement&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->resourceType_ = std::move (x.resourceType_);
-  this->property_ = std::move (x.property_);
-  return *this;
-}
-
 inline void Deployment::Requirement::swap (::Deployment::Requirement& s)
 {
   std::swap (this->name_, s.name_);
@@ -5008,10 +4974,10 @@ inline void Deployment::Requirement::swap (::Deployment::Requirement& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::SatisfierProperty::SatisfierProperty ()
-  : name_ ()
+  : name_ (std::string ())
   , kind_ (::Deployment::SatisfierPropertyKind::Quantity)
   , dynamic_ (false)
-  , value_ ()
+  , value_ (TAOX11_NAMESPACE::CORBA::Any ())
 {
 }
 inline Deployment::SatisfierProperty::SatisfierProperty (
@@ -5044,26 +5010,6 @@ inline void Deployment::SatisfierProperty::value (TAOX11_NAMESPACE::CORBA::Any&&
 inline const TAOX11_NAMESPACE::CORBA::Any& Deployment::SatisfierProperty::value () const { return this->value_; }
 inline TAOX11_NAMESPACE::CORBA::Any& Deployment::SatisfierProperty::value () { return this->value_; }
 
-inline ::Deployment::SatisfierProperty& Deployment::SatisfierProperty::operator= (const ::Deployment::SatisfierProperty& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->kind_ = x.kind_;
-    this->dynamic_ = x.dynamic_;
-    this->value_ = x.value_;
-  }
-  return *this;
-}
-
-inline ::Deployment::SatisfierProperty& Deployment::SatisfierProperty::operator= (::Deployment::SatisfierProperty&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->kind_ = std::move (x.kind_);
-  this->dynamic_ = std::move (x.dynamic_);
-  this->value_ = std::move (x.value_);
-  return *this;
-}
-
 inline void Deployment::SatisfierProperty::swap (::Deployment::SatisfierProperty& s)
 {
   std::swap (this->name_, s.name_);
@@ -5074,15 +5020,15 @@ inline void Deployment::SatisfierProperty::swap (::Deployment::SatisfierProperty
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPortDescription::ComponentPortDescription ()
-  : name_ ()
-  , specificType_ ()
-  , supportedType_ ()
+  : name_ (std::string ())
+  , specificType_ (std::string ())
+  , supportedType_ (std::vector < std::string> ())
   , provider_ (false)
   , exclusiveProvider_ (false)
   , exclusiveUser_ (false)
   , optional_ (false)
   , kind_ (::Deployment::CCMComponentPortKind::Facet)
-  , templateParam_ ()
+  , templateParam_ (std::vector < std::string> ())
 {
 }
 inline Deployment::ComponentPortDescription::ComponentPortDescription (
@@ -5147,36 +5093,6 @@ inline void Deployment::ComponentPortDescription::templateParam (::TAOX11_NAMESP
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentPortDescription::templateParam () const { return this->templateParam_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentPortDescription::templateParam () { return this->templateParam_; }
 
-inline ::Deployment::ComponentPortDescription& Deployment::ComponentPortDescription::operator= (const ::Deployment::ComponentPortDescription& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->specificType_ = x.specificType_;
-    this->supportedType_ = x.supportedType_;
-    this->provider_ = x.provider_;
-    this->exclusiveProvider_ = x.exclusiveProvider_;
-    this->exclusiveUser_ = x.exclusiveUser_;
-    this->optional_ = x.optional_;
-    this->kind_ = x.kind_;
-    this->templateParam_ = x.templateParam_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ComponentPortDescription& Deployment::ComponentPortDescription::operator= (::Deployment::ComponentPortDescription&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->specificType_ = std::move (x.specificType_);
-  this->supportedType_ = std::move (x.supportedType_);
-  this->provider_ = std::move (x.provider_);
-  this->exclusiveProvider_ = std::move (x.exclusiveProvider_);
-  this->exclusiveUser_ = std::move (x.exclusiveUser_);
-  this->optional_ = std::move (x.optional_);
-  this->kind_ = std::move (x.kind_);
-  this->templateParam_ = std::move (x.templateParam_);
-  return *this;
-}
-
 inline void Deployment::ComponentPortDescription::swap (::Deployment::ComponentPortDescription& s)
 {
   std::swap (this->name_, s.name_);
@@ -5192,7 +5108,7 @@ inline void Deployment::ComponentPortDescription::swap (::Deployment::ComponentP
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
-  : name_ ()
+  : name_ (std::string ())
   , type_ (nullptr)
 {
 }
@@ -5213,22 +5129,6 @@ inline void Deployment::ComponentPropertyDescription::type (TAOX11_IDL::traits< 
 inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
 inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
 
-inline ::Deployment::ComponentPropertyDescription& Deployment::ComponentPropertyDescription::operator= (const ::Deployment::ComponentPropertyDescription& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->type_ = x.type_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ComponentPropertyDescription& Deployment::ComponentPropertyDescription::operator= (::Deployment::ComponentPropertyDescription&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->type_ = std::move (x.type_);
-  return *this;
-}
-
 inline void Deployment::ComponentPropertyDescription::swap (::Deployment::ComponentPropertyDescription& s)
 {
   std::swap (this->name_, s.name_);
@@ -5237,15 +5137,15 @@ inline void Deployment::ComponentPropertyDescription::swap (::Deployment::Compon
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription ()
-  : label_ ()
-  , UUID_ ()
-  , specificType_ ()
-  , supportedType_ ()
-  , idlFile_ ()
-  , configProperty_ ()
-  , port_ ()
-  , property_ ()
-  , infoProperty_ ()
+  : label_ (std::string ())
+  , UUID_ (std::string ())
+  , specificType_ (std::string ())
+  , supportedType_ (std::vector < std::string> ())
+  , idlFile_ (std::vector < std::string> ())
+  , configProperty_ (std::vector < ::Deployment::Property> ())
+  , port_ (std::vector < ::Deployment::ComponentPortDescription> ())
+  , property_ (std::vector < ::Deployment::ComponentPropertyDescription> ())
+  , infoProperty_ (std::vector < ::Deployment::Property> ())
 {
 }
 inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription (
@@ -5315,36 +5215,6 @@ inline void Deployment::ComponentInterfaceDescription::infoProperty (::Deploymen
 inline const ::Deployment::Properties& Deployment::ComponentInterfaceDescription::infoProperty () const { return this->infoProperty_; }
 inline ::Deployment::Properties& Deployment::ComponentInterfaceDescription::infoProperty () { return this->infoProperty_; }
 
-inline ::Deployment::ComponentInterfaceDescription& Deployment::ComponentInterfaceDescription::operator= (const ::Deployment::ComponentInterfaceDescription& x)
-{
-  if (this != &x) {
-    this->label_ = x.label_;
-    this->UUID_ = x.UUID_;
-    this->specificType_ = x.specificType_;
-    this->supportedType_ = x.supportedType_;
-    this->idlFile_ = x.idlFile_;
-    this->configProperty_ = x.configProperty_;
-    this->port_ = x.port_;
-    this->property_ = x.property_;
-    this->infoProperty_ = x.infoProperty_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ComponentInterfaceDescription& Deployment::ComponentInterfaceDescription::operator= (::Deployment::ComponentInterfaceDescription&& x)
-{
-  this->label_ = std::move (x.label_);
-  this->UUID_ = std::move (x.UUID_);
-  this->specificType_ = std::move (x.specificType_);
-  this->supportedType_ = std::move (x.supportedType_);
-  this->idlFile_ = std::move (x.idlFile_);
-  this->configProperty_ = std::move (x.configProperty_);
-  this->port_ = std::move (x.port_);
-  this->property_ = std::move (x.property_);
-  this->infoProperty_ = std::move (x.infoProperty_);
-  return *this;
-}
-
 inline void Deployment::ComponentInterfaceDescription::swap (::Deployment::ComponentInterfaceDescription& s)
 {
   std::swap (this->label_, s.label_);
@@ -5360,11 +5230,11 @@ inline void Deployment::ComponentInterfaceDescription::swap (::Deployment::Compo
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription ()
-  : name_ ()
-  , source_ ()
-  , artifactRef_ ()
-  , execParameter_ ()
-  , deployRequirement_ ()
+  : name_ (std::string ())
+  , source_ (std::vector < std::string> ())
+  , artifactRef_ (std::vector < uint32_t> ())
+  , execParameter_ (std::vector < ::Deployment::Property> ())
+  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
 {
 }
 inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription (
@@ -5406,28 +5276,6 @@ inline void Deployment::MonolithicDeploymentDescription::deployRequirement (::De
 inline const ::Deployment::Requirements& Deployment::MonolithicDeploymentDescription::deployRequirement () const { return this->deployRequirement_; }
 inline ::Deployment::Requirements& Deployment::MonolithicDeploymentDescription::deployRequirement () { return this->deployRequirement_; }
 
-inline ::Deployment::MonolithicDeploymentDescription& Deployment::MonolithicDeploymentDescription::operator= (const ::Deployment::MonolithicDeploymentDescription& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->source_ = x.source_;
-    this->artifactRef_ = x.artifactRef_;
-    this->execParameter_ = x.execParameter_;
-    this->deployRequirement_ = x.deployRequirement_;
-  }
-  return *this;
-}
-
-inline ::Deployment::MonolithicDeploymentDescription& Deployment::MonolithicDeploymentDescription::operator= (::Deployment::MonolithicDeploymentDescription&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->source_ = std::move (x.source_);
-  this->artifactRef_ = std::move (x.artifactRef_);
-  this->execParameter_ = std::move (x.execParameter_);
-  this->deployRequirement_ = std::move (x.deployRequirement_);
-  return *this;
-}
-
 inline void Deployment::MonolithicDeploymentDescription::swap (::Deployment::MonolithicDeploymentDescription& s)
 {
   std::swap (this->name_, s.name_);
@@ -5440,9 +5288,9 @@ inline void Deployment::MonolithicDeploymentDescription::swap (::Deployment::Mon
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription ()
   : resourceUsage_ (::Deployment::ResourceUsageKind::None)
-  , requirementName_ ()
-  , resourceName_ ()
-  , property_ ()
+  , requirementName_ (std::string ())
+  , resourceName_ (std::string ())
+  , property_ (std::vector < ::Deployment::Property> ())
 {
 }
 inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription (
@@ -5476,26 +5324,6 @@ inline void Deployment::InstanceResourceDeploymentDescription::property (::Deplo
 inline const ::Deployment::Properties& Deployment::InstanceResourceDeploymentDescription::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::InstanceResourceDeploymentDescription::property () { return this->property_; }
 
-inline ::Deployment::InstanceResourceDeploymentDescription& Deployment::InstanceResourceDeploymentDescription::operator= (const ::Deployment::InstanceResourceDeploymentDescription& x)
-{
-  if (this != &x) {
-    this->resourceUsage_ = x.resourceUsage_;
-    this->requirementName_ = x.requirementName_;
-    this->resourceName_ = x.resourceName_;
-    this->property_ = x.property_;
-  }
-  return *this;
-}
-
-inline ::Deployment::InstanceResourceDeploymentDescription& Deployment::InstanceResourceDeploymentDescription::operator= (::Deployment::InstanceResourceDeploymentDescription&& x)
-{
-  this->resourceUsage_ = std::move (x.resourceUsage_);
-  this->requirementName_ = std::move (x.requirementName_);
-  this->resourceName_ = std::move (x.resourceName_);
-  this->property_ = std::move (x.property_);
-  return *this;
-}
-
 inline void Deployment::InstanceResourceDeploymentDescription::swap (::Deployment::InstanceResourceDeploymentDescription& s)
 {
   std::swap (this->resourceUsage_, s.resourceUsage_);
@@ -5506,13 +5334,13 @@ inline void Deployment::InstanceResourceDeploymentDescription::swap (::Deploymen
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription ()
-  : name_ ()
-  , node_ ()
-  , source_ ()
+  : name_ (std::string ())
+  , node_ (std::string ())
+  , source_ (std::vector < std::string> ())
   , implementationRef_ (0)
-  , configProperty_ ()
-  , deployedResource_ ()
-  , deployedSharedResource_ ()
+  , configProperty_ (std::vector < ::Deployment::Property> ())
+  , deployedResource_ (std::vector < ::Deployment::InstanceResourceDeploymentDescription> ())
+  , deployedSharedResource_ (std::vector < ::Deployment::InstanceResourceDeploymentDescription> ())
 {
 }
 inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription (
@@ -5567,32 +5395,6 @@ inline void Deployment::InstanceDeploymentDescription::deployedSharedResource (:
 inline const ::Deployment::InstanceResourceDeploymentDescriptions& Deployment::InstanceDeploymentDescription::deployedSharedResource () const { return this->deployedSharedResource_; }
 inline ::Deployment::InstanceResourceDeploymentDescriptions& Deployment::InstanceDeploymentDescription::deployedSharedResource () { return this->deployedSharedResource_; }
 
-inline ::Deployment::InstanceDeploymentDescription& Deployment::InstanceDeploymentDescription::operator= (const ::Deployment::InstanceDeploymentDescription& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->node_ = x.node_;
-    this->source_ = x.source_;
-    this->implementationRef_ = x.implementationRef_;
-    this->configProperty_ = x.configProperty_;
-    this->deployedResource_ = x.deployedResource_;
-    this->deployedSharedResource_ = x.deployedSharedResource_;
-  }
-  return *this;
-}
-
-inline ::Deployment::InstanceDeploymentDescription& Deployment::InstanceDeploymentDescription::operator= (::Deployment::InstanceDeploymentDescription&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->node_ = std::move (x.node_);
-  this->source_ = std::move (x.source_);
-  this->implementationRef_ = std::move (x.implementationRef_);
-  this->configProperty_ = std::move (x.configProperty_);
-  this->deployedResource_ = std::move (x.deployedResource_);
-  this->deployedSharedResource_ = std::move (x.deployedSharedResource_);
-  return *this;
-}
-
 inline void Deployment::InstanceDeploymentDescription::swap (::Deployment::InstanceDeploymentDescription& s)
 {
   std::swap (this->name_, s.name_);
@@ -5606,7 +5408,7 @@ inline void Deployment::InstanceDeploymentDescription::swap (::Deployment::Insta
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint ()
-  : portName_ ()
+  : portName_ (std::string ())
 {
 }
 inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint (
@@ -5620,20 +5422,6 @@ inline void Deployment::ComponentExternalPortEndpoint::portName (std::string&& _
 inline const std::string& Deployment::ComponentExternalPortEndpoint::portName () const { return this->portName_; }
 inline std::string& Deployment::ComponentExternalPortEndpoint::portName () { return this->portName_; }
 
-inline ::Deployment::ComponentExternalPortEndpoint& Deployment::ComponentExternalPortEndpoint::operator= (const ::Deployment::ComponentExternalPortEndpoint& x)
-{
-  if (this != &x) {
-    this->portName_ = x.portName_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ComponentExternalPortEndpoint& Deployment::ComponentExternalPortEndpoint::operator= (::Deployment::ComponentExternalPortEndpoint&& x)
-{
-  this->portName_ = std::move (x.portName_);
-  return *this;
-}
-
 inline void Deployment::ComponentExternalPortEndpoint::swap (::Deployment::ComponentExternalPortEndpoint& s)
 {
   std::swap (this->portName_, s.portName_);
@@ -5641,7 +5429,7 @@ inline void Deployment::ComponentExternalPortEndpoint::swap (::Deployment::Compo
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint ()
-  : portName_ ()
+  : portName_ (std::string ())
   , provider_ (false)
   , kind_ (::Deployment::CCMComponentPortKind::Facet)
   , instanceRef_ (0)
@@ -5676,26 +5464,6 @@ inline void Deployment::PlanSubcomponentPortEndpoint::instanceRef (uint32_t _ins
 inline uint32_t Deployment::PlanSubcomponentPortEndpoint::instanceRef () const { return this->instanceRef_; }
 inline uint32_t& Deployment::PlanSubcomponentPortEndpoint::instanceRef () { return this->instanceRef_; }
 
-inline ::Deployment::PlanSubcomponentPortEndpoint& Deployment::PlanSubcomponentPortEndpoint::operator= (const ::Deployment::PlanSubcomponentPortEndpoint& x)
-{
-  if (this != &x) {
-    this->portName_ = x.portName_;
-    this->provider_ = x.provider_;
-    this->kind_ = x.kind_;
-    this->instanceRef_ = x.instanceRef_;
-  }
-  return *this;
-}
-
-inline ::Deployment::PlanSubcomponentPortEndpoint& Deployment::PlanSubcomponentPortEndpoint::operator= (::Deployment::PlanSubcomponentPortEndpoint&& x)
-{
-  this->portName_ = std::move (x.portName_);
-  this->provider_ = std::move (x.provider_);
-  this->kind_ = std::move (x.kind_);
-  this->instanceRef_ = std::move (x.instanceRef_);
-  return *this;
-}
-
 inline void Deployment::PlanSubcomponentPortEndpoint::swap (::Deployment::PlanSubcomponentPortEndpoint& s)
 {
   std::swap (this->portName_, s.portName_);
@@ -5706,10 +5474,10 @@ inline void Deployment::PlanSubcomponentPortEndpoint::swap (::Deployment::PlanSu
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint ()
-  : location_ ()
+  : location_ (std::string ())
   , provider_ (false)
-  , portName_ ()
-  , supportedType_ ()
+  , portName_ (std::string ())
+  , supportedType_ (std::vector < std::string> ())
 {
 }
 inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint (
@@ -5743,26 +5511,6 @@ inline void Deployment::ExternalReferenceEndpoint::supportedType (::TAOX11_NAMES
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ExternalReferenceEndpoint::supportedType () const { return this->supportedType_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ExternalReferenceEndpoint::supportedType () { return this->supportedType_; }
 
-inline ::Deployment::ExternalReferenceEndpoint& Deployment::ExternalReferenceEndpoint::operator= (const ::Deployment::ExternalReferenceEndpoint& x)
-{
-  if (this != &x) {
-    this->location_ = x.location_;
-    this->provider_ = x.provider_;
-    this->portName_ = x.portName_;
-    this->supportedType_ = x.supportedType_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ExternalReferenceEndpoint& Deployment::ExternalReferenceEndpoint::operator= (::Deployment::ExternalReferenceEndpoint&& x)
-{
-  this->location_ = std::move (x.location_);
-  this->provider_ = std::move (x.provider_);
-  this->portName_ = std::move (x.portName_);
-  this->supportedType_ = std::move (x.supportedType_);
-  return *this;
-}
-
 inline void Deployment::ExternalReferenceEndpoint::swap (::Deployment::ExternalReferenceEndpoint& s)
 {
   std::swap (this->location_, s.location_);
@@ -5773,10 +5521,10 @@ inline void Deployment::ExternalReferenceEndpoint::swap (::Deployment::ExternalR
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription ()
-  : targetName_ ()
-  , requirementName_ ()
-  , resourceName_ ()
-  , property_ ()
+  : targetName_ (std::string ())
+  , requirementName_ (std::string ())
+  , resourceName_ (std::string ())
+  , property_ (std::vector < ::Deployment::Property> ())
 {
 }
 inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription (
@@ -5811,26 +5559,6 @@ inline void Deployment::ConnectionResourceDeploymentDescription::property (::Dep
 inline const ::Deployment::Properties& Deployment::ConnectionResourceDeploymentDescription::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::ConnectionResourceDeploymentDescription::property () { return this->property_; }
 
-inline ::Deployment::ConnectionResourceDeploymentDescription& Deployment::ConnectionResourceDeploymentDescription::operator= (const ::Deployment::ConnectionResourceDeploymentDescription& x)
-{
-  if (this != &x) {
-    this->targetName_ = x.targetName_;
-    this->requirementName_ = x.requirementName_;
-    this->resourceName_ = x.resourceName_;
-    this->property_ = x.property_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ConnectionResourceDeploymentDescription& Deployment::ConnectionResourceDeploymentDescription::operator= (::Deployment::ConnectionResourceDeploymentDescription&& x)
-{
-  this->targetName_ = std::move (x.targetName_);
-  this->requirementName_ = std::move (x.requirementName_);
-  this->resourceName_ = std::move (x.resourceName_);
-  this->property_ = std::move (x.property_);
-  return *this;
-}
-
 inline void Deployment::ConnectionResourceDeploymentDescription::swap (::Deployment::ConnectionResourceDeploymentDescription& s)
 {
   std::swap (this->targetName_, s.targetName_);
@@ -5841,13 +5569,13 @@ inline void Deployment::ConnectionResourceDeploymentDescription::swap (::Deploym
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanConnectionDescription::PlanConnectionDescription ()
-  : name_ ()
-  , source_ ()
-  , deployRequirement_ ()
-  , externalEndpoint_ ()
-  , internalEndpoint_ ()
-  , externalReference_ ()
-  , deployedResource_ ()
+  : name_ (std::string ())
+  , source_ (std::vector < std::string> ())
+  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
+  , externalEndpoint_ (std::vector < ::Deployment::ComponentExternalPortEndpoint> ())
+  , internalEndpoint_ (std::vector < ::Deployment::PlanSubcomponentPortEndpoint> ())
+  , externalReference_ (std::vector < ::Deployment::ExternalReferenceEndpoint> ())
+  , deployedResource_ (std::vector < ::Deployment::ConnectionResourceDeploymentDescription> ())
 {
 }
 inline Deployment::PlanConnectionDescription::PlanConnectionDescription (
@@ -5903,32 +5631,6 @@ inline void Deployment::PlanConnectionDescription::deployedResource (::Deploymen
 inline const ::Deployment::ConnectionResourceDeploymentDescriptions& Deployment::PlanConnectionDescription::deployedResource () const { return this->deployedResource_; }
 inline ::Deployment::ConnectionResourceDeploymentDescriptions& Deployment::PlanConnectionDescription::deployedResource () { return this->deployedResource_; }
 
-inline ::Deployment::PlanConnectionDescription& Deployment::PlanConnectionDescription::operator= (const ::Deployment::PlanConnectionDescription& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->source_ = x.source_;
-    this->deployRequirement_ = x.deployRequirement_;
-    this->externalEndpoint_ = x.externalEndpoint_;
-    this->internalEndpoint_ = x.internalEndpoint_;
-    this->externalReference_ = x.externalReference_;
-    this->deployedResource_ = x.deployedResource_;
-  }
-  return *this;
-}
-
-inline ::Deployment::PlanConnectionDescription& Deployment::PlanConnectionDescription::operator= (::Deployment::PlanConnectionDescription&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->source_ = std::move (x.source_);
-  this->deployRequirement_ = std::move (x.deployRequirement_);
-  this->externalEndpoint_ = std::move (x.externalEndpoint_);
-  this->internalEndpoint_ = std::move (x.internalEndpoint_);
-  this->externalReference_ = std::move (x.externalReference_);
-  this->deployedResource_ = std::move (x.deployedResource_);
-  return *this;
-}
-
 inline void Deployment::PlanConnectionDescription::swap (::Deployment::PlanConnectionDescription& s)
 {
   std::swap (this->name_, s.name_);
@@ -5942,7 +5644,7 @@ inline void Deployment::PlanConnectionDescription::swap (::Deployment::PlanConne
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyReference ()
-  : propertyName_ ()
+  : propertyName_ (std::string ())
   , instanceRef_ (0)
 {
 }
@@ -5963,22 +5665,6 @@ inline void Deployment::PlanSubcomponentPropertyReference::instanceRef (uint32_t
 inline uint32_t Deployment::PlanSubcomponentPropertyReference::instanceRef () const { return this->instanceRef_; }
 inline uint32_t& Deployment::PlanSubcomponentPropertyReference::instanceRef () { return this->instanceRef_; }
 
-inline ::Deployment::PlanSubcomponentPropertyReference& Deployment::PlanSubcomponentPropertyReference::operator= (const ::Deployment::PlanSubcomponentPropertyReference& x)
-{
-  if (this != &x) {
-    this->propertyName_ = x.propertyName_;
-    this->instanceRef_ = x.instanceRef_;
-  }
-  return *this;
-}
-
-inline ::Deployment::PlanSubcomponentPropertyReference& Deployment::PlanSubcomponentPropertyReference::operator= (::Deployment::PlanSubcomponentPropertyReference&& x)
-{
-  this->propertyName_ = std::move (x.propertyName_);
-  this->instanceRef_ = std::move (x.instanceRef_);
-  return *this;
-}
-
 inline void Deployment::PlanSubcomponentPropertyReference::swap (::Deployment::PlanSubcomponentPropertyReference& s)
 {
   std::swap (this->propertyName_, s.propertyName_);
@@ -5987,10 +5673,10 @@ inline void Deployment::PlanSubcomponentPropertyReference::swap (::Deployment::P
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanPropertyMapping::PlanPropertyMapping ()
-  : name_ ()
-  , source_ ()
-  , externalName_ ()
-  , delegatesTo_ ()
+  : name_ (std::string ())
+  , source_ (std::vector < std::string> ())
+  , externalName_ (std::string ())
+  , delegatesTo_ (std::vector < ::Deployment::PlanSubcomponentPropertyReference> ())
 {
 }
 inline Deployment::PlanPropertyMapping::PlanPropertyMapping (
@@ -6025,26 +5711,6 @@ inline void Deployment::PlanPropertyMapping::delegatesTo (::Deployment::PlanSubc
 inline const ::Deployment::PlanSubcomponentPropertyReferences& Deployment::PlanPropertyMapping::delegatesTo () const { return this->delegatesTo_; }
 inline ::Deployment::PlanSubcomponentPropertyReferences& Deployment::PlanPropertyMapping::delegatesTo () { return this->delegatesTo_; }
 
-inline ::Deployment::PlanPropertyMapping& Deployment::PlanPropertyMapping::operator= (const ::Deployment::PlanPropertyMapping& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->source_ = x.source_;
-    this->externalName_ = x.externalName_;
-    this->delegatesTo_ = x.delegatesTo_;
-  }
-  return *this;
-}
-
-inline ::Deployment::PlanPropertyMapping& Deployment::PlanPropertyMapping::operator= (::Deployment::PlanPropertyMapping&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->source_ = std::move (x.source_);
-  this->externalName_ = std::move (x.externalName_);
-  this->delegatesTo_ = std::move (x.delegatesTo_);
-  return *this;
-}
-
 inline void Deployment::PlanPropertyMapping::swap (::Deployment::PlanPropertyMapping& s)
 {
   std::swap (this->name_, s.name_);
@@ -6055,7 +5721,7 @@ inline void Deployment::PlanPropertyMapping::swap (::Deployment::PlanPropertyMap
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ImplementationDependency::ImplementationDependency ()
-  : requiredType_ ()
+  : requiredType_ (std::string ())
 {
 }
 inline Deployment::ImplementationDependency::ImplementationDependency (
@@ -6069,20 +5735,6 @@ inline void Deployment::ImplementationDependency::requiredType (std::string&& _r
 inline const std::string& Deployment::ImplementationDependency::requiredType () const { return this->requiredType_; }
 inline std::string& Deployment::ImplementationDependency::requiredType () { return this->requiredType_; }
 
-inline ::Deployment::ImplementationDependency& Deployment::ImplementationDependency::operator= (const ::Deployment::ImplementationDependency& x)
-{
-  if (this != &x) {
-    this->requiredType_ = x.requiredType_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ImplementationDependency& Deployment::ImplementationDependency::operator= (::Deployment::ImplementationDependency&& x)
-{
-  this->requiredType_ = std::move (x.requiredType_);
-  return *this;
-}
-
 inline void Deployment::ImplementationDependency::swap (::Deployment::ImplementationDependency& s)
 {
   std::swap (this->requiredType_, s.requiredType_);
@@ -6090,9 +5742,9 @@ inline void Deployment::ImplementationDependency::swap (::Deployment::Implementa
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription ()
-  : requirementName_ ()
-  , resourceName_ ()
-  , property_ ()
+  : requirementName_ (std::string ())
+  , resourceName_ (std::string ())
+  , property_ (std::vector < ::Deployment::Property> ())
 {
 }
 inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription (
@@ -6120,24 +5772,6 @@ inline void Deployment::ResourceDeploymentDescription::property (::Deployment::P
 inline const ::Deployment::Properties& Deployment::ResourceDeploymentDescription::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::ResourceDeploymentDescription::property () { return this->property_; }
 
-inline ::Deployment::ResourceDeploymentDescription& Deployment::ResourceDeploymentDescription::operator= (const ::Deployment::ResourceDeploymentDescription& x)
-{
-  if (this != &x) {
-    this->requirementName_ = x.requirementName_;
-    this->resourceName_ = x.resourceName_;
-    this->property_ = x.property_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ResourceDeploymentDescription& Deployment::ResourceDeploymentDescription::operator= (::Deployment::ResourceDeploymentDescription&& x)
-{
-  this->requirementName_ = std::move (x.requirementName_);
-  this->resourceName_ = std::move (x.resourceName_);
-  this->property_ = std::move (x.property_);
-  return *this;
-}
-
 inline void Deployment::ResourceDeploymentDescription::swap (::Deployment::ResourceDeploymentDescription& s)
 {
   std::swap (this->requirementName_, s.requirementName_);
@@ -6147,13 +5781,13 @@ inline void Deployment::ResourceDeploymentDescription::swap (::Deployment::Resou
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription ()
-  : name_ ()
-  , location_ ()
-  , node_ ()
-  , source_ ()
-  , execParameter_ ()
-  , deployRequirement_ ()
-  , deployedResource_ ()
+  : name_ (std::string ())
+  , location_ (std::vector < std::string> ())
+  , node_ (std::string ())
+  , source_ (std::vector < std::string> ())
+  , execParameter_ (std::vector < ::Deployment::Property> ())
+  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
+  , deployedResource_ (std::vector < ::Deployment::ResourceDeploymentDescription> ())
 {
 }
 inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription (
@@ -6209,32 +5843,6 @@ inline void Deployment::ArtifactDeploymentDescription::deployedResource (::Deplo
 inline const ::Deployment::ResourceDeploymentDescriptions& Deployment::ArtifactDeploymentDescription::deployedResource () const { return this->deployedResource_; }
 inline ::Deployment::ResourceDeploymentDescriptions& Deployment::ArtifactDeploymentDescription::deployedResource () { return this->deployedResource_; }
 
-inline ::Deployment::ArtifactDeploymentDescription& Deployment::ArtifactDeploymentDescription::operator= (const ::Deployment::ArtifactDeploymentDescription& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->location_ = x.location_;
-    this->node_ = x.node_;
-    this->source_ = x.source_;
-    this->execParameter_ = x.execParameter_;
-    this->deployRequirement_ = x.deployRequirement_;
-    this->deployedResource_ = x.deployedResource_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ArtifactDeploymentDescription& Deployment::ArtifactDeploymentDescription::operator= (::Deployment::ArtifactDeploymentDescription&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->location_ = std::move (x.location_);
-  this->node_ = std::move (x.node_);
-  this->source_ = std::move (x.source_);
-  this->execParameter_ = std::move (x.execParameter_);
-  this->deployRequirement_ = std::move (x.deployRequirement_);
-  this->deployedResource_ = std::move (x.deployedResource_);
-  return *this;
-}
-
 inline void Deployment::ArtifactDeploymentDescription::swap (::Deployment::ArtifactDeploymentDescription& s)
 {
   std::swap (this->name_, s.name_);
@@ -6249,7 +5857,7 @@ inline void Deployment::ArtifactDeploymentDescription::swap (::Deployment::Artif
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::PlanLocality::PlanLocality ()
   : constraint_ (::Deployment::PlanLocalityKind::PlanSameProcess)
-  , constrainedInstanceRef_ ()
+  , constrainedInstanceRef_ (std::vector < uint32_t> ())
 {
 }
 inline Deployment::PlanLocality::PlanLocality (
@@ -6269,22 +5877,6 @@ inline void Deployment::PlanLocality::constrainedInstanceRef (::TAOX11_NAMESPACE
 inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& Deployment::PlanLocality::constrainedInstanceRef () const { return this->constrainedInstanceRef_; }
 inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& Deployment::PlanLocality::constrainedInstanceRef () { return this->constrainedInstanceRef_; }
 
-inline ::Deployment::PlanLocality& Deployment::PlanLocality::operator= (const ::Deployment::PlanLocality& x)
-{
-  if (this != &x) {
-    this->constraint_ = x.constraint_;
-    this->constrainedInstanceRef_ = x.constrainedInstanceRef_;
-  }
-  return *this;
-}
-
-inline ::Deployment::PlanLocality& Deployment::PlanLocality::operator= (::Deployment::PlanLocality&& x)
-{
-  this->constraint_ = std::move (x.constraint_);
-  this->constrainedInstanceRef_ = std::move (x.constrainedInstanceRef_);
-  return *this;
-}
-
 inline void Deployment::PlanLocality::swap (::Deployment::PlanLocality& s)
 {
   std::swap (this->constraint_, s.constraint_);
@@ -6293,17 +5885,17 @@ inline void Deployment::PlanLocality::swap (::Deployment::PlanLocality& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::DeploymentPlan::DeploymentPlan ()
-  : label_ ()
-  , UUID_ ()
-  , realizes_ ()
-  , implementation_ ()
-  , instance_ ()
-  , connection_ ()
-  , externalProperty_ ()
-  , dependsOn_ ()
-  , artifact_ ()
-  , infoProperty_ ()
-  , localityConstraint_ ()
+  : label_ (std::string ())
+  , UUID_ (std::string ())
+  , realizes_ (::Deployment::ComponentInterfaceDescription ())
+  , implementation_ (std::vector < ::Deployment::MonolithicDeploymentDescription> ())
+  , instance_ (std::vector < ::Deployment::InstanceDeploymentDescription> ())
+  , connection_ (std::vector < ::Deployment::PlanConnectionDescription> ())
+  , externalProperty_ (std::vector < ::Deployment::PlanPropertyMapping> ())
+  , dependsOn_ (std::vector < ::Deployment::ImplementationDependency> ())
+  , artifact_ (std::vector < ::Deployment::ArtifactDeploymentDescription> ())
+  , infoProperty_ (std::vector < ::Deployment::Property> ())
+  , localityConstraint_ (std::vector < ::Deployment::PlanLocality> ())
 {
 }
 inline Deployment::DeploymentPlan::DeploymentPlan (
@@ -6387,40 +5979,6 @@ inline void Deployment::DeploymentPlan::localityConstraint (::Deployment::PlanLo
 inline const ::Deployment::PlanLocalities& Deployment::DeploymentPlan::localityConstraint () const { return this->localityConstraint_; }
 inline ::Deployment::PlanLocalities& Deployment::DeploymentPlan::localityConstraint () { return this->localityConstraint_; }
 
-inline ::Deployment::DeploymentPlan& Deployment::DeploymentPlan::operator= (const ::Deployment::DeploymentPlan& x)
-{
-  if (this != &x) {
-    this->label_ = x.label_;
-    this->UUID_ = x.UUID_;
-    this->realizes_ = x.realizes_;
-    this->implementation_ = x.implementation_;
-    this->instance_ = x.instance_;
-    this->connection_ = x.connection_;
-    this->externalProperty_ = x.externalProperty_;
-    this->dependsOn_ = x.dependsOn_;
-    this->artifact_ = x.artifact_;
-    this->infoProperty_ = x.infoProperty_;
-    this->localityConstraint_ = x.localityConstraint_;
-  }
-  return *this;
-}
-
-inline ::Deployment::DeploymentPlan& Deployment::DeploymentPlan::operator= (::Deployment::DeploymentPlan&& x)
-{
-  this->label_ = std::move (x.label_);
-  this->UUID_ = std::move (x.UUID_);
-  this->realizes_ = std::move (x.realizes_);
-  this->implementation_ = std::move (x.implementation_);
-  this->instance_ = std::move (x.instance_);
-  this->connection_ = std::move (x.connection_);
-  this->externalProperty_ = std::move (x.externalProperty_);
-  this->dependsOn_ = std::move (x.dependsOn_);
-  this->artifact_ = std::move (x.artifact_);
-  this->infoProperty_ = std::move (x.infoProperty_);
-  this->localityConstraint_ = std::move (x.localityConstraint_);
-  return *this;
-}
-
 inline void Deployment::DeploymentPlan::swap (::Deployment::DeploymentPlan& s)
 {
   std::swap (this->label_, s.label_);
@@ -6438,9 +5996,9 @@ inline void Deployment::DeploymentPlan::swap (::Deployment::DeploymentPlan& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPackageReference::ComponentPackageReference ()
-  : requiredUUID_ ()
-  , requiredName_ ()
-  , requiredType_ ()
+  : requiredUUID_ (std::string ())
+  , requiredName_ (std::string ())
+  , requiredType_ (::Deployment::ComponentInterfaceDescription ())
 {
 }
 inline Deployment::ComponentPackageReference::ComponentPackageReference (
@@ -6468,24 +6026,6 @@ inline void Deployment::ComponentPackageReference::requiredType (::Deployment::C
 inline const ::Deployment::ComponentInterfaceDescription& Deployment::ComponentPackageReference::requiredType () const { return this->requiredType_; }
 inline ::Deployment::ComponentInterfaceDescription& Deployment::ComponentPackageReference::requiredType () { return this->requiredType_; }
 
-inline ::Deployment::ComponentPackageReference& Deployment::ComponentPackageReference::operator= (const ::Deployment::ComponentPackageReference& x)
-{
-  if (this != &x) {
-    this->requiredUUID_ = x.requiredUUID_;
-    this->requiredName_ = x.requiredName_;
-    this->requiredType_ = x.requiredType_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ComponentPackageReference& Deployment::ComponentPackageReference::operator= (::Deployment::ComponentPackageReference&& x)
-{
-  this->requiredUUID_ = std::move (x.requiredUUID_);
-  this->requiredName_ = std::move (x.requiredName_);
-  this->requiredType_ = std::move (x.requiredType_);
-  return *this;
-}
-
 inline void Deployment::ComponentPackageReference::swap (::Deployment::ComponentPackageReference& s)
 {
   std::swap (this->requiredUUID_, s.requiredUUID_);
@@ -6495,12 +6035,12 @@ inline void Deployment::ComponentPackageReference::swap (::Deployment::Component
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ImplementationRequirement::ImplementationRequirement ()
-  : resourceUsage_ ()
-  , resourcePort_ ()
-  , componentPort_ ()
-  , name_ ()
-  , resourceType_ ()
-  , property_ ()
+  : resourceUsage_ (std::vector < ::Deployment::ResourceUsageKind> ())
+  , resourcePort_ (std::string ())
+  , componentPort_ (std::string ())
+  , name_ (std::string ())
+  , resourceType_ (std::string ())
+  , property_ (std::vector < ::Deployment::Property> ())
 {
 }
 inline Deployment::ImplementationRequirement::ImplementationRequirement (
@@ -6549,30 +6089,6 @@ inline void Deployment::ImplementationRequirement::property (::Deployment::Prope
 inline const ::Deployment::Properties& Deployment::ImplementationRequirement::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::ImplementationRequirement::property () { return this->property_; }
 
-inline ::Deployment::ImplementationRequirement& Deployment::ImplementationRequirement::operator= (const ::Deployment::ImplementationRequirement& x)
-{
-  if (this != &x) {
-    this->resourceUsage_ = x.resourceUsage_;
-    this->resourcePort_ = x.resourcePort_;
-    this->componentPort_ = x.componentPort_;
-    this->name_ = x.name_;
-    this->resourceType_ = x.resourceType_;
-    this->property_ = x.property_;
-  }
-  return *this;
-}
-
-inline ::Deployment::ImplementationRequirement& Deployment::ImplementationRequirement::operator= (::Deployment::ImplementationRequirement&& x)
-{
-  this->resourceUsage_ = std::move (x.resourceUsage_);
-  this->resourcePort_ = std::move (x.resourcePort_);
-  this->componentPort_ = std::move (x.componentPort_);
-  this->name_ = std::move (x.name_);
-  this->resourceType_ = std::move (x.resourceType_);
-  this->property_ = std::move (x.property_);
-  return *this;
-}
-
 inline void Deployment::ImplementationRequirement::swap (::Deployment::ImplementationRequirement& s)
 {
   std::swap (this->resourceUsage_, s.resourceUsage_);
@@ -6585,9 +6101,9 @@ inline void Deployment::ImplementationRequirement::swap (::Deployment::Implement
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::Capability::Capability ()
-  : name_ ()
-  , resourceType_ ()
-  , property_ ()
+  : name_ (std::string ())
+  , resourceType_ (std::vector < std::string> ())
+  , property_ (std::vector < ::Deployment::SatisfierProperty> ())
 {
 }
 inline Deployment::Capability::Capability (
@@ -6614,24 +6130,6 @@ inline void Deployment::Capability::property (const ::Deployment::SatisfierPrope
 inline void Deployment::Capability::property (::Deployment::SatisfierProperties&& _property) { this->property_ = std::move (_property); }
 inline const ::Deployment::SatisfierProperties& Deployment::Capability::property () const { return this->property_; }
 inline ::Deployment::SatisfierProperties& Deployment::Capability::property () { return this->property_; }
-
-inline ::Deployment::Capability& Deployment::Capability::operator= (const ::Deployment::Capability& x)
-{
-  if (this != &x) {
-    this->name_ = x.name_;
-    this->resourceType_ = x.resourceType_;
-    this->property_ = x.property_;
-  }
-  return *this;
-}
-
-inline ::Deployment::Capability& Deployment::Capability::operator= (::Deployment::Capability&& x)
-{
-  this->name_ = std::move (x.name_);
-  this->resourceType_ = std::move (x.resourceType_);
-  this->property_ = std::move (x.property_);
-  return *this;
-}
 
 inline void Deployment::Capability::swap (::Deployment::Capability& s)
 {
@@ -6821,7 +6319,6 @@ operator<< (
   return IDL::traits< ::Deployment::Property>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::Property>
 // MD5            : 9FA54C1D0A4E5ABC4A2486AD7C463745
@@ -6845,7 +6342,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::Requirement>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::Requirement>
@@ -6879,7 +6375,6 @@ operator<< (
   return IDL::traits< ::Deployment::SatisfierProperty>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::SatisfierProperty>
 // MD5            : AAB77A9CDD8FCC93D26F3C8F9DA5CB57
@@ -6912,7 +6407,6 @@ operator<< (
   return IDL::traits< ::Deployment::ComponentPortDescription>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentPortDescription>
 // MD5            : C5E370E71060EF02CAD31E10FF9B9A83
@@ -6936,7 +6430,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::ComponentPropertyDescription>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentPropertyDescription>
@@ -6962,7 +6455,6 @@ operator<< (
   return IDL::traits< ::Deployment::ComponentInterfaceDescription>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -6971,7 +6463,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::MonolithicDeploymentDescription>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::MonolithicDeploymentDescription>
@@ -7005,7 +6496,6 @@ operator<< (
   return IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::InstanceResourceDeploymentDescription>
 // MD5            : EECAFA244583FB042136539EF2209665
@@ -7029,7 +6519,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::InstanceDeploymentDescription>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::InstanceDeploymentDescription>
@@ -7055,7 +6544,6 @@ operator<< (
   return IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentExternalPortEndpoint>
 // MD5            : D55B5CF95C9426C6D2C98C3A5D478A08
@@ -7079,7 +6567,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanSubcomponentPortEndpoint>
@@ -7105,7 +6592,6 @@ operator<< (
   return IDL::traits< ::Deployment::ExternalReferenceEndpoint>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ExternalReferenceEndpoint>
 // MD5            : 05A01CE11A8BFF9D44BAB053FE399734
@@ -7129,7 +6615,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ConnectionResourceDeploymentDescription>
@@ -7155,7 +6640,6 @@ operator<< (
   return IDL::traits< ::Deployment::PlanConnectionDescription>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanConnectionDescription>
 // MD5            : CFA31BAC8967655A8F41210E634352C1
@@ -7179,7 +6663,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanSubcomponentPropertyReference>
@@ -7205,7 +6688,6 @@ operator<< (
   return IDL::traits< ::Deployment::PlanPropertyMapping>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanPropertyMapping>
 // MD5            : F12B7FF5B966394695A4C3B62A60769E
@@ -7229,7 +6711,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::ImplementationDependency>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ImplementationDependency>
@@ -7255,7 +6736,6 @@ operator<< (
   return IDL::traits< ::Deployment::ResourceDeploymentDescription>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ResourceDeploymentDescription>
 // MD5            : DF993C9C6EABFC782FDDA1D9B825B8FC
@@ -7279,7 +6759,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::ArtifactDeploymentDescription>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ArtifactDeploymentDescription>
@@ -7313,7 +6792,6 @@ operator<< (
   return IDL::traits< ::Deployment::PlanLocality>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::PlanLocality>
 // MD5            : DDE38066805242B88FC17943CB38328B
@@ -7338,7 +6816,6 @@ operator<< (
   return IDL::traits< ::Deployment::DeploymentPlan>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -7347,7 +6824,6 @@ operator<< (
 {
   return IDL::traits< ::Deployment::ComponentPackageReference>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ComponentPackageReference>
@@ -7388,7 +6864,6 @@ operator<< (
   return IDL::traits< ::Deployment::ImplementationRequirement>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::ImplementationRequirement>
 // MD5            : 58B3838A8CD6CA5F0D66B307C6BD6467
@@ -7413,7 +6888,6 @@ operator<< (
   return IDL::traits< ::Deployment::Capability>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::Deployment::Capability>
 // MD5            : 67A5FF62ED49ECC3F7373CDDDBC3DFAD
@@ -7436,6 +6910,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DDGAGDAD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IGGEGEFB_INCLUDED__ */
 
 // -*- END -*-

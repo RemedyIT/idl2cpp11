@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IAIICFJF_INCLUDED__
-#define __RIDL_TESTC_H_IAIICFJF_INCLUDED__
+#ifndef __RIDL_TESTC_H_HEAEHJCI_INCLUDED__
+#define __RIDL_TESTC_H_HEAEHJCI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -52,9 +52,9 @@ public:
     int32_t y,
     int32_t shapesize);
   /// Copy assignment operator
-  inline ShapeType& operator= (const ShapeType& x);
+  ShapeType& operator= (const ShapeType&) = default;
   /// Move assignment operator
-  inline ShapeType& operator= (ShapeType&& x);
+  ShapeType& operator= (ShapeType&&) = default;
 
   /// @copydoc ShapeType::color
   //@{
@@ -117,9 +117,9 @@ public:
     std::string color,
     float speed);
   /// Copy assignment operator
-  inline Attributes& operator= (const Attributes& x);
+  Attributes& operator= (const Attributes&) = default;
   /// Move assignment operator
-  inline Attributes& operator= (Attributes&& x);
+  Attributes& operator= (Attributes&&) = default;
 
   /// @copydoc Attributes::shape
   //@{
@@ -359,7 +359,7 @@ namespace std {
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ShapeType::ShapeType ()
-  : color_ ()
+  : color_ (std::string ())
   , x_ (0)
   , y_ (0)
   , shapesize_ (0)
@@ -394,26 +394,6 @@ inline void ShapeType::shapesize (int32_t _shapesize) { this->shapesize_ = _shap
 inline int32_t ShapeType::shapesize () const { return this->shapesize_; }
 inline int32_t& ShapeType::shapesize () { return this->shapesize_; }
 
-inline ::ShapeType& ShapeType::operator= (const ::ShapeType& x)
-{
-  if (this != &x) {
-    this->color_ = x.color_;
-    this->x_ = x.x_;
-    this->y_ = x.y_;
-    this->shapesize_ = x.shapesize_;
-  }
-  return *this;
-}
-
-inline ::ShapeType& ShapeType::operator= (::ShapeType&& x)
-{
-  this->color_ = std::move (x.color_);
-  this->x_ = std::move (x.x_);
-  this->y_ = std::move (x.y_);
-  this->shapesize_ = std::move (x.shapesize_);
-  return *this;
-}
-
 inline void ShapeType::swap (::ShapeType& s)
 {
   std::swap (this->color_, s.color_);
@@ -424,8 +404,8 @@ inline void ShapeType::swap (::ShapeType& s)
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Attributes::Attributes ()
-  : shape_ ()
-  , color_ ()
+  : shape_ (std::string ())
+  , color_ (std::string ())
   , speed_ (0.0)
 {
 }
@@ -452,24 +432,6 @@ inline std::string& Attributes::color () { return this->color_; }
 inline void Attributes::speed (float _speed) { this->speed_ = _speed; }
 inline float Attributes::speed () const { return this->speed_; }
 inline float& Attributes::speed () { return this->speed_; }
-
-inline ::Attributes& Attributes::operator= (const ::Attributes& x)
-{
-  if (this != &x) {
-    this->shape_ = x.shape_;
-    this->color_ = x.color_;
-    this->speed_ = x.speed_;
-  }
-  return *this;
-}
-
-inline ::Attributes& Attributes::operator= (::Attributes&& x)
-{
-  this->shape_ = std::move (x.shape_);
-  this->color_ = std::move (x.color_);
-  this->speed_ = std::move (x.speed_);
-  return *this;
-}
 
 inline void Attributes::swap (::Attributes& s)
 {
@@ -505,7 +467,6 @@ operator<< (
   return IDL::traits< ::ShapeType>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -514,7 +475,6 @@ operator<< (
 {
   return IDL::traits< ::Attributes>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < ::ShapeType>
@@ -538,6 +498,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IAIICFJF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HEAEHJCI_INCLUDED__ */
 
 // -*- END -*-

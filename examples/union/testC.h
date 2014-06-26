@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EFGGFDDE_INCLUDED__
-#define __RIDL_TESTC_H_EFGGFDDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_DAGDCBDB_INCLUDED__
+#define __RIDL_TESTC_H_DAGDCBDB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -50,9 +50,9 @@ public:
   explicit inline Global (
     int32_t x);
   /// Copy assignment operator
-  inline Global& operator= (const Global& x);
+  Global& operator= (const Global&) = default;
   /// Move assignment operator
-  inline Global& operator= (Global&& x);
+  Global& operator= (Global&&) = default;
 
   /// @copydoc Global::x
   //@{
@@ -116,9 +116,9 @@ namespace Test
       int32_t x,
       int32_t y);
     /// Copy assignment operator
-    inline Point& operator= (const Point& x);
+    Point& operator= (const Point&) = default;
     /// Move assignment operator
-    inline Point& operator= (Point&& x);
+    Point& operator= (Point&&) = default;
 
     /// @copydoc Test::Point::x
     //@{
@@ -163,9 +163,9 @@ namespace Test
       int32_t id,
       ::Test::Point p);
     /// Copy assignment operator
-    inline Track& operator= (const Track& x);
+    Track& operator= (const Track&) = default;
     /// Move assignment operator
-    inline Track& operator= (Track&& x);
+    Track& operator= (Track&&) = default;
 
     /// @copydoc Test::Track::id
     //@{
@@ -353,9 +353,9 @@ namespace Test
     explicit inline S (
       int32_t len);
     /// Copy assignment operator
-    inline S& operator= (const S& x);
+    S& operator= (const S&) = default;
     /// Move assignment operator
-    inline S& operator= (S&& x);
+    S& operator= (S&&) = default;
 
     /// @copydoc Test::S::len
     //@{
@@ -1353,20 +1353,6 @@ inline void Global::x (int32_t _x) { this->x_ = _x; }
 inline int32_t Global::x () const { return this->x_; }
 inline int32_t& Global::x () { return this->x_; }
 
-inline ::Global& Global::operator= (const ::Global& x)
-{
-  if (this != &x) {
-    this->x_ = x.x_;
-  }
-  return *this;
-}
-
-inline ::Global& Global::operator= (::Global&& x)
-{
-  this->x_ = std::move (x.x_);
-  return *this;
-}
-
 inline void Global::swap (::Global& s)
 {
   std::swap (this->x_, s.x_);
@@ -1394,22 +1380,6 @@ inline void Test::Point::y (int32_t _y) { this->y_ = _y; }
 inline int32_t Test::Point::y () const { return this->y_; }
 inline int32_t& Test::Point::y () { return this->y_; }
 
-inline ::Test::Point& Test::Point::operator= (const ::Test::Point& x)
-{
-  if (this != &x) {
-    this->x_ = x.x_;
-    this->y_ = x.y_;
-  }
-  return *this;
-}
-
-inline ::Test::Point& Test::Point::operator= (::Test::Point&& x)
-{
-  this->x_ = std::move (x.x_);
-  this->y_ = std::move (x.y_);
-  return *this;
-}
-
 inline void Test::Point::swap (::Test::Point& s)
 {
   std::swap (this->x_, s.x_);
@@ -1419,7 +1389,7 @@ inline void Test::Point::swap (::Test::Point& s)
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Test::Track::Track ()
   : id_ (0)
-  , p_ ()
+  , p_ (::Test::Point ())
 {
 }
 inline Test::Track::Track (
@@ -1438,22 +1408,6 @@ inline void Test::Track::p (const ::Test::Point& _p) { this->p_ = _p; }
 inline void Test::Track::p (::Test::Point&& _p) { this->p_ = std::move (_p); }
 inline const ::Test::Point& Test::Track::p () const { return this->p_; }
 inline ::Test::Point& Test::Track::p () { return this->p_; }
-
-inline ::Test::Track& Test::Track::operator= (const ::Test::Track& x)
-{
-  if (this != &x) {
-    this->id_ = x.id_;
-    this->p_ = x.p_;
-  }
-  return *this;
-}
-
-inline ::Test::Track& Test::Track::operator= (::Test::Track&& x)
-{
-  this->id_ = std::move (x.id_);
-  this->p_ = std::move (x.p_);
-  return *this;
-}
 
 inline void Test::Track::swap (::Test::Track& s)
 {
@@ -2145,20 +2099,6 @@ inline void Test::S::len (int32_t _len) { this->len_ = _len; }
 inline int32_t Test::S::len () const { return this->len_; }
 inline int32_t& Test::S::len () { return this->len_; }
 
-inline ::Test::S& Test::S::operator= (const ::Test::S& x)
-{
-  if (this != &x) {
-    this->len_ = x.len_;
-  }
-  return *this;
-}
-
-inline ::Test::S& Test::S::operator= (::Test::S&& x)
-{
-  this->len_ = std::move (x.len_);
-  return *this;
-}
-
 inline void Test::S::swap (::Test::S& s)
 {
   std::swap (this->len_, s.len_);
@@ -2692,7 +2632,6 @@ operator<< (
   return IDL::traits< ::Global>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -2710,7 +2649,6 @@ operator<< (
   return IDL::traits< ::Test::Point>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -2719,7 +2657,6 @@ operator<< (
 {
   return IDL::traits< ::Test::Track>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/union_os.erb
 inline std::ostream& operator<< (
@@ -2738,7 +2675,6 @@ operator<< (
 {
   return IDL::traits< ::Test::S>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/union_os.erb
 inline std::ostream& operator<< (
@@ -2772,6 +2708,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EFGGFDDE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DAGDCBDB_INCLUDED__ */
 
 // -*- END -*-
