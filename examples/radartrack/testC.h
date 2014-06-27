@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HAAHFCBG_INCLUDED__
-#define __RIDL_TESTC_H_HAAHFCBG_INCLUDED__
+#ifndef __RIDL_TESTC_H_JEHEAIGB_INCLUDED__
+#define __RIDL_TESTC_H_JEHEAIGB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -42,7 +42,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
   /// Default constructor
-  inline RadarTrack ();
+  RadarTrack () = default;
   /// Destructor
   ~RadarTrack () = default;
   /// Copy constructor
@@ -103,9 +103,9 @@ public:
 
 private:
   std::string id_;
-  int32_t x_;
-  int32_t y_;
-  int32_t z_;
+  int32_t x_ {};
+  int32_t y_ {};
+  int32_t z_ {};
   ::octetseq plot_;
 };// RadarTrack
 
@@ -245,14 +245,6 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline RadarTrack::RadarTrack ()
-  : id_ (std::string ())
-  , x_ (0)
-  , y_ (0)
-  , z_ (0)
-  , plot_ (std::vector < uint8_t> ())
-{
-}
 inline RadarTrack::RadarTrack (
   std::string id,
   int32_t x,
@@ -340,6 +332,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HAAHFCBG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JEHEAIGB_INCLUDED__ */
 
 // -*- END -*-

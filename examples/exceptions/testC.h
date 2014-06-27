@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EEJGBAGA_INCLUDED__
-#define __RIDL_TESTC_H_EEJGBAGA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FCJGDEAJ_INCLUDED__
+#define __RIDL_TESTC_H_FCJGDEAJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -116,7 +116,7 @@ namespace Test
     virtual void _info (std::ostream&) const override;
 
   private:
-    int32_t id_;
+    int32_t id_ {};
   }; // BooEx
 
   // generated from StubHeaderWriter#enter_interface
@@ -436,7 +436,6 @@ namespace std {
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::FooEx::FooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
-  , message_ (std::string ())
 {
 }
 
@@ -456,7 +455,6 @@ inline std::string& Test::FooEx::message () { return this->message_; }
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::BooEx::BooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "BooEx")
-  , id_ (0)
 {
 }
 
@@ -491,6 +489,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EEJGBAGA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FCJGDEAJ_INCLUDED__ */
 
 // -*- END -*-

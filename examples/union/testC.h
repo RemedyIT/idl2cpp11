@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DAGDCBDB_INCLUDED__
-#define __RIDL_TESTC_H_DAGDCBDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDECBDIG_INCLUDED__
+#define __RIDL_TESTC_H_EDECBDIG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -39,7 +39,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
   /// Default constructor
-  inline Global ();
+  Global () = default;
   /// Destructor
   ~Global () = default;
   /// Copy constructor
@@ -65,7 +65,7 @@ public:
   inline void swap (Global& s);
 
 private:
-  int32_t x_;
+  int32_t x_ {};
 };// Global
 
 // generated from StubHeaderWriter#enter_module
@@ -104,7 +104,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Point ();
+    Point () = default;
     /// Destructor
     ~Point () = default;
     /// Copy constructor
@@ -138,8 +138,8 @@ namespace Test
     inline void swap (Point& s);
 
   private:
-    int32_t x_;
-    int32_t y_;
+    int32_t x_ {};
+    int32_t y_ {};
   };// Point
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -151,7 +151,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Track ();
+    Track () = default;
     /// Destructor
     ~Track () = default;
     /// Copy constructor
@@ -186,7 +186,7 @@ namespace Test
     inline void swap (Track& s);
 
   private:
-    int32_t id_;
+    int32_t id_ {};
     ::Test::Point p_;
   };// Track
 
@@ -342,7 +342,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline S ();
+    S () = default;
     /// Destructor
     ~S () = default;
     /// Copy constructor
@@ -368,7 +368,7 @@ namespace Test
     inline void swap (S& s);
 
   private:
-    int32_t len_;
+    int32_t len_ {};
   };// S
 
   // generated from c++11/templates/cli/hdr/interface_fwd.erb
@@ -1339,10 +1339,6 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Global::Global ()
-  : x_ (0)
-{
-}
 inline Global::Global (
   int32_t x)
   : x_ (std::move (x))
@@ -1359,11 +1355,6 @@ inline void Global::swap (::Global& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Point::Point ()
-  : x_ (0)
-  , y_ (0)
-{
-}
 inline Test::Point::Point (
   int32_t x,
   int32_t y)
@@ -1387,11 +1378,6 @@ inline void Test::Point::swap (::Test::Point& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Track::Track ()
-  : id_ (0)
-  , p_ (::Test::Point ())
-{
-}
 inline Test::Track::Track (
   int32_t id,
   ::Test::Point p)
@@ -2085,10 +2071,6 @@ inline void Test::Data::_default ()
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::S::S ()
-  : len_ (0)
-{
-}
 inline Test::S::S (
   int32_t len)
   : len_ (std::move (len))
@@ -2708,6 +2690,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DAGDCBDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDECBDIG_INCLUDED__ */
 
 // -*- END -*-

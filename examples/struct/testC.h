@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HFEBEICF_INCLUDED__
-#define __RIDL_TESTC_H_HFEBEICF_INCLUDED__
+#ifndef __RIDL_TESTC_H_GDIIIBDI_INCLUDED__
+#define __RIDL_TESTC_H_GDIIIBDI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -44,7 +44,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Variable ();
+    Variable () = default;
     /// Destructor
     ~Variable () = default;
     /// Copy constructor
@@ -194,7 +194,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Simple ();
+    Simple () = default;
     /// Destructor
     ~Simple () = default;
     /// Copy constructor
@@ -278,12 +278,12 @@ namespace Test
     inline void swap (Simple& s);
 
   private:
-    uint8_t o_;
-    int32_t l_;
+    uint8_t o_ {};
+    int32_t l_ {};
     std::string s_;
-    double d_;
-    bool b_;
-    char c_;
+    double d_ {};
+    bool b_ {};
+    char c_ {};
     TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref_;
     ::Test::Variable v_;
   };// Simple
@@ -665,10 +665,6 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Variable::Variable ()
-  : name_ (std::string ())
-{
-}
 inline Test::Variable::Variable (
   std::string name)
   : name_ (std::move (name))
@@ -686,17 +682,6 @@ inline void Test::Variable::swap (::Test::Variable& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Simple::Simple ()
-  : o_ (0)
-  , l_ (0)
-  , s_ (std::string ())
-  , d_ (0.0)
-  , b_ (false)
-  , c_ ('\0')
-  , bar_ref_ (nullptr)
-  , v_ (::Test::Variable ())
-{
-}
 inline Test::Simple::Simple (
   uint8_t o,
   int32_t l,
@@ -822,6 +807,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HFEBEICF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GDIIIBDI_INCLUDED__ */
 
 // -*- END -*-

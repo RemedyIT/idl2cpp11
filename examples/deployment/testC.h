@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IGGEGEFB_INCLUDED__
-#define __RIDL_TESTC_H_IGGEGEFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_BCHFFHAD_INCLUDED__
+#define __RIDL_TESTC_H_BCHFFHAD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -44,7 +44,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Property ();
+    Property () = default;
     /// Destructor
     ~Property () = default;
     /// Copy constructor
@@ -97,7 +97,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Requirement ();
+    Requirement () = default;
     /// Destructor
     ~Requirement () = default;
     /// Copy constructor
@@ -180,7 +180,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline SatisfierProperty ();
+    SatisfierProperty () = default;
     /// Destructor
     ~SatisfierProperty () = default;
     /// Copy constructor
@@ -233,8 +233,8 @@ namespace Deployment
 
   private:
     std::string name_;
-    ::Deployment::SatisfierPropertyKind kind_;
-    bool dynamic_;
+    ::Deployment::SatisfierPropertyKind kind_ {};
+    bool dynamic_ {};
     TAOX11_NAMESPACE::CORBA::Any value_;
   };// SatisfierProperty
 
@@ -282,7 +282,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ComponentPortDescription ();
+    ComponentPortDescription () = default;
     /// Destructor
     ~ComponentPortDescription () = default;
     /// Copy constructor
@@ -379,11 +379,11 @@ namespace Deployment
     std::string name_;
     std::string specificType_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType_;
-    bool provider_;
-    bool exclusiveProvider_;
-    bool exclusiveUser_;
-    bool optional_;
-    ::Deployment::CCMComponentPortKind kind_;
+    bool provider_ {};
+    bool exclusiveProvider_ {};
+    bool exclusiveUser_ {};
+    bool optional_ {};
+    ::Deployment::CCMComponentPortKind kind_ {};
     ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam_;
   };// ComponentPortDescription
 
@@ -400,7 +400,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ComponentPropertyDescription ();
+    ComponentPropertyDescription () = default;
     /// Destructor
     ~ComponentPropertyDescription () = default;
     /// Copy constructor
@@ -452,7 +452,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ComponentInterfaceDescription ();
+    ComponentInterfaceDescription () = default;
     /// Destructor
     ~ComponentInterfaceDescription () = default;
     /// Copy constructor
@@ -571,7 +571,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline MonolithicDeploymentDescription ();
+    MonolithicDeploymentDescription () = default;
     /// Destructor
     ~MonolithicDeploymentDescription () = default;
     /// Copy constructor
@@ -672,7 +672,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline InstanceResourceDeploymentDescription ();
+    InstanceResourceDeploymentDescription () = default;
     /// Destructor
     ~InstanceResourceDeploymentDescription () = default;
     /// Copy constructor
@@ -725,7 +725,7 @@ namespace Deployment
     inline void swap (InstanceResourceDeploymentDescription& s);
 
   private:
-    ::Deployment::ResourceUsageKind resourceUsage_;
+    ::Deployment::ResourceUsageKind resourceUsage_ {};
     std::string requirementName_;
     std::string resourceName_;
     ::Deployment::Properties property_;
@@ -744,7 +744,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline InstanceDeploymentDescription ();
+    InstanceDeploymentDescription () = default;
     /// Destructor
     ~InstanceDeploymentDescription () = default;
     /// Copy constructor
@@ -827,7 +827,7 @@ namespace Deployment
     std::string name_;
     std::string node_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq source_;
-    uint32_t implementationRef_;
+    uint32_t implementationRef_ {};
     ::Deployment::Properties configProperty_;
     ::Deployment::InstanceResourceDeploymentDescriptions deployedResource_;
     ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource_;
@@ -846,7 +846,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ComponentExternalPortEndpoint ();
+    ComponentExternalPortEndpoint () = default;
     /// Destructor
     ~ComponentExternalPortEndpoint () = default;
     /// Copy constructor
@@ -889,7 +889,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline PlanSubcomponentPortEndpoint ();
+    PlanSubcomponentPortEndpoint () = default;
     /// Destructor
     ~PlanSubcomponentPortEndpoint () = default;
     /// Copy constructor
@@ -941,9 +941,9 @@ namespace Deployment
 
   private:
     std::string portName_;
-    bool provider_;
-    ::Deployment::CCMComponentPortKind kind_;
-    uint32_t instanceRef_;
+    bool provider_ {};
+    ::Deployment::CCMComponentPortKind kind_ {};
+    uint32_t instanceRef_ {};
   };// PlanSubcomponentPortEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -959,7 +959,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ExternalReferenceEndpoint ();
+    ExternalReferenceEndpoint () = default;
     /// Destructor
     ~ExternalReferenceEndpoint () = default;
     /// Copy constructor
@@ -1013,7 +1013,7 @@ namespace Deployment
 
   private:
     std::string location_;
-    bool provider_;
+    bool provider_ {};
     std::string portName_;
     ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType_;
   };// ExternalReferenceEndpoint
@@ -1031,7 +1031,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ConnectionResourceDeploymentDescription ();
+    ConnectionResourceDeploymentDescription () = default;
     /// Destructor
     ~ConnectionResourceDeploymentDescription () = default;
     /// Copy constructor
@@ -1104,7 +1104,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline PlanConnectionDescription ();
+    PlanConnectionDescription () = default;
     /// Destructor
     ~PlanConnectionDescription () = default;
     /// Copy constructor
@@ -1207,7 +1207,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline PlanSubcomponentPropertyReference ();
+    PlanSubcomponentPropertyReference () = default;
     /// Destructor
     ~PlanSubcomponentPropertyReference () = default;
     /// Copy constructor
@@ -1243,7 +1243,7 @@ namespace Deployment
 
   private:
     std::string propertyName_;
-    uint32_t instanceRef_;
+    uint32_t instanceRef_ {};
   };// PlanSubcomponentPropertyReference
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -1259,7 +1259,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline PlanPropertyMapping ();
+    PlanPropertyMapping () = default;
     /// Destructor
     ~PlanPropertyMapping () = default;
     /// Copy constructor
@@ -1332,7 +1332,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ImplementationDependency ();
+    ImplementationDependency () = default;
     /// Destructor
     ~ImplementationDependency () = default;
     /// Copy constructor
@@ -1375,7 +1375,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ResourceDeploymentDescription ();
+    ResourceDeploymentDescription () = default;
     /// Destructor
     ~ResourceDeploymentDescription () = default;
     /// Copy constructor
@@ -1438,7 +1438,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ArtifactDeploymentDescription ();
+    ArtifactDeploymentDescription () = default;
     /// Destructor
     ~ArtifactDeploymentDescription () = default;
     /// Copy constructor
@@ -1555,7 +1555,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline PlanLocality ();
+    PlanLocality () = default;
     /// Destructor
     ~PlanLocality () = default;
     /// Copy constructor
@@ -1590,7 +1590,7 @@ namespace Deployment
     inline void swap (PlanLocality& s);
 
   private:
-    ::Deployment::PlanLocalityKind constraint_;
+    ::Deployment::PlanLocalityKind constraint_ {};
     ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef_;
   };// PlanLocality
 
@@ -1607,7 +1607,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline DeploymentPlan ();
+    DeploymentPlan () = default;
     /// Destructor
     ~DeploymentPlan () = default;
     /// Copy constructor
@@ -1753,7 +1753,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ComponentPackageReference ();
+    ComponentPackageReference () = default;
     /// Destructor
     ~ComponentPackageReference () = default;
     /// Copy constructor
@@ -1820,7 +1820,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline ImplementationRequirement ();
+    ImplementationRequirement () = default;
     /// Destructor
     ~ImplementationRequirement () = default;
     /// Copy constructor
@@ -1913,7 +1913,7 @@ namespace Deployment
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Capability ();
+    Capability () = default;
     /// Destructor
     ~Capability () = default;
     /// Copy constructor
@@ -4904,11 +4904,6 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::Property::Property ()
-  : name_ (std::string ())
-  , value_ (TAOX11_NAMESPACE::CORBA::Any ())
-{
-}
 inline Deployment::Property::Property (
   std::string name,
   TAOX11_NAMESPACE::CORBA::Any value)
@@ -4934,12 +4929,6 @@ inline void Deployment::Property::swap (::Deployment::Property& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::Requirement::Requirement ()
-  : name_ (std::string ())
-  , resourceType_ (std::string ())
-  , property_ (std::vector < ::Deployment::Property> ())
-{
-}
 inline Deployment::Requirement::Requirement (
   std::string name,
   std::string resourceType,
@@ -4973,13 +4962,6 @@ inline void Deployment::Requirement::swap (::Deployment::Requirement& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::SatisfierProperty::SatisfierProperty ()
-  : name_ (std::string ())
-  , kind_ (::Deployment::SatisfierPropertyKind::Quantity)
-  , dynamic_ (false)
-  , value_ (TAOX11_NAMESPACE::CORBA::Any ())
-{
-}
 inline Deployment::SatisfierProperty::SatisfierProperty (
   std::string name,
   ::Deployment::SatisfierPropertyKind kind,
@@ -5019,18 +5001,6 @@ inline void Deployment::SatisfierProperty::swap (::Deployment::SatisfierProperty
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ComponentPortDescription::ComponentPortDescription ()
-  : name_ (std::string ())
-  , specificType_ (std::string ())
-  , supportedType_ (std::vector < std::string> ())
-  , provider_ (false)
-  , exclusiveProvider_ (false)
-  , exclusiveUser_ (false)
-  , optional_ (false)
-  , kind_ (::Deployment::CCMComponentPortKind::Facet)
-  , templateParam_ (std::vector < std::string> ())
-{
-}
 inline Deployment::ComponentPortDescription::ComponentPortDescription (
   std::string name,
   std::string specificType,
@@ -5107,11 +5077,6 @@ inline void Deployment::ComponentPortDescription::swap (::Deployment::ComponentP
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription ()
-  : name_ (std::string ())
-  , type_ (nullptr)
-{
-}
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (
   std::string name,
   TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
@@ -5136,18 +5101,6 @@ inline void Deployment::ComponentPropertyDescription::swap (::Deployment::Compon
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription ()
-  : label_ (std::string ())
-  , UUID_ (std::string ())
-  , specificType_ (std::string ())
-  , supportedType_ (std::vector < std::string> ())
-  , idlFile_ (std::vector < std::string> ())
-  , configProperty_ (std::vector < ::Deployment::Property> ())
-  , port_ (std::vector < ::Deployment::ComponentPortDescription> ())
-  , property_ (std::vector < ::Deployment::ComponentPropertyDescription> ())
-  , infoProperty_ (std::vector < ::Deployment::Property> ())
-{
-}
 inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription (
   std::string label,
   std::string UUID,
@@ -5229,14 +5182,6 @@ inline void Deployment::ComponentInterfaceDescription::swap (::Deployment::Compo
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription ()
-  : name_ (std::string ())
-  , source_ (std::vector < std::string> ())
-  , artifactRef_ (std::vector < uint32_t> ())
-  , execParameter_ (std::vector < ::Deployment::Property> ())
-  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
-{
-}
 inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescription (
   std::string name,
   ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -5286,13 +5231,6 @@ inline void Deployment::MonolithicDeploymentDescription::swap (::Deployment::Mon
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription ()
-  : resourceUsage_ (::Deployment::ResourceUsageKind::None)
-  , requirementName_ (std::string ())
-  , resourceName_ (std::string ())
-  , property_ (std::vector < ::Deployment::Property> ())
-{
-}
 inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploymentDescription (
   ::Deployment::ResourceUsageKind resourceUsage,
   std::string requirementName,
@@ -5333,16 +5271,6 @@ inline void Deployment::InstanceResourceDeploymentDescription::swap (::Deploymen
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription ()
-  : name_ (std::string ())
-  , node_ (std::string ())
-  , source_ (std::vector < std::string> ())
-  , implementationRef_ (0)
-  , configProperty_ (std::vector < ::Deployment::Property> ())
-  , deployedResource_ (std::vector < ::Deployment::InstanceResourceDeploymentDescription> ())
-  , deployedSharedResource_ (std::vector < ::Deployment::InstanceResourceDeploymentDescription> ())
-{
-}
 inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription (
   std::string name,
   std::string node,
@@ -5407,10 +5335,6 @@ inline void Deployment::InstanceDeploymentDescription::swap (::Deployment::Insta
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint ()
-  : portName_ (std::string ())
-{
-}
 inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint (
   std::string portName)
   : portName_ (std::move (portName))
@@ -5428,13 +5352,6 @@ inline void Deployment::ComponentExternalPortEndpoint::swap (::Deployment::Compo
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint ()
-  : portName_ (std::string ())
-  , provider_ (false)
-  , kind_ (::Deployment::CCMComponentPortKind::Facet)
-  , instanceRef_ (0)
-{
-}
 inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint (
   std::string portName,
   bool provider,
@@ -5473,13 +5390,6 @@ inline void Deployment::PlanSubcomponentPortEndpoint::swap (::Deployment::PlanSu
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint ()
-  : location_ (std::string ())
-  , provider_ (false)
-  , portName_ (std::string ())
-  , supportedType_ (std::vector < std::string> ())
-{
-}
 inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint (
   std::string location,
   bool provider,
@@ -5520,13 +5430,6 @@ inline void Deployment::ExternalReferenceEndpoint::swap (::Deployment::ExternalR
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription ()
-  : targetName_ (std::string ())
-  , requirementName_ (std::string ())
-  , resourceName_ (std::string ())
-  , property_ (std::vector < ::Deployment::Property> ())
-{
-}
 inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDeploymentDescription (
   std::string targetName,
   std::string requirementName,
@@ -5568,16 +5471,6 @@ inline void Deployment::ConnectionResourceDeploymentDescription::swap (::Deploym
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::PlanConnectionDescription::PlanConnectionDescription ()
-  : name_ (std::string ())
-  , source_ (std::vector < std::string> ())
-  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
-  , externalEndpoint_ (std::vector < ::Deployment::ComponentExternalPortEndpoint> ())
-  , internalEndpoint_ (std::vector < ::Deployment::PlanSubcomponentPortEndpoint> ())
-  , externalReference_ (std::vector < ::Deployment::ExternalReferenceEndpoint> ())
-  , deployedResource_ (std::vector < ::Deployment::ConnectionResourceDeploymentDescription> ())
-{
-}
 inline Deployment::PlanConnectionDescription::PlanConnectionDescription (
   std::string name,
   ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -5643,11 +5536,6 @@ inline void Deployment::PlanConnectionDescription::swap (::Deployment::PlanConne
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyReference ()
-  : propertyName_ (std::string ())
-  , instanceRef_ (0)
-{
-}
 inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyReference (
   std::string propertyName,
   uint32_t instanceRef)
@@ -5672,13 +5560,6 @@ inline void Deployment::PlanSubcomponentPropertyReference::swap (::Deployment::P
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::PlanPropertyMapping::PlanPropertyMapping ()
-  : name_ (std::string ())
-  , source_ (std::vector < std::string> ())
-  , externalName_ (std::string ())
-  , delegatesTo_ (std::vector < ::Deployment::PlanSubcomponentPropertyReference> ())
-{
-}
 inline Deployment::PlanPropertyMapping::PlanPropertyMapping (
   std::string name,
   ::TAOX11_NAMESPACE::CORBA::StringSeq source,
@@ -5720,10 +5601,6 @@ inline void Deployment::PlanPropertyMapping::swap (::Deployment::PlanPropertyMap
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ImplementationDependency::ImplementationDependency ()
-  : requiredType_ (std::string ())
-{
-}
 inline Deployment::ImplementationDependency::ImplementationDependency (
   std::string requiredType)
   : requiredType_ (std::move (requiredType))
@@ -5741,12 +5618,6 @@ inline void Deployment::ImplementationDependency::swap (::Deployment::Implementa
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription ()
-  : requirementName_ (std::string ())
-  , resourceName_ (std::string ())
-  , property_ (std::vector < ::Deployment::Property> ())
-{
-}
 inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription (
   std::string requirementName,
   std::string resourceName,
@@ -5780,16 +5651,6 @@ inline void Deployment::ResourceDeploymentDescription::swap (::Deployment::Resou
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription ()
-  : name_ (std::string ())
-  , location_ (std::vector < std::string> ())
-  , node_ (std::string ())
-  , source_ (std::vector < std::string> ())
-  , execParameter_ (std::vector < ::Deployment::Property> ())
-  , deployRequirement_ (std::vector < ::Deployment::Requirement> ())
-  , deployedResource_ (std::vector < ::Deployment::ResourceDeploymentDescription> ())
-{
-}
 inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription (
   std::string name,
   ::TAOX11_NAMESPACE::CORBA::StringSeq location,
@@ -5855,11 +5716,6 @@ inline void Deployment::ArtifactDeploymentDescription::swap (::Deployment::Artif
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::PlanLocality::PlanLocality ()
-  : constraint_ (::Deployment::PlanLocalityKind::PlanSameProcess)
-  , constrainedInstanceRef_ (std::vector < uint32_t> ())
-{
-}
 inline Deployment::PlanLocality::PlanLocality (
   ::Deployment::PlanLocalityKind constraint,
   ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef)
@@ -5884,20 +5740,6 @@ inline void Deployment::PlanLocality::swap (::Deployment::PlanLocality& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::DeploymentPlan::DeploymentPlan ()
-  : label_ (std::string ())
-  , UUID_ (std::string ())
-  , realizes_ (::Deployment::ComponentInterfaceDescription ())
-  , implementation_ (std::vector < ::Deployment::MonolithicDeploymentDescription> ())
-  , instance_ (std::vector < ::Deployment::InstanceDeploymentDescription> ())
-  , connection_ (std::vector < ::Deployment::PlanConnectionDescription> ())
-  , externalProperty_ (std::vector < ::Deployment::PlanPropertyMapping> ())
-  , dependsOn_ (std::vector < ::Deployment::ImplementationDependency> ())
-  , artifact_ (std::vector < ::Deployment::ArtifactDeploymentDescription> ())
-  , infoProperty_ (std::vector < ::Deployment::Property> ())
-  , localityConstraint_ (std::vector < ::Deployment::PlanLocality> ())
-{
-}
 inline Deployment::DeploymentPlan::DeploymentPlan (
   std::string label,
   std::string UUID,
@@ -5995,12 +5837,6 @@ inline void Deployment::DeploymentPlan::swap (::Deployment::DeploymentPlan& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ComponentPackageReference::ComponentPackageReference ()
-  : requiredUUID_ (std::string ())
-  , requiredName_ (std::string ())
-  , requiredType_ (::Deployment::ComponentInterfaceDescription ())
-{
-}
 inline Deployment::ComponentPackageReference::ComponentPackageReference (
   std::string requiredUUID,
   std::string requiredName,
@@ -6034,15 +5870,6 @@ inline void Deployment::ComponentPackageReference::swap (::Deployment::Component
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::ImplementationRequirement::ImplementationRequirement ()
-  : resourceUsage_ (std::vector < ::Deployment::ResourceUsageKind> ())
-  , resourcePort_ (std::string ())
-  , componentPort_ (std::string ())
-  , name_ (std::string ())
-  , resourceType_ (std::string ())
-  , property_ (std::vector < ::Deployment::Property> ())
-{
-}
 inline Deployment::ImplementationRequirement::ImplementationRequirement (
   ::Deployment::ResourceUsageKinds resourceUsage,
   std::string resourcePort,
@@ -6100,12 +5927,6 @@ inline void Deployment::ImplementationRequirement::swap (::Deployment::Implement
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Deployment::Capability::Capability ()
-  : name_ (std::string ())
-  , resourceType_ (std::vector < std::string> ())
-  , property_ (std::vector < ::Deployment::SatisfierProperty> ())
-{
-}
 inline Deployment::Capability::Capability (
   std::string name,
   ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
@@ -6910,6 +6731,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IGGEGEFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BCHFFHAD_INCLUDED__ */
 
 // -*- END -*-

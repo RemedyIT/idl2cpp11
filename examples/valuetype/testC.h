@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDBJBACJ_INCLUDED__
-#define __RIDL_TESTC_H_EDBJBACJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_CBHDBHCC_INCLUDED__
+#define __RIDL_TESTC_H_CBHDBHCC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -193,7 +193,7 @@ namespace obv
     : public virtual ::Example
   {
   protected:
-    inline Example ();
+    Example () = default;
     ~Example () = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
@@ -246,8 +246,8 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    int16_t val1_;
-    int32_t val2_;
+    int16_t val1_ {};
+    int32_t val2_ {};
     std::string val3_;
     TAOX11_IDL::traits< ::Example>::ref_type val5_;
   }; // Example
@@ -266,7 +266,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
   /// Default constructor
-  inline S ();
+  S () = default;
   /// Destructor
   ~S () = default;
   /// Copy constructor
@@ -292,7 +292,7 @@ public:
   inline void swap (S& s);
 
 private:
-  int32_t value_;
+  int32_t value_ {};
 };// S
 
 // generated from StubHeaderWriter#enter_interface
@@ -586,7 +586,7 @@ namespace obv
     : public virtual ::Val
   {
   protected:
-    inline Val ();
+    Val () = default;
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
@@ -660,7 +660,7 @@ namespace obv
 
   private:
     TAOX11_IDL::traits< ::Val>::ref_type t_;
-    int32_t v_;
+    int32_t v_ {};
     ::Bytes w_;
     std::string x_;
     ::S y_;
@@ -1039,7 +1039,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
   /// Default constructor
-  inline ColorValue2 ();
+  ColorValue2 () = default;
   /// Destructor
   ~ColorValue2 () = default;
   /// Copy constructor
@@ -1065,7 +1065,7 @@ public:
   inline void swap (ColorValue2& s);
 
 private:
-  ::Color col_;
+  ::Color col_ {};
 };// ColorValue2
 
 // generated from StubHeaderWriter#enter_interface
@@ -1312,7 +1312,7 @@ namespace obv
     : public virtual ::B
   {
   protected:
-    inline B ();
+    B () = default;
     ~B () = default;
     B (const B&) = default;
     B (B&&) = default;
@@ -1345,7 +1345,7 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    int16_t data_;
+    int16_t data_ {};
   }; // B
 } // namespace obv
 
@@ -2185,21 +2185,7 @@ namespace std {
   void swap (::ColorValue2& m1, ::ColorValue2& m2);
 } // namespace std
 
-// generated from c++11/templates/cli/inl/valuetype_inl.erb
-inline ::obv::Example::Example ()
-  : ::Example ()
-  , val1_ (0)
-  , val2_ (0)
-  , val3_ (std::string ())
-  , val5_ (nullptr)
-{
-}
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline S::S ()
-  : value_ (0)
-{
-}
 inline S::S (
   int32_t value)
   : value_ (std::move (value))
@@ -2215,23 +2201,7 @@ inline void S::swap (::S& s)
   std::swap (this->value_, s.value_);
 }
 
-// generated from c++11/templates/cli/inl/valuetype_inl.erb
-inline ::obv::Val::Val ()
-  : ::Val ()
-  , t_ (nullptr)
-  , v_ (0)
-  , w_ (std::array< uint8_t, 64 > ())
-  , x_ (std::string ())
-  , y_ (::S ())
-  , z_ (nullptr)
-{
-}
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline ColorValue2::ColorValue2 ()
-  : col_ (::Color::red)
-{
-}
 inline ColorValue2::ColorValue2 (
   ::Color col)
   : col_ (std::move (col))
@@ -2246,14 +2216,6 @@ inline void ColorValue2::swap (::ColorValue2& s)
 {
   std::swap (this->col_, s.col_);
 }
-
-// generated from c++11/templates/cli/inl/valuetype_inl.erb
-inline ::obv::B::B ()
-  : ::B ()
-  , data_ (0)
-{
-}
-
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
@@ -2401,6 +2363,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDBJBACJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CBHDBHCC_INCLUDED__ */
 
 // -*- END -*-

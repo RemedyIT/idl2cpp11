@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HEAEHJCI_INCLUDED__
-#define __RIDL_TESTC_H_HEAEHJCI_INCLUDED__
+#ifndef __RIDL_TESTC_H_DGDHAIBA_INCLUDED__
+#define __RIDL_TESTC_H_DGDHAIBA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -38,7 +38,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
   /// Default constructor
-  inline ShapeType ();
+  ShapeType () = default;
   /// Destructor
   ~ShapeType () = default;
   /// Copy constructor
@@ -90,9 +90,9 @@ public:
 
 private:
   std::string color_;
-  int32_t x_;
-  int32_t y_;
-  int32_t shapesize_;
+  int32_t x_ {};
+  int32_t y_ {};
+  int32_t shapesize_ {};
 };// ShapeType
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -104,7 +104,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/struct_post.erb
   /// Default constructor
-  inline Attributes ();
+  Attributes () = default;
   /// Destructor
   ~Attributes () = default;
   /// Copy constructor
@@ -150,7 +150,7 @@ public:
 private:
   std::string shape_;
   std::string color_;
-  float speed_;
+  float speed_ {};
 };// Attributes
 
 // generated from c++11/templates/cli/hdr/typedef.erb
@@ -358,13 +358,6 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline ShapeType::ShapeType ()
-  : color_ (std::string ())
-  , x_ (0)
-  , y_ (0)
-  , shapesize_ (0)
-{
-}
 inline ShapeType::ShapeType (
   std::string color,
   int32_t x,
@@ -403,12 +396,6 @@ inline void ShapeType::swap (::ShapeType& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Attributes::Attributes ()
-  : shape_ (std::string ())
-  , color_ (std::string ())
-  , speed_ (0.0)
-{
-}
 inline Attributes::Attributes (
   std::string shape,
   std::string color,
@@ -498,6 +485,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HEAEHJCI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DGDHAIBA_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DIAJIGJJ_INCLUDED__
-#define __RIDL_TESTC_H_DIAJIGJJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_JIGEAGBE_INCLUDED__
+#define __RIDL_TESTC_H_JIGEAGBE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -46,7 +46,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/struct_post.erb
     /// Default constructor
-    inline Simple ();
+    Simple () = default;
     /// Destructor
     ~Simple () = default;
     /// Copy constructor
@@ -113,12 +113,12 @@ namespace Test
     inline void swap (Simple& s);
 
   private:
-    uint8_t o_;
-    int32_t l_;
+    uint8_t o_ {};
+    int32_t l_ {};
     std::string s_;
-    double d_;
-    bool b_;
-    char c_;
+    double d_ {};
+    bool b_ {};
+    char c_ {};
   };// Simple
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -650,15 +650,6 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Simple::Simple ()
-  : o_ (0)
-  , l_ (0)
-  , s_ (std::string ())
-  , d_ (0.0)
-  , b_ (false)
-  , c_ ('\0')
-{
-}
 inline Test::Simple::Simple (
   uint8_t o,
   int32_t l,
@@ -820,6 +811,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DIAJIGJJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JIGEAGBE_INCLUDED__ */
 
 // -*- END -*-
