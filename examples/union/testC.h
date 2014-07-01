@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDECBDIG_INCLUDED__
-#define __RIDL_TESTC_H_EDECBDIG_INCLUDED__
+#ifndef __RIDL_TESTC_H_GFGJECAH_INCLUDED__
+#define __RIDL_TESTC_H_GFGJECAH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -2648,7 +2648,6 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Data>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -2665,7 +2664,6 @@ inline std::ostream& operator<< (
 {
   return IDL::traits< ::Test::U>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
@@ -2690,6 +2688,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDECBDIG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GFGJECAH_INCLUDED__ */
 
 // -*- END -*-

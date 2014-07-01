@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CBHDBHCC_INCLUDED__
-#define __RIDL_TESTC_H_CBHDBHCC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IGJIJBEJ_INCLUDED__
+#define __RIDL_TESTC_H_IGJIJBEJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -66,6 +66,12 @@ namespace TAOX11_NAMESPACE
           weak_ref_type;
       typedef ::obv::Example
           obv_type;
+      typedef CORBA::ValueFactoryBase
+      factory_type;
+      typedef IDL::traits<CORBA::ValueFactoryBase>::ref_type
+      factory_ref_type;
+      typedef IDL::traits<CORBA::ValueFactoryBase>::weak_ref_type
+      weak_factory_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::Example*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
@@ -1204,6 +1210,12 @@ namespace TAOX11_NAMESPACE
           weak_ref_type;
       typedef ::obv::B
           obv_type;
+      typedef CORBA::ValueFactoryBase
+      factory_type;
+      typedef IDL::traits<CORBA::ValueFactoryBase>::ref_type
+      factory_ref_type;
+      typedef IDL::traits<CORBA::ValueFactoryBase>::weak_ref_type
+      weak_factory_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::B*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
@@ -2294,7 +2306,6 @@ operator<< (
   return IDL::traits< ::StringValue>::write_on (strm, _v);
 }
 
-
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -2319,7 +2330,6 @@ operator<< (
 {
   return IDL::traits< ::ColorValue>::write_on (strm, _v);
 }
-
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
@@ -2363,6 +2373,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CBHDBHCC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IGJIJBEJ_INCLUDED__ */
 
 // -*- END -*-
