@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_JJDBDAJA_INCLUDED__
-#define __RIDL_TESTS_H_JJDBDAJA_INCLUDED__
+#ifndef __RIDL_TESTS_H_BBJDECEC_INCLUDED__
+#define __RIDL_TESTS_H_BBJDECEC_INCLUDED__
 
 #include "testC.h"
 
@@ -66,7 +66,9 @@ namespace POA
 
     // generated from c++11/templates/srv/hdr/operation.erb
     /// @copydoc A::op
-    virtual void op () = 0;
+    virtual
+    void
+    op () = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
@@ -122,7 +124,10 @@ namespace POA
 
     // generated from c++11/templates/srv/hdr/operation.erb
     /// @copydoc X::op
-    virtual void op (std::string& s) = 0;
+    virtual
+    void
+    op (
+        std::string& s) = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
@@ -178,7 +183,9 @@ namespace POA
 
     // generated from c++11/templates/srv/hdr/operation.erb
     /// @copydoc A1::op
-    virtual void op () = 0;
+    virtual
+    void
+    op () = 0;
 
     // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
@@ -306,6 +313,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_JJDBDAJA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_BBJDECEC_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_CFHFHAJG_INCLUDED__
-#define __RIDL_TESTS_H_CFHFHAJG_INCLUDED__
+#ifndef __RIDL_TESTS_H_EJABFDDD_INCLUDED__
+#define __RIDL_TESTS_H_EJABFDDD_INCLUDED__
 
 #include "testC.h"
 
@@ -70,18 +70,30 @@ namespace Test
 
       // generated from c++11/templates/srv/hdr/operation.erb
       /// @copydoc Test::Foo::do_it
-      virtual void do_it () = 0;
+      virtual
+      void
+      do_it () = 0;
 
       // generated from c++11/templates/srv/hdr/attribute.erb
-      virtual int32_t a_number() = 0;
+      virtual
+      int32_t
+      a_number () = 0;
 
       // generated from c++11/templates/srv/hdr/attribute.erb
-      virtual std::string a_string() = 0;
-      virtual void a_string(const std::string& _v) = 0;
+      virtual
+      std::string
+      a_string () = 0;
+
+      virtual
+      void
+      a_string (
+          const std::string& _v) = 0;
 
       // generated from c++11/templates/srv/hdr/operation.erb
       /// @copydoc Test::Foo::shutdown
-      virtual void shutdown () = 0;
+      virtual
+      void
+      shutdown () = 0;
 
       // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
@@ -124,6 +136,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CFHFHAJG_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_EJABFDDD_INCLUDED__ */
 
 // -*- END -*-

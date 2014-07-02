@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IGJIJBEJ_INCLUDED__
-#define __RIDL_TESTC_H_IGJIJBEJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIJAIEAB_INCLUDED__
+#define __RIDL_TESTC_H_CIJAIEAB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -156,11 +156,16 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copydoc Example::op1
-  virtual int16_t op1 () = 0;
+  virtual
+  int16_t
+  op1 () = 0;
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copydoc Example::op2
-  virtual int32_t op2 (TAOX11_IDL::traits< Example>::ref_type x) = 0;
+  virtual
+  int32_t
+  op2 (
+      TAOX11_IDL::traits< Example>::ref_type x) = 0;
 
   /// @name Public state members
   //@{
@@ -378,7 +383,9 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copydoc A::op
-  virtual void op ();
+  virtual
+  void
+  op ();
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
@@ -886,7 +893,10 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copydoc X::op
-  virtual void op (std::string& s);
+  virtual
+  void
+  op (
+      std::string& s);
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
@@ -1151,7 +1161,9 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copydoc A1::op
-  virtual void op ();
+  virtual
+  void
+  op ();
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
@@ -1300,7 +1312,9 @@ public:
 
   // generated from c++11/templates/cli/hdr/operation.erb
   /// @copydoc A1::op
-  virtual void op () = 0;
+  virtual
+  void
+  op () = 0;
 
   /// @name Public state members
   //@{
@@ -2373,6 +2387,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IGJIJBEJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIJAIEAB_INCLUDED__ */
 
 // -*- END -*-

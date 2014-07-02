@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CFJECCCG_INCLUDED__
-#define __RIDL_TESTC_H_CFJECCCG_INCLUDED__
+#ifndef __RIDL_TESTC_H_FIJIJDIG_INCLUDED__
+#define __RIDL_TESTC_H_FIJIJDIG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -184,11 +184,16 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Hello_Factory::get_hello
-    virtual TAOX11_IDL::traits< ::Test::Hello>::ref_type get_hello ();
+    virtual
+    TAOX11_IDL::traits< ::Test::Hello>::ref_type
+    get_hello ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Hello_Factory::get_hello_2
-    virtual void get_hello_2 (TAOX11_IDL::traits< ::Test::Hello>::ref_type& hello_obj);
+    virtual
+    void
+    get_hello_2 (
+        TAOX11_IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -234,11 +239,15 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Hello::get_string
-    virtual std::string get_string ();
+    virtual
+    std::string
+    get_string ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Hello::shutdown
-    virtual void shutdown ();
+    virtual
+    void
+    shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -423,6 +432,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CFJECCCG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FIJIJDIG_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JBADJBEA_INCLUDED__
-#define __RIDL_TESTC_H_JBADJBEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HGFJGGFF_INCLUDED__
+#define __RIDL_TESTC_H_HGFJGGFF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -119,7 +119,9 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Hello::get_string
-    virtual std::string get_string ();
+    virtual
+    std::string
+    get_string ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -233,6 +235,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JBADJBEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HGFJGGFF_INCLUDED__ */
 
 // -*- END -*-

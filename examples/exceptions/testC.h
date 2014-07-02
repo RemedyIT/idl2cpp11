@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ICJDEHCC_INCLUDED__
-#define __RIDL_TESTC_H_ICJDEHCC_INCLUDED__
+#ifndef __RIDL_TESTC_H_BIEFCAAE_INCLUDED__
+#define __RIDL_TESTC_H_BIEFCAAE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -203,22 +203,34 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::do_it
-    virtual void do_it ();
+    virtual
+    void
+    do_it ();
 
     // generated from c++11/templates/cli/hdr/attribute.erb
     /// @copydoc Test::Foo::a_number
-    virtual int32_t a_number();
+    virtual
+    int32_t
+    a_number();
 
     // generated from c++11/templates/cli/hdr/attribute.erb
     /// @copydoc Test::Foo::a_string
     //@{
-    virtual std::string a_string();
-    virtual void a_string(const std::string& _v);
+    virtual
+    std::string
+    a_string();
+
+    virtual
+    void
+    a_string (
+        const std::string& _v);
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::shutdown
-    virtual void shutdown ();
+    virtual
+    void
+    shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -489,6 +501,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ICJDEHCC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BIEFCAAE_INCLUDED__ */
 
 // -*- END -*-

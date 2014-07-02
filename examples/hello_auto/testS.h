@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_BHCGDADD_INCLUDED__
-#define __RIDL_TESTS_H_BHCGDADD_INCLUDED__
+#ifndef __RIDL_TESTS_H_HGDDCEHG_INCLUDED__
+#define __RIDL_TESTS_H_HGDDCEHG_INCLUDED__
 
 #include "testC.h"
 
@@ -70,7 +70,9 @@ namespace Test
 
       // generated from c++11/templates/srv/hdr/operation.erb
       /// @copydoc Test::Hello::get_string
-      virtual std::string get_string () = 0;
+      virtual
+      std::string
+      get_string () = 0;
 
       // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
@@ -113,6 +115,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_BHCGDADD_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_HGDDCEHG_INCLUDED__ */
 
 // -*- END -*-

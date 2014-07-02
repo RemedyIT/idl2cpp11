@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BBIBACHE_INCLUDED__
-#define __RIDL_TESTC_H_BBIBACHE_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHEEFBJG_INCLUDED__
+#define __RIDL_TESTC_H_GHEEFBJG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -225,31 +225,45 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::test_long_seq
-    virtual ::Test::LongSeq test_long_seq (const ::Test::LongSeq& sin,
-                                   ::Test::LongSeq& sinout,
-                                   ::Test::LongSeq& sout);
+    virtual
+    ::Test::LongSeq
+    test_long_seq (
+        const ::Test::LongSeq& sin,
+        ::Test::LongSeq& sinout,
+        ::Test::LongSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::test_bool_seq
-    virtual ::Test::BoolSeq test_bool_seq (const ::Test::BoolSeq& sin,
-                                   ::Test::BoolSeq& sinout,
-                                   ::Test::BoolSeq& sout);
+    virtual
+    ::Test::BoolSeq
+    test_bool_seq (
+        const ::Test::BoolSeq& sin,
+        ::Test::BoolSeq& sinout,
+        ::Test::BoolSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::test_string_seq
-    virtual ::Test::StringSeq test_string_seq (const ::Test::StringSeq& sin,
-                                       ::Test::StringSeq& sinout,
-                                       ::Test::StringSeq& sout);
+    virtual
+    ::Test::StringSeq
+    test_string_seq (
+        const ::Test::StringSeq& sin,
+        ::Test::StringSeq& sinout,
+        ::Test::StringSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::test_struct_seq
-    virtual ::Test::SimpleSeq test_struct_seq (const ::Test::SimpleSeq& sin,
-                                       ::Test::SimpleSeq& sinout,
-                                       ::Test::SimpleSeq& sout);
+    virtual
+    ::Test::SimpleSeq
+    test_struct_seq (
+        const ::Test::SimpleSeq& sin,
+        ::Test::SimpleSeq& sinout,
+        ::Test::SimpleSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::shutdown
-    virtual void shutdown ();
+    virtual
+    void
+    shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -811,6 +825,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BBIBACHE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHEEFBJG_INCLUDED__ */
 
 // -*- END -*-

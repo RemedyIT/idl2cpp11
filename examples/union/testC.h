@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFGJECAH_INCLUDED__
-#define __RIDL_TESTC_H_GFGJECAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_ECBFDIEE_INCLUDED__
+#define __RIDL_TESTC_H_ECBFDIEE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -626,23 +626,36 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::pass_union
-    virtual bool pass_union (const ::Test::Data& s);
+    virtual
+    bool
+    pass_union (
+        const ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::return_union
-    virtual ::Test::Data return_union ();
+    virtual
+    ::Test::Data
+    return_union ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::get_union
-    virtual bool get_union (::Test::Data& s);
+    virtual
+    bool
+    get_union (
+        ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::update_union
-    virtual bool update_union (::Test::Data& s);
+    virtual
+    bool
+    update_union (
+        ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::shutdown
-    virtual void shutdown ();
+    virtual
+    void
+    shutdown ();
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -2688,6 +2701,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GFGJECAH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_ECBFDIEE_INCLUDED__ */
 
 // -*- END -*-

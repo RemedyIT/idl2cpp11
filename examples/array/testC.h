@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFGDEBJI_INCLUDED__
-#define __RIDL_TESTC_H_GFGDEBJI_INCLUDED__
+#ifndef __RIDL_TESTC_H_ECHEDJJA_INCLUDED__
+#define __RIDL_TESTC_H_ECHEDJJA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -131,9 +131,12 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/operation.erb
     /// @copydoc Test::Foo::op
-    virtual void op (const ::Test::F& p1,
-             ::Test::V& p2,
-             ::Test::M& p3);
+    virtual
+    void
+    op (
+        const ::Test::F& p1,
+        ::Test::V& p2,
+        ::Test::M& p3);
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -439,6 +442,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GFGDEBJI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_ECHEDJJA_INCLUDED__ */
 
 // -*- END -*-
