@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ECBFDIEE_INCLUDED__
-#define __RIDL_TESTC_H_ECBFDIEE_INCLUDED__
+#ifndef __RIDL_TESTC_H_JICAJHHC_INCLUDED__
+#define __RIDL_TESTC_H_JICAJHHC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -313,13 +313,14 @@ namespace Test
     inline void _default ();
 
     /// Exchange the value of two unions in an efficient matter
-    inline void swap (Data& s);
+    inline void swap (Data& u);
 
   private:
-    inline void _swap_u (Data& s);
+    inline void _swap_u (Data& u);
+    inline void _move_u (Data& u);
     inline void _clear ();
 
-    DataType disc_;
+    DataType disc_ {::Test::DataType::dtEmpty};
     union u_type_
     {
       u_type_ ();
@@ -330,7 +331,7 @@ namespace Test
       ::Test::Point pointData_;
       ::Test::Track trackData_;
       ::Global globalData_;
-    } u_;
+    } u_ {};
   }; // Data
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -524,13 +525,14 @@ namespace Test
     //@}
 
     /// Exchange the value of two unions in an efficient matter
-    inline void swap (U& s);
+    inline void swap (U& u);
 
   private:
-    inline void _swap_u (U& s);
+    inline void _swap_u (U& u);
+    inline void _move_u (U& u);
     inline void _clear ();
 
-    int32_t disc_;
+    int32_t disc_ {(-2147483647-1)};
     union u_type_
     {
       u_type_ ();
@@ -539,7 +541,7 @@ namespace Test
       std::string z_;
       ::Test::S w_;
       TAOX11_IDL::traits< ::Test::A>::ref_type obj_;
-    } u_;
+    } u_ {};
   }; // U
 
   // generated from StubHeaderWriter#enter_interface
@@ -1416,6 +1418,7 @@ inline void Test::Track::swap (::Test::Track& s)
 // generated from c++11/templates/cli/inl/union_inl.erb
 
 inline Test::Data::u_type_::u_type_ ()
+  : longData_ {}
 {
 }
 
@@ -1424,7 +1427,6 @@ inline Test::Data::u_type_::~u_type_ ()
 }
 
 inline Test::Data::Data ()
-  : disc_ (::Test::DataType::dtEmpty)
 {
 }
 
@@ -1450,26 +1452,22 @@ inline Test::Data::Data (const ::Test::Data& u)
     break;
     case ::Test::DataType::dtString:
       {
-        new (&this->u_.stringData_) std::string;
-        this->u_.stringData_ = u.u_.stringData_;
+        new (&this->u_.stringData_) std::string (u.u_.stringData_);
       }
     break;
     case ::Test::DataType::dtPoint:
       {
-        new (&this->u_.pointData_) ::Test::Point;
-        this->u_.pointData_ = u.u_.pointData_;
+        new (&this->u_.pointData_) ::Test::Point (u.u_.pointData_);
       }
     break;
     case ::Test::DataType::dtTrack:
       {
-        new (&this->u_.trackData_) ::Test::Track;
-        this->u_.trackData_ = u.u_.trackData_;
+        new (&this->u_.trackData_) ::Test::Track (u.u_.trackData_);
       }
     break;
     case ::Test::DataType::dtGlobal:
       {
-        new (&this->u_.globalData_) ::Global;
-        this->u_.globalData_ = u.u_.globalData_;
+        new (&this->u_.globalData_) ::Global (u.u_.globalData_);
       }
     break;
     default:
@@ -1480,41 +1478,7 @@ inline Test::Data::Data (const ::Test::Data& u)
 inline Test::Data::Data (::Test::Data&& u)
   : disc_ (std::move (u.disc_))
 {
-  switch (this->disc_)
-  {
-  case ::Test::DataType::dtLong:
-    {
-      this->u_.longData_ = std::move (u.u_.longData_);
-    }
-    break;
-  case ::Test::DataType::dtShort:
-    {
-      this->u_.shortData_ = std::move (u.u_.shortData_);
-    }
-    break;
-  case ::Test::DataType::dtString:
-    {
-      new (&this->u_.stringData_) std::string (std::move (u.u_.stringData_));
-    }
-    break;
-  case ::Test::DataType::dtPoint:
-    {
-      new (&this->u_.pointData_) ::Test::Point (std::move (u.u_.pointData_));
-    }
-    break;
-  case ::Test::DataType::dtTrack:
-    {
-      new (&this->u_.trackData_) ::Test::Track (std::move (u.u_.trackData_));
-    }
-    break;
-  case ::Test::DataType::dtGlobal:
-    {
-      new (&this->u_.globalData_) ::Global (std::move (u.u_.globalData_));
-    }
-    break;
-  default:
-    break;
-  }
+  this->_move_u (u);
 }
 
 inline void Test::Data::_d (DataType discval)
@@ -1620,9 +1584,9 @@ inline void Test::Data::longData (int32_t _longData)
   if (this->disc_ != ::Test::DataType::dtLong)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtLong;
   }
   this->u_.longData_ = _longData;
-  this->disc_ = ::Test::DataType::dtLong;
 }
 
 inline int32_t Test::Data::longData () const
@@ -1654,9 +1618,9 @@ inline void Test::Data::shortData (int16_t _shortData)
   if (this->disc_ != ::Test::DataType::dtShort)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtShort;
   }
   this->u_.shortData_ = _shortData;
-  this->disc_ = ::Test::DataType::dtShort;
 }
 
 inline int16_t Test::Data::shortData () const
@@ -1688,13 +1652,13 @@ inline void Test::Data::stringData (const std::string& _stringData)
   if (this->disc_ != ::Test::DataType::dtString)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtString;
     new (&this->u_.stringData_) std::string (_stringData);
   }
   else
   {
     this->u_.stringData_ = _stringData;
   }
-  this->disc_ = ::Test::DataType::dtString;
 }
 
 inline void Test::Data::stringData (std::string&& _stringData)
@@ -1702,13 +1666,13 @@ inline void Test::Data::stringData (std::string&& _stringData)
   if (this->disc_ != ::Test::DataType::dtString)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtString;
     new (&this->u_.stringData_) std::string (std::move (_stringData));
   }
   else
   {
     this->u_.stringData_ = std::move (_stringData);
   }
-  this->disc_ = ::Test::DataType::dtString;
 }
 
 inline const std::string& Test::Data::stringData () const
@@ -1740,13 +1704,13 @@ inline void Test::Data::pointData (const ::Test::Point& _pointData)
   if (this->disc_ != ::Test::DataType::dtPoint)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtPoint;
     new (&this->u_.pointData_) ::Test::Point (_pointData);
   }
   else
   {
     this->u_.pointData_ = _pointData;
   }
-  this->disc_ = ::Test::DataType::dtPoint;
 }
 
 inline void Test::Data::pointData (::Test::Point&& _pointData)
@@ -1754,13 +1718,13 @@ inline void Test::Data::pointData (::Test::Point&& _pointData)
   if (this->disc_ != ::Test::DataType::dtPoint)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtPoint;
     new (&this->u_.pointData_) ::Test::Point (std::move (_pointData));
   }
   else
   {
     this->u_.pointData_ = std::move (_pointData);
   }
-  this->disc_ = ::Test::DataType::dtPoint;
 }
 
 inline const ::Test::Point& Test::Data::pointData () const
@@ -1792,13 +1756,13 @@ inline void Test::Data::trackData (const ::Test::Track& _trackData)
   if (this->disc_ != ::Test::DataType::dtTrack)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtTrack;
     new (&this->u_.trackData_) ::Test::Track (_trackData);
   }
   else
   {
     this->u_.trackData_ = _trackData;
   }
-  this->disc_ = ::Test::DataType::dtTrack;
 }
 
 inline void Test::Data::trackData (::Test::Track&& _trackData)
@@ -1806,13 +1770,13 @@ inline void Test::Data::trackData (::Test::Track&& _trackData)
   if (this->disc_ != ::Test::DataType::dtTrack)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtTrack;
     new (&this->u_.trackData_) ::Test::Track (std::move (_trackData));
   }
   else
   {
     this->u_.trackData_ = std::move (_trackData);
   }
-  this->disc_ = ::Test::DataType::dtTrack;
 }
 
 inline const ::Test::Track& Test::Data::trackData () const
@@ -1844,13 +1808,13 @@ inline void Test::Data::globalData (const ::Global& _globalData)
   if (this->disc_ != ::Test::DataType::dtGlobal)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtGlobal;
     new (&this->u_.globalData_) ::Global (_globalData);
   }
   else
   {
     this->u_.globalData_ = _globalData;
   }
-  this->disc_ = ::Test::DataType::dtGlobal;
 }
 
 inline void Test::Data::globalData (::Global&& _globalData)
@@ -1858,13 +1822,13 @@ inline void Test::Data::globalData (::Global&& _globalData)
   if (this->disc_ != ::Test::DataType::dtGlobal)
   {
     this->_clear ();
+    this->disc_ = ::Test::DataType::dtGlobal;
     new (&this->u_.globalData_) ::Global (std::move (_globalData));
   }
   else
   {
     this->u_.globalData_ = std::move (_globalData);
   }
-  this->disc_ = ::Test::DataType::dtGlobal;
 }
 
 inline const ::Global& Test::Data::globalData () const
@@ -1895,43 +1859,8 @@ inline ::Test::Data& Test::Data::operator= (const ::Test::Data& u)
 {
   if (this != &u)
   {
-    this->_clear ();
-    this->disc_ = u.disc_;
-    switch (this->disc_)
-    {
-    case ::Test::DataType::dtLong:
-      {
-        this->u_.longData_ = u.u_.longData_;
-      }
-      break;
-    case ::Test::DataType::dtShort:
-      {
-        this->u_.shortData_ = u.u_.shortData_;
-      }
-      break;
-    case ::Test::DataType::dtString:
-      {
-        new (&this->u_.stringData_) std::string (u.u_.stringData_);
-      }
-      break;
-    case ::Test::DataType::dtPoint:
-      {
-        new (&this->u_.pointData_) ::Test::Point (u.u_.pointData_);
-      }
-      break;
-    case ::Test::DataType::dtTrack:
-      {
-        new (&this->u_.trackData_) ::Test::Track (u.u_.trackData_);
-      }
-      break;
-    case ::Test::DataType::dtGlobal:
-      {
-        new (&this->u_.globalData_) ::Global (u.u_.globalData_);
-      }
-      break;
-    default:
-      break;
-    }
+    ::Test::Data tmp (u);
+    this->swap (tmp);
   }
   return *this;
 }
@@ -1940,99 +1869,107 @@ inline ::Test::Data& Test::Data::operator= (::Test::Data&& u)
 {
   if (this != &u)
   {
-    this->_clear ();
-    this->disc_ = std::move (u.disc_);
-    switch (this->disc_)
-    {
-    case ::Test::DataType::dtLong:
-      {
-        this->u_.longData_ = std::move (u.u_.longData_);
-      }
-      break;
-    case ::Test::DataType::dtShort:
-      {
-        this->u_.shortData_ = std::move (u.u_.shortData_);
-      }
-      break;
-    case ::Test::DataType::dtString:
-      {
-        new (&this->u_.stringData_) std::string (std::move (u.u_.stringData_));
-      }
-      break;
-    case ::Test::DataType::dtPoint:
-      {
-        new (&this->u_.pointData_) ::Test::Point (std::move (u.u_.pointData_));
-      }
-      break;
-    case ::Test::DataType::dtTrack:
-      {
-        new (&this->u_.trackData_) ::Test::Track (std::move (u.u_.trackData_));
-      }
-      break;
-    case ::Test::DataType::dtGlobal:
-      {
-        new (&this->u_.globalData_) ::Global (std::move (u.u_.globalData_));
-      }
-      break;
-    default:
-      break;
-    }
+    ::Test::Data tmp (std::move (u));
+    this->swap (tmp);
   }
   return *this;
 }
 
-inline void Test::Data::swap (::Test::Data& s)
+inline void Test::Data::swap (::Test::Data& u)
 {
-  if (this != &s)
+  if (this != &u)
   {
-    if (this->disc_ != s.disc_)
+    if (this->disc_ != u.disc_)
     {
       // different datatypes; so use move semantics to swap efficiently through intermediary
       ::Test::Data intermediate (std::move (*this));
-      (*this) = std::move (s);
-      s = std::move (intermediate);
+      this->disc_ = std::move (u.disc_);
+      this->_move_u (u);
+      u.disc_ = std::move (intermediate.disc_);
+      u._move_u (intermediate);
     }
     else
     {
       // same datatypes so swap directly
-      this->_swap_u (s);
+      this->_swap_u (u);
     }
   }
 }
 
-inline void Test::Data::_swap_u (::Test::Data& s)
+inline void Test::Data::_swap_u (::Test::Data& u)
 {
   // u_ members have been guaranteed initialized identically so simply swap data
   switch (this->disc_)
   {
     case ::Test::DataType::dtLong:
     {
-      std::swap (this->u_.longData_, s.u_.longData_);
+      std::swap (this->u_.longData_, u.u_.longData_);
     }
     break;
     case ::Test::DataType::dtShort:
     {
-      std::swap (this->u_.shortData_, s.u_.shortData_);
+      std::swap (this->u_.shortData_, u.u_.shortData_);
     }
     break;
     case ::Test::DataType::dtString:
     {
-      std::swap (this->u_.stringData_, s.u_.stringData_);
+      std::swap (this->u_.stringData_, u.u_.stringData_);
     }
     break;
     case ::Test::DataType::dtPoint:
     {
-      std::swap (this->u_.pointData_, s.u_.pointData_);
+      std::swap (this->u_.pointData_, u.u_.pointData_);
     }
     break;
     case ::Test::DataType::dtTrack:
     {
-      std::swap (this->u_.trackData_, s.u_.trackData_);
+      std::swap (this->u_.trackData_, u.u_.trackData_);
     }
     break;
     case ::Test::DataType::dtGlobal:
     {
-      std::swap (this->u_.globalData_, s.u_.globalData_);
+      std::swap (this->u_.globalData_, u.u_.globalData_);
+    }
+    break;
+    default:
+    break;
+  }
+}
+
+inline void Test::Data::_move_u (::Test::Data& u)
+{
+  // this->disc_ is guarenteed to be initialized with the value from u.disc_ so it's safe
+  // to move/initialize the corresponding union members
+  switch (this->disc_)
+  {
+    case ::Test::DataType::dtLong:
+    {
+      this->u_.longData_ = std::move (u.u_.longData_);
+    }
+    break;
+    case ::Test::DataType::dtShort:
+    {
+      this->u_.shortData_ = std::move (u.u_.shortData_);
+    }
+    break;
+    case ::Test::DataType::dtString:
+    {
+      new (&this->u_.stringData_) std::string (std::move (u.u_.stringData_));
+    }
+    break;
+    case ::Test::DataType::dtPoint:
+    {
+      new (&this->u_.pointData_) ::Test::Point (std::move (u.u_.pointData_));
+    }
+    break;
+    case ::Test::DataType::dtTrack:
+    {
+      new (&this->u_.trackData_) ::Test::Track (std::move (u.u_.trackData_));
+    }
+    break;
+    case ::Test::DataType::dtGlobal:
+    {
+      new (&this->u_.globalData_) ::Global (std::move (u.u_.globalData_));
     }
     break;
     default:
@@ -2044,35 +1981,31 @@ inline void Test::Data::_clear ()
 {
   switch (this->disc_)
   {
-  case ::Test::DataType::dtLong:
-    {
-    }
+    case ::Test::DataType::dtLong:
     break;
-  case ::Test::DataType::dtShort:
-    {
-    }
+    case ::Test::DataType::dtShort:
     break;
-  case ::Test::DataType::dtString:
+    case ::Test::DataType::dtString:
     {
       this->u_.stringData_.std::string::~string ();
     }
     break;
-  case ::Test::DataType::dtPoint:
+    case ::Test::DataType::dtPoint:
     {
       this->u_.pointData_.::Test::Point::~Point ();
     }
     break;
-  case ::Test::DataType::dtTrack:
+    case ::Test::DataType::dtTrack:
     {
       this->u_.trackData_.::Test::Track::~Track ();
     }
     break;
-  case ::Test::DataType::dtGlobal:
+    case ::Test::DataType::dtGlobal:
     {
       this->u_.globalData_.::Global::~Global ();
     }
     break;
-  default:
+    default:
     break;
   }
 }
@@ -2101,6 +2034,7 @@ inline void Test::S::swap (::Test::S& s)
 // generated from c++11/templates/cli/inl/union_inl.erb
 
 inline Test::U::u_type_::u_type_ ()
+  : obj_ {}
 {
 }
 
@@ -2109,9 +2043,7 @@ inline Test::U::u_type_::~u_type_ ()
 }
 
 inline Test::U::U ()
-  : disc_ ((-2147483647-1))
 {
-  new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type;
 }
 
 inline Test::U::~U ()
@@ -2131,21 +2063,18 @@ inline Test::U::U (const ::Test::U& u)
     break;
     case 2:
       {
-        new (&this->u_.z_) std::string;
-        this->u_.z_ = u.u_.z_;
+        new (&this->u_.z_) std::string (u.u_.z_);
       }
     break;
     case 3:
     case 4:
       {
-        new (&this->u_.w_) ::Test::S;
-        this->u_.w_ = u.u_.w_;
+        new (&this->u_.w_) ::Test::S (u.u_.w_);
       }
     break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type;
-        this->u_.obj_ = u.u_.obj_;
+        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
       }
     break;
   }
@@ -2154,30 +2083,7 @@ inline Test::U::U (const ::Test::U& u)
 inline Test::U::U (::Test::U&& u)
   : disc_ (std::move (u.disc_))
 {
-  switch (this->disc_)
-  {
-  case 1:
-    {
-      this->u_.x_ = std::move (u.u_.x_);
-    }
-    break;
-  case 2:
-    {
-      new (&this->u_.z_) std::string (std::move (u.u_.z_));
-    }
-    break;
-  case 3:
-  case 4:
-    {
-      new (&this->u_.w_) ::Test::S (std::move (u.u_.w_));
-    }
-    break;
-  default:
-    {
-      new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
-    }
-    break;
-  }
+  this->_move_u (u);
 }
 
 inline void Test::U::_d (int32_t discval)
@@ -2250,9 +2156,9 @@ inline void Test::U::x (int32_t _x)
   if (this->disc_ != 1)
   {
     this->_clear ();
+    this->disc_ = 1;
   }
   this->u_.x_ = _x;
-  this->disc_ = 1;
 }
 
 inline int32_t Test::U::x () const
@@ -2284,13 +2190,13 @@ inline void Test::U::z (const std::string& _z)
   if (this->disc_ != 2)
   {
     this->_clear ();
+    this->disc_ = 2;
     new (&this->u_.z_) std::string (_z);
   }
   else
   {
     this->u_.z_ = _z;
   }
-  this->disc_ = 2;
 }
 
 inline void Test::U::z (std::string&& _z)
@@ -2298,13 +2204,13 @@ inline void Test::U::z (std::string&& _z)
   if (this->disc_ != 2)
   {
     this->_clear ();
+    this->disc_ = 2;
     new (&this->u_.z_) std::string (std::move (_z));
   }
   else
   {
     this->u_.z_ = std::move (_z);
   }
-  this->disc_ = 2;
 }
 
 inline const std::string& Test::U::z () const
@@ -2336,13 +2242,13 @@ inline void Test::U::w (const ::Test::S& _w)
   if (this->disc_ != 3)
   {
     this->_clear ();
+    this->disc_ = 3;
     new (&this->u_.w_) ::Test::S (_w);
   }
   else
   {
     this->u_.w_ = _w;
   }
-  this->disc_ = 3;
 }
 
 inline void Test::U::w (::Test::S&& _w)
@@ -2350,13 +2256,13 @@ inline void Test::U::w (::Test::S&& _w)
   if (this->disc_ != 3)
   {
     this->_clear ();
+    this->disc_ = 3;
     new (&this->u_.w_) ::Test::S (std::move (_w));
   }
   else
   {
     this->u_.w_ = std::move (_w);
   }
-  this->disc_ = 3;
 }
 
 inline const ::Test::S& Test::U::w () const
@@ -2390,13 +2296,13 @@ inline void Test::U::obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj)
   if (this->disc_ != (-2147483647-1))
   {
     this->_clear ();
+    this->disc_ = (-2147483647-1);
     new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (_obj);
   }
   else
   {
     this->u_.obj_ = _obj;
   }
-  this->disc_ = (-2147483647-1);
 }
 
 inline TAOX11_IDL::traits< ::Test::A>::ref_type Test::U::obj () const
@@ -2433,32 +2339,8 @@ inline ::Test::U& Test::U::operator= (const ::Test::U& u)
 {
   if (this != &u)
   {
-    this->_clear ();
-    this->disc_ = u.disc_;
-    switch (this->disc_)
-    {
-    case 1:
-      {
-        this->u_.x_ = u.u_.x_;
-      }
-      break;
-    case 2:
-      {
-        new (&this->u_.z_) std::string (u.u_.z_);
-      }
-      break;
-    case 3:
-    case 4:
-      {
-        new (&this->u_.w_) ::Test::S (u.u_.w_);
-      }
-      break;
-    default:
-      {
-        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
-      }
-      break;
-    }
+    ::Test::U tmp (u);
+    this->swap (tmp);
   }
   return *this;
 }
@@ -2467,79 +2349,87 @@ inline ::Test::U& Test::U::operator= (::Test::U&& u)
 {
   if (this != &u)
   {
-    this->_clear ();
-    this->disc_ = std::move (u.disc_);
-    switch (this->disc_)
-    {
-    case 1:
-      {
-        this->u_.x_ = std::move (u.u_.x_);
-      }
-      break;
-    case 2:
-      {
-        new (&this->u_.z_) std::string (std::move (u.u_.z_));
-      }
-      break;
-    case 3:
-    case 4:
-      {
-        new (&this->u_.w_) ::Test::S (std::move (u.u_.w_));
-      }
-      break;
-    default:
-      {
-        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
-      }
-      break;
-    }
+    ::Test::U tmp (std::move (u));
+    this->swap (tmp);
   }
   return *this;
 }
 
-inline void Test::U::swap (::Test::U& s)
+inline void Test::U::swap (::Test::U& u)
 {
-  if (this != &s)
+  if (this != &u)
   {
-    if (this->disc_ != s.disc_)
+    if (this->disc_ != u.disc_)
     {
       // different datatypes; so use move semantics to swap efficiently through intermediary
       ::Test::U intermediate (std::move (*this));
-      (*this) = std::move (s);
-      s = std::move (intermediate);
+      this->disc_ = std::move (u.disc_);
+      this->_move_u (u);
+      u.disc_ = std::move (intermediate.disc_);
+      u._move_u (intermediate);
     }
     else
     {
       // same datatypes so swap directly
-      this->_swap_u (s);
+      this->_swap_u (u);
     }
   }
 }
 
-inline void Test::U::_swap_u (::Test::U& s)
+inline void Test::U::_swap_u (::Test::U& u)
 {
   // u_ members have been guaranteed initialized identically so simply swap data
   switch (this->disc_)
   {
     case 1:
     {
-      std::swap (this->u_.x_, s.u_.x_);
+      std::swap (this->u_.x_, u.u_.x_);
     }
     break;
     case 2:
     {
-      std::swap (this->u_.z_, s.u_.z_);
+      std::swap (this->u_.z_, u.u_.z_);
     }
     break;
     case 3:
     case 4:
     {
-      std::swap (this->u_.w_, s.u_.w_);
+      std::swap (this->u_.w_, u.u_.w_);
     }
     break;
     default:
     {
-      std::swap (this->u_.obj_, s.u_.obj_);
+      std::swap (this->u_.obj_, u.u_.obj_);
+    }
+    break;
+  }
+}
+
+inline void Test::U::_move_u (::Test::U& u)
+{
+  // this->disc_ is guarenteed to be initialized with the value from u.disc_ so it's safe
+  // to move/initialize the corresponding union members
+  switch (this->disc_)
+  {
+    case 1:
+    {
+      this->u_.x_ = std::move (u.u_.x_);
+    }
+    break;
+    case 2:
+    {
+      new (&this->u_.z_) std::string (std::move (u.u_.z_));
+    }
+    break;
+    case 3:
+    case 4:
+    {
+      new (&this->u_.w_) ::Test::S (std::move (u.u_.w_));
+    }
+    break;
+    default:
+    {
+      new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
     }
     break;
   }
@@ -2549,22 +2439,20 @@ inline void Test::U::_clear ()
 {
   switch (this->disc_)
   {
-  case 1:
-    {
-    }
+    case 1:
     break;
-  case 2:
+    case 2:
     {
       this->u_.z_.std::string::~string ();
     }
     break;
-  case 3:
-  case 4:
+    case 3:
+    case 4:
     {
       this->u_.w_.::Test::S::~S ();
     }
     break;
-  default:
+    default:
     {
       this->u_.obj_.TAOX11_IDL::traits< ::Test::A>::ref_type::~object_reference ();
     }
@@ -2701,6 +2589,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ECBFDIEE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JICAJHHC_INCLUDED__ */
 
 // -*- END -*-
