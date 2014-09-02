@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHIGHFCA_INCLUDED__
-#define __RIDL_TESTC_H_FHIGHFCA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JECFHADF_INCLUDED__
+#define __RIDL_TESTC_H_JECFHADF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -397,7 +397,7 @@ protected:
   explicit A (A_proxy_ptr p);
   explicit A (A_proxy_ptr p, bool);
   /// Default constructor
-  A ();
+  A () = default;
   /// Destructor
   ~A () = default;
 
@@ -408,7 +408,7 @@ private:
   A(A&&) = delete;
   A& operator=(const A&) = delete;
   A& operator=(A&&) = delete;
-  A_proxy_ptr a_proxy_;
+  A_proxy_ptr a_proxy_ {};
   //@}
 }; // A
 
@@ -719,14 +719,11 @@ namespace TAOX11_NAMESPACE
     struct valuetype_traits< ::StringValue>
     {
       /// Strong reference type
-      typedef valuetype_reference< ::StringValue>
-          ref_type;
+      typedef valuetype_reference< ::StringValue> ref_type;
       /// Weak reference type
-      typedef weak_valuetype_reference< ::StringValue>
-          weak_ref_type;
+      typedef weak_valuetype_reference< ::StringValue> weak_ref_type;
 
-      static ref_type narrow (
-          valuetype_reference<ValueBase>);
+      static ref_type narrow (valuetype_reference<ValueBase>);
     };
   } // namespace CORBA
 
@@ -737,6 +734,7 @@ namespace TAOX11_NAMESPACE
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::StringValue>>,
         public CORBA::valuetype_traits < ::StringValue>
     {
+      /// IDL::traits for the boxed type of the valuebox
       typedef IDL::traits< std::string>  boxed_traits;
 
       template <typename OStrm_, typename Formatter = formatter< ::StringValue, OStrm_>>
@@ -755,7 +753,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_VBOX_STRINGVALUE_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuebox_def.erb
-class StringValue
+class StringValue final
   : public TAOX11_CORBA::Valuebox_T< std::string>
 {
 public:
@@ -777,9 +775,7 @@ public:
   virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   _copy_value () const override;
 
-  static bool _obv_unmarshal (
-      TAO_InputCDR &strm,
-      _ref_type &vbox);
+  static bool _obv_unmarshal (TAO_InputCDR &strm, _ref_type &vbox);
 
 protected:
   template <typename _Tp1, typename, typename ...Args>
@@ -790,16 +786,16 @@ protected:
   StringValue () = default;
   StringValue (const StringValue&) = default;
   StringValue (StringValue&&) = default;
-  StringValue (std::string v)
+  explicit StringValue (std::string v)
     : TAOX11_CORBA::Valuebox_T< std::string> (v)
   {}
-  ~StringValue () = default;
+  virtual ~StringValue () = default;
   StringValue& operator= (const StringValue&) = delete;
   StringValue& operator= (StringValue&&) = delete;
 
-  virtual const std::string& _obv_repository_id () const;
+  virtual const std::string& _obv_repository_id () const override;
 
-  virtual bool _obv_marshal_v (TAO_OutputCDR &) const;
+  virtual bool _obv_marshal_v (TAO_OutputCDR &) const override;
 };
 
 // generated from c++11/templates/cli/hdr/valuebox_traits.erb
@@ -908,7 +904,7 @@ protected:
   explicit X (X_proxy_ptr p);
   explicit X (X_proxy_ptr p, bool);
   /// Default constructor
-  X ();
+  X () = default;
   /// Destructor
   ~X () = default;
 
@@ -919,7 +915,7 @@ private:
   X(X&&) = delete;
   X& operator=(const X&) = delete;
   X& operator=(X&&) = delete;
-  X_proxy_ptr x_proxy_;
+  X_proxy_ptr x_proxy_ {};
   //@}
 }; // X
 
@@ -951,14 +947,11 @@ namespace TAOX11_NAMESPACE
     struct valuetype_traits< ::ColorValue>
     {
       /// Strong reference type
-      typedef valuetype_reference< ::ColorValue>
-          ref_type;
+      typedef valuetype_reference< ::ColorValue> ref_type;
       /// Weak reference type
-      typedef weak_valuetype_reference< ::ColorValue>
-          weak_ref_type;
+      typedef weak_valuetype_reference< ::ColorValue> weak_ref_type;
 
-      static ref_type narrow (
-          valuetype_reference<ValueBase>);
+      static ref_type narrow (valuetype_reference<ValueBase>);
     };
   } // namespace CORBA
 
@@ -969,6 +962,7 @@ namespace TAOX11_NAMESPACE
       : public IDL::common_byval_traits<CORBA::valuetype_reference< ::ColorValue>>,
         public CORBA::valuetype_traits < ::ColorValue>
     {
+      /// IDL::traits for the boxed type of the valuebox
       typedef IDL::traits< ::Color>  boxed_traits;
 
       template <typename OStrm_, typename Formatter = formatter< ::ColorValue, OStrm_>>
@@ -987,7 +981,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_VBOX_COLORVALUE_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/valuebox_def.erb
-class ColorValue
+class ColorValue final
   : public TAOX11_CORBA::Valuebox_T< ::Color>
 {
 public:
@@ -1007,9 +1001,7 @@ public:
   virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   _copy_value () const override;
 
-  static bool _obv_unmarshal (
-      TAO_InputCDR &strm,
-      _ref_type &vbox);
+  static bool _obv_unmarshal (TAO_InputCDR &strm, _ref_type &vbox);
 
 protected:
   template <typename _Tp1, typename, typename ...Args>
@@ -1020,16 +1012,16 @@ protected:
   ColorValue () = default;
   ColorValue (const ColorValue&) = default;
   ColorValue (ColorValue&&) = default;
-  ColorValue (::Color v)
+  explicit ColorValue (::Color v)
     : TAOX11_CORBA::Valuebox_T< ::Color> (v)
   {}
-  ~ColorValue () = default;
+  virtual ~ColorValue () = default;
   ColorValue& operator= (const ColorValue&) = delete;
   ColorValue& operator= (ColorValue&&) = delete;
 
-  virtual const std::string& _obv_repository_id () const;
+  virtual const std::string& _obv_repository_id () const override;
 
-  virtual bool _obv_marshal_v (TAO_OutputCDR &) const;
+  virtual bool _obv_marshal_v (TAO_OutputCDR &) const override;
 };
 
 // generated from c++11/templates/cli/hdr/valuebox_traits.erb
@@ -1175,7 +1167,7 @@ protected:
   explicit A1 (A1_proxy_ptr p);
   explicit A1 (A1_proxy_ptr p, bool);
   /// Default constructor
-  A1 ();
+  A1 () = default;
   /// Destructor
   ~A1 () = default;
 
@@ -1186,7 +1178,7 @@ private:
   A1(A1&&) = delete;
   A1& operator=(const A1&) = delete;
   A1& operator=(A1&&) = delete;
-  A1_proxy_ptr a1_proxy_;
+  A1_proxy_ptr a1_proxy_ {};
   //@}
 }; // A1
 
@@ -2387,6 +2379,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHIGHFCA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JECFHADF_INCLUDED__ */
 
 // -*- END -*-

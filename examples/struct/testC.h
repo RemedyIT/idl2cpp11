@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DJBCBGAA_INCLUDED__
-#define __RIDL_TESTC_H_DJBCBGAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EJBJEFIF_INCLUDED__
+#define __RIDL_TESTC_H_EJBJEFIF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -172,7 +172,7 @@ namespace Test
     explicit Bar (Bar_proxy_ptr p);
     explicit Bar (Bar_proxy_ptr p, bool);
     /// Default constructor
-    Bar ();
+    Bar () = default;
     /// Destructor
     ~Bar () = default;
 
@@ -183,7 +183,7 @@ namespace Test
     Bar(Bar&&) = delete;
     Bar& operator=(const Bar&) = delete;
     Bar& operator=(Bar&&) = delete;
-    Bar_proxy_ptr bar_proxy_;
+    Bar_proxy_ptr bar_proxy_ {};
     //@}
   }; // Bar
 
@@ -415,7 +415,7 @@ namespace Test
     explicit Foo (Foo_proxy_ptr p);
     explicit Foo (Foo_proxy_ptr p, bool);
     /// Default constructor
-    Foo ();
+    Foo () = default;
     /// Destructor
     ~Foo () = default;
 
@@ -426,7 +426,7 @@ namespace Test
     Foo(Foo&&) = delete;
     Foo& operator=(const Foo&) = delete;
     Foo& operator=(Foo&&) = delete;
-    Foo_proxy_ptr foo_proxy_;
+    Foo_proxy_ptr foo_proxy_ {};
     //@}
   }; // Foo
 } // namespace Test
@@ -822,6 +822,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DJBCBGAA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EJBJEFIF_INCLUDED__ */
 
 // -*- END -*-

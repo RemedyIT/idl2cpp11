@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBIHCFFI_INCLUDED__
-#define __RIDL_TESTC_H_IBIHCFFI_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBFBEAGE_INCLUDED__
+#define __RIDL_TESTC_H_IBFBEAGE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -124,7 +124,7 @@ namespace Test
     typedef std::shared_ptr<Foo>   _shared_ptr_type;
 
     /// Default constructor
-    Foo ();
+    Foo () = default;
     /// Destructor
     ~Foo () = default;
 
@@ -231,7 +231,7 @@ namespace Test
     typedef std::shared_ptr<Bar>   _shared_ptr_type;
 
     /// Default constructor
-    Bar ();
+    Bar () = default;
     /// Destructor
     ~Bar () = default;
 
@@ -389,6 +389,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IBIHCFFI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBFBEAGE_INCLUDED__ */
 
 // -*- END -*-
