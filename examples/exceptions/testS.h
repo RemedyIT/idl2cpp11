@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_DHGIHHDG_INCLUDED__
-#define __RIDL_TESTS_H_DHGIHHDG_INCLUDED__
+#ifndef __RIDL_TESTS_H_DIADBDCB_INCLUDED__
+#define __RIDL_TESTS_H_DIADBDCB_INCLUDED__
 
 #include "testC.h"
 
@@ -103,7 +103,7 @@ namespace Test
       Foo& operator= (Foo&&) = delete;
       friend class POA::Foo_srvproxy;
 
-      POA::Foo_srvproxy_ptr foo_srvproxy_;
+      POA::Foo_srvproxy_ptr foo_srvproxy_{};
     };
 
   } // namespace POA
@@ -136,6 +136,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_DHGIHHDG_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_DIADBDCB_INCLUDED__ */
 
 // -*- END -*-
