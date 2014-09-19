@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BIEJBDDA_INCLUDED__
-#define __RIDL_TESTC_H_BIEJBDDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JDDCADBB_INCLUDED__
+#define __RIDL_TESTC_H_JDDCADBB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -788,15 +788,15 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Test::DataType::dtEmpty: return os_ << "Test::DataType::dtEmpty"; break;
-          case Test::DataType::dtLong: return os_ << "Test::DataType::dtLong"; break;
-          case Test::DataType::dtShort: return os_ << "Test::DataType::dtShort"; break;
-          case Test::DataType::dtString: return os_ << "Test::DataType::dtString"; break;
-          case Test::DataType::dtPoint: return os_ << "Test::DataType::dtPoint"; break;
-          case Test::DataType::dtTrack: return os_ << "Test::DataType::dtTrack"; break;
-          case Test::DataType::dtGlobal: return os_ << "Test::DataType::dtGlobal"; break;
-          default: return os_;
+          case Test::DataType::dtEmpty: os_ << "Test::DataType::dtEmpty"; break;
+          case Test::DataType::dtLong: os_ << "Test::DataType::dtLong"; break;
+          case Test::DataType::dtShort: os_ << "Test::DataType::dtShort"; break;
+          case Test::DataType::dtString: os_ << "Test::DataType::dtString"; break;
+          case Test::DataType::dtPoint: os_ << "Test::DataType::dtPoint"; break;
+          case Test::DataType::dtTrack: os_ << "Test::DataType::dtTrack"; break;
+          case Test::DataType::dtGlobal: os_ << "Test::DataType::dtGlobal"; break;
         }
+        return os_;
       }
     };
 
@@ -1024,10 +1024,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Global& val_)
       {
-        return os_ << "Global"
-                   << '{'
-                   << "x=" << IDL::traits< int32_t>::write(val_.x ())
-                   << '}';
+        os_ << "Global"
+            << '{'
+            << "x=" << IDL::traits< int32_t>::write(val_.x ())
+            << '}';
+        return os_;
       }
     };
 
@@ -1056,11 +1057,12 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::Point& val_)
       {
-        return os_ << "Test::Point"
-                   << '{'
-                   << "x=" << IDL::traits< int32_t>::write(val_.x ())
-                   << ",y=" << IDL::traits< int32_t>::write(val_.y ())
-                   << '}';
+        os_ << "Test::Point"
+            << '{'
+            << "x=" << IDL::traits< int32_t>::write(val_.x ())
+            << ",y=" << IDL::traits< int32_t>::write(val_.y ())
+            << '}';
+        return os_;
       }
     };
 
@@ -1089,11 +1091,12 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::Track& val_)
       {
-        return os_ << "Test::Track"
-                   << '{'
-                   << "id=" << IDL::traits< int32_t>::write(val_.id ())
-                   << ",p=" << IDL::traits< ::Test::Point>::write(val_.p ())
-                   << '}';
+        os_ << "Test::Track"
+            << '{'
+            << "id=" << IDL::traits< int32_t>::write(val_.id ())
+            << ",p=" << IDL::traits< ::Test::Point>::write(val_.p ())
+            << '}';
+        return os_;
       }
     };
 
@@ -1158,7 +1161,8 @@ namespace TAOX11_NAMESPACE
           default:
           break;
         }
-        return os_ << '}';
+        os_ << '}';
+        return os_;
       }
     };
 
@@ -1187,10 +1191,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::S& val_)
       {
-        return os_ << "Test::S"
-                   << '{'
-                   << "len=" << IDL::traits< int32_t>::write(val_.len ())
-                   << '}';
+        os_ << "Test::S"
+            << '{'
+            << "len=" << IDL::traits< int32_t>::write(val_.len ())
+            << '}';
+        return os_;
       }
     };
 
@@ -1244,7 +1249,8 @@ namespace TAOX11_NAMESPACE
           }
           break;
         }
-        return os_ << '}';
+        os_ << '}';
+        return os_;
       }
     };
 
@@ -2589,6 +2595,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BIEJBDDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JDDCADBB_INCLUDED__ */
 
 // -*- END -*-

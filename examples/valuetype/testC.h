@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDGJAAHF_INCLUDED__
-#define __RIDL_TESTC_H_EDGJAAHF_INCLUDED__
+#ifndef __RIDL_TESTC_H_GGECGIGA_INCLUDED__
+#define __RIDL_TESTC_H_GGECGIGA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1777,11 +1777,11 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Color::red: return os_ << "Color::red"; break;
-          case Color::green: return os_ << "Color::green"; break;
-          case Color::blue: return os_ << "Color::blue"; break;
-          default: return os_;
+          case Color::red: os_ << "Color::red"; break;
+          case Color::green: os_ << "Color::green"; break;
+          case Color::blue: os_ << "Color::blue"; break;
         }
+        return os_;
       }
     };
 
@@ -1918,10 +1918,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           TAOX11_IDL::traits< ::Example>::ref_type val_)
       {
-        return os_ << "Example"
-                   << '{'
-                   << "val2=" << IDL::traits< int32_t>::write(val_->val2 ())
-                   << '}';
+        os_ << "Example"
+            << '{'
+            << "val2=" << IDL::traits< int32_t>::write(val_->val2 ())
+            << '}';
+        return os_;
       }
     };
 
@@ -1950,10 +1951,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::S& val_)
       {
-        return os_ << "S"
-                   << '{'
-                   << "value=" << IDL::traits< int32_t>::write(val_.value ())
-                   << '}';
+        os_ << "S"
+            << '{'
+            << "value=" << IDL::traits< int32_t>::write(val_.value ())
+            << '}';
+        return os_;
       }
     };
 
@@ -2011,12 +2013,13 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           TAOX11_IDL::traits< ::Val>::ref_type val_)
       {
-        return os_ << "Val"
-                   << '{'
-                   << "t=" << IDL::traits< ::Val>::write(val_->t ())
-                   << ",w=" << IDL::traits< ::Bytes>::write(val_->w ())
-                   << ",x=" << IDL::traits< std::string>::write(val_->x ())
-                   << '}';
+        os_ << "Val"
+            << '{'
+            << "t=" << IDL::traits< ::Val>::write(val_->t ())
+            << ",w=" << IDL::traits< ::Bytes>::write(val_->w ())
+            << ",x=" << IDL::traits< std::string>::write(val_->x ())
+            << '}';
+        return os_;
       }
     };
 
@@ -2074,10 +2077,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::ColorValue2& val_)
       {
-        return os_ << "ColorValue2"
-                   << '{'
-                   << "col=" << IDL::traits< ::Color>::write(val_.col ())
-                   << '}';
+        os_ << "ColorValue2"
+            << '{'
+            << "col=" << IDL::traits< ::Color>::write(val_.col ())
+            << '}';
+        return os_;
       }
     };
 
@@ -2135,10 +2139,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           TAOX11_IDL::traits< ::B>::ref_type val_)
       {
-        return os_ << "B"
-                   << '{'
-                   << "data=" << IDL::traits< int16_t>::write(val_->data ())
-                   << '}';
+        os_ << "B"
+            << '{'
+            << "data=" << IDL::traits< int16_t>::write(val_->data ())
+            << '}';
+        return os_;
       }
     };
 
@@ -2167,8 +2172,9 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           TAOX11_IDL::traits< ::V>::ref_type)
       {
-        return os_ << "V"
-                   ;
+        os_ << "V"
+            ;
+        return os_;
       }
     };
 
@@ -2379,6 +2385,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDGJAAHF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GGECGIGA_INCLUDED__ */
 
 // -*- END -*-

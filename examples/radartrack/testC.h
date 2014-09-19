@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DHCDJCCD_INCLUDED__
-#define __RIDL_TESTC_H_DHCDJCCD_INCLUDED__
+#ifndef __RIDL_TESTC_H_FGHBCABG_INCLUDED__
+#define __RIDL_TESTC_H_FGHBCABG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -206,14 +206,15 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::RadarTrack& val_)
       {
-        return os_ << "RadarTrack"
-                   << '{'
-                   << "id=" << IDL::traits< std::string>::write(val_.id ())
-                   << ",x=" << IDL::traits< int32_t>::write(val_.x ())
-                   << ",y=" << IDL::traits< int32_t>::write(val_.y ())
-                   << ",z=" << IDL::traits< int32_t>::write(val_.z ())
-                   << ",plot=" << IDL::traits< ::octetseq>::write(val_.plot ())
-                   << '}';
+        os_ << "RadarTrack"
+            << '{'
+            << "id=" << IDL::traits< std::string>::write(val_.id ())
+            << ",x=" << IDL::traits< int32_t>::write(val_.x ())
+            << ",y=" << IDL::traits< int32_t>::write(val_.y ())
+            << ",z=" << IDL::traits< int32_t>::write(val_.z ())
+            << ",plot=" << IDL::traits< ::octetseq>::write(val_.plot ())
+            << '}';
+        return os_;
       }
     };
 
@@ -332,6 +333,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DHCDJCCD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FGHBCABG_INCLUDED__ */
 
 // -*- END -*-

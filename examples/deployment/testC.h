@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DHEDDCJG_INCLUDED__
-#define __RIDL_TESTC_H_DHEDDCJG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IJJEAGBI_INCLUDED__
+#define __RIDL_TESTC_H_IJJEAGBI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -2151,14 +2151,14 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Deployment::SatisfierPropertyKind::Quantity: return os_ << "Deployment::SatisfierPropertyKind::Quantity"; break;
-          case Deployment::SatisfierPropertyKind::Capacity: return os_ << "Deployment::SatisfierPropertyKind::Capacity"; break;
-          case Deployment::SatisfierPropertyKind::Minimum: return os_ << "Deployment::SatisfierPropertyKind::Minimum"; break;
-          case Deployment::SatisfierPropertyKind::Maximum: return os_ << "Deployment::SatisfierPropertyKind::Maximum"; break;
-          case Deployment::SatisfierPropertyKind::Attribute: return os_ << "Deployment::SatisfierPropertyKind::Attribute"; break;
-          case Deployment::SatisfierPropertyKind::Selection: return os_ << "Deployment::SatisfierPropertyKind::Selection"; break;
-          default: return os_;
+          case Deployment::SatisfierPropertyKind::Quantity: os_ << "Deployment::SatisfierPropertyKind::Quantity"; break;
+          case Deployment::SatisfierPropertyKind::Capacity: os_ << "Deployment::SatisfierPropertyKind::Capacity"; break;
+          case Deployment::SatisfierPropertyKind::Minimum: os_ << "Deployment::SatisfierPropertyKind::Minimum"; break;
+          case Deployment::SatisfierPropertyKind::Maximum: os_ << "Deployment::SatisfierPropertyKind::Maximum"; break;
+          case Deployment::SatisfierPropertyKind::Attribute: os_ << "Deployment::SatisfierPropertyKind::Attribute"; break;
+          case Deployment::SatisfierPropertyKind::Selection: os_ << "Deployment::SatisfierPropertyKind::Selection"; break;
         }
+        return os_;
       }
     };
 
@@ -2280,16 +2280,16 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Deployment::CCMComponentPortKind::Facet: return os_ << "Deployment::CCMComponentPortKind::Facet"; break;
-          case Deployment::CCMComponentPortKind::SimplexReceptacle: return os_ << "Deployment::CCMComponentPortKind::SimplexReceptacle"; break;
-          case Deployment::CCMComponentPortKind::MultiplexReceptacle: return os_ << "Deployment::CCMComponentPortKind::MultiplexReceptacle"; break;
-          case Deployment::CCMComponentPortKind::EventEmitter: return os_ << "Deployment::CCMComponentPortKind::EventEmitter"; break;
-          case Deployment::CCMComponentPortKind::EventPublisher: return os_ << "Deployment::CCMComponentPortKind::EventPublisher"; break;
-          case Deployment::CCMComponentPortKind::EventConsumer: return os_ << "Deployment::CCMComponentPortKind::EventConsumer"; break;
-          case Deployment::CCMComponentPortKind::ExtendedPort: return os_ << "Deployment::CCMComponentPortKind::ExtendedPort"; break;
-          case Deployment::CCMComponentPortKind::MirrorPort: return os_ << "Deployment::CCMComponentPortKind::MirrorPort"; break;
-          default: return os_;
+          case Deployment::CCMComponentPortKind::Facet: os_ << "Deployment::CCMComponentPortKind::Facet"; break;
+          case Deployment::CCMComponentPortKind::SimplexReceptacle: os_ << "Deployment::CCMComponentPortKind::SimplexReceptacle"; break;
+          case Deployment::CCMComponentPortKind::MultiplexReceptacle: os_ << "Deployment::CCMComponentPortKind::MultiplexReceptacle"; break;
+          case Deployment::CCMComponentPortKind::EventEmitter: os_ << "Deployment::CCMComponentPortKind::EventEmitter"; break;
+          case Deployment::CCMComponentPortKind::EventPublisher: os_ << "Deployment::CCMComponentPortKind::EventPublisher"; break;
+          case Deployment::CCMComponentPortKind::EventConsumer: os_ << "Deployment::CCMComponentPortKind::EventConsumer"; break;
+          case Deployment::CCMComponentPortKind::ExtendedPort: os_ << "Deployment::CCMComponentPortKind::ExtendedPort"; break;
+          case Deployment::CCMComponentPortKind::MirrorPort: os_ << "Deployment::CCMComponentPortKind::MirrorPort"; break;
         }
+        return os_;
       }
     };
 
@@ -2589,13 +2589,13 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Deployment::ResourceUsageKind::None: return os_ << "Deployment::ResourceUsageKind::None"; break;
-          case Deployment::ResourceUsageKind::InstanceUsesResource: return os_ << "Deployment::ResourceUsageKind::InstanceUsesResource"; break;
-          case Deployment::ResourceUsageKind::ResourceUsesInstance: return os_ << "Deployment::ResourceUsageKind::ResourceUsesInstance"; break;
-          case Deployment::ResourceUsageKind::PortUsesResource: return os_ << "Deployment::ResourceUsageKind::PortUsesResource"; break;
-          case Deployment::ResourceUsageKind::ResourceUsesPort: return os_ << "Deployment::ResourceUsageKind::ResourceUsesPort"; break;
-          default: return os_;
+          case Deployment::ResourceUsageKind::None: os_ << "Deployment::ResourceUsageKind::None"; break;
+          case Deployment::ResourceUsageKind::InstanceUsesResource: os_ << "Deployment::ResourceUsageKind::InstanceUsesResource"; break;
+          case Deployment::ResourceUsageKind::ResourceUsesInstance: os_ << "Deployment::ResourceUsageKind::ResourceUsesInstance"; break;
+          case Deployment::ResourceUsageKind::PortUsesResource: os_ << "Deployment::ResourceUsageKind::PortUsesResource"; break;
+          case Deployment::ResourceUsageKind::ResourceUsesPort: os_ << "Deployment::ResourceUsageKind::ResourceUsesPort"; break;
         }
+        return os_;
       }
     };
 
@@ -3542,11 +3542,11 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Deployment::PlanLocalityKind::PlanSameProcess: return os_ << "Deployment::PlanLocalityKind::PlanSameProcess"; break;
-          case Deployment::PlanLocalityKind::PlanDifferentProcess: return os_ << "Deployment::PlanLocalityKind::PlanDifferentProcess"; break;
-          case Deployment::PlanLocalityKind::PlanNoConstraint: return os_ << "Deployment::PlanLocalityKind::PlanNoConstraint"; break;
-          default: return os_;
+          case Deployment::PlanLocalityKind::PlanSameProcess: os_ << "Deployment::PlanLocalityKind::PlanSameProcess"; break;
+          case Deployment::PlanLocalityKind::PlanDifferentProcess: os_ << "Deployment::PlanLocalityKind::PlanDifferentProcess"; break;
+          case Deployment::PlanLocalityKind::PlanNoConstraint: os_ << "Deployment::PlanLocalityKind::PlanNoConstraint"; break;
         }
+        return os_;
       }
     };
 
@@ -3958,11 +3958,12 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::Property& val_)
       {
-        return os_ << "Deployment::Property"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
-                   << '}';
+        os_ << "Deployment::Property"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
+            << '}';
+        return os_;
       }
     };
 
@@ -3991,12 +3992,13 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::Requirement& val_)
       {
-        return os_ << "Deployment::Requirement"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
-                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
-                   << '}';
+        os_ << "Deployment::Requirement"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
+            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4025,13 +4027,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::SatisfierProperty& val_)
       {
-        return os_ << "Deployment::SatisfierProperty"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",kind=" << IDL::traits< ::Deployment::SatisfierPropertyKind>::write(val_.kind ())
-                   << ",dynamic=" << IDL::traits< bool>::write(val_.dynamic ())
-                   << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
-                   << '}';
+        os_ << "Deployment::SatisfierProperty"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",kind=" << IDL::traits< ::Deployment::SatisfierPropertyKind>::write(val_.kind ())
+            << ",dynamic=" << IDL::traits< bool>::write(val_.dynamic ())
+            << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4060,18 +4063,19 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ComponentPortDescription& val_)
       {
-        return os_ << "Deployment::ComponentPortDescription"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
-                   << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
-                   << ",provider=" << IDL::traits< bool>::write(val_.provider ())
-                   << ",exclusiveProvider=" << IDL::traits< bool>::write(val_.exclusiveProvider ())
-                   << ",exclusiveUser=" << IDL::traits< bool>::write(val_.exclusiveUser ())
-                   << ",optional=" << IDL::traits< bool>::write(val_.optional ())
-                   << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
-                   << ",templateParam=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.templateParam ())
-                   << '}';
+        os_ << "Deployment::ComponentPortDescription"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
+            << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+            << ",provider=" << IDL::traits< bool>::write(val_.provider ())
+            << ",exclusiveProvider=" << IDL::traits< bool>::write(val_.exclusiveProvider ())
+            << ",exclusiveUser=" << IDL::traits< bool>::write(val_.exclusiveUser ())
+            << ",optional=" << IDL::traits< bool>::write(val_.optional ())
+            << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
+            << ",templateParam=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.templateParam ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4100,11 +4104,12 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ComponentPropertyDescription& val_)
       {
-        return os_ << "Deployment::ComponentPropertyDescription"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",type=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::write(val_.type ())
-                   << '}';
+        os_ << "Deployment::ComponentPropertyDescription"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",type=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::write(val_.type ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4133,18 +4138,19 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ComponentInterfaceDescription& val_)
       {
-        return os_ << "Deployment::ComponentInterfaceDescription"
-                   << '{'
-                   << "label=" << IDL::traits< std::string>::write(val_.label ())
-                   << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
-                   << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
-                   << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
-                   << ",idlFile=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.idlFile ())
-                   << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
-                   << ",port=" << IDL::traits< ::Deployment::ComponentPortDescriptions>::write(val_.port ())
-                   << ",property=" << IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write(val_.property ())
-                   << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
-                   << '}';
+        os_ << "Deployment::ComponentInterfaceDescription"
+            << '{'
+            << "label=" << IDL::traits< std::string>::write(val_.label ())
+            << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
+            << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
+            << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+            << ",idlFile=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.idlFile ())
+            << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
+            << ",port=" << IDL::traits< ::Deployment::ComponentPortDescriptions>::write(val_.port ())
+            << ",property=" << IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write(val_.property ())
+            << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4173,14 +4179,15 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::MonolithicDeploymentDescription& val_)
       {
-        return os_ << "Deployment::MonolithicDeploymentDescription"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-                   << ",artifactRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.artifactRef ())
-                   << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
-                   << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
-                   << '}';
+        os_ << "Deployment::MonolithicDeploymentDescription"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",artifactRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.artifactRef ())
+            << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
+            << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4209,13 +4216,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::InstanceResourceDeploymentDescription& val_)
       {
-        return os_ << "Deployment::InstanceResourceDeploymentDescription"
-                   << '{'
-                   << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKind>::write(val_.resourceUsage ())
-                   << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
-                   << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
-                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
-                   << '}';
+        os_ << "Deployment::InstanceResourceDeploymentDescription"
+            << '{'
+            << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKind>::write(val_.resourceUsage ())
+            << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
+            << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
+            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4244,16 +4252,17 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::InstanceDeploymentDescription& val_)
       {
-        return os_ << "Deployment::InstanceDeploymentDescription"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",node=" << IDL::traits< std::string>::write(val_.node ())
-                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-                   << ",implementationRef=" << IDL::traits< uint32_t>::write(val_.implementationRef ())
-                   << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
-                   << ",deployedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedResource ())
-                   << ",deployedSharedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedSharedResource ())
-                   << '}';
+        os_ << "Deployment::InstanceDeploymentDescription"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",node=" << IDL::traits< std::string>::write(val_.node ())
+            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",implementationRef=" << IDL::traits< uint32_t>::write(val_.implementationRef ())
+            << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
+            << ",deployedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedResource ())
+            << ",deployedSharedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedSharedResource ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4282,10 +4291,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ComponentExternalPortEndpoint& val_)
       {
-        return os_ << "Deployment::ComponentExternalPortEndpoint"
-                   << '{'
-                   << "portName=" << IDL::traits< std::string>::write(val_.portName ())
-                   << '}';
+        os_ << "Deployment::ComponentExternalPortEndpoint"
+            << '{'
+            << "portName=" << IDL::traits< std::string>::write(val_.portName ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4314,13 +4324,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::PlanSubcomponentPortEndpoint& val_)
       {
-        return os_ << "Deployment::PlanSubcomponentPortEndpoint"
-                   << '{'
-                   << "portName=" << IDL::traits< std::string>::write(val_.portName ())
-                   << ",provider=" << IDL::traits< bool>::write(val_.provider ())
-                   << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
-                   << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
-                   << '}';
+        os_ << "Deployment::PlanSubcomponentPortEndpoint"
+            << '{'
+            << "portName=" << IDL::traits< std::string>::write(val_.portName ())
+            << ",provider=" << IDL::traits< bool>::write(val_.provider ())
+            << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
+            << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4349,13 +4360,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ExternalReferenceEndpoint& val_)
       {
-        return os_ << "Deployment::ExternalReferenceEndpoint"
-                   << '{'
-                   << "location=" << IDL::traits< std::string>::write(val_.location ())
-                   << ",provider=" << IDL::traits< bool>::write(val_.provider ())
-                   << ",portName=" << IDL::traits< std::string>::write(val_.portName ())
-                   << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
-                   << '}';
+        os_ << "Deployment::ExternalReferenceEndpoint"
+            << '{'
+            << "location=" << IDL::traits< std::string>::write(val_.location ())
+            << ",provider=" << IDL::traits< bool>::write(val_.provider ())
+            << ",portName=" << IDL::traits< std::string>::write(val_.portName ())
+            << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4384,13 +4396,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ConnectionResourceDeploymentDescription& val_)
       {
-        return os_ << "Deployment::ConnectionResourceDeploymentDescription"
-                   << '{'
-                   << "targetName=" << IDL::traits< std::string>::write(val_.targetName ())
-                   << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
-                   << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
-                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
-                   << '}';
+        os_ << "Deployment::ConnectionResourceDeploymentDescription"
+            << '{'
+            << "targetName=" << IDL::traits< std::string>::write(val_.targetName ())
+            << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
+            << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
+            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4419,16 +4432,17 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::PlanConnectionDescription& val_)
       {
-        return os_ << "Deployment::PlanConnectionDescription"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-                   << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
-                   << ",externalEndpoint=" << IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write(val_.externalEndpoint ())
-                   << ",internalEndpoint=" << IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write(val_.internalEndpoint ())
-                   << ",externalReference=" << IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write(val_.externalReference ())
-                   << ",deployedResource=" << IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write(val_.deployedResource ())
-                   << '}';
+        os_ << "Deployment::PlanConnectionDescription"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+            << ",externalEndpoint=" << IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write(val_.externalEndpoint ())
+            << ",internalEndpoint=" << IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write(val_.internalEndpoint ())
+            << ",externalReference=" << IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write(val_.externalReference ())
+            << ",deployedResource=" << IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write(val_.deployedResource ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4457,11 +4471,12 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::PlanSubcomponentPropertyReference& val_)
       {
-        return os_ << "Deployment::PlanSubcomponentPropertyReference"
-                   << '{'
-                   << "propertyName=" << IDL::traits< std::string>::write(val_.propertyName ())
-                   << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
-                   << '}';
+        os_ << "Deployment::PlanSubcomponentPropertyReference"
+            << '{'
+            << "propertyName=" << IDL::traits< std::string>::write(val_.propertyName ())
+            << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4490,13 +4505,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::PlanPropertyMapping& val_)
       {
-        return os_ << "Deployment::PlanPropertyMapping"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-                   << ",externalName=" << IDL::traits< std::string>::write(val_.externalName ())
-                   << ",delegatesTo=" << IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write(val_.delegatesTo ())
-                   << '}';
+        os_ << "Deployment::PlanPropertyMapping"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",externalName=" << IDL::traits< std::string>::write(val_.externalName ())
+            << ",delegatesTo=" << IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write(val_.delegatesTo ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4525,10 +4541,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ImplementationDependency& val_)
       {
-        return os_ << "Deployment::ImplementationDependency"
-                   << '{'
-                   << "requiredType=" << IDL::traits< std::string>::write(val_.requiredType ())
-                   << '}';
+        os_ << "Deployment::ImplementationDependency"
+            << '{'
+            << "requiredType=" << IDL::traits< std::string>::write(val_.requiredType ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4557,12 +4574,13 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ResourceDeploymentDescription& val_)
       {
-        return os_ << "Deployment::ResourceDeploymentDescription"
-                   << '{'
-                   << "requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
-                   << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
-                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
-                   << '}';
+        os_ << "Deployment::ResourceDeploymentDescription"
+            << '{'
+            << "requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
+            << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
+            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4591,16 +4609,17 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ArtifactDeploymentDescription& val_)
       {
-        return os_ << "Deployment::ArtifactDeploymentDescription"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",location=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.location ())
-                   << ",node=" << IDL::traits< std::string>::write(val_.node ())
-                   << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-                   << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
-                   << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
-                   << ",deployedResource=" << IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write(val_.deployedResource ())
-                   << '}';
+        os_ << "Deployment::ArtifactDeploymentDescription"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",location=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.location ())
+            << ",node=" << IDL::traits< std::string>::write(val_.node ())
+            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
+            << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+            << ",deployedResource=" << IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write(val_.deployedResource ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4629,11 +4648,12 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::PlanLocality& val_)
       {
-        return os_ << "Deployment::PlanLocality"
-                   << '{'
-                   << "constraint=" << IDL::traits< ::Deployment::PlanLocalityKind>::write(val_.constraint ())
-                   << ",constrainedInstanceRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.constrainedInstanceRef ())
-                   << '}';
+        os_ << "Deployment::PlanLocality"
+            << '{'
+            << "constraint=" << IDL::traits< ::Deployment::PlanLocalityKind>::write(val_.constraint ())
+            << ",constrainedInstanceRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.constrainedInstanceRef ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4662,20 +4682,21 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::DeploymentPlan& val_)
       {
-        return os_ << "Deployment::DeploymentPlan"
-                   << '{'
-                   << "label=" << IDL::traits< std::string>::write(val_.label ())
-                   << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
-                   << ",realizes=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.realizes ())
-                   << ",implementation=" << IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write(val_.implementation ())
-                   << ",instance=" << IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write(val_.instance ())
-                   << ",connection=" << IDL::traits< ::Deployment::PlanConnectionDescriptions>::write(val_.connection ())
-                   << ",externalProperty=" << IDL::traits< ::Deployment::PlanPropertyMappings>::write(val_.externalProperty ())
-                   << ",dependsOn=" << IDL::traits< ::Deployment::ImplementationDependencies>::write(val_.dependsOn ())
-                   << ",artifact=" << IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write(val_.artifact ())
-                   << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
-                   << ",localityConstraint=" << IDL::traits< ::Deployment::PlanLocalities>::write(val_.localityConstraint ())
-                   << '}';
+        os_ << "Deployment::DeploymentPlan"
+            << '{'
+            << "label=" << IDL::traits< std::string>::write(val_.label ())
+            << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
+            << ",realizes=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.realizes ())
+            << ",implementation=" << IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write(val_.implementation ())
+            << ",instance=" << IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write(val_.instance ())
+            << ",connection=" << IDL::traits< ::Deployment::PlanConnectionDescriptions>::write(val_.connection ())
+            << ",externalProperty=" << IDL::traits< ::Deployment::PlanPropertyMappings>::write(val_.externalProperty ())
+            << ",dependsOn=" << IDL::traits< ::Deployment::ImplementationDependencies>::write(val_.dependsOn ())
+            << ",artifact=" << IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write(val_.artifact ())
+            << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
+            << ",localityConstraint=" << IDL::traits< ::Deployment::PlanLocalities>::write(val_.localityConstraint ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4704,12 +4725,13 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ComponentPackageReference& val_)
       {
-        return os_ << "Deployment::ComponentPackageReference"
-                   << '{'
-                   << "requiredUUID=" << IDL::traits< std::string>::write(val_.requiredUUID ())
-                   << ",requiredName=" << IDL::traits< std::string>::write(val_.requiredName ())
-                   << ",requiredType=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.requiredType ())
-                   << '}';
+        os_ << "Deployment::ComponentPackageReference"
+            << '{'
+            << "requiredUUID=" << IDL::traits< std::string>::write(val_.requiredUUID ())
+            << ",requiredName=" << IDL::traits< std::string>::write(val_.requiredName ())
+            << ",requiredType=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.requiredType ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4738,15 +4760,16 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::ImplementationRequirement& val_)
       {
-        return os_ << "Deployment::ImplementationRequirement"
-                   << '{'
-                   << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKinds>::write(val_.resourceUsage ())
-                   << ",resourcePort=" << IDL::traits< std::string>::write(val_.resourcePort ())
-                   << ",componentPort=" << IDL::traits< std::string>::write(val_.componentPort ())
-                   << ",name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
-                   << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
-                   << '}';
+        os_ << "Deployment::ImplementationRequirement"
+            << '{'
+            << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKinds>::write(val_.resourceUsage ())
+            << ",resourcePort=" << IDL::traits< std::string>::write(val_.resourcePort ())
+            << ",componentPort=" << IDL::traits< std::string>::write(val_.componentPort ())
+            << ",name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
+            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << '}';
+        return os_;
       }
     };
 
@@ -4775,12 +4798,13 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Deployment::Capability& val_)
       {
-        return os_ << "Deployment::Capability"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << ",resourceType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.resourceType ())
-                   << ",property=" << IDL::traits< ::Deployment::SatisfierProperties>::write(val_.property ())
-                   << '}';
+        os_ << "Deployment::Capability"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << ",resourceType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.resourceType ())
+            << ",property=" << IDL::traits< ::Deployment::SatisfierProperties>::write(val_.property ())
+            << '}';
+        return os_;
       }
     };
 
@@ -6731,6 +6755,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DHEDDCJG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IJJEAGBI_INCLUDED__ */
 
 // -*- END -*-

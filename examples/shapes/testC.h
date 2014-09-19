@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CDCAHIDA_INCLUDED__
-#define __RIDL_TESTC_H_CDCAHIDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BEIGJDHC_INCLUDED__
+#define __RIDL_TESTC_H_BEIGJDHC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -282,13 +282,14 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::ShapeType& val_)
       {
-        return os_ << "ShapeType"
-                   << '{'
-                   << "color=" << IDL::traits< std::string>::write(val_.color ())
-                   << ",x=" << IDL::traits< int32_t>::write(val_.x ())
-                   << ",y=" << IDL::traits< int32_t>::write(val_.y ())
-                   << ",shapesize=" << IDL::traits< int32_t>::write(val_.shapesize ())
-                   << '}';
+        os_ << "ShapeType"
+            << '{'
+            << "color=" << IDL::traits< std::string>::write(val_.color ())
+            << ",x=" << IDL::traits< int32_t>::write(val_.x ())
+            << ",y=" << IDL::traits< int32_t>::write(val_.y ())
+            << ",shapesize=" << IDL::traits< int32_t>::write(val_.shapesize ())
+            << '}';
+        return os_;
       }
     };
 
@@ -317,12 +318,13 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Attributes& val_)
       {
-        return os_ << "Attributes"
-                   << '{'
-                   << "shape=" << IDL::traits< std::string>::write(val_.shape ())
-                   << ",color=" << IDL::traits< std::string>::write(val_.color ())
-                   << ",speed=" << IDL::traits< float>::write(val_.speed ())
-                   << '}';
+        os_ << "Attributes"
+            << '{'
+            << "shape=" << IDL::traits< std::string>::write(val_.shape ())
+            << ",color=" << IDL::traits< std::string>::write(val_.color ())
+            << ",speed=" << IDL::traits< float>::write(val_.speed ())
+            << '}';
+        return os_;
       }
     };
 
@@ -485,6 +487,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CDCAHIDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BEIGJDHC_INCLUDED__ */
 
 // -*- END -*-

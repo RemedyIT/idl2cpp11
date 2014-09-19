@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BEBEDFEI_INCLUDED__
-#define __RIDL_TESTC_H_BEBEDFEI_INCLUDED__
+#ifndef __RIDL_TESTC_H_DHHFJHAE_INCLUDED__
+#define __RIDL_TESTC_H_DHHFJHAE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -354,10 +354,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::FooEx& val_)
       {
-        return os_ << "Test::FooEx"
-                   << '{'
-                   << "message=" << IDL::traits< std::string>::write(val_.message ())
-                   << '}';
+        os_ << "Test::FooEx"
+            << '{'
+            << "message=" << IDL::traits< std::string>::write(val_.message ())
+            << '}';
+        return os_;
       }
     };
 
@@ -386,10 +387,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::BooEx& val_)
       {
-        return os_ << "Test::BooEx"
-                   << '{'
-                   << "id=" << IDL::traits< int32_t>::write(val_.id ())
-                   << '}';
+        os_ << "Test::BooEx"
+            << '{'
+            << "id=" << IDL::traits< int32_t>::write(val_.id ())
+            << '}';
+        return os_;
       }
     };
 
@@ -501,6 +503,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BEBEDFEI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DHHFJHAE_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CBACADJD_INCLUDED__
-#define __RIDL_TESTC_H_CBACADJD_INCLUDED__
+#ifndef __RIDL_TESTC_H_JICGFAHF_INCLUDED__
+#define __RIDL_TESTC_H_JICGFAHF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -544,10 +544,11 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::Variable& val_)
       {
-        return os_ << "Test::Variable"
-                   << '{'
-                   << "name=" << IDL::traits< std::string>::write(val_.name ())
-                   << '}';
+        os_ << "Test::Variable"
+            << '{'
+            << "name=" << IDL::traits< std::string>::write(val_.name ())
+            << '}';
+        return os_;
       }
     };
 
@@ -605,17 +606,18 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           const ::Test::Simple& val_)
       {
-        return os_ << "Test::Simple"
-                   << '{'
-                   << "o=" << IDL::traits< uint8_t>::write(val_.o ())
-                   << ",l=" << IDL::traits< int32_t>::write(val_.l ())
-                   << ",s=" << IDL::traits< std::string>::write(val_.s ())
-                   << ",d=" << IDL::traits< double>::write(val_.d ())
-                   << ",b=" << IDL::traits< bool>::write(val_.b ())
-                   << ",c=" << IDL::traits< char>::write(val_.c ())
-                   << ",bar_ref=" << IDL::traits< ::Test::Bar>::write(val_.bar_ref ())
-                   << ",v=" << IDL::traits< ::Test::Variable>::write(val_.v ())
-                   << '}';
+        os_ << "Test::Simple"
+            << '{'
+            << "o=" << IDL::traits< uint8_t>::write(val_.o ())
+            << ",l=" << IDL::traits< int32_t>::write(val_.l ())
+            << ",s=" << IDL::traits< std::string>::write(val_.s ())
+            << ",d=" << IDL::traits< double>::write(val_.d ())
+            << ",b=" << IDL::traits< bool>::write(val_.b ())
+            << ",c=" << IDL::traits< char>::write(val_.c ())
+            << ",bar_ref=" << IDL::traits< ::Test::Bar>::write(val_.bar_ref ())
+            << ",v=" << IDL::traits< ::Test::Variable>::write(val_.v ())
+            << '}';
+        return os_;
       }
     };
 
@@ -822,6 +824,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CBACADJD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JICGFAHF_INCLUDED__ */
 
 // -*- END -*-

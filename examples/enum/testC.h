@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJACFBCI_INCLUDED__
-#define __RIDL_TESTC_H_JJACFBCI_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHEHCFEB_INCLUDED__
+#define __RIDL_TESTC_H_EHEHCFEB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -86,11 +86,11 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Test::EEnum::A: return os_ << "Test::EEnum::A"; break;
-          case Test::EEnum::B: return os_ << "Test::EEnum::B"; break;
-          case Test::EEnum::C: return os_ << "Test::EEnum::C"; break;
-          default: return os_;
+          case Test::EEnum::A: os_ << "Test::EEnum::A"; break;
+          case Test::EEnum::B: os_ << "Test::EEnum::B"; break;
+          case Test::EEnum::C: os_ << "Test::EEnum::C"; break;
         }
+        return os_;
       }
     };
 
@@ -144,6 +144,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJACFBCI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHEHCFEB_INCLUDED__ */
 
 // -*- END -*-
