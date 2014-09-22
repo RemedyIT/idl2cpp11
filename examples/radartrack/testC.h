@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FGHBCABG_INCLUDED__
-#define __RIDL_TESTC_H_FGHBCABG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBABBCCA_INCLUDED__
+#define __RIDL_TESTC_H_IBABBCCA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -140,7 +140,7 @@ namespace TAOX11_NAMESPACE
       }
 
       template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
+      static inline __Writer<Formatter> write (in_type val) { return {val}; }
     };
 
     template <typename OStrm_, typename Fmt>
@@ -178,7 +178,7 @@ namespace TAOX11_NAMESPACE
       }
 
       template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
+      static inline __Writer<Formatter> write (in_type val) { return {val}; }
     };
 
     template <typename OStrm_>
@@ -333,6 +333,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FGHBCABG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBABBCCA_INCLUDED__ */
 
 // -*- END -*-

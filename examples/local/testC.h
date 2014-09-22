@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CEEJHDEE_INCLUDED__
-#define __RIDL_TESTC_H_CEEJHDEE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IIIJBDGH_INCLUDED__
+#define __RIDL_TESTC_H_IIIJBDGH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -85,7 +85,7 @@ namespace TAOX11_NAMESPACE
       }
 
       template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
+      static inline __Writer<Formatter> write (in_type val) { return {val}; }
     };
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -191,7 +191,7 @@ namespace TAOX11_NAMESPACE
       }
 
       template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val} ; }
+      static inline __Writer<Formatter> write (in_type val) { return {val}; }
     };
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -305,9 +305,10 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           TAOX11_IDL::traits< ::Test::Foo>::ref_type val_)
     {
-      return os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-                        val_,
-                        "Test::Foo");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
+               val_,
+               "Test::Foo");
+      return os_;
     }
 
     template <typename OStrm_, typename Fmt>
@@ -334,9 +335,10 @@ namespace TAOX11_NAMESPACE
           OStrm_& os_,
           TAOX11_IDL::traits< ::Test::Bar>::ref_type val_)
     {
-      return os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-                        val_,
-                        "Test::Bar");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
+               val_,
+               "Test::Bar");
+      return os_;
     }
 
     template <typename OStrm_, typename Fmt>
@@ -389,6 +391,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CEEJHDEE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IIIJBDGH_INCLUDED__ */
 
 // -*- END -*-
