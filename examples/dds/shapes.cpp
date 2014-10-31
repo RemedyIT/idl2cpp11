@@ -13,6 +13,8 @@
 #include "dds/dds_vendor_adapter.h"
 #include "shapes_shapetype_msg_ndds_traits.h"
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 int main (int , char *[])
 {
@@ -34,8 +36,7 @@ int main (int , char *[])
       }
 
       IDL::traits<DDS::DomainParticipant>::ref_type domain_participant =
-        participant_factory->create_participant (
-          0, qos, nullptr, 0);
+        participant_factory->create_participant (0, qos, nullptr, 0);
 
       DDS::PublisherQos pqos;
       retcode = domain_participant->get_default_publisher_qos (pqos);
@@ -78,7 +79,8 @@ int main (int , char *[])
       {
         shape_dw->write (square, instance_handle);
         ++square.x(); ++square.y();
-        ACE_OS::sleep (1);
+
+        std::this_thread::sleep_for (std::chrono::milliseconds (100));
       }
 
       shape_dw->unregister_instance (square, instance_handle);
