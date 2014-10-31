@@ -1,5 +1,5 @@
 /**
- * @file   shapes.cpp
+ * @file   sender.cpp
  * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  Shapes DataWriter example using the IDL to C++11
@@ -9,95 +9,85 @@
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
  */
 
-#include "shapetypetypesupportC.h"
-#include "dds/ddsdcpsC.h"
-#include "tao/x11/log.h"
+#include "dds/dds_domain_participant_factory.h"
+#include "dds/dds_vendor_adapter.h"
+#include "shapes_shapetype_msg_ndds_traits.h"
+#include <iostream>
 
-int main (int, char*[])
+int main (int , char *[])
 {
+  DDS::ReturnCode_t retcode = DDS::RETCODE_OK;
+
   try
     {
-      // Get the dpf, this is like ORB_init
-      IDL::traits<DDS::DomainParticipantFactory>::ref_type dpf;
+      // Next line should be hidden into the proxy
+      CIAOX11::DDS_PROXY::VendorUtils::init_dds_logging ();
+      // maybe have a special define to hide the init_dds call in the same way as dds vendors do?
+      // should be DDS::DomainParticipantFactory::get_instance ();
+      IDL::traits<DDS::DomainParticipantFactory >::ref_type participant_factory =
+        CIAOX11::DDS_PROXY::VendorUtils::init_dds ();
 
-      // Get the domain participant
-      DDS::DomainId_t domain = 0;
-      DDS::DomainParticipantQos dpqos;
-      dpf->get_default_participant_qos (dpqos);
-      IDL::traits<DDS::DomainParticipant>::ref_type participant =
-        dpf->create_participant(domain,
-                                dpqos,
-                                0,
-                                OpenDDS::DCPS::DEFAULT_STATUS_MASK);
-
-      DDS::TopicQos topic_qos;
-      std::string topic_name ("SQUARE");
-
-      // Get the default QOS
-      participant->get_default_topic_qos(topic_qos);
-      topic_qos.history ().kind (DDS::HistoryQosPolicyKind::KEEP_LAST_HISTORY_QOS);
-      topic_qos.history ().depth (100);
-
-      // Register TypeSupport (ShapeType)
-      IDL::traits<ShapeTypeTypeSupport>::ref_type ts;
-      // Should use CORBA::make_reference <ShapeTypeTypeSupportImpl> ()
-
-      if (ts->register_type(participant, "ShapeType") != DDS::RETCODE_OK) {
-          std::cerr << "Could not register type " << std::endl;
+      DDS::DomainParticipantQos qos;
+      retcode = participant_factory->get_default_participant_qos (qos);
+      if (retcode != DDS::RETCODE_OK) {
+        std::cerr << "Retrieving default participant QoS failed with " << retcode << std::endl;
       }
 
-      std::string type_name = ts->get_type_name();
-      IDL::traits <DDS::Topic>::ref_type circle_topic_ =
-        participant->create_topic(topic_name,
-                                  type_name,
-                                  topic_qos,
-                                  0,
-                                  OpenDDS::DCPS::DEFAULT_STATUS_MASK);
-      if (!circle_topic_) {
-          std::cerr << "Could not create topic " << topic_name << std::endl;
+      IDL::traits<DDS::DomainParticipant>::ref_type domain_participant =
+        participant_factory->create_participant (
+          0, qos, nullptr, 0);
+
+      DDS::PublisherQos pqos;
+      retcode = domain_participant->get_default_publisher_qos (pqos);
+      if (retcode != DDS::RETCODE_OK) {
+        std::cerr << "Retrieving default publisher QoS failed with " << retcode << std::endl;
       }
 
-      DDS::PublisherQos pub_qos;
-      participant->get_default_publisher_qos(pub_qos);
-      // Create Publisher
-      IDL::traits <DDS::Publisher>::ref_type publisher =
-        participant->create_publisher(pub_qos,
-                                      0,
-                                      OpenDDS::DCPS::DEFAULT_STATUS_MASK);
+      IDL::traits<DDS::Publisher>::ref_type publisher =
+        domain_participant->create_publisher (pqos, nullptr, 0);
 
-      if (!publisher) {
-          std::cerr << "Could not create publisher " << std::endl;
+      DDS::traits<ShapeType>::register_type (domain_participant, "ShapeType");
+
+      DDS::TopicQos tqos;
+      retcode = domain_participant->get_default_topic_qos (tqos);
+      if (retcode != DDS::RETCODE_OK) {
+        std::cerr << "Retrieving default topic QoS failed with " << retcode << std::endl;
       }
 
-      ShapeType shape ("ORANGE", 50, 50, 50);
+      IDL::traits<DDS::Topic>::ref_type topic = domain_participant->create_topic (
+        "Square", DDS::traits<ShapeType>::get_type_name (), tqos, nullptr, 0);
 
-      // Create DataWriter
-      DDS::DataWriterQos writer_qos;
-      publisher->get_default_datawriter_qos(writer_qos);
-      IDL::traits<DDS::DataWriter>::ref_type writer =
-          publisher->create_datawriter(circle_topic_,
-                                      writer_qos,
-                                      0,
-                                      OpenDDS::DCPS::DEFAULT_STATUS_MASK);
-
-      IDL::traits<ShapeTypeDataWriter>::ref_type dw =
-        IDL::traits<ShapeTypeDataWriter>::narrow(writer);
-
-      if (!dw) {
-          std::cerr << "Could not create data writer " << std::endl;
+      DDS::DataWriterQos dwqos;
+      retcode = publisher->get_default_datawriter_qos (dwqos);
+      if (retcode != DDS::RETCODE_OK) {
+        std::cerr << "Retrieving default data writer QoS failed with " << retcode << std::endl;
       }
 
-      // Write a sample to DDS
-      dw->write(shape, ::DDS::HANDLE_NIL);
+      IDL::traits<DDS::DataWriter>::ref_type dw =
+        publisher->create_datawriter (topic, dwqos, nullptr, 0);
+
+      IDL::traits<ShapeTypeDataWriter>::ref_type shape_dw =
+        IDL::traits<ShapeTypeDataWriter>::narrow (dw);
+
+      ShapeType square {"GREEN", 10, 10, 25};
+
+      DDS::InstanceHandle_t instance_handle =
+        shape_dw->register_instance (square);
+
+      for (uint32_t i = 0; i < 100; ++i)
+      {
+        shape_dw->write (square, instance_handle);
+        ++square.x(); ++square.y();
+        ACE_OS::sleep (1);
+      }
+
+      shape_dw->unregister_instance (square, instance_handle);
     }
   catch (const std::exception& e)
     {
-      taox11_error << "exception caught: " << e.what () << std::endl;
+      std::cerr << "exception caught: " << e.what () << std::endl;
       return 1;
     }
 
-  return 0;
-
-
+  return retcode == DDS::RETCODE_OK ? 0 : 1;
 }
-
