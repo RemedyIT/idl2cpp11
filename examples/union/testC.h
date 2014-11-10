@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDDGGFDH_INCLUDED__
-#define __RIDL_TESTC_H_BDDGGFDH_INCLUDED__
+#ifndef __RIDL_TESTC_H_HICDHGFF_INCLUDED__
+#define __RIDL_TESTC_H_HICDHGFF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1940,6 +1940,9 @@ inline void Test::Data::_swap_u (::Test::Data& u)
     }
     break;
     default:
+    {
+      std::swap (this->u_.longData_, u.u_.longData_);
+    }
     break;
   }
 }
@@ -1981,6 +1984,9 @@ inline void Test::Data::_move_u (::Test::Data& u)
     }
     break;
     default:
+    {
+      this->u_.longData_ = std::move (u.u_.longData_);
+    }
     break;
   }
 }
@@ -2022,6 +2028,7 @@ inline void Test::Data::_default ()
 {
   this->_clear ();
   this->disc_ = ::Test::DataType::dtEmpty;
+
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
@@ -2597,6 +2604,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BDDGGFDH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HICDHGFF_INCLUDED__ */
 
 // -*- END -*-
