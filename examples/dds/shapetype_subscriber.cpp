@@ -1,5 +1,5 @@
 /**
- * @file   receiver.cpp
+ * @file   shapetype_subscriber.cpp
  * @author Marcel Smit <msmit@remedy.nl>
  *
  * @brief  Shapes Subscriber example using the IDL to C++11

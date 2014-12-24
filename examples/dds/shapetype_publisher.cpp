@@ -1,5 +1,5 @@
 /**
- * @file   sender.cpp
+ * @file   shapetype_publisher.cpp
  * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
  * @brief  Shapes DataWriter example using the IDL to C++11
