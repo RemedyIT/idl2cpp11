@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HGHGGAIB_INCLUDED__
-#define __RIDL_TESTC_H_HGHGGAIB_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHAEIDHB_INCLUDED__
+#define __RIDL_TESTC_H_GHAEIDHB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -211,14 +211,14 @@ namespace Test
     /// @copydoc Test::Foo::a_number
     virtual
     int32_t
-    a_number();
+    a_number ();
 
     // generated from c++11/templates/cli/hdr/attribute.erb
     /// @copydoc Test::Foo::a_string
     //@{
     virtual
     std::string
-    a_string();
+    a_string ();
 
     virtual
     void
@@ -504,6 +504,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HGHGGAIB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHAEIDHB_INCLUDED__ */
 
 // -*- END -*-

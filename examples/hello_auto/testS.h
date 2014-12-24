@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_BIEJBFEC_INCLUDED__
-#define __RIDL_TESTS_H_BIEJBFEC_INCLUDED__
+#ifndef __RIDL__FIGFFAGJ_INCLUDED__
+#define __RIDL__FIGFFAGJ_INCLUDED__
 
 #include "testC.h"
 
@@ -115,6 +115,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_BIEJBFEC_INCLUDED__ */
+#endif /* __RIDL__FIGFFAGJ_INCLUDED__ */
 
 // -*- END -*-
