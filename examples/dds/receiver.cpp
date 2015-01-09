@@ -1,5 +1,5 @@
 /**
- * @file   shapetype_subscriber.cpp
+ * @file   receiver.cpp
  * @author Marcel Smit <msmit@remedy.nl>
  *
  * @brief  Shapes Subscriber example using the IDL to C++11
@@ -90,7 +90,7 @@ int main (int , char *[])
         subscriber->create_datareader (topic, DDS::DATAREADER_QOS_DEFAULT, listener, DDS::DATA_AVAILABLE_STATUS);
 
         // No Qos so it could be that we're missing samples.
-        while (received_ < 90)
+        while (received_ < 75)
           std::this_thread::sleep_for (std::chrono::milliseconds (100));
 
         std::cout << "Received enough. Closing..." << std::endl;
