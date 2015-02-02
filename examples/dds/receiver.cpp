@@ -86,7 +86,7 @@ int main (int , char *[])
       if (topic && subscriber)
       {
         DDS::traits<ShapeType>::datareaderlistener_ref_type listener =
-          CORBA::make_reference<ShapeTypeListener>();
+          DDS::make_reference<ShapeTypeListener>();
         subscriber->create_datareader (topic, DDS::DATAREADER_QOS_DEFAULT, listener, DDS::DATA_AVAILABLE_STATUS);
 
         // No Qos so it could be that we're missing samples.
@@ -177,16 +177,17 @@ ShapeTypeListener::on_data_available (
   {
     DDS::ReturnCode_t retcode = rd->take_next_sample(shape, info);
     if (retcode == DDS::RETCODE_NO_DATA)
-    { /* No more samples */
+    {
+      /* No more samples */
       break;
     }
     else if (retcode != DDS::RETCODE_OK)
     {
-      std::cerr << "Unable to take data from data reader, error "
-        << retcode << std::endl;
-      return;
+      std::cerr << "Unable to take data from data reader, error " << retcode << std::endl;
+      break;
     }
-    if (info.valid_data ()) {
+    else if (info.valid_data ())
+    {
       std::cout << "Received <" << ++received_ << ">: " << shape << std::endl;
     }
   }
