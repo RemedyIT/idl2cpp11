@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BJGBJGGB_INCLUDED__
-#define __RIDL_TESTC_H_BJGBJGGB_INCLUDED__
+#ifndef __RIDL_TESTC_H_BFHAAFBC_INCLUDED__
+#define __RIDL_TESTC_H_BFHAAFBC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -164,7 +164,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::Hello>::ref_type);
+          IDL::traits< ::Test::Hello>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -186,7 +186,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::Hello, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::Hello>::ref_type val_)
+          IDL::traits< ::Test::Hello>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -224,7 +224,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::Hello>::ref_type _v)
+    IDL::traits< ::Test::Hello>::ref_type _v)
 {
   return IDL::traits< ::Test::Hello>::write_on (strm, _v);
 }
@@ -236,6 +236,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BJGBJGGB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BFHAAFBC_INCLUDED__ */
 
 // -*- END -*-

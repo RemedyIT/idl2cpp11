@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_ICDHFAED_INCLUDED__
-#define __RIDL_TESTC_H_ICDHFAED_INCLUDED__
+#ifndef __RIDL_TESTC_H_EGIFHIEI_INCLUDED__
+#define __RIDL_TESTC_H_EGIFHIEI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -410,7 +410,7 @@ namespace Deployment
     /// Constructor which accepts value for all members
     explicit inline ComponentPropertyDescription (
       std::string name,
-      TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
+      IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
     /// Copy assignment operator
     ComponentPropertyDescription& operator= (const ComponentPropertyDescription&) = default;
     /// Move assignment operator
@@ -426,9 +426,9 @@ namespace Deployment
 
     /// @copydoc Deployment::ComponentPropertyDescription::type
     //@{
-    inline void type (TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
-    inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
-    inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
+    inline void type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
+    inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
+    inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
     //@}
 
     /// Exchange the value of two structs in an efficient matter
@@ -436,7 +436,7 @@ namespace Deployment
 
   private:
     std::string name_;
-    TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
+    IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type_;
   };// ComponentPropertyDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
@@ -5103,7 +5103,7 @@ inline void Deployment::ComponentPortDescription::swap (::Deployment::ComponentP
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (
   std::string name,
-  TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
+  IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type)
   : name_ (std::move (name))
   , type_ (std::move (type))
 {
@@ -5114,9 +5114,9 @@ inline void Deployment::ComponentPropertyDescription::name (std::string&& _name)
 inline const std::string& Deployment::ComponentPropertyDescription::name () const { return this->name_; }
 inline std::string& Deployment::ComponentPropertyDescription::name () { return this->name_; }
 
-inline void Deployment::ComponentPropertyDescription::type (TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
-inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
-inline TAOX11_IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
+inline void Deployment::ComponentPropertyDescription::type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
+inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
+inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
 
 inline void Deployment::ComponentPropertyDescription::swap (::Deployment::ComponentPropertyDescription& s)
 {
@@ -6755,6 +6755,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ICDHFAED_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EGIFHIEI_INCLUDED__ */
 
 // -*- END -*-

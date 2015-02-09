@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CGJIACDA_INCLUDED__
-#define __RIDL_TESTC_H_CGJIACDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FADHFHHA_INCLUDED__
+#define __RIDL_TESTC_H_FADHFHHA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -211,7 +211,7 @@ namespace Test
       double d,
       bool b,
       char c,
-      TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
+      IDL::traits< ::Test::Bar>::ref_type bar_ref,
       ::Test::Variable v);
     /// Copy assignment operator
     Simple& operator= (const Simple&) = default;
@@ -263,9 +263,9 @@ namespace Test
 
     /// @copydoc Test::Simple::bar_ref
     //@{
-    inline void bar_ref (TAOX11_IDL::traits< ::Test::Bar>::ref_type _bar_ref);
-    inline TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref () const;
-    inline TAOX11_IDL::traits< ::Test::Bar>::ref_type& bar_ref ();
+    inline void bar_ref (IDL::traits< ::Test::Bar>::ref_type _bar_ref);
+    inline IDL::traits< ::Test::Bar>::ref_type bar_ref () const;
+    inline IDL::traits< ::Test::Bar>::ref_type& bar_ref ();
     //@}
 
     /// @copydoc Test::Simple::v
@@ -286,7 +286,7 @@ namespace Test
     double d_ {};
     bool b_ {};
     char c_ {};
-    TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref_;
+    IDL::traits< ::Test::Bar>::ref_type bar_ref_;
     ::Test::Variable v_;
   };// Simple
 
@@ -474,7 +474,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::Bar>::ref_type);
+          IDL::traits< ::Test::Bar>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -519,7 +519,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::Foo>::ref_type);
+          IDL::traits< ::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -574,7 +574,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::Bar, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::Bar>::ref_type val_)
+          IDL::traits< ::Test::Bar>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -644,7 +644,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::Foo>::ref_type val_)
+          IDL::traits< ::Test::Foo>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -708,7 +708,7 @@ inline Test::Simple::Simple (
   double d,
   bool b,
   char c,
-  TAOX11_IDL::traits< ::Test::Bar>::ref_type bar_ref,
+  IDL::traits< ::Test::Bar>::ref_type bar_ref,
   ::Test::Variable v)
   : o_ (std::move (o))
   , l_ (std::move (l))
@@ -746,9 +746,9 @@ inline void Test::Simple::c (char _c) { this->c_ = _c; }
 inline char Test::Simple::c () const { return this->c_; }
 inline char& Test::Simple::c () { return this->c_; }
 
-inline void Test::Simple::bar_ref (TAOX11_IDL::traits< ::Test::Bar>::ref_type _bar_ref) { this->bar_ref_ = _bar_ref; }
-inline TAOX11_IDL::traits< ::Test::Bar>::ref_type Test::Simple::bar_ref () const { return this->bar_ref_; }
-inline TAOX11_IDL::traits< ::Test::Bar>::ref_type& Test::Simple::bar_ref () { return this->bar_ref_; }
+inline void Test::Simple::bar_ref (IDL::traits< ::Test::Bar>::ref_type _bar_ref) { this->bar_ref_ = _bar_ref; }
+inline IDL::traits< ::Test::Bar>::ref_type Test::Simple::bar_ref () const { return this->bar_ref_; }
+inline IDL::traits< ::Test::Bar>::ref_type& Test::Simple::bar_ref () { return this->bar_ref_; }
 
 inline void Test::Simple::v (const ::Test::Variable& _v) { this->v_ = _v; }
 inline void Test::Simple::v (::Test::Variable&& _v) { this->v_ = std::move (_v); }
@@ -797,7 +797,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::Bar>::ref_type _v)
+    IDL::traits< ::Test::Bar>::ref_type _v)
 {
   return IDL::traits< ::Test::Bar>::write_on (strm, _v);
 }
@@ -814,7 +814,7 @@ operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::Foo>::ref_type _v)
+    IDL::traits< ::Test::Foo>::ref_type _v)
 {
   return IDL::traits< ::Test::Foo>::write_on (strm, _v);
 }
@@ -826,6 +826,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CGJIACDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FADHFHHA_INCLUDED__ */
 
 // -*- END -*-

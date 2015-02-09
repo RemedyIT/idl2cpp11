@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_GFFJAIHA_INCLUDED__
-#define __RIDL_TESTS_H_GFFJAIHA_INCLUDED__
+#ifndef __RIDL_TESTS_H_CABAJFCG_INCLUDED__
+#define __RIDL_TESTS_H_CABAJFCG_INCLUDED__
 
 #include "testC.h"
 
@@ -60,7 +60,7 @@ namespace POA
     virtual bool _is_a (const std::string& logical_type_id) override;
 
     /// Returns a strong client reference for the servant you are calling
-    TAOX11_IDL::traits< ::A>::ref_type _this ();
+    IDL::traits< ::A>::ref_type _this ();
 
     virtual const std::string &_interface_repository_id () const override;
 
@@ -118,7 +118,7 @@ namespace POA
     virtual bool _is_a (const std::string& logical_type_id) override;
 
     /// Returns a strong client reference for the servant you are calling
-    TAOX11_IDL::traits< ::X>::ref_type _this ();
+    IDL::traits< ::X>::ref_type _this ();
 
     virtual const std::string &_interface_repository_id () const override;
 
@@ -177,7 +177,7 @@ namespace POA
     virtual bool _is_a (const std::string& logical_type_id) override;
 
     /// Returns a strong client reference for the servant you are calling
-    TAOX11_IDL::traits< ::A1>::ref_type _this ();
+    IDL::traits< ::A1>::ref_type _this ();
 
     virtual const std::string &_interface_repository_id () const override;
 
@@ -313,6 +313,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_GFFJAIHA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_CABAJFCG_INCLUDED__ */
 
 // -*- END -*-

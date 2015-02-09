@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCICACDJ_INCLUDED__
-#define __RIDL_TESTC_H_HCICACDJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_EAFJCCBG_INCLUDED__
+#define __RIDL_TESTC_H_EAFJCCBG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -515,13 +515,13 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj);
+    inline void obj (IDL::traits< ::Test::A>::ref_type _obj);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline TAOX11_IDL::traits< ::Test::A>::ref_type obj () const;
+    inline IDL::traits< ::Test::A>::ref_type obj () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline TAOX11_IDL::traits< ::Test::A>::ref_type& obj ();
+    inline IDL::traits< ::Test::A>::ref_type& obj ();
     //@}
 
     /// Exchange the value of two unions in an efficient matter
@@ -540,7 +540,7 @@ namespace Test
       int32_t x_;
       std::string z_;
       ::Test::S w_;
-      TAOX11_IDL::traits< ::Test::A>::ref_type obj_;
+      IDL::traits< ::Test::A>::ref_type obj_;
     } u_ {};
   }; // U
 
@@ -937,7 +937,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::A>::ref_type);
+          IDL::traits< ::Test::A>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -982,7 +982,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::Foo>::ref_type);
+          IDL::traits< ::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -999,7 +999,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::A>::ref_type);
+          IDL::traits< ::Test::A>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -1276,7 +1276,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::Foo>::ref_type val_)
+          IDL::traits< ::Test::Foo>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -1306,7 +1306,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::A, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::A>::ref_type val_)
+          IDL::traits< ::Test::A>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -2089,7 +2089,7 @@ inline Test::U::U (const ::Test::U& u)
     break;
     default:
       {
-        new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
+        new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
       }
     break;
   }
@@ -2306,13 +2306,13 @@ inline ::Test::S& Test::U::w ()
   return this->u_.w_;
 }
 
-inline void Test::U::obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj)
+inline void Test::U::obj (IDL::traits< ::Test::A>::ref_type _obj)
 {
   if (this->disc_ != (-2147483647-1))
   {
     this->_clear ();
     this->disc_ = (-2147483647-1);
-    new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (_obj);
+    new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (_obj);
   }
   else
   {
@@ -2320,7 +2320,7 @@ inline void Test::U::obj (TAOX11_IDL::traits< ::Test::A>::ref_type _obj)
   }
 }
 
-inline TAOX11_IDL::traits< ::Test::A>::ref_type Test::U::obj () const
+inline IDL::traits< ::Test::A>::ref_type Test::U::obj () const
 {
   switch (this->disc_)
   {
@@ -2335,7 +2335,7 @@ inline TAOX11_IDL::traits< ::Test::A>::ref_type Test::U::obj () const
   return this->u_.obj_;
 }
 
-inline TAOX11_IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
+inline IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
 {
   switch (this->disc_)
   {
@@ -2444,7 +2444,7 @@ inline void Test::U::_move_u (::Test::U& u)
     break;
     default:
     {
-      new (&this->u_.obj_) TAOX11_IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
+      new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
     }
     break;
   }
@@ -2469,7 +2469,7 @@ inline void Test::U::_clear ()
     break;
     default:
     {
-      this->u_.obj_.TAOX11_IDL::traits< ::Test::A>::ref_type::~object_reference ();
+      this->u_.obj_.IDL::traits< ::Test::A>::ref_type::~object_reference ();
     }
     break;
   }
@@ -2584,7 +2584,7 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::Foo>::ref_type _v)
+    IDL::traits< ::Test::Foo>::ref_type _v)
 {
   return IDL::traits< ::Test::Foo>::write_on (strm, _v);
 }
@@ -2592,7 +2592,7 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::A>::ref_type _v)
+    IDL::traits< ::Test::A>::ref_type _v)
 {
   return IDL::traits< ::Test::A>::write_on (strm, _v);
 }
@@ -2604,6 +2604,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HCICACDJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EAFJCCBG_INCLUDED__ */
 
 // -*- END -*-

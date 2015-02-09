@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJCJAEFB_INCLUDED__
-#define __RIDL_TESTC_H_JJCJAEFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_DHADBEJA_INCLUDED__
+#define __RIDL_TESTC_H_DHADBEJA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -129,7 +129,7 @@ namespace Test
     ~Foo () = default;
 
     /// Returns a strong client reference for the local object you are calling
-    TAOX11_IDL::traits< ::Test::Foo>::ref_type _this ();
+    IDL::traits< ::Test::Foo>::ref_type _this ();
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -224,7 +224,7 @@ namespace Test
     virtual
     void
     do_foo (
-        TAOX11_IDL::traits< ::Test::Foo>::ref_type f) = 0;
+        IDL::traits< ::Test::Foo>::ref_type f) = 0;
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
@@ -236,7 +236,7 @@ namespace Test
     ~Bar () = default;
 
     /// Returns a strong client reference for the local object you are calling
-    TAOX11_IDL::traits< ::Test::Bar>::ref_type _this ();
+    IDL::traits< ::Test::Bar>::ref_type _this ();
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -264,7 +264,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::Foo>::ref_type);
+          IDL::traits< ::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -281,7 +281,7 @@ namespace TAOX11_NAMESPACE
     {
       OStrm_& operator ()(
           OStrm_& ,
-          TAOX11_IDL::traits< ::Test::Bar>::ref_type);
+          IDL::traits< ::Test::Bar>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -303,7 +303,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::Foo>::ref_type val_)
+          IDL::traits< ::Test::Foo>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -333,7 +333,7 @@ namespace TAOX11_NAMESPACE
     inline OStrm_&
     formatter< ::Test::Bar, OStrm_>::operator ()(
           OStrm_& os_,
-          TAOX11_IDL::traits< ::Test::Bar>::ref_type val_)
+          IDL::traits< ::Test::Bar>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
                val_,
@@ -371,7 +371,7 @@ namespace std {
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::Foo>::ref_type _v)
+    IDL::traits< ::Test::Foo>::ref_type _v)
 {
   return IDL::traits< ::Test::Foo>::write_on (strm, _v);
 }
@@ -379,7 +379,7 @@ inline std::ostream& operator<< (
 // generated from c++11/templates/cli/hdr/interface_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
-    TAOX11_IDL::traits< ::Test::Bar>::ref_type _v)
+    IDL::traits< ::Test::Bar>::ref_type _v)
 {
   return IDL::traits< ::Test::Bar>::write_on (strm, _v);
 }
@@ -391,6 +391,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJCJAEFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DHADBEJA_INCLUDED__ */
 
 // -*- END -*-
