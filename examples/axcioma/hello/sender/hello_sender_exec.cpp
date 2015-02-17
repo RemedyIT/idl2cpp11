@@ -12,6 +12,7 @@
 
 //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl[user_includes]
 #include "ciao/testlib/ciaox11_testlog.h"
+#include "tao/x11/std_thread.h"
 //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl[user_includes]
 
 //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl[user_global_impl]
@@ -31,7 +32,7 @@ namespace CIAO_Hello_Sender_Impl
 
   int foo_generator::svc()
   {
-    ACE_OS::sleep (3);
+    std::this_thread::sleep_for (std::chrono::seconds (3));
     IDL::traits<Hello::MyFoo>::ref_type my_foo =
       this->context_->get_connection_run_my_foo ();
 
@@ -148,7 +149,7 @@ namespace CIAO_Hello_Sender_Impl
   int
   bar_generator::svc ()
   {
-    ACE_OS::sleep (3);
+    std::this_thread::sleep_for (std::chrono::seconds (3));
     IDL::traits<Hello::MyBar>::ref_type my_bar =
       this->context_->get_connection_run_my_bar ();
     if (my_bar)
