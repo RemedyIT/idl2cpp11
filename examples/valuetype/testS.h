@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_DGCFFAGD_INCLUDED__
-#define __RIDL_TESTS_H_DGCFFAGD_INCLUDED__
+#ifndef __RIDL_TESTS_H_JJICCGFG_INCLUDED__
+#define __RIDL_TESTS_H_JJICCGFG_INCLUDED__
 
 #include "testC.h"
 
@@ -43,10 +43,7 @@ namespace POA
 
   protected:
     /// Constructor
-    A ();
-
-    /// Constructor for inheritance chains
-    explicit A (bool);
+    explicit A (bool inherited = false);
 
     /// Destructor
     virtual ~A ();
@@ -101,10 +98,7 @@ namespace POA
 
   protected:
     /// Constructor
-    X ();
-
-    /// Constructor for inheritance chains
-    explicit X (bool);
+    explicit X (bool inherited = false);
 
     /// Destructor
     virtual ~X ();
@@ -160,10 +154,7 @@ namespace POA
 
   protected:
     /// Constructor
-    A1 ();
-
-    /// Constructor for inheritance chains
-    explicit A1 (bool);
+    explicit A1 (bool inherited = false);
 
     /// Destructor
     virtual ~A1 ();
@@ -313,6 +304,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_DGCFFAGD_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_JJICCGFG_INCLUDED__ */
 
 // -*- END -*-

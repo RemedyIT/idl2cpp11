@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_JAHHFEDI_INCLUDED__
-#define __RIDL_TESTS_H_JAHHFEDI_INCLUDED__
+#ifndef __RIDL_TESTS_H_BFBICABH_INCLUDED__
+#define __RIDL_TESTS_H_BFBICABH_INCLUDED__
 
 #include "testC.h"
 
@@ -47,10 +47,7 @@ namespace Test
 
     protected:
       /// Constructor
-      Hello ();
-
-      /// Constructor for inheritance chains
-      explicit Hello (bool);
+      explicit Hello (bool inherited = false);
 
       /// Destructor
       virtual ~Hello ();
@@ -121,6 +118,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_JAHHFEDI_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_BFBICABH_INCLUDED__ */
 
 // -*- END -*-
