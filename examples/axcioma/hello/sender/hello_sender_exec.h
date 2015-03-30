@@ -62,7 +62,7 @@ namespace CIAO_Hello_Sender_Impl
 
   /// Component Executor Implementation Class : Sender_exec_i
   class Sender_exec_i final
-    : public virtual IDL::traits< Sender_Exec>::base_type
+    : public virtual IDL::traits< ::Hello::CCM_Sender>::base_type
   {
   public:
     //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl::Sender_exec_i[ctor]

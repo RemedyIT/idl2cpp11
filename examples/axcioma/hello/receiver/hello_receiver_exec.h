@@ -40,7 +40,7 @@ namespace CIAO_Hello_Receiver_Impl
 
   /// Executor implementation class for do_my_foo facet
   class do_my_foo_exec_i final
-    : public IDL::traits< ::Hello::CCM_MyFoo >::base_type
+    : public IDL::traits< ::Hello::CCM_MyFoo>::base_type
   {
   public:
 
@@ -123,7 +123,7 @@ namespace CIAO_Hello_Receiver_Impl
 
   /// Executor implementation class for do_my_bar facet
   class do_my_bar_exec_i final
-    : public IDL::traits< ::Hello::CCM_MyBar >::base_type
+    : public IDL::traits< ::Hello::CCM_MyBar>::base_type
   {
   public:
 
@@ -200,7 +200,7 @@ namespace CIAO_Hello_Receiver_Impl
 
   /// Component Executor Implementation Class : Receiver_exec_i
   class Receiver_exec_i final
-    : public virtual IDL::traits< Receiver_Exec>::base_type
+    : public virtual IDL::traits< ::Hello::CCM_Receiver>::base_type
   {
   public:
     //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ctor]
