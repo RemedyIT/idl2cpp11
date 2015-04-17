@@ -10,47 +10,47 @@
 
 #include "hello_receiver_exec.h"
 
-//@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[user_includes]
+//@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[user_includes]
 // Your headers here
-//@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[user_includes]
+//@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_includes]
 
-//@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[user_global_impl]
+//@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[user_global_impl]
 // Your declarations here
-//@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[user_global_impl]
+//@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_global_impl]
 
-namespace CIAO_Hello_Receiver_Impl
+namespace Hello_Receiver_Impl
 {
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[user_namespace_impl]
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[user_namespace_impl]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[user_namespace_impl]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_namespace_impl]
 
   /**
    * Facet Executor Implementation Class : do_my_foo_exec_i
    */
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
   do_my_foo_exec_i::do_my_foo_exec_i (
     IDL::traits<Hello::CCM_Receiver_Context>::ref_type context)
     : context_ (context)
   {
   }
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
 
   do_my_foo_exec_i::~do_my_foo_exec_i ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[dtor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[dtor]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[dtor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[dtor]
   }
 
   /** User defined public operations. */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
   // Your code here
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
 
   /** User defined private operations. */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
   // Your code here
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
 
 
   /** Operations and attributes from do_my_foo */
@@ -60,7 +60,7 @@ namespace CIAO_Hello_Receiver_Impl
       const std::string& in_str,
       std::string& answer)
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo[_in_str_answer]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i::foo[_in_str_answer]
     if (in_str == "throw")
     {
       throw Hello::Ball ("Exception " + in_str);
@@ -68,78 +68,78 @@ namespace CIAO_Hello_Receiver_Impl
 
     answer += "Hi, " + in_str;
     return "This is my answer: " + answer;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo[_in_str_answer]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i::foo[_in_str_answer]
   }
 
   int16_t
   do_my_foo_exec_i::foo_attrib ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[getter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[getter]
     return this->foo_attrib_;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[getter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[getter]
   }
 
   void
   do_my_foo_exec_i::foo_attrib (
       int16_t foo_attrib)
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[setter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[setter]
     this->foo_attrib_ = foo_attrib;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[setter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i::foo_attrib[setter]
   }
 
   int16_t
   do_my_foo_exec_i::foo_excep ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[getter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[getter]
     if (this->foo_excep_ == 15)
     {
       throw Hello::Ball ("Getraises Exception");
     }
     return this->foo_excep_;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[getter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[getter]
   }
 
   void
   do_my_foo_exec_i::foo_excep (
       int16_t foo_excep)
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[setter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[setter]
     if (foo_excep == 1)
     {
       throw Hello::Ball ("Setraises Exception");
     }
     this->foo_excep_ = foo_excep;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[setter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i::foo_excep[setter]
   }
   /**
    * Facet Executor Implementation Class : do_my_bar_exec_i
    */
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
   do_my_bar_exec_i::do_my_bar_exec_i (
     IDL::traits<Hello::CCM_Receiver_Context>::ref_type context)
     : context_ (context)
   {
   }
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
 
   do_my_bar_exec_i::~do_my_bar_exec_i ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[dtor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[dtor]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[dtor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[dtor]
   }
 
   /** User defined public operations. */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
   // Your code here
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
 
   /** User defined private operations. */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
   // Your code here
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
 
 
   /** Operations and attributes from do_my_bar */
@@ -149,138 +149,138 @@ namespace CIAO_Hello_Receiver_Impl
       const std::string& in_str,
       std::string& answer)
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::bar[_in_str_answer]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i::bar[_in_str_answer]
     answer += "Hi, " + in_str;
     return "This is my answer: " + answer;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::bar[_in_str_answer]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i::bar[_in_str_answer]
   }
 
   int16_t
   do_my_bar_exec_i::bar_attrib ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[getter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[getter]
     return this->bar_attrib_;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[getter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[getter]
   }
 
   void
   do_my_bar_exec_i::bar_attrib (
       int16_t bar_attrib)
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[setter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[setter]
     this->bar_attrib_ = bar_attrib;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[setter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i::bar_attrib[setter]
   }
 
   int16_t
   do_my_bar_exec_i::ro_bar_attrib ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::ro_bar_attrib[getter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i::ro_bar_attrib[getter]
     this->ro_bar_attrib_ = 15;
     return this->ro_bar_attrib_;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i::ro_bar_attrib[getter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i::ro_bar_attrib[getter]
   }
 
   /**
    * Component Executor Implementation Class : Receiver_exec_i
    */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ctor]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[ctor]
   Receiver_exec_i::Receiver_exec_i ()
   {
   }
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ctor]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[ctor]
 
   Receiver_exec_i::~Receiver_exec_i ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[dtor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[dtor]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[dtor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[dtor]
   }
 
 
   /** User defined public operations. */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
   // Your code here
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
 
   /** User defined private operations. */
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
   // Your code here
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
 
 
 
   /** Session component operations */
   void Receiver_exec_i::configuration_complete ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[configuration_complete]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[configuration_complete]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[configuration_complete]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[configuration_complete]
   }
 
   void Receiver_exec_i::ccm_activate ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ccm_activate]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[ccm_activate]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ccm_activate]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[ccm_activate]
   }
 
   void Receiver_exec_i::ccm_passivate ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ccm_passivate]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[ccm_passivate]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ccm_passivate]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[ccm_passivate]
   }
 
   void Receiver_exec_i::ccm_remove ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ccm_remove]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[ccm_remove]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ccm_remove]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[ccm_remove]
   }
 
 
   IDL::traits< ::Hello::CCM_MyFoo >::ref_type
   Receiver_exec_i::get_do_my_foo ()
   {
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[get_do_my_foo]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[get_do_my_foo]
   if (!this->do_my_foo_)
   {
     this->do_my_foo_ = CORBA::make_reference <do_my_foo_exec_i> (this->context_);
   }
   return this->do_my_foo_;
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[get_do_my_foo]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[get_do_my_foo]
   }
 
 
   IDL::traits< ::Hello::CCM_MyBar >::ref_type
   Receiver_exec_i::get_do_my_bar ()
   {
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[get_do_my_bar]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[get_do_my_bar]
   if (!this->do_my_bar_)
   {
     this->do_my_bar_ = CORBA::make_reference <do_my_bar_exec_i> (this->context_);
   }
   return this->do_my_bar_;
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[get_do_my_bar]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[get_do_my_bar]
   }
 
 
   uint16_t
   Receiver_exec_i::just_an_attribute ()
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[getter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[getter]
     return this->just_an_attribute_;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[getter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[getter]
   }
 
   void
   Receiver_exec_i::just_an_attribute (
       uint16_t just_an_attribute)
   {
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[setter]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[setter]
     this->just_an_attribute_ = just_an_attribute;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[setter]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i::just_an_attribute[setter]
   }
 
   /// Operations from Components::SessionComponent
@@ -289,24 +289,24 @@ namespace CIAO_Hello_Receiver_Impl
     IDL::traits<Components::SessionContext>::ref_type ctx)
   {
     // Setting the context of this component.
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[set_session_context]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[set_session_context]
     this->context_ = IDL::traits<Hello::CCM_Receiver_Context>::narrow (ctx);
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[set_session_context]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[set_session_context]
   }
 
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[user_namespace_end_impl]
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[user_namespace_end_impl]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[user_namespace_end_impl]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_namespace_end_impl]
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[factory]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[factory]
   extern "C" IDL::traits<Components::EnterpriseComponent>::ref_type
   create_Hello_Receiver_Impl ()
   {
     return CORBA::make_reference <Receiver_exec_i> ();
   }
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[factory]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[factory]
 
-} // namespace CIAO_Hello_Receiver_Impl
+} // namespace Hello_Receiver_Impl
 //@@{__RIDL_REGEN_MARKER__} - BEGIN : hello_receiver_impl.cpp[Footer]
 // Your footer (code) here
 // -*- END -*-

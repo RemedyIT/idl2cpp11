@@ -29,13 +29,13 @@
 //@@{__RIDL_REGEN_MARKER__} - END : hello_receiver_impl.h[user_global_decl]
 
 /// Namespace for implementation of Hello::Receiver component
-namespace CIAO_Hello_Receiver_Impl
+namespace Hello_Receiver_Impl
 {
   /// Forward declarations
   class Receiver_exec_i;
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[user_namespace_decl]
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[user_namespace_decl]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[user_namespace_decl]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_namespace_decl]
 
 
   /// Executor implementation class for do_my_foo facet
@@ -44,12 +44,12 @@ namespace CIAO_Hello_Receiver_Impl
   {
   public:
 
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
     /// Constructor
     /// @param[in] context Component context
     do_my_foo_exec_i (
         IDL::traits< Hello::CCM_Receiver_Context>::ref_type context);
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[ctor]
 
     /// Destructor
     virtual ~do_my_foo_exec_i ();
@@ -88,9 +88,9 @@ namespace CIAO_Hello_Receiver_Impl
 
     /** @name User defined public operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[user_public_ops]
     //@}
 
   private:
@@ -107,17 +107,17 @@ namespace CIAO_Hello_Receiver_Impl
 
     /** @name User defined members. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[user_members]
     bool get_rw_ {};
     bool get_ro_ {};
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[user_members]
     //@}
 
     /** @name User defined private operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_foo_exec_i[user_private_ops]
     //@}
   };
 
@@ -127,12 +127,12 @@ namespace CIAO_Hello_Receiver_Impl
   {
   public:
 
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
     /// Constructor
     /// @param[in] context Component context
     do_my_bar_exec_i (
         IDL::traits< Hello::CCM_Receiver_Context>::ref_type context);
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[ctor]
 
     /// Destructor
     virtual ~do_my_bar_exec_i ();
@@ -166,9 +166,9 @@ namespace CIAO_Hello_Receiver_Impl
 
     /** @name User defined public operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[user_public_ops]
     //@}
 
   private:
@@ -185,16 +185,16 @@ namespace CIAO_Hello_Receiver_Impl
 
     /** @name User defined members. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[user_members]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[user_members]
     //@}
 
     /** @name User defined private operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::do_my_bar_exec_i[user_private_ops]
     //@}
   };
 
@@ -203,10 +203,10 @@ namespace CIAO_Hello_Receiver_Impl
     : public virtual IDL::traits< ::Hello::CCM_Receiver>::base_type
   {
   public:
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[ctor]
     /// Constructor
     Receiver_exec_i ();
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[ctor]
     /// Destructor
     virtual ~Receiver_exec_i ();
 
@@ -258,9 +258,9 @@ namespace CIAO_Hello_Receiver_Impl
 
     /** @name User defined public operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[user_public_ops]
     //@}
 
   private:
@@ -281,16 +281,16 @@ namespace CIAO_Hello_Receiver_Impl
 
     /** @name User defined members. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[user_members]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[user_members]
     //@}
 
     /** @name User defined private operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl::Receiver_exec_i[user_private_ops]
     //@}
 
   private:
@@ -303,15 +303,15 @@ namespace CIAO_Hello_Receiver_Impl
     //@}
   };
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[user_namespace_end_decl]
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[user_namespace_end_decl]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[user_namespace_end_decl]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_namespace_end_decl]
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Receiver_Impl[factory]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[factory]
   extern "C" HELLO_RECEIVER_EXEC_Export  IDL::traits<Components::EnterpriseComponent>::ref_type
   create_Hello_Receiver_Impl ();
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Receiver_Impl[factory]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[factory]
 
-} // namespace CIAO_Hello_Receiver_Impl
+} // namespace Hello_Receiver_Impl
 //@@{__RIDL_REGEN_MARKER__} - BEGIN : hello_receiver_impl.h[Footer]
 
 #endif /* __RIDL_HELLO_RECEIVER_EXEC_H_IIEFAIAE_INCLUDED__ */

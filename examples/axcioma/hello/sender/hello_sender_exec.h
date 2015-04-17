@@ -29,12 +29,12 @@
 //@@{__RIDL_REGEN_MARKER__} - END : hello_sender_impl.h[user_global_decl]
 
 /// Namespace for implementation of Hello::Sender component
-namespace CIAO_Hello_Sender_Impl
+namespace Hello_Sender_Impl
 {
   /// Forward declarations
   class Sender_exec_i;
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl[user_namespace_decl]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl[user_namespace_decl]
   class foo_generator : public ACE_Task_Base
   {
   public:
@@ -57,7 +57,7 @@ namespace CIAO_Hello_Sender_Impl
   private:
     IDL::traits<Hello::CCM_Sender_Context>::ref_type context_;
   };
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl[user_namespace_decl]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[user_namespace_decl]
 
 
   /// Component Executor Implementation Class : Sender_exec_i
@@ -65,10 +65,10 @@ namespace CIAO_Hello_Sender_Impl
     : public virtual IDL::traits< ::Hello::CCM_Sender>::base_type
   {
   public:
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl::Sender_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl::Sender_exec_i[ctor]
     /// Constructor
     Sender_exec_i ();
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl::Sender_exec_i[ctor]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl::Sender_exec_i[ctor]
     /// Destructor
     virtual ~Sender_exec_i ();
 
@@ -99,9 +99,9 @@ namespace CIAO_Hello_Sender_Impl
 
     /** @name User defined public operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl::Sender_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl::Sender_exec_i[user_public_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl::Sender_exec_i[user_public_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl::Sender_exec_i[user_public_ops]
     //@}
 
   private:
@@ -114,17 +114,17 @@ namespace CIAO_Hello_Sender_Impl
 
     /** @name User defined members. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl::Sender_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl::Sender_exec_i[user_members]
     foo_generator foo_gen_;
     bar_generator bar_gen_;
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl::Sender_exec_i[user_members]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl::Sender_exec_i[user_members]
     //@}
 
     /** @name User defined private operations. */
     //@{
-    //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl::Sender_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl::Sender_exec_i[user_private_ops]
     // Your code here
-    //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl::Sender_exec_i[user_private_ops]
+    //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl::Sender_exec_i[user_private_ops]
     //@}
 
   private:
@@ -137,15 +137,15 @@ namespace CIAO_Hello_Sender_Impl
     //@}
   };
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl[user_namespace_end_decl]
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl[user_namespace_end_decl]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl[user_namespace_end_decl]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[user_namespace_end_decl]
 
-  //@@{__RIDL_REGEN_MARKER__} - BEGIN : CIAO_Hello_Sender_Impl[factory]
+  //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl[factory]
   extern "C" HELLO_SENDER_EXEC_Export  IDL::traits<Components::EnterpriseComponent>::ref_type
   create_Hello_Sender_Impl ();
-  //@@{__RIDL_REGEN_MARKER__} - END : CIAO_Hello_Sender_Impl[factory]
+  //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[factory]
 
-} // namespace CIAO_Hello_Sender_Impl
+} // namespace Hello_Sender_Impl
 //@@{__RIDL_REGEN_MARKER__} - BEGIN : hello_sender_impl.h[Footer]
 
 #endif /* __RIDL_HELLO_SENDER_EXEC_H_IJCECFCD_INCLUDED__ */

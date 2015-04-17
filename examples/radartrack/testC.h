@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CGEGICAC_INCLUDED__
-#define __RIDL_TESTC_H_CGEGICAC_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHHDGCID_INCLUDED__
+#define __RIDL_TESTC_H_EHHDGCID_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -333,6 +333,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CGEGICAC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHHDGCID_INCLUDED__ */
 
 // -*- END -*-
