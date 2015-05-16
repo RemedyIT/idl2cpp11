@@ -141,8 +141,9 @@ namespace Hello_Sender_Impl
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[user_namespace_end_decl]
 
   //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl[factory]
-  extern "C" HELLO_SENDER_EXEC_Export  IDL::traits<Components::EnterpriseComponent>::ref_type
-  create_Hello_Sender_Impl ();
+  extern "C" HELLO_SENDER_EXEC_Export  void
+  create_Hello_Sender_Impl (
+    IDL::traits<Components::EnterpriseComponent>::ref_type& component);
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[factory]
 
 } // namespace Hello_Sender_Impl

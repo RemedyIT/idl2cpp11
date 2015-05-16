@@ -31,7 +31,7 @@ namespace Hello_Sender_Impl
 
   int foo_generator::svc()
   {
-    ACE_OS::sleep (3);
+    std::this_thread::sleep_for (std::chrono::seconds (3));
     IDL::traits<Hello::MyFoo>::ref_type my_foo =
       this->context_->get_connection_run_my_foo ();
 
@@ -148,7 +148,7 @@ namespace Hello_Sender_Impl
   int
   bar_generator::svc ()
   {
-    ACE_OS::sleep (3);
+    std::this_thread::sleep_for (std::chrono::seconds (3));
     IDL::traits<Hello::MyBar>::ref_type my_bar =
       this->context_->get_connection_run_my_bar ();
     if (my_bar)
@@ -255,10 +255,11 @@ namespace Hello_Sender_Impl
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[user_namespace_end_impl]
 
   //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Sender_Impl[factory]
-  extern "C" IDL::traits<Components::EnterpriseComponent>::ref_type
-  create_Hello_Sender_Impl ()
+  extern "C" void
+  create_Hello_Sender_Impl (
+    IDL::traits<Components::EnterpriseComponent>::ref_type& component)
   {
-    return CORBA::make_reference <Sender_exec_i> ();
+    component = CORBA::make_reference <Sender_exec_i> ();
   }
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Sender_Impl[factory]
 

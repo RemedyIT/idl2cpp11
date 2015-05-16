@@ -307,8 +307,9 @@ namespace Hello_Receiver_Impl
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_namespace_end_decl]
 
   //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[factory]
-  extern "C" HELLO_RECEIVER_EXEC_Export  IDL::traits<Components::EnterpriseComponent>::ref_type
-  create_Hello_Receiver_Impl ();
+  extern "C" HELLO_RECEIVER_EXEC_Export  void
+  create_Hello_Receiver_Impl (
+    IDL::traits<Components::EnterpriseComponent>::ref_type& component);
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[factory]
 
 } // namespace Hello_Receiver_Impl

@@ -299,10 +299,11 @@ namespace Hello_Receiver_Impl
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[user_namespace_end_impl]
 
   //@@{__RIDL_REGEN_MARKER__} - BEGIN : Hello_Receiver_Impl[factory]
-  extern "C" IDL::traits<Components::EnterpriseComponent>::ref_type
-  create_Hello_Receiver_Impl ()
+  extern "C" void
+  create_Hello_Receiver_Impl (
+    IDL::traits<Components::EnterpriseComponent>::ref_type& component)
   {
-    return CORBA::make_reference <Receiver_exec_i> ();
+    component = CORBA::make_reference <Receiver_exec_i> ();
   }
   //@@{__RIDL_REGEN_MARKER__} - END : Hello_Receiver_Impl[factory]
 
