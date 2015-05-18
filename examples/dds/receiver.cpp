@@ -11,14 +11,21 @@
 
 #include "dds/dds_domain_participant_factory.h"
 #include "dds/dds_vendor_adapter.h"
-#include "shapes_shapetype_msg_ndds_traits.h"
+#include "shapes_shapetype_msg_dds_traits.h"
 #include <iostream>
-#include <chrono>
 #include <thread>
 
+constexpr uint16_t LEAST_EXPECTED_NR_SAMPLES { 75 };
 int16_t received_ = 0;
 
 // X11_FUZZ: disable check_cout_cerr
+
+void run ()
+{
+  // No Qos so it could be that we're missing samples.
+  while (received_ < 75)
+    std::this_thread::sleep_for (std::chrono::milliseconds (100));
+}
 
 class ShapeTypeListener final :
   public DDS::traits<ShapeType>::datareaderlistener_type
@@ -60,7 +67,7 @@ public:
 
 };
 
-int main (int , char *[])
+int main (int argc, char *argv[])
 {
   DDS::ReturnCode_t retcode = DDS::RETCODE_OK;
 
@@ -89,11 +96,22 @@ int main (int , char *[])
           DDS::make_reference<ShapeTypeListener>();
         subscriber->create_datareader (topic, DDS::DATAREADER_QOS_DEFAULT, listener, DDS::DATA_AVAILABLE_STATUS);
 
-        // No Qos so it could be that we're missing samples.
-        while (received_ < 75)
-          std::this_thread::sleep_for (std::chrono::milliseconds (100));
+        std::thread t (run);
+        t.detach ();
 
-        std::cout << "Received enough. Closing..." << std::endl;
+        std::string sleep_time { "10" };
+        if (argc > 1)
+        {
+          sleep_time = argv[1];
+        }
+        std::cout << "Waiting " << sleep_time << " seconds in order to receive "
+          << "all samples." << std::endl;
+        std::this_thread::sleep_for (std::chrono::seconds (std::stoi (sleep_time)));
+        std::cout << "Received " << received_ << ". Closing..." << std::endl;
+        if (received_ < 75)
+          std::cerr << "ERROR: unexpected number of samples received. Expected "
+            << "at least <" << LEAST_EXPECTED_NR_SAMPLES << "> - received <"
+            << received_ << ">." << std::endl;
       }
       else
       {

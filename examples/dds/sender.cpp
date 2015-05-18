@@ -11,10 +11,8 @@
 
 #include "dds/dds_domain_participant_factory.h"
 #include "dds/dds_vendor_adapter.h"
-#include "shapes_shapetype_msg_ndds_traits.h"
+#include "shapes_shapetype_msg_dds_traits.h"
 #include <iostream>
-#include <chrono>
-#include <thread>
 
 // X11_FUZZ: disable check_cout_cerr
 

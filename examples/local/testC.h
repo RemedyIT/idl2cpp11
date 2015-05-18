@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_BCAGFFJD_INCLUDED__
-#define __RIDL_TESTC_H_BCAGFFJD_INCLUDED__
+#ifndef __RIDL_TESTC_H_IACIIFAC_INCLUDED__
+#define __RIDL_TESTC_H_IACIIFAC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -123,8 +123,13 @@ namespace Test
   protected:
     typedef std::shared_ptr<Foo>   _shared_ptr_type;
 
+#if defined ACE_WIN32_VC14
+    /// Default constructor
+    Foo () {};
+#else
     /// Default constructor
     Foo () = default;
+#endif
     /// Destructor
     ~Foo () = default;
 
@@ -230,8 +235,13 @@ namespace Test
   protected:
     typedef std::shared_ptr<Bar>   _shared_ptr_type;
 
+#if defined ACE_WIN32_VC14
+    /// Default constructor
+    Bar () {};
+#else
     /// Default constructor
     Bar () = default;
+#endif
     /// Destructor
     ~Bar () = default;
 
@@ -391,6 +401,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BCAGFFJD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IACIIFAC_INCLUDED__ */
 
 // -*- END -*-
