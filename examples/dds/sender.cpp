@@ -9,9 +9,7 @@
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
  */
 
-#include "dds/dds_domain_participant_factory.h"
-#include "dds/dds_vendor_adapter.h"
-#include "shapes_shapetype_msg_dds_traits.h"
+#include "shapetype_dds_traits.h"
 #include <iostream>
 
 // X11_FUZZ: disable check_cout_cerr
