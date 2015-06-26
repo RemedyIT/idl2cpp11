@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_DCJFIFDI_INCLUDED__
-#define __RIDL_TESTS_H_DCJFIFDI_INCLUDED__
+#ifndef __RIDL_TESTS_H_EEIDFCDH_INCLUDED__
+#define __RIDL_TESTS_H_EEIDFCDH_INCLUDED__
 
 #include "testC.h"
 
@@ -226,6 +226,8 @@ namespace TAOX11_NAMESPACE {
     template <>
     struct servant_traits< ::A>
     {
+      /// Base trait type from which the servant implementations has to be derived
+      /// from
       typedef ::POA::A
           base_type;
       /// Strong reference type
@@ -234,6 +236,9 @@ namespace TAOX11_NAMESPACE {
       /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::A>
           weak_ref_type;
+      /// Try to narrow the provided reference @a base to a ::A
+      /// reference. Returns a new reference when this succeeds, a nil reference
+      /// when this fails. Narrowing a nil reference will return a nil reference.
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::A*, _Tp1*>::value>::type>
       static ref_type narrow (servant_reference<_Tp1> base)
@@ -246,6 +251,8 @@ namespace TAOX11_NAMESPACE {
     template <>
     struct servant_traits< ::X>
     {
+      /// Base trait type from which the servant implementations has to be derived
+      /// from
       typedef ::POA::X
           base_type;
       /// Strong reference type
@@ -254,6 +261,9 @@ namespace TAOX11_NAMESPACE {
       /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::X>
           weak_ref_type;
+      /// Try to narrow the provided reference @a base to a ::X
+      /// reference. Returns a new reference when this succeeds, a nil reference
+      /// when this fails. Narrowing a nil reference will return a nil reference.
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::X*, _Tp1*>::value>::type>
       static ref_type narrow (servant_reference<_Tp1> base)
@@ -266,6 +276,8 @@ namespace TAOX11_NAMESPACE {
     template <>
     struct servant_traits< ::A1>
     {
+      /// Base trait type from which the servant implementations has to be derived
+      /// from
       typedef ::POA::A1
           base_type;
       /// Strong reference type
@@ -274,6 +286,9 @@ namespace TAOX11_NAMESPACE {
       /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::A1>
           weak_ref_type;
+      /// Try to narrow the provided reference @a base to a ::A1
+      /// reference. Returns a new reference when this succeeds, a nil reference
+      /// when this fails. Narrowing a nil reference will return a nil reference.
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::A1*, _Tp1*>::value>::type>
       static ref_type narrow (servant_reference<_Tp1> base)
@@ -286,6 +301,8 @@ namespace TAOX11_NAMESPACE {
     template <>
     struct servant_traits< ::B>
     {
+      /// Base trait type from which the servant implementations has to be derived
+      /// from
       typedef ::POA::B
           base_type;
       /// Strong reference type
@@ -294,6 +311,9 @@ namespace TAOX11_NAMESPACE {
       /// Weak reference type
       typedef TAOX11_CORBA::weak_servant_reference< ::POA::B>
           weak_ref_type;
+      /// Try to narrow the provided reference @a base to a ::B
+      /// reference. Returns a new reference when this succeeds, a nil reference
+      /// when this fails. Narrowing a nil reference will return a nil reference.
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible< ::POA::B*, _Tp1*>::value>::type>
       static ref_type narrow (servant_reference<_Tp1> base)
@@ -304,6 +324,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_DCJFIFDI_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_EEIDFCDH_INCLUDED__ */
 
 // -*- END -*-

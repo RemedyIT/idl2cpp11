@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FDDJGCJI_INCLUDED__
-#define __RIDL_TESTC_H_FDDJGCJI_INCLUDED__
+#ifndef __RIDL_TESTC_H_JAFFJDGB_INCLUDED__
+#define __RIDL_TESTC_H_JAFFJDGB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -204,7 +204,12 @@ namespace obv
     : public virtual ::Example
   {
   protected:
+#if defined (ACE_WIN32_VC14)
+    // msvc14 has a problem with defaulted constructors, issue #4005
+    Example () {}
+#else
     Example () = default;
+#endif
     ~Example () = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
@@ -599,7 +604,12 @@ namespace obv
     : public virtual ::Val
   {
   protected:
+#if defined (ACE_WIN32_VC14)
+    // msvc14 has a problem with defaulted constructors, issue #4005
+    Val () {}
+#else
     Val () = default;
+#endif
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
@@ -1330,7 +1340,12 @@ namespace obv
     : public virtual ::B
   {
   protected:
+#if defined (ACE_WIN32_VC14)
+    // msvc14 has a problem with defaulted constructors, issue #4005
+    B () {}
+#else
     B () = default;
+#endif
     ~B () = default;
     B (const B&) = default;
     B (B&&) = default;
@@ -1525,7 +1540,12 @@ namespace obv
     : public virtual ::V
   {
   protected:
+#if defined (ACE_WIN32_VC14)
+    // msvc14 has a problem with defaulted constructors, issue #4005
+    V () {}
+#else
     V () = default;
+#endif
     ~V () = default;
     V (const V&) = default;
     V (V&&) = default;
@@ -2390,6 +2410,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FDDJGCJI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JAFFJDGB_INCLUDED__ */
 
 // -*- END -*-
