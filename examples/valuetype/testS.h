@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_EEIDFCDH_INCLUDED__
-#define __RIDL_TESTS_H_EEIDFCDH_INCLUDED__
+#ifndef __RIDL_TESTS_H_FBFICHAG_INCLUDED__
+#define __RIDL_TESTS_H_FBFICHAG_INCLUDED__
 
 #include "testC.h"
 
@@ -62,7 +62,7 @@ namespace POA
     virtual const std::string &_interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
-    /// @copydoc A::op
+    /// @copydoc test.idl::A::op
     virtual
     void
     op () = 0;
@@ -117,7 +117,7 @@ namespace POA
     virtual const std::string &_interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
-    /// @copydoc X::op
+    /// @copydoc test.idl::X::op
     virtual
     void
     op (
@@ -173,7 +173,7 @@ namespace POA
     virtual const std::string &_interface_repository_id () const override;
 
     // generated from c++11/templates/srv/hdr/operation.erb
-    /// @copydoc A1::op
+    /// @copydoc test.idl::A1::op
     virtual
     void
     op () = 0;
@@ -324,6 +324,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_EEIDFCDH_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_FBFICHAG_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CHHIHIJE_INCLUDED__
-#define __RIDL_TESTC_H_CHHIHIJE_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHHFFABH_INCLUDED__
+#define __RIDL_TESTC_H_FHHFFABH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -33,13 +33,13 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Test::Simple
+  /// @copydoc test.idl::Test::Simple
   class Simple
   {
   public:
@@ -66,21 +66,21 @@ namespace Test
     /// Move assignment operator
     Simple& operator= (Simple&&) = default;
 
-    /// @copydoc Test::Simple::o
+    /// @copydoc test.idl::Test::Simple::o
     //@{
     inline void o (uint8_t _o);
     inline uint8_t o () const;
     inline uint8_t& o ();
     //@}
 
-    /// @copydoc Test::Simple::l
+    /// @copydoc test.idl::Test::Simple::l
     //@{
     inline void l (int32_t _l);
     inline int32_t l () const;
     inline int32_t& l ();
     //@}
 
-    /// @copydoc Test::Simple::s
+    /// @copydoc test.idl::Test::Simple::s
     //@{
     inline void s (const std::string& _s);
     inline void s (std::string&& _s);
@@ -88,21 +88,21 @@ namespace Test
     inline std::string& s ();
     //@}
 
-    /// @copydoc Test::Simple::d
+    /// @copydoc test.idl::Test::Simple::d
     //@{
     inline void d (double _d);
     inline double d () const;
     inline double& d ();
     //@}
 
-    /// @copydoc Test::Simple::b
+    /// @copydoc test.idl::Test::Simple::b
     //@{
     inline void b (bool _b);
     inline bool b () const;
     inline bool& b ();
     //@}
 
-    /// @copydoc Test::Simple::c
+    /// @copydoc test.idl::Test::Simple::c
     //@{
     inline void c (char _c);
     inline char c () const;
@@ -122,23 +122,23 @@ namespace Test
   };// Simple
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::SimpleSeq
+  /// @copydoc test.idl::Test::SimpleSeq
   typedef std::vector < Simple> SimpleSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::LongSeq
+  /// @copydoc test.idl::Test::LongSeq
   typedef std::vector < int32_t> LongSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::BoundedLongSeq
+  /// @copydoc test.idl::Test::BoundedLongSeq
   typedef TAOX11_NAMESPACE::IDL::bounded_vector < int32_t, 50> BoundedLongSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::BoolSeq
+  /// @copydoc test.idl::Test::BoolSeq
   typedef std::vector < bool> BoolSeq;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::StringSeq
+  /// @copydoc test.idl::Test::StringSeq
   typedef std::vector < std::string> StringSeq;
 
   // generated from StubHeaderWriter#enter_interface
@@ -209,7 +209,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Foo
+  /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -224,7 +224,7 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::test_long_seq
+    /// @copydoc test.idl::Test::Foo::test_long_seq
     virtual
     ::Test::LongSeq
     test_long_seq (
@@ -233,7 +233,7 @@ namespace Test
         ::Test::LongSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::test_bool_seq
+    /// @copydoc test.idl::Test::Foo::test_bool_seq
     virtual
     ::Test::BoolSeq
     test_bool_seq (
@@ -242,7 +242,7 @@ namespace Test
         ::Test::BoolSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::test_string_seq
+    /// @copydoc test.idl::Test::Foo::test_string_seq
     virtual
     ::Test::StringSeq
     test_string_seq (
@@ -251,7 +251,7 @@ namespace Test
         ::Test::StringSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::test_struct_seq
+    /// @copydoc test.idl::Test::Foo::test_struct_seq
     virtual
     ::Test::SimpleSeq
     test_struct_seq (
@@ -260,7 +260,7 @@ namespace Test
         ::Test::SimpleSeq& sout);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::shutdown
+    /// @copydoc test.idl::Test::Foo::shutdown
     virtual
     void
     shutdown ();
@@ -827,6 +827,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CHHIHIJE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHHFFABH_INCLUDED__ */
 
 // -*- END -*-

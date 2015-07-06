@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBFGHJAD_INCLUDED__
-#define __RIDL_TESTC_H_IBFGHJAD_INCLUDED__
+#ifndef __RIDL_TESTC_H_JBJAABGD_INCLUDED__
+#define __RIDL_TESTC_H_JBJAABGD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -32,12 +32,12 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/except_pre.erb
-  /// @copydoc Test::FooEx
+  /// @copydoc test.idl::Test::FooEx
   class FooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
@@ -63,7 +63,7 @@ namespace Test
     FooEx& operator= (const FooEx&) = default;
     FooEx& operator= (FooEx&&) = default;
 
-    /// @copydoc Test::FooEx::message
+    /// @copydoc test.idl::Test::FooEx::message
     //@{
     void message (const std::string& _message);
     void message (std::string&& _message);
@@ -79,7 +79,7 @@ namespace Test
   }; // FooEx
 
   // generated from c++11/templates/cli/hdr/except_pre.erb
-  /// @copydoc Test::BooEx
+  /// @copydoc test.idl::Test::BooEx
   class BooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
   {
@@ -105,7 +105,7 @@ namespace Test
     BooEx& operator= (const BooEx&) = default;
     BooEx& operator= (BooEx&&) = default;
 
-    /// @copydoc Test::BooEx::id
+    /// @copydoc test.idl::Test::BooEx::id
     //@{
     void id (int32_t _id);
     int32_t id () const;
@@ -187,7 +187,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Foo
+  /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -202,19 +202,19 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::do_it
+    /// @copydoc test.idl::Test::Foo::do_it
     virtual
     void
     do_it ();
 
     // generated from c++11/templates/cli/hdr/attribute.erb
-    /// @copydoc Test::Foo::a_number
+    /// @copydoc test.idl::Test::Foo::a_number
     virtual
     int32_t
     a_number ();
 
     // generated from c++11/templates/cli/hdr/attribute.erb
-    /// @copydoc Test::Foo::a_string
+    /// @copydoc test.idl::Test::Foo::a_string
     //@{
     virtual
     std::string
@@ -227,7 +227,7 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::shutdown
+    /// @copydoc test.idl::Test::Foo::shutdown
     virtual
     void
     shutdown ();
@@ -504,6 +504,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IBFGHJAD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JBJAABGD_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_DGDAAGHI_INCLUDED__
-#define __RIDL_TESTC_H_DGDAAGHI_INCLUDED__
+#ifndef __RIDL_TESTC_H_IADAABFE_INCLUDED__
+#define __RIDL_TESTC_H_IADAABFE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -31,7 +31,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
@@ -103,7 +103,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Hello
+  /// @copydoc test.idl::Test::Hello
   class Hello
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -118,7 +118,7 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Hello::get_string
+    /// @copydoc test.idl::Test::Hello::get_string
     virtual
     std::string
     get_string ();
@@ -236,6 +236,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DGDAAGHI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IADAABFE_INCLUDED__ */
 
 // -*- END -*-

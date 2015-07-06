@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FAFIGHEF_INCLUDED__
-#define __RIDL_TESTC_H_FAFIGHEF_INCLUDED__
+#ifndef __RIDL_TESTC_H_DDFFBBBC_INCLUDED__
+#define __RIDL_TESTC_H_DDFFBBBC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -30,12 +30,12 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/typedef.erb
-/// @copydoc octetseq
+/// @copydoc test.idl::octetseq
 typedef std::vector < uint8_t> octetseq;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-/// @copydoc RadarTrack
+/// @copydoc test.idl::RadarTrack
 class RadarTrack
 {
 public:
@@ -61,7 +61,7 @@ public:
   /// Move assignment operator
   RadarTrack& operator= (RadarTrack&&) = default;
 
-  /// @copydoc RadarTrack::id
+  /// @copydoc test.idl::RadarTrack::id
   //@{
   inline void id (const std::string& _id);
   inline void id (std::string&& _id);
@@ -69,28 +69,28 @@ public:
   inline std::string& id ();
   //@}
 
-  /// @copydoc RadarTrack::x
+  /// @copydoc test.idl::RadarTrack::x
   //@{
   inline void x (int32_t _x);
   inline int32_t x () const;
   inline int32_t& x ();
   //@}
 
-  /// @copydoc RadarTrack::y
+  /// @copydoc test.idl::RadarTrack::y
   //@{
   inline void y (int32_t _y);
   inline int32_t y () const;
   inline int32_t& y ();
   //@}
 
-  /// @copydoc RadarTrack::z
+  /// @copydoc test.idl::RadarTrack::z
   //@{
   inline void z (int32_t _z);
   inline int32_t z () const;
   inline int32_t& z ();
   //@}
 
-  /// @copydoc RadarTrack::plot
+  /// @copydoc test.idl::RadarTrack::plot
   //@{
   inline void plot (const ::octetseq& _plot);
   inline void plot (::octetseq&& _plot);
@@ -333,6 +333,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FAFIGHEF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DDFFBBBC_INCLUDED__ */
 
 // -*- END -*-

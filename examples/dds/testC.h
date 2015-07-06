@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EBIEEAJE_INCLUDED__
-#define __RIDL_TESTC_H_EBIEEAJE_INCLUDED__
+#ifndef __RIDL_TESTC_H_DCECHBED_INCLUDED__
+#define __RIDL_TESTC_H_DCECHBED_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -31,7 +31,7 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-/// @copydoc ShapeType
+/// @copydoc test.idl::ShapeType
 class ShapeType
 {
 public:
@@ -56,7 +56,7 @@ public:
   /// Move assignment operator
   ShapeType& operator= (ShapeType&&) = default;
 
-  /// @copydoc ShapeType::color
+  /// @copydoc test.idl::ShapeType::color
   //@{
   inline void color (const std::string& _color);
   inline void color (std::string&& _color);
@@ -64,21 +64,21 @@ public:
   inline std::string& color ();
   //@}
 
-  /// @copydoc ShapeType::x
+  /// @copydoc test.idl::ShapeType::x
   //@{
   inline void x (int32_t _x);
   inline int32_t x () const;
   inline int32_t& x ();
   //@}
 
-  /// @copydoc ShapeType::y
+  /// @copydoc test.idl::ShapeType::y
   //@{
   inline void y (int32_t _y);
   inline int32_t y () const;
   inline int32_t& y ();
   //@}
 
-  /// @copydoc ShapeType::shapesize
+  /// @copydoc test.idl::ShapeType::shapesize
   //@{
   inline void shapesize (int32_t _shapesize);
   inline int32_t shapesize () const;
@@ -97,7 +97,7 @@ private:
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-/// @copydoc Attributes
+/// @copydoc test.idl::Attributes
 class Attributes
 {
 public:
@@ -121,7 +121,7 @@ public:
   /// Move assignment operator
   Attributes& operator= (Attributes&&) = default;
 
-  /// @copydoc Attributes::shape
+  /// @copydoc test.idl::Attributes::shape
   //@{
   inline void shape (const std::string& _shape);
   inline void shape (std::string&& _shape);
@@ -129,7 +129,7 @@ public:
   inline std::string& shape ();
   //@}
 
-  /// @copydoc Attributes::color
+  /// @copydoc test.idl::Attributes::color
   //@{
   inline void color (const std::string& _color);
   inline void color (std::string&& _color);
@@ -137,7 +137,7 @@ public:
   inline std::string& color ();
   //@}
 
-  /// @copydoc Attributes::speed
+  /// @copydoc test.idl::Attributes::speed
   //@{
   inline void speed (float _speed);
   inline float speed () const;
@@ -154,7 +154,7 @@ private:
 };// Attributes
 
 // generated from c++11/templates/cli/hdr/typedef.erb
-/// @copydoc ShapeTypeSeq
+/// @copydoc test.idl::ShapeTypeSeq
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
@@ -487,6 +487,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EBIEEAJE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DCECHBED_INCLUDED__ */
 
 // -*- END -*-

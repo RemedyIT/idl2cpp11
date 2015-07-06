@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EJJADGGH_INCLUDED__
-#define __RIDL_TESTC_H_EJJADGGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_BFDJEJBI_INCLUDED__
+#define __RIDL_TESTC_H_BFDJEJBI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -31,13 +31,13 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Deployment
+/// @copydoc test.idl::Deployment
 namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::Property
+  /// @copydoc test.idl::Deployment::Property
   class Property
   {
   public:
@@ -60,7 +60,7 @@ namespace Deployment
     /// Move assignment operator
     Property& operator= (Property&&) = default;
 
-    /// @copydoc Deployment::Property::name
+    /// @copydoc test.idl::Deployment::Property::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -68,7 +68,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::Property::value
+    /// @copydoc test.idl::Deployment::Property::value
     //@{
     inline void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
     inline void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
@@ -85,12 +85,12 @@ namespace Deployment
   };// Property
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::Properties
+  /// @copydoc test.idl::Deployment::Properties
   typedef std::vector < Property> Properties;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::Requirement
+  /// @copydoc test.idl::Deployment::Requirement
   class Requirement
   {
   public:
@@ -114,7 +114,7 @@ namespace Deployment
     /// Move assignment operator
     Requirement& operator= (Requirement&&) = default;
 
-    /// @copydoc Deployment::Requirement::name
+    /// @copydoc test.idl::Deployment::Requirement::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -122,7 +122,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::Requirement::resourceType
+    /// @copydoc test.idl::Deployment::Requirement::resourceType
     //@{
     inline void resourceType (const std::string& _resourceType);
     inline void resourceType (std::string&& _resourceType);
@@ -130,7 +130,7 @@ namespace Deployment
     inline std::string& resourceType ();
     //@}
 
-    /// @copydoc Deployment::Requirement::property
+    /// @copydoc test.idl::Deployment::Requirement::property
     //@{
     inline void property (const ::Deployment::Properties& _property);
     inline void property (::Deployment::Properties&& _property);
@@ -148,32 +148,32 @@ namespace Deployment
   };// Requirement
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::Requirements
+  /// @copydoc test.idl::Deployment::Requirements
   typedef std::vector < Requirement> Requirements;
 
   // generated from c++11/templates/cli/hdr/enum.erb
 
-  /// @copydoc Deployment::SatisfierPropertyKind
+  /// @copydoc test.idl::Deployment::SatisfierPropertyKind
   enum class SatisfierPropertyKind : uint32_t
   {
-    /// @copydoc Deployment::SatisfierPropertyKind::Quantity
+    /// @copydoc test.idl::Deployment::SatisfierPropertyKind::Quantity
     Quantity,
-    /// @copydoc Deployment::SatisfierPropertyKind::Capacity
+    /// @copydoc test.idl::Deployment::SatisfierPropertyKind::Capacity
     Capacity,
-    /// @copydoc Deployment::SatisfierPropertyKind::Minimum
+    /// @copydoc test.idl::Deployment::SatisfierPropertyKind::Minimum
     Minimum,
-    /// @copydoc Deployment::SatisfierPropertyKind::Maximum
+    /// @copydoc test.idl::Deployment::SatisfierPropertyKind::Maximum
     Maximum,
-    /// @copydoc Deployment::SatisfierPropertyKind::Attribute
+    /// @copydoc test.idl::Deployment::SatisfierPropertyKind::Attribute
     Attribute,
-    /// @copydoc Deployment::SatisfierPropertyKind::Selection
+    /// @copydoc test.idl::Deployment::SatisfierPropertyKind::Selection
     Selection
   };// SatisfierPropertyKind
 
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::SatisfierProperty
+  /// @copydoc test.idl::Deployment::SatisfierProperty
   class SatisfierProperty
   {
   public:
@@ -198,7 +198,7 @@ namespace Deployment
     /// Move assignment operator
     SatisfierProperty& operator= (SatisfierProperty&&) = default;
 
-    /// @copydoc Deployment::SatisfierProperty::name
+    /// @copydoc test.idl::Deployment::SatisfierProperty::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -206,21 +206,21 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::SatisfierProperty::kind
+    /// @copydoc test.idl::Deployment::SatisfierProperty::kind
     //@{
     inline void kind (::Deployment::SatisfierPropertyKind _kind);
     inline ::Deployment::SatisfierPropertyKind kind () const;
     inline ::Deployment::SatisfierPropertyKind& kind ();
     //@}
 
-    /// @copydoc Deployment::SatisfierProperty::dynamic
+    /// @copydoc test.idl::Deployment::SatisfierProperty::dynamic
     //@{
     inline void dynamic (bool _dynamic);
     inline bool dynamic () const;
     inline bool& dynamic ();
     //@}
 
-    /// @copydoc Deployment::SatisfierProperty::value
+    /// @copydoc test.idl::Deployment::SatisfierProperty::value
     //@{
     inline void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
     inline void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
@@ -239,43 +239,43 @@ namespace Deployment
   };// SatisfierProperty
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::SatisfierProperties
+  /// @copydoc test.idl::Deployment::SatisfierProperties
   typedef std::vector < SatisfierProperty> SatisfierProperties;
 } // namespace Deployment
 
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Deployment
+/// @copydoc test.idl::Deployment
 namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/enum.erb
 
-  /// @copydoc Deployment::CCMComponentPortKind
+  /// @copydoc test.idl::Deployment::CCMComponentPortKind
   enum class CCMComponentPortKind : uint32_t
   {
-    /// @copydoc Deployment::CCMComponentPortKind::Facet
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::Facet
     Facet,
-    /// @copydoc Deployment::CCMComponentPortKind::SimplexReceptacle
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::SimplexReceptacle
     SimplexReceptacle,
-    /// @copydoc Deployment::CCMComponentPortKind::MultiplexReceptacle
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::MultiplexReceptacle
     MultiplexReceptacle,
-    /// @copydoc Deployment::CCMComponentPortKind::EventEmitter
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::EventEmitter
     EventEmitter,
-    /// @copydoc Deployment::CCMComponentPortKind::EventPublisher
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::EventPublisher
     EventPublisher,
-    /// @copydoc Deployment::CCMComponentPortKind::EventConsumer
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::EventConsumer
     EventConsumer,
-    /// @copydoc Deployment::CCMComponentPortKind::ExtendedPort
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::ExtendedPort
     ExtendedPort,
-    /// @copydoc Deployment::CCMComponentPortKind::MirrorPort
+    /// @copydoc test.idl::Deployment::CCMComponentPortKind::MirrorPort
     MirrorPort
   };// CCMComponentPortKind
 
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ComponentPortDescription
+  /// @copydoc test.idl::Deployment::ComponentPortDescription
   class ComponentPortDescription
   {
   public:
@@ -305,7 +305,7 @@ namespace Deployment
     /// Move assignment operator
     ComponentPortDescription& operator= (ComponentPortDescription&&) = default;
 
-    /// @copydoc Deployment::ComponentPortDescription::name
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -313,7 +313,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::specificType
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::specificType
     //@{
     inline void specificType (const std::string& _specificType);
     inline void specificType (std::string&& _specificType);
@@ -321,7 +321,7 @@ namespace Deployment
     inline std::string& specificType ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::supportedType
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::supportedType
     //@{
     inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
     inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
@@ -329,42 +329,42 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::provider
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::provider
     //@{
     inline void provider (bool _provider);
     inline bool provider () const;
     inline bool& provider ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::exclusiveProvider
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::exclusiveProvider
     //@{
     inline void exclusiveProvider (bool _exclusiveProvider);
     inline bool exclusiveProvider () const;
     inline bool& exclusiveProvider ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::exclusiveUser
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::exclusiveUser
     //@{
     inline void exclusiveUser (bool _exclusiveUser);
     inline bool exclusiveUser () const;
     inline bool& exclusiveUser ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::optional
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::optional
     //@{
     inline void optional (bool _optional);
     inline bool optional () const;
     inline bool& optional ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::kind
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::kind
     //@{
     inline void kind (::Deployment::CCMComponentPortKind _kind);
     inline ::Deployment::CCMComponentPortKind kind () const;
     inline ::Deployment::CCMComponentPortKind& kind ();
     //@}
 
-    /// @copydoc Deployment::ComponentPortDescription::templateParam
+    /// @copydoc test.idl::Deployment::ComponentPortDescription::templateParam
     //@{
     inline void templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _templateParam);
     inline void templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _templateParam);
@@ -388,12 +388,12 @@ namespace Deployment
   };// ComponentPortDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ComponentPortDescriptions
+  /// @copydoc test.idl::Deployment::ComponentPortDescriptions
   typedef std::vector < ComponentPortDescription> ComponentPortDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ComponentPropertyDescription
+  /// @copydoc test.idl::Deployment::ComponentPropertyDescription
   class ComponentPropertyDescription
   {
   public:
@@ -416,7 +416,7 @@ namespace Deployment
     /// Move assignment operator
     ComponentPropertyDescription& operator= (ComponentPropertyDescription&&) = default;
 
-    /// @copydoc Deployment::ComponentPropertyDescription::name
+    /// @copydoc test.idl::Deployment::ComponentPropertyDescription::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -424,7 +424,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::ComponentPropertyDescription::type
+    /// @copydoc test.idl::Deployment::ComponentPropertyDescription::type
     //@{
     inline void type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
     inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
@@ -440,12 +440,12 @@ namespace Deployment
   };// ComponentPropertyDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ComponentPropertyDescriptions
+  /// @copydoc test.idl::Deployment::ComponentPropertyDescriptions
   typedef std::vector < ComponentPropertyDescription> ComponentPropertyDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ComponentInterfaceDescription
+  /// @copydoc test.idl::Deployment::ComponentInterfaceDescription
   class ComponentInterfaceDescription
   {
   public:
@@ -475,7 +475,7 @@ namespace Deployment
     /// Move assignment operator
     ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&&) = default;
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::label
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::label
     //@{
     inline void label (const std::string& _label);
     inline void label (std::string&& _label);
@@ -483,7 +483,7 @@ namespace Deployment
     inline std::string& label ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::UUID
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::UUID
     //@{
     inline void UUID (const std::string& _UUID);
     inline void UUID (std::string&& _UUID);
@@ -491,7 +491,7 @@ namespace Deployment
     inline std::string& UUID ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::specificType
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::specificType
     //@{
     inline void specificType (const std::string& _specificType);
     inline void specificType (std::string&& _specificType);
@@ -499,7 +499,7 @@ namespace Deployment
     inline std::string& specificType ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::supportedType
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::supportedType
     //@{
     inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
     inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
@@ -507,7 +507,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::idlFile
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::idlFile
     //@{
     inline void idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _idlFile);
     inline void idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _idlFile);
@@ -515,7 +515,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::configProperty
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::configProperty
     //@{
     inline void configProperty (const ::Deployment::Properties& _configProperty);
     inline void configProperty (::Deployment::Properties&& _configProperty);
@@ -523,7 +523,7 @@ namespace Deployment
     inline ::Deployment::Properties& configProperty ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::port
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::_port
     //@{
     inline void port (const ::Deployment::ComponentPortDescriptions& _port);
     inline void port (::Deployment::ComponentPortDescriptions&& _port);
@@ -531,7 +531,7 @@ namespace Deployment
     inline ::Deployment::ComponentPortDescriptions& port ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::property
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::property
     //@{
     inline void property (const ::Deployment::ComponentPropertyDescriptions& _property);
     inline void property (::Deployment::ComponentPropertyDescriptions&& _property);
@@ -539,7 +539,7 @@ namespace Deployment
     inline ::Deployment::ComponentPropertyDescriptions& property ();
     //@}
 
-    /// @copydoc Deployment::ComponentInterfaceDescription::infoProperty
+    /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::infoProperty
     //@{
     inline void infoProperty (const ::Deployment::Properties& _infoProperty);
     inline void infoProperty (::Deployment::Properties&& _infoProperty);
@@ -564,7 +564,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::MonolithicDeploymentDescription
+  /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription
   class MonolithicDeploymentDescription
   {
   public:
@@ -590,7 +590,7 @@ namespace Deployment
     /// Move assignment operator
     MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&&) = default;
 
-    /// @copydoc Deployment::MonolithicDeploymentDescription::name
+    /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -598,7 +598,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::MonolithicDeploymentDescription::source
+    /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
@@ -606,7 +606,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
-    /// @copydoc Deployment::MonolithicDeploymentDescription::artifactRef
+    /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::artifactRef
     //@{
     inline void artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _artifactRef);
     inline void artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _artifactRef);
@@ -614,7 +614,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef ();
     //@}
 
-    /// @copydoc Deployment::MonolithicDeploymentDescription::execParameter
+    /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::execParameter
     //@{
     inline void execParameter (const ::Deployment::Properties& _execParameter);
     inline void execParameter (::Deployment::Properties&& _execParameter);
@@ -622,7 +622,7 @@ namespace Deployment
     inline ::Deployment::Properties& execParameter ();
     //@}
 
-    /// @copydoc Deployment::MonolithicDeploymentDescription::deployRequirement
+    /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::deployRequirement
     //@{
     inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
     inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
@@ -642,30 +642,30 @@ namespace Deployment
   };// MonolithicDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::MonolithicDeploymentDescriptions
+  /// @copydoc test.idl::Deployment::MonolithicDeploymentDescriptions
   typedef std::vector < MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/enum.erb
 
-  /// @copydoc Deployment::ResourceUsageKind
+  /// @copydoc test.idl::Deployment::ResourceUsageKind
   enum class ResourceUsageKind : uint32_t
   {
-    /// @copydoc Deployment::ResourceUsageKind::None
+    /// @copydoc test.idl::Deployment::ResourceUsageKind::None
     None,
-    /// @copydoc Deployment::ResourceUsageKind::InstanceUsesResource
+    /// @copydoc test.idl::Deployment::ResourceUsageKind::InstanceUsesResource
     InstanceUsesResource,
-    /// @copydoc Deployment::ResourceUsageKind::ResourceUsesInstance
+    /// @copydoc test.idl::Deployment::ResourceUsageKind::ResourceUsesInstance
     ResourceUsesInstance,
-    /// @copydoc Deployment::ResourceUsageKind::PortUsesResource
+    /// @copydoc test.idl::Deployment::ResourceUsageKind::PortUsesResource
     PortUsesResource,
-    /// @copydoc Deployment::ResourceUsageKind::ResourceUsesPort
+    /// @copydoc test.idl::Deployment::ResourceUsageKind::ResourceUsesPort
     ResourceUsesPort
   };// ResourceUsageKind
 
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::InstanceResourceDeploymentDescription
+  /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription
   class InstanceResourceDeploymentDescription
   {
   public:
@@ -690,14 +690,14 @@ namespace Deployment
     /// Move assignment operator
     InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&&) = default;
 
-    /// @copydoc Deployment::InstanceResourceDeploymentDescription::resourceUsage
+    /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceUsage
     //@{
     inline void resourceUsage (::Deployment::ResourceUsageKind _resourceUsage);
     inline ::Deployment::ResourceUsageKind resourceUsage () const;
     inline ::Deployment::ResourceUsageKind& resourceUsage ();
     //@}
 
-    /// @copydoc Deployment::InstanceResourceDeploymentDescription::requirementName
+    /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::requirementName
     //@{
     inline void requirementName (const std::string& _requirementName);
     inline void requirementName (std::string&& _requirementName);
@@ -705,7 +705,7 @@ namespace Deployment
     inline std::string& requirementName ();
     //@}
 
-    /// @copydoc Deployment::InstanceResourceDeploymentDescription::resourceName
+    /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceName
     //@{
     inline void resourceName (const std::string& _resourceName);
     inline void resourceName (std::string&& _resourceName);
@@ -713,7 +713,7 @@ namespace Deployment
     inline std::string& resourceName ();
     //@}
 
-    /// @copydoc Deployment::InstanceResourceDeploymentDescription::property
+    /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::property
     //@{
     inline void property (const ::Deployment::Properties& _property);
     inline void property (::Deployment::Properties&& _property);
@@ -732,12 +732,12 @@ namespace Deployment
   };// InstanceResourceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::InstanceResourceDeploymentDescriptions
+  /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescriptions
   typedef std::vector < InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::InstanceDeploymentDescription
+  /// @copydoc test.idl::Deployment::InstanceDeploymentDescription
   class InstanceDeploymentDescription
   {
   public:
@@ -765,7 +765,7 @@ namespace Deployment
     /// Move assignment operator
     InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&&) = default;
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::name
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -773,7 +773,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::node
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::node
     //@{
     inline void node (const std::string& _node);
     inline void node (std::string&& _node);
@@ -781,7 +781,7 @@ namespace Deployment
     inline std::string& node ();
     //@}
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::source
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
@@ -789,14 +789,14 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::implementationRef
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::implementationRef
     //@{
     inline void implementationRef (uint32_t _implementationRef);
     inline uint32_t implementationRef () const;
     inline uint32_t& implementationRef ();
     //@}
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::configProperty
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::configProperty
     //@{
     inline void configProperty (const ::Deployment::Properties& _configProperty);
     inline void configProperty (::Deployment::Properties&& _configProperty);
@@ -804,7 +804,7 @@ namespace Deployment
     inline ::Deployment::Properties& configProperty ();
     //@}
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::deployedResource
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::deployedResource
     //@{
     inline void deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedResource);
     inline void deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedResource);
@@ -812,7 +812,7 @@ namespace Deployment
     inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource ();
     //@}
 
-    /// @copydoc Deployment::InstanceDeploymentDescription::deployedSharedResource
+    /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::deployedSharedResource
     //@{
     inline void deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedSharedResource);
     inline void deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedSharedResource);
@@ -834,12 +834,12 @@ namespace Deployment
   };// InstanceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::InstanceDeploymentDescriptions
+  /// @copydoc test.idl::Deployment::InstanceDeploymentDescriptions
   typedef std::vector < InstanceDeploymentDescription> InstanceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ComponentExternalPortEndpoint
+  /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoint
   class ComponentExternalPortEndpoint
   {
   public:
@@ -861,7 +861,7 @@ namespace Deployment
     /// Move assignment operator
     ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&&) = default;
 
-    /// @copydoc Deployment::ComponentExternalPortEndpoint::portName
+    /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoint::portName
     //@{
     inline void portName (const std::string& _portName);
     inline void portName (std::string&& _portName);
@@ -877,12 +877,12 @@ namespace Deployment
   };// ComponentExternalPortEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ComponentExternalPortEndpoints
+  /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoints
   typedef std::vector < ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::PlanSubcomponentPortEndpoint
+  /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint
   class PlanSubcomponentPortEndpoint
   {
   public:
@@ -907,7 +907,7 @@ namespace Deployment
     /// Move assignment operator
     PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&&) = default;
 
-    /// @copydoc Deployment::PlanSubcomponentPortEndpoint::portName
+    /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::portName
     //@{
     inline void portName (const std::string& _portName);
     inline void portName (std::string&& _portName);
@@ -915,21 +915,21 @@ namespace Deployment
     inline std::string& portName ();
     //@}
 
-    /// @copydoc Deployment::PlanSubcomponentPortEndpoint::provider
+    /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::provider
     //@{
     inline void provider (bool _provider);
     inline bool provider () const;
     inline bool& provider ();
     //@}
 
-    /// @copydoc Deployment::PlanSubcomponentPortEndpoint::kind
+    /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::kind
     //@{
     inline void kind (::Deployment::CCMComponentPortKind _kind);
     inline ::Deployment::CCMComponentPortKind kind () const;
     inline ::Deployment::CCMComponentPortKind& kind ();
     //@}
 
-    /// @copydoc Deployment::PlanSubcomponentPortEndpoint::instanceRef
+    /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::instanceRef
     //@{
     inline void instanceRef (uint32_t _instanceRef);
     inline uint32_t instanceRef () const;
@@ -947,12 +947,12 @@ namespace Deployment
   };// PlanSubcomponentPortEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::PlanSubcomponentPortEndpoints
+  /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoints
   typedef std::vector < PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ExternalReferenceEndpoint
+  /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint
   class ExternalReferenceEndpoint
   {
   public:
@@ -977,7 +977,7 @@ namespace Deployment
     /// Move assignment operator
     ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&&) = default;
 
-    /// @copydoc Deployment::ExternalReferenceEndpoint::location
+    /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::location
     //@{
     inline void location (const std::string& _location);
     inline void location (std::string&& _location);
@@ -985,14 +985,14 @@ namespace Deployment
     inline std::string& location ();
     //@}
 
-    /// @copydoc Deployment::ExternalReferenceEndpoint::provider
+    /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::provider
     //@{
     inline void provider (bool _provider);
     inline bool provider () const;
     inline bool& provider ();
     //@}
 
-    /// @copydoc Deployment::ExternalReferenceEndpoint::portName
+    /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::portName
     //@{
     inline void portName (const std::string& _portName);
     inline void portName (std::string&& _portName);
@@ -1000,7 +1000,7 @@ namespace Deployment
     inline std::string& portName ();
     //@}
 
-    /// @copydoc Deployment::ExternalReferenceEndpoint::supportedType
+    /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::supportedType
     //@{
     inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
     inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
@@ -1019,12 +1019,12 @@ namespace Deployment
   };// ExternalReferenceEndpoint
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ExternalReferenceEndpoints
+  /// @copydoc test.idl::Deployment::ExternalReferenceEndpoints
   typedef std::vector < ExternalReferenceEndpoint> ExternalReferenceEndpoints;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ConnectionResourceDeploymentDescription
+  /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription
   class ConnectionResourceDeploymentDescription
   {
   public:
@@ -1049,7 +1049,7 @@ namespace Deployment
     /// Move assignment operator
     ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&&) = default;
 
-    /// @copydoc Deployment::ConnectionResourceDeploymentDescription::targetName
+    /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::targetName
     //@{
     inline void targetName (const std::string& _targetName);
     inline void targetName (std::string&& _targetName);
@@ -1057,7 +1057,7 @@ namespace Deployment
     inline std::string& targetName ();
     //@}
 
-    /// @copydoc Deployment::ConnectionResourceDeploymentDescription::requirementName
+    /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::requirementName
     //@{
     inline void requirementName (const std::string& _requirementName);
     inline void requirementName (std::string&& _requirementName);
@@ -1065,7 +1065,7 @@ namespace Deployment
     inline std::string& requirementName ();
     //@}
 
-    /// @copydoc Deployment::ConnectionResourceDeploymentDescription::resourceName
+    /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::resourceName
     //@{
     inline void resourceName (const std::string& _resourceName);
     inline void resourceName (std::string&& _resourceName);
@@ -1073,7 +1073,7 @@ namespace Deployment
     inline std::string& resourceName ();
     //@}
 
-    /// @copydoc Deployment::ConnectionResourceDeploymentDescription::property
+    /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::property
     //@{
     inline void property (const ::Deployment::Properties& _property);
     inline void property (::Deployment::Properties&& _property);
@@ -1092,12 +1092,12 @@ namespace Deployment
   };// ConnectionResourceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ConnectionResourceDeploymentDescriptions
+  /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescriptions
   typedef std::vector < ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::PlanConnectionDescription
+  /// @copydoc test.idl::Deployment::PlanConnectionDescription
   class PlanConnectionDescription
   {
   public:
@@ -1125,7 +1125,7 @@ namespace Deployment
     /// Move assignment operator
     PlanConnectionDescription& operator= (PlanConnectionDescription&&) = default;
 
-    /// @copydoc Deployment::PlanConnectionDescription::name
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -1133,7 +1133,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::PlanConnectionDescription::source
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
@@ -1141,7 +1141,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
-    /// @copydoc Deployment::PlanConnectionDescription::deployRequirement
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::deployRequirement
     //@{
     inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
     inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
@@ -1149,7 +1149,7 @@ namespace Deployment
     inline ::Deployment::Requirements& deployRequirement ();
     //@}
 
-    /// @copydoc Deployment::PlanConnectionDescription::externalEndpoint
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::externalEndpoint
     //@{
     inline void externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _externalEndpoint);
     inline void externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _externalEndpoint);
@@ -1157,7 +1157,7 @@ namespace Deployment
     inline ::Deployment::ComponentExternalPortEndpoints& externalEndpoint ();
     //@}
 
-    /// @copydoc Deployment::PlanConnectionDescription::internalEndpoint
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::internalEndpoint
     //@{
     inline void internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _internalEndpoint);
     inline void internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _internalEndpoint);
@@ -1165,7 +1165,7 @@ namespace Deployment
     inline ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint ();
     //@}
 
-    /// @copydoc Deployment::PlanConnectionDescription::externalReference
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::externalReference
     //@{
     inline void externalReference (const ::Deployment::ExternalReferenceEndpoints& _externalReference);
     inline void externalReference (::Deployment::ExternalReferenceEndpoints&& _externalReference);
@@ -1173,7 +1173,7 @@ namespace Deployment
     inline ::Deployment::ExternalReferenceEndpoints& externalReference ();
     //@}
 
-    /// @copydoc Deployment::PlanConnectionDescription::deployedResource
+    /// @copydoc test.idl::Deployment::PlanConnectionDescription::deployedResource
     //@{
     inline void deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _deployedResource);
     inline void deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _deployedResource);
@@ -1195,12 +1195,12 @@ namespace Deployment
   };// PlanConnectionDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::PlanConnectionDescriptions
+  /// @copydoc test.idl::Deployment::PlanConnectionDescriptions
   typedef std::vector < PlanConnectionDescription> PlanConnectionDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::PlanSubcomponentPropertyReference
+  /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference
   class PlanSubcomponentPropertyReference
   {
   public:
@@ -1223,7 +1223,7 @@ namespace Deployment
     /// Move assignment operator
     PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&&) = default;
 
-    /// @copydoc Deployment::PlanSubcomponentPropertyReference::propertyName
+    /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference::propertyName
     //@{
     inline void propertyName (const std::string& _propertyName);
     inline void propertyName (std::string&& _propertyName);
@@ -1231,7 +1231,7 @@ namespace Deployment
     inline std::string& propertyName ();
     //@}
 
-    /// @copydoc Deployment::PlanSubcomponentPropertyReference::instanceRef
+    /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference::instanceRef
     //@{
     inline void instanceRef (uint32_t _instanceRef);
     inline uint32_t instanceRef () const;
@@ -1247,12 +1247,12 @@ namespace Deployment
   };// PlanSubcomponentPropertyReference
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::PlanSubcomponentPropertyReferences
+  /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReferences
   typedef std::vector < PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::PlanPropertyMapping
+  /// @copydoc test.idl::Deployment::PlanPropertyMapping
   class PlanPropertyMapping
   {
   public:
@@ -1277,7 +1277,7 @@ namespace Deployment
     /// Move assignment operator
     PlanPropertyMapping& operator= (PlanPropertyMapping&&) = default;
 
-    /// @copydoc Deployment::PlanPropertyMapping::name
+    /// @copydoc test.idl::Deployment::PlanPropertyMapping::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -1285,7 +1285,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::PlanPropertyMapping::source
+    /// @copydoc test.idl::Deployment::PlanPropertyMapping::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
@@ -1293,7 +1293,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
-    /// @copydoc Deployment::PlanPropertyMapping::externalName
+    /// @copydoc test.idl::Deployment::PlanPropertyMapping::externalName
     //@{
     inline void externalName (const std::string& _externalName);
     inline void externalName (std::string&& _externalName);
@@ -1301,7 +1301,7 @@ namespace Deployment
     inline std::string& externalName ();
     //@}
 
-    /// @copydoc Deployment::PlanPropertyMapping::delegatesTo
+    /// @copydoc test.idl::Deployment::PlanPropertyMapping::delegatesTo
     //@{
     inline void delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _delegatesTo);
     inline void delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _delegatesTo);
@@ -1320,12 +1320,12 @@ namespace Deployment
   };// PlanPropertyMapping
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::PlanPropertyMappings
+  /// @copydoc test.idl::Deployment::PlanPropertyMappings
   typedef std::vector < PlanPropertyMapping> PlanPropertyMappings;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ImplementationDependency
+  /// @copydoc test.idl::Deployment::ImplementationDependency
   class ImplementationDependency
   {
   public:
@@ -1347,7 +1347,7 @@ namespace Deployment
     /// Move assignment operator
     ImplementationDependency& operator= (ImplementationDependency&&) = default;
 
-    /// @copydoc Deployment::ImplementationDependency::requiredType
+    /// @copydoc test.idl::Deployment::ImplementationDependency::requiredType
     //@{
     inline void requiredType (const std::string& _requiredType);
     inline void requiredType (std::string&& _requiredType);
@@ -1363,12 +1363,12 @@ namespace Deployment
   };// ImplementationDependency
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ImplementationDependencies
+  /// @copydoc test.idl::Deployment::ImplementationDependencies
   typedef std::vector < ImplementationDependency> ImplementationDependencies;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ResourceDeploymentDescription
+  /// @copydoc test.idl::Deployment::ResourceDeploymentDescription
   class ResourceDeploymentDescription
   {
   public:
@@ -1392,7 +1392,7 @@ namespace Deployment
     /// Move assignment operator
     ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&&) = default;
 
-    /// @copydoc Deployment::ResourceDeploymentDescription::requirementName
+    /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::requirementName
     //@{
     inline void requirementName (const std::string& _requirementName);
     inline void requirementName (std::string&& _requirementName);
@@ -1400,7 +1400,7 @@ namespace Deployment
     inline std::string& requirementName ();
     //@}
 
-    /// @copydoc Deployment::ResourceDeploymentDescription::resourceName
+    /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::resourceName
     //@{
     inline void resourceName (const std::string& _resourceName);
     inline void resourceName (std::string&& _resourceName);
@@ -1408,7 +1408,7 @@ namespace Deployment
     inline std::string& resourceName ();
     //@}
 
-    /// @copydoc Deployment::ResourceDeploymentDescription::property
+    /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::property
     //@{
     inline void property (const ::Deployment::Properties& _property);
     inline void property (::Deployment::Properties&& _property);
@@ -1426,12 +1426,12 @@ namespace Deployment
   };// ResourceDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ResourceDeploymentDescriptions
+  /// @copydoc test.idl::Deployment::ResourceDeploymentDescriptions
   typedef std::vector < ResourceDeploymentDescription> ResourceDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ArtifactDeploymentDescription
+  /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription
   class ArtifactDeploymentDescription
   {
   public:
@@ -1459,7 +1459,7 @@ namespace Deployment
     /// Move assignment operator
     ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&&) = default;
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::name
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -1467,7 +1467,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::location
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::location
     //@{
     inline void location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _location);
     inline void location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _location);
@@ -1475,7 +1475,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& location ();
     //@}
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::node
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::node
     //@{
     inline void node (const std::string& _node);
     inline void node (std::string&& _node);
@@ -1483,7 +1483,7 @@ namespace Deployment
     inline std::string& node ();
     //@}
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::source
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
@@ -1491,7 +1491,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::execParameter
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::execParameter
     //@{
     inline void execParameter (const ::Deployment::Properties& _execParameter);
     inline void execParameter (::Deployment::Properties&& _execParameter);
@@ -1499,7 +1499,7 @@ namespace Deployment
     inline ::Deployment::Properties& execParameter ();
     //@}
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::deployRequirement
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::deployRequirement
     //@{
     inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
     inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
@@ -1507,7 +1507,7 @@ namespace Deployment
     inline ::Deployment::Requirements& deployRequirement ();
     //@}
 
-    /// @copydoc Deployment::ArtifactDeploymentDescription::deployedResource
+    /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::deployedResource
     //@{
     inline void deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _deployedResource);
     inline void deployedResource (::Deployment::ResourceDeploymentDescriptions&& _deployedResource);
@@ -1529,26 +1529,26 @@ namespace Deployment
   };// ArtifactDeploymentDescription
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ArtifactDeploymentDescriptions
+  /// @copydoc test.idl::Deployment::ArtifactDeploymentDescriptions
   typedef std::vector < ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
 
   // generated from c++11/templates/cli/hdr/enum.erb
 
-  /// @copydoc Deployment::PlanLocalityKind
+  /// @copydoc test.idl::Deployment::PlanLocalityKind
   enum class PlanLocalityKind : uint32_t
   {
-    /// @copydoc Deployment::PlanLocalityKind::PlanSameProcess
+    /// @copydoc test.idl::Deployment::PlanLocalityKind::PlanSameProcess
     PlanSameProcess,
-    /// @copydoc Deployment::PlanLocalityKind::PlanDifferentProcess
+    /// @copydoc test.idl::Deployment::PlanLocalityKind::PlanDifferentProcess
     PlanDifferentProcess,
-    /// @copydoc Deployment::PlanLocalityKind::PlanNoConstraint
+    /// @copydoc test.idl::Deployment::PlanLocalityKind::PlanNoConstraint
     PlanNoConstraint
   };// PlanLocalityKind
 
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::PlanLocality
+  /// @copydoc test.idl::Deployment::PlanLocality
   class PlanLocality
   {
   public:
@@ -1571,14 +1571,14 @@ namespace Deployment
     /// Move assignment operator
     PlanLocality& operator= (PlanLocality&&) = default;
 
-    /// @copydoc Deployment::PlanLocality::constraint
+    /// @copydoc test.idl::Deployment::PlanLocality::constraint
     //@{
     inline void constraint (::Deployment::PlanLocalityKind _constraint);
     inline ::Deployment::PlanLocalityKind constraint () const;
     inline ::Deployment::PlanLocalityKind& constraint ();
     //@}
 
-    /// @copydoc Deployment::PlanLocality::constrainedInstanceRef
+    /// @copydoc test.idl::Deployment::PlanLocality::constrainedInstanceRef
     //@{
     inline void constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _constrainedInstanceRef);
     inline void constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _constrainedInstanceRef);
@@ -1595,12 +1595,12 @@ namespace Deployment
   };// PlanLocality
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::PlanLocalities
+  /// @copydoc test.idl::Deployment::PlanLocalities
   typedef std::vector < PlanLocality> PlanLocalities;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::DeploymentPlan
+  /// @copydoc test.idl::Deployment::DeploymentPlan
   class DeploymentPlan
   {
   public:
@@ -1632,7 +1632,7 @@ namespace Deployment
     /// Move assignment operator
     DeploymentPlan& operator= (DeploymentPlan&&) = default;
 
-    /// @copydoc Deployment::DeploymentPlan::label
+    /// @copydoc test.idl::Deployment::DeploymentPlan::label
     //@{
     inline void label (const std::string& _label);
     inline void label (std::string&& _label);
@@ -1640,7 +1640,7 @@ namespace Deployment
     inline std::string& label ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::UUID
+    /// @copydoc test.idl::Deployment::DeploymentPlan::UUID
     //@{
     inline void UUID (const std::string& _UUID);
     inline void UUID (std::string&& _UUID);
@@ -1648,7 +1648,7 @@ namespace Deployment
     inline std::string& UUID ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::realizes
+    /// @copydoc test.idl::Deployment::DeploymentPlan::realizes
     //@{
     inline void realizes (const ::Deployment::ComponentInterfaceDescription& _realizes);
     inline void realizes (::Deployment::ComponentInterfaceDescription&& _realizes);
@@ -1656,7 +1656,7 @@ namespace Deployment
     inline ::Deployment::ComponentInterfaceDescription& realizes ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::implementation
+    /// @copydoc test.idl::Deployment::DeploymentPlan::implementation
     //@{
     inline void implementation (const ::Deployment::MonolithicDeploymentDescriptions& _implementation);
     inline void implementation (::Deployment::MonolithicDeploymentDescriptions&& _implementation);
@@ -1664,7 +1664,7 @@ namespace Deployment
     inline ::Deployment::MonolithicDeploymentDescriptions& implementation ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::instance
+    /// @copydoc test.idl::Deployment::DeploymentPlan::instance
     //@{
     inline void instance (const ::Deployment::InstanceDeploymentDescriptions& _instance);
     inline void instance (::Deployment::InstanceDeploymentDescriptions&& _instance);
@@ -1672,7 +1672,7 @@ namespace Deployment
     inline ::Deployment::InstanceDeploymentDescriptions& instance ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::connection
+    /// @copydoc test.idl::Deployment::DeploymentPlan::connection
     //@{
     inline void connection (const ::Deployment::PlanConnectionDescriptions& _connection);
     inline void connection (::Deployment::PlanConnectionDescriptions&& _connection);
@@ -1680,7 +1680,7 @@ namespace Deployment
     inline ::Deployment::PlanConnectionDescriptions& connection ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::externalProperty
+    /// @copydoc test.idl::Deployment::DeploymentPlan::externalProperty
     //@{
     inline void externalProperty (const ::Deployment::PlanPropertyMappings& _externalProperty);
     inline void externalProperty (::Deployment::PlanPropertyMappings&& _externalProperty);
@@ -1688,7 +1688,7 @@ namespace Deployment
     inline ::Deployment::PlanPropertyMappings& externalProperty ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::dependsOn
+    /// @copydoc test.idl::Deployment::DeploymentPlan::dependsOn
     //@{
     inline void dependsOn (const ::Deployment::ImplementationDependencies& _dependsOn);
     inline void dependsOn (::Deployment::ImplementationDependencies&& _dependsOn);
@@ -1696,7 +1696,7 @@ namespace Deployment
     inline ::Deployment::ImplementationDependencies& dependsOn ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::artifact
+    /// @copydoc test.idl::Deployment::DeploymentPlan::artifact
     //@{
     inline void artifact (const ::Deployment::ArtifactDeploymentDescriptions& _artifact);
     inline void artifact (::Deployment::ArtifactDeploymentDescriptions&& _artifact);
@@ -1704,7 +1704,7 @@ namespace Deployment
     inline ::Deployment::ArtifactDeploymentDescriptions& artifact ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::infoProperty
+    /// @copydoc test.idl::Deployment::DeploymentPlan::infoProperty
     //@{
     inline void infoProperty (const ::Deployment::Properties& _infoProperty);
     inline void infoProperty (::Deployment::Properties&& _infoProperty);
@@ -1712,7 +1712,7 @@ namespace Deployment
     inline ::Deployment::Properties& infoProperty ();
     //@}
 
-    /// @copydoc Deployment::DeploymentPlan::localityConstraint
+    /// @copydoc test.idl::Deployment::DeploymentPlan::localityConstraint
     //@{
     inline void localityConstraint (const ::Deployment::PlanLocalities& _localityConstraint);
     inline void localityConstraint (::Deployment::PlanLocalities&& _localityConstraint);
@@ -1740,13 +1740,13 @@ namespace Deployment
 
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Deployment
+/// @copydoc test.idl::Deployment
 namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ComponentPackageReference
+  /// @copydoc test.idl::Deployment::ComponentPackageReference
   class ComponentPackageReference
   {
   public:
@@ -1770,7 +1770,7 @@ namespace Deployment
     /// Move assignment operator
     ComponentPackageReference& operator= (ComponentPackageReference&&) = default;
 
-    /// @copydoc Deployment::ComponentPackageReference::requiredUUID
+    /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredUUID
     //@{
     inline void requiredUUID (const std::string& _requiredUUID);
     inline void requiredUUID (std::string&& _requiredUUID);
@@ -1778,7 +1778,7 @@ namespace Deployment
     inline std::string& requiredUUID ();
     //@}
 
-    /// @copydoc Deployment::ComponentPackageReference::requiredName
+    /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredName
     //@{
     inline void requiredName (const std::string& _requiredName);
     inline void requiredName (std::string&& _requiredName);
@@ -1786,7 +1786,7 @@ namespace Deployment
     inline std::string& requiredName ();
     //@}
 
-    /// @copydoc Deployment::ComponentPackageReference::requiredType
+    /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredType
     //@{
     inline void requiredType (const ::Deployment::ComponentInterfaceDescription& _requiredType);
     inline void requiredType (::Deployment::ComponentInterfaceDescription&& _requiredType);
@@ -1804,16 +1804,16 @@ namespace Deployment
   };// ComponentPackageReference
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ComponentPackageReferences
+  /// @copydoc test.idl::Deployment::ComponentPackageReferences
   typedef std::vector < ComponentPackageReference> ComponentPackageReferences;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ResourceUsageKinds
+  /// @copydoc test.idl::Deployment::ResourceUsageKinds
   typedef std::vector < ::Deployment::ResourceUsageKind> ResourceUsageKinds;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::ImplementationRequirement
+  /// @copydoc test.idl::Deployment::ImplementationRequirement
   class ImplementationRequirement
   {
   public:
@@ -1840,7 +1840,7 @@ namespace Deployment
     /// Move assignment operator
     ImplementationRequirement& operator= (ImplementationRequirement&&) = default;
 
-    /// @copydoc Deployment::ImplementationRequirement::resourceUsage
+    /// @copydoc test.idl::Deployment::ImplementationRequirement::resourceUsage
     //@{
     inline void resourceUsage (const ::Deployment::ResourceUsageKinds& _resourceUsage);
     inline void resourceUsage (::Deployment::ResourceUsageKinds&& _resourceUsage);
@@ -1848,7 +1848,7 @@ namespace Deployment
     inline ::Deployment::ResourceUsageKinds& resourceUsage ();
     //@}
 
-    /// @copydoc Deployment::ImplementationRequirement::resourcePort
+    /// @copydoc test.idl::Deployment::ImplementationRequirement::resourcePort
     //@{
     inline void resourcePort (const std::string& _resourcePort);
     inline void resourcePort (std::string&& _resourcePort);
@@ -1856,7 +1856,7 @@ namespace Deployment
     inline std::string& resourcePort ();
     //@}
 
-    /// @copydoc Deployment::ImplementationRequirement::componentPort
+    /// @copydoc test.idl::Deployment::ImplementationRequirement::componentPort
     //@{
     inline void componentPort (const std::string& _componentPort);
     inline void componentPort (std::string&& _componentPort);
@@ -1864,7 +1864,7 @@ namespace Deployment
     inline std::string& componentPort ();
     //@}
 
-    /// @copydoc Deployment::ImplementationRequirement::name
+    /// @copydoc test.idl::Deployment::ImplementationRequirement::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -1872,7 +1872,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::ImplementationRequirement::resourceType
+    /// @copydoc test.idl::Deployment::ImplementationRequirement::resourceType
     //@{
     inline void resourceType (const std::string& _resourceType);
     inline void resourceType (std::string&& _resourceType);
@@ -1880,7 +1880,7 @@ namespace Deployment
     inline std::string& resourceType ();
     //@}
 
-    /// @copydoc Deployment::ImplementationRequirement::property
+    /// @copydoc test.idl::Deployment::ImplementationRequirement::property
     //@{
     inline void property (const ::Deployment::Properties& _property);
     inline void property (::Deployment::Properties&& _property);
@@ -1901,12 +1901,12 @@ namespace Deployment
   };// ImplementationRequirement
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::ImplementationRequirements
+  /// @copydoc test.idl::Deployment::ImplementationRequirements
   typedef std::vector < ImplementationRequirement> ImplementationRequirements;
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Deployment::Capability
+  /// @copydoc test.idl::Deployment::Capability
   class Capability
   {
   public:
@@ -1930,7 +1930,7 @@ namespace Deployment
     /// Move assignment operator
     Capability& operator= (Capability&&) = default;
 
-    /// @copydoc Deployment::Capability::name
+    /// @copydoc test.idl::Deployment::Capability::name
     //@{
     inline void name (const std::string& _name);
     inline void name (std::string&& _name);
@@ -1938,7 +1938,7 @@ namespace Deployment
     inline std::string& name ();
     //@}
 
-    /// @copydoc Deployment::Capability::resourceType
+    /// @copydoc test.idl::Deployment::Capability::resourceType
     //@{
     inline void resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _resourceType);
     inline void resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _resourceType);
@@ -1946,7 +1946,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType ();
     //@}
 
-    /// @copydoc Deployment::Capability::property
+    /// @copydoc test.idl::Deployment::Capability::property
     //@{
     inline void property (const ::Deployment::SatisfierProperties& _property);
     inline void property (::Deployment::SatisfierProperties&& _property);
@@ -1964,7 +1964,7 @@ namespace Deployment
   };// Capability
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Deployment::Capabilities
+  /// @copydoc test.idl::Deployment::Capabilities
   typedef std::vector < Capability> Capabilities;
 } // namespace Deployment
 
@@ -6755,6 +6755,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EJJADGGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BFDJEJBI_INCLUDED__ */
 
 // -*- END -*-

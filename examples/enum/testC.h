@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_CFJAAJCB_INCLUDED__
-#define __RIDL_TESTC_H_CFJAAJCB_INCLUDED__
+#ifndef __RIDL_TESTC_H_CBHEEEAD_INCLUDED__
+#define __RIDL_TESTC_H_CBHEEEAD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -30,26 +30,26 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/enum.erb
 
-  /// @copydoc Test::EEnum
+  /// @copydoc test.idl::Test::EEnum
   enum class EEnum : uint32_t
   {
-    /// @copydoc Test::EEnum::A
+    /// @copydoc test.idl::Test::EEnum::A
     A,
-    /// @copydoc Test::EEnum::B
+    /// @copydoc test.idl::Test::EEnum::B
     B,
-    /// @copydoc Test::EEnum::C
+    /// @copydoc test.idl::Test::EEnum::C
     C
   };// EEnum
 
 
   // generated from StubHeaderWriter#visit_const
-  /// @copydoc Test::my_enum
+  /// @copydoc test.idl::Test::my_enum
   constexpr EEnum my_enum = EEnum::A;
 } // namespace Test
 
@@ -144,6 +144,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CFJAAJCB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CBHEEEAD_INCLUDED__ */
 
 // -*- END -*-

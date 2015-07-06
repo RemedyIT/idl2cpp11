@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JAFFJDGB_INCLUDED__
-#define __RIDL_TESTC_H_JAFFJDGB_INCLUDED__
+#ifndef __RIDL_TESTC_H_JABJAHAJ_INCLUDED__
+#define __RIDL_TESTC_H_JABJAHAJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -155,13 +155,13 @@ public:
   // Operations
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copydoc Example::op1
+  /// @copydoc test.idl::Example::op1
   virtual
   int16_t
   op1 () = 0;
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copydoc Example::op2
+  /// @copydoc test.idl::Example::op2
   virtual
   int32_t
   op2 (
@@ -270,12 +270,12 @@ namespace obv
 } // namespace obv
 
 // generated from c++11/templates/cli/hdr/typedef.erb
-/// @copydoc Bytes
+/// @copydoc test.idl::Bytes
 typedef std::array< uint8_t, 64 > Bytes;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-/// @copydoc S
+/// @copydoc test.idl::S
 class S
 {
 public:
@@ -297,7 +297,7 @@ public:
   /// Move assignment operator
   S& operator= (S&&) = default;
 
-  /// @copydoc S::value
+  /// @copydoc test.idl::S::value
   //@{
   inline void value (int32_t _value);
   inline int32_t value () const;
@@ -372,7 +372,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_A_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
-/// @copydoc A
+/// @copydoc test.idl::A
 class A
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -387,7 +387,7 @@ public:
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copydoc A::op
+  /// @copydoc test.idl::A::op
   virtual
   void
   op ();
@@ -883,7 +883,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_X_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
-/// @copydoc X
+/// @copydoc test.idl::X
 class X
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -898,7 +898,7 @@ public:
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copydoc X::op
+  /// @copydoc test.idl::X::op
   virtual
   void
   op (
@@ -931,14 +931,14 @@ private:
 
 // generated from c++11/templates/cli/hdr/enum.erb
 
-/// @copydoc Color
+/// @copydoc test.idl::Color
 enum class Color : uint32_t
 {
-  /// @copydoc Color::red
+  /// @copydoc test.idl::Color::red
   red,
-  /// @copydoc Color::green
+  /// @copydoc test.idl::Color::green
   green,
-  /// @copydoc Color::blue
+  /// @copydoc test.idl::Color::blue
   blue
 };// Color
 
@@ -1050,7 +1050,7 @@ namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-/// @copydoc ColorValue2
+/// @copydoc test.idl::ColorValue2
 class ColorValue2
 {
 public:
@@ -1072,7 +1072,7 @@ public:
   /// Move assignment operator
   ColorValue2& operator= (ColorValue2&&) = default;
 
-  /// @copydoc ColorValue2::col
+  /// @copydoc test.idl::ColorValue2::col
   //@{
   inline void col (::Color _col);
   inline ::Color col () const;
@@ -1147,7 +1147,7 @@ namespace TAOX11_NAMESPACE
 #endif // !_INTF_A1_TRAITS_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_pre.erb
-/// @copydoc A1
+/// @copydoc test.idl::A1
 class A1
   : public virtual TAOX11_NAMESPACE::CORBA::Object
 {
@@ -1162,7 +1162,7 @@ public:
   //@}
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copydoc A1::op
+  /// @copydoc test.idl::A1::op
   virtual
   void
   op ();
@@ -1313,7 +1313,7 @@ public:
   // Operations
 
   // generated from c++11/templates/cli/hdr/operation.erb
-  /// @copydoc A1::op
+  /// @copydoc test.idl::A1::op
   virtual
   void
   op () = 0;
@@ -2410,6 +2410,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JAFFJDGB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JABJAHAJ_INCLUDED__ */
 
 // -*- END -*-

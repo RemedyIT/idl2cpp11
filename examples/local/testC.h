@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_HIJGDEBH_INCLUDED__
-#define __RIDL_TESTC_H_HIJGDEBH_INCLUDED__
+#ifndef __RIDL_TESTC_H_CFBBDHJB_INCLUDED__
+#define __RIDL_TESTC_H_CFBBDHJB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -31,7 +31,7 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
@@ -96,7 +96,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Foo
+  /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::LocalObject
   {
@@ -114,7 +114,7 @@ namespace Test
     virtual bool _is_a (const std::string& local_type_id) override;
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::do_something
+    /// @copydoc test.idl::Test::Foo::do_something
     virtual
     void
     do_something () = 0;
@@ -207,7 +207,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Bar
+  /// @copydoc test.idl::Test::Bar
   class Bar
     : public virtual TAOX11_NAMESPACE::CORBA::LocalObject
   {
@@ -225,7 +225,7 @@ namespace Test
     virtual bool _is_a (const std::string& local_type_id) override;
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Bar::do_foo
+    /// @copydoc test.idl::Test::Bar::do_foo
     virtual
     void
     do_foo (
@@ -401,6 +401,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HIJGDEBH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CFBBDHJB_INCLUDED__ */
 
 // -*- END -*-

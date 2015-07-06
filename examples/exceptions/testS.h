@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_BEBEAGHE_INCLUDED__
-#define __RIDL_TESTS_H_BEBEAGHE_INCLUDED__
+#ifndef __RIDL_TESTS_H_IDHEGFAJ_INCLUDED__
+#define __RIDL_TESTS_H_IDHEGFAJ_INCLUDED__
 
 #include "testC.h"
 
@@ -66,7 +66,7 @@ namespace Test
       virtual const std::string &_interface_repository_id () const override;
 
       // generated from c++11/templates/srv/hdr/operation.erb
-      /// @copydoc Test::Foo::do_it
+      /// @copydoc test.idl::Test::Foo::do_it
       virtual
       void
       do_it () = 0;
@@ -87,7 +87,7 @@ namespace Test
           const std::string& _v) = 0;
 
       // generated from c++11/templates/srv/hdr/operation.erb
-      /// @copydoc Test::Foo::shutdown
+      /// @copydoc test.idl::Test::Foo::shutdown
       virtual
       void
       shutdown () = 0;
@@ -138,6 +138,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_BEBEAGHE_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_IDHEGFAJ_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_FIEAIBBJ_INCLUDED__
-#define __RIDL_TESTC_H_FIEAIBBJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_GIGBBBCE_INCLUDED__
+#define __RIDL_TESTC_H_GIGBBBCE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -31,20 +31,20 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::F
+  /// @copydoc test.idl::Test::F
   typedef std::array< float, 10 > F;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::V
+  /// @copydoc test.idl::Test::V
   typedef std::array< std::string, 10 > V;
 
   // generated from c++11/templates/cli/hdr/typedef.erb
-  /// @copydoc Test::M
+  /// @copydoc test.idl::Test::M
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
 
   // generated from StubHeaderWriter#enter_interface
@@ -115,7 +115,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Foo
+  /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -130,7 +130,7 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::op
+    /// @copydoc test.idl::Test::Foo::op
     virtual
     void
     op (
@@ -443,6 +443,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FIEAIBBJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GIGBBBCE_INCLUDED__ */
 
 // -*- END -*-

@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JGHCJAEJ_INCLUDED__
-#define __RIDL_TESTC_H_JGHCJAEJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_JHHBDEFA_INCLUDED__
+#define __RIDL_TESTC_H_JHHBDEFA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -32,7 +32,7 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-/// @copydoc Global
+/// @copydoc test.idl::Global
 class Global
 {
 public:
@@ -54,7 +54,7 @@ public:
   /// Move assignment operator
   Global& operator= (Global&&) = default;
 
-  /// @copydoc Global::x
+  /// @copydoc test.idl::Global::x
   //@{
   inline void x (int32_t _x);
   inline int32_t x () const;
@@ -69,35 +69,35 @@ private:
 };// Global
 
 // generated from StubHeaderWriter#enter_module
-/// @copydoc Test
+/// @copydoc test.idl::Test
 namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/enum.erb
 
-  /// @copydoc Test::DataType
+  /// @copydoc test.idl::Test::DataType
   enum class DataType : uint32_t
   {
-    /// @copydoc Test::DataType::dtEmpty
+    /// @copydoc test.idl::Test::DataType::dtEmpty
     dtEmpty,
-    /// @copydoc Test::DataType::dtLong
+    /// @copydoc test.idl::Test::DataType::dtLong
     dtLong,
-    /// @copydoc Test::DataType::dtShort
+    /// @copydoc test.idl::Test::DataType::dtShort
     dtShort,
-    /// @copydoc Test::DataType::dtString
+    /// @copydoc test.idl::Test::DataType::dtString
     dtString,
-    /// @copydoc Test::DataType::dtPoint
+    /// @copydoc test.idl::Test::DataType::dtPoint
     dtPoint,
-    /// @copydoc Test::DataType::dtTrack
+    /// @copydoc test.idl::Test::DataType::dtTrack
     dtTrack,
-    /// @copydoc Test::DataType::dtGlobal
+    /// @copydoc test.idl::Test::DataType::dtGlobal
     dtGlobal
   };// DataType
 
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Test::Point
+  /// @copydoc test.idl::Test::Point
   class Point
   {
   public:
@@ -120,14 +120,14 @@ namespace Test
     /// Move assignment operator
     Point& operator= (Point&&) = default;
 
-    /// @copydoc Test::Point::x
+    /// @copydoc test.idl::Test::Point::x
     //@{
     inline void x (int32_t _x);
     inline int32_t x () const;
     inline int32_t& x ();
     //@}
 
-    /// @copydoc Test::Point::y
+    /// @copydoc test.idl::Test::Point::y
     //@{
     inline void y (int32_t _y);
     inline int32_t y () const;
@@ -144,7 +144,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Test::Track
+  /// @copydoc test.idl::Test::Track
   class Track
   {
   public:
@@ -167,14 +167,14 @@ namespace Test
     /// Move assignment operator
     Track& operator= (Track&&) = default;
 
-    /// @copydoc Test::Track::id
+    /// @copydoc test.idl::Test::Track::id
     //@{
     inline void id (int32_t _id);
     inline int32_t id () const;
     inline int32_t& id ();
     //@}
 
-    /// @copydoc Test::Track::p
+    /// @copydoc test.idl::Test::Track::p
     //@{
     inline void p (const ::Test::Point& _p);
     inline void p (::Test::Point&& _p);
@@ -192,7 +192,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/union_pre.erb
 
-  /// @copydoc Test::Data
+  /// @copydoc test.idl::Test::Data
   class Data
   {
   public:
@@ -219,7 +219,7 @@ namespace Test
     /// Get the discriminator
     inline DataType _d () const;
 
-    /// @copydoc Test::Data::longData
+    /// @copydoc test.idl::Test::Data::longData
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -232,7 +232,7 @@ namespace Test
     inline int32_t& longData ();
     //@}
 
-    /// @copydoc Test::Data::shortData
+    /// @copydoc test.idl::Test::Data::shortData
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -245,7 +245,7 @@ namespace Test
     inline int16_t& shortData ();
     //@}
 
-    /// @copydoc Test::Data::stringData
+    /// @copydoc test.idl::Test::Data::stringData
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -261,7 +261,7 @@ namespace Test
     inline std::string& stringData ();
     //@}
 
-    /// @copydoc Test::Data::pointData
+    /// @copydoc test.idl::Test::Data::pointData
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -277,7 +277,7 @@ namespace Test
     inline ::Test::Point& pointData ();
     //@}
 
-    /// @copydoc Test::Data::trackData
+    /// @copydoc test.idl::Test::Data::trackData
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -293,7 +293,7 @@ namespace Test
     inline ::Test::Track& trackData ();
     //@}
 
-    /// @copydoc Test::Data::globalData
+    /// @copydoc test.idl::Test::Data::globalData
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -336,7 +336,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
-  /// @copydoc Test::S
+  /// @copydoc test.idl::Test::S
   class S
   {
   public:
@@ -358,7 +358,7 @@ namespace Test
     /// Move assignment operator
     S& operator= (S&&) = default;
 
-    /// @copydoc Test::S::len
+    /// @copydoc test.idl::Test::S::len
     //@{
     inline void len (int32_t _len);
     inline int32_t len () const;
@@ -439,7 +439,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/union_pre.erb
 
-  /// @copydoc Test::U
+  /// @copydoc test.idl::Test::U
   class U
   {
   public:
@@ -466,7 +466,7 @@ namespace Test
     /// Get the discriminator
     inline int32_t _d () const;
 
-    /// @copydoc Test::U::x
+    /// @copydoc test.idl::Test::U::x
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -479,7 +479,7 @@ namespace Test
     inline int32_t& x ();
     //@}
 
-    /// @copydoc Test::U::z
+    /// @copydoc test.idl::Test::U::z
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -495,7 +495,7 @@ namespace Test
     inline std::string& z ();
     //@}
 
-    /// @copydoc Test::U::w
+    /// @copydoc test.idl::Test::U::w
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -511,7 +511,7 @@ namespace Test
     inline ::Test::S& w ();
     //@}
 
-    /// @copydoc Test::U::obj
+    /// @copydoc test.idl::Test::U::obj
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
@@ -612,7 +612,7 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::Foo
+  /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -627,34 +627,34 @@ namespace Test
     //@}
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::pass_union
+    /// @copydoc test.idl::Test::Foo::pass_union
     virtual
     bool
     pass_union (
         const ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::return_union
+    /// @copydoc test.idl::Test::Foo::return_union
     virtual
     ::Test::Data
     return_union ();
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::get_union
+    /// @copydoc test.idl::Test::Foo::get_union
     virtual
     bool
     get_union (
         ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::update_union
+    /// @copydoc test.idl::Test::Foo::update_union
     virtual
     bool
     update_union (
         ::Test::Data& s);
 
     // generated from c++11/templates/cli/hdr/operation.erb
-    /// @copydoc Test::Foo::shutdown
+    /// @copydoc test.idl::Test::Foo::shutdown
     virtual
     void
     shutdown ();
@@ -687,7 +687,7 @@ namespace Test
   // generated from StubHeaderWriter#enter_interface
 
   // generated from c++11/templates/cli/hdr/interface_pre.erb
-  /// @copydoc Test::A
+  /// @copydoc test.idl::Test::A
   class A
     : public virtual TAOX11_NAMESPACE::CORBA::Object
   {
@@ -2604,6 +2604,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JGHCJAEJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JHHBDEFA_INCLUDED__ */
 
 // -*- END -*-
