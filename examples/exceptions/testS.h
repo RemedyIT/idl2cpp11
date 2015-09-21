@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTS_H_IDHEGFAJ_INCLUDED__
-#define __RIDL_TESTS_H_IDHEGFAJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_HHGCGJFA_INCLUDED__
+#define __RIDL_TESTS_H_HHGCGJFA_INCLUDED__
 
 #include "testC.h"
 
@@ -72,15 +72,18 @@ namespace Test
       do_it () = 0;
 
       // generated from c++11/templates/srv/hdr/attribute.erb
+      /// @copydoc test.idl::Test::Foo::a_number
       virtual
       int32_t
       a_number () = 0;
 
       // generated from c++11/templates/srv/hdr/attribute.erb
+      /// @copydoc test.idl::Test::Foo::a_string
       virtual
       std::string
       a_string () = 0;
 
+      /// @copydoc test.idl::Test::Foo::a_string
       virtual
       void
       a_string (
@@ -138,6 +141,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_IDHEGFAJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_HHGCGJFA_INCLUDED__ */
 
 // -*- END -*-

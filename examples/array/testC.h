@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_GIGBBBCE_INCLUDED__
-#define __RIDL_TESTC_H_GIGBBBCE_INCLUDED__
+#ifndef __RIDL_TESTC_H_CJDCEDCB_INCLUDED__
+#define __RIDL_TESTC_H_CJDCEDCB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -145,8 +145,7 @@ namespace Test
     template <typename _Tp1, typename, typename ...Args>
     friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-    explicit Foo (Foo_proxy_ptr p);
-    explicit Foo (Foo_proxy_ptr p, bool);
+    explicit Foo (Foo_proxy_ptr p, bool inherited = false);
     /// Default constructor
     Foo () = default;
     /// Destructor
@@ -443,6 +442,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GIGBBBCE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CJDCEDCB_INCLUDED__ */
 
 // -*- END -*-

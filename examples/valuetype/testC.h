@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_JABJAHAJ_INCLUDED__
-#define __RIDL_TESTC_H_JABJAHAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_FFGGGJFF_INCLUDED__
+#define __RIDL_TESTC_H_FFGGGJFF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -399,8 +399,7 @@ protected:
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-  explicit A (A_proxy_ptr p);
-  explicit A (A_proxy_ptr p, bool);
+  explicit A (A_proxy_ptr p, bool inherited = false);
   /// Default constructor
   A () = default;
   /// Destructor
@@ -911,8 +910,7 @@ protected:
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-  explicit X (X_proxy_ptr p);
-  explicit X (X_proxy_ptr p, bool);
+  explicit X (X_proxy_ptr p, bool inherited = false);
   /// Default constructor
   X () = default;
   /// Destructor
@@ -1174,8 +1172,7 @@ protected:
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-  explicit A1 (A1_proxy_ptr p);
-  explicit A1 (A1_proxy_ptr p, bool);
+  explicit A1 (A1_proxy_ptr p, bool inherited = false);
   /// Default constructor
   A1 () = default;
   /// Destructor
@@ -2410,6 +2407,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JABJAHAJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FFGGGJFF_INCLUDED__ */
 
 // -*- END -*-
