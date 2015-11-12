@@ -8,8 +8,8 @@
  *        http://www.remedy.nl \ http://www.theaceorb.nl
  */
 
-#ifndef __RIDL_TESTC_H_EHCGIEDC_INCLUDED__
-#define __RIDL_TESTC_H_EHCGIEDC_INCLUDED__
+#ifndef __RIDL_TESTC_H_HFBBFCCA_INCLUDED__
+#define __RIDL_TESTC_H_HFBBFCCA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -40,63 +40,63 @@ namespace Test
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ch_val
-  constexpr char ch_val = 'a';
+  constexpr char ch_val {'a'};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::wch_val
-  constexpr wchar_t wch_val = L'X';
+  constexpr wchar_t wch_val {L'X'};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::oct_val
-  constexpr uint8_t oct_val = 123;
+  constexpr uint8_t oct_val {123};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::sh_val
-  constexpr int16_t sh_val = -1023;
+  constexpr int16_t sh_val {-1023};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ush_val
-  constexpr uint16_t ush_val = 1023U;
+  constexpr uint16_t ush_val {1023U};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::l_val
-  constexpr int32_t l_val = -81234;
+  constexpr int32_t l_val {-81234};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ul_val
-  constexpr uint32_t ul_val = 81234UL;
+  constexpr uint32_t ul_val {81234UL};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ll_val
-  constexpr int64_t ll_val = -12345678LL;
+  constexpr int64_t ll_val {-12345678LL};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ull_val
-  constexpr uint64_t ull_val = 12345678ULL;
+  constexpr uint64_t ull_val {12345678ULL};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::f_val
-  constexpr float f_val = 1.23F;
+  constexpr float f_val {1.23F};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::d_val
-  constexpr double d_val = 454.23;
+  constexpr double d_val {454.23};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ld_val
-  constexpr long double ld_val = 678.91L;
+  constexpr long double ld_val {678.91L};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::b_val
-  constexpr bool b_val = true;
+  constexpr bool b_val {true};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::s_val
-  const std::string s_val = "text";
+  const std::string s_val {"text"};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::ws_val
-  const std::wstring ws_val = L"widestring\n \xbf \xfe0e";
+  const std::wstring ws_val {L"widestring\n \xbf \xfe0e"};
 
   // generated from c++11/templates/cli/hdr/typedef.erb
   /// @copydoc test.idl::Test::TCounter
@@ -108,11 +108,11 @@ namespace Test
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::count
-  constexpr TCounter count = 99;
+  constexpr TCounter count {99};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::name
-  const TName name = "wilco";
+  const TName name {"wilco"};
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::double_count
@@ -205,7 +205,7 @@ public:
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::A::pi
-  static constexpr float pi = 3.14159F;
+  static constexpr float pi {3.14159F};
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
@@ -437,6 +437,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EHCGIEDC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HFBBFCCA_INCLUDED__ */
 
 // -*- END -*-
