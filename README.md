@@ -9,3 +9,6 @@ part of this project? Create a pull request with your IDL construct added to
 one of the existing IDL files or create a new IDL file! We will add the generated C++ headers
 that match your IDL!
 
+When you want to try it yourself go to the [TAOX11 website](http://taox11.remedy.nl/software/overview.html)
+and request your own free-of-charge evaluation license.
+
