@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HAGAFFBE_INCLUDED__
-#define __RIDL_TESTC_H_HAGAFFBE_INCLUDED__
+#ifndef __RIDL_TESTC_H_GGADGGDC_INCLUDED__
+#define __RIDL_TESTC_H_GGADGGDC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -23,8 +23,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -63,37 +63,37 @@ public:
 
   /// @copydoc test.idl::RadarTrack::id
   //@{
-  inline void id (const std::string& _id);
-  inline void id (std::string&& _id);
+  inline void id (const std::string& _x11_id);
+  inline void id (std::string&& _x11_id);
   inline const std::string& id () const;
   inline std::string& id ();
   //@}
 
   /// @copydoc test.idl::RadarTrack::x
   //@{
-  inline void x (int32_t _x);
+  inline void x (int32_t _x11_x);
   inline int32_t x () const;
   inline int32_t& x ();
   //@}
 
   /// @copydoc test.idl::RadarTrack::y
   //@{
-  inline void y (int32_t _y);
+  inline void y (int32_t _x11_y);
   inline int32_t y () const;
   inline int32_t& y ();
   //@}
 
   /// @copydoc test.idl::RadarTrack::z
   //@{
-  inline void z (int32_t _z);
+  inline void z (int32_t _x11_z);
   inline int32_t z () const;
   inline int32_t& z ();
   //@}
 
   /// @copydoc test.idl::RadarTrack::plot
   //@{
-  inline void plot (const ::octetseq& _plot);
-  inline void plot (::octetseq&& _plot);
+  inline void plot (const ::octetseq& _x11_plot);
+  inline void plot (::octetseq&& _x11_plot);
   inline const ::octetseq& plot () const;
   inline ::octetseq& plot ();
   //@}
@@ -260,25 +260,25 @@ inline RadarTrack::RadarTrack (
 {
 }
 
-inline void RadarTrack::id (const std::string& _id) { this->id_ = _id; }
-inline void RadarTrack::id (std::string&& _id) { this->id_ = std::move (_id); }
+inline void RadarTrack::id (const std::string& _x11_id) { this->id_ = _x11_id; }
+inline void RadarTrack::id (std::string&& _x11_id) { this->id_ = std::move (_x11_id); }
 inline const std::string& RadarTrack::id () const { return this->id_; }
 inline std::string& RadarTrack::id () { return this->id_; }
 
-inline void RadarTrack::x (int32_t _x) { this->x_ = _x; }
+inline void RadarTrack::x (int32_t _x11_x) { this->x_ = _x11_x; }
 inline int32_t RadarTrack::x () const { return this->x_; }
 inline int32_t& RadarTrack::x () { return this->x_; }
 
-inline void RadarTrack::y (int32_t _y) { this->y_ = _y; }
+inline void RadarTrack::y (int32_t _x11_y) { this->y_ = _x11_y; }
 inline int32_t RadarTrack::y () const { return this->y_; }
 inline int32_t& RadarTrack::y () { return this->y_; }
 
-inline void RadarTrack::z (int32_t _z) { this->z_ = _z; }
+inline void RadarTrack::z (int32_t _x11_z) { this->z_ = _x11_z; }
 inline int32_t RadarTrack::z () const { return this->z_; }
 inline int32_t& RadarTrack::z () { return this->z_; }
 
-inline void RadarTrack::plot (const ::octetseq& _plot) { this->plot_ = _plot; }
-inline void RadarTrack::plot (::octetseq&& _plot) { this->plot_ = std::move (_plot); }
+inline void RadarTrack::plot (const ::octetseq& _x11_plot) { this->plot_ = _x11_plot; }
+inline void RadarTrack::plot (::octetseq&& _x11_plot) { this->plot_ = std::move (_x11_plot); }
 inline const ::octetseq& RadarTrack::plot () const { return this->plot_; }
 inline ::octetseq& RadarTrack::plot () { return this->plot_; }
 
@@ -333,6 +333,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HAGAFFBE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GGADGGDC_INCLUDED__ */
 
 // -*- END -*-
