@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JCJIFHGE_INCLUDED__
-#define __RIDL_TESTC_H_JCJIFHGE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBGFHEGA_INCLUDED__
+#define __RIDL_TESTC_H_IBGFHEGA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -28,8 +28,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -169,7 +169,7 @@ public:
 
   /// @name Public state members
   //@{
-  virtual void val2 (int32_t _val2) = 0;
+  virtual void val2 (int32_t _x11_val2) = 0;
   virtual int32_t val2 () const = 0;
   virtual int32_t& val2 () = 0;
   //@}
@@ -177,14 +177,14 @@ public:
 protected:
   /// @name Private state members
   //@{
-  virtual void val1 (int16_t _val1) = 0;
+  virtual void val1 (int16_t _x11_val1) = 0;
   virtual int16_t val1 () const = 0;
   virtual int16_t& val1 () = 0;
-  virtual void val3 (const std::string& _val3) = 0;
-  virtual void val3 (std::string&& _val3) = 0;
+  virtual void val3 (const std::string& _x11_val3) = 0;
+  virtual void val3 (std::string&& _x11_val3) = 0;
   virtual const std::string& val3 () const = 0;
   virtual std::string& val3 () = 0;
-  virtual void val5 (IDL::traits< Example>::ref_type _val5) = 0;
+  virtual void val5 (IDL::traits< Example>::ref_type _x11_val5) = 0;
   virtual IDL::traits< Example>::ref_type val5 () const = 0;
   virtual IDL::traits< Example>::ref_type& val5 () = 0;
   //@}
@@ -230,23 +230,23 @@ namespace obv
   public:
     /// @name Public state members
     //@{
-    virtual void val2 (int32_t _val2) override;
+    virtual void val2 (int32_t _x11_val2) override;
     virtual int32_t val2 () const override;
     virtual int32_t& val2 () override;
 
     //@}
   protected:
     /// Private state members
-    virtual void val1 (int16_t _val1) override;
+    virtual void val1 (int16_t _x11_val1) override;
     virtual int16_t val1 () const override;
     virtual int16_t& val1 () override;
 
-    virtual void val3 (const std::string& _val3) override;
-    virtual void val3 (std::string&& _val3) override;
+    virtual void val3 (const std::string& _x11_val3) override;
+    virtual void val3 (std::string&& _x11_val3) override;
     virtual const std::string& val3 () const override;
     virtual std::string& val3 () override;
 
-    virtual void val5 (IDL::traits< ::Example>::ref_type _val5) override;
+    virtual void val5 (IDL::traits< ::Example>::ref_type _x11_val5) override;
     virtual IDL::traits< ::Example>::ref_type val5 () const override;
     virtual IDL::traits< ::Example>::ref_type& val5 () override;
 
@@ -299,7 +299,7 @@ public:
 
   /// @copydoc test.idl::S::value
   //@{
-  inline void value (int32_t _value);
+  inline void value (int32_t _x11_value);
   inline int32_t value () const;
   inline int32_t& value ();
   //@}
@@ -560,15 +560,15 @@ public:
 
   /// @name Public state members
   //@{
-  virtual void t (IDL::traits< Val>::ref_type _t) = 0;
+  virtual void t (IDL::traits< Val>::ref_type _x11_t) = 0;
   virtual IDL::traits< Val>::ref_type t () const = 0;
   virtual IDL::traits< Val>::ref_type& t () = 0;
-  virtual void w (const ::Bytes& _w) = 0;
-  virtual void w (::Bytes&& _w) = 0;
+  virtual void w (const ::Bytes& _x11_w) = 0;
+  virtual void w (::Bytes&& _x11_w) = 0;
   virtual const ::Bytes& w () const = 0;
   virtual ::Bytes& w () = 0;
-  virtual void x (const std::string& _x) = 0;
-  virtual void x (std::string&& _x) = 0;
+  virtual void x (const std::string& _x11_x) = 0;
+  virtual void x (std::string&& _x11_x) = 0;
   virtual const std::string& x () const = 0;
   virtual std::string& x () = 0;
   //@}
@@ -576,14 +576,14 @@ public:
 protected:
   /// @name Private state members
   //@{
-  virtual void v (int32_t _v) = 0;
+  virtual void v (int32_t _x11_v) = 0;
   virtual int32_t v () const = 0;
   virtual int32_t& v () = 0;
-  virtual void y (const ::S& _y) = 0;
-  virtual void y (::S&& _y) = 0;
+  virtual void y (const ::S& _x11_y) = 0;
+  virtual void y (::S&& _x11_y) = 0;
   virtual const ::S& y () const = 0;
   virtual ::S& y () = 0;
-  virtual void z (IDL::traits< ::A>::ref_type _z) = 0;
+  virtual void z (IDL::traits< ::A>::ref_type _x11_z) = 0;
   virtual IDL::traits< ::A>::ref_type z () const = 0;
   virtual IDL::traits< ::A>::ref_type& z () = 0;
   //@}
@@ -639,33 +639,33 @@ namespace obv
 
     /// @name Public state members
     //@{
-    virtual void t (IDL::traits< ::Val>::ref_type _t) override;
+    virtual void t (IDL::traits< ::Val>::ref_type _x11_t) override;
     virtual IDL::traits< ::Val>::ref_type t () const override;
     virtual IDL::traits< ::Val>::ref_type& t () override;
 
-    virtual void w (const ::Bytes& _w) override;
-    virtual void w (::Bytes&& _w) override;
+    virtual void w (const ::Bytes& _x11_w) override;
+    virtual void w (::Bytes&& _x11_w) override;
     virtual const ::Bytes& w () const override;
     virtual ::Bytes& w () override;
 
-    virtual void x (const std::string& _x) override;
-    virtual void x (std::string&& _x) override;
+    virtual void x (const std::string& _x11_x) override;
+    virtual void x (std::string&& _x11_x) override;
     virtual const std::string& x () const override;
     virtual std::string& x () override;
 
     //@}
   protected:
     /// Private state members
-    virtual void v (int32_t _v) override;
+    virtual void v (int32_t _x11_v) override;
     virtual int32_t v () const override;
     virtual int32_t& v () override;
 
-    virtual void y (const ::S& _y) override;
-    virtual void y (::S&& _y) override;
+    virtual void y (const ::S& _x11_y) override;
+    virtual void y (::S&& _x11_y) override;
     virtual const ::S& y () const override;
     virtual ::S& y () override;
 
-    virtual void z (IDL::traits< ::A>::ref_type _z) override;
+    virtual void z (IDL::traits< ::A>::ref_type _x11_z) override;
     virtual IDL::traits< ::A>::ref_type z () const override;
     virtual IDL::traits< ::A>::ref_type& z () override;
 
@@ -1072,7 +1072,7 @@ public:
 
   /// @copydoc test.idl::ColorValue2::col
   //@{
-  inline void col (::Color _col);
+  inline void col (::Color _x11_col);
   inline ::Color col () const;
   inline ::Color& col ();
   //@}
@@ -1317,7 +1317,7 @@ public:
 
   /// @name Public state members
   //@{
-  virtual void data (int16_t _data) = 0;
+  virtual void data (int16_t _x11_data) = 0;
   virtual int16_t data () const = 0;
   virtual int16_t& data () = 0;
   //@}
@@ -1357,7 +1357,7 @@ namespace obv
   public:
     /// @name Public state members
     //@{
-    virtual void data (int16_t _data) override;
+    virtual void data (int16_t _x11_data) override;
     virtual int16_t data () const override;
     virtual int16_t& data () override;
 
@@ -2238,7 +2238,7 @@ inline S::S (
 {
 }
 
-inline void S::value (int32_t _value) { this->value_ = _value; }
+inline void S::value (int32_t _x11_value) { this->value_ = _x11_value; }
 inline int32_t S::value () const { return this->value_; }
 inline int32_t& S::value () { return this->value_; }
 
@@ -2254,7 +2254,7 @@ inline ColorValue2::ColorValue2 (
 {
 }
 
-inline void ColorValue2::col (::Color _col) { this->col_ = _col; }
+inline void ColorValue2::col (::Color _x11_col) { this->col_ = _x11_col; }
 inline ::Color ColorValue2::col () const { return this->col_; }
 inline ::Color& ColorValue2::col () { return this->col_; }
 
@@ -2407,6 +2407,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JCJIFHGE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBGFHEGA_INCLUDED__ */
 
 // -*- END -*-

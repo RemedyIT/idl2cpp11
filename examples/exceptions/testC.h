@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCFBBBGC_INCLUDED__
-#define __RIDL_TESTC_H_HCFBBBGC_INCLUDED__
+#ifndef __RIDL_TESTC_H_BDAECIGC_INCLUDED__
+#define __RIDL_TESTC_H_BDAECIGC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -25,8 +25,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -65,8 +65,8 @@ namespace Test
 
     /// @copydoc test.idl::Test::FooEx::message
     //@{
-    void message (const std::string& _message);
-    void message (std::string&& _message);
+    void message (const std::string& _x11_message);
+    void message (std::string&& _x11_message);
     const std::string& message () const;
     std::string& message ();
     //@}
@@ -107,7 +107,7 @@ namespace Test
 
     /// @copydoc test.idl::Test::BooEx::id
     //@{
-    void id (int32_t _id);
+    void id (int32_t _x11_id);
     int32_t id () const;
     int32_t& id ();
     //@}
@@ -460,8 +460,8 @@ inline Test::FooEx::FooEx (
 {
 }
 
-inline void Test::FooEx::message (const std::string& _message) { this->message_ = _message; }
-inline void Test::FooEx::message (std::string&& _message) { this->message_ = std::move (_message); }
+inline void Test::FooEx::message (const std::string& _x11_message) { this->message_ = _x11_message; }
+inline void Test::FooEx::message (std::string&& _x11_message) { this->message_ = std::move (_x11_message); }
 inline const std::string& Test::FooEx::message () const { return this->message_; }
 inline std::string& Test::FooEx::message () { return this->message_; }
 
@@ -479,7 +479,7 @@ inline Test::BooEx::BooEx (
 {
 }
 
-inline void Test::BooEx::id (int32_t _id) { this->id_ = _id; }
+inline void Test::BooEx::id (int32_t _x11_id) { this->id_ = _x11_id; }
 inline int32_t Test::BooEx::id () const { return this->id_; }
 inline int32_t& Test::BooEx::id () { return this->id_; }
 
@@ -503,6 +503,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HCFBBBGC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BDAECIGC_INCLUDED__ */
 
 // -*- END -*-

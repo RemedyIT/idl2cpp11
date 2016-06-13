@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JGEFBDCJ_INCLUDED__
-#define __RIDL_TESTC_H_JGEFBDCJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_BHCBFGFG_INCLUDED__
+#define __RIDL_TESTC_H_BHCBFGFG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -23,8 +23,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -58,29 +58,29 @@ public:
 
   /// @copydoc test.idl::ShapeType::color
   //@{
-  inline void color (const std::string& _color);
-  inline void color (std::string&& _color);
+  inline void color (const std::string& _x11_color);
+  inline void color (std::string&& _x11_color);
   inline const std::string& color () const;
   inline std::string& color ();
   //@}
 
   /// @copydoc test.idl::ShapeType::x
   //@{
-  inline void x (int32_t _x);
+  inline void x (int32_t _x11_x);
   inline int32_t x () const;
   inline int32_t& x ();
   //@}
 
   /// @copydoc test.idl::ShapeType::y
   //@{
-  inline void y (int32_t _y);
+  inline void y (int32_t _x11_y);
   inline int32_t y () const;
   inline int32_t& y ();
   //@}
 
   /// @copydoc test.idl::ShapeType::shapesize
   //@{
-  inline void shapesize (int32_t _shapesize);
+  inline void shapesize (int32_t _x11_shapesize);
   inline int32_t shapesize () const;
   inline int32_t& shapesize ();
   //@}
@@ -123,23 +123,23 @@ public:
 
   /// @copydoc test.idl::Attributes::shape
   //@{
-  inline void shape (const std::string& _shape);
-  inline void shape (std::string&& _shape);
+  inline void shape (const std::string& _x11_shape);
+  inline void shape (std::string&& _x11_shape);
   inline const std::string& shape () const;
   inline std::string& shape ();
   //@}
 
   /// @copydoc test.idl::Attributes::color
   //@{
-  inline void color (const std::string& _color);
-  inline void color (std::string&& _color);
+  inline void color (const std::string& _x11_color);
+  inline void color (std::string&& _x11_color);
   inline const std::string& color () const;
   inline std::string& color ();
   //@}
 
   /// @copydoc test.idl::Attributes::speed
   //@{
-  inline void speed (float _speed);
+  inline void speed (float _x11_speed);
   inline float speed () const;
   inline float& speed ();
   //@}
@@ -372,20 +372,20 @@ inline ShapeType::ShapeType (
 {
 }
 
-inline void ShapeType::color (const std::string& _color) { this->color_ = _color; }
-inline void ShapeType::color (std::string&& _color) { this->color_ = std::move (_color); }
+inline void ShapeType::color (const std::string& _x11_color) { this->color_ = _x11_color; }
+inline void ShapeType::color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
 inline const std::string& ShapeType::color () const { return this->color_; }
 inline std::string& ShapeType::color () { return this->color_; }
 
-inline void ShapeType::x (int32_t _x) { this->x_ = _x; }
+inline void ShapeType::x (int32_t _x11_x) { this->x_ = _x11_x; }
 inline int32_t ShapeType::x () const { return this->x_; }
 inline int32_t& ShapeType::x () { return this->x_; }
 
-inline void ShapeType::y (int32_t _y) { this->y_ = _y; }
+inline void ShapeType::y (int32_t _x11_y) { this->y_ = _x11_y; }
 inline int32_t ShapeType::y () const { return this->y_; }
 inline int32_t& ShapeType::y () { return this->y_; }
 
-inline void ShapeType::shapesize (int32_t _shapesize) { this->shapesize_ = _shapesize; }
+inline void ShapeType::shapesize (int32_t _x11_shapesize) { this->shapesize_ = _x11_shapesize; }
 inline int32_t ShapeType::shapesize () const { return this->shapesize_; }
 inline int32_t& ShapeType::shapesize () { return this->shapesize_; }
 
@@ -408,17 +408,17 @@ inline Attributes::Attributes (
 {
 }
 
-inline void Attributes::shape (const std::string& _shape) { this->shape_ = _shape; }
-inline void Attributes::shape (std::string&& _shape) { this->shape_ = std::move (_shape); }
+inline void Attributes::shape (const std::string& _x11_shape) { this->shape_ = _x11_shape; }
+inline void Attributes::shape (std::string&& _x11_shape) { this->shape_ = std::move (_x11_shape); }
 inline const std::string& Attributes::shape () const { return this->shape_; }
 inline std::string& Attributes::shape () { return this->shape_; }
 
-inline void Attributes::color (const std::string& _color) { this->color_ = _color; }
-inline void Attributes::color (std::string&& _color) { this->color_ = std::move (_color); }
+inline void Attributes::color (const std::string& _x11_color) { this->color_ = _x11_color; }
+inline void Attributes::color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
 inline const std::string& Attributes::color () const { return this->color_; }
 inline std::string& Attributes::color () { return this->color_; }
 
-inline void Attributes::speed (float _speed) { this->speed_ = _speed; }
+inline void Attributes::speed (float _x11_speed) { this->speed_ = _x11_speed; }
 inline float Attributes::speed () const { return this->speed_; }
 inline float& Attributes::speed () { return this->speed_; }
 
@@ -487,6 +487,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JGEFBDCJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BHCBFGFG_INCLUDED__ */
 
 // -*- END -*-

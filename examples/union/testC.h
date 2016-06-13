@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DHHIEHAG_INCLUDED__
-#define __RIDL_TESTC_H_DHHIEHAG_INCLUDED__
+#ifndef __RIDL_TESTC_H_CHGFCAGE_INCLUDED__
+#define __RIDL_TESTC_H_CHGFCAGE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,8 +24,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -56,7 +56,7 @@ public:
 
   /// @copydoc test.idl::Global::x
   //@{
-  inline void x (int32_t _x);
+  inline void x (int32_t _x11_x);
   inline int32_t x () const;
   inline int32_t& x ();
   //@}
@@ -122,14 +122,14 @@ namespace Test
 
     /// @copydoc test.idl::Test::Point::x
     //@{
-    inline void x (int32_t _x);
+    inline void x (int32_t _x11_x);
     inline int32_t x () const;
     inline int32_t& x ();
     //@}
 
     /// @copydoc test.idl::Test::Point::y
     //@{
-    inline void y (int32_t _y);
+    inline void y (int32_t _x11_y);
     inline int32_t y () const;
     inline int32_t& y ();
     //@}
@@ -169,15 +169,15 @@ namespace Test
 
     /// @copydoc test.idl::Test::Track::id
     //@{
-    inline void id (int32_t _id);
+    inline void id (int32_t _x11_id);
     inline int32_t id () const;
     inline int32_t& id ();
     //@}
 
     /// @copydoc test.idl::Test::Track::p
     //@{
-    inline void p (const ::Test::Point& _p);
-    inline void p (::Test::Point&& _p);
+    inline void p (const ::Test::Point& _x11_p);
+    inline void p (::Test::Point&& _x11_p);
     inline const ::Test::Point& p () const;
     inline ::Test::Point& p ();
     //@}
@@ -223,7 +223,7 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void longData (int32_t _longData);
+    inline void longData (int32_t _x11_longData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline int32_t longData () const;
@@ -236,7 +236,7 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void shortData (int16_t _shortData);
+    inline void shortData (int16_t _x11_shortData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline int16_t shortData () const;
@@ -249,10 +249,10 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void stringData (const std::string& _stringData);
+    inline void stringData (const std::string& _x11_stringData);
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void stringData (std::string&& _stringData);
+    inline void stringData (std::string&& _x11_stringData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline const std::string& stringData () const;
@@ -265,10 +265,10 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void pointData (const ::Test::Point& _pointData);
+    inline void pointData (const ::Test::Point& _x11_pointData);
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void pointData (::Test::Point&& _pointData);
+    inline void pointData (::Test::Point&& _x11_pointData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline const ::Test::Point& pointData () const;
@@ -281,10 +281,10 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void trackData (const ::Test::Track& _trackData);
+    inline void trackData (const ::Test::Track& _x11_trackData);
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void trackData (::Test::Track&& _trackData);
+    inline void trackData (::Test::Track&& _x11_trackData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline const ::Test::Track& trackData () const;
@@ -297,10 +297,10 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void globalData (const ::Global& _globalData);
+    inline void globalData (const ::Global& _x11_globalData);
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void globalData (::Global&& _globalData);
+    inline void globalData (::Global&& _x11_globalData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline const ::Global& globalData () const;
@@ -360,7 +360,7 @@ namespace Test
 
     /// @copydoc test.idl::Test::S::len
     //@{
-    inline void len (int32_t _len);
+    inline void len (int32_t _x11_len);
     inline int32_t len () const;
     inline int32_t& len ();
     //@}
@@ -470,7 +470,7 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void x (int32_t _x);
+    inline void x (int32_t _x11_x);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline int32_t x () const;
@@ -483,10 +483,10 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void z (const std::string& _z);
+    inline void z (const std::string& _x11_z);
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void z (std::string&& _z);
+    inline void z (std::string&& _x11_z);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline const std::string& z () const;
@@ -499,10 +499,10 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void w (const ::Test::S& _w);
+    inline void w (const ::Test::S& _x11_w);
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void w (::Test::S&& _w);
+    inline void w (::Test::S&& _x11_w);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline const ::Test::S& w () const;
@@ -515,7 +515,7 @@ namespace Test
     //@{
     /// Set the value of the union, the discriminator is automatically
     /// set to the correct value
-    inline void obj (IDL::traits< ::Test::A>::ref_type _obj);
+    inline void obj (IDL::traits< ::Test::A>::ref_type _x11_obj);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
     inline IDL::traits< ::Test::A>::ref_type obj () const;
@@ -1366,7 +1366,7 @@ inline Global::Global (
 {
 }
 
-inline void Global::x (int32_t _x) { this->x_ = _x; }
+inline void Global::x (int32_t _x11_x) { this->x_ = _x11_x; }
 inline int32_t Global::x () const { return this->x_; }
 inline int32_t& Global::x () { return this->x_; }
 
@@ -1384,11 +1384,11 @@ inline Test::Point::Point (
 {
 }
 
-inline void Test::Point::x (int32_t _x) { this->x_ = _x; }
+inline void Test::Point::x (int32_t _x11_x) { this->x_ = _x11_x; }
 inline int32_t Test::Point::x () const { return this->x_; }
 inline int32_t& Test::Point::x () { return this->x_; }
 
-inline void Test::Point::y (int32_t _y) { this->y_ = _y; }
+inline void Test::Point::y (int32_t _x11_y) { this->y_ = _x11_y; }
 inline int32_t Test::Point::y () const { return this->y_; }
 inline int32_t& Test::Point::y () { return this->y_; }
 
@@ -1407,12 +1407,12 @@ inline Test::Track::Track (
 {
 }
 
-inline void Test::Track::id (int32_t _id) { this->id_ = _id; }
+inline void Test::Track::id (int32_t _x11_id) { this->id_ = _x11_id; }
 inline int32_t Test::Track::id () const { return this->id_; }
 inline int32_t& Test::Track::id () { return this->id_; }
 
-inline void Test::Track::p (const ::Test::Point& _p) { this->p_ = _p; }
-inline void Test::Track::p (::Test::Point&& _p) { this->p_ = std::move (_p); }
+inline void Test::Track::p (const ::Test::Point& _x11_p) { this->p_ = _x11_p; }
+inline void Test::Track::p (::Test::Point&& _x11_p) { this->p_ = std::move (_x11_p); }
 inline const ::Test::Point& Test::Track::p () const { return this->p_; }
 inline ::Test::Point& Test::Track::p () { return this->p_; }
 
@@ -1585,14 +1585,14 @@ inline ::Test::DataType Test::Data::_d () const
   return this->disc_;
 }
 
-inline void Test::Data::longData (int32_t _longData)
+inline void Test::Data::longData (int32_t _x11_longData)
 {
   if (this->disc_ != ::Test::DataType::dtLong)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtLong;
   }
-  this->u_.longData_ = _longData;
+  this->u_.longData_ = _x11_longData;
 }
 
 inline int32_t Test::Data::longData () const
@@ -1619,14 +1619,14 @@ inline int32_t& Test::Data::longData ()
   return this->u_.longData_;
 }
 
-inline void Test::Data::shortData (int16_t _shortData)
+inline void Test::Data::shortData (int16_t _x11_shortData)
 {
   if (this->disc_ != ::Test::DataType::dtShort)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtShort;
   }
-  this->u_.shortData_ = _shortData;
+  this->u_.shortData_ = _x11_shortData;
 }
 
 inline int16_t Test::Data::shortData () const
@@ -1653,31 +1653,31 @@ inline int16_t& Test::Data::shortData ()
   return this->u_.shortData_;
 }
 
-inline void Test::Data::stringData (const std::string& _stringData)
+inline void Test::Data::stringData (const std::string& _x11_stringData)
 {
   if (this->disc_ != ::Test::DataType::dtString)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtString;
-    new (&this->u_.stringData_) std::string (_stringData);
+    new (&this->u_.stringData_) std::string (_x11_stringData);
   }
   else
   {
-    this->u_.stringData_ = _stringData;
+    this->u_.stringData_ = _x11_stringData;
   }
 }
 
-inline void Test::Data::stringData (std::string&& _stringData)
+inline void Test::Data::stringData (std::string&& _x11_stringData)
 {
   if (this->disc_ != ::Test::DataType::dtString)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtString;
-    new (&this->u_.stringData_) std::string (std::move (_stringData));
+    new (&this->u_.stringData_) std::string (std::move (_x11_stringData));
   }
   else
   {
-    this->u_.stringData_ = std::move (_stringData);
+    this->u_.stringData_ = std::move (_x11_stringData);
   }
 }
 
@@ -1705,31 +1705,31 @@ inline std::string& Test::Data::stringData ()
   return this->u_.stringData_;
 }
 
-inline void Test::Data::pointData (const ::Test::Point& _pointData)
+inline void Test::Data::pointData (const ::Test::Point& _x11_pointData)
 {
   if (this->disc_ != ::Test::DataType::dtPoint)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtPoint;
-    new (&this->u_.pointData_) ::Test::Point (_pointData);
+    new (&this->u_.pointData_) ::Test::Point (_x11_pointData);
   }
   else
   {
-    this->u_.pointData_ = _pointData;
+    this->u_.pointData_ = _x11_pointData;
   }
 }
 
-inline void Test::Data::pointData (::Test::Point&& _pointData)
+inline void Test::Data::pointData (::Test::Point&& _x11_pointData)
 {
   if (this->disc_ != ::Test::DataType::dtPoint)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtPoint;
-    new (&this->u_.pointData_) ::Test::Point (std::move (_pointData));
+    new (&this->u_.pointData_) ::Test::Point (std::move (_x11_pointData));
   }
   else
   {
-    this->u_.pointData_ = std::move (_pointData);
+    this->u_.pointData_ = std::move (_x11_pointData);
   }
 }
 
@@ -1757,31 +1757,31 @@ inline ::Test::Point& Test::Data::pointData ()
   return this->u_.pointData_;
 }
 
-inline void Test::Data::trackData (const ::Test::Track& _trackData)
+inline void Test::Data::trackData (const ::Test::Track& _x11_trackData)
 {
   if (this->disc_ != ::Test::DataType::dtTrack)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtTrack;
-    new (&this->u_.trackData_) ::Test::Track (_trackData);
+    new (&this->u_.trackData_) ::Test::Track (_x11_trackData);
   }
   else
   {
-    this->u_.trackData_ = _trackData;
+    this->u_.trackData_ = _x11_trackData;
   }
 }
 
-inline void Test::Data::trackData (::Test::Track&& _trackData)
+inline void Test::Data::trackData (::Test::Track&& _x11_trackData)
 {
   if (this->disc_ != ::Test::DataType::dtTrack)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtTrack;
-    new (&this->u_.trackData_) ::Test::Track (std::move (_trackData));
+    new (&this->u_.trackData_) ::Test::Track (std::move (_x11_trackData));
   }
   else
   {
-    this->u_.trackData_ = std::move (_trackData);
+    this->u_.trackData_ = std::move (_x11_trackData);
   }
 }
 
@@ -1809,31 +1809,31 @@ inline ::Test::Track& Test::Data::trackData ()
   return this->u_.trackData_;
 }
 
-inline void Test::Data::globalData (const ::Global& _globalData)
+inline void Test::Data::globalData (const ::Global& _x11_globalData)
 {
   if (this->disc_ != ::Test::DataType::dtGlobal)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtGlobal;
-    new (&this->u_.globalData_) ::Global (_globalData);
+    new (&this->u_.globalData_) ::Global (_x11_globalData);
   }
   else
   {
-    this->u_.globalData_ = _globalData;
+    this->u_.globalData_ = _x11_globalData;
   }
 }
 
-inline void Test::Data::globalData (::Global&& _globalData)
+inline void Test::Data::globalData (::Global&& _x11_globalData)
 {
   if (this->disc_ != ::Test::DataType::dtGlobal)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtGlobal;
-    new (&this->u_.globalData_) ::Global (std::move (_globalData));
+    new (&this->u_.globalData_) ::Global (std::move (_x11_globalData));
   }
   else
   {
-    this->u_.globalData_ = std::move (_globalData);
+    this->u_.globalData_ = std::move (_x11_globalData);
   }
 }
 
@@ -2036,7 +2036,7 @@ inline Test::S::S (
 {
 }
 
-inline void Test::S::len (int32_t _len) { this->len_ = _len; }
+inline void Test::S::len (int32_t _x11_len) { this->len_ = _x11_len; }
 inline int32_t Test::S::len () const { return this->len_; }
 inline int32_t& Test::S::len () { return this->len_; }
 
@@ -2164,14 +2164,14 @@ inline int32_t Test::U::_d () const
   return this->disc_;
 }
 
-inline void Test::U::x (int32_t _x)
+inline void Test::U::x (int32_t _x11_x)
 {
   if (this->disc_ != 1)
   {
     this->_clear ();
     this->disc_ = 1;
   }
-  this->u_.x_ = _x;
+  this->u_.x_ = _x11_x;
 }
 
 inline int32_t Test::U::x () const
@@ -2198,31 +2198,31 @@ inline int32_t& Test::U::x ()
   return this->u_.x_;
 }
 
-inline void Test::U::z (const std::string& _z)
+inline void Test::U::z (const std::string& _x11_z)
 {
   if (this->disc_ != 2)
   {
     this->_clear ();
     this->disc_ = 2;
-    new (&this->u_.z_) std::string (_z);
+    new (&this->u_.z_) std::string (_x11_z);
   }
   else
   {
-    this->u_.z_ = _z;
+    this->u_.z_ = _x11_z;
   }
 }
 
-inline void Test::U::z (std::string&& _z)
+inline void Test::U::z (std::string&& _x11_z)
 {
   if (this->disc_ != 2)
   {
     this->_clear ();
     this->disc_ = 2;
-    new (&this->u_.z_) std::string (std::move (_z));
+    new (&this->u_.z_) std::string (std::move (_x11_z));
   }
   else
   {
-    this->u_.z_ = std::move (_z);
+    this->u_.z_ = std::move (_x11_z);
   }
 }
 
@@ -2250,31 +2250,31 @@ inline std::string& Test::U::z ()
   return this->u_.z_;
 }
 
-inline void Test::U::w (const ::Test::S& _w)
+inline void Test::U::w (const ::Test::S& _x11_w)
 {
   if (this->disc_ != 3)
   {
     this->_clear ();
     this->disc_ = 3;
-    new (&this->u_.w_) ::Test::S (_w);
+    new (&this->u_.w_) ::Test::S (_x11_w);
   }
   else
   {
-    this->u_.w_ = _w;
+    this->u_.w_ = _x11_w;
   }
 }
 
-inline void Test::U::w (::Test::S&& _w)
+inline void Test::U::w (::Test::S&& _x11_w)
 {
   if (this->disc_ != 3)
   {
     this->_clear ();
     this->disc_ = 3;
-    new (&this->u_.w_) ::Test::S (std::move (_w));
+    new (&this->u_.w_) ::Test::S (std::move (_x11_w));
   }
   else
   {
-    this->u_.w_ = std::move (_w);
+    this->u_.w_ = std::move (_x11_w);
   }
 }
 
@@ -2304,17 +2304,17 @@ inline ::Test::S& Test::U::w ()
   return this->u_.w_;
 }
 
-inline void Test::U::obj (IDL::traits< ::Test::A>::ref_type _obj)
+inline void Test::U::obj (IDL::traits< ::Test::A>::ref_type _x11_obj)
 {
   if (this->disc_ != (-2147483647-1))
   {
     this->_clear ();
     this->disc_ = (-2147483647-1);
-    new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (_obj);
+    new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (_x11_obj);
   }
   else
   {
-    this->u_.obj_ = _obj;
+    this->u_.obj_ = _x11_obj;
   }
 }
 
@@ -2602,6 +2602,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DHHIEHAG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CHGFCAGE_INCLUDED__ */
 
 // -*- END -*-

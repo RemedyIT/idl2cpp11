@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HHFDHGAA_INCLUDED__
-#define __RIDL_TESTC_H_HHFDHGAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HGFDAIID_INCLUDED__
+#define __RIDL_TESTC_H_HGFDAIID_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,8 +24,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -62,16 +62,16 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::Property::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::Property::value
     //@{
-    inline void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
-    inline void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
+    inline void value (const TAOX11_NAMESPACE::CORBA::Any& _x11_value);
+    inline void value (TAOX11_NAMESPACE::CORBA::Any&& _x11_value);
     inline const TAOX11_NAMESPACE::CORBA::Any& value () const;
     inline TAOX11_NAMESPACE::CORBA::Any& value ();
     //@}
@@ -116,24 +116,24 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::Requirement::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::Requirement::resourceType
     //@{
-    inline void resourceType (const std::string& _resourceType);
-    inline void resourceType (std::string&& _resourceType);
+    inline void resourceType (const std::string& _x11_resourceType);
+    inline void resourceType (std::string&& _x11_resourceType);
     inline const std::string& resourceType () const;
     inline std::string& resourceType ();
     //@}
 
     /// @copydoc test.idl::Deployment::Requirement::property
     //@{
-    inline void property (const ::Deployment::Properties& _property);
-    inline void property (::Deployment::Properties&& _property);
+    inline void property (const ::Deployment::Properties& _x11_property);
+    inline void property (::Deployment::Properties&& _x11_property);
     inline const ::Deployment::Properties& property () const;
     inline ::Deployment::Properties& property ();
     //@}
@@ -200,30 +200,30 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::kind
     //@{
-    inline void kind (::Deployment::SatisfierPropertyKind _kind);
+    inline void kind (::Deployment::SatisfierPropertyKind _x11_kind);
     inline ::Deployment::SatisfierPropertyKind kind () const;
     inline ::Deployment::SatisfierPropertyKind& kind ();
     //@}
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::dynamic
     //@{
-    inline void dynamic (bool _dynamic);
+    inline void dynamic (bool _x11_dynamic);
     inline bool dynamic () const;
     inline bool& dynamic ();
     //@}
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::value
     //@{
-    inline void value (const TAOX11_NAMESPACE::CORBA::Any& _value);
-    inline void value (TAOX11_NAMESPACE::CORBA::Any&& _value);
+    inline void value (const TAOX11_NAMESPACE::CORBA::Any& _x11_value);
+    inline void value (TAOX11_NAMESPACE::CORBA::Any&& _x11_value);
     inline const TAOX11_NAMESPACE::CORBA::Any& value () const;
     inline TAOX11_NAMESPACE::CORBA::Any& value ();
     //@}
@@ -307,67 +307,67 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::specificType
     //@{
-    inline void specificType (const std::string& _specificType);
-    inline void specificType (std::string&& _specificType);
+    inline void specificType (const std::string& _x11_specificType);
+    inline void specificType (std::string&& _x11_specificType);
     inline const std::string& specificType () const;
     inline std::string& specificType ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::supportedType
     //@{
-    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
-    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
+    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType);
+    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::provider
     //@{
-    inline void provider (bool _provider);
+    inline void provider (bool _x11_provider);
     inline bool provider () const;
     inline bool& provider ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::exclusiveProvider
     //@{
-    inline void exclusiveProvider (bool _exclusiveProvider);
+    inline void exclusiveProvider (bool _x11_exclusiveProvider);
     inline bool exclusiveProvider () const;
     inline bool& exclusiveProvider ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::exclusiveUser
     //@{
-    inline void exclusiveUser (bool _exclusiveUser);
+    inline void exclusiveUser (bool _x11_exclusiveUser);
     inline bool exclusiveUser () const;
     inline bool& exclusiveUser ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::optional
     //@{
-    inline void optional (bool _optional);
+    inline void optional (bool _x11_optional);
     inline bool optional () const;
     inline bool& optional ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::kind
     //@{
-    inline void kind (::Deployment::CCMComponentPortKind _kind);
+    inline void kind (::Deployment::CCMComponentPortKind _x11_kind);
     inline ::Deployment::CCMComponentPortKind kind () const;
     inline ::Deployment::CCMComponentPortKind& kind ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::templateParam
     //@{
-    inline void templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _templateParam);
-    inline void templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _templateParam);
+    inline void templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_templateParam);
+    inline void templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_templateParam);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam ();
     //@}
@@ -418,15 +418,15 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ComponentPropertyDescription::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPropertyDescription::type
     //@{
-    inline void type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type);
+    inline void type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _x11_type);
     inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const;
     inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type ();
     //@}
@@ -477,72 +477,72 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::label
     //@{
-    inline void label (const std::string& _label);
-    inline void label (std::string&& _label);
+    inline void label (const std::string& _x11_label);
+    inline void label (std::string&& _x11_label);
     inline const std::string& label () const;
     inline std::string& label ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::UUID
     //@{
-    inline void UUID (const std::string& _UUID);
-    inline void UUID (std::string&& _UUID);
+    inline void UUID (const std::string& _x11_UUID);
+    inline void UUID (std::string&& _x11_UUID);
     inline const std::string& UUID () const;
     inline std::string& UUID ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::specificType
     //@{
-    inline void specificType (const std::string& _specificType);
-    inline void specificType (std::string&& _specificType);
+    inline void specificType (const std::string& _x11_specificType);
+    inline void specificType (std::string&& _x11_specificType);
     inline const std::string& specificType () const;
     inline std::string& specificType ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::supportedType
     //@{
-    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
-    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
+    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType);
+    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::idlFile
     //@{
-    inline void idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _idlFile);
-    inline void idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _idlFile);
+    inline void idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_idlFile);
+    inline void idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_idlFile);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::configProperty
     //@{
-    inline void configProperty (const ::Deployment::Properties& _configProperty);
-    inline void configProperty (::Deployment::Properties&& _configProperty);
+    inline void configProperty (const ::Deployment::Properties& _x11_configProperty);
+    inline void configProperty (::Deployment::Properties&& _x11_configProperty);
     inline const ::Deployment::Properties& configProperty () const;
     inline ::Deployment::Properties& configProperty ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::_port
     //@{
-    inline void port (const ::Deployment::ComponentPortDescriptions& _port);
-    inline void port (::Deployment::ComponentPortDescriptions&& _port);
+    inline void port (const ::Deployment::ComponentPortDescriptions& _x11_port);
+    inline void port (::Deployment::ComponentPortDescriptions&& _x11_port);
     inline const ::Deployment::ComponentPortDescriptions& port () const;
     inline ::Deployment::ComponentPortDescriptions& port ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::property
     //@{
-    inline void property (const ::Deployment::ComponentPropertyDescriptions& _property);
-    inline void property (::Deployment::ComponentPropertyDescriptions&& _property);
+    inline void property (const ::Deployment::ComponentPropertyDescriptions& _x11_property);
+    inline void property (::Deployment::ComponentPropertyDescriptions&& _x11_property);
     inline const ::Deployment::ComponentPropertyDescriptions& property () const;
     inline ::Deployment::ComponentPropertyDescriptions& property ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::infoProperty
     //@{
-    inline void infoProperty (const ::Deployment::Properties& _infoProperty);
-    inline void infoProperty (::Deployment::Properties&& _infoProperty);
+    inline void infoProperty (const ::Deployment::Properties& _x11_infoProperty);
+    inline void infoProperty (::Deployment::Properties&& _x11_infoProperty);
     inline const ::Deployment::Properties& infoProperty () const;
     inline ::Deployment::Properties& infoProperty ();
     //@}
@@ -592,40 +592,40 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::source
     //@{
-    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::artifactRef
     //@{
-    inline void artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _artifactRef);
-    inline void artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _artifactRef);
+    inline void artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _x11_artifactRef);
+    inline void artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _x11_artifactRef);
     inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef () const;
     inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef ();
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::execParameter
     //@{
-    inline void execParameter (const ::Deployment::Properties& _execParameter);
-    inline void execParameter (::Deployment::Properties&& _execParameter);
+    inline void execParameter (const ::Deployment::Properties& _x11_execParameter);
+    inline void execParameter (::Deployment::Properties&& _x11_execParameter);
     inline const ::Deployment::Properties& execParameter () const;
     inline ::Deployment::Properties& execParameter ();
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::deployRequirement
     //@{
-    inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
-    inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
+    inline void deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement);
+    inline void deployRequirement (::Deployment::Requirements&& _x11_deployRequirement);
     inline const ::Deployment::Requirements& deployRequirement () const;
     inline ::Deployment::Requirements& deployRequirement ();
     //@}
@@ -692,31 +692,31 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceUsage
     //@{
-    inline void resourceUsage (::Deployment::ResourceUsageKind _resourceUsage);
+    inline void resourceUsage (::Deployment::ResourceUsageKind _x11_resourceUsage);
     inline ::Deployment::ResourceUsageKind resourceUsage () const;
     inline ::Deployment::ResourceUsageKind& resourceUsage ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::requirementName
     //@{
-    inline void requirementName (const std::string& _requirementName);
-    inline void requirementName (std::string&& _requirementName);
+    inline void requirementName (const std::string& _x11_requirementName);
+    inline void requirementName (std::string&& _x11_requirementName);
     inline const std::string& requirementName () const;
     inline std::string& requirementName ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceName
     //@{
-    inline void resourceName (const std::string& _resourceName);
-    inline void resourceName (std::string&& _resourceName);
+    inline void resourceName (const std::string& _x11_resourceName);
+    inline void resourceName (std::string&& _x11_resourceName);
     inline const std::string& resourceName () const;
     inline std::string& resourceName ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::property
     //@{
-    inline void property (const ::Deployment::Properties& _property);
-    inline void property (::Deployment::Properties&& _property);
+    inline void property (const ::Deployment::Properties& _x11_property);
+    inline void property (::Deployment::Properties&& _x11_property);
     inline const ::Deployment::Properties& property () const;
     inline ::Deployment::Properties& property ();
     //@}
@@ -767,55 +767,55 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::node
     //@{
-    inline void node (const std::string& _node);
-    inline void node (std::string&& _node);
+    inline void node (const std::string& _x11_node);
+    inline void node (std::string&& _x11_node);
     inline const std::string& node () const;
     inline std::string& node ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::source
     //@{
-    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::implementationRef
     //@{
-    inline void implementationRef (uint32_t _implementationRef);
+    inline void implementationRef (uint32_t _x11_implementationRef);
     inline uint32_t implementationRef () const;
     inline uint32_t& implementationRef ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::configProperty
     //@{
-    inline void configProperty (const ::Deployment::Properties& _configProperty);
-    inline void configProperty (::Deployment::Properties&& _configProperty);
+    inline void configProperty (const ::Deployment::Properties& _x11_configProperty);
+    inline void configProperty (::Deployment::Properties&& _x11_configProperty);
     inline const ::Deployment::Properties& configProperty () const;
     inline ::Deployment::Properties& configProperty ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::deployedResource
     //@{
-    inline void deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedResource);
-    inline void deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedResource);
+    inline void deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _x11_deployedResource);
+    inline void deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _x11_deployedResource);
     inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource () const;
     inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource ();
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::deployedSharedResource
     //@{
-    inline void deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedSharedResource);
-    inline void deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedSharedResource);
+    inline void deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _x11_deployedSharedResource);
+    inline void deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _x11_deployedSharedResource);
     inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource () const;
     inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource ();
     //@}
@@ -863,8 +863,8 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoint::portName
     //@{
-    inline void portName (const std::string& _portName);
-    inline void portName (std::string&& _portName);
+    inline void portName (const std::string& _x11_portName);
+    inline void portName (std::string&& _x11_portName);
     inline const std::string& portName () const;
     inline std::string& portName ();
     //@}
@@ -909,29 +909,29 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::portName
     //@{
-    inline void portName (const std::string& _portName);
-    inline void portName (std::string&& _portName);
+    inline void portName (const std::string& _x11_portName);
+    inline void portName (std::string&& _x11_portName);
     inline const std::string& portName () const;
     inline std::string& portName ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::provider
     //@{
-    inline void provider (bool _provider);
+    inline void provider (bool _x11_provider);
     inline bool provider () const;
     inline bool& provider ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::kind
     //@{
-    inline void kind (::Deployment::CCMComponentPortKind _kind);
+    inline void kind (::Deployment::CCMComponentPortKind _x11_kind);
     inline ::Deployment::CCMComponentPortKind kind () const;
     inline ::Deployment::CCMComponentPortKind& kind ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::instanceRef
     //@{
-    inline void instanceRef (uint32_t _instanceRef);
+    inline void instanceRef (uint32_t _x11_instanceRef);
     inline uint32_t instanceRef () const;
     inline uint32_t& instanceRef ();
     //@}
@@ -979,31 +979,31 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::location
     //@{
-    inline void location (const std::string& _location);
-    inline void location (std::string&& _location);
+    inline void location (const std::string& _x11_location);
+    inline void location (std::string&& _x11_location);
     inline const std::string& location () const;
     inline std::string& location ();
     //@}
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::provider
     //@{
-    inline void provider (bool _provider);
+    inline void provider (bool _x11_provider);
     inline bool provider () const;
     inline bool& provider ();
     //@}
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::portName
     //@{
-    inline void portName (const std::string& _portName);
-    inline void portName (std::string&& _portName);
+    inline void portName (const std::string& _x11_portName);
+    inline void portName (std::string&& _x11_portName);
     inline const std::string& portName () const;
     inline std::string& portName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::supportedType
     //@{
-    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType);
-    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType);
+    inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType);
+    inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType ();
     //@}
@@ -1051,32 +1051,32 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::targetName
     //@{
-    inline void targetName (const std::string& _targetName);
-    inline void targetName (std::string&& _targetName);
+    inline void targetName (const std::string& _x11_targetName);
+    inline void targetName (std::string&& _x11_targetName);
     inline const std::string& targetName () const;
     inline std::string& targetName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::requirementName
     //@{
-    inline void requirementName (const std::string& _requirementName);
-    inline void requirementName (std::string&& _requirementName);
+    inline void requirementName (const std::string& _x11_requirementName);
+    inline void requirementName (std::string&& _x11_requirementName);
     inline const std::string& requirementName () const;
     inline std::string& requirementName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::resourceName
     //@{
-    inline void resourceName (const std::string& _resourceName);
-    inline void resourceName (std::string&& _resourceName);
+    inline void resourceName (const std::string& _x11_resourceName);
+    inline void resourceName (std::string&& _x11_resourceName);
     inline const std::string& resourceName () const;
     inline std::string& resourceName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::property
     //@{
-    inline void property (const ::Deployment::Properties& _property);
-    inline void property (::Deployment::Properties&& _property);
+    inline void property (const ::Deployment::Properties& _x11_property);
+    inline void property (::Deployment::Properties&& _x11_property);
     inline const ::Deployment::Properties& property () const;
     inline ::Deployment::Properties& property ();
     //@}
@@ -1127,56 +1127,56 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::source
     //@{
-    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::deployRequirement
     //@{
-    inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
-    inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
+    inline void deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement);
+    inline void deployRequirement (::Deployment::Requirements&& _x11_deployRequirement);
     inline const ::Deployment::Requirements& deployRequirement () const;
     inline ::Deployment::Requirements& deployRequirement ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::externalEndpoint
     //@{
-    inline void externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _externalEndpoint);
-    inline void externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _externalEndpoint);
+    inline void externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _x11_externalEndpoint);
+    inline void externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _x11_externalEndpoint);
     inline const ::Deployment::ComponentExternalPortEndpoints& externalEndpoint () const;
     inline ::Deployment::ComponentExternalPortEndpoints& externalEndpoint ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::internalEndpoint
     //@{
-    inline void internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _internalEndpoint);
-    inline void internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _internalEndpoint);
+    inline void internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _x11_internalEndpoint);
+    inline void internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _x11_internalEndpoint);
     inline const ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint () const;
     inline ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::externalReference
     //@{
-    inline void externalReference (const ::Deployment::ExternalReferenceEndpoints& _externalReference);
-    inline void externalReference (::Deployment::ExternalReferenceEndpoints&& _externalReference);
+    inline void externalReference (const ::Deployment::ExternalReferenceEndpoints& _x11_externalReference);
+    inline void externalReference (::Deployment::ExternalReferenceEndpoints&& _x11_externalReference);
     inline const ::Deployment::ExternalReferenceEndpoints& externalReference () const;
     inline ::Deployment::ExternalReferenceEndpoints& externalReference ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::deployedResource
     //@{
-    inline void deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _deployedResource);
-    inline void deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _deployedResource);
+    inline void deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _x11_deployedResource);
+    inline void deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _x11_deployedResource);
     inline const ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource () const;
     inline ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource ();
     //@}
@@ -1225,15 +1225,15 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference::propertyName
     //@{
-    inline void propertyName (const std::string& _propertyName);
-    inline void propertyName (std::string&& _propertyName);
+    inline void propertyName (const std::string& _x11_propertyName);
+    inline void propertyName (std::string&& _x11_propertyName);
     inline const std::string& propertyName () const;
     inline std::string& propertyName ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference::instanceRef
     //@{
-    inline void instanceRef (uint32_t _instanceRef);
+    inline void instanceRef (uint32_t _x11_instanceRef);
     inline uint32_t instanceRef () const;
     inline uint32_t& instanceRef ();
     //@}
@@ -1279,32 +1279,32 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::source
     //@{
-    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::externalName
     //@{
-    inline void externalName (const std::string& _externalName);
-    inline void externalName (std::string&& _externalName);
+    inline void externalName (const std::string& _x11_externalName);
+    inline void externalName (std::string&& _x11_externalName);
     inline const std::string& externalName () const;
     inline std::string& externalName ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::delegatesTo
     //@{
-    inline void delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _delegatesTo);
-    inline void delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _delegatesTo);
+    inline void delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _x11_delegatesTo);
+    inline void delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _x11_delegatesTo);
     inline const ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo () const;
     inline ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo ();
     //@}
@@ -1349,8 +1349,8 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ImplementationDependency::requiredType
     //@{
-    inline void requiredType (const std::string& _requiredType);
-    inline void requiredType (std::string&& _requiredType);
+    inline void requiredType (const std::string& _x11_requiredType);
+    inline void requiredType (std::string&& _x11_requiredType);
     inline const std::string& requiredType () const;
     inline std::string& requiredType ();
     //@}
@@ -1394,24 +1394,24 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::requirementName
     //@{
-    inline void requirementName (const std::string& _requirementName);
-    inline void requirementName (std::string&& _requirementName);
+    inline void requirementName (const std::string& _x11_requirementName);
+    inline void requirementName (std::string&& _x11_requirementName);
     inline const std::string& requirementName () const;
     inline std::string& requirementName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::resourceName
     //@{
-    inline void resourceName (const std::string& _resourceName);
-    inline void resourceName (std::string&& _resourceName);
+    inline void resourceName (const std::string& _x11_resourceName);
+    inline void resourceName (std::string&& _x11_resourceName);
     inline const std::string& resourceName () const;
     inline std::string& resourceName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::property
     //@{
-    inline void property (const ::Deployment::Properties& _property);
-    inline void property (::Deployment::Properties&& _property);
+    inline void property (const ::Deployment::Properties& _x11_property);
+    inline void property (::Deployment::Properties&& _x11_property);
     inline const ::Deployment::Properties& property () const;
     inline ::Deployment::Properties& property ();
     //@}
@@ -1461,56 +1461,56 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::location
     //@{
-    inline void location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _location);
-    inline void location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _location);
+    inline void location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_location);
+    inline void location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_location);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& location () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& location ();
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::node
     //@{
-    inline void node (const std::string& _node);
-    inline void node (std::string&& _node);
+    inline void node (const std::string& _x11_node);
+    inline void node (std::string&& _x11_node);
     inline const std::string& node () const;
     inline std::string& node ();
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::source
     //@{
-    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source);
-    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source);
+    inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source);
+    inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source ();
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::execParameter
     //@{
-    inline void execParameter (const ::Deployment::Properties& _execParameter);
-    inline void execParameter (::Deployment::Properties&& _execParameter);
+    inline void execParameter (const ::Deployment::Properties& _x11_execParameter);
+    inline void execParameter (::Deployment::Properties&& _x11_execParameter);
     inline const ::Deployment::Properties& execParameter () const;
     inline ::Deployment::Properties& execParameter ();
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::deployRequirement
     //@{
-    inline void deployRequirement (const ::Deployment::Requirements& _deployRequirement);
-    inline void deployRequirement (::Deployment::Requirements&& _deployRequirement);
+    inline void deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement);
+    inline void deployRequirement (::Deployment::Requirements&& _x11_deployRequirement);
     inline const ::Deployment::Requirements& deployRequirement () const;
     inline ::Deployment::Requirements& deployRequirement ();
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::deployedResource
     //@{
-    inline void deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _deployedResource);
-    inline void deployedResource (::Deployment::ResourceDeploymentDescriptions&& _deployedResource);
+    inline void deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _x11_deployedResource);
+    inline void deployedResource (::Deployment::ResourceDeploymentDescriptions&& _x11_deployedResource);
     inline const ::Deployment::ResourceDeploymentDescriptions& deployedResource () const;
     inline ::Deployment::ResourceDeploymentDescriptions& deployedResource ();
     //@}
@@ -1573,15 +1573,15 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::PlanLocality::constraint
     //@{
-    inline void constraint (::Deployment::PlanLocalityKind _constraint);
+    inline void constraint (::Deployment::PlanLocalityKind _x11_constraint);
     inline ::Deployment::PlanLocalityKind constraint () const;
     inline ::Deployment::PlanLocalityKind& constraint ();
     //@}
 
     /// @copydoc test.idl::Deployment::PlanLocality::constrainedInstanceRef
     //@{
-    inline void constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _constrainedInstanceRef);
-    inline void constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _constrainedInstanceRef);
+    inline void constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _x11_constrainedInstanceRef);
+    inline void constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _x11_constrainedInstanceRef);
     inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef () const;
     inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef ();
     //@}
@@ -1634,88 +1634,88 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::label
     //@{
-    inline void label (const std::string& _label);
-    inline void label (std::string&& _label);
+    inline void label (const std::string& _x11_label);
+    inline void label (std::string&& _x11_label);
     inline const std::string& label () const;
     inline std::string& label ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::UUID
     //@{
-    inline void UUID (const std::string& _UUID);
-    inline void UUID (std::string&& _UUID);
+    inline void UUID (const std::string& _x11_UUID);
+    inline void UUID (std::string&& _x11_UUID);
     inline const std::string& UUID () const;
     inline std::string& UUID ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::realizes
     //@{
-    inline void realizes (const ::Deployment::ComponentInterfaceDescription& _realizes);
-    inline void realizes (::Deployment::ComponentInterfaceDescription&& _realizes);
+    inline void realizes (const ::Deployment::ComponentInterfaceDescription& _x11_realizes);
+    inline void realizes (::Deployment::ComponentInterfaceDescription&& _x11_realizes);
     inline const ::Deployment::ComponentInterfaceDescription& realizes () const;
     inline ::Deployment::ComponentInterfaceDescription& realizes ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::implementation
     //@{
-    inline void implementation (const ::Deployment::MonolithicDeploymentDescriptions& _implementation);
-    inline void implementation (::Deployment::MonolithicDeploymentDescriptions&& _implementation);
+    inline void implementation (const ::Deployment::MonolithicDeploymentDescriptions& _x11_implementation);
+    inline void implementation (::Deployment::MonolithicDeploymentDescriptions&& _x11_implementation);
     inline const ::Deployment::MonolithicDeploymentDescriptions& implementation () const;
     inline ::Deployment::MonolithicDeploymentDescriptions& implementation ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::instance
     //@{
-    inline void instance (const ::Deployment::InstanceDeploymentDescriptions& _instance);
-    inline void instance (::Deployment::InstanceDeploymentDescriptions&& _instance);
+    inline void instance (const ::Deployment::InstanceDeploymentDescriptions& _x11_instance);
+    inline void instance (::Deployment::InstanceDeploymentDescriptions&& _x11_instance);
     inline const ::Deployment::InstanceDeploymentDescriptions& instance () const;
     inline ::Deployment::InstanceDeploymentDescriptions& instance ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::connection
     //@{
-    inline void connection (const ::Deployment::PlanConnectionDescriptions& _connection);
-    inline void connection (::Deployment::PlanConnectionDescriptions&& _connection);
+    inline void connection (const ::Deployment::PlanConnectionDescriptions& _x11_connection);
+    inline void connection (::Deployment::PlanConnectionDescriptions&& _x11_connection);
     inline const ::Deployment::PlanConnectionDescriptions& connection () const;
     inline ::Deployment::PlanConnectionDescriptions& connection ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::externalProperty
     //@{
-    inline void externalProperty (const ::Deployment::PlanPropertyMappings& _externalProperty);
-    inline void externalProperty (::Deployment::PlanPropertyMappings&& _externalProperty);
+    inline void externalProperty (const ::Deployment::PlanPropertyMappings& _x11_externalProperty);
+    inline void externalProperty (::Deployment::PlanPropertyMappings&& _x11_externalProperty);
     inline const ::Deployment::PlanPropertyMappings& externalProperty () const;
     inline ::Deployment::PlanPropertyMappings& externalProperty ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::dependsOn
     //@{
-    inline void dependsOn (const ::Deployment::ImplementationDependencies& _dependsOn);
-    inline void dependsOn (::Deployment::ImplementationDependencies&& _dependsOn);
+    inline void dependsOn (const ::Deployment::ImplementationDependencies& _x11_dependsOn);
+    inline void dependsOn (::Deployment::ImplementationDependencies&& _x11_dependsOn);
     inline const ::Deployment::ImplementationDependencies& dependsOn () const;
     inline ::Deployment::ImplementationDependencies& dependsOn ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::artifact
     //@{
-    inline void artifact (const ::Deployment::ArtifactDeploymentDescriptions& _artifact);
-    inline void artifact (::Deployment::ArtifactDeploymentDescriptions&& _artifact);
+    inline void artifact (const ::Deployment::ArtifactDeploymentDescriptions& _x11_artifact);
+    inline void artifact (::Deployment::ArtifactDeploymentDescriptions&& _x11_artifact);
     inline const ::Deployment::ArtifactDeploymentDescriptions& artifact () const;
     inline ::Deployment::ArtifactDeploymentDescriptions& artifact ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::infoProperty
     //@{
-    inline void infoProperty (const ::Deployment::Properties& _infoProperty);
-    inline void infoProperty (::Deployment::Properties&& _infoProperty);
+    inline void infoProperty (const ::Deployment::Properties& _x11_infoProperty);
+    inline void infoProperty (::Deployment::Properties&& _x11_infoProperty);
     inline const ::Deployment::Properties& infoProperty () const;
     inline ::Deployment::Properties& infoProperty ();
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::localityConstraint
     //@{
-    inline void localityConstraint (const ::Deployment::PlanLocalities& _localityConstraint);
-    inline void localityConstraint (::Deployment::PlanLocalities&& _localityConstraint);
+    inline void localityConstraint (const ::Deployment::PlanLocalities& _x11_localityConstraint);
+    inline void localityConstraint (::Deployment::PlanLocalities&& _x11_localityConstraint);
     inline const ::Deployment::PlanLocalities& localityConstraint () const;
     inline ::Deployment::PlanLocalities& localityConstraint ();
     //@}
@@ -1772,24 +1772,24 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredUUID
     //@{
-    inline void requiredUUID (const std::string& _requiredUUID);
-    inline void requiredUUID (std::string&& _requiredUUID);
+    inline void requiredUUID (const std::string& _x11_requiredUUID);
+    inline void requiredUUID (std::string&& _x11_requiredUUID);
     inline const std::string& requiredUUID () const;
     inline std::string& requiredUUID ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredName
     //@{
-    inline void requiredName (const std::string& _requiredName);
-    inline void requiredName (std::string&& _requiredName);
+    inline void requiredName (const std::string& _x11_requiredName);
+    inline void requiredName (std::string&& _x11_requiredName);
     inline const std::string& requiredName () const;
     inline std::string& requiredName ();
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredType
     //@{
-    inline void requiredType (const ::Deployment::ComponentInterfaceDescription& _requiredType);
-    inline void requiredType (::Deployment::ComponentInterfaceDescription&& _requiredType);
+    inline void requiredType (const ::Deployment::ComponentInterfaceDescription& _x11_requiredType);
+    inline void requiredType (::Deployment::ComponentInterfaceDescription&& _x11_requiredType);
     inline const ::Deployment::ComponentInterfaceDescription& requiredType () const;
     inline ::Deployment::ComponentInterfaceDescription& requiredType ();
     //@}
@@ -1842,48 +1842,48 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::resourceUsage
     //@{
-    inline void resourceUsage (const ::Deployment::ResourceUsageKinds& _resourceUsage);
-    inline void resourceUsage (::Deployment::ResourceUsageKinds&& _resourceUsage);
+    inline void resourceUsage (const ::Deployment::ResourceUsageKinds& _x11_resourceUsage);
+    inline void resourceUsage (::Deployment::ResourceUsageKinds&& _x11_resourceUsage);
     inline const ::Deployment::ResourceUsageKinds& resourceUsage () const;
     inline ::Deployment::ResourceUsageKinds& resourceUsage ();
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::resourcePort
     //@{
-    inline void resourcePort (const std::string& _resourcePort);
-    inline void resourcePort (std::string&& _resourcePort);
+    inline void resourcePort (const std::string& _x11_resourcePort);
+    inline void resourcePort (std::string&& _x11_resourcePort);
     inline const std::string& resourcePort () const;
     inline std::string& resourcePort ();
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::componentPort
     //@{
-    inline void componentPort (const std::string& _componentPort);
-    inline void componentPort (std::string&& _componentPort);
+    inline void componentPort (const std::string& _x11_componentPort);
+    inline void componentPort (std::string&& _x11_componentPort);
     inline const std::string& componentPort () const;
     inline std::string& componentPort ();
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::resourceType
     //@{
-    inline void resourceType (const std::string& _resourceType);
-    inline void resourceType (std::string&& _resourceType);
+    inline void resourceType (const std::string& _x11_resourceType);
+    inline void resourceType (std::string&& _x11_resourceType);
     inline const std::string& resourceType () const;
     inline std::string& resourceType ();
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::property
     //@{
-    inline void property (const ::Deployment::Properties& _property);
-    inline void property (::Deployment::Properties&& _property);
+    inline void property (const ::Deployment::Properties& _x11_property);
+    inline void property (::Deployment::Properties&& _x11_property);
     inline const ::Deployment::Properties& property () const;
     inline ::Deployment::Properties& property ();
     //@}
@@ -1932,24 +1932,24 @@ namespace Deployment
 
     /// @copydoc test.idl::Deployment::Capability::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
 
     /// @copydoc test.idl::Deployment::Capability::resourceType
     //@{
-    inline void resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _resourceType);
-    inline void resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _resourceType);
+    inline void resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_resourceType);
+    inline void resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_resourceType);
     inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType () const;
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType ();
     //@}
 
     /// @copydoc test.idl::Deployment::Capability::property
     //@{
-    inline void property (const ::Deployment::SatisfierProperties& _property);
-    inline void property (::Deployment::SatisfierProperties&& _property);
+    inline void property (const ::Deployment::SatisfierProperties& _x11_property);
+    inline void property (::Deployment::SatisfierProperties&& _x11_property);
     inline const ::Deployment::SatisfierProperties& property () const;
     inline ::Deployment::SatisfierProperties& property ();
     //@}
@@ -4936,13 +4936,13 @@ inline Deployment::Property::Property (
 {
 }
 
-inline void Deployment::Property::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::Property::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::Property::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::Property::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::Property::name () const { return this->name_; }
 inline std::string& Deployment::Property::name () { return this->name_; }
 
-inline void Deployment::Property::value (const TAOX11_NAMESPACE::CORBA::Any& _value) { this->value_ = _value; }
-inline void Deployment::Property::value (TAOX11_NAMESPACE::CORBA::Any&& _value) { this->value_ = std::move (_value); }
+inline void Deployment::Property::value (const TAOX11_NAMESPACE::CORBA::Any& _x11_value) { this->value_ = _x11_value; }
+inline void Deployment::Property::value (TAOX11_NAMESPACE::CORBA::Any&& _x11_value) { this->value_ = std::move (_x11_value); }
 inline const TAOX11_NAMESPACE::CORBA::Any& Deployment::Property::value () const { return this->value_; }
 inline TAOX11_NAMESPACE::CORBA::Any& Deployment::Property::value () { return this->value_; }
 
@@ -4963,18 +4963,18 @@ inline Deployment::Requirement::Requirement (
 {
 }
 
-inline void Deployment::Requirement::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::Requirement::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::Requirement::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::Requirement::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::Requirement::name () const { return this->name_; }
 inline std::string& Deployment::Requirement::name () { return this->name_; }
 
-inline void Deployment::Requirement::resourceType (const std::string& _resourceType) { this->resourceType_ = _resourceType; }
-inline void Deployment::Requirement::resourceType (std::string&& _resourceType) { this->resourceType_ = std::move (_resourceType); }
+inline void Deployment::Requirement::resourceType (const std::string& _x11_resourceType) { this->resourceType_ = _x11_resourceType; }
+inline void Deployment::Requirement::resourceType (std::string&& _x11_resourceType) { this->resourceType_ = std::move (_x11_resourceType); }
 inline const std::string& Deployment::Requirement::resourceType () const { return this->resourceType_; }
 inline std::string& Deployment::Requirement::resourceType () { return this->resourceType_; }
 
-inline void Deployment::Requirement::property (const ::Deployment::Properties& _property) { this->property_ = _property; }
-inline void Deployment::Requirement::property (::Deployment::Properties&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::Requirement::property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::Requirement::property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::Properties& Deployment::Requirement::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::Requirement::property () { return this->property_; }
 
@@ -4998,21 +4998,21 @@ inline Deployment::SatisfierProperty::SatisfierProperty (
 {
 }
 
-inline void Deployment::SatisfierProperty::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::SatisfierProperty::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::SatisfierProperty::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::SatisfierProperty::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::SatisfierProperty::name () const { return this->name_; }
 inline std::string& Deployment::SatisfierProperty::name () { return this->name_; }
 
-inline void Deployment::SatisfierProperty::kind (::Deployment::SatisfierPropertyKind _kind) { this->kind_ = _kind; }
+inline void Deployment::SatisfierProperty::kind (::Deployment::SatisfierPropertyKind _x11_kind) { this->kind_ = _x11_kind; }
 inline ::Deployment::SatisfierPropertyKind Deployment::SatisfierProperty::kind () const { return this->kind_; }
 inline ::Deployment::SatisfierPropertyKind& Deployment::SatisfierProperty::kind () { return this->kind_; }
 
-inline void Deployment::SatisfierProperty::dynamic (bool _dynamic) { this->dynamic_ = _dynamic; }
+inline void Deployment::SatisfierProperty::dynamic (bool _x11_dynamic) { this->dynamic_ = _x11_dynamic; }
 inline bool Deployment::SatisfierProperty::dynamic () const { return this->dynamic_; }
 inline bool& Deployment::SatisfierProperty::dynamic () { return this->dynamic_; }
 
-inline void Deployment::SatisfierProperty::value (const TAOX11_NAMESPACE::CORBA::Any& _value) { this->value_ = _value; }
-inline void Deployment::SatisfierProperty::value (TAOX11_NAMESPACE::CORBA::Any&& _value) { this->value_ = std::move (_value); }
+inline void Deployment::SatisfierProperty::value (const TAOX11_NAMESPACE::CORBA::Any& _x11_value) { this->value_ = _x11_value; }
+inline void Deployment::SatisfierProperty::value (TAOX11_NAMESPACE::CORBA::Any&& _x11_value) { this->value_ = std::move (_x11_value); }
 inline const TAOX11_NAMESPACE::CORBA::Any& Deployment::SatisfierProperty::value () const { return this->value_; }
 inline TAOX11_NAMESPACE::CORBA::Any& Deployment::SatisfierProperty::value () { return this->value_; }
 
@@ -5047,43 +5047,43 @@ inline Deployment::ComponentPortDescription::ComponentPortDescription (
 {
 }
 
-inline void Deployment::ComponentPortDescription::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::ComponentPortDescription::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::ComponentPortDescription::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::ComponentPortDescription::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::ComponentPortDescription::name () const { return this->name_; }
 inline std::string& Deployment::ComponentPortDescription::name () { return this->name_; }
 
-inline void Deployment::ComponentPortDescription::specificType (const std::string& _specificType) { this->specificType_ = _specificType; }
-inline void Deployment::ComponentPortDescription::specificType (std::string&& _specificType) { this->specificType_ = std::move (_specificType); }
+inline void Deployment::ComponentPortDescription::specificType (const std::string& _x11_specificType) { this->specificType_ = _x11_specificType; }
+inline void Deployment::ComponentPortDescription::specificType (std::string&& _x11_specificType) { this->specificType_ = std::move (_x11_specificType); }
 inline const std::string& Deployment::ComponentPortDescription::specificType () const { return this->specificType_; }
 inline std::string& Deployment::ComponentPortDescription::specificType () { return this->specificType_; }
 
-inline void Deployment::ComponentPortDescription::supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType) { this->supportedType_ = _supportedType; }
-inline void Deployment::ComponentPortDescription::supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType) { this->supportedType_ = std::move (_supportedType); }
+inline void Deployment::ComponentPortDescription::supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType) { this->supportedType_ = _x11_supportedType; }
+inline void Deployment::ComponentPortDescription::supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType) { this->supportedType_ = std::move (_x11_supportedType); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentPortDescription::supportedType () const { return this->supportedType_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentPortDescription::supportedType () { return this->supportedType_; }
 
-inline void Deployment::ComponentPortDescription::provider (bool _provider) { this->provider_ = _provider; }
+inline void Deployment::ComponentPortDescription::provider (bool _x11_provider) { this->provider_ = _x11_provider; }
 inline bool Deployment::ComponentPortDescription::provider () const { return this->provider_; }
 inline bool& Deployment::ComponentPortDescription::provider () { return this->provider_; }
 
-inline void Deployment::ComponentPortDescription::exclusiveProvider (bool _exclusiveProvider) { this->exclusiveProvider_ = _exclusiveProvider; }
+inline void Deployment::ComponentPortDescription::exclusiveProvider (bool _x11_exclusiveProvider) { this->exclusiveProvider_ = _x11_exclusiveProvider; }
 inline bool Deployment::ComponentPortDescription::exclusiveProvider () const { return this->exclusiveProvider_; }
 inline bool& Deployment::ComponentPortDescription::exclusiveProvider () { return this->exclusiveProvider_; }
 
-inline void Deployment::ComponentPortDescription::exclusiveUser (bool _exclusiveUser) { this->exclusiveUser_ = _exclusiveUser; }
+inline void Deployment::ComponentPortDescription::exclusiveUser (bool _x11_exclusiveUser) { this->exclusiveUser_ = _x11_exclusiveUser; }
 inline bool Deployment::ComponentPortDescription::exclusiveUser () const { return this->exclusiveUser_; }
 inline bool& Deployment::ComponentPortDescription::exclusiveUser () { return this->exclusiveUser_; }
 
-inline void Deployment::ComponentPortDescription::optional (bool _optional) { this->optional_ = _optional; }
+inline void Deployment::ComponentPortDescription::optional (bool _x11_optional) { this->optional_ = _x11_optional; }
 inline bool Deployment::ComponentPortDescription::optional () const { return this->optional_; }
 inline bool& Deployment::ComponentPortDescription::optional () { return this->optional_; }
 
-inline void Deployment::ComponentPortDescription::kind (CCMComponentPortKind _kind) { this->kind_ = _kind; }
+inline void Deployment::ComponentPortDescription::kind (CCMComponentPortKind _x11_kind) { this->kind_ = _x11_kind; }
 inline ::Deployment::CCMComponentPortKind Deployment::ComponentPortDescription::kind () const { return this->kind_; }
 inline ::Deployment::CCMComponentPortKind& Deployment::ComponentPortDescription::kind () { return this->kind_; }
 
-inline void Deployment::ComponentPortDescription::templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _templateParam) { this->templateParam_ = _templateParam; }
-inline void Deployment::ComponentPortDescription::templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _templateParam) { this->templateParam_ = std::move (_templateParam); }
+inline void Deployment::ComponentPortDescription::templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_templateParam) { this->templateParam_ = _x11_templateParam; }
+inline void Deployment::ComponentPortDescription::templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_templateParam) { this->templateParam_ = std::move (_x11_templateParam); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentPortDescription::templateParam () const { return this->templateParam_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentPortDescription::templateParam () { return this->templateParam_; }
 
@@ -5109,12 +5109,12 @@ inline Deployment::ComponentPropertyDescription::ComponentPropertyDescription (
 {
 }
 
-inline void Deployment::ComponentPropertyDescription::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::ComponentPropertyDescription::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::ComponentPropertyDescription::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::ComponentPropertyDescription::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::ComponentPropertyDescription::name () const { return this->name_; }
 inline std::string& Deployment::ComponentPropertyDescription::name () { return this->name_; }
 
-inline void Deployment::ComponentPropertyDescription::type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _type) { this->type_ = _type; }
+inline void Deployment::ComponentPropertyDescription::type (IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _x11_type) { this->type_ = _x11_type; }
 inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type Deployment::ComponentPropertyDescription::type () const { return this->type_; }
 inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& Deployment::ComponentPropertyDescription::type () { return this->type_; }
 
@@ -5147,48 +5147,48 @@ inline Deployment::ComponentInterfaceDescription::ComponentInterfaceDescription 
 {
 }
 
-inline void Deployment::ComponentInterfaceDescription::label (const std::string& _label) { this->label_ = _label; }
-inline void Deployment::ComponentInterfaceDescription::label (std::string&& _label) { this->label_ = std::move (_label); }
+inline void Deployment::ComponentInterfaceDescription::label (const std::string& _x11_label) { this->label_ = _x11_label; }
+inline void Deployment::ComponentInterfaceDescription::label (std::string&& _x11_label) { this->label_ = std::move (_x11_label); }
 inline const std::string& Deployment::ComponentInterfaceDescription::label () const { return this->label_; }
 inline std::string& Deployment::ComponentInterfaceDescription::label () { return this->label_; }
 
-inline void Deployment::ComponentInterfaceDescription::UUID (const std::string& _UUID) { this->UUID_ = _UUID; }
-inline void Deployment::ComponentInterfaceDescription::UUID (std::string&& _UUID) { this->UUID_ = std::move (_UUID); }
+inline void Deployment::ComponentInterfaceDescription::UUID (const std::string& _x11_UUID) { this->UUID_ = _x11_UUID; }
+inline void Deployment::ComponentInterfaceDescription::UUID (std::string&& _x11_UUID) { this->UUID_ = std::move (_x11_UUID); }
 inline const std::string& Deployment::ComponentInterfaceDescription::UUID () const { return this->UUID_; }
 inline std::string& Deployment::ComponentInterfaceDescription::UUID () { return this->UUID_; }
 
-inline void Deployment::ComponentInterfaceDescription::specificType (const std::string& _specificType) { this->specificType_ = _specificType; }
-inline void Deployment::ComponentInterfaceDescription::specificType (std::string&& _specificType) { this->specificType_ = std::move (_specificType); }
+inline void Deployment::ComponentInterfaceDescription::specificType (const std::string& _x11_specificType) { this->specificType_ = _x11_specificType; }
+inline void Deployment::ComponentInterfaceDescription::specificType (std::string&& _x11_specificType) { this->specificType_ = std::move (_x11_specificType); }
 inline const std::string& Deployment::ComponentInterfaceDescription::specificType () const { return this->specificType_; }
 inline std::string& Deployment::ComponentInterfaceDescription::specificType () { return this->specificType_; }
 
-inline void Deployment::ComponentInterfaceDescription::supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType) { this->supportedType_ = _supportedType; }
-inline void Deployment::ComponentInterfaceDescription::supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType) { this->supportedType_ = std::move (_supportedType); }
+inline void Deployment::ComponentInterfaceDescription::supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType) { this->supportedType_ = _x11_supportedType; }
+inline void Deployment::ComponentInterfaceDescription::supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType) { this->supportedType_ = std::move (_x11_supportedType); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentInterfaceDescription::supportedType () const { return this->supportedType_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentInterfaceDescription::supportedType () { return this->supportedType_; }
 
-inline void Deployment::ComponentInterfaceDescription::idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _idlFile) { this->idlFile_ = _idlFile; }
-inline void Deployment::ComponentInterfaceDescription::idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _idlFile) { this->idlFile_ = std::move (_idlFile); }
+inline void Deployment::ComponentInterfaceDescription::idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_idlFile) { this->idlFile_ = _x11_idlFile; }
+inline void Deployment::ComponentInterfaceDescription::idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_idlFile) { this->idlFile_ = std::move (_x11_idlFile); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentInterfaceDescription::idlFile () const { return this->idlFile_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ComponentInterfaceDescription::idlFile () { return this->idlFile_; }
 
-inline void Deployment::ComponentInterfaceDescription::configProperty (const ::Deployment::Properties& _configProperty) { this->configProperty_ = _configProperty; }
-inline void Deployment::ComponentInterfaceDescription::configProperty (::Deployment::Properties&& _configProperty) { this->configProperty_ = std::move (_configProperty); }
+inline void Deployment::ComponentInterfaceDescription::configProperty (const ::Deployment::Properties& _x11_configProperty) { this->configProperty_ = _x11_configProperty; }
+inline void Deployment::ComponentInterfaceDescription::configProperty (::Deployment::Properties&& _x11_configProperty) { this->configProperty_ = std::move (_x11_configProperty); }
 inline const ::Deployment::Properties& Deployment::ComponentInterfaceDescription::configProperty () const { return this->configProperty_; }
 inline ::Deployment::Properties& Deployment::ComponentInterfaceDescription::configProperty () { return this->configProperty_; }
 
-inline void Deployment::ComponentInterfaceDescription::port (const ::Deployment::ComponentPortDescriptions& _port) { this->port_ = _port; }
-inline void Deployment::ComponentInterfaceDescription::port (::Deployment::ComponentPortDescriptions&& _port) { this->port_ = std::move (_port); }
+inline void Deployment::ComponentInterfaceDescription::port (const ::Deployment::ComponentPortDescriptions& _x11_port) { this->port_ = _x11_port; }
+inline void Deployment::ComponentInterfaceDescription::port (::Deployment::ComponentPortDescriptions&& _x11_port) { this->port_ = std::move (_x11_port); }
 inline const ::Deployment::ComponentPortDescriptions& Deployment::ComponentInterfaceDescription::port () const { return this->port_; }
 inline ::Deployment::ComponentPortDescriptions& Deployment::ComponentInterfaceDescription::port () { return this->port_; }
 
-inline void Deployment::ComponentInterfaceDescription::property (const ::Deployment::ComponentPropertyDescriptions& _property) { this->property_ = _property; }
-inline void Deployment::ComponentInterfaceDescription::property (::Deployment::ComponentPropertyDescriptions&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::ComponentInterfaceDescription::property (const ::Deployment::ComponentPropertyDescriptions& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::ComponentInterfaceDescription::property (::Deployment::ComponentPropertyDescriptions&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::ComponentPropertyDescriptions& Deployment::ComponentInterfaceDescription::property () const { return this->property_; }
 inline ::Deployment::ComponentPropertyDescriptions& Deployment::ComponentInterfaceDescription::property () { return this->property_; }
 
-inline void Deployment::ComponentInterfaceDescription::infoProperty (const ::Deployment::Properties& _infoProperty) { this->infoProperty_ = _infoProperty; }
-inline void Deployment::ComponentInterfaceDescription::infoProperty (::Deployment::Properties&& _infoProperty) { this->infoProperty_ = std::move (_infoProperty); }
+inline void Deployment::ComponentInterfaceDescription::infoProperty (const ::Deployment::Properties& _x11_infoProperty) { this->infoProperty_ = _x11_infoProperty; }
+inline void Deployment::ComponentInterfaceDescription::infoProperty (::Deployment::Properties&& _x11_infoProperty) { this->infoProperty_ = std::move (_x11_infoProperty); }
 inline const ::Deployment::Properties& Deployment::ComponentInterfaceDescription::infoProperty () const { return this->infoProperty_; }
 inline ::Deployment::Properties& Deployment::ComponentInterfaceDescription::infoProperty () { return this->infoProperty_; }
 
@@ -5220,28 +5220,28 @@ inline Deployment::MonolithicDeploymentDescription::MonolithicDeploymentDescript
 {
 }
 
-inline void Deployment::MonolithicDeploymentDescription::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::MonolithicDeploymentDescription::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::MonolithicDeploymentDescription::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::MonolithicDeploymentDescription::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::MonolithicDeploymentDescription::name () const { return this->name_; }
 inline std::string& Deployment::MonolithicDeploymentDescription::name () { return this->name_; }
 
-inline void Deployment::MonolithicDeploymentDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source) { this->source_ = _source; }
-inline void Deployment::MonolithicDeploymentDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source) { this->source_ = std::move (_source); }
+inline void Deployment::MonolithicDeploymentDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
+inline void Deployment::MonolithicDeploymentDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::MonolithicDeploymentDescription::source () const { return this->source_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::MonolithicDeploymentDescription::source () { return this->source_; }
 
-inline void Deployment::MonolithicDeploymentDescription::artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _artifactRef) { this->artifactRef_ = _artifactRef; }
-inline void Deployment::MonolithicDeploymentDescription::artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _artifactRef) { this->artifactRef_ = std::move (_artifactRef); }
+inline void Deployment::MonolithicDeploymentDescription::artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _x11_artifactRef) { this->artifactRef_ = _x11_artifactRef; }
+inline void Deployment::MonolithicDeploymentDescription::artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _x11_artifactRef) { this->artifactRef_ = std::move (_x11_artifactRef); }
 inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& Deployment::MonolithicDeploymentDescription::artifactRef () const { return this->artifactRef_; }
 inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& Deployment::MonolithicDeploymentDescription::artifactRef () { return this->artifactRef_; }
 
-inline void Deployment::MonolithicDeploymentDescription::execParameter (const ::Deployment::Properties& _execParameter) { this->execParameter_ = _execParameter; }
-inline void Deployment::MonolithicDeploymentDescription::execParameter (::Deployment::Properties&& _execParameter) { this->execParameter_ = std::move (_execParameter); }
+inline void Deployment::MonolithicDeploymentDescription::execParameter (const ::Deployment::Properties& _x11_execParameter) { this->execParameter_ = _x11_execParameter; }
+inline void Deployment::MonolithicDeploymentDescription::execParameter (::Deployment::Properties&& _x11_execParameter) { this->execParameter_ = std::move (_x11_execParameter); }
 inline const ::Deployment::Properties& Deployment::MonolithicDeploymentDescription::execParameter () const { return this->execParameter_; }
 inline ::Deployment::Properties& Deployment::MonolithicDeploymentDescription::execParameter () { return this->execParameter_; }
 
-inline void Deployment::MonolithicDeploymentDescription::deployRequirement (const ::Deployment::Requirements& _deployRequirement) { this->deployRequirement_ = _deployRequirement; }
-inline void Deployment::MonolithicDeploymentDescription::deployRequirement (::Deployment::Requirements&& _deployRequirement) { this->deployRequirement_ = std::move (_deployRequirement); }
+inline void Deployment::MonolithicDeploymentDescription::deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement) { this->deployRequirement_ = _x11_deployRequirement; }
+inline void Deployment::MonolithicDeploymentDescription::deployRequirement (::Deployment::Requirements&& _x11_deployRequirement) { this->deployRequirement_ = std::move (_x11_deployRequirement); }
 inline const ::Deployment::Requirements& Deployment::MonolithicDeploymentDescription::deployRequirement () const { return this->deployRequirement_; }
 inline ::Deployment::Requirements& Deployment::MonolithicDeploymentDescription::deployRequirement () { return this->deployRequirement_; }
 
@@ -5267,22 +5267,22 @@ inline Deployment::InstanceResourceDeploymentDescription::InstanceResourceDeploy
 {
 }
 
-inline void Deployment::InstanceResourceDeploymentDescription::resourceUsage (::Deployment::ResourceUsageKind _resourceUsage) { this->resourceUsage_ = _resourceUsage; }
+inline void Deployment::InstanceResourceDeploymentDescription::resourceUsage (::Deployment::ResourceUsageKind _x11_resourceUsage) { this->resourceUsage_ = _x11_resourceUsage; }
 inline ::Deployment::ResourceUsageKind Deployment::InstanceResourceDeploymentDescription::resourceUsage () const { return this->resourceUsage_; }
 inline ::Deployment::ResourceUsageKind& Deployment::InstanceResourceDeploymentDescription::resourceUsage () { return this->resourceUsage_; }
 
-inline void Deployment::InstanceResourceDeploymentDescription::requirementName (const std::string& _requirementName) { this->requirementName_ = _requirementName; }
-inline void Deployment::InstanceResourceDeploymentDescription::requirementName (std::string&& _requirementName) { this->requirementName_ = std::move (_requirementName); }
+inline void Deployment::InstanceResourceDeploymentDescription::requirementName (const std::string& _x11_requirementName) { this->requirementName_ = _x11_requirementName; }
+inline void Deployment::InstanceResourceDeploymentDescription::requirementName (std::string&& _x11_requirementName) { this->requirementName_ = std::move (_x11_requirementName); }
 inline const std::string& Deployment::InstanceResourceDeploymentDescription::requirementName () const { return this->requirementName_; }
 inline std::string& Deployment::InstanceResourceDeploymentDescription::requirementName () { return this->requirementName_; }
 
-inline void Deployment::InstanceResourceDeploymentDescription::resourceName (const std::string& _resourceName) { this->resourceName_ = _resourceName; }
-inline void Deployment::InstanceResourceDeploymentDescription::resourceName (std::string&& _resourceName) { this->resourceName_ = std::move (_resourceName); }
+inline void Deployment::InstanceResourceDeploymentDescription::resourceName (const std::string& _x11_resourceName) { this->resourceName_ = _x11_resourceName; }
+inline void Deployment::InstanceResourceDeploymentDescription::resourceName (std::string&& _x11_resourceName) { this->resourceName_ = std::move (_x11_resourceName); }
 inline const std::string& Deployment::InstanceResourceDeploymentDescription::resourceName () const { return this->resourceName_; }
 inline std::string& Deployment::InstanceResourceDeploymentDescription::resourceName () { return this->resourceName_; }
 
-inline void Deployment::InstanceResourceDeploymentDescription::property (const ::Deployment::Properties& _property) { this->property_ = _property; }
-inline void Deployment::InstanceResourceDeploymentDescription::property (::Deployment::Properties&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::InstanceResourceDeploymentDescription::property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::InstanceResourceDeploymentDescription::property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::Properties& Deployment::InstanceResourceDeploymentDescription::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::InstanceResourceDeploymentDescription::property () { return this->property_; }
 
@@ -5313,37 +5313,37 @@ inline Deployment::InstanceDeploymentDescription::InstanceDeploymentDescription 
 {
 }
 
-inline void Deployment::InstanceDeploymentDescription::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::InstanceDeploymentDescription::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::InstanceDeploymentDescription::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::InstanceDeploymentDescription::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::InstanceDeploymentDescription::name () const { return this->name_; }
 inline std::string& Deployment::InstanceDeploymentDescription::name () { return this->name_; }
 
-inline void Deployment::InstanceDeploymentDescription::node (const std::string& _node) { this->node_ = _node; }
-inline void Deployment::InstanceDeploymentDescription::node (std::string&& _node) { this->node_ = std::move (_node); }
+inline void Deployment::InstanceDeploymentDescription::node (const std::string& _x11_node) { this->node_ = _x11_node; }
+inline void Deployment::InstanceDeploymentDescription::node (std::string&& _x11_node) { this->node_ = std::move (_x11_node); }
 inline const std::string& Deployment::InstanceDeploymentDescription::node () const { return this->node_; }
 inline std::string& Deployment::InstanceDeploymentDescription::node () { return this->node_; }
 
-inline void Deployment::InstanceDeploymentDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source) { this->source_ = _source; }
-inline void Deployment::InstanceDeploymentDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source) { this->source_ = std::move (_source); }
+inline void Deployment::InstanceDeploymentDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
+inline void Deployment::InstanceDeploymentDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::InstanceDeploymentDescription::source () const { return this->source_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::InstanceDeploymentDescription::source () { return this->source_; }
 
-inline void Deployment::InstanceDeploymentDescription::implementationRef (uint32_t _implementationRef) { this->implementationRef_ = _implementationRef; }
+inline void Deployment::InstanceDeploymentDescription::implementationRef (uint32_t _x11_implementationRef) { this->implementationRef_ = _x11_implementationRef; }
 inline uint32_t Deployment::InstanceDeploymentDescription::implementationRef () const { return this->implementationRef_; }
 inline uint32_t& Deployment::InstanceDeploymentDescription::implementationRef () { return this->implementationRef_; }
 
-inline void Deployment::InstanceDeploymentDescription::configProperty (const ::Deployment::Properties& _configProperty) { this->configProperty_ = _configProperty; }
-inline void Deployment::InstanceDeploymentDescription::configProperty (::Deployment::Properties&& _configProperty) { this->configProperty_ = std::move (_configProperty); }
+inline void Deployment::InstanceDeploymentDescription::configProperty (const ::Deployment::Properties& _x11_configProperty) { this->configProperty_ = _x11_configProperty; }
+inline void Deployment::InstanceDeploymentDescription::configProperty (::Deployment::Properties&& _x11_configProperty) { this->configProperty_ = std::move (_x11_configProperty); }
 inline const ::Deployment::Properties& Deployment::InstanceDeploymentDescription::configProperty () const { return this->configProperty_; }
 inline ::Deployment::Properties& Deployment::InstanceDeploymentDescription::configProperty () { return this->configProperty_; }
 
-inline void Deployment::InstanceDeploymentDescription::deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedResource) { this->deployedResource_ = _deployedResource; }
-inline void Deployment::InstanceDeploymentDescription::deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedResource) { this->deployedResource_ = std::move (_deployedResource); }
+inline void Deployment::InstanceDeploymentDescription::deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _x11_deployedResource) { this->deployedResource_ = _x11_deployedResource; }
+inline void Deployment::InstanceDeploymentDescription::deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _x11_deployedResource) { this->deployedResource_ = std::move (_x11_deployedResource); }
 inline const ::Deployment::InstanceResourceDeploymentDescriptions& Deployment::InstanceDeploymentDescription::deployedResource () const { return this->deployedResource_; }
 inline ::Deployment::InstanceResourceDeploymentDescriptions& Deployment::InstanceDeploymentDescription::deployedResource () { return this->deployedResource_; }
 
-inline void Deployment::InstanceDeploymentDescription::deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _deployedSharedResource) { this->deployedSharedResource_ = _deployedSharedResource; }
-inline void Deployment::InstanceDeploymentDescription::deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _deployedSharedResource) { this->deployedSharedResource_ = std::move (_deployedSharedResource); }
+inline void Deployment::InstanceDeploymentDescription::deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _x11_deployedSharedResource) { this->deployedSharedResource_ = _x11_deployedSharedResource; }
+inline void Deployment::InstanceDeploymentDescription::deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _x11_deployedSharedResource) { this->deployedSharedResource_ = std::move (_x11_deployedSharedResource); }
 inline const ::Deployment::InstanceResourceDeploymentDescriptions& Deployment::InstanceDeploymentDescription::deployedSharedResource () const { return this->deployedSharedResource_; }
 inline ::Deployment::InstanceResourceDeploymentDescriptions& Deployment::InstanceDeploymentDescription::deployedSharedResource () { return this->deployedSharedResource_; }
 
@@ -5365,8 +5365,8 @@ inline Deployment::ComponentExternalPortEndpoint::ComponentExternalPortEndpoint 
 {
 }
 
-inline void Deployment::ComponentExternalPortEndpoint::portName (const std::string& _portName) { this->portName_ = _portName; }
-inline void Deployment::ComponentExternalPortEndpoint::portName (std::string&& _portName) { this->portName_ = std::move (_portName); }
+inline void Deployment::ComponentExternalPortEndpoint::portName (const std::string& _x11_portName) { this->portName_ = _x11_portName; }
+inline void Deployment::ComponentExternalPortEndpoint::portName (std::string&& _x11_portName) { this->portName_ = std::move (_x11_portName); }
 inline const std::string& Deployment::ComponentExternalPortEndpoint::portName () const { return this->portName_; }
 inline std::string& Deployment::ComponentExternalPortEndpoint::portName () { return this->portName_; }
 
@@ -5388,20 +5388,20 @@ inline Deployment::PlanSubcomponentPortEndpoint::PlanSubcomponentPortEndpoint (
 {
 }
 
-inline void Deployment::PlanSubcomponentPortEndpoint::portName (const std::string& _portName) { this->portName_ = _portName; }
-inline void Deployment::PlanSubcomponentPortEndpoint::portName (std::string&& _portName) { this->portName_ = std::move (_portName); }
+inline void Deployment::PlanSubcomponentPortEndpoint::portName (const std::string& _x11_portName) { this->portName_ = _x11_portName; }
+inline void Deployment::PlanSubcomponentPortEndpoint::portName (std::string&& _x11_portName) { this->portName_ = std::move (_x11_portName); }
 inline const std::string& Deployment::PlanSubcomponentPortEndpoint::portName () const { return this->portName_; }
 inline std::string& Deployment::PlanSubcomponentPortEndpoint::portName () { return this->portName_; }
 
-inline void Deployment::PlanSubcomponentPortEndpoint::provider (bool _provider) { this->provider_ = _provider; }
+inline void Deployment::PlanSubcomponentPortEndpoint::provider (bool _x11_provider) { this->provider_ = _x11_provider; }
 inline bool Deployment::PlanSubcomponentPortEndpoint::provider () const { return this->provider_; }
 inline bool& Deployment::PlanSubcomponentPortEndpoint::provider () { return this->provider_; }
 
-inline void Deployment::PlanSubcomponentPortEndpoint::kind (::Deployment::CCMComponentPortKind _kind) { this->kind_ = _kind; }
+inline void Deployment::PlanSubcomponentPortEndpoint::kind (::Deployment::CCMComponentPortKind _x11_kind) { this->kind_ = _x11_kind; }
 inline ::Deployment::CCMComponentPortKind Deployment::PlanSubcomponentPortEndpoint::kind () const { return this->kind_; }
 inline ::Deployment::CCMComponentPortKind& Deployment::PlanSubcomponentPortEndpoint::kind () { return this->kind_; }
 
-inline void Deployment::PlanSubcomponentPortEndpoint::instanceRef (uint32_t _instanceRef) { this->instanceRef_ = _instanceRef; }
+inline void Deployment::PlanSubcomponentPortEndpoint::instanceRef (uint32_t _x11_instanceRef) { this->instanceRef_ = _x11_instanceRef; }
 inline uint32_t Deployment::PlanSubcomponentPortEndpoint::instanceRef () const { return this->instanceRef_; }
 inline uint32_t& Deployment::PlanSubcomponentPortEndpoint::instanceRef () { return this->instanceRef_; }
 
@@ -5426,22 +5426,22 @@ inline Deployment::ExternalReferenceEndpoint::ExternalReferenceEndpoint (
 {
 }
 
-inline void Deployment::ExternalReferenceEndpoint::location (const std::string& _location) { this->location_ = _location; }
-inline void Deployment::ExternalReferenceEndpoint::location (std::string&& _location) { this->location_ = std::move (_location); }
+inline void Deployment::ExternalReferenceEndpoint::location (const std::string& _x11_location) { this->location_ = _x11_location; }
+inline void Deployment::ExternalReferenceEndpoint::location (std::string&& _x11_location) { this->location_ = std::move (_x11_location); }
 inline const std::string& Deployment::ExternalReferenceEndpoint::location () const { return this->location_; }
 inline std::string& Deployment::ExternalReferenceEndpoint::location () { return this->location_; }
 
-inline void Deployment::ExternalReferenceEndpoint::provider (bool _provider) { this->provider_ = _provider; }
+inline void Deployment::ExternalReferenceEndpoint::provider (bool _x11_provider) { this->provider_ = _x11_provider; }
 inline bool Deployment::ExternalReferenceEndpoint::provider () const { return this->provider_; }
 inline bool& Deployment::ExternalReferenceEndpoint::provider () { return this->provider_; }
 
-inline void Deployment::ExternalReferenceEndpoint::portName (const std::string& _portName) { this->portName_ = _portName; }
-inline void Deployment::ExternalReferenceEndpoint::portName (std::string&& _portName) { this->portName_ = std::move (_portName); }
+inline void Deployment::ExternalReferenceEndpoint::portName (const std::string& _x11_portName) { this->portName_ = _x11_portName; }
+inline void Deployment::ExternalReferenceEndpoint::portName (std::string&& _x11_portName) { this->portName_ = std::move (_x11_portName); }
 inline const std::string& Deployment::ExternalReferenceEndpoint::portName () const { return this->portName_; }
 inline std::string& Deployment::ExternalReferenceEndpoint::portName () { return this->portName_; }
 
-inline void Deployment::ExternalReferenceEndpoint::supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _supportedType) { this->supportedType_ = _supportedType; }
-inline void Deployment::ExternalReferenceEndpoint::supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _supportedType) { this->supportedType_ = std::move (_supportedType); }
+inline void Deployment::ExternalReferenceEndpoint::supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType) { this->supportedType_ = _x11_supportedType; }
+inline void Deployment::ExternalReferenceEndpoint::supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType) { this->supportedType_ = std::move (_x11_supportedType); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ExternalReferenceEndpoint::supportedType () const { return this->supportedType_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ExternalReferenceEndpoint::supportedType () { return this->supportedType_; }
 
@@ -5466,23 +5466,23 @@ inline Deployment::ConnectionResourceDeploymentDescription::ConnectionResourceDe
 {
 }
 
-inline void Deployment::ConnectionResourceDeploymentDescription::targetName (const std::string& _targetName) { this->targetName_ = _targetName; }
-inline void Deployment::ConnectionResourceDeploymentDescription::targetName (std::string&& _targetName) { this->targetName_ = std::move (_targetName); }
+inline void Deployment::ConnectionResourceDeploymentDescription::targetName (const std::string& _x11_targetName) { this->targetName_ = _x11_targetName; }
+inline void Deployment::ConnectionResourceDeploymentDescription::targetName (std::string&& _x11_targetName) { this->targetName_ = std::move (_x11_targetName); }
 inline const std::string& Deployment::ConnectionResourceDeploymentDescription::targetName () const { return this->targetName_; }
 inline std::string& Deployment::ConnectionResourceDeploymentDescription::targetName () { return this->targetName_; }
 
-inline void Deployment::ConnectionResourceDeploymentDescription::requirementName (const std::string& _requirementName) { this->requirementName_ = _requirementName; }
-inline void Deployment::ConnectionResourceDeploymentDescription::requirementName (std::string&& _requirementName) { this->requirementName_ = std::move (_requirementName); }
+inline void Deployment::ConnectionResourceDeploymentDescription::requirementName (const std::string& _x11_requirementName) { this->requirementName_ = _x11_requirementName; }
+inline void Deployment::ConnectionResourceDeploymentDescription::requirementName (std::string&& _x11_requirementName) { this->requirementName_ = std::move (_x11_requirementName); }
 inline const std::string& Deployment::ConnectionResourceDeploymentDescription::requirementName () const { return this->requirementName_; }
 inline std::string& Deployment::ConnectionResourceDeploymentDescription::requirementName () { return this->requirementName_; }
 
-inline void Deployment::ConnectionResourceDeploymentDescription::resourceName (const std::string& _resourceName) { this->resourceName_ = _resourceName; }
-inline void Deployment::ConnectionResourceDeploymentDescription::resourceName (std::string&& _resourceName) { this->resourceName_ = std::move (_resourceName); }
+inline void Deployment::ConnectionResourceDeploymentDescription::resourceName (const std::string& _x11_resourceName) { this->resourceName_ = _x11_resourceName; }
+inline void Deployment::ConnectionResourceDeploymentDescription::resourceName (std::string&& _x11_resourceName) { this->resourceName_ = std::move (_x11_resourceName); }
 inline const std::string& Deployment::ConnectionResourceDeploymentDescription::resourceName () const { return this->resourceName_; }
 inline std::string& Deployment::ConnectionResourceDeploymentDescription::resourceName () { return this->resourceName_; }
 
-inline void Deployment::ConnectionResourceDeploymentDescription::property (const ::Deployment::Properties& _property) { this->property_ = _property; }
-inline void Deployment::ConnectionResourceDeploymentDescription::property (::Deployment::Properties&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::ConnectionResourceDeploymentDescription::property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::ConnectionResourceDeploymentDescription::property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::Properties& Deployment::ConnectionResourceDeploymentDescription::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::ConnectionResourceDeploymentDescription::property () { return this->property_; }
 
@@ -5513,38 +5513,38 @@ inline Deployment::PlanConnectionDescription::PlanConnectionDescription (
 {
 }
 
-inline void Deployment::PlanConnectionDescription::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::PlanConnectionDescription::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::PlanConnectionDescription::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::PlanConnectionDescription::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::PlanConnectionDescription::name () const { return this->name_; }
 inline std::string& Deployment::PlanConnectionDescription::name () { return this->name_; }
 
-inline void Deployment::PlanConnectionDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source) { this->source_ = _source; }
-inline void Deployment::PlanConnectionDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source) { this->source_ = std::move (_source); }
+inline void Deployment::PlanConnectionDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
+inline void Deployment::PlanConnectionDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::PlanConnectionDescription::source () const { return this->source_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::PlanConnectionDescription::source () { return this->source_; }
 
-inline void Deployment::PlanConnectionDescription::deployRequirement (const ::Deployment::Requirements& _deployRequirement) { this->deployRequirement_ = _deployRequirement; }
-inline void Deployment::PlanConnectionDescription::deployRequirement (::Deployment::Requirements&& _deployRequirement) { this->deployRequirement_ = std::move (_deployRequirement); }
+inline void Deployment::PlanConnectionDescription::deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement) { this->deployRequirement_ = _x11_deployRequirement; }
+inline void Deployment::PlanConnectionDescription::deployRequirement (::Deployment::Requirements&& _x11_deployRequirement) { this->deployRequirement_ = std::move (_x11_deployRequirement); }
 inline const ::Deployment::Requirements& Deployment::PlanConnectionDescription::deployRequirement () const { return this->deployRequirement_; }
 inline ::Deployment::Requirements& Deployment::PlanConnectionDescription::deployRequirement () { return this->deployRequirement_; }
 
-inline void Deployment::PlanConnectionDescription::externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _externalEndpoint) { this->externalEndpoint_ = _externalEndpoint; }
-inline void Deployment::PlanConnectionDescription::externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _externalEndpoint) { this->externalEndpoint_ = std::move (_externalEndpoint); }
+inline void Deployment::PlanConnectionDescription::externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _x11_externalEndpoint) { this->externalEndpoint_ = _x11_externalEndpoint; }
+inline void Deployment::PlanConnectionDescription::externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _x11_externalEndpoint) { this->externalEndpoint_ = std::move (_x11_externalEndpoint); }
 inline const ::Deployment::ComponentExternalPortEndpoints& Deployment::PlanConnectionDescription::externalEndpoint () const { return this->externalEndpoint_; }
 inline ::Deployment::ComponentExternalPortEndpoints& Deployment::PlanConnectionDescription::externalEndpoint () { return this->externalEndpoint_; }
 
-inline void Deployment::PlanConnectionDescription::internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _internalEndpoint) { this->internalEndpoint_ = _internalEndpoint; }
-inline void Deployment::PlanConnectionDescription::internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _internalEndpoint) { this->internalEndpoint_ = std::move (_internalEndpoint); }
+inline void Deployment::PlanConnectionDescription::internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _x11_internalEndpoint) { this->internalEndpoint_ = _x11_internalEndpoint; }
+inline void Deployment::PlanConnectionDescription::internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _x11_internalEndpoint) { this->internalEndpoint_ = std::move (_x11_internalEndpoint); }
 inline const ::Deployment::PlanSubcomponentPortEndpoints& Deployment::PlanConnectionDescription::internalEndpoint () const { return this->internalEndpoint_; }
 inline ::Deployment::PlanSubcomponentPortEndpoints& Deployment::PlanConnectionDescription::internalEndpoint () { return this->internalEndpoint_; }
 
-inline void Deployment::PlanConnectionDescription::externalReference (const ::Deployment::ExternalReferenceEndpoints& _externalReference) { this->externalReference_ = _externalReference; }
-inline void Deployment::PlanConnectionDescription::externalReference (::Deployment::ExternalReferenceEndpoints&& _externalReference) { this->externalReference_ = std::move (_externalReference); }
+inline void Deployment::PlanConnectionDescription::externalReference (const ::Deployment::ExternalReferenceEndpoints& _x11_externalReference) { this->externalReference_ = _x11_externalReference; }
+inline void Deployment::PlanConnectionDescription::externalReference (::Deployment::ExternalReferenceEndpoints&& _x11_externalReference) { this->externalReference_ = std::move (_x11_externalReference); }
 inline const ::Deployment::ExternalReferenceEndpoints& Deployment::PlanConnectionDescription::externalReference () const { return this->externalReference_; }
 inline ::Deployment::ExternalReferenceEndpoints& Deployment::PlanConnectionDescription::externalReference () { return this->externalReference_; }
 
-inline void Deployment::PlanConnectionDescription::deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _deployedResource) { this->deployedResource_ = _deployedResource; }
-inline void Deployment::PlanConnectionDescription::deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _deployedResource) { this->deployedResource_ = std::move (_deployedResource); }
+inline void Deployment::PlanConnectionDescription::deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _x11_deployedResource) { this->deployedResource_ = _x11_deployedResource; }
+inline void Deployment::PlanConnectionDescription::deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _x11_deployedResource) { this->deployedResource_ = std::move (_x11_deployedResource); }
 inline const ::Deployment::ConnectionResourceDeploymentDescriptions& Deployment::PlanConnectionDescription::deployedResource () const { return this->deployedResource_; }
 inline ::Deployment::ConnectionResourceDeploymentDescriptions& Deployment::PlanConnectionDescription::deployedResource () { return this->deployedResource_; }
 
@@ -5568,12 +5568,12 @@ inline Deployment::PlanSubcomponentPropertyReference::PlanSubcomponentPropertyRe
 {
 }
 
-inline void Deployment::PlanSubcomponentPropertyReference::propertyName (const std::string& _propertyName) { this->propertyName_ = _propertyName; }
-inline void Deployment::PlanSubcomponentPropertyReference::propertyName (std::string&& _propertyName) { this->propertyName_ = std::move (_propertyName); }
+inline void Deployment::PlanSubcomponentPropertyReference::propertyName (const std::string& _x11_propertyName) { this->propertyName_ = _x11_propertyName; }
+inline void Deployment::PlanSubcomponentPropertyReference::propertyName (std::string&& _x11_propertyName) { this->propertyName_ = std::move (_x11_propertyName); }
 inline const std::string& Deployment::PlanSubcomponentPropertyReference::propertyName () const { return this->propertyName_; }
 inline std::string& Deployment::PlanSubcomponentPropertyReference::propertyName () { return this->propertyName_; }
 
-inline void Deployment::PlanSubcomponentPropertyReference::instanceRef (uint32_t _instanceRef) { this->instanceRef_ = _instanceRef; }
+inline void Deployment::PlanSubcomponentPropertyReference::instanceRef (uint32_t _x11_instanceRef) { this->instanceRef_ = _x11_instanceRef; }
 inline uint32_t Deployment::PlanSubcomponentPropertyReference::instanceRef () const { return this->instanceRef_; }
 inline uint32_t& Deployment::PlanSubcomponentPropertyReference::instanceRef () { return this->instanceRef_; }
 
@@ -5596,23 +5596,23 @@ inline Deployment::PlanPropertyMapping::PlanPropertyMapping (
 {
 }
 
-inline void Deployment::PlanPropertyMapping::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::PlanPropertyMapping::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::PlanPropertyMapping::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::PlanPropertyMapping::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::PlanPropertyMapping::name () const { return this->name_; }
 inline std::string& Deployment::PlanPropertyMapping::name () { return this->name_; }
 
-inline void Deployment::PlanPropertyMapping::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source) { this->source_ = _source; }
-inline void Deployment::PlanPropertyMapping::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source) { this->source_ = std::move (_source); }
+inline void Deployment::PlanPropertyMapping::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
+inline void Deployment::PlanPropertyMapping::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::PlanPropertyMapping::source () const { return this->source_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::PlanPropertyMapping::source () { return this->source_; }
 
-inline void Deployment::PlanPropertyMapping::externalName (const std::string& _externalName) { this->externalName_ = _externalName; }
-inline void Deployment::PlanPropertyMapping::externalName (std::string&& _externalName) { this->externalName_ = std::move (_externalName); }
+inline void Deployment::PlanPropertyMapping::externalName (const std::string& _x11_externalName) { this->externalName_ = _x11_externalName; }
+inline void Deployment::PlanPropertyMapping::externalName (std::string&& _x11_externalName) { this->externalName_ = std::move (_x11_externalName); }
 inline const std::string& Deployment::PlanPropertyMapping::externalName () const { return this->externalName_; }
 inline std::string& Deployment::PlanPropertyMapping::externalName () { return this->externalName_; }
 
-inline void Deployment::PlanPropertyMapping::delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _delegatesTo) { this->delegatesTo_ = _delegatesTo; }
-inline void Deployment::PlanPropertyMapping::delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _delegatesTo) { this->delegatesTo_ = std::move (_delegatesTo); }
+inline void Deployment::PlanPropertyMapping::delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _x11_delegatesTo) { this->delegatesTo_ = _x11_delegatesTo; }
+inline void Deployment::PlanPropertyMapping::delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _x11_delegatesTo) { this->delegatesTo_ = std::move (_x11_delegatesTo); }
 inline const ::Deployment::PlanSubcomponentPropertyReferences& Deployment::PlanPropertyMapping::delegatesTo () const { return this->delegatesTo_; }
 inline ::Deployment::PlanSubcomponentPropertyReferences& Deployment::PlanPropertyMapping::delegatesTo () { return this->delegatesTo_; }
 
@@ -5631,8 +5631,8 @@ inline Deployment::ImplementationDependency::ImplementationDependency (
 {
 }
 
-inline void Deployment::ImplementationDependency::requiredType (const std::string& _requiredType) { this->requiredType_ = _requiredType; }
-inline void Deployment::ImplementationDependency::requiredType (std::string&& _requiredType) { this->requiredType_ = std::move (_requiredType); }
+inline void Deployment::ImplementationDependency::requiredType (const std::string& _x11_requiredType) { this->requiredType_ = _x11_requiredType; }
+inline void Deployment::ImplementationDependency::requiredType (std::string&& _x11_requiredType) { this->requiredType_ = std::move (_x11_requiredType); }
 inline const std::string& Deployment::ImplementationDependency::requiredType () const { return this->requiredType_; }
 inline std::string& Deployment::ImplementationDependency::requiredType () { return this->requiredType_; }
 
@@ -5652,18 +5652,18 @@ inline Deployment::ResourceDeploymentDescription::ResourceDeploymentDescription 
 {
 }
 
-inline void Deployment::ResourceDeploymentDescription::requirementName (const std::string& _requirementName) { this->requirementName_ = _requirementName; }
-inline void Deployment::ResourceDeploymentDescription::requirementName (std::string&& _requirementName) { this->requirementName_ = std::move (_requirementName); }
+inline void Deployment::ResourceDeploymentDescription::requirementName (const std::string& _x11_requirementName) { this->requirementName_ = _x11_requirementName; }
+inline void Deployment::ResourceDeploymentDescription::requirementName (std::string&& _x11_requirementName) { this->requirementName_ = std::move (_x11_requirementName); }
 inline const std::string& Deployment::ResourceDeploymentDescription::requirementName () const { return this->requirementName_; }
 inline std::string& Deployment::ResourceDeploymentDescription::requirementName () { return this->requirementName_; }
 
-inline void Deployment::ResourceDeploymentDescription::resourceName (const std::string& _resourceName) { this->resourceName_ = _resourceName; }
-inline void Deployment::ResourceDeploymentDescription::resourceName (std::string&& _resourceName) { this->resourceName_ = std::move (_resourceName); }
+inline void Deployment::ResourceDeploymentDescription::resourceName (const std::string& _x11_resourceName) { this->resourceName_ = _x11_resourceName; }
+inline void Deployment::ResourceDeploymentDescription::resourceName (std::string&& _x11_resourceName) { this->resourceName_ = std::move (_x11_resourceName); }
 inline const std::string& Deployment::ResourceDeploymentDescription::resourceName () const { return this->resourceName_; }
 inline std::string& Deployment::ResourceDeploymentDescription::resourceName () { return this->resourceName_; }
 
-inline void Deployment::ResourceDeploymentDescription::property (const ::Deployment::Properties& _property) { this->property_ = _property; }
-inline void Deployment::ResourceDeploymentDescription::property (::Deployment::Properties&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::ResourceDeploymentDescription::property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::ResourceDeploymentDescription::property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::Properties& Deployment::ResourceDeploymentDescription::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::ResourceDeploymentDescription::property () { return this->property_; }
 
@@ -5693,38 +5693,38 @@ inline Deployment::ArtifactDeploymentDescription::ArtifactDeploymentDescription 
 {
 }
 
-inline void Deployment::ArtifactDeploymentDescription::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::ArtifactDeploymentDescription::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::ArtifactDeploymentDescription::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::ArtifactDeploymentDescription::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::ArtifactDeploymentDescription::name () const { return this->name_; }
 inline std::string& Deployment::ArtifactDeploymentDescription::name () { return this->name_; }
 
-inline void Deployment::ArtifactDeploymentDescription::location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _location) { this->location_ = _location; }
-inline void Deployment::ArtifactDeploymentDescription::location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _location) { this->location_ = std::move (_location); }
+inline void Deployment::ArtifactDeploymentDescription::location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_location) { this->location_ = _x11_location; }
+inline void Deployment::ArtifactDeploymentDescription::location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_location) { this->location_ = std::move (_x11_location); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ArtifactDeploymentDescription::location () const { return this->location_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ArtifactDeploymentDescription::location () { return this->location_; }
 
-inline void Deployment::ArtifactDeploymentDescription::node (const std::string& _node) { this->node_ = _node; }
-inline void Deployment::ArtifactDeploymentDescription::node (std::string&& _node) { this->node_ = std::move (_node); }
+inline void Deployment::ArtifactDeploymentDescription::node (const std::string& _x11_node) { this->node_ = _x11_node; }
+inline void Deployment::ArtifactDeploymentDescription::node (std::string&& _x11_node) { this->node_ = std::move (_x11_node); }
 inline const std::string& Deployment::ArtifactDeploymentDescription::node () const { return this->node_; }
 inline std::string& Deployment::ArtifactDeploymentDescription::node () { return this->node_; }
 
-inline void Deployment::ArtifactDeploymentDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _source) { this->source_ = _source; }
-inline void Deployment::ArtifactDeploymentDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _source) { this->source_ = std::move (_source); }
+inline void Deployment::ArtifactDeploymentDescription::source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
+inline void Deployment::ArtifactDeploymentDescription::source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ArtifactDeploymentDescription::source () const { return this->source_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::ArtifactDeploymentDescription::source () { return this->source_; }
 
-inline void Deployment::ArtifactDeploymentDescription::execParameter (const ::Deployment::Properties& _execParameter) { this->execParameter_ = _execParameter; }
-inline void Deployment::ArtifactDeploymentDescription::execParameter (::Deployment::Properties&& _execParameter) { this->execParameter_ = std::move (_execParameter); }
+inline void Deployment::ArtifactDeploymentDescription::execParameter (const ::Deployment::Properties& _x11_execParameter) { this->execParameter_ = _x11_execParameter; }
+inline void Deployment::ArtifactDeploymentDescription::execParameter (::Deployment::Properties&& _x11_execParameter) { this->execParameter_ = std::move (_x11_execParameter); }
 inline const ::Deployment::Properties& Deployment::ArtifactDeploymentDescription::execParameter () const { return this->execParameter_; }
 inline ::Deployment::Properties& Deployment::ArtifactDeploymentDescription::execParameter () { return this->execParameter_; }
 
-inline void Deployment::ArtifactDeploymentDescription::deployRequirement (const ::Deployment::Requirements& _deployRequirement) { this->deployRequirement_ = _deployRequirement; }
-inline void Deployment::ArtifactDeploymentDescription::deployRequirement (::Deployment::Requirements&& _deployRequirement) { this->deployRequirement_ = std::move (_deployRequirement); }
+inline void Deployment::ArtifactDeploymentDescription::deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement) { this->deployRequirement_ = _x11_deployRequirement; }
+inline void Deployment::ArtifactDeploymentDescription::deployRequirement (::Deployment::Requirements&& _x11_deployRequirement) { this->deployRequirement_ = std::move (_x11_deployRequirement); }
 inline const ::Deployment::Requirements& Deployment::ArtifactDeploymentDescription::deployRequirement () const { return this->deployRequirement_; }
 inline ::Deployment::Requirements& Deployment::ArtifactDeploymentDescription::deployRequirement () { return this->deployRequirement_; }
 
-inline void Deployment::ArtifactDeploymentDescription::deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _deployedResource) { this->deployedResource_ = _deployedResource; }
-inline void Deployment::ArtifactDeploymentDescription::deployedResource (::Deployment::ResourceDeploymentDescriptions&& _deployedResource) { this->deployedResource_ = std::move (_deployedResource); }
+inline void Deployment::ArtifactDeploymentDescription::deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _x11_deployedResource) { this->deployedResource_ = _x11_deployedResource; }
+inline void Deployment::ArtifactDeploymentDescription::deployedResource (::Deployment::ResourceDeploymentDescriptions&& _x11_deployedResource) { this->deployedResource_ = std::move (_x11_deployedResource); }
 inline const ::Deployment::ResourceDeploymentDescriptions& Deployment::ArtifactDeploymentDescription::deployedResource () const { return this->deployedResource_; }
 inline ::Deployment::ResourceDeploymentDescriptions& Deployment::ArtifactDeploymentDescription::deployedResource () { return this->deployedResource_; }
 
@@ -5748,12 +5748,12 @@ inline Deployment::PlanLocality::PlanLocality (
 {
 }
 
-inline void Deployment::PlanLocality::constraint (::Deployment::PlanLocalityKind _constraint) { this->constraint_ = _constraint; }
+inline void Deployment::PlanLocality::constraint (::Deployment::PlanLocalityKind _x11_constraint) { this->constraint_ = _x11_constraint; }
 inline ::Deployment::PlanLocalityKind Deployment::PlanLocality::constraint () const { return this->constraint_; }
 inline ::Deployment::PlanLocalityKind& Deployment::PlanLocality::constraint () { return this->constraint_; }
 
-inline void Deployment::PlanLocality::constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _constrainedInstanceRef) { this->constrainedInstanceRef_ = _constrainedInstanceRef; }
-inline void Deployment::PlanLocality::constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _constrainedInstanceRef) { this->constrainedInstanceRef_ = std::move (_constrainedInstanceRef); }
+inline void Deployment::PlanLocality::constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _x11_constrainedInstanceRef) { this->constrainedInstanceRef_ = _x11_constrainedInstanceRef; }
+inline void Deployment::PlanLocality::constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _x11_constrainedInstanceRef) { this->constrainedInstanceRef_ = std::move (_x11_constrainedInstanceRef); }
 inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& Deployment::PlanLocality::constrainedInstanceRef () const { return this->constrainedInstanceRef_; }
 inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& Deployment::PlanLocality::constrainedInstanceRef () { return this->constrainedInstanceRef_; }
 
@@ -5790,58 +5790,58 @@ inline Deployment::DeploymentPlan::DeploymentPlan (
 {
 }
 
-inline void Deployment::DeploymentPlan::label (const std::string& _label) { this->label_ = _label; }
-inline void Deployment::DeploymentPlan::label (std::string&& _label) { this->label_ = std::move (_label); }
+inline void Deployment::DeploymentPlan::label (const std::string& _x11_label) { this->label_ = _x11_label; }
+inline void Deployment::DeploymentPlan::label (std::string&& _x11_label) { this->label_ = std::move (_x11_label); }
 inline const std::string& Deployment::DeploymentPlan::label () const { return this->label_; }
 inline std::string& Deployment::DeploymentPlan::label () { return this->label_; }
 
-inline void Deployment::DeploymentPlan::UUID (const std::string& _UUID) { this->UUID_ = _UUID; }
-inline void Deployment::DeploymentPlan::UUID (std::string&& _UUID) { this->UUID_ = std::move (_UUID); }
+inline void Deployment::DeploymentPlan::UUID (const std::string& _x11_UUID) { this->UUID_ = _x11_UUID; }
+inline void Deployment::DeploymentPlan::UUID (std::string&& _x11_UUID) { this->UUID_ = std::move (_x11_UUID); }
 inline const std::string& Deployment::DeploymentPlan::UUID () const { return this->UUID_; }
 inline std::string& Deployment::DeploymentPlan::UUID () { return this->UUID_; }
 
-inline void Deployment::DeploymentPlan::realizes (const ::Deployment::ComponentInterfaceDescription& _realizes) { this->realizes_ = _realizes; }
-inline void Deployment::DeploymentPlan::realizes (::Deployment::ComponentInterfaceDescription&& _realizes) { this->realizes_ = std::move (_realizes); }
+inline void Deployment::DeploymentPlan::realizes (const ::Deployment::ComponentInterfaceDescription& _x11_realizes) { this->realizes_ = _x11_realizes; }
+inline void Deployment::DeploymentPlan::realizes (::Deployment::ComponentInterfaceDescription&& _x11_realizes) { this->realizes_ = std::move (_x11_realizes); }
 inline const ::Deployment::ComponentInterfaceDescription& Deployment::DeploymentPlan::realizes () const { return this->realizes_; }
 inline ::Deployment::ComponentInterfaceDescription& Deployment::DeploymentPlan::realizes () { return this->realizes_; }
 
-inline void Deployment::DeploymentPlan::implementation (const ::Deployment::MonolithicDeploymentDescriptions& _implementation) { this->implementation_ = _implementation; }
-inline void Deployment::DeploymentPlan::implementation (::Deployment::MonolithicDeploymentDescriptions&& _implementation) { this->implementation_ = std::move (_implementation); }
+inline void Deployment::DeploymentPlan::implementation (const ::Deployment::MonolithicDeploymentDescriptions& _x11_implementation) { this->implementation_ = _x11_implementation; }
+inline void Deployment::DeploymentPlan::implementation (::Deployment::MonolithicDeploymentDescriptions&& _x11_implementation) { this->implementation_ = std::move (_x11_implementation); }
 inline const ::Deployment::MonolithicDeploymentDescriptions& Deployment::DeploymentPlan::implementation () const { return this->implementation_; }
 inline ::Deployment::MonolithicDeploymentDescriptions& Deployment::DeploymentPlan::implementation () { return this->implementation_; }
 
-inline void Deployment::DeploymentPlan::instance (const ::Deployment::InstanceDeploymentDescriptions& _instance) { this->instance_ = _instance; }
-inline void Deployment::DeploymentPlan::instance (::Deployment::InstanceDeploymentDescriptions&& _instance) { this->instance_ = std::move (_instance); }
+inline void Deployment::DeploymentPlan::instance (const ::Deployment::InstanceDeploymentDescriptions& _x11_instance) { this->instance_ = _x11_instance; }
+inline void Deployment::DeploymentPlan::instance (::Deployment::InstanceDeploymentDescriptions&& _x11_instance) { this->instance_ = std::move (_x11_instance); }
 inline const ::Deployment::InstanceDeploymentDescriptions& Deployment::DeploymentPlan::instance () const { return this->instance_; }
 inline ::Deployment::InstanceDeploymentDescriptions& Deployment::DeploymentPlan::instance () { return this->instance_; }
 
-inline void Deployment::DeploymentPlan::connection (const ::Deployment::PlanConnectionDescriptions& _connection) { this->connection_ = _connection; }
-inline void Deployment::DeploymentPlan::connection (::Deployment::PlanConnectionDescriptions&& _connection) { this->connection_ = std::move (_connection); }
+inline void Deployment::DeploymentPlan::connection (const ::Deployment::PlanConnectionDescriptions& _x11_connection) { this->connection_ = _x11_connection; }
+inline void Deployment::DeploymentPlan::connection (::Deployment::PlanConnectionDescriptions&& _x11_connection) { this->connection_ = std::move (_x11_connection); }
 inline const ::Deployment::PlanConnectionDescriptions& Deployment::DeploymentPlan::connection () const { return this->connection_; }
 inline ::Deployment::PlanConnectionDescriptions& Deployment::DeploymentPlan::connection () { return this->connection_; }
 
-inline void Deployment::DeploymentPlan::externalProperty (const ::Deployment::PlanPropertyMappings& _externalProperty) { this->externalProperty_ = _externalProperty; }
-inline void Deployment::DeploymentPlan::externalProperty (::Deployment::PlanPropertyMappings&& _externalProperty) { this->externalProperty_ = std::move (_externalProperty); }
+inline void Deployment::DeploymentPlan::externalProperty (const ::Deployment::PlanPropertyMappings& _x11_externalProperty) { this->externalProperty_ = _x11_externalProperty; }
+inline void Deployment::DeploymentPlan::externalProperty (::Deployment::PlanPropertyMappings&& _x11_externalProperty) { this->externalProperty_ = std::move (_x11_externalProperty); }
 inline const ::Deployment::PlanPropertyMappings& Deployment::DeploymentPlan::externalProperty () const { return this->externalProperty_; }
 inline ::Deployment::PlanPropertyMappings& Deployment::DeploymentPlan::externalProperty () { return this->externalProperty_; }
 
-inline void Deployment::DeploymentPlan::dependsOn (const ::Deployment::ImplementationDependencies& _dependsOn) { this->dependsOn_ = _dependsOn; }
-inline void Deployment::DeploymentPlan::dependsOn (::Deployment::ImplementationDependencies&& _dependsOn) { this->dependsOn_ = std::move (_dependsOn); }
+inline void Deployment::DeploymentPlan::dependsOn (const ::Deployment::ImplementationDependencies& _x11_dependsOn) { this->dependsOn_ = _x11_dependsOn; }
+inline void Deployment::DeploymentPlan::dependsOn (::Deployment::ImplementationDependencies&& _x11_dependsOn) { this->dependsOn_ = std::move (_x11_dependsOn); }
 inline const ::Deployment::ImplementationDependencies& Deployment::DeploymentPlan::dependsOn () const { return this->dependsOn_; }
 inline ::Deployment::ImplementationDependencies& Deployment::DeploymentPlan::dependsOn () { return this->dependsOn_; }
 
-inline void Deployment::DeploymentPlan::artifact (const ::Deployment::ArtifactDeploymentDescriptions& _artifact) { this->artifact_ = _artifact; }
-inline void Deployment::DeploymentPlan::artifact (::Deployment::ArtifactDeploymentDescriptions&& _artifact) { this->artifact_ = std::move (_artifact); }
+inline void Deployment::DeploymentPlan::artifact (const ::Deployment::ArtifactDeploymentDescriptions& _x11_artifact) { this->artifact_ = _x11_artifact; }
+inline void Deployment::DeploymentPlan::artifact (::Deployment::ArtifactDeploymentDescriptions&& _x11_artifact) { this->artifact_ = std::move (_x11_artifact); }
 inline const ::Deployment::ArtifactDeploymentDescriptions& Deployment::DeploymentPlan::artifact () const { return this->artifact_; }
 inline ::Deployment::ArtifactDeploymentDescriptions& Deployment::DeploymentPlan::artifact () { return this->artifact_; }
 
-inline void Deployment::DeploymentPlan::infoProperty (const ::Deployment::Properties& _infoProperty) { this->infoProperty_ = _infoProperty; }
-inline void Deployment::DeploymentPlan::infoProperty (::Deployment::Properties&& _infoProperty) { this->infoProperty_ = std::move (_infoProperty); }
+inline void Deployment::DeploymentPlan::infoProperty (const ::Deployment::Properties& _x11_infoProperty) { this->infoProperty_ = _x11_infoProperty; }
+inline void Deployment::DeploymentPlan::infoProperty (::Deployment::Properties&& _x11_infoProperty) { this->infoProperty_ = std::move (_x11_infoProperty); }
 inline const ::Deployment::Properties& Deployment::DeploymentPlan::infoProperty () const { return this->infoProperty_; }
 inline ::Deployment::Properties& Deployment::DeploymentPlan::infoProperty () { return this->infoProperty_; }
 
-inline void Deployment::DeploymentPlan::localityConstraint (const ::Deployment::PlanLocalities& _localityConstraint) { this->localityConstraint_ = _localityConstraint; }
-inline void Deployment::DeploymentPlan::localityConstraint (::Deployment::PlanLocalities&& _localityConstraint) { this->localityConstraint_ = std::move (_localityConstraint); }
+inline void Deployment::DeploymentPlan::localityConstraint (const ::Deployment::PlanLocalities& _x11_localityConstraint) { this->localityConstraint_ = _x11_localityConstraint; }
+inline void Deployment::DeploymentPlan::localityConstraint (::Deployment::PlanLocalities&& _x11_localityConstraint) { this->localityConstraint_ = std::move (_x11_localityConstraint); }
 inline const ::Deployment::PlanLocalities& Deployment::DeploymentPlan::localityConstraint () const { return this->localityConstraint_; }
 inline ::Deployment::PlanLocalities& Deployment::DeploymentPlan::localityConstraint () { return this->localityConstraint_; }
 
@@ -5871,18 +5871,18 @@ inline Deployment::ComponentPackageReference::ComponentPackageReference (
 {
 }
 
-inline void Deployment::ComponentPackageReference::requiredUUID (const std::string& _requiredUUID) { this->requiredUUID_ = _requiredUUID; }
-inline void Deployment::ComponentPackageReference::requiredUUID (std::string&& _requiredUUID) { this->requiredUUID_ = std::move (_requiredUUID); }
+inline void Deployment::ComponentPackageReference::requiredUUID (const std::string& _x11_requiredUUID) { this->requiredUUID_ = _x11_requiredUUID; }
+inline void Deployment::ComponentPackageReference::requiredUUID (std::string&& _x11_requiredUUID) { this->requiredUUID_ = std::move (_x11_requiredUUID); }
 inline const std::string& Deployment::ComponentPackageReference::requiredUUID () const { return this->requiredUUID_; }
 inline std::string& Deployment::ComponentPackageReference::requiredUUID () { return this->requiredUUID_; }
 
-inline void Deployment::ComponentPackageReference::requiredName (const std::string& _requiredName) { this->requiredName_ = _requiredName; }
-inline void Deployment::ComponentPackageReference::requiredName (std::string&& _requiredName) { this->requiredName_ = std::move (_requiredName); }
+inline void Deployment::ComponentPackageReference::requiredName (const std::string& _x11_requiredName) { this->requiredName_ = _x11_requiredName; }
+inline void Deployment::ComponentPackageReference::requiredName (std::string&& _x11_requiredName) { this->requiredName_ = std::move (_x11_requiredName); }
 inline const std::string& Deployment::ComponentPackageReference::requiredName () const { return this->requiredName_; }
 inline std::string& Deployment::ComponentPackageReference::requiredName () { return this->requiredName_; }
 
-inline void Deployment::ComponentPackageReference::requiredType (const ::Deployment::ComponentInterfaceDescription& _requiredType) { this->requiredType_ = _requiredType; }
-inline void Deployment::ComponentPackageReference::requiredType (::Deployment::ComponentInterfaceDescription&& _requiredType) { this->requiredType_ = std::move (_requiredType); }
+inline void Deployment::ComponentPackageReference::requiredType (const ::Deployment::ComponentInterfaceDescription& _x11_requiredType) { this->requiredType_ = _x11_requiredType; }
+inline void Deployment::ComponentPackageReference::requiredType (::Deployment::ComponentInterfaceDescription&& _x11_requiredType) { this->requiredType_ = std::move (_x11_requiredType); }
 inline const ::Deployment::ComponentInterfaceDescription& Deployment::ComponentPackageReference::requiredType () const { return this->requiredType_; }
 inline ::Deployment::ComponentInterfaceDescription& Deployment::ComponentPackageReference::requiredType () { return this->requiredType_; }
 
@@ -5910,33 +5910,33 @@ inline Deployment::ImplementationRequirement::ImplementationRequirement (
 {
 }
 
-inline void Deployment::ImplementationRequirement::resourceUsage (const ::Deployment::ResourceUsageKinds& _resourceUsage) { this->resourceUsage_ = _resourceUsage; }
-inline void Deployment::ImplementationRequirement::resourceUsage (::Deployment::ResourceUsageKinds&& _resourceUsage) { this->resourceUsage_ = std::move (_resourceUsage); }
+inline void Deployment::ImplementationRequirement::resourceUsage (const ::Deployment::ResourceUsageKinds& _x11_resourceUsage) { this->resourceUsage_ = _x11_resourceUsage; }
+inline void Deployment::ImplementationRequirement::resourceUsage (::Deployment::ResourceUsageKinds&& _x11_resourceUsage) { this->resourceUsage_ = std::move (_x11_resourceUsage); }
 inline const ::Deployment::ResourceUsageKinds& Deployment::ImplementationRequirement::resourceUsage () const { return this->resourceUsage_; }
 inline ::Deployment::ResourceUsageKinds& Deployment::ImplementationRequirement::resourceUsage () { return this->resourceUsage_; }
 
-inline void Deployment::ImplementationRequirement::resourcePort (const std::string& _resourcePort) { this->resourcePort_ = _resourcePort; }
-inline void Deployment::ImplementationRequirement::resourcePort (std::string&& _resourcePort) { this->resourcePort_ = std::move (_resourcePort); }
+inline void Deployment::ImplementationRequirement::resourcePort (const std::string& _x11_resourcePort) { this->resourcePort_ = _x11_resourcePort; }
+inline void Deployment::ImplementationRequirement::resourcePort (std::string&& _x11_resourcePort) { this->resourcePort_ = std::move (_x11_resourcePort); }
 inline const std::string& Deployment::ImplementationRequirement::resourcePort () const { return this->resourcePort_; }
 inline std::string& Deployment::ImplementationRequirement::resourcePort () { return this->resourcePort_; }
 
-inline void Deployment::ImplementationRequirement::componentPort (const std::string& _componentPort) { this->componentPort_ = _componentPort; }
-inline void Deployment::ImplementationRequirement::componentPort (std::string&& _componentPort) { this->componentPort_ = std::move (_componentPort); }
+inline void Deployment::ImplementationRequirement::componentPort (const std::string& _x11_componentPort) { this->componentPort_ = _x11_componentPort; }
+inline void Deployment::ImplementationRequirement::componentPort (std::string&& _x11_componentPort) { this->componentPort_ = std::move (_x11_componentPort); }
 inline const std::string& Deployment::ImplementationRequirement::componentPort () const { return this->componentPort_; }
 inline std::string& Deployment::ImplementationRequirement::componentPort () { return this->componentPort_; }
 
-inline void Deployment::ImplementationRequirement::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::ImplementationRequirement::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::ImplementationRequirement::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::ImplementationRequirement::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::ImplementationRequirement::name () const { return this->name_; }
 inline std::string& Deployment::ImplementationRequirement::name () { return this->name_; }
 
-inline void Deployment::ImplementationRequirement::resourceType (const std::string& _resourceType) { this->resourceType_ = _resourceType; }
-inline void Deployment::ImplementationRequirement::resourceType (std::string&& _resourceType) { this->resourceType_ = std::move (_resourceType); }
+inline void Deployment::ImplementationRequirement::resourceType (const std::string& _x11_resourceType) { this->resourceType_ = _x11_resourceType; }
+inline void Deployment::ImplementationRequirement::resourceType (std::string&& _x11_resourceType) { this->resourceType_ = std::move (_x11_resourceType); }
 inline const std::string& Deployment::ImplementationRequirement::resourceType () const { return this->resourceType_; }
 inline std::string& Deployment::ImplementationRequirement::resourceType () { return this->resourceType_; }
 
-inline void Deployment::ImplementationRequirement::property (const ::Deployment::Properties& _property) { this->property_ = _property; }
-inline void Deployment::ImplementationRequirement::property (::Deployment::Properties&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::ImplementationRequirement::property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::ImplementationRequirement::property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::Properties& Deployment::ImplementationRequirement::property () const { return this->property_; }
 inline ::Deployment::Properties& Deployment::ImplementationRequirement::property () { return this->property_; }
 
@@ -5961,18 +5961,18 @@ inline Deployment::Capability::Capability (
 {
 }
 
-inline void Deployment::Capability::name (const std::string& _name) { this->name_ = _name; }
-inline void Deployment::Capability::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Deployment::Capability::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Deployment::Capability::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Deployment::Capability::name () const { return this->name_; }
 inline std::string& Deployment::Capability::name () { return this->name_; }
 
-inline void Deployment::Capability::resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _resourceType) { this->resourceType_ = _resourceType; }
-inline void Deployment::Capability::resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _resourceType) { this->resourceType_ = std::move (_resourceType); }
+inline void Deployment::Capability::resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_resourceType) { this->resourceType_ = _x11_resourceType; }
+inline void Deployment::Capability::resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_resourceType) { this->resourceType_ = std::move (_x11_resourceType); }
 inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::Capability::resourceType () const { return this->resourceType_; }
 inline ::TAOX11_NAMESPACE::CORBA::StringSeq& Deployment::Capability::resourceType () { return this->resourceType_; }
 
-inline void Deployment::Capability::property (const ::Deployment::SatisfierProperties& _property) { this->property_ = _property; }
-inline void Deployment::Capability::property (::Deployment::SatisfierProperties&& _property) { this->property_ = std::move (_property); }
+inline void Deployment::Capability::property (const ::Deployment::SatisfierProperties& _x11_property) { this->property_ = _x11_property; }
+inline void Deployment::Capability::property (::Deployment::SatisfierProperties&& _x11_property) { this->property_ = std::move (_x11_property); }
 inline const ::Deployment::SatisfierProperties& Deployment::Capability::property () const { return this->property_; }
 inline ::Deployment::SatisfierProperties& Deployment::Capability::property () { return this->property_; }
 
@@ -6755,6 +6755,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HHFDHGAA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HGFDAIID_INCLUDED__ */
 
 // -*- END -*-

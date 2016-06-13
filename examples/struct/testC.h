@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EIAGCEAE_INCLUDED__
-#define __RIDL_TESTC_H_EIAGCEAE_INCLUDED__
+#ifndef __RIDL_TESTC_H_JJHHFAAA_INCLUDED__
+#define __RIDL_TESTC_H_JJHHFAAA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,8 +24,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_BETA_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -61,8 +61,8 @@ namespace Test
 
     /// @copydoc test.idl::Test::Variable::name
     //@{
-    inline void name (const std::string& _name);
-    inline void name (std::string&& _name);
+    inline void name (const std::string& _x11_name);
+    inline void name (std::string&& _x11_name);
     inline const std::string& name () const;
     inline std::string& name ();
     //@}
@@ -219,58 +219,58 @@ namespace Test
 
     /// @copydoc test.idl::Test::Simple::o
     //@{
-    inline void o (uint8_t _o);
+    inline void o (uint8_t _x11_o);
     inline uint8_t o () const;
     inline uint8_t& o ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::l
     //@{
-    inline void l (int32_t _l);
+    inline void l (int32_t _x11_l);
     inline int32_t l () const;
     inline int32_t& l ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::s
     //@{
-    inline void s (const std::string& _s);
-    inline void s (std::string&& _s);
+    inline void s (const std::string& _x11_s);
+    inline void s (std::string&& _x11_s);
     inline const std::string& s () const;
     inline std::string& s ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::d
     //@{
-    inline void d (double _d);
+    inline void d (double _x11_d);
     inline double d () const;
     inline double& d ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::b
     //@{
-    inline void b (bool _b);
+    inline void b (bool _x11_b);
     inline bool b () const;
     inline bool& b ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::c
     //@{
-    inline void c (char _c);
+    inline void c (char _x11_c);
     inline char c () const;
     inline char& c ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::bar_ref
     //@{
-    inline void bar_ref (IDL::traits< ::Test::Bar>::ref_type _bar_ref);
+    inline void bar_ref (IDL::traits< ::Test::Bar>::ref_type _x11_bar_ref);
     inline IDL::traits< ::Test::Bar>::ref_type bar_ref () const;
     inline IDL::traits< ::Test::Bar>::ref_type& bar_ref ();
     //@}
 
     /// @copydoc test.idl::Test::Simple::v
     //@{
-    inline void v (const ::Test::Variable& _v);
-    inline void v (::Test::Variable&& _v);
+    inline void v (const ::Test::Variable& _x11_v);
+    inline void v (::Test::Variable&& _x11_v);
     inline const ::Test::Variable& v () const;
     inline ::Test::Variable& v ();
     //@}
@@ -688,8 +688,8 @@ inline Test::Variable::Variable (
 {
 }
 
-inline void Test::Variable::name (const std::string& _name) { this->name_ = _name; }
-inline void Test::Variable::name (std::string&& _name) { this->name_ = std::move (_name); }
+inline void Test::Variable::name (const std::string& _x11_name) { this->name_ = _x11_name; }
+inline void Test::Variable::name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
 inline const std::string& Test::Variable::name () const { return this->name_; }
 inline std::string& Test::Variable::name () { return this->name_; }
 
@@ -719,37 +719,37 @@ inline Test::Simple::Simple (
 {
 }
 
-inline void Test::Simple::o (uint8_t _o) { this->o_ = _o; }
+inline void Test::Simple::o (uint8_t _x11_o) { this->o_ = _x11_o; }
 inline uint8_t Test::Simple::o () const { return this->o_; }
 inline uint8_t& Test::Simple::o () { return this->o_; }
 
-inline void Test::Simple::l (int32_t _l) { this->l_ = _l; }
+inline void Test::Simple::l (int32_t _x11_l) { this->l_ = _x11_l; }
 inline int32_t Test::Simple::l () const { return this->l_; }
 inline int32_t& Test::Simple::l () { return this->l_; }
 
-inline void Test::Simple::s (const std::string& _s) { this->s_ = _s; }
-inline void Test::Simple::s (std::string&& _s) { this->s_ = std::move (_s); }
+inline void Test::Simple::s (const std::string& _x11_s) { this->s_ = _x11_s; }
+inline void Test::Simple::s (std::string&& _x11_s) { this->s_ = std::move (_x11_s); }
 inline const std::string& Test::Simple::s () const { return this->s_; }
 inline std::string& Test::Simple::s () { return this->s_; }
 
-inline void Test::Simple::d (double _d) { this->d_ = _d; }
+inline void Test::Simple::d (double _x11_d) { this->d_ = _x11_d; }
 inline double Test::Simple::d () const { return this->d_; }
 inline double& Test::Simple::d () { return this->d_; }
 
-inline void Test::Simple::b (bool _b) { this->b_ = _b; }
+inline void Test::Simple::b (bool _x11_b) { this->b_ = _x11_b; }
 inline bool Test::Simple::b () const { return this->b_; }
 inline bool& Test::Simple::b () { return this->b_; }
 
-inline void Test::Simple::c (char _c) { this->c_ = _c; }
+inline void Test::Simple::c (char _x11_c) { this->c_ = _x11_c; }
 inline char Test::Simple::c () const { return this->c_; }
 inline char& Test::Simple::c () { return this->c_; }
 
-inline void Test::Simple::bar_ref (IDL::traits< ::Test::Bar>::ref_type _bar_ref) { this->bar_ref_ = _bar_ref; }
+inline void Test::Simple::bar_ref (IDL::traits< ::Test::Bar>::ref_type _x11_bar_ref) { this->bar_ref_ = _x11_bar_ref; }
 inline IDL::traits< ::Test::Bar>::ref_type Test::Simple::bar_ref () const { return this->bar_ref_; }
 inline IDL::traits< ::Test::Bar>::ref_type& Test::Simple::bar_ref () { return this->bar_ref_; }
 
-inline void Test::Simple::v (const ::Test::Variable& _v) { this->v_ = _v; }
-inline void Test::Simple::v (::Test::Variable&& _v) { this->v_ = std::move (_v); }
+inline void Test::Simple::v (const ::Test::Variable& _x11_v) { this->v_ = _x11_v; }
+inline void Test::Simple::v (::Test::Variable&& _x11_v) { this->v_ = std::move (_x11_v); }
 inline const ::Test::Variable& Test::Simple::v () const { return this->v_; }
 inline ::Test::Variable& Test::Simple::v () { return this->v_; }
 
@@ -824,6 +824,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EIAGCEAE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JJHHFAAA_INCLUDED__ */
 
 // -*- END -*-
