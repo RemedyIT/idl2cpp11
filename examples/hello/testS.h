@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_JHIDDEJF_INCLUDED__
-#define __RIDL_TESTS_H_JHIDDEJF_INCLUDED__
+#ifndef __RIDL_TESTS_H_DFAFAHEA_INCLUDED__
+#define __RIDL_TESTS_H_DFAFAHEA_INCLUDED__
 
 #include "testC.h"
 
@@ -77,8 +77,8 @@ namespace Test
       void
       shutdown () = 0;
 
-      // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
+      // generated from c++11/templates/srv/hdr/interface_post.erb
       Hello (const Hello&) = delete;
       Hello (Hello&&) = delete;
       Hello& operator= (const Hello&) = delete;
@@ -123,6 +123,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_JHIDDEJF_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_DFAFAHEA_INCLUDED__ */
 
 // -*- END -*-

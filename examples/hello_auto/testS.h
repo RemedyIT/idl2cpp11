@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_DABFIBEJ_INCLUDED__
-#define __RIDL_TESTS_H_DABFIBEJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_JBIGBCIG_INCLUDED__
+#define __RIDL_TESTS_H_JBIGBCIG_INCLUDED__
 
 #include "testC.h"
 
@@ -71,8 +71,8 @@ namespace Test
       std::string
       get_string () = 0;
 
-      // generated from c++11/templates/srv/hdr/interface_post.erb
     private:
+      // generated from c++11/templates/srv/hdr/interface_post.erb
       Hello (const Hello&) = delete;
       Hello (Hello&&) = delete;
       Hello& operator= (const Hello&) = delete;
@@ -117,6 +117,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_DABFIBEJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_JBIGBCIG_INCLUDED__ */
 
 // -*- END -*-
