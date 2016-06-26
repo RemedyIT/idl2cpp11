@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_CHGAAJDJ_INCLUDED__
-#define __RIDL_TESTS_H_CHGAAJDJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_FIJAEBAC_INCLUDED__
+#define __RIDL_TESTS_H_FIJAEBAC_INCLUDED__
 
 #include "testC.h"
 
@@ -67,8 +67,8 @@ namespace POA
     void
     op () = 0;
 
-    // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
+    // generated from c++11/templates/srv/hdr/interface_post.erb
     A (const A&) = delete;
     A (A&&) = delete;
     A& operator= (const A&) = delete;
@@ -123,8 +123,8 @@ namespace POA
     op (
         std::string& s) = 0;
 
-    // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
+    // generated from c++11/templates/srv/hdr/interface_post.erb
     X (const X&) = delete;
     X (X&&) = delete;
     X& operator= (const X&) = delete;
@@ -178,8 +178,8 @@ namespace POA
     void
     op () = 0;
 
-    // generated from c++11/templates/srv/hdr/interface_post.erb
   private:
+    // generated from c++11/templates/srv/hdr/interface_post.erb
     A1 (const A1&) = delete;
     A1 (A1&&) = delete;
     A1& operator= (const A1&) = delete;
@@ -210,7 +210,7 @@ namespace POA
     /// Constructor
     B ();
     /// Destructor
-    virtual ~B ();
+    virtual ~B () = default;
 
     template <typename T> friend class TAOX11_CORBA::servant_reference;
 
@@ -324,6 +324,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CHGAAJDJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_FIJAEBAC_INCLUDED__ */
 
 // -*- END -*-

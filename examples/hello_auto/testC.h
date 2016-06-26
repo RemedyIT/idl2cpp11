@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BBICAFFC_INCLUDED__
-#define __RIDL_TESTC_H_BBICAFFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHCEIAAD_INCLUDED__
+#define __RIDL_TESTC_H_GHCEIAAD_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -235,6 +235,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BBICAFFC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHCEIAAD_INCLUDED__ */
 
 // -*- END -*-
