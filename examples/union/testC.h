@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFJIBCII_INCLUDED__
-#define __RIDL_TESTC_H_JFJIBCII_INCLUDED__
+#ifndef __RIDL_TESTC_H_BHGICHDE_INCLUDED__
+#define __RIDL_TESTC_H_BHGICHDE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,7 +24,7 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_BETA_VERSION != 2
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 2
 #error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
 #endif
 
@@ -1277,7 +1277,7 @@ namespace TAOX11_NAMESPACE
           IDL::traits< ::Test::Foo>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               val_,
+               std::move (val_),
                "Test::Foo");
       return os_;
     }
@@ -1307,7 +1307,7 @@ namespace TAOX11_NAMESPACE
           IDL::traits< ::Test::A>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               val_,
+               std::move (val_),
                "Test::A");
       return os_;
     }
@@ -2602,6 +2602,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFJIBCII_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BHGICHDE_INCLUDED__ */
 
 // -*- END -*-
