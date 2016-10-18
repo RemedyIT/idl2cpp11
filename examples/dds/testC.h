@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CIDJIIEJ_INCLUDED__
-#define __RIDL_TESTC_H_CIDJIIEJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_EAHDJFFB_INCLUDED__
+#define __RIDL_TESTC_H_EAHDJFFB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -23,8 +23,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 2
-#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 3
+#error This file was generated with another RIDL C++11 backend version (1.5.3). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -58,31 +58,31 @@ public:
 
   /// @copydoc test.idl::ShapeType::color
   //@{
-  inline void color (const std::string& _x11_color);
-  inline void color (std::string&& _x11_color);
-  inline const std::string& color () const;
-  inline std::string& color ();
+  inline void color (const std::string& _x11_color) { this->color_ = _x11_color; }
+  inline void color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
+  inline const std::string& color () const { return this->color_; }
+  inline std::string& color () { return this->color_; }
   //@}
 
   /// @copydoc test.idl::ShapeType::x
   //@{
-  inline void x (int32_t _x11_x);
-  inline int32_t x () const;
-  inline int32_t& x ();
+  inline void x (int32_t _x11_x) { this->x_ = _x11_x; }
+  inline int32_t x () const { return this->x_; }
+  inline int32_t& x () { return this->x_; }
   //@}
 
   /// @copydoc test.idl::ShapeType::y
   //@{
-  inline void y (int32_t _x11_y);
-  inline int32_t y () const;
-  inline int32_t& y ();
+  inline void y (int32_t _x11_y) { this->y_ = _x11_y; }
+  inline int32_t y () const { return this->y_; }
+  inline int32_t& y () { return this->y_; }
   //@}
 
   /// @copydoc test.idl::ShapeType::shapesize
   //@{
-  inline void shapesize (int32_t _x11_shapesize);
-  inline int32_t shapesize () const;
-  inline int32_t& shapesize ();
+  inline void shapesize (int32_t _x11_shapesize) { this->shapesize_ = _x11_shapesize; }
+  inline int32_t shapesize () const { return this->shapesize_; }
+  inline int32_t& shapesize () { return this->shapesize_; }
   //@}
 
   /// Exchange the value of two structs in an efficient matter
@@ -123,25 +123,25 @@ public:
 
   /// @copydoc test.idl::Attributes::shape
   //@{
-  inline void shape (const std::string& _x11_shape);
-  inline void shape (std::string&& _x11_shape);
-  inline const std::string& shape () const;
-  inline std::string& shape ();
+  inline void shape (const std::string& _x11_shape) { this->shape_ = _x11_shape; }
+  inline void shape (std::string&& _x11_shape) { this->shape_ = std::move (_x11_shape); }
+  inline const std::string& shape () const { return this->shape_; }
+  inline std::string& shape () { return this->shape_; }
   //@}
 
   /// @copydoc test.idl::Attributes::color
   //@{
-  inline void color (const std::string& _x11_color);
-  inline void color (std::string&& _x11_color);
-  inline const std::string& color () const;
-  inline std::string& color ();
+  inline void color (const std::string& _x11_color) { this->color_ = _x11_color; }
+  inline void color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
+  inline const std::string& color () const { return this->color_; }
+  inline std::string& color () { return this->color_; }
   //@}
 
   /// @copydoc test.idl::Attributes::speed
   //@{
-  inline void speed (float _x11_speed);
-  inline float speed () const;
-  inline float& speed ();
+  inline void speed (float _x11_speed) { this->speed_ = _x11_speed; }
+  inline float speed () const { return this->speed_; }
+  inline float& speed () { return this->speed_; }
   //@}
 
   /// Exchange the value of two structs in an efficient matter
@@ -360,7 +360,7 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline ShapeType::ShapeType (
+inline ::ShapeType::ShapeType (
   std::string color,
   int32_t x,
   int32_t y,
@@ -372,24 +372,7 @@ inline ShapeType::ShapeType (
 {
 }
 
-inline void ShapeType::color (const std::string& _x11_color) { this->color_ = _x11_color; }
-inline void ShapeType::color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
-inline const std::string& ShapeType::color () const { return this->color_; }
-inline std::string& ShapeType::color () { return this->color_; }
-
-inline void ShapeType::x (int32_t _x11_x) { this->x_ = _x11_x; }
-inline int32_t ShapeType::x () const { return this->x_; }
-inline int32_t& ShapeType::x () { return this->x_; }
-
-inline void ShapeType::y (int32_t _x11_y) { this->y_ = _x11_y; }
-inline int32_t ShapeType::y () const { return this->y_; }
-inline int32_t& ShapeType::y () { return this->y_; }
-
-inline void ShapeType::shapesize (int32_t _x11_shapesize) { this->shapesize_ = _x11_shapesize; }
-inline int32_t ShapeType::shapesize () const { return this->shapesize_; }
-inline int32_t& ShapeType::shapesize () { return this->shapesize_; }
-
-inline void ShapeType::swap (::ShapeType& s)
+inline void ::ShapeType::swap (::ShapeType& s)
 {
   std::swap (this->color_, s.color_);
   std::swap (this->x_, s.x_);
@@ -398,7 +381,7 @@ inline void ShapeType::swap (::ShapeType& s)
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Attributes::Attributes (
+inline ::Attributes::Attributes (
   std::string shape,
   std::string color,
   float speed)
@@ -408,21 +391,7 @@ inline Attributes::Attributes (
 {
 }
 
-inline void Attributes::shape (const std::string& _x11_shape) { this->shape_ = _x11_shape; }
-inline void Attributes::shape (std::string&& _x11_shape) { this->shape_ = std::move (_x11_shape); }
-inline const std::string& Attributes::shape () const { return this->shape_; }
-inline std::string& Attributes::shape () { return this->shape_; }
-
-inline void Attributes::color (const std::string& _x11_color) { this->color_ = _x11_color; }
-inline void Attributes::color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
-inline const std::string& Attributes::color () const { return this->color_; }
-inline std::string& Attributes::color () { return this->color_; }
-
-inline void Attributes::speed (float _x11_speed) { this->speed_ = _x11_speed; }
-inline float Attributes::speed () const { return this->speed_; }
-inline float& Attributes::speed () { return this->speed_; }
-
-inline void Attributes::swap (::Attributes& s)
+inline void ::Attributes::swap (::Attributes& s)
 {
   std::swap (this->shape_, s.shape_);
   std::swap (this->color_, s.color_);
@@ -487,6 +456,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CIDJIIEJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EAHDJFFB_INCLUDED__ */
 
 // -*- END -*-

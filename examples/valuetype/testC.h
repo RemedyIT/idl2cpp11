@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFGHJECD_INCLUDED__
-#define __RIDL_TESTC_H_JFGHJECD_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHHGFDIF_INCLUDED__
+#define __RIDL_TESTC_H_EHHGFDIF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -28,8 +28,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 2
-#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 3
+#error This file was generated with another RIDL C++11 backend version (1.5.3). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -299,9 +299,9 @@ public:
 
   /// @copydoc test.idl::S::value
   //@{
-  inline void value (int32_t _x11_value);
-  inline int32_t value () const;
-  inline int32_t& value ();
+  inline void value (int32_t _x11_value) { this->value_ = _x11_value; }
+  inline int32_t value () const { return this->value_; }
+  inline int32_t& value () { return this->value_; }
   //@}
 
   /// Exchange the value of two structs in an efficient matter
@@ -1072,9 +1072,9 @@ public:
 
   /// @copydoc test.idl::ColorValue2::col
   //@{
-  inline void col (::Color _x11_col);
-  inline ::Color col () const;
-  inline ::Color& col ();
+  inline void col (::Color _x11_col) { this->col_ = _x11_col; }
+  inline ::Color col () const { return this->col_; }
+  inline ::Color& col () { return this->col_; }
   //@}
 
   /// Exchange the value of two structs in an efficient matter
@@ -1795,9 +1795,9 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Color::red: os_ << "Color::red"; break;
-          case Color::green: os_ << "Color::green"; break;
-          case Color::blue: os_ << "Color::blue"; break;
+          case ::Color::red: os_ << "Color::red"; break;
+          case ::Color::green: os_ << "Color::green"; break;
+          case ::Color::blue: os_ << "Color::blue"; break;
         }
         return os_;
       }
@@ -2232,33 +2232,25 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline S::S (
+inline ::S::S (
   int32_t value)
   : value_ (std::move (value))
 {
 }
 
-inline void S::value (int32_t _x11_value) { this->value_ = _x11_value; }
-inline int32_t S::value () const { return this->value_; }
-inline int32_t& S::value () { return this->value_; }
-
-inline void S::swap (::S& s)
+inline void ::S::swap (::S& s)
 {
   std::swap (this->value_, s.value_);
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline ColorValue2::ColorValue2 (
+inline ::ColorValue2::ColorValue2 (
   ::Color col)
   : col_ (std::move (col))
 {
 }
 
-inline void ColorValue2::col (::Color _x11_col) { this->col_ = _x11_col; }
-inline ::Color ColorValue2::col () const { return this->col_; }
-inline ::Color& ColorValue2::col () { return this->col_; }
-
-inline void ColorValue2::swap (::ColorValue2& s)
+inline void ::ColorValue2::swap (::ColorValue2& s)
 {
   std::swap (this->col_, s.col_);
 }
@@ -2407,6 +2399,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFGHJECD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHHGFDIF_INCLUDED__ */
 
 // -*- END -*-
