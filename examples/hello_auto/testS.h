@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_JCHFJBHE_INCLUDED__
-#define __RIDL_TESTS_H_JCHFJBHE_INCLUDED__
+#ifndef __RIDL_TESTS_H_JGAAJGIC_INCLUDED__
+#define __RIDL_TESTS_H_JGAAJGIC_INCLUDED__
 
 #include "testC.h"
 
@@ -21,8 +21,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 2
-#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 3
+#error This file was generated with another RIDL C++11 backend version (1.5.3). Please re-generate.
 #endif
 
 // generated from ServantHeaderWriter#enter_module
@@ -117,6 +117,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_JCHFJBHE_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_JGAAJGIC_INCLUDED__ */
 
 // -*- END -*-

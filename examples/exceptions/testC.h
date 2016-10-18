@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGBHAHIB_INCLUDED__
-#define __RIDL_TESTC_H_GGBHAHIB_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHGCDIAB_INCLUDED__
+#define __RIDL_TESTC_H_EHGCDIAB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -25,8 +25,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 2
-#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 3
+#error This file was generated with another RIDL C++11 backend version (1.5.3). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -65,10 +65,10 @@ namespace Test
 
     /// @copydoc test.idl::Test::FooEx::message
     //@{
-    void message (const std::string& _x11_message);
-    void message (std::string&& _x11_message);
-    const std::string& message () const;
-    std::string& message ();
+    void message (const std::string& _x11_message) { this->message_ = _x11_message; }
+    void message (std::string&& _x11_message)  { this->message_ = std::move (_x11_message); }
+    const std::string& message () const { return this->message_; }
+    std::string& message () { return this->message_; };
     //@}
 
   protected:
@@ -107,9 +107,9 @@ namespace Test
 
     /// @copydoc test.idl::Test::BooEx::id
     //@{
-    void id (int32_t _x11_id);
-    int32_t id () const;
-    int32_t& id ();
+    void id (int32_t _x11_id) { this->id_ = _x11_id; }
+    int32_t id () const { return this->id_; }
+    int32_t& id () { return this->id_; };
     //@}
 
   protected:
@@ -460,12 +460,6 @@ inline Test::FooEx::FooEx (
 {
 }
 
-inline void Test::FooEx::message (const std::string& _x11_message) { this->message_ = _x11_message; }
-inline void Test::FooEx::message (std::string&& _x11_message) { this->message_ = std::move (_x11_message); }
-inline const std::string& Test::FooEx::message () const { return this->message_; }
-inline std::string& Test::FooEx::message () { return this->message_; }
-
-
 // generated from c++11/templates/cli/inl/except_inl.erb
 inline Test::BooEx::BooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "BooEx")
@@ -478,11 +472,6 @@ inline Test::BooEx::BooEx (
   , id_ (std::move (id))
 {
 }
-
-inline void Test::BooEx::id (int32_t _x11_id) { this->id_ = _x11_id; }
-inline int32_t Test::BooEx::id () const { return this->id_; }
-inline int32_t& Test::BooEx::id () { return this->id_; }
-
 
 // generated from StubHeaderStdWriter#pre_visit
 namespace std {
@@ -503,6 +492,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGBHAHIB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHGCDIAB_INCLUDED__ */
 
 // -*- END -*-

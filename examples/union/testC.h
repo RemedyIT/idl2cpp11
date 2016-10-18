@@ -8,8 +8,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BHGICHDE_INCLUDED__
-#define __RIDL_TESTC_H_BHGICHDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHFIEFDF_INCLUDED__
+#define __RIDL_TESTC_H_EHFIEFDF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -24,8 +24,8 @@
 
 #include "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 2
-#error This file was generated with another RIDL C++11 backend version (1.5.2). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 3
+#error This file was generated with another RIDL C++11 backend version (1.5.3). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -56,9 +56,9 @@ public:
 
   /// @copydoc test.idl::Global::x
   //@{
-  inline void x (int32_t _x11_x);
-  inline int32_t x () const;
-  inline int32_t& x ();
+  inline void x (int32_t _x11_x) { this->x_ = _x11_x; }
+  inline int32_t x () const { return this->x_; }
+  inline int32_t& x () { return this->x_; }
   //@}
 
   /// Exchange the value of two structs in an efficient matter
@@ -122,16 +122,16 @@ namespace Test
 
     /// @copydoc test.idl::Test::Point::x
     //@{
-    inline void x (int32_t _x11_x);
-    inline int32_t x () const;
-    inline int32_t& x ();
+    inline void x (int32_t _x11_x) { this->x_ = _x11_x; }
+    inline int32_t x () const { return this->x_; }
+    inline int32_t& x () { return this->x_; }
     //@}
 
     /// @copydoc test.idl::Test::Point::y
     //@{
-    inline void y (int32_t _x11_y);
-    inline int32_t y () const;
-    inline int32_t& y ();
+    inline void y (int32_t _x11_y) { this->y_ = _x11_y; }
+    inline int32_t y () const { return this->y_; }
+    inline int32_t& y () { return this->y_; }
     //@}
 
     /// Exchange the value of two structs in an efficient matter
@@ -169,17 +169,17 @@ namespace Test
 
     /// @copydoc test.idl::Test::Track::id
     //@{
-    inline void id (int32_t _x11_id);
-    inline int32_t id () const;
-    inline int32_t& id ();
+    inline void id (int32_t _x11_id) { this->id_ = _x11_id; }
+    inline int32_t id () const { return this->id_; }
+    inline int32_t& id () { return this->id_; }
     //@}
 
     /// @copydoc test.idl::Test::Track::p
     //@{
-    inline void p (const ::Test::Point& _x11_p);
-    inline void p (::Test::Point&& _x11_p);
-    inline const ::Test::Point& p () const;
-    inline ::Test::Point& p ();
+    inline void p (const ::Test::Point& _x11_p) { this->p_ = _x11_p; }
+    inline void p (::Test::Point&& _x11_p) { this->p_ = std::move (_x11_p); }
+    inline const ::Test::Point& p () const { return this->p_; }
+    inline ::Test::Point& p () { return this->p_; }
     //@}
 
     /// Exchange the value of two structs in an efficient matter
@@ -360,9 +360,9 @@ namespace Test
 
     /// @copydoc test.idl::Test::S::len
     //@{
-    inline void len (int32_t _x11_len);
-    inline int32_t len () const;
-    inline int32_t& len ();
+    inline void len (int32_t _x11_len) { this->len_ = _x11_len; }
+    inline int32_t len () const { return this->len_; }
+    inline int32_t& len () { return this->len_; }
     //@}
 
     /// Exchange the value of two structs in an efficient matter
@@ -786,13 +786,13 @@ namespace TAOX11_NAMESPACE
       {
         switch (val_)
         {
-          case Test::DataType::dtEmpty: os_ << "Test::DataType::dtEmpty"; break;
-          case Test::DataType::dtLong: os_ << "Test::DataType::dtLong"; break;
-          case Test::DataType::dtShort: os_ << "Test::DataType::dtShort"; break;
-          case Test::DataType::dtString: os_ << "Test::DataType::dtString"; break;
-          case Test::DataType::dtPoint: os_ << "Test::DataType::dtPoint"; break;
-          case Test::DataType::dtTrack: os_ << "Test::DataType::dtTrack"; break;
-          case Test::DataType::dtGlobal: os_ << "Test::DataType::dtGlobal"; break;
+          case ::Test::DataType::dtEmpty: os_ << "Test::DataType::dtEmpty"; break;
+          case ::Test::DataType::dtLong: os_ << "Test::DataType::dtLong"; break;
+          case ::Test::DataType::dtShort: os_ << "Test::DataType::dtShort"; break;
+          case ::Test::DataType::dtString: os_ << "Test::DataType::dtString"; break;
+          case ::Test::DataType::dtPoint: os_ << "Test::DataType::dtPoint"; break;
+          case ::Test::DataType::dtTrack: os_ << "Test::DataType::dtTrack"; break;
+          case ::Test::DataType::dtGlobal: os_ << "Test::DataType::dtGlobal"; break;
         }
         return os_;
       }
@@ -1360,23 +1360,19 @@ namespace std {
 } // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Global::Global (
+inline ::Global::Global (
   int32_t x)
   : x_ (std::move (x))
 {
 }
 
-inline void Global::x (int32_t _x11_x) { this->x_ = _x11_x; }
-inline int32_t Global::x () const { return this->x_; }
-inline int32_t& Global::x () { return this->x_; }
-
-inline void Global::swap (::Global& s)
+inline void ::Global::swap (::Global& s)
 {
   std::swap (this->x_, s.x_);
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Point::Point (
+inline ::Test::Point::Point (
   int32_t x,
   int32_t y)
   : x_ (std::move (x))
@@ -1384,22 +1380,14 @@ inline Test::Point::Point (
 {
 }
 
-inline void Test::Point::x (int32_t _x11_x) { this->x_ = _x11_x; }
-inline int32_t Test::Point::x () const { return this->x_; }
-inline int32_t& Test::Point::x () { return this->x_; }
-
-inline void Test::Point::y (int32_t _x11_y) { this->y_ = _x11_y; }
-inline int32_t Test::Point::y () const { return this->y_; }
-inline int32_t& Test::Point::y () { return this->y_; }
-
-inline void Test::Point::swap (::Test::Point& s)
+inline void ::Test::Point::swap (::Test::Point& s)
 {
   std::swap (this->x_, s.x_);
   std::swap (this->y_, s.y_);
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::Track::Track (
+inline ::Test::Track::Track (
   int32_t id,
   ::Test::Point p)
   : id_ (std::move (id))
@@ -1407,16 +1395,7 @@ inline Test::Track::Track (
 {
 }
 
-inline void Test::Track::id (int32_t _x11_id) { this->id_ = _x11_id; }
-inline int32_t Test::Track::id () const { return this->id_; }
-inline int32_t& Test::Track::id () { return this->id_; }
-
-inline void Test::Track::p (const ::Test::Point& _x11_p) { this->p_ = _x11_p; }
-inline void Test::Track::p (::Test::Point&& _x11_p) { this->p_ = std::move (_x11_p); }
-inline const ::Test::Point& Test::Track::p () const { return this->p_; }
-inline ::Test::Point& Test::Track::p () { return this->p_; }
-
-inline void Test::Track::swap (::Test::Track& s)
+inline void ::Test::Track::swap (::Test::Track& s)
 {
   std::swap (this->id_, s.id_);
   std::swap (this->p_, s.p_);
@@ -2030,17 +2009,13 @@ inline void Test::Data::_default ()
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
-inline Test::S::S (
+inline ::Test::S::S (
   int32_t len)
   : len_ (std::move (len))
 {
 }
 
-inline void Test::S::len (int32_t _x11_len) { this->len_ = _x11_len; }
-inline int32_t Test::S::len () const { return this->len_; }
-inline int32_t& Test::S::len () { return this->len_; }
-
-inline void Test::S::swap (::Test::S& s)
+inline void ::Test::S::swap (::Test::S& s)
 {
   std::swap (this->len_, s.len_);
 }
@@ -2602,6 +2577,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BHGICHDE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHFIEFDF_INCLUDED__ */
 
 // -*- END -*-
