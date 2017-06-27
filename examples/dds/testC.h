@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DCABAHGE_INCLUDED__
-#define __RIDL_TESTC_H_DCABAHGE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IFJEJDEF_INCLUDED__
+#define __RIDL_TESTC_H_IFJEJDEF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -94,6 +94,9 @@ private:
   int32_t shapesize_ {};
 };// ShapeType
 
+inline void swap (::ShapeType& m1, ::ShapeType& m2) { m1.swap (m2); }
+
+
 // generated from c++11/templates/cli/hdr/struct_pre.erb
 
 /// @copydoc test.idl::Attributes
@@ -151,6 +154,9 @@ private:
   std::string color_;
   float speed_ {};
 };// Attributes
+
+inline void swap (::Attributes& m1, ::Attributes& m2) { m1.swap (m2); }
+
 
 // generated from c++11/templates/cli/hdr/typedef.erb
 /// @copydoc test.idl::ShapeTypeSeq
@@ -346,18 +352,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::ShapeType& m1, ::ShapeType& m2);
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Attributes& m1, ::Attributes& m2);
-} // namespace std
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ::ShapeType::ShapeType (
   std::string color,
@@ -396,24 +390,6 @@ inline void ::Attributes::swap (::Attributes& s)
   std::swap (this->color_, s.color_);
   std::swap (this->speed_, s.speed_);
 }
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::ShapeType& m1, ::ShapeType& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Attributes& m1, ::Attributes& m2)
-  {
-    m1.swap (m2);
-  }
-} // namespace std
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
@@ -455,6 +431,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DCABAHGE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IFJEJDEF_INCLUDED__ */
 
 // -*- END -*-

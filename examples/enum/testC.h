@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IJJAAGJA_INCLUDED__
-#define __RIDL_TESTC_H_IJJAAGJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DAGEJAIJ_INCLUDED__
+#define __RIDL_TESTC_H_DAGEJAIJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -120,14 +120,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-} // namespace std
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-} // namespace std
-
 // generated from c++11/templates/cli/hdr/enum_os.erb
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -143,6 +135,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IJJAAGJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DAGEJAIJ_INCLUDED__ */
 
 // -*- END -*-

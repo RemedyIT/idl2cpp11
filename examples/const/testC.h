@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GICBHGJB_INCLUDED__
-#define __RIDL_TESTC_H_GICBHGJB_INCLUDED__
+#ifndef __RIDL_TESTC_H_HCDDEGFB_INCLUDED__
+#define __RIDL_TESTC_H_HCDDEGFB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -398,14 +398,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-} // namespace std
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-} // namespace std
-
 // generated from c++11/templates/cli/hdr/fixed_os.erb
 // Unaliased type : TAOX11_NAMESPACE::IDL::Fixed <10, 3>
 // MD5            : 26C447B68D082EEA72A00BE046CE87A7
@@ -436,6 +428,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GICBHGJB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HCDDEGFB_INCLUDED__ */
 
 // -*- END -*-

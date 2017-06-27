@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HBGGCHBD_INCLUDED__
-#define __RIDL_TESTC_H_HBGGCHBD_INCLUDED__
+#ifndef __RIDL_TESTC_H_CFAGEABJ_INCLUDED__
+#define __RIDL_TESTC_H_CFAGEABJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -119,6 +119,9 @@ namespace Test
     bool b_ {};
     char c_ {};
   };// Simple
+
+  inline void swap (::Test::Simple& m1, ::Test::Simple& m2) { m1.swap (m2); }
+
 
   // generated from c++11/templates/cli/hdr/typedef.erb
   /// @copydoc test.idl::Test::SimpleSeq
@@ -655,14 +658,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Test::Simple& m1, ::Test::Simple& m2);
-} // namespace std
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ::Test::Simple::Simple (
   uint8_t o,
@@ -689,17 +684,6 @@ inline void ::Test::Simple::swap (::Test::Simple& s)
   std::swap (this->b_, s.b_);
   std::swap (this->c_, s.c_);
 }
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::Simple& m1, ::Test::Simple& m2)
-  {
-    m1.swap (m2);
-  }
-} // namespace std
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
@@ -800,6 +784,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HBGGCHBD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CFAGEABJ_INCLUDED__ */
 
 // -*- END -*-

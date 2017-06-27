@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JHGFDIEG_INCLUDED__
-#define __RIDL_TESTC_H_JHGFDIEG_INCLUDED__
+#ifndef __RIDL_TESTC_H_JACFJBAB_INCLUDED__
+#define __RIDL_TESTC_H_JACFJBAB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -72,6 +72,9 @@ namespace Test
   private:
     std::string name_;
   };// Variable
+
+  inline void swap (::Test::Variable& m1, ::Test::Variable& m2) { m1.swap (m2); }
+
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -287,6 +290,9 @@ namespace Test
     IDL::traits< ::Test::Bar>::ref_type bar_ref_;
     ::Test::Variable v_;
   };// Simple
+
+  inline void swap (::Test::Simple& m1, ::Test::Simple& m2) { m1.swap (m2); }
+
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -668,18 +674,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Test::Variable& m1, ::Test::Variable& m2);
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Test::Simple& m1, ::Test::Simple& m2);
-} // namespace std
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ::Test::Variable::Variable (
   std::string name)
@@ -725,24 +719,6 @@ inline void ::Test::Simple::swap (::Test::Simple& s)
   std::swap (this->v_, s.v_);
 }
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::Variable& m1, ::Test::Variable& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::Simple& m1, ::Test::Simple& m2)
-  {
-    m1.swap (m2);
-  }
-} // namespace std
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -784,6 +760,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JHGFDIEG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JACFJBAB_INCLUDED__ */
 
 // -*- END -*-

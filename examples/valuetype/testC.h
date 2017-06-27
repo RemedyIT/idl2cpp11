@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HABEGIEF_INCLUDED__
-#define __RIDL_TESTC_H_HABEGIEF_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFAFBIIH_INCLUDED__
+#define __RIDL_TESTC_H_JFAFBIIH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -309,6 +309,9 @@ public:
 private:
   int32_t value_ {};
 };// S
+
+inline void swap (::S& m1, ::S& m2) { m1.swap (m2); }
+
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -1082,6 +1085,9 @@ public:
 private:
   ::Color col_ {};
 };// ColorValue2
+
+inline void swap (::ColorValue2& m1, ::ColorValue2& m2) { m1.swap (m2); }
+
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -2218,18 +2224,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::S& m1, ::S& m2);
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::ColorValue2& m1, ::ColorValue2& m2);
-} // namespace std
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ::S::S (
   int32_t value)
@@ -2253,24 +2247,6 @@ inline void ::ColorValue2::swap (::ColorValue2& s)
 {
   std::swap (this->col_, s.col_);
 }
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::S& m1, ::S& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::ColorValue2& m1, ::ColorValue2& m2)
-  {
-    m1.swap (m2);
-  }
-} // namespace std
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
 inline std::ostream&
@@ -2398,6 +2374,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HABEGIEF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFAFBIIH_INCLUDED__ */
 
 // -*- END -*-
