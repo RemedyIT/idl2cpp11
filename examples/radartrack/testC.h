@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CJCHFHBA_INCLUDED__
-#define __RIDL_TESTC_H_CJCHFHBA_INCLUDED__
+#ifndef __RIDL_TESTC_H_GJIIBJDF_INCLUDED__
+#define __RIDL_TESTC_H_GJIIBJDF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -107,6 +107,9 @@ private:
   int32_t z_ {};
   ::octetseq plot_;
 };// RadarTrack
+
+inline void swap (::RadarTrack& m1, ::RadarTrack& m2) { m1.swap (m2); }
+
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE
@@ -236,14 +239,6 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::RadarTrack& m1, ::RadarTrack& m2);
-} // namespace std
-
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ::RadarTrack::RadarTrack (
   std::string id,
@@ -267,17 +262,6 @@ inline void ::RadarTrack::swap (::RadarTrack& s)
   std::swap (this->z_, s.z_);
   std::swap (this->plot_, s.plot_);
 }
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::RadarTrack& m1, ::RadarTrack& m2)
-  {
-    m1.swap (m2);
-  }
-} // namespace std
 
 // generated from c++11/templates/cli/hdr/sequence_os.erb
 // Unaliased type : std::vector < uint8_t>
@@ -310,6 +294,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CJCHFHBA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GJIIBJDF_INCLUDED__ */
 
 // -*- END -*-

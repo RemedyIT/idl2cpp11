@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFFHIBIH_INCLUDED__
-#define __RIDL_TESTC_H_BFFHIBIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JDDIHJCC_INCLUDED__
+#define __RIDL_TESTC_H_JDDIHJCC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -66,6 +66,9 @@ public:
 private:
   int32_t x_ {};
 };// Global
+
+inline void swap (::Global& m1, ::Global& m2) { m1.swap (m2); }
+
 
 // generated from StubHeaderWriter#enter_module
 /// @copydoc test.idl::Test
@@ -141,6 +144,9 @@ namespace Test
     int32_t y_ {};
   };// Point
 
+  inline void swap (::Test::Point& m1, ::Test::Point& m2) { m1.swap (m2); }
+
+
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
   /// @copydoc test.idl::Test::Track
@@ -188,6 +194,9 @@ namespace Test
     int32_t id_ {};
     ::Test::Point p_;
   };// Track
+
+  inline void swap (::Test::Track& m1, ::Test::Track& m2) { m1.swap (m2); }
+
 
   // generated from c++11/templates/cli/hdr/union_pre.erb
 
@@ -333,6 +342,9 @@ namespace Test
     } u_ {};
   }; // Data
 
+  inline void swap (::Test::Data& m1, ::Test::Data& m2) { m1.swap (m2); }
+
+
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
   /// @copydoc test.idl::Test::S
@@ -370,6 +382,9 @@ namespace Test
   private:
     int32_t len_ {};
   };// S
+
+  inline void swap (::Test::S& m1, ::Test::S& m2) { m1.swap (m2); }
+
 
   // generated from c++11/templates/cli/hdr/interface_fwd.erb
 #if !defined (_INTF_TEST_A_FWD_)
@@ -542,6 +557,9 @@ namespace Test
       IDL::traits< ::Test::A>::ref_type obj_;
     } u_ {};
   }; // U
+
+  inline void swap (::Test::U& m1, ::Test::U& m2) { m1.swap (m2); }
+
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -1329,34 +1347,6 @@ namespace TAOX11_NAMESPACE
     }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
-
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Global& m1, ::Global& m2);
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Test::Point& m1, ::Test::Point& m2);
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Test::Track& m1, ::Test::Track& m2);
-
-  // generated from c++11/templates/cli/hdr/union_std.erb
-  template <>
-  void swap (::Test::Data& m1, ::Test::Data& m2);
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  void swap (::Test::S& m1, ::Test::S& m2);
-
-  // generated from c++11/templates/cli/hdr/union_std.erb
-  template <>
-  void swap (::Test::U& m1, ::Test::U& m2);
-} // namespace std
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
 inline ::Global::Global (
@@ -2447,52 +2437,6 @@ inline void Test::U::_clear ()
   }
 }
 
-// generated from StubHeaderStdWriter#pre_visit
-namespace std {
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Global& m1, ::Global& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::Point& m1, ::Test::Point& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::Track& m1, ::Test::Track& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/union_std.erb
-  template <>
-  inline void swap (::Test::Data& m1, ::Test::Data& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/struct_std.erb
-  template <>
-  inline void swap (::Test::S& m1, ::Test::S& m2)
-  {
-    m1.swap (m2);
-  }
-
-  // generated from c++11/templates/cli/hdr/union_std.erb
-  template <>
-  inline void swap (::Test::U& m1, ::Test::U& m2)
-  {
-    m1.swap (m2);
-  }
-} // namespace std
-
 // generated from c++11/templates/cli/hdr/struct_os.erb
 inline std::ostream&
 operator<< (
@@ -2576,6 +2520,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BFFHIBIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JDDIHJCC_INCLUDED__ */
 
 // -*- END -*-
