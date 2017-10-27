@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCDDEGFB_INCLUDED__
-#define __RIDL_TESTC_H_HCDDEGFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_CCHAHJEG_INCLUDED__
+#define __RIDL_TESTC_H_CCHAHJEG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -226,8 +226,8 @@ private:
   A(A&&) = delete;
   A& operator=(const A&) = delete;
   A& operator=(A&&) = delete;
-  A_proxy_ptr a_proxy_ {};
   //@}
+  A_proxy_ptr a_proxy_ {};
 }; // A
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
@@ -428,6 +428,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HCDDEGFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CCHAHJEG_INCLUDED__ */
 
 // -*- END -*-

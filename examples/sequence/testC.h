@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CFAGEABJ_INCLUDED__
-#define __RIDL_TESTC_H_CFAGEABJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_FEFFAEGE_INCLUDED__
+#define __RIDL_TESTC_H_FEFFAEGE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -287,8 +287,8 @@ namespace Test
     Foo(Foo&&) = delete;
     Foo& operator=(const Foo&) = delete;
     Foo& operator=(Foo&&) = delete;
-    Foo_proxy_ptr foo_proxy_ {};
     //@}
+    Foo_proxy_ptr foo_proxy_ {};
   }; // Foo
 } // namespace Test
 
@@ -784,6 +784,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CFAGEABJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FEFFAEGE_INCLUDED__ */
 
 // -*- END -*-
