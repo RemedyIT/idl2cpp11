@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFAFBIIH_INCLUDED__
-#define __RIDL_TESTC_H_JFAFBIIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_BFCHIFCA_INCLUDED__
+#define __RIDL_TESTC_H_BFCHIFCA_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -414,8 +414,8 @@ private:
   A(A&&) = delete;
   A& operator=(const A&) = delete;
   A& operator=(A&&) = delete;
-  A_proxy_ptr a_proxy_ {};
   //@}
+  A_proxy_ptr a_proxy_ {};
 }; // A
 
 // generated from c++11/templates/cli/hdr/valuetype_fwd.erb
@@ -925,8 +925,8 @@ private:
   X(X&&) = delete;
   X& operator=(const X&) = delete;
   X& operator=(X&&) = delete;
-  X_proxy_ptr x_proxy_ {};
   //@}
+  X_proxy_ptr x_proxy_ {};
 }; // X
 
 // generated from c++11/templates/cli/hdr/enum.erb
@@ -1190,8 +1190,8 @@ private:
   A1(A1&&) = delete;
   A1& operator=(const A1&) = delete;
   A1& operator=(A1&&) = delete;
-  A1_proxy_ptr a1_proxy_ {};
   //@}
+  A1_proxy_ptr a1_proxy_ {};
 }; // A1
 
 // generated from c++11/templates/cli/hdr/valuetype_fwd.erb
@@ -2374,6 +2374,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFAFBIIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BFCHIFCA_INCLUDED__ */
 
 // -*- END -*-

@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_HIGGAHHI_INCLUDED__
-#define __RIDL_TESTS_H_HIGGAHHI_INCLUDED__
+#ifndef __RIDL_TESTS_H_JFHFBDDE_INCLUDED__
+#define __RIDL_TESTS_H_JFHFBDDE_INCLUDED__
 
 #include "testC.h"
 
@@ -323,6 +323,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_HIGGAHHI_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_JFHFBDDE_INCLUDED__ */
 
 // -*- END -*-

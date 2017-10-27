@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JACFJBAB_INCLUDED__
-#define __RIDL_TESTC_H_JACFJBAB_INCLUDED__
+#ifndef __RIDL_TESTC_H_HAGADGAB_INCLUDED__
+#define __RIDL_TESTC_H_HAGADGAB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -184,8 +184,8 @@ namespace Test
     Bar(Bar&&) = delete;
     Bar& operator=(const Bar&) = delete;
     Bar& operator=(Bar&&) = delete;
-    Bar_proxy_ptr bar_proxy_ {};
     //@}
+    Bar_proxy_ptr bar_proxy_ {};
   }; // Bar
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
@@ -429,8 +429,8 @@ namespace Test
     Foo(Foo&&) = delete;
     Foo& operator=(const Foo&) = delete;
     Foo& operator=(Foo&&) = delete;
-    Foo_proxy_ptr foo_proxy_ {};
     //@}
+    Foo_proxy_ptr foo_proxy_ {};
   }; // Foo
 } // namespace Test
 
@@ -760,6 +760,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JACFJBAB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HAGADGAB_INCLUDED__ */
 
 // -*- END -*-
