@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCBHABHD_INCLUDED__
-#define __RIDL_TESTC_H_HCBHABHD_INCLUDED__
+#ifndef __RIDL_TESTC_H_JIHJJAHF_INCLUDED__
+#define __RIDL_TESTC_H_JIHJJAHF_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -1831,7 +1831,7 @@ inline ::Global& Test::Data::globalData ()
 
 inline ::Test::Data& Test::Data::operator= (const ::Test::Data& u)
 {
-  if (this != &u)
+  if (this != std::addressof(u))
   {
     ::Test::Data tmp (u);
     this->swap (tmp);
@@ -1841,7 +1841,7 @@ inline ::Test::Data& Test::Data::operator= (const ::Test::Data& u)
 
 inline ::Test::Data& Test::Data::operator= (::Test::Data&& u)
 {
-  if (this != &u)
+  if (this != std::addressof(u))
   {
     ::Test::Data tmp (std::move (u));
     this->swap (tmp);
@@ -1851,7 +1851,7 @@ inline ::Test::Data& Test::Data::operator= (::Test::Data&& u)
 
 inline void Test::Data::swap (::Test::Data& u)
 {
-  if (this != &u)
+  if (this != std::addressof(u))
   {
     if (this->disc_ != u.disc_)
     {
@@ -2314,7 +2314,7 @@ inline IDL::traits< ::Test::A>::ref_type& Test::U::obj ()
 
 inline ::Test::U& Test::U::operator= (const ::Test::U& u)
 {
-  if (this != &u)
+  if (this != std::addressof(u))
   {
     ::Test::U tmp (u);
     this->swap (tmp);
@@ -2324,7 +2324,7 @@ inline ::Test::U& Test::U::operator= (const ::Test::U& u)
 
 inline ::Test::U& Test::U::operator= (::Test::U&& u)
 {
-  if (this != &u)
+  if (this != std::addressof(u))
   {
     ::Test::U tmp (std::move (u));
     this->swap (tmp);
@@ -2334,7 +2334,7 @@ inline ::Test::U& Test::U::operator= (::Test::U&& u)
 
 inline void Test::U::swap (::Test::U& u)
 {
-  if (this != &u)
+  if (this != std::addressof(u))
   {
     if (this->disc_ != u.disc_)
     {
@@ -2520,6 +2520,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HCBHABHD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JIHJJAHF_INCLUDED__ */
 
 // -*- END -*-

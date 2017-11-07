@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GBIJDBGG_INCLUDED__
-#define __RIDL_TESTC_H_GBIJDBGG_INCLUDED__
+#ifndef __RIDL_TESTC_H_DBCGECEG_INCLUDED__
+#define __RIDL_TESTC_H_DBCGECEG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -433,6 +433,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GBIJDBGG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DBCGECEG_INCLUDED__ */
 
 // -*- END -*-
