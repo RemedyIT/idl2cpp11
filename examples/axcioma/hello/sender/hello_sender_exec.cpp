@@ -53,7 +53,8 @@ namespace Hello_Sender_Impl
         // Test exception
         std::string const noop = my_foo->foo ("throw", out_str);
         CIAOX11_TEST_ERROR << "ERROR: Sender - foo_generator - "
-          "No exception whilst calling \"foo\" with \"throw\"."
+          << "No exception whilst calling \"foo\" with \"throw\" returning "
+          << noop
           << std::endl;
       }
       catch (Hello::Ball const &ex)
