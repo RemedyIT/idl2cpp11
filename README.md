@@ -1,6 +1,6 @@
 # IDL to C++11 example code
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2f85094e9158443491b51127c1c6eea3)](https://www.codacy.com/app/RemedyIT/idl2cpp11?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RemedyIT/idl2cpp11&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bf30ffa2518c45a7a9ffb9eada4ba568)](https://www.codacy.com/app/RemedyIT/idl2cpp11?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RemedyIT/idl2cpp11&amp;utm_campaign=Badge_Grade)
 
 This project demonstrates the IDL to C++11 language mapping which is implemented
 by [Remedy IT](http://www.remedy.nl) as part of the [TAOX11](https://taox11.remedy.nl) and
