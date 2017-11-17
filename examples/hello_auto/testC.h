@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CEHCCHCH_INCLUDED__
-#define __RIDL_TESTC_H_CEHCCHCH_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHEIICGI_INCLUDED__
+#define __RIDL_TESTC_H_FHEIICGI_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -144,7 +144,7 @@ namespace Test
     Hello& operator=(Hello&&) = delete;
     //@}
     Hello_proxy_ptr hello_proxy_ {};
-  }; // Hello
+  }; // class Hello
 } // namespace Test
 
 
@@ -226,6 +226,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CEHCCHCH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHEIICGI_INCLUDED__ */
 
 // -*- END -*-

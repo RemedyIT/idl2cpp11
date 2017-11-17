@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JIHJJAHF_INCLUDED__
-#define __RIDL_TESTC_H_JIHJJAHF_INCLUDED__
+#ifndef __RIDL_TESTC_H_FAIGBABE_INCLUDED__
+#define __RIDL_TESTC_H_FAIGBABE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -340,7 +340,7 @@ namespace Test
       ::Test::Track trackData_;
       ::Global globalData_;
     } u_ {};
-  }; // Data
+  }; // class Data
 
   inline void swap (::Test::Data& m1, ::Test::Data& m2) { m1.swap (m2); }
 
@@ -556,7 +556,7 @@ namespace Test
       ::Test::S w_;
       IDL::traits< ::Test::A>::ref_type obj_;
     } u_ {};
-  }; // U
+  }; // class U
 
   inline void swap (::Test::U& m1, ::Test::U& m2) { m1.swap (m2); }
 
@@ -698,7 +698,7 @@ namespace Test
     Foo& operator=(Foo&&) = delete;
     //@}
     Foo_proxy_ptr foo_proxy_ {};
-  }; // Foo
+  }; // class Foo
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -739,7 +739,7 @@ namespace Test
     A& operator=(A&&) = delete;
     //@}
     A_proxy_ptr a_proxy_ {};
-  }; // A
+  }; // class A
 } // namespace Test
 
 
@@ -2520,6 +2520,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JIHJJAHF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FAIGBABE_INCLUDED__ */
 
 // -*- END -*-

@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FBEFBEGB_INCLUDED__
-#define __RIDL_TESTC_H_FBEFBEGB_INCLUDED__
+#ifndef __RIDL_TESTC_H_DBGIEIJG_INCLUDED__
+#define __RIDL_TESTC_H_DBGIEIJG_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -186,7 +186,7 @@ namespace Test
     Bar& operator=(Bar&&) = delete;
     //@}
     Bar_proxy_ptr bar_proxy_ {};
-  }; // Bar
+  }; // class Bar
 
   // generated from c++11/templates/cli/hdr/struct_pre.erb
 
@@ -431,7 +431,7 @@ namespace Test
     Foo& operator=(Foo&&) = delete;
     //@}
     Foo_proxy_ptr foo_proxy_ {};
-  }; // Foo
+  }; // class Foo
 } // namespace Test
 
 
@@ -760,6 +760,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FBEFBEGB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DBGIEIJG_INCLUDED__ */
 
 // -*- END -*-
