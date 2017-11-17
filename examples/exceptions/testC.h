@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EABIDFBA_INCLUDED__
-#define __RIDL_TESTC_H_EABIDFBA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JEEHEJEE_INCLUDED__
+#define __RIDL_TESTC_H_JEEHEJEE_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -75,7 +75,7 @@ namespace Test
 
   private:
     std::string message_;
-  }; // FooEx
+  }; // class FooEx
 
   // generated from c++11/templates/cli/hdr/except_pre.erb
   /// @copydoc test.idl::Test::BooEx
@@ -116,7 +116,7 @@ namespace Test
 
   private:
     int32_t id_ {};
-  }; // BooEx
+  }; // class BooEx
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -253,7 +253,7 @@ namespace Test
     Foo& operator=(Foo&&) = delete;
     //@}
     Foo_proxy_ptr foo_proxy_ {};
-  }; // Foo
+  }; // class Foo
 } // namespace Test
 
 
@@ -483,6 +483,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EABIDFBA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JEEHEJEE_INCLUDED__ */
 
 // -*- END -*-

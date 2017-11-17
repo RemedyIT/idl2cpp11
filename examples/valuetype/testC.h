@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DDFDHIEJ_INCLUDED__
-#define __RIDL_TESTC_H_DDFDHIEJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_DGDDDAIJ_INCLUDED__
+#define __RIDL_TESTC_H_DGDDDAIJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -194,7 +194,7 @@ protected:
 
   virtual bool
   _obv_unmarshal_Example_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
-}; // Example
+}; // class Example
 
 // generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
@@ -265,7 +265,7 @@ namespace obv
     int32_t val2_ {};
     std::string val3_;
     IDL::traits< ::Example>::ref_type val5_;
-  }; // Example
+  }; // class Example
 } // namespace obv
 
 // generated from c++11/templates/cli/hdr/typedef.erb
@@ -416,7 +416,7 @@ private:
   A& operator=(A&&) = delete;
   //@}
   A_proxy_ptr a_proxy_ {};
-}; // A
+}; // class A
 
 // generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_VAL_FWD_)
@@ -596,7 +596,7 @@ protected:
 
   virtual bool
   _obv_unmarshal_Val_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
-}; // Val
+}; // class Val
 
 // generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
@@ -689,7 +689,7 @@ namespace obv
     std::string x_;
     ::S y_;
     IDL::traits< ::A>::ref_type z_;
-  }; // Val
+  }; // class Val
 } // namespace obv
 
 // generated from c++11/templates/cli/hdr/valuetype_init.erb
@@ -714,7 +714,7 @@ protected:
   ~Val_init () = default;
   Val_init (const Val_init&) = default;
   Val_init (Val_init&&) = default;
-}; // Val_init
+}; // class Val_init
 
 // generated from c++11/templates/cli/hdr/valuebox_fwd.erb
 class StringValue;
@@ -927,7 +927,7 @@ private:
   X& operator=(X&&) = delete;
   //@}
   X_proxy_ptr x_proxy_ {};
-}; // X
+}; // class X
 
 // generated from c++11/templates/cli/hdr/enum.erb
 
@@ -1192,7 +1192,7 @@ private:
   A1& operator=(A1&&) = delete;
   //@}
   A1_proxy_ptr a1_proxy_ {};
-}; // A1
+}; // class A1
 
 // generated from c++11/templates/cli/hdr/valuetype_fwd.erb
 #if !defined (_VALUETYPE_B_FWD_)
@@ -1333,7 +1333,7 @@ protected:
 
   virtual bool
   _obv_unmarshal_B_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
-}; // B
+}; // class B
 
 // generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
@@ -1381,7 +1381,7 @@ namespace obv
 
   private:
     int16_t data_ {};
-  }; // B
+  }; // class B
 } // namespace obv
 
 // generated from c++11/templates/cli/hdr/valuetype_fwd.erb
@@ -1533,7 +1533,7 @@ protected:
 
   virtual bool
   _obv_unmarshal_V_v (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
-}; // V
+}; // class V
 
 // generated from c++11/templates/cli/hdr/valuetype_obv.erb
 namespace obv
@@ -1570,7 +1570,7 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-  }; // V
+  }; // class V
 } // namespace obv
 
 // generated from c++11/templates/cli/hdr/valuetype_init.erb
@@ -1599,7 +1599,7 @@ protected:
   ~V_init () = default;
   V_init (const V_init&) = default;
   V_init (V_init&&) = default;
-}; // V_init
+}; // class V_init
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE
@@ -2374,6 +2374,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DDFDHIEJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DGDDDAIJ_INCLUDED__ */
 
 // -*- END -*-

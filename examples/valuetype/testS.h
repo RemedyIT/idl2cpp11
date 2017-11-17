@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_FBIDIICB_INCLUDED__
-#define __RIDL_TESTS_H_FBIDIICB_INCLUDED__
+#ifndef __RIDL_TESTS_H_HDGHBHBJ_INCLUDED__
+#define __RIDL_TESTS_H_HDGHBHBJ_INCLUDED__
 
 #include "testC.h"
 
@@ -68,10 +68,13 @@ namespace POA
 
   private:
     // generated from c++11/templates/srv/hdr/interface_post.erb
+    /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
+    //@{
     A (const A&) = delete;
     A (A&&) = delete;
     A& operator= (const A&) = delete;
     A& operator= (A&&) = delete;
+    //@}
     friend class POA::A_srvproxy;
 
     POA::A_srvproxy_ptr a_srvproxy_{};
@@ -124,10 +127,13 @@ namespace POA
 
   private:
     // generated from c++11/templates/srv/hdr/interface_post.erb
+    /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
+    //@{
     X (const X&) = delete;
     X (X&&) = delete;
     X& operator= (const X&) = delete;
     X& operator= (X&&) = delete;
+    //@}
     friend class POA::X_srvproxy;
 
     POA::X_srvproxy_ptr x_srvproxy_{};
@@ -179,10 +185,13 @@ namespace POA
 
   private:
     // generated from c++11/templates/srv/hdr/interface_post.erb
+    /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
+    //@{
     A1 (const A1&) = delete;
     A1 (A1&&) = delete;
     A1& operator= (const A1&) = delete;
     A1& operator= (A1&&) = delete;
+    //@}
     friend class POA::A1_srvproxy;
 
     POA::A1_srvproxy_ptr a1_srvproxy_{};
@@ -323,6 +332,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_FBIDIICB_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_HDGHBHBJ_INCLUDED__ */
 
 // -*- END -*-

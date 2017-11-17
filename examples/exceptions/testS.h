@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_CDEIFFHJ_INCLUDED__
-#define __RIDL_TESTS_H_CDEIFFHJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_BGEJAIJA_INCLUDED__
+#define __RIDL_TESTS_H_BGEJAIJA_INCLUDED__
 
 #include "testC.h"
 
@@ -96,10 +96,13 @@ namespace Test
 
     private:
       // generated from c++11/templates/srv/hdr/interface_post.erb
+      /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
+      //@{
       Foo (const Foo&) = delete;
       Foo (Foo&&) = delete;
       Foo& operator= (const Foo&) = delete;
       Foo& operator= (Foo&&) = delete;
+      //@}
       friend class POA::Foo_srvproxy;
 
       POA::Foo_srvproxy_ptr foo_srvproxy_{};
@@ -140,6 +143,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CDEIFFHJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_BGEJAIJA_INCLUDED__ */
 
 // -*- END -*-

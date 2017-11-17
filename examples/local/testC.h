@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_ECBHJGID_INCLUDED__
-#define __RIDL_TESTC_H_ECBHJGID_INCLUDED__
+#ifndef __RIDL_TESTC_H_CICGHCEC_INCLUDED__
+#define __RIDL_TESTC_H_CICGHCEC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -143,7 +143,7 @@ namespace Test
     Foo& operator= (const Foo&) = delete;
     Foo& operator= (Foo&&) = delete;
     //@}
-  }; // Foo
+  }; // class Foo
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -255,7 +255,7 @@ namespace Test
     Bar& operator= (const Bar&) = delete;
     Bar& operator= (Bar&&) = delete;
     //@}
-  }; // Bar
+  }; // class Bar
 } // namespace Test
 
 
@@ -392,6 +392,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ECBHJGID_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CICGHCEC_INCLUDED__ */
 
 // -*- END -*-
