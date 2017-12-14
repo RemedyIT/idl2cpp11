@@ -24,7 +24,7 @@ public:
   // = The skeleton methods
   virtual std::string get_string (void) override;
 
-  virtual void shutdown (void);
+  virtual void shutdown (void) override;
 
 private:
   /// Use an ORB reference to convert strings to objects and shutdown
