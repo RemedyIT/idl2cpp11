@@ -14,7 +14,7 @@
 #include "testS.h"
 
 /// Implement the Test::Hello interface
-class Hello
+class Hello final
   : public virtual CORBA::servant_traits<Test::Hello>::base_type
 {
 public:
@@ -22,9 +22,9 @@ public:
   Hello (IDL::traits<CORBA::ORB>::ref_type orb);
 
   // = The skeleton methods
-  virtual std::string get_string (void) override;
+  virtual std::string get_string () override;
 
-  virtual void shutdown (void) override;
+  virtual void shutdown () override;
 
 private:
   /// Use an ORB reference to convert strings to objects and shutdown

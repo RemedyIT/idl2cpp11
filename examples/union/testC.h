@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FAIGBABE_INCLUDED__
-#define __RIDL_TESTC_H_FAIGBABE_INCLUDED__
+#ifndef __RIDL_TESTC_H_JBGDJGAJ_INCLUDED__
+#define __RIDL_TESTC_H_JBGDJGAJ_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -409,10 +409,6 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::A>::lock_shared (
         ::Test::A* p);
     template<>
-    const Object_proxy*
-    object_traits< ::Test::A>::to_proxy (
-        object_traits< ::Test::A>::ref_type);
-    template<>
     object_traits< ::Test::A>::ref_type
     object_traits< ::Test::A>::narrow (
        object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
@@ -585,10 +581,6 @@ namespace TAOX11_NAMESPACE
     object_traits< ::Test::Foo>::shared_ptr_type
     object_traits< ::Test::Foo>::lock_shared (
         ::Test::Foo* p);
-    template<>
-    const Object_proxy*
-    object_traits< ::Test::Foo>::to_proxy (
-        object_traits< ::Test::Foo>::ref_type);
     template<>
     object_traits< ::Test::Foo>::ref_type
     object_traits< ::Test::Foo>::narrow (
@@ -2520,6 +2512,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FAIGBABE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JBGDJGAJ_INCLUDED__ */
 
 // -*- END -*-

@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DGDDDAIJ_INCLUDED__
-#define __RIDL_TESTC_H_DGDDDAIJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDDJHGIC_INCLUDED__
+#define __RIDL_TESTC_H_IDDJHGIC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -334,10 +334,6 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A>::shared_ptr_type
     object_traits< ::A>::lock_shared (
         ::A* p);
-    template<>
-    const Object_proxy*
-    object_traits< ::A>::to_proxy (
-        object_traits< ::A>::ref_type);
     template<>
     object_traits< ::A>::ref_type
     object_traits< ::A>::narrow (
@@ -774,17 +770,12 @@ public:
   typedef TAOX11_CORBA::valuetype_reference< StringValue>  _ref_type;
   //@}
 
-  void _value (const std::string& v)
-  { this->value_ = v; }
-  void _value (std::string&& v)
-  { this->value_ = std::move (v); }
-  const std::string& _value () const
-  { return this->value_; }
-  std::string& _value ()
-  { return this->value_; }
+  void _value (const std::string& v) { this->value_ = v; }
+  void _value (std::string&& v) { this->value_ = std::move (v); }
+  const std::string& _value () const { return this->value_; }
+  std::string& _value () { return this->value_; }
 
-  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
-  _copy_value () const override;
+  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type _copy_value () const override;
 
   static bool _obv_unmarshal (TAO_InputCDR &strm, _ref_type &vbox);
 
@@ -798,7 +789,7 @@ protected:
   StringValue (const StringValue&) = default;
   StringValue (StringValue&&) = default;
   explicit StringValue (std::string v)
-    : TAOX11_CORBA::Valuebox_T< std::string> (v)
+    : TAOX11_CORBA::Valuebox_T< std::string> (std::move(v))
   {}
   virtual ~StringValue () = default;
   StringValue& operator= (const StringValue&) = delete;
@@ -844,10 +835,6 @@ namespace TAOX11_NAMESPACE
     object_traits< ::X>::shared_ptr_type
     object_traits< ::X>::lock_shared (
         ::X* p);
-    template<>
-    const Object_proxy*
-    object_traits< ::X>::to_proxy (
-        object_traits< ::X>::ref_type);
     template<>
     object_traits< ::X>::ref_type
     object_traits< ::X>::narrow (
@@ -1001,15 +988,11 @@ public:
   typedef TAOX11_CORBA::valuetype_reference< ColorValue>  _ref_type;
   //@}
 
-  void _value (::Color v)
-  { this->value_ = v; }
-  ::Color _value () const
-  { return this->value_; }
-  ::Color& _value ()
-  { return this->value_; }
+  void _value (::Color v) { this->value_ = v; }
+  ::Color _value () const { return this->value_; }
+  ::Color& _value () { return this->value_; }
 
-  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
-  _copy_value () const override;
+  virtual TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type _copy_value () const override;
 
   static bool _obv_unmarshal (TAO_InputCDR &strm, _ref_type &vbox);
 
@@ -1023,7 +1006,7 @@ protected:
   ColorValue (const ColorValue&) = default;
   ColorValue (ColorValue&&) = default;
   explicit ColorValue (::Color v)
-    : TAOX11_CORBA::Valuebox_T< ::Color> (v)
+    : TAOX11_CORBA::Valuebox_T< ::Color> (std::move(v))
   {}
   virtual ~ColorValue () = default;
   ColorValue& operator= (const ColorValue&) = delete;
@@ -1110,10 +1093,6 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A1>::shared_ptr_type
     object_traits< ::A1>::lock_shared (
         ::A1* p);
-    template<>
-    const Object_proxy*
-    object_traits< ::A1>::to_proxy (
-        object_traits< ::A1>::ref_type);
     template<>
     object_traits< ::A1>::ref_type
     object_traits< ::A1>::narrow (
@@ -2374,6 +2353,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DGDDDAIJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IDDJHGIC_INCLUDED__ */
 
 // -*- END -*-

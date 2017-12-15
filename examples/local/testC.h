@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CICGHCEC_INCLUDED__
-#define __RIDL_TESTC_H_CICGHCEC_INCLUDED__
+#ifndef __RIDL_TESTC_H_EGGCAFAH_INCLUDED__
+#define __RIDL_TESTC_H_EGGCAFAH_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -392,6 +392,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CICGHCEC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EGGCAFAH_INCLUDED__ */
 
 // -*- END -*-
