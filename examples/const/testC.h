@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DBCDGDBC_INCLUDED__
-#define __RIDL_TESTC_H_DBCDGDBC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IEBFEBDC_INCLUDED__
+#define __RIDL_TESTC_H_IEBFEBDC_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -148,10 +148,6 @@ namespace TAOX11_NAMESPACE
     object_traits< ::A>::shared_ptr_type
     object_traits< ::A>::lock_shared (
         ::A* p);
-    template<>
-    const Object_proxy*
-    object_traits< ::A>::to_proxy (
-        object_traits< ::A>::ref_type);
     template<>
     object_traits< ::A>::ref_type
     object_traits< ::A>::narrow (
@@ -428,6 +424,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DBCDGDBC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IEBFEBDC_INCLUDED__ */
 
 // -*- END -*-
