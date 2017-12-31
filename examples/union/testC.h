@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JBGDJGAJ_INCLUDED__
-#define __RIDL_TESTC_H_JBGDJGAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBHGEJDB_INCLUDED__
+#define __RIDL_TESTC_H_IBHGEJDB_INCLUDED__
 
 
 #include /**/ "ace/pre.h"
@@ -23,8 +23,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 5 || TAOX11_MICRO_VERSION != 4
-#error This file was generated with another RIDL C++11 backend version (1.5.4). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -208,7 +208,7 @@ namespace Test
     // generated from c++11/templates/cli/hdr/union_post.erb
     /// Default constructor creating an union initialized to
     /// the default cause
-    inline Data ();
+    Data () = default;
     /// Copy constructor
     inline Data (const Data&);
     /// Move constructor
@@ -457,7 +457,7 @@ namespace Test
     // generated from c++11/templates/cli/hdr/union_post.erb
     /// Default constructor creating an union initialized to
     /// the default cause
-    inline U ();
+    U () = default;
     /// Copy constructor
     inline U (const U&);
     /// Move constructor
@@ -1392,10 +1392,6 @@ inline Test::Data::u_type_::~u_type_ ()
 {
 }
 
-inline Test::Data::Data ()
-{
-}
-
 inline Test::Data::~Data ()
 {
   this->_clear ();
@@ -2011,10 +2007,6 @@ inline Test::U::u_type_::~u_type_ ()
 {
 }
 
-inline Test::U::U ()
-{
-}
-
 inline Test::U::~U ()
 {
   this->_clear ();
@@ -2512,6 +2504,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JBGDJGAJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBHGEJDB_INCLUDED__ */
 
 // -*- END -*-
