@@ -7,12 +7,12 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBHGEJDB_INCLUDED__
-#define __RIDL_TESTC_H_IBHGEJDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDIGAABG_INCLUDED__
+#define __RIDL_TESTC_H_EDIGAABG_INCLUDED__
 
+#pragma once
 
 #include /**/ "ace/pre.h"
-
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
@@ -23,8 +23,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.6.1). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -1955,21 +1955,33 @@ inline void Test::Data::_clear ()
     break;
     case ::Test::DataType::dtString:
     {
+#if defined __clang__ && __clang_major__ <= 5
+      using std::string;
+#endif /* __clang__ && __clang_major__ <= 5 */
       this->u_.stringData_.std::string::~string ();
     }
     break;
     case ::Test::DataType::dtPoint:
     {
+#if defined __clang__ && __clang_major__ <= 5
+      using ::Test::Point;
+#endif /* __clang__ && __clang_major__ <= 5 */
       this->u_.pointData_.::Test::Point::~Point ();
     }
     break;
     case ::Test::DataType::dtTrack:
     {
+#if defined __clang__ && __clang_major__ <= 5
+      using ::Test::Track;
+#endif /* __clang__ && __clang_major__ <= 5 */
       this->u_.trackData_.::Test::Track::~Track ();
     }
     break;
     case ::Test::DataType::dtGlobal:
     {
+#if defined __clang__ && __clang_major__ <= 5
+      using ::Global;
+#endif /* __clang__ && __clang_major__ <= 5 */
       this->u_.globalData_.::Global::~Global ();
     }
     break;
@@ -2404,12 +2416,18 @@ inline void Test::U::_clear ()
     break;
     case 2:
     {
+#if defined __clang__ && __clang_major__ <= 5
+      using std::string;
+#endif /* __clang__ && __clang_major__ <= 5 */
       this->u_.z_.std::string::~string ();
     }
     break;
     case 3:
     case 4:
     {
+#if defined __clang__ && __clang_major__ <= 5
+      using ::Test::S;
+#endif /* __clang__ && __clang_major__ <= 5 */
       this->u_.w_.::Test::S::~S ();
     }
     break;
@@ -2504,6 +2522,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IBHGEJDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDIGAABG_INCLUDED__ */
 
 // -*- END -*-

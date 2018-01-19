@@ -7,21 +7,19 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_IIGECFHJ_INCLUDED__
-#define __RIDL_TESTS_H_IIGECFHJ_INCLUDED__
+#ifndef __RIDL_TESTS_H_CAHBFAGG_INCLUDED__
+#define __RIDL_TESTS_H_CAHBFAGG_INCLUDED__
+
+#pragma once
 
 #include "testC.h"
-
-#if !defined (ACE_LACKS_PRAGMA_ONCE)
-# pragma once
-#endif /* ACE_LACKS_PRAGMA_ONCE */
 
 #include "tao/x11/portable_server/servantbase.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.6.1). Please re-generate.
 #endif
 
 // generated from c++11/templates/srv/hdr/interface_pre.erb
@@ -332,6 +330,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_IIGECFHJ_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_CAHBFAGG_INCLUDED__ */
 
 // -*- END -*-
