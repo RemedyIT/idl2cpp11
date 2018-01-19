@@ -7,12 +7,12 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IDIBBEGJ_INCLUDED__
-#define __RIDL_TESTC_H_IDIBBEGJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_FFCHFHGE_INCLUDED__
+#define __RIDL_TESTC_H_FFCHFHGE_INCLUDED__
 
+#pragma once
 
 #include /**/ "ace/pre.h"
-
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
@@ -424,6 +424,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IDIBBEGJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FFCHFHGE_INCLUDED__ */
 
 // -*- END -*-

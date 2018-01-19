@@ -7,14 +7,12 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_HEEFIFHC_INCLUDED__
-#define __RIDL_TESTS_H_HEEFIFHC_INCLUDED__
+#ifndef __RIDL_TESTS_H_GEBBIBAI_INCLUDED__
+#define __RIDL_TESTS_H_GEBBIBAI_INCLUDED__
+
+#pragma once
 
 #include "testC.h"
-
-#if !defined (ACE_LACKS_PRAGMA_ONCE)
-# pragma once
-#endif /* ACE_LACKS_PRAGMA_ONCE */
 
 #include "tao/x11/portable_server/servantbase.h"
 
@@ -125,6 +123,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_HEEFIFHC_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GEBBIBAI_INCLUDED__ */
 
 // -*- END -*-
