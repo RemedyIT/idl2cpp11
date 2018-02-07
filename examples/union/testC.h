@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDIGAABG_INCLUDED__
-#define __RIDL_TESTC_H_EDIGAABG_INCLUDED__
+#ifndef __RIDL_TESTC_H_FIAJIDBG_INCLUDED__
+#define __RIDL_TESTC_H_FIAJIDBG_INCLUDED__
 
 #pragma once
 
@@ -1414,22 +1414,22 @@ inline Test::Data::Data (const ::Test::Data& u)
     break;
     case ::Test::DataType::dtString:
       {
-        new (&this->u_.stringData_) std::string (u.u_.stringData_);
+        new (std::addressof(this->u_.stringData_)) std::string (u.u_.stringData_);
       }
     break;
     case ::Test::DataType::dtPoint:
       {
-        new (&this->u_.pointData_) ::Test::Point (u.u_.pointData_);
+        new (std::addressof(this->u_.pointData_)) ::Test::Point (u.u_.pointData_);
       }
     break;
     case ::Test::DataType::dtTrack:
       {
-        new (&this->u_.trackData_) ::Test::Track (u.u_.trackData_);
+        new (std::addressof(this->u_.trackData_)) ::Test::Track (u.u_.trackData_);
       }
     break;
     case ::Test::DataType::dtGlobal:
       {
-        new (&this->u_.globalData_) ::Global (u.u_.globalData_);
+        new (std::addressof(this->u_.globalData_)) ::Global (u.u_.globalData_);
       }
     break;
     default:
@@ -1615,7 +1615,7 @@ inline void Test::Data::stringData (const std::string& _x11_stringData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtString;
-    new (&this->u_.stringData_) std::string (_x11_stringData);
+    new (std::addressof(this->u_.stringData_)) std::string (_x11_stringData);
   }
   else
   {
@@ -1629,7 +1629,7 @@ inline void Test::Data::stringData (std::string&& _x11_stringData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtString;
-    new (&this->u_.stringData_) std::string (std::move (_x11_stringData));
+    new (std::addressof(this->u_.stringData_)) std::string (std::move (_x11_stringData));
   }
   else
   {
@@ -1667,7 +1667,7 @@ inline void Test::Data::pointData (const ::Test::Point& _x11_pointData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtPoint;
-    new (&this->u_.pointData_) ::Test::Point (_x11_pointData);
+    new (std::addressof(this->u_.pointData_)) ::Test::Point (_x11_pointData);
   }
   else
   {
@@ -1681,7 +1681,7 @@ inline void Test::Data::pointData (::Test::Point&& _x11_pointData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtPoint;
-    new (&this->u_.pointData_) ::Test::Point (std::move (_x11_pointData));
+    new (std::addressof(this->u_.pointData_)) ::Test::Point (std::move (_x11_pointData));
   }
   else
   {
@@ -1719,7 +1719,7 @@ inline void Test::Data::trackData (const ::Test::Track& _x11_trackData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtTrack;
-    new (&this->u_.trackData_) ::Test::Track (_x11_trackData);
+    new (std::addressof(this->u_.trackData_)) ::Test::Track (_x11_trackData);
   }
   else
   {
@@ -1733,7 +1733,7 @@ inline void Test::Data::trackData (::Test::Track&& _x11_trackData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtTrack;
-    new (&this->u_.trackData_) ::Test::Track (std::move (_x11_trackData));
+    new (std::addressof(this->u_.trackData_)) ::Test::Track (std::move (_x11_trackData));
   }
   else
   {
@@ -1771,7 +1771,7 @@ inline void Test::Data::globalData (const ::Global& _x11_globalData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtGlobal;
-    new (&this->u_.globalData_) ::Global (_x11_globalData);
+    new (std::addressof(this->u_.globalData_)) ::Global (_x11_globalData);
   }
   else
   {
@@ -1785,7 +1785,7 @@ inline void Test::Data::globalData (::Global&& _x11_globalData)
   {
     this->_clear ();
     this->disc_ = ::Test::DataType::dtGlobal;
-    new (&this->u_.globalData_) ::Global (std::move (_x11_globalData));
+    new (std::addressof(this->u_.globalData_)) ::Global (std::move (_x11_globalData));
   }
   else
   {
@@ -1919,22 +1919,22 @@ inline void Test::Data::_move_u (::Test::Data& u)
     break;
     case ::Test::DataType::dtString:
     {
-      new (&this->u_.stringData_) std::string (std::move (u.u_.stringData_));
+      new (std::addressof(this->u_.stringData_)) std::string (std::move (u.u_.stringData_));
     }
     break;
     case ::Test::DataType::dtPoint:
     {
-      new (&this->u_.pointData_) ::Test::Point (std::move (u.u_.pointData_));
+      new (std::addressof(this->u_.pointData_)) ::Test::Point (std::move (u.u_.pointData_));
     }
     break;
     case ::Test::DataType::dtTrack:
     {
-      new (&this->u_.trackData_) ::Test::Track (std::move (u.u_.trackData_));
+      new (std::addressof(this->u_.trackData_)) ::Test::Track (std::move (u.u_.trackData_));
     }
     break;
     case ::Test::DataType::dtGlobal:
     {
-      new (&this->u_.globalData_) ::Global (std::move (u.u_.globalData_));
+      new (std::addressof(this->u_.globalData_)) ::Global (std::move (u.u_.globalData_));
     }
     break;
     default:
@@ -2036,18 +2036,18 @@ inline Test::U::U (const ::Test::U& u)
     break;
     case 2:
       {
-        new (&this->u_.z_) std::string (u.u_.z_);
+        new (std::addressof(this->u_.z_)) std::string (u.u_.z_);
       }
     break;
     case 3:
     case 4:
       {
-        new (&this->u_.w_) ::Test::S (u.u_.w_);
+        new (std::addressof(this->u_.w_)) ::Test::S (u.u_.w_);
       }
     break;
     default:
       {
-        new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
+        new (std::addressof(this->u_.obj_)) IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
       }
     break;
   }
@@ -2164,7 +2164,7 @@ inline void Test::U::z (const std::string& _x11_z)
   {
     this->_clear ();
     this->disc_ = 2;
-    new (&this->u_.z_) std::string (_x11_z);
+    new (std::addressof(this->u_.z_)) std::string (_x11_z);
   }
   else
   {
@@ -2178,7 +2178,7 @@ inline void Test::U::z (std::string&& _x11_z)
   {
     this->_clear ();
     this->disc_ = 2;
-    new (&this->u_.z_) std::string (std::move (_x11_z));
+    new (std::addressof(this->u_.z_)) std::string (std::move (_x11_z));
   }
   else
   {
@@ -2216,7 +2216,7 @@ inline void Test::U::w (const ::Test::S& _x11_w)
   {
     this->_clear ();
     this->disc_ = 3;
-    new (&this->u_.w_) ::Test::S (_x11_w);
+    new (std::addressof(this->u_.w_)) ::Test::S (_x11_w);
   }
   else
   {
@@ -2230,7 +2230,7 @@ inline void Test::U::w (::Test::S&& _x11_w)
   {
     this->_clear ();
     this->disc_ = 3;
-    new (&this->u_.w_) ::Test::S (std::move (_x11_w));
+    new (std::addressof(this->u_.w_)) ::Test::S (std::move (_x11_w));
   }
   else
   {
@@ -2270,7 +2270,7 @@ inline void Test::U::obj (IDL::traits< ::Test::A>::ref_type _x11_obj)
   {
     this->_clear ();
     this->disc_ = (-2147483647-1);
-    new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (_x11_obj);
+    new (std::addressof(this->u_.obj_)) IDL::traits< ::Test::A>::ref_type (_x11_obj);
   }
   else
   {
@@ -2391,18 +2391,18 @@ inline void Test::U::_move_u (::Test::U& u)
     break;
     case 2:
     {
-      new (&this->u_.z_) std::string (std::move (u.u_.z_));
+      new (std::addressof(this->u_.z_)) std::string (std::move (u.u_.z_));
     }
     break;
     case 3:
     case 4:
     {
-      new (&this->u_.w_) ::Test::S (std::move (u.u_.w_));
+      new (std::addressof(this->u_.w_)) ::Test::S (std::move (u.u_.w_));
     }
     break;
     default:
     {
-      new (&this->u_.obj_) IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
+      new (std::addressof(this->u_.obj_)) IDL::traits< ::Test::A>::ref_type (std::move (u.u_.obj_));
     }
     break;
   }
@@ -2522,6 +2522,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDIGAABG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FIAJIDBG_INCLUDED__ */
 
 // -*- END -*-
