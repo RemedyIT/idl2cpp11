@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BGHHEDEE_INCLUDED__
-#define __RIDL_TESTC_H_BGHHEDEE_INCLUDED__
+#ifndef __RIDL_TESTC_H_HJAFEICG_INCLUDED__
+#define __RIDL_TESTC_H_HJAFEICG_INCLUDED__
 
 #pragma once
 
@@ -222,6 +222,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BGHHEDEE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HJAFEICG_INCLUDED__ */
 
 // -*- END -*-
