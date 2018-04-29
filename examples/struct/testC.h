@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDCCEJJA_INCLUDED__
-#define __RIDL_TESTC_H_EDCCEJJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_IADGCCJA_INCLUDED__
+#define __RIDL_TESTC_H_IADGCCJA_INCLUDED__
 
 #pragma once
 
@@ -725,7 +725,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Bar>::ref_type _v)
 {
-  return IDL::traits< ::Test::Bar>::write_on (strm, _v);
+  return IDL::traits< ::Test::Bar>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/struct_os.erb
@@ -742,7 +742,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
 {
-  return IDL::traits< ::Test::Foo>::write_on (strm, _v);
+  return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post.erb
@@ -752,6 +752,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDCCEJJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IADGCCJA_INCLUDED__ */
 
 // -*- END -*-
