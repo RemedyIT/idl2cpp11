@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HEHDADEF_INCLUDED__
-#define __RIDL_TESTC_H_HEHDADEF_INCLUDED__
+#ifndef __RIDL_TESTC_H_JGIEDFJD_INCLUDED__
+#define __RIDL_TESTC_H_JGIEDFJD_INCLUDED__
 
 #pragma once
 
@@ -218,7 +218,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Hello>::ref_type _v)
 {
-  return IDL::traits< ::Test::Hello>::write_on (strm, _v);
+  return IDL::traits< ::Test::Hello>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post.erb
@@ -228,6 +228,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HEHDADEF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JGIEDFJD_INCLUDED__ */
 
 // -*- END -*-

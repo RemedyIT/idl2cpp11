@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BJEADEGJ_INCLUDED__
-#define __RIDL_TESTC_H_BJEADEGJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDHHGBFA_INCLUDED__
+#define __RIDL_TESTC_H_EDHHGBFA_INCLUDED__
 
 #pragma once
 
@@ -2265,7 +2265,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A>::ref_type _v)
 {
-  return IDL::traits< ::A>::write_on (strm, _v);
+  return IDL::traits< ::A>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
@@ -2291,7 +2291,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::X>::ref_type _v)
 {
-  return IDL::traits< ::X>::write_on (strm, _v);
+  return IDL::traits< ::X>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/enum_os.erb
@@ -2325,7 +2325,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A1>::ref_type _v)
 {
-  return IDL::traits< ::A1>::write_on (strm, _v);
+  return IDL::traits< ::A1>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/valuetype_os.erb
@@ -2353,6 +2353,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BJEADEGJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDHHGBFA_INCLUDED__ */
 
 // -*- END -*-

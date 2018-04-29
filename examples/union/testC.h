@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FIAJIDBG_INCLUDED__
-#define __RIDL_TESTC_H_FIAJIDBG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBHJFDDJ_INCLUDED__
+#define __RIDL_TESTC_H_IBHJFDDJ_INCLUDED__
 
 #pragma once
 
@@ -1403,34 +1403,34 @@ inline Test::Data::Data (const ::Test::Data& u)
   switch (this->disc_)
   {
     case ::Test::DataType::dtLong:
-      {
-        this->u_.longData_ = u.u_.longData_;
-      }
+    {
+      this->u_.longData_ = u.u_.longData_;
+    }
     break;
     case ::Test::DataType::dtShort:
-      {
-        this->u_.shortData_ = u.u_.shortData_;
-      }
+    {
+      this->u_.shortData_ = u.u_.shortData_;
+    }
     break;
     case ::Test::DataType::dtString:
-      {
-        new (std::addressof(this->u_.stringData_)) std::string (u.u_.stringData_);
-      }
+    {
+      new (std::addressof(this->u_.stringData_)) std::string (u.u_.stringData_);
+    }
     break;
     case ::Test::DataType::dtPoint:
-      {
-        new (std::addressof(this->u_.pointData_)) ::Test::Point (u.u_.pointData_);
-      }
+    {
+      new (std::addressof(this->u_.pointData_)) ::Test::Point (u.u_.pointData_);
+    }
     break;
     case ::Test::DataType::dtTrack:
-      {
-        new (std::addressof(this->u_.trackData_)) ::Test::Track (u.u_.trackData_);
-      }
+    {
+      new (std::addressof(this->u_.trackData_)) ::Test::Track (u.u_.trackData_);
+    }
     break;
     case ::Test::DataType::dtGlobal:
-      {
-        new (std::addressof(this->u_.globalData_)) ::Global (u.u_.globalData_);
-      }
+    {
+      new (std::addressof(this->u_.globalData_)) ::Global (u.u_.globalData_);
+    }
     break;
     default:
     break;
@@ -1955,33 +1955,33 @@ inline void Test::Data::_clear ()
     break;
     case ::Test::DataType::dtString:
     {
-#if defined __clang__ && __clang_major__ <= 5
+#if defined __clang__ && __clang_major__ <= 6
       using std::string;
-#endif /* __clang__ && __clang_major__ <= 5 */
+#endif /* __clang__ && __clang_major__ <= 6 */
       this->u_.stringData_.std::string::~string ();
     }
     break;
     case ::Test::DataType::dtPoint:
     {
-#if defined __clang__ && __clang_major__ <= 5
+#if defined __clang__ && __clang_major__ <= 6
       using ::Test::Point;
-#endif /* __clang__ && __clang_major__ <= 5 */
+#endif /* __clang__ && __clang_major__ <= 6 */
       this->u_.pointData_.::Test::Point::~Point ();
     }
     break;
     case ::Test::DataType::dtTrack:
     {
-#if defined __clang__ && __clang_major__ <= 5
+#if defined __clang__ && __clang_major__ <= 6
       using ::Test::Track;
-#endif /* __clang__ && __clang_major__ <= 5 */
+#endif /* __clang__ && __clang_major__ <= 6 */
       this->u_.trackData_.::Test::Track::~Track ();
     }
     break;
     case ::Test::DataType::dtGlobal:
     {
-#if defined __clang__ && __clang_major__ <= 5
+#if defined __clang__ && __clang_major__ <= 6
       using ::Global;
-#endif /* __clang__ && __clang_major__ <= 5 */
+#endif /* __clang__ && __clang_major__ <= 6 */
       this->u_.globalData_.::Global::~Global ();
     }
     break;
@@ -2030,25 +2030,25 @@ inline Test::U::U (const ::Test::U& u)
   switch (this->disc_)
   {
     case 1:
-      {
-        this->u_.x_ = u.u_.x_;
-      }
+    {
+      this->u_.x_ = u.u_.x_;
+    }
     break;
     case 2:
-      {
-        new (std::addressof(this->u_.z_)) std::string (u.u_.z_);
-      }
+    {
+      new (std::addressof(this->u_.z_)) std::string (u.u_.z_);
+    }
     break;
     case 3:
     case 4:
-      {
-        new (std::addressof(this->u_.w_)) ::Test::S (u.u_.w_);
-      }
+    {
+      new (std::addressof(this->u_.w_)) ::Test::S (u.u_.w_);
+    }
     break;
     default:
-      {
-        new (std::addressof(this->u_.obj_)) IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
-      }
+    {
+      new (std::addressof(this->u_.obj_)) IDL::traits< ::Test::A>::ref_type (u.u_.obj_);
+    }
     break;
   }
 }
@@ -2416,18 +2416,18 @@ inline void Test::U::_clear ()
     break;
     case 2:
     {
-#if defined __clang__ && __clang_major__ <= 5
+#if defined __clang__ && __clang_major__ <= 6
       using std::string;
-#endif /* __clang__ && __clang_major__ <= 5 */
+#endif /* __clang__ && __clang_major__ <= 6 */
       this->u_.z_.std::string::~string ();
     }
     break;
     case 3:
     case 4:
     {
-#if defined __clang__ && __clang_major__ <= 5
+#if defined __clang__ && __clang_major__ <= 6
       using ::Test::S;
-#endif /* __clang__ && __clang_major__ <= 5 */
+#endif /* __clang__ && __clang_major__ <= 6 */
       this->u_.w_.::Test::S::~S ();
     }
     break;
@@ -2504,7 +2504,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
 {
-  return IDL::traits< ::Test::Foo>::write_on (strm, _v);
+  return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/interface_os.erb
@@ -2512,7 +2512,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::A>::ref_type _v)
 {
-  return IDL::traits< ::Test::A>::write_on (strm, _v);
+  return IDL::traits< ::Test::A>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post.erb
@@ -2522,6 +2522,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FIAJIDBG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBHJFDDJ_INCLUDED__ */
 
 // -*- END -*-
