@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDHHGBFA_INCLUDED__
-#define __RIDL_TESTC_H_EDHHGBFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFGHECDG_INCLUDED__
+#define __RIDL_TESTC_H_JFGHECDG_INCLUDED__
 
 #pragma once
 
@@ -208,7 +208,7 @@ namespace obv
     Example () {}
 #else
     Example () = default;
-#endif
+#endif /* ACE_WIN32_VC14 */
     ~Example () = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
@@ -606,7 +606,7 @@ namespace obv
     Val () {}
 #else
     Val () = default;
-#endif
+#endif /* ACE_WIN32_VC14 */
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
@@ -1326,7 +1326,7 @@ namespace obv
     B () {}
 #else
     B () = default;
-#endif
+#endif /* ACE_WIN32_VC14 */
     ~B () = default;
     B (const B&) = default;
     B (B&&) = default;
@@ -1526,7 +1526,7 @@ namespace obv
     V () {}
 #else
     V () = default;
-#endif
+#endif /* ACE_WIN32_VC14 */
     ~V () = default;
     V (const V&) = default;
     V (V&&) = default;
@@ -2353,6 +2353,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDHHGBFA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFGHECDG_INCLUDED__ */
 
 // -*- END -*-
