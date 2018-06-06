@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFJFJAIC_INCLUDED__
-#define __RIDL_TESTC_H_JFJFJAIC_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIACJBCI_INCLUDED__
+#define __RIDL_TESTC_H_CIACJBCI_INCLUDED__
 
 #pragma once
 
@@ -128,7 +128,7 @@ namespace Test
 #else
     /// Default constructor
     Foo () = default;
-#endif
+#endif /* ACE_WIN32_VC14 */
     /// Destructor
     ~Foo () = default;
 
@@ -240,7 +240,7 @@ namespace Test
 #else
     /// Default constructor
     Bar () = default;
-#endif
+#endif /* ACE_WIN32_VC14 */
     /// Destructor
     ~Bar () = default;
 
@@ -392,6 +392,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFJFJAIC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIACJBCI_INCLUDED__ */
 
 // -*- END -*-
