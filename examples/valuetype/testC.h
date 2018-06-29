@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFGHECDG_INCLUDED__
-#define __RIDL_TESTC_H_JFGHECDG_INCLUDED__
+#ifndef __RIDL_TESTC_H_CAFEHCEA_INCLUDED__
+#define __RIDL_TESTC_H_CAFEHCEA_INCLUDED__
 
 #pragma once
 
@@ -75,7 +75,7 @@ namespace TAOX11_NAMESPACE
           std::enable_if<std::is_convertible< ::Example*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_narrow (base);
+        return ref_type::_narrow (std::move(base));
       }
     };
   } // namespace CORBA
@@ -477,7 +477,7 @@ namespace TAOX11_NAMESPACE
           std::enable_if<std::is_convertible< ::Val*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_narrow (base);
+        return ref_type::_narrow (std::move(base));
       }
     };
   } // namespace CORBA
@@ -1215,7 +1215,7 @@ namespace TAOX11_NAMESPACE
           std::enable_if<std::is_convertible< ::B*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_narrow (base);
+        return ref_type::_narrow (std::move(base));
       }
     };
   } // namespace CORBA
@@ -1426,7 +1426,7 @@ namespace TAOX11_NAMESPACE
           std::enable_if<std::is_convertible< ::V*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
-        return ref_type::_narrow (base);
+        return ref_type::_narrow (std::move(base));
       }
     };
   } // namespace CORBA
@@ -2353,6 +2353,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFGHECDG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CAFEHCEA_INCLUDED__ */
 
 // -*- END -*-

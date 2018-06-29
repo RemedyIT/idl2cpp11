@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_JEIIAEFC_INCLUDED__
-#define __RIDL_TESTS_H_JEIIAEFC_INCLUDED__
+#ifndef __RIDL_TESTS_H_FDEGHDCA_INCLUDED__
+#define __RIDL_TESTS_H_FDEGHDCA_INCLUDED__
 
 #pragma once
 
@@ -135,12 +135,12 @@ namespace TAOX11_NAMESPACE {
           std::enable_if<std::is_convertible< ::Test::POA::Foo*, _Tp1*>::value>::type>
       static ref_type narrow (servant_reference<_Tp1> base)
       {
-        return ref_type::_narrow (base);
+        return ref_type::_narrow (std::move(base));
       }
     };
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_JEIIAEFC_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_FDEGHDCA_INCLUDED__ */
 
 // -*- END -*-
