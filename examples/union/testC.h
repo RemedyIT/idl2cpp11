@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BIFFDEGD_INCLUDED__
-#define __RIDL_TESTC_H_BIFFDEGD_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDAGEHBE_INCLUDED__
+#define __RIDL_TESTC_H_EDAGEHBE_INCLUDED__
 
 #pragma once
 
@@ -1994,7 +1994,6 @@ inline void Test::Data::_default ()
 {
   this->_clear ();
   this->disc_ = ::Test::DataType::dtEmpty;
-
 }
 
 // generated from c++11/templates/cli/inl/struct_inl.erb
@@ -2522,6 +2521,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BIFFDEGD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDAGEHBE_INCLUDED__ */
 
 // -*- END -*-
