@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_FDEGHDCA_INCLUDED__
-#define __RIDL_TESTS_H_FDEGHDCA_INCLUDED__
+#ifndef __RIDL_TESTS_H_GABDCBHG_INCLUDED__
+#define __RIDL_TESTS_H_GABDCBHG_INCLUDED__
 
 #pragma once
 
@@ -49,7 +49,7 @@ namespace Test
       /// Destructor
       virtual ~Foo ();
 
-      virtual Servant_proxy_ptr get_proxy () override;
+      virtual Servant_proxy_ptr get_proxy () const override;
 
       template <typename T> friend class TAOX11_CORBA::servant_reference;
     public:
@@ -141,6 +141,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_FDEGHDCA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GABDCBHG_INCLUDED__ */
 
 // -*- END -*-
