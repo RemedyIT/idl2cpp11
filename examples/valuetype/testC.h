@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FABDFECI_INCLUDED__
-#define __RIDL_TESTC_H_FABDFECI_INCLUDED__
+#ifndef __RIDL_TESTC_H_DAGAHGAH_INCLUDED__
+#define __RIDL_TESTC_H_DAGAHGAH_INCLUDED__
 
 #pragma once
 
@@ -27,8 +27,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.6.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -203,19 +203,20 @@ namespace obv
     : public virtual ::Example
   {
   protected:
-#if defined (ACE_WIN32_VC14)
-    // msvc14 has a problem with defaulted constructors, issue #4005
+#if defined (_MSC_VER) && (_MSC_VER < 1920)
+    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     Example () {}
 #else
     Example () = default;
-#endif /* ACE_WIN32_VC14 */
+#endif /* _MSC_VER < 1920 */
     ~Example () = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
-    explicit Example (int16_t val1,
-                      int32_t val2,
-                      std::string val3,
-                      IDL::traits< ::Example>::ref_type val5)
+    explicit Example (
+      int16_t val1,
+      int32_t val2,
+      std::string val3,
+      IDL::traits< ::Example>::ref_type val5)
       : val1_ (std::move (val1))
       , val2_ (std::move (val2))
       , val3_ (std::move (val3))
@@ -601,21 +602,22 @@ namespace obv
     : public virtual ::Val
   {
   protected:
-#if defined (ACE_WIN32_VC14)
-    // msvc14 has a problem with defaulted constructors, issue #4005
+#if defined (_MSC_VER) && (_MSC_VER < 1920)
+    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     Val () {}
 #else
     Val () = default;
-#endif /* ACE_WIN32_VC14 */
+#endif /* _MSC_VER < 1920 */
     ~Val () = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
-    explicit Val (IDL::traits< ::Val>::ref_type t,
-                  int32_t v,
-                  ::Bytes w,
-                  std::string x,
-                  ::S y,
-                  IDL::traits< ::A>::ref_type z)
+    explicit Val (
+      IDL::traits< ::Val>::ref_type t,
+      int32_t v,
+      ::Bytes w,
+      std::string x,
+      ::S y,
+      IDL::traits< ::A>::ref_type z)
       : t_ (std::move (t))
       , v_ (std::move (v))
       , w_ (std::move (w))
@@ -1321,16 +1323,17 @@ namespace obv
     : public virtual ::B
   {
   protected:
-#if defined (ACE_WIN32_VC14)
-    // msvc14 has a problem with defaulted constructors, issue #4005
+#if defined (_MSC_VER) && (_MSC_VER < 1920)
+    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     B () {}
 #else
     B () = default;
-#endif /* ACE_WIN32_VC14 */
+#endif /* _MSC_VER < 1920 */
     ~B () = default;
     B (const B&) = default;
     B (B&&) = default;
-    explicit B (int16_t data)
+    explicit B (
+      int16_t data)
       : data_ (std::move (data))
     {}
 
@@ -1521,12 +1524,12 @@ namespace obv
     : public virtual ::V
   {
   protected:
-#if defined (ACE_WIN32_VC14)
-    // msvc14 has a problem with defaulted constructors, issue #4005
+#if defined (_MSC_VER) && (_MSC_VER < 1920)
+    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     V () {}
 #else
     V () = default;
-#endif /* ACE_WIN32_VC14 */
+#endif /* _MSC_VER < 1920 */
     ~V () = default;
     V (const V&) = default;
     V (V&&) = default;
@@ -2353,6 +2356,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FABDFECI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DAGAHGAH_INCLUDED__ */
 
 // -*- END -*-
