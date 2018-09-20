@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_CBFBBIAE_INCLUDED__
-#define __RIDL_TESTS_H_CBFBBIAE_INCLUDED__
+#ifndef __RIDL_TESTS_H_IIIJBAJD_INCLUDED__
+#define __RIDL_TESTS_H_IIIJBAJD_INCLUDED__
 
 #pragma once
 
@@ -212,7 +212,7 @@ namespace POA
     //@}
 
   protected:
-    typedef std::shared_ptr<B>  _shared_ptr_type;
+    typedef std::shared_ptr<B> _shared_ptr_type;
     /// Constructor
     B ();
     /// Destructor
@@ -330,6 +330,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CBFBBIAE_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_IIIJBAJD_INCLUDED__ */
 
 // -*- END -*-

@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DAGAHGAH_INCLUDED__
-#define __RIDL_TESTC_H_DAGAHGAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JAJJAACG_INCLUDED__
+#define __RIDL_TESTC_H_JAJJAACG_INCLUDED__
 
 #pragma once
 
@@ -393,7 +393,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
-  typedef std::shared_ptr<A>   _shared_ptr_type;
+  typedef std::shared_ptr<A> _shared_ptr_type;
 
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -896,7 +896,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
-  typedef std::shared_ptr<X>   _shared_ptr_type;
+  typedef std::shared_ptr<X> _shared_ptr_type;
 
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -1153,7 +1153,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
-  typedef std::shared_ptr<A1>   _shared_ptr_type;
+  typedef std::shared_ptr<A1> _shared_ptr_type;
 
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -2356,6 +2356,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DAGAHGAH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JAJJAACG_INCLUDED__ */
 
 // -*- END -*-
