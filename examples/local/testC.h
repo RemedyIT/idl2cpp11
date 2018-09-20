@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HEBCFEGB_INCLUDED__
-#define __RIDL_TESTC_H_HEBCFEGB_INCLUDED__
+#ifndef __RIDL_TESTC_H_JGADGEFB_INCLUDED__
+#define __RIDL_TESTC_H_JGADGEFB_INCLUDED__
 
 #pragma once
 
@@ -120,7 +120,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
-    typedef std::shared_ptr<Foo>   _shared_ptr_type;
+    typedef std::shared_ptr<Foo> _shared_ptr_type;
 
 #if defined (_MSC_VER) && (_MSC_VER < 1920)
     /// Default constructor
@@ -232,7 +232,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
-    typedef std::shared_ptr<Bar>   _shared_ptr_type;
+    typedef std::shared_ptr<Bar> _shared_ptr_type;
 
 #if defined (_MSC_VER) && (_MSC_VER < 1920)
     /// Default constructor
@@ -392,6 +392,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HEBCFEGB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JGADGEFB_INCLUDED__ */
 
 // -*- END -*-

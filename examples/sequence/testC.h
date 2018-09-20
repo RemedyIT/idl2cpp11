@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FIIJIGHJ_INCLUDED__
-#define __RIDL_TESTC_H_FIIJIGHJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_EAEGCBFA_INCLUDED__
+#define __RIDL_TESTC_H_EAEGCBFA_INCLUDED__
 
 #pragma once
 
@@ -265,7 +265,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post.erb
   protected:
-    typedef std::shared_ptr<Foo>   _shared_ptr_type;
+    typedef std::shared_ptr<Foo> _shared_ptr_type;
 
     template <typename _Tp1, typename, typename ...Args>
     friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -780,6 +780,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FIIJIGHJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EAEGCBFA_INCLUDED__ */
 
 // -*- END -*-

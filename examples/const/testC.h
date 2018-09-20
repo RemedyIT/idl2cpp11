@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CECFHCED_INCLUDED__
-#define __RIDL_TESTC_H_CECFHCED_INCLUDED__
+#ifndef __RIDL_TESTC_H_FGAFJAGD_INCLUDED__
+#define __RIDL_TESTC_H_FGAFJAGD_INCLUDED__
 
 #pragma once
 
@@ -204,7 +204,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/interface_post.erb
 protected:
-  typedef std::shared_ptr<A>   _shared_ptr_type;
+  typedef std::shared_ptr<A> _shared_ptr_type;
 
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -290,8 +290,8 @@ namespace TAOX11_NAMESPACE
     struct traits < TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
       : IDL::common_traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
     {
-      typedef std::integral_constant< uint16_t, 10 > digits;
-      typedef std::integral_constant< uint16_t, 3 > scale;
+      typedef std::integral_constant< uint16_t, 10> digits;
+      typedef std::integral_constant< uint16_t, 3> scale;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -424,6 +424,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CECFHCED_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FGAFJAGD_INCLUDED__ */
 
 // -*- END -*-
