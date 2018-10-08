@@ -3,7 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bf30ffa2518c45a7a9ffb9eada4ba568)](https://www.codacy.com/app/RemedyIT/idl2cpp11?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RemedyIT/idl2cpp11&amp;utm_campaign=Badge_Grade)
 
 This project demonstrates the IDL to C++11 language mapping which is implemented
-by [Remedy IT](http://www.remedy.nl) as part of the [TAOX11](https://taox11.remedy.nl) and
+by [Remedy IT](https://www.remedy.nl) as part of the [TAOX11](https://taox11.remedy.nl) and
 [AXCIOMA](https://www.axcioma.com) products.
 
 Interested to see the C++11 generated code for some IDL constructs that are not
