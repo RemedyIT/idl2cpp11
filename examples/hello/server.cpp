@@ -19,7 +19,7 @@ main(int argc, ACE_TCHAR *argv[])
     {
       IDL::traits<CORBA::ORB>::ref_type _orb = CORBA::ORB_init (argc, argv);
 
-      if (_orb == nullptr)
+      if (!_orb)
       {
         std::cerr << "ERROR: CORBA::ORB_init (argc, argv) returned nil ORB." << std::endl;
         return 1;
@@ -27,7 +27,7 @@ main(int argc, ACE_TCHAR *argv[])
 
       IDL::traits<CORBA::Object>::ref_type obj = _orb->resolve_initial_references ("RootPOA");
 
-      if (obj == nullptr)
+      if (!obj)
       {
         std::cerr << "ERROR: resolve_initial_references (\"RootPOA\") returned nil reference." << std::endl;
         return 1;

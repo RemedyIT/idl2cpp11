@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
       IDL::traits<CORBA::Object>::ref_type obj = _orb->string_to_object ("file://test.ior");
 
-      if (obj == nullptr)
+      if (!obj)
       {
         std::cerr << "ERROR: string_to_object(<ior>) returned nil reference." << std::endl;
         return 1;
