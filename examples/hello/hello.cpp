@@ -2,7 +2,7 @@
  * @file   hello.cpp
  * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
- * @brief  CORBA C++11 client application
+ * @brief  CORBA C++11 Test::Hello servant implementation source
  *
  * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands

@@ -2,7 +2,7 @@
  * @file   hello.h
  * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
- * @brief  CORBA C++11 Test::Hello servant implementation header
+ * @brief  CORBA C++11 Test::Hello implementation header
  *
  * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
@@ -11,18 +11,19 @@
 #define HELLO_H
 #include /**/ "ace/pre.h"
 
-#include "testS.h"
+#include "tao/x11/orb.h"
 
-/// Implement the Test::Hello interface
-class Hello
-  : public virtual CORBA::servant_traits<Test::Hello>::base_type
+/// Regular class used through delegation
+class Hello final
 {
 public:
   /// Constructor
   Hello (IDL::traits<CORBA::ORB>::ref_type orb);
 
   // = The skeleton methods
-  virtual std::string get_string (void) override;
+  virtual std::string get_string () override;
+
+  virtual void shutdown () override;
 
 private:
   /// Use an ORB reference to convert strings to objects and shutdown

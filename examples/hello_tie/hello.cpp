@@ -2,7 +2,7 @@
  * @file   hello.cpp
  * @author Johnny Willemsen <jwillemsen@remedy.nl>
  *
- * @brief  CORBA C++11 Test::Hello servant implementation source
+ * @brief  CORBA C++11 Test::Hello implementation source
  *
  * @copyright Copyright (c) Remedy IT Expertise BV
  * Chamber of commerce Rotterdam nr.276339, The Netherlands
@@ -15,7 +15,13 @@ Hello::Hello (IDL::traits<CORBA::ORB>::ref_type orb)
 }
 
 std::string
-Hello::get_string (void)
+Hello::get_string ()
 {
   return "Hello there!";
+}
+
+void
+Hello::shutdown ()
+{
+  this->orb_->shutdown (false);
 }
