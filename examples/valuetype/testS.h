@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_FDJDEAJH_INCLUDED__
-#define __RIDL_TESTS_H_FDJDEAJH_INCLUDED__
+#ifndef __RIDL_TESTS_H_CCBHBEFI_INCLUDED__
+#define __RIDL_TESTS_H_CCBHBEFI_INCLUDED__
 
 #pragma once
 
@@ -22,7 +22,7 @@
 #error This file was generated with another RIDL C++11 backend version (1.7.1). Please re-generate.
 #endif
 
-// generated from c++11/templates/srv/hdr/interface_pre.erb
+// generated from c++11/templates/srv/hdr/interface_pre
 namespace POA
 {
   class A_srvproxy;
@@ -58,14 +58,14 @@ namespace POA
 
     virtual const std::string &_interface_repository_id () const override;
 
-    // generated from c++11/templates/srv/hdr/operation.erb
+    // generated from c++11/templates/srv/hdr/operation
     /// @copydoc test.idl::A::op
     virtual
     void
     op () = 0;
 
   private:
-    // generated from c++11/templates/srv/hdr/interface_post.erb
+    // generated from c++11/templates/srv/hdr/interface_post
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
     //@{
     A (const A&) = delete;
@@ -80,7 +80,7 @@ namespace POA
 
 } // namespace POA
 
-// generated from c++11/templates/srv/hdr/interface_pre.erb
+// generated from c++11/templates/srv/hdr/interface_pre
 namespace POA
 {
   class X_srvproxy;
@@ -116,7 +116,7 @@ namespace POA
 
     virtual const std::string &_interface_repository_id () const override;
 
-    // generated from c++11/templates/srv/hdr/operation.erb
+    // generated from c++11/templates/srv/hdr/operation
     /// @copydoc test.idl::X::op
     virtual
     void
@@ -124,7 +124,7 @@ namespace POA
         std::string& s) = 0;
 
   private:
-    // generated from c++11/templates/srv/hdr/interface_post.erb
+    // generated from c++11/templates/srv/hdr/interface_post
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
     //@{
     X (const X&) = delete;
@@ -139,7 +139,7 @@ namespace POA
 
 } // namespace POA
 
-// generated from c++11/templates/srv/hdr/interface_pre.erb
+// generated from c++11/templates/srv/hdr/interface_pre
 namespace POA
 {
   class A1_srvproxy;
@@ -175,14 +175,14 @@ namespace POA
 
     virtual const std::string &_interface_repository_id () const override;
 
-    // generated from c++11/templates/srv/hdr/operation.erb
+    // generated from c++11/templates/srv/hdr/operation
     /// @copydoc test.idl::A1::op
     virtual
     void
     op () = 0;
 
   private:
-    // generated from c++11/templates/srv/hdr/interface_post.erb
+    // generated from c++11/templates/srv/hdr/interface_post
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
     //@{
     A1 (const A1&) = delete;
@@ -197,7 +197,7 @@ namespace POA
 
 } // namespace POA
 
-// generated from c++11/templates/srv/hdr/valuetype_pre.erb
+// generated from c++11/templates/srv/hdr/valuetype_pre
 namespace POA
 {
   class B
@@ -228,7 +228,7 @@ namespace POA
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
 
-    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits
     template <>
     struct servant_traits< ::A>
     {
@@ -253,7 +253,7 @@ namespace TAOX11_NAMESPACE {
       }
     };
 
-    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits
     template <>
     struct servant_traits< ::X>
     {
@@ -278,7 +278,7 @@ namespace TAOX11_NAMESPACE {
       }
     };
 
-    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits
     template <>
     struct servant_traits< ::A1>
     {
@@ -303,7 +303,7 @@ namespace TAOX11_NAMESPACE {
       }
     };
 
-    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits
     template <>
     struct servant_traits< ::B>
     {
@@ -330,6 +330,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_FDJDEAJH_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_CCBHBEFI_INCLUDED__ */
 
 // -*- END -*-

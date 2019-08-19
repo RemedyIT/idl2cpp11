@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BCEEHECA_INCLUDED__
-#define __RIDL_TESTC_H_BCEEHECA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HFBIDJBC_INCLUDED__
+#define __RIDL_TESTC_H_HFBIDJBC_INCLUDED__
 
 #pragma once
 
@@ -34,14 +34,14 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre
 
   /// @copydoc test.idl::Test::Variable
   class Variable
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post
     /// Default constructor
     Variable () = default;
     /// Destructor
@@ -78,7 +78,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_BAR_FWD_)
 #define _INTF_TEST_BAR_FWD_
   class Bar;
@@ -89,7 +89,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_BAR_TRAITS_DECL_)
 #define _INTF_TEST_BAR_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -139,7 +139,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Bar
   class Bar
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -154,13 +154,13 @@ namespace Test
     typedef TAOX11_IDL::traits< Bar>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Bar::op
     virtual
     void
     op ();
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Bar> _shared_ptr_type;
 
@@ -184,14 +184,14 @@ namespace Test
     Bar_proxy_ptr bar_proxy_ {};
   }; // class Bar
 
-  // generated from c++11/templates/cli/hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre
 
   /// @copydoc test.idl::Test::Simple
   class Simple
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post
     /// Default constructor
     Simple () = default;
     /// Destructor
@@ -292,7 +292,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -303,7 +303,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -353,7 +353,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -368,40 +368,40 @@ namespace Test
     typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::pass_struct
     virtual
     bool
     pass_struct (
         const ::Test::Simple& s);
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::return_struct
     virtual
     ::Test::Simple
     return_struct ();
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::get_struct
     virtual
     bool
     get_struct (
         ::Test::Simple& s);
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::update_struct
     virtual
     bool
     update_struct (
         ::Test::Simple& s);
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::shutdown
     virtual
     void
     shutdown ();
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Foo> _shared_ptr_type;
 
@@ -433,7 +433,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_VARIABLE_TRAITS_)
 #define _STRUCT_TEST_VARIABLE_TRAITS_
     template<>
@@ -461,7 +461,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Variable>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_VARIABLE_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_BAR_TRAITS_DECL_)
 #define _INTF_FMT_TEST_BAR_TRAITS_DECL_
     template <typename OStrm_>
@@ -478,7 +478,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Bar>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST_BAR_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_SIMPLE_TRAITS_)
 #define _STRUCT_TEST_SIMPLE_TRAITS_
     template<>
@@ -506,7 +506,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Simple>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_SIMPLE_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST_FOO_TRAITS_DECL_
     template <typename OStrm_>
@@ -531,7 +531,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::Variable, OStrm_>
     {
@@ -564,7 +564,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Bar, OStrm_>::operator ()(
@@ -594,7 +594,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::Simple, OStrm_>
     {
@@ -634,7 +634,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
@@ -666,7 +666,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Test::Variable::Variable (
   std::string name)
   : name_ (std::move (name))
@@ -678,7 +678,7 @@ inline void ::Test::Variable::swap (::Test::Variable& s)
   std::swap (this->name_, s.name_);
 }
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Test::Simple::Simple (
   uint8_t o,
   int32_t l,
@@ -711,7 +711,7 @@ inline void ::Test::Simple::swap (::Test::Simple& s)
   std::swap (this->v_, s.v_);
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -720,7 +720,7 @@ operator<< (
   return IDL::traits< ::Test::Variable>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Bar>::ref_type _v)
@@ -728,7 +728,7 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Bar>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -737,7 +737,7 @@ operator<< (
   return IDL::traits< ::Test::Simple>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
@@ -745,13 +745,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BCEEHECA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HFBIDJBC_INCLUDED__ */
 
 // -*- END -*-

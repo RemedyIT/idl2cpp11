@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HHACBDCA_INCLUDED__
-#define __RIDL_TESTC_H_HHACBDCA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HAEAFJGF_INCLUDED__
+#define __RIDL_TESTC_H_HAEAFJGF_INCLUDED__
 
 #pragma once
 
@@ -97,11 +97,11 @@ namespace Test
   /// @copydoc test.idl::Test::ws_val
   const std::wstring ws_val {L"widestring\n \xbf \xfe0e"};
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::TCounter
   typedef int32_t TCounter;
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::TName
   typedef TAOX11_IDL::bounded_basic_string<char, 30> TName;
 
@@ -117,7 +117,7 @@ namespace Test
   /// @copydoc test.idl::Test::double_count
   constexpr TCounter double_count = (::Test::count * 2);
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::fixed_type
   typedef TAOX11_NAMESPACE::IDL::Fixed <10, 3> fixed_type;
 
@@ -129,7 +129,7 @@ namespace Test
 
 // generated from StubHeaderWriter#enter_interface
 
-// generated from c++11/templates/cli/hdr/interface_fwd.erb
+// generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_A_FWD_)
 #define _INTF_A_FWD_
 class A;
@@ -137,7 +137,7 @@ class A_proxy;
 typedef A_proxy* A_proxy_ptr;
 #endif // !_INTF_A_FWD_
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_A_TRAITS_DECL_)
 #define _INTF_A_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -183,7 +183,7 @@ namespace TAOX11_NAMESPACE
 } // namespace TAOX11_NAMESPACE
 #endif // !_INTF_A_TRAITS_DECL_
 
-// generated from c++11/templates/cli/hdr/interface_pre.erb
+// generated from c++11/templates/cli/hdr/interface_pre
 /// @copydoc test.idl::A
 class A
   : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -202,7 +202,7 @@ public:
   /// @copydoc test.idl::A::pi
   static constexpr float pi {3.14159F};
 
-  // generated from c++11/templates/cli/hdr/interface_post.erb
+  // generated from c++11/templates/cli/hdr/interface_post
 protected:
   typedef std::shared_ptr<A> _shared_ptr_type;
 
@@ -232,7 +232,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/string_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/string_idl_traits
     // Unaliased type : TAOX11_IDL::bounded_basic_string<char, 30>
     // MD5            : 4FC4252C9D149C59A6F97B9D11EF60DC
 #if !defined(_ALIAS_4FC4252C9D149C59A6F97B9D11EF60DC_TRAITS_DECL_)
@@ -280,7 +280,7 @@ namespace TAOX11_NAMESPACE
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/fixed_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/fixed_idl_traits
     // Unaliased type : TAOX11_NAMESPACE::IDL::Fixed <10, 3>
     // MD5            : 26C447B68D082EEA72A00BE046CE87A7
 #if !defined(_ALIAS_26C447B68D082EEA72A00BE046CE87A7_TRAITS_DECL_)
@@ -337,7 +337,7 @@ namespace TAOX11_NAMESPACE
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_A_TRAITS_DECL_)
 #define _INTF_FMT_A_TRAITS_DECL_
     template <typename OStrm_>
@@ -362,7 +362,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::A, OStrm_>::operator ()(
@@ -394,7 +394,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/hdr/fixed_os.erb
+// generated from c++11/templates/cli/hdr/fixed_os
 // Unaliased type : TAOX11_NAMESPACE::IDL::Fixed <10, 3>
 // MD5            : 26C447B68D082EEA72A00BE046CE87A7
 #if !defined (_ALIAS_OSTREAM_26C447B68D082EEA72A00BE046CE87A7_DECL_)
@@ -409,7 +409,7 @@ inline std::ostream& operator<< (
 
 #endif // _ALIAS_OSTREAM_26C447B68D082EEA72A00BE046CE87A7_DECL_
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A>::ref_type _v)
@@ -417,13 +417,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::A>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HHACBDCA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HAEAFJGF_INCLUDED__ */
 
 // -*- END -*-

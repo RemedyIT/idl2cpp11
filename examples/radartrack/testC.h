@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DIIGEDJI_INCLUDED__
-#define __RIDL_TESTC_H_DIIGEDJI_INCLUDED__
+#ifndef __RIDL_TESTC_H_BHHCEHGJ_INCLUDED__
+#define __RIDL_TESTC_H_BHHCEHGJ_INCLUDED__
 
 #pragma once
 
@@ -28,18 +28,18 @@
 
 using namespace TAOX11_NAMESPACE;
 
-// generated from c++11/templates/cli/hdr/typedef.erb
+// generated from c++11/templates/cli/hdr/typedef
 /// @copydoc test.idl::octetseq
 typedef std::vector < uint8_t> octetseq;
 
-// generated from c++11/templates/cli/hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre
 
 /// @copydoc test.idl::RadarTrack
 class RadarTrack
 {
 public:
 
-  // generated from c++11/templates/cli/hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post
   /// Default constructor
   RadarTrack () = default;
   /// Destructor
@@ -117,7 +117,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits
     // Unaliased type : std::vector < uint8_t>
     // MD5            : 4A0D4FA0CECD59978705BEC31A31D5CB
 #if !defined(_ALIAS_4A0D4FA0CECD59978705BEC31A31D5CB_TRAITS_DECL_)
@@ -164,7 +164,7 @@ namespace TAOX11_NAMESPACE
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_RADARTRACK_TRAITS_)
 #define _STRUCT_RADARTRACK_TRAITS_
     template<>
@@ -200,7 +200,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::RadarTrack, OStrm_>
     {
@@ -239,7 +239,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::RadarTrack::RadarTrack (
   std::string id,
   int32_t x,
@@ -263,7 +263,7 @@ inline void ::RadarTrack::swap (::RadarTrack& s)
   std::swap (this->plot_, s.plot_);
 }
 
-// generated from c++11/templates/cli/hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os
 // Unaliased type : std::vector < uint8_t>
 // MD5            : 4A0D4FA0CECD59978705BEC31A31D5CB
 #if !defined (_ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_)
@@ -278,7 +278,7 @@ inline std::ostream& operator<< (
 
 #endif // _ALIAS_OSTREAM_4A0D4FA0CECD59978705BEC31A31D5CB_DECL_
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -287,13 +287,13 @@ operator<< (
   return IDL::traits< ::RadarTrack>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DIIGEDJI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BHHCEHGJ_INCLUDED__ */
 
 // -*- END -*-

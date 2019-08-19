@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDDHGEDE_INCLUDED__
-#define __RIDL_TESTC_H_BDDHGEDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IIDGFBAA_INCLUDED__
+#define __RIDL_TESTC_H_IIDGFBAA_INCLUDED__
 
 #pragma once
 
@@ -34,7 +34,7 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_HELLO_FWD_)
 #define _INTF_TEST_HELLO_FWD_
   class Hello;
@@ -45,7 +45,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_HELLO_TRAITS_DECL_)
 #define _INTF_TEST_HELLO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -97,7 +97,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_HELLO_FACTORY_FWD_)
 #define _INTF_TEST_HELLO_FACTORY_FWD_
   class Hello_Factory;
@@ -108,7 +108,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_HELLO_FACTORY_TRAITS_DECL_)
 #define _INTF_TEST_HELLO_FACTORY_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -158,7 +158,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Hello_Factory
   class Hello_Factory
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -173,20 +173,20 @@ namespace Test
     typedef TAOX11_IDL::traits< Hello_Factory>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Hello_Factory::get_hello
     virtual
     IDL::traits< ::Test::Hello>::ref_type
     get_hello ();
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Hello_Factory::get_hello_2
     virtual
     void
     get_hello_2 (
         IDL::traits< ::Test::Hello>::ref_type& hello_obj);
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Hello_Factory> _shared_ptr_type;
 
@@ -212,7 +212,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Hello
   class Hello
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -227,19 +227,19 @@ namespace Test
     typedef TAOX11_IDL::traits< Hello>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Hello::get_string
     virtual
     std::string
     get_string ();
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Hello::shutdown
     virtual
     void
     shutdown ();
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Hello> _shared_ptr_type;
 
@@ -271,7 +271,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_HELLO_TRAITS_DECL_)
 #define _INTF_FMT_TEST_HELLO_TRAITS_DECL_
     template <typename OStrm_>
@@ -288,7 +288,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Hello>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST_HELLO_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_HELLO_FACTORY_TRAITS_DECL_)
 #define _INTF_FMT_TEST_HELLO_FACTORY_TRAITS_DECL_
     template <typename OStrm_>
@@ -305,7 +305,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Hello_Factory>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST_HELLO_FACTORY_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_HELLO_TRAITS_DECL_)
 #define _INTF_FMT_TEST_HELLO_TRAITS_DECL_
     template <typename OStrm_>
@@ -330,7 +330,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Hello_Factory, OStrm_>::operator ()(
@@ -360,7 +360,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Hello, OStrm_>::operator ()(
@@ -392,7 +392,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Hello_Factory>::ref_type _v)
@@ -400,7 +400,7 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Hello_Factory>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Hello>::ref_type _v)
@@ -408,13 +408,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Hello>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BDDHGEDE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IIDGFBAA_INCLUDED__ */
 
 // -*- END -*-

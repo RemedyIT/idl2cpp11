@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BCCFJJAG_INCLUDED__
-#define __RIDL_TESTC_H_BCCFJJAG_INCLUDED__
+#ifndef __RIDL_TESTC_H_BAHJIIIA_INCLUDED__
+#define __RIDL_TESTC_H_BAHJIIIA_INCLUDED__
 
 #pragma once
 
@@ -28,14 +28,14 @@
 
 using namespace TAOX11_NAMESPACE;
 
-// generated from c++11/templates/cli/hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre
 
 /// @copydoc test.idl::ShapeType
 class ShapeType
 {
 public:
 
-  // generated from c++11/templates/cli/hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post
   /// Default constructor
   ShapeType () = default;
   /// Destructor
@@ -97,14 +97,14 @@ private:
 inline void swap (::ShapeType& m1, ::ShapeType& m2) { m1.swap (m2); }
 
 
-// generated from c++11/templates/cli/hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre
 
 /// @copydoc test.idl::Attributes
 class Attributes
 {
 public:
 
-  // generated from c++11/templates/cli/hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post
   /// Default constructor
   Attributes () = default;
   /// Destructor
@@ -158,7 +158,7 @@ private:
 inline void swap (::Attributes& m1, ::Attributes& m2) { m1.swap (m2); }
 
 
-// generated from c++11/templates/cli/hdr/typedef.erb
+// generated from c++11/templates/cli/hdr/typedef
 /// @copydoc test.idl::ShapeTypeSeq
 typedef std::vector < ::ShapeType> ShapeTypeSeq;
 
@@ -168,7 +168,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_SHAPETYPE_TRAITS_)
 #define _STRUCT_SHAPETYPE_TRAITS_
     template<>
@@ -196,7 +196,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::ShapeType>::__Writer<Fmt>);
 #endif // _STRUCT_SHAPETYPE_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_ATTRIBUTES_TRAITS_)
 #define _STRUCT_ATTRIBUTES_TRAITS_
     template<>
@@ -224,7 +224,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Attributes>::__Writer<Fmt>);
 #endif // _STRUCT_ATTRIBUTES_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/sequence_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/sequence_idl_traits
     // Unaliased type : std::vector < ::ShapeType>
     // MD5            : 577F3F73FFE5DD88BB19C22312215F43
 #if !defined(_ALIAS_577F3F73FFE5DD88BB19C22312215F43_TRAITS_DECL_)
@@ -279,7 +279,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::ShapeType, OStrm_>
     {
@@ -315,7 +315,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Attributes, OStrm_>
     {
@@ -352,7 +352,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::ShapeType::ShapeType (
   std::string color,
   int32_t x,
@@ -373,7 +373,7 @@ inline void ::ShapeType::swap (::ShapeType& s)
   std::swap (this->shapesize_, s.shapesize_);
 }
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Attributes::Attributes (
   std::string shape,
   std::string color,
@@ -391,7 +391,7 @@ inline void ::Attributes::swap (::Attributes& s)
   std::swap (this->speed_, s.speed_);
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -400,7 +400,7 @@ operator<< (
   return IDL::traits< ::ShapeType>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -409,7 +409,7 @@ operator<< (
   return IDL::traits< ::Attributes>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/sequence_os.erb
+// generated from c++11/templates/cli/hdr/sequence_os
 // Unaliased type : std::vector < ::ShapeType>
 // MD5            : 577F3F73FFE5DD88BB19C22312215F43
 #if !defined (_ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_)
@@ -424,13 +424,13 @@ inline std::ostream& operator<< (
 
 #endif // _ALIAS_OSTREAM_577F3F73FFE5DD88BB19C22312215F43_DECL_
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BCCFJJAG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BAHJIIIA_INCLUDED__ */
 
 // -*- END -*-

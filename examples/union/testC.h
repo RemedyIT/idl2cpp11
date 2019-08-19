@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FFADGCHG_INCLUDED__
-#define __RIDL_TESTC_H_FFADGCHG_INCLUDED__
+#ifndef __RIDL_TESTC_H_HEEGCBHA_INCLUDED__
+#define __RIDL_TESTC_H_HEEGCBHA_INCLUDED__
 
 #pragma once
 
@@ -29,14 +29,14 @@
 
 using namespace TAOX11_NAMESPACE;
 
-// generated from c++11/templates/cli/hdr/struct_pre.erb
+// generated from c++11/templates/cli/hdr/struct_pre
 
 /// @copydoc test.idl::Global
 class Global
 {
 public:
 
-  // generated from c++11/templates/cli/hdr/struct_post.erb
+  // generated from c++11/templates/cli/hdr/struct_post
   /// Default constructor
   Global () = default;
   /// Destructor
@@ -75,7 +75,7 @@ inline void swap (::Global& m1, ::Global& m2) { m1.swap (m2); }
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/enum.erb
+  // generated from c++11/templates/cli/hdr/enum
 
   /// @copydoc test.idl::Test::DataType
   enum class DataType : uint32_t
@@ -97,14 +97,14 @@ namespace Test
   };// DataType
 
 
-  // generated from c++11/templates/cli/hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre
 
   /// @copydoc test.idl::Test::Point
   class Point
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post
     /// Default constructor
     Point () = default;
     /// Destructor
@@ -147,14 +147,14 @@ namespace Test
   inline void swap (::Test::Point& m1, ::Test::Point& m2) { m1.swap (m2); }
 
 
-  // generated from c++11/templates/cli/hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre
 
   /// @copydoc test.idl::Test::Track
   class Track
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post
     /// Default constructor
     Track () = default;
     /// Destructor
@@ -198,14 +198,14 @@ namespace Test
   inline void swap (::Test::Track& m1, ::Test::Track& m2) { m1.swap (m2); }
 
 
-  // generated from c++11/templates/cli/hdr/union_pre.erb
+  // generated from c++11/templates/cli/hdr/union_pre
 
   /// @copydoc test.idl::Test::Data
   class Data
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/union_post.erb
+    // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
     Data () = default;
@@ -345,14 +345,14 @@ namespace Test
   inline void swap (::Test::Data& m1, ::Test::Data& m2) { m1.swap (m2); }
 
 
-  // generated from c++11/templates/cli/hdr/struct_pre.erb
+  // generated from c++11/templates/cli/hdr/struct_pre
 
   /// @copydoc test.idl::Test::S
   class S
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/struct_post.erb
+    // generated from c++11/templates/cli/hdr/struct_post
     /// Default constructor
     S () = default;
     /// Destructor
@@ -386,7 +386,7 @@ namespace Test
   inline void swap (::Test::S& m1, ::Test::S& m2) { m1.swap (m2); }
 
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_A_FWD_)
 #define _INTF_TEST_A_FWD_
   class A;
@@ -397,7 +397,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_A_TRAITS_DECL_)
 #define _INTF_TEST_A_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -447,14 +447,14 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/union_pre.erb
+  // generated from c++11/templates/cli/hdr/union_pre
 
   /// @copydoc test.idl::Test::U
   class U
   {
   public:
 
-    // generated from c++11/templates/cli/hdr/union_post.erb
+    // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
     U () = default;
@@ -559,7 +559,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -570,7 +570,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -620,7 +620,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -635,40 +635,40 @@ namespace Test
     typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::pass_union
     virtual
     bool
     pass_union (
         const ::Test::Data& s);
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::return_union
     virtual
     ::Test::Data
     return_union ();
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::get_union
     virtual
     bool
     get_union (
         ::Test::Data& s);
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::update_union
     virtual
     bool
     update_union (
         ::Test::Data& s);
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::shutdown
     virtual
     void
     shutdown ();
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Foo> _shared_ptr_type;
 
@@ -694,7 +694,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::A
   class A
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -709,7 +709,7 @@ namespace Test
     typedef TAOX11_IDL::traits< A>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<A> _shared_ptr_type;
 
@@ -741,7 +741,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_GLOBAL_TRAITS_)
 #define _STRUCT_GLOBAL_TRAITS_
     template<>
@@ -769,7 +769,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Global>::__Writer<Fmt>);
 #endif // _STRUCT_GLOBAL_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
     struct traits < ::Test::DataType>
       : IDL::common_traits< ::Test::DataType>
@@ -824,7 +824,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_POINT_TRAITS_)
 #define _STRUCT_TEST_POINT_TRAITS_
     template<>
@@ -852,7 +852,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Point>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_POINT_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_TRACK_TRAITS_)
 #define _STRUCT_TEST_TRACK_TRAITS_
     template<>
@@ -880,7 +880,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Track>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_TRACK_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/union_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/union_idl_traits
 #if !defined (_UNION_TEST_DATA_TRAITS_)
 #define _UNION_TEST_DATA_TRAITS_
     template<>
@@ -908,7 +908,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Data>::__Writer<Fmt>);
 #endif // _UNION_TEST_DATA_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_S_TRAITS_)
 #define _STRUCT_TEST_S_TRAITS_
     template<>
@@ -936,7 +936,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::S>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_S_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_A_TRAITS_DECL_)
 #define _INTF_FMT_TEST_A_TRAITS_DECL_
     template <typename OStrm_>
@@ -953,7 +953,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST_A_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/union_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/union_idl_traits
 #if !defined (_UNION_TEST_U_TRAITS_)
 #define _UNION_TEST_U_TRAITS_
     template<>
@@ -981,7 +981,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::U>::__Writer<Fmt>);
 #endif // _UNION_TEST_U_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST_FOO_TRAITS_DECL_
     template <typename OStrm_>
@@ -998,7 +998,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::Foo>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST_FOO_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_A_TRAITS_DECL_)
 #define _INTF_FMT_TEST_A_TRAITS_DECL_
     template <typename OStrm_>
@@ -1023,7 +1023,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Global, OStrm_>
     {
@@ -1056,7 +1056,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::Point, OStrm_>
     {
@@ -1090,7 +1090,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::Track, OStrm_>
     {
@@ -1124,7 +1124,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/union_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/union_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::Data, OStrm_>
     {
@@ -1190,7 +1190,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::S, OStrm_>
     {
@@ -1223,7 +1223,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/union_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/union_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::U, OStrm_>
     {
@@ -1278,7 +1278,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
@@ -1308,7 +1308,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::A, OStrm_>::operator ()(
@@ -1340,7 +1340,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Global::Global (
   int32_t x)
   : x_ (std::move (x))
@@ -1352,7 +1352,7 @@ inline void ::Global::swap (::Global& s)
   std::swap (this->x_, s.x_);
 }
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Test::Point::Point (
   int32_t x,
   int32_t y)
@@ -1367,7 +1367,7 @@ inline void ::Test::Point::swap (::Test::Point& s)
   std::swap (this->y_, s.y_);
 }
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Test::Track::Track (
   int32_t id,
   ::Test::Point p)
@@ -1381,7 +1381,7 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->id_, s.id_);
   std::swap (this->p_, s.p_);
 }
-// generated from c++11/templates/cli/inl/union_inl.erb
+// generated from c++11/templates/cli/inl/union_inl
 
 inline Test::Data::u_type_::u_type_ ()
   : longData_ {}
@@ -1996,7 +1996,7 @@ inline void Test::Data::_default ()
   this->disc_ = ::Test::DataType::dtEmpty;
 }
 
-// generated from c++11/templates/cli/inl/struct_inl.erb
+// generated from c++11/templates/cli/inl/struct_inl
 inline ::Test::S::S (
   int32_t len)
   : len_ (std::move (len))
@@ -2007,7 +2007,7 @@ inline void ::Test::S::swap (::Test::S& s)
 {
   std::swap (this->len_, s.len_);
 }
-// generated from c++11/templates/cli/inl/union_inl.erb
+// generated from c++11/templates/cli/inl/union_inl
 
 inline Test::U::u_type_::u_type_ ()
   : obj_ {}
@@ -2438,7 +2438,7 @@ inline void Test::U::_clear ()
   }
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -2447,7 +2447,7 @@ operator<< (
   return IDL::traits< ::Global>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/enum_os.erb
+// generated from c++11/templates/cli/hdr/enum_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     ::Test::DataType _v)
@@ -2455,7 +2455,7 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::DataType>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -2464,7 +2464,7 @@ operator<< (
   return IDL::traits< ::Test::Point>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -2473,7 +2473,7 @@ operator<< (
   return IDL::traits< ::Test::Track>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/union_os.erb
+// generated from c++11/templates/cli/hdr/union_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::Data& _v)
@@ -2481,7 +2481,7 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Data>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/struct_os.erb
+// generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
 operator<< (
     std::ostream& strm,
@@ -2490,7 +2490,7 @@ operator<< (
   return IDL::traits< ::Test::S>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/union_os.erb
+// generated from c++11/templates/cli/hdr/union_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::U& _v)
@@ -2498,7 +2498,7 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::U>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
@@ -2506,7 +2506,7 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::A>::ref_type _v)
@@ -2514,13 +2514,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::A>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FFADGCHG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HEEGCBHA_INCLUDED__ */
 
 // -*- END -*-
