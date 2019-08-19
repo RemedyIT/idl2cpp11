@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_DAICCEAA_INCLUDED__
-#define __RIDL_TESTS_H_DAICCEAA_INCLUDED__
+#ifndef __RIDL_TESTS_H_FGDBEBED_INCLUDED__
+#define __RIDL_TESTS_H_FGDBEBED_INCLUDED__
 
 #pragma once
 
@@ -26,7 +26,7 @@
 namespace Test
 {
 
-  // generated from c++11/templates/srv/hdr/interface_pre.erb
+  // generated from c++11/templates/srv/hdr/interface_pre
   namespace POA
   {
     class Hello_srvproxy;
@@ -62,20 +62,20 @@ namespace Test
 
       virtual const std::string &_interface_repository_id () const override;
 
-      // generated from c++11/templates/srv/hdr/operation.erb
+      // generated from c++11/templates/srv/hdr/operation
       /// @copydoc test.idl::Test::Hello::get_string
       virtual
       std::string
       get_string () = 0;
 
-      // generated from c++11/templates/srv/hdr/operation.erb
+      // generated from c++11/templates/srv/hdr/operation
       /// @copydoc test.idl::Test::Hello::shutdown
       virtual
       void
       shutdown () = 0;
 
     private:
-      // generated from c++11/templates/srv/hdr/interface_post.erb
+      // generated from c++11/templates/srv/hdr/interface_post
       /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
       //@{
       Hello (const Hello&) = delete;
@@ -96,7 +96,7 @@ namespace Test
 namespace TAOX11_NAMESPACE {
   namespace CORBA {
 
-    // generated from c++11/templates/srv/hdr/interface_servant_traits.erb
+    // generated from c++11/templates/srv/hdr/interface_servant_traits
     template <>
     struct servant_traits< ::Test::Hello>
     {
@@ -123,6 +123,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_DAICCEAA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_FGDBEBED_INCLUDED__ */
 
 // -*- END -*-

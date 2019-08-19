@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EHAABDEJ_INCLUDED__
-#define __RIDL_TESTC_H_EHAABDEJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_BAJCBFAD_INCLUDED__
+#define __RIDL_TESTC_H_BAJCBFAD_INCLUDED__
 
 #pragma once
 
@@ -33,7 +33,7 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/enum.erb
+  // generated from c++11/templates/cli/hdr/enum
 
   /// @copydoc test.idl::Test::EEnum
   enum class EEnum : uint32_t
@@ -59,7 +59,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/enum_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
     struct traits < ::Test::EEnum>
       : IDL::common_traits< ::Test::EEnum>
@@ -120,7 +120,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/hdr/enum_os.erb
+// generated from c++11/templates/cli/hdr/enum_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     ::Test::EEnum _v)
@@ -128,13 +128,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::EEnum>::write_on (strm, _v);
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EHAABDEJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BAJCBFAD_INCLUDED__ */
 
 // -*- END -*-

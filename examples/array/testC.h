@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BEJIHBBJ_INCLUDED__
-#define __RIDL_TESTC_H_BEJIHBBJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_GGJAJCJE_INCLUDED__
+#define __RIDL_TESTC_H_GGJAJCJE_INCLUDED__
 
 #pragma once
 
@@ -34,21 +34,21 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::F
   typedef std::array< float, 10 > F;
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::V
   typedef std::array< std::string, 10 > V;
 
-  // generated from c++11/templates/cli/hdr/typedef.erb
+  // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::M
   typedef std::array< std::array< std::array< std::string, 3 >, 2 >, 1 > M;
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -59,7 +59,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -109,7 +109,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -124,7 +124,7 @@ namespace Test
     typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::op
     virtual
     void
@@ -133,7 +133,7 @@ namespace Test
         ::Test::V& p2,
         ::Test::M& p3);
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Foo> _shared_ptr_type;
 
@@ -165,7 +165,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits
     // Unaliased type : std::array< float, 10 >
     // MD5            : ABF04919D09ABF9A218FEAC04AA202DD
 #if !defined(_ALIAS_ABF04919D09ABF9A218FEAC04AA202DD_TRAITS_DECL_)
@@ -214,7 +214,7 @@ namespace TAOX11_NAMESPACE
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits
     // Unaliased type : std::array< std::string, 10 >
     // MD5            : 0586A70043E3B0103619F928C5EC3EA6
 #if !defined(_ALIAS_0586A70043E3B0103619F928C5EC3EA6_TRAITS_DECL_)
@@ -263,7 +263,7 @@ namespace TAOX11_NAMESPACE
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/array_idl_traits
     // Unaliased type : std::array< std::array< std::array< std::string, 3 >, 2 >, 1 >
     // MD5            : BA0460710F246455F8D8DCE031B10605
 #if !defined(_ALIAS_BA0460710F246455F8D8DCE031B10605_TRAITS_DECL_)
@@ -312,7 +312,7 @@ namespace TAOX11_NAMESPACE
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST_FOO_TRAITS_DECL_
     template <typename OStrm_>
@@ -337,7 +337,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
@@ -369,7 +369,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os
 // Unaliased type : std::array< float, 10 >
 // MD5            : ABF04919D09ABF9A218FEAC04AA202DD
 #if !defined (_ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_)
@@ -384,7 +384,7 @@ inline std::ostream& operator<< (
 
 #endif // _ALIAS_OSTREAM_ABF04919D09ABF9A218FEAC04AA202DD_DECL_
 
-// generated from c++11/templates/cli/hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os
 // Unaliased type : std::array< std::string, 10 >
 // MD5            : 0586A70043E3B0103619F928C5EC3EA6
 #if !defined (_ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_)
@@ -399,7 +399,7 @@ inline std::ostream& operator<< (
 
 #endif // _ALIAS_OSTREAM_0586A70043E3B0103619F928C5EC3EA6_DECL_
 
-// generated from c++11/templates/cli/hdr/array_os.erb
+// generated from c++11/templates/cli/hdr/array_os
 // Unaliased type : std::array< std::array< std::array< std::string, 3 >, 2 >, 1 >
 // MD5            : BA0460710F246455F8D8DCE031B10605
 #if !defined (_ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_)
@@ -414,7 +414,7 @@ inline std::ostream& operator<< (
 
 #endif // _ALIAS_OSTREAM_BA0460710F246455F8D8DCE031B10605_DECL_
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
@@ -422,13 +422,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BEJIHBBJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GGJAJCJE_INCLUDED__ */
 
 // -*- END -*-

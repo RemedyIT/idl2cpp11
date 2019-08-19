@@ -7,8 +7,8 @@
  *        http://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JAIDDGHA_INCLUDED__
-#define __RIDL_TESTC_H_JAIDDGHA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HEJDBHGC_INCLUDED__
+#define __RIDL_TESTC_H_HEJDBHGC_INCLUDED__
 
 #pragma once
 
@@ -35,7 +35,7 @@ using namespace TAOX11_NAMESPACE;
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/except_pre.erb
+  // generated from c++11/templates/cli/hdr/except_pre
   /// @copydoc test.idl::Test::FooEx
   class FooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
@@ -52,7 +52,7 @@ namespace Test
     /// Deep copy
     virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
 
-    // generated from c++11/templates/cli/hdr/except_post.erb
+    // generated from c++11/templates/cli/hdr/except_post
     FooEx ();
     virtual ~FooEx () throw () = default;
     FooEx (const FooEx&) = default;
@@ -77,7 +77,7 @@ namespace Test
     std::string message_;
   }; // class FooEx
 
-  // generated from c++11/templates/cli/hdr/except_pre.erb
+  // generated from c++11/templates/cli/hdr/except_pre
   /// @copydoc test.idl::Test::BooEx
   class BooEx final
    : public TAOX11_NAMESPACE::CORBA::UserException
@@ -94,7 +94,7 @@ namespace Test
     /// Deep copy
     virtual TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
 
-    // generated from c++11/templates/cli/hdr/except_post.erb
+    // generated from c++11/templates/cli/hdr/except_post
     BooEx ();
     virtual ~BooEx () throw () = default;
     BooEx (const BooEx&) = default;
@@ -120,7 +120,7 @@ namespace Test
 
   // generated from StubHeaderWriter#enter_interface
 
-  // generated from c++11/templates/cli/hdr/interface_fwd.erb
+  // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST_FOO_FWD_)
 #define _INTF_TEST_FOO_FWD_
   class Foo;
@@ -131,7 +131,7 @@ namespace Test
 } // namespace Test
 // entering Base::CodeWriter#at_global_scope
 
-// generated from c++11/templates/cli/hdr/interface_object_traits.erb
+// generated from c++11/templates/cli/hdr/interface_object_traits
 #if !defined (_INTF_TEST_FOO_TRAITS_DECL_)
 #define _INTF_TEST_FOO_TRAITS_DECL_
 namespace TAOX11_NAMESPACE
@@ -181,7 +181,7 @@ namespace TAOX11_NAMESPACE
 namespace Test
 {
 
-  // generated from c++11/templates/cli/hdr/interface_pre.erb
+  // generated from c++11/templates/cli/hdr/interface_pre
   /// @copydoc test.idl::Test::Foo
   class Foo
     : public virtual TAOX11_NAMESPACE::CORBA::Object
@@ -196,19 +196,19 @@ namespace Test
     typedef TAOX11_IDL::traits< Foo>::ref_type _ref_type;
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::do_it
     virtual
     void
     do_it ();
 
-    // generated from c++11/templates/cli/hdr/attribute.erb
+    // generated from c++11/templates/cli/hdr/attribute
     /// @copydoc test.idl::Test::Foo::a_number
     virtual
     int32_t
     a_number ();
 
-    // generated from c++11/templates/cli/hdr/attribute.erb
+    // generated from c++11/templates/cli/hdr/attribute
     /// @copydoc test.idl::Test::Foo::a_string
     //@{
     virtual
@@ -221,13 +221,13 @@ namespace Test
         const std::string& _v);
     //@}
 
-    // generated from c++11/templates/cli/hdr/operation.erb
+    // generated from c++11/templates/cli/hdr/operation
     /// @copydoc test.idl::Test::Foo::shutdown
     virtual
     void
     shutdown ();
 
-    // generated from c++11/templates/cli/hdr/interface_post.erb
+    // generated from c++11/templates/cli/hdr/interface_post
   protected:
     typedef std::shared_ptr<Foo> _shared_ptr_type;
 
@@ -259,7 +259,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_FOOEX_TRAITS_)
 #define _STRUCT_TEST_FOOEX_TRAITS_
     template<>
@@ -287,7 +287,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::FooEx>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_FOOEX_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST_BOOEX_TRAITS_)
 #define _STRUCT_TEST_BOOEX_TRAITS_
     template<>
@@ -315,7 +315,7 @@ namespace TAOX11_NAMESPACE
         IDL::traits< ::Test::BooEx>::__Writer<Fmt>);
 #endif // _STRUCT_TEST_BOOEX_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST_FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST_FOO_TRAITS_DECL_
     template <typename OStrm_>
@@ -340,7 +340,7 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::FooEx, OStrm_>
     {
@@ -373,7 +373,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
     struct formatter< ::Test::BooEx, OStrm_>
     {
@@ -406,7 +406,7 @@ namespace TAOX11_NAMESPACE
           formatter_t ());
     }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def.erb
+    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
     formatter< ::Test::Foo, OStrm_>::operator ()(
@@ -438,7 +438,7 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
-// generated from c++11/templates/cli/inl/except_inl.erb
+// generated from c++11/templates/cli/inl/except_inl
 inline Test::FooEx::FooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/FooEx:1.0", "FooEx")
 {
@@ -451,7 +451,7 @@ inline Test::FooEx::FooEx (
 {
 }
 
-// generated from c++11/templates/cli/inl/except_inl.erb
+// generated from c++11/templates/cli/inl/except_inl
 inline Test::BooEx::BooEx ()
   : TAOX11_NAMESPACE::CORBA::UserException ("IDL:Test/BooEx:1.0", "BooEx")
 {
@@ -464,7 +464,7 @@ inline Test::BooEx::BooEx (
 {
 }
 
-// generated from c++11/templates/cli/hdr/interface_os.erb
+// generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
@@ -472,13 +472,13 @@ inline std::ostream& operator<< (
   return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
 }
 
-// generated from c++11/templates/cli/hdr/post.erb
+// generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
 #endif
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JAIDDGHA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HEJDBHGC_INCLUDED__ */
 
 // -*- END -*-
