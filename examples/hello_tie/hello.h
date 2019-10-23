@@ -5,7 +5,6 @@
  * @brief  CORBA C++11 Test::Hello implementation header
  *
  * @copyright Copyright (c) Remedy IT Expertise BV
- * Chamber of commerce Rotterdam nr.276339, The Netherlands
  */
 #ifndef HELLO_H
 #define HELLO_H
