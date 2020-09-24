@@ -12,5 +12,5 @@
 class Foo_impl : public virtual IDL::traits<Test::Foo>::base_type
 {
 public:
-  virtual void do_something (void) override;
+  void do_something (void) override;
 };
