@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EBIGDBCF_INCLUDED__
-#define __RIDL_TESTC_H_EBIGDBCF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CJHBCIAE_INCLUDED__
+#define __RIDL_TESTC_H_CJHBCIAE_INCLUDED__
 
 #pragma once
 
@@ -120,7 +120,7 @@ namespace Test
   protected:
     typedef std::shared_ptr<Foo> _shared_ptr_type;
 
-#if defined (_MSC_VER) && (_MSC_VER < 1920)
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
     /// Default constructor
     Foo () {};
 #else
@@ -231,7 +231,7 @@ namespace Test
   protected:
     typedef std::shared_ptr<Bar> _shared_ptr_type;
 
-#if defined (_MSC_VER) && (_MSC_VER < 1920)
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
     /// Default constructor
     Bar () {};
 #else
@@ -389,6 +389,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EBIGDBCF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CJHBCIAE_INCLUDED__ */
 
 // -*- END -*-

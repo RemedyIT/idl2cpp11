@@ -56,7 +56,6 @@ namespace Hello_Receiver_Impl
     /** @name Operations from ::Hello::CCM_MyFoo */
     //@{
 
-    virtual
     std::string
     foo (
         const std::string& in_str,
@@ -66,20 +65,16 @@ namespace Hello_Receiver_Impl
     /** @name Attributes from ::Hello::CCM_MyFoo */
     //@{
 
-    virtual
     int16_t
     foo_attrib () override;
 
-    virtual
     void
     foo_attrib (
         int16_t foo_attrib) override;
 
-    virtual
     int16_t
     foo_excep () override;
 
-    virtual
     void
     foo_excep (
         int16_t foo_excep) override;

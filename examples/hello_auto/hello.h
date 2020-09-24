@@ -21,7 +21,7 @@ public:
   Hello (IDL::traits<CORBA::ORB>::ref_type orb);
 
   // = The skeleton methods
-  virtual std::string get_string (void) override;
+  std::string get_string (void) override;
 
 private:
   /// Use an ORB reference to convert strings to objects and shutdown
