@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_BJADEEFA_INCLUDED__
-#define __RIDL_TESTS_H_BJADEEFA_INCLUDED__
+#ifndef __RIDL_TESTS_H_IFFFHEFH_INCLUDED__
+#define __RIDL_TESTS_H_IFFFHEFH_INCLUDED__
 
 #pragma once
 
@@ -186,25 +186,32 @@ namespace POA
 {
   class B
     : public virtual ::POA::A1
-    , public virtual TAOX11_CORBA::valuetype_traits< B>::base_type
+    , public virtual TAOX11_CORBA::valuetype_traits<B>::base_type
   {
   public:
     /// @name Member types
     //@{
-    typedef TAOX11_CORBA::servant_traits< B>    _traits_type;
-    typedef TAOX11_CORBA::servant_reference< B> _ref_type;
+    typedef TAOX11_CORBA::servant_traits<B>    _traits_type;
+    typedef TAOX11_CORBA::servant_reference<B> _ref_type;
     //@}
 
   protected:
     typedef std::shared_ptr<B> _shared_ptr_type;
-    /// Constructor
-    B ();
-    /// Destructor
+    B () = default;
     virtual ~B () = default;
 
     template <typename T> friend class TAOX11_CORBA::servant_reference;
 
     TAOX11_NAMESPACE::PortableServer::Servant::_shared_ptr_type _lock_shared ();
+
+  private:
+    /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
+    //@{
+    B (const B&) = delete;
+    B (B&&) = delete;
+    B& operator= (const B&) = delete;
+    B& operator= (B&&) = delete;
+    //@}
   };
 } // namespace POA
 
@@ -302,6 +309,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_BJADEEFA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_IFFFHEFH_INCLUDED__ */
 
 // -*- END -*-
