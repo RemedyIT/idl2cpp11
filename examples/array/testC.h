@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDCGBBEG_INCLUDED__
-#define __RIDL_TESTC_H_EDCGBBEG_INCLUDED__
+#ifndef __RIDL_TESTC_H_ECADBADF_INCLUDED__
+#define __RIDL_TESTC_H_ECADBADF_INCLUDED__
 
 #pragma once
 
@@ -35,15 +35,15 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::F
-  typedef std::array< float, 10> F;
+  using F = std::array< float, 10>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::V
-  typedef std::array< std::string, 10> V;
+  using V = std::array< std::string, 10>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::M
-  typedef std::array< std::array< std::array< std::string, 3>, 2>, 1> M;
+  using M = std::array< std::array< std::array< std::string, 3>, 2>, 1>;
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -52,7 +52,7 @@ namespace Test
 #define _INTF_TEST__FOO_FWD_
   class Foo;
   class Foo_proxy;
-  typedef Foo_proxy* Foo_proxy_ptr;
+  using Foo_proxy_ptr = Foo_proxy*;
 #endif // !_INTF_TEST__FOO_FWD_
   // generated from Base::CodeWriter#at_global_scope
 } // namespace Test
@@ -84,10 +84,10 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
-      typedef std::false_type is_local;
+      using is_local = std::false_type;
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as abstract
-      typedef std::false_type is_abstract;
+      using is_abstract = std::false_type;
 
       template <typename OStrm_, typename Formatter = formatter< ::Test::Foo, OStrm_>>
       static inline OStrm_& write_on(
@@ -118,9 +118,9 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_IDL::traits<Foo>           _traits_type;
+    using _traits_type = TAOX11_IDL::traits<Foo>;
     /// Strong reference type
-    typedef TAOX11_IDL::traits<Foo>::ref_type _ref_type;
+    using _ref_type = TAOX11_IDL::traits<Foo>::ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation
@@ -133,7 +133,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post
   protected:
-    typedef std::shared_ptr<Foo> _shared_ptr_type;
+    using _shared_ptr_type = std::shared_ptr<Foo>;
 
     template <typename _Tp1, typename, typename ...Args>
     friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -174,10 +174,10 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits< ::Test::F>
     {
       /// IDL::traits<> for the element of the array
-      typedef IDL::traits< float> element_traits;
+      using element_traits = IDL::traits< float>;
       /// std::integral_constant type of value_type uint32_t
       /// indicating the number of dimensions of the array
-      typedef std::integral_constant<uint32_t, 1> dimensions;
+      using dimensions = std::integral_constant<uint32_t, 1>;
 
       template <typename OStrm_,
                 typename Formatter = formatter< ::Test::F, OStrm_>
@@ -198,13 +198,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::F>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::F>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::F, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::F>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::F, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::F>::write_on (
           os, w.val_,
           formatter_t ());
@@ -223,10 +223,10 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits< ::Test::V>
     {
       /// IDL::traits<> for the element of the array
-      typedef IDL::traits< std::string> element_traits;
+      using element_traits = IDL::traits< std::string>;
       /// std::integral_constant type of value_type uint32_t
       /// indicating the number of dimensions of the array
-      typedef std::integral_constant<uint32_t, 1> dimensions;
+      using dimensions = std::integral_constant<uint32_t, 1>;
 
       template <typename OStrm_,
                 typename Formatter = formatter< ::Test::V, OStrm_>
@@ -247,13 +247,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::V>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::V>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::V, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::V>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::V, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::V>::write_on (
           os, w.val_,
           formatter_t ());
@@ -272,10 +272,10 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits< ::Test::M>
     {
       /// IDL::traits<> for the element of the array
-      typedef IDL::traits< std::string> element_traits;
+      using element_traits = IDL::traits< std::string>;
       /// std::integral_constant type of value_type uint32_t
       /// indicating the number of dimensions of the array
-      typedef std::integral_constant<uint32_t, 3> dimensions;
+      using dimensions = std::integral_constant<uint32_t, 3>;
 
       template <typename OStrm_,
                 typename Formatter = formatter< ::Test::M, OStrm_>
@@ -296,13 +296,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::M>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::M>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::M, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::M>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::M, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::M>::write_on (
           os, w.val_,
           formatter_t ());
@@ -353,13 +353,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::Foo>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::Foo>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::Foo, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::Foo>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::Foo, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::Foo>::write_on (
           os, w.val_,
           formatter_t ());
@@ -427,6 +427,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDCGBBEG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_ECADBADF_INCLUDED__ */
 
 // -*- END -*-

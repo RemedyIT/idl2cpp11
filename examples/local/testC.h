@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CJHBCIAE_INCLUDED__
-#define __RIDL_TESTC_H_CJHBCIAE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IGHAFIDB_INCLUDED__
+#define __RIDL_TESTC_H_IGHAFIDB_INCLUDED__
 
 #pragma once
 
@@ -66,13 +66,13 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
-      typedef std::true_type is_local;
+      using is_local = std::true_type;
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as abstract
-      typedef std::false_type is_abstract;
+      using is_abstract = std::false_type;
       /// Trait for the type from which a local implementation needs
       /// to be derived from
-      typedef ::Test::Foo base_type;
+      using base_type = ::Test::Foo;
 
       template <typename OStrm_, typename Formatter = formatter< ::Test::Foo, OStrm_>>
       static inline OStrm_& write_on(
@@ -103,9 +103,9 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_IDL::traits<Foo>           _traits_type;
+    using _traits_type = TAOX11_IDL::traits<Foo>;
     /// Strong reference type
-    typedef TAOX11_IDL::traits<Foo>::ref_type _ref_type;
+    using _ref_type = TAOX11_IDL::traits<Foo>::ref_type;
     //@}
 
     /// Determine if we are of the type specified by the @a logical_type_id.
@@ -118,7 +118,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post
   protected:
-    typedef std::shared_ptr<Foo> _shared_ptr_type;
+    using _shared_ptr_type = std::shared_ptr<Foo>;
 
 #if defined (_MSC_VER) && (_MSC_VER < 1930)
     /// Default constructor
@@ -176,13 +176,13 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
-      typedef std::true_type is_local;
+      using is_local = std::true_type;
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as abstract
-      typedef std::false_type is_abstract;
+      using is_abstract = std::false_type;
       /// Trait for the type from which a local implementation needs
       /// to be derived from
-      typedef ::Test::Bar base_type;
+      using base_type = ::Test::Bar;
 
       template <typename OStrm_, typename Formatter = formatter< ::Test::Bar, OStrm_>>
       static inline OStrm_& write_on(
@@ -213,9 +213,9 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_IDL::traits<Bar>           _traits_type;
+    using _traits_type = TAOX11_IDL::traits<Bar>;
     /// Strong reference type
-    typedef TAOX11_IDL::traits<Bar>::ref_type _ref_type;
+    using _ref_type = TAOX11_IDL::traits<Bar>::ref_type;
     //@}
 
     /// Determine if we are of the type specified by the @a logical_type_id.
@@ -229,7 +229,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post
   protected:
-    typedef std::shared_ptr<Bar> _shared_ptr_type;
+    using _shared_ptr_type = std::shared_ptr<Bar>;
 
 #if defined (_MSC_VER) && (_MSC_VER < 1930)
     /// Default constructor
@@ -322,13 +322,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::Foo>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::Foo>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::Foo, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::Foo>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::Foo, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::Foo>::write_on (
           os, w.val_,
           formatter_t ());
@@ -352,13 +352,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::Bar>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::Bar>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::Bar, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::Bar>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::Bar, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::Bar>::write_on (
           os, w.val_,
           formatter_t ());
@@ -389,6 +389,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CJHBCIAE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IGHAFIDB_INCLUDED__ */
 
 // -*- END -*-

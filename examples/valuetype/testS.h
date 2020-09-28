@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_IFFFHEFH_INCLUDED__
-#define __RIDL_TESTS_H_IFFFHEFH_INCLUDED__
+#ifndef __RIDL_TESTS_H_DIJFIBCH_INCLUDED__
+#define __RIDL_TESTS_H_DIJFIBCH_INCLUDED__
 
 #pragma once
 
@@ -24,7 +24,7 @@
 namespace POA
 {
   class A_srvproxy;
-  typedef A_srvproxy* A_srvproxy_ptr;
+  using A_srvproxy_ptr = A_srvproxy*;
 
   class A
     : public virtual TAOX11_NAMESPACE::PortableServer::Servant
@@ -32,15 +32,12 @@ namespace POA
   public:
     /// @name Member types
     //@{
-    typedef TAOX11_CORBA::servant_traits< A>    _traits_type;
-    typedef TAOX11_CORBA::servant_reference< A> _ref_type;
+    using _traits_type = TAOX11_CORBA::servant_traits<A>;
+    using _ref_type = TAOX11_CORBA::servant_reference<A>;
     //@}
 
   protected:
-    /// Constructor
     explicit A (bool inherited = false);
-
-    /// Destructor
     virtual ~A ();
 
     Servant_proxy_ptr get_proxy () const override;
@@ -77,7 +74,7 @@ namespace POA
 namespace POA
 {
   class X_srvproxy;
-  typedef X_srvproxy* X_srvproxy_ptr;
+  using X_srvproxy_ptr = X_srvproxy*;
 
   class X
     : public virtual TAOX11_NAMESPACE::PortableServer::Servant
@@ -85,15 +82,12 @@ namespace POA
   public:
     /// @name Member types
     //@{
-    typedef TAOX11_CORBA::servant_traits< X>    _traits_type;
-    typedef TAOX11_CORBA::servant_reference< X> _ref_type;
+    using _traits_type = TAOX11_CORBA::servant_traits<X>;
+    using _ref_type = TAOX11_CORBA::servant_reference<X>;
     //@}
 
   protected:
-    /// Constructor
     explicit X (bool inherited = false);
-
-    /// Destructor
     virtual ~X ();
 
     Servant_proxy_ptr get_proxy () const override;
@@ -131,7 +125,7 @@ namespace POA
 namespace POA
 {
   class A1_srvproxy;
-  typedef A1_srvproxy* A1_srvproxy_ptr;
+  using A1_srvproxy_ptr = A1_srvproxy*;
 
   class A1
     : public virtual TAOX11_NAMESPACE::PortableServer::Servant
@@ -139,15 +133,12 @@ namespace POA
   public:
     /// @name Member types
     //@{
-    typedef TAOX11_CORBA::servant_traits< A1>    _traits_type;
-    typedef TAOX11_CORBA::servant_reference< A1> _ref_type;
+    using _traits_type = TAOX11_CORBA::servant_traits<A1>;
+    using _ref_type = TAOX11_CORBA::servant_reference<A1>;
     //@}
 
   protected:
-    /// Constructor
     explicit A1 (bool inherited = false);
-
-    /// Destructor
     virtual ~A1 ();
 
     Servant_proxy_ptr get_proxy () const override;
@@ -191,12 +182,12 @@ namespace POA
   public:
     /// @name Member types
     //@{
-    typedef TAOX11_CORBA::servant_traits<B>    _traits_type;
-    typedef TAOX11_CORBA::servant_reference<B> _ref_type;
+    using _traits_type = TAOX11_CORBA::servant_traits<B>;
+    using _ref_type = TAOX11_CORBA::servant_reference<B>;
     //@}
 
   protected:
-    typedef std::shared_ptr<B> _shared_ptr_type;
+    using _shared_ptr_type = std::shared_ptr<B>;
     B () = default;
     virtual ~B () = default;
 
@@ -225,11 +216,11 @@ namespace TAOX11_NAMESPACE {
     {
       /// Base trait type from which the servant implementations has to be derived
       /// from
-      typedef ::POA::A base_type;
+      using base_type = ::POA::A;
       /// Strong reference type
-      typedef TAOX11_CORBA::servant_reference< ::POA::A> ref_type;
+      using ref_type = TAOX11_CORBA::servant_reference< ::POA::A>;
       /// Weak reference type
-      typedef TAOX11_CORBA::weak_servant_reference< ::POA::A> weak_ref_type;
+      using weak_ref_type = TAOX11_CORBA::weak_servant_reference< ::POA::A>;
       /// Try to narrow the provided reference @a base to a ::A
       /// reference. Returns a new reference when this succeeds, a nil reference
       /// when this fails. Narrowing a nil reference will return a nil reference.
@@ -247,11 +238,11 @@ namespace TAOX11_NAMESPACE {
     {
       /// Base trait type from which the servant implementations has to be derived
       /// from
-      typedef ::POA::X base_type;
+      using base_type = ::POA::X;
       /// Strong reference type
-      typedef TAOX11_CORBA::servant_reference< ::POA::X> ref_type;
+      using ref_type = TAOX11_CORBA::servant_reference< ::POA::X>;
       /// Weak reference type
-      typedef TAOX11_CORBA::weak_servant_reference< ::POA::X> weak_ref_type;
+      using weak_ref_type = TAOX11_CORBA::weak_servant_reference< ::POA::X>;
       /// Try to narrow the provided reference @a base to a ::X
       /// reference. Returns a new reference when this succeeds, a nil reference
       /// when this fails. Narrowing a nil reference will return a nil reference.
@@ -269,11 +260,11 @@ namespace TAOX11_NAMESPACE {
     {
       /// Base trait type from which the servant implementations has to be derived
       /// from
-      typedef ::POA::A1 base_type;
+      using base_type = ::POA::A1;
       /// Strong reference type
-      typedef TAOX11_CORBA::servant_reference< ::POA::A1> ref_type;
+      using ref_type = TAOX11_CORBA::servant_reference< ::POA::A1>;
       /// Weak reference type
-      typedef TAOX11_CORBA::weak_servant_reference< ::POA::A1> weak_ref_type;
+      using weak_ref_type = TAOX11_CORBA::weak_servant_reference< ::POA::A1>;
       /// Try to narrow the provided reference @a base to a ::A1
       /// reference. Returns a new reference when this succeeds, a nil reference
       /// when this fails. Narrowing a nil reference will return a nil reference.
@@ -291,11 +282,11 @@ namespace TAOX11_NAMESPACE {
     {
       /// Base trait type from which the servant implementations has to be derived
       /// from
-      typedef ::POA::B base_type;
+      using base_type = ::POA::B;
       /// Strong reference type
-      typedef TAOX11_CORBA::servant_reference< ::POA::B> ref_type;
+      using ref_type = TAOX11_CORBA::servant_reference< ::POA::B>;
       /// Weak reference type
-      typedef TAOX11_CORBA::weak_servant_reference< ::POA::B> weak_ref_type;
+      using weak_ref_type = TAOX11_CORBA::weak_servant_reference< ::POA::B>;
       /// Try to narrow the provided reference @a base to a ::B
       /// reference. Returns a new reference when this succeeds, a nil reference
       /// when this fails. Narrowing a nil reference will return a nil reference.
@@ -309,6 +300,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_IFFFHEFH_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_DIJFIBCH_INCLUDED__ */
 
 // -*- END -*-
