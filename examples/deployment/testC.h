@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FDCJBEJA_INCLUDED__
-#define __RIDL_TESTC_H_FDCJBEJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EBEECJJC_INCLUDED__
+#define __RIDL_TESTC_H_EBEECJJC_INCLUDED__
 
 #pragma once
 
@@ -87,7 +87,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::Properties
-  typedef std::vector< Property> Properties;
+  using Properties = std::vector< Property>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -153,7 +153,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::Requirements
-  typedef std::vector< Requirement> Requirements;
+  using Requirements = std::vector< Requirement>;
 
   // generated from c++11/templates/cli/hdr/enum
 
@@ -247,7 +247,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::SatisfierProperties
-  typedef std::vector< SatisfierProperty> SatisfierProperties;
+  using SatisfierProperties = std::vector< SatisfierProperty>;
 } // namespace Deployment
 
 
@@ -399,7 +399,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentPortDescriptions
-  typedef std::vector< ComponentPortDescription> ComponentPortDescriptions;
+  using ComponentPortDescriptions = std::vector< ComponentPortDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -454,7 +454,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentPropertyDescriptions
-  typedef std::vector< ComponentPropertyDescription> ComponentPropertyDescriptions;
+  using ComponentPropertyDescriptions = std::vector< ComponentPropertyDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -662,7 +662,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::MonolithicDeploymentDescriptions
-  typedef std::vector< MonolithicDeploymentDescription> MonolithicDeploymentDescriptions;
+  using MonolithicDeploymentDescriptions = std::vector< MonolithicDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/enum
 
@@ -755,7 +755,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescriptions
-  typedef std::vector< InstanceResourceDeploymentDescription> InstanceResourceDeploymentDescriptions;
+  using InstanceResourceDeploymentDescriptions = std::vector< InstanceResourceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -860,7 +860,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::InstanceDeploymentDescriptions
-  typedef std::vector< InstanceDeploymentDescription> InstanceDeploymentDescriptions;
+  using InstanceDeploymentDescriptions = std::vector< InstanceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -906,7 +906,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoints
-  typedef std::vector< ComponentExternalPortEndpoint> ComponentExternalPortEndpoints;
+  using ComponentExternalPortEndpoints = std::vector< ComponentExternalPortEndpoint>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -979,7 +979,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoints
-  typedef std::vector< PlanSubcomponentPortEndpoint> PlanSubcomponentPortEndpoints;
+  using PlanSubcomponentPortEndpoints = std::vector< PlanSubcomponentPortEndpoint>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1054,7 +1054,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ExternalReferenceEndpoints
-  typedef std::vector< ExternalReferenceEndpoint> ExternalReferenceEndpoints;
+  using ExternalReferenceEndpoints = std::vector< ExternalReferenceEndpoint>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1130,7 +1130,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescriptions
-  typedef std::vector< ConnectionResourceDeploymentDescription> ConnectionResourceDeploymentDescriptions;
+  using ConnectionResourceDeploymentDescriptions = std::vector< ConnectionResourceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1236,7 +1236,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanConnectionDescriptions
-  typedef std::vector< PlanConnectionDescription> PlanConnectionDescriptions;
+  using PlanConnectionDescriptions = std::vector< PlanConnectionDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1291,7 +1291,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReferences
-  typedef std::vector< PlanSubcomponentPropertyReference> PlanSubcomponentPropertyReferences;
+  using PlanSubcomponentPropertyReferences = std::vector< PlanSubcomponentPropertyReference>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1367,7 +1367,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanPropertyMappings
-  typedef std::vector< PlanPropertyMapping> PlanPropertyMappings;
+  using PlanPropertyMappings = std::vector< PlanPropertyMapping>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1413,7 +1413,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ImplementationDependencies
-  typedef std::vector< ImplementationDependency> ImplementationDependencies;
+  using ImplementationDependencies = std::vector< ImplementationDependency>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1479,7 +1479,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ResourceDeploymentDescriptions
-  typedef std::vector< ResourceDeploymentDescription> ResourceDeploymentDescriptions;
+  using ResourceDeploymentDescriptions = std::vector< ResourceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1585,7 +1585,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ArtifactDeploymentDescriptions
-  typedef std::vector< ArtifactDeploymentDescription> ArtifactDeploymentDescriptions;
+  using ArtifactDeploymentDescriptions = std::vector< ArtifactDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/enum
 
@@ -1654,7 +1654,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanLocalities
-  typedef std::vector< PlanLocality> PlanLocalities;
+  using PlanLocalities = std::vector< PlanLocality>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1869,11 +1869,11 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentPackageReferences
-  typedef std::vector< ComponentPackageReference> ComponentPackageReferences;
+  using ComponentPackageReferences = std::vector< ComponentPackageReference>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ResourceUsageKinds
-  typedef std::vector< ::Deployment::ResourceUsageKind> ResourceUsageKinds;
+  using ResourceUsageKinds = std::vector< ::Deployment::ResourceUsageKind>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -1969,7 +1969,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ImplementationRequirements
-  typedef std::vector< ImplementationRequirement> ImplementationRequirements;
+  using ImplementationRequirements = std::vector< ImplementationRequirement>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -2035,7 +2035,7 @@ namespace Deployment
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::Capabilities
-  typedef std::vector< Capability> Capabilities;
+  using Capabilities = std::vector< Capability>;
 } // namespace Deployment
 
 
@@ -2085,9 +2085,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::Property> element_traits;
+      using element_traits = IDL::traits< ::Deployment::Property>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2106,13 +2106,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::Properties>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::Properties>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::Properties, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::Properties>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::Properties, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::Properties>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2160,9 +2160,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::Requirement> element_traits;
+      using element_traits = IDL::traits< ::Deployment::Requirement>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2181,13 +2181,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::Requirements>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::Requirements>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::Requirements, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::Requirements>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::Requirements, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::Requirements>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2237,13 +2237,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::SatisfierPropertyKind, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::SatisfierPropertyKind, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::SatisfierPropertyKind>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2289,9 +2289,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::SatisfierProperty> element_traits;
+      using element_traits = IDL::traits< ::Deployment::SatisfierProperty>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2310,13 +2310,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::SatisfierProperties, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::SatisfierProperties, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::SatisfierProperties>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2368,13 +2368,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::CCMComponentPortKind, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::CCMComponentPortKind, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::CCMComponentPortKind>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2420,9 +2420,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ComponentPortDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ComponentPortDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2441,13 +2441,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentPortDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentPortDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentPortDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2495,9 +2495,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ComponentPropertyDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ComponentPropertyDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2516,13 +2516,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentPropertyDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentPropertyDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2598,9 +2598,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::MonolithicDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2619,13 +2619,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::MonolithicDeploymentDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::MonolithicDeploymentDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2674,13 +2674,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ResourceUsageKind, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ResourceUsageKind, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ResourceUsageKind>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2726,9 +2726,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2747,13 +2747,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::InstanceResourceDeploymentDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::InstanceResourceDeploymentDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2801,9 +2801,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::InstanceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2822,13 +2822,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::InstanceDeploymentDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::InstanceDeploymentDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2876,9 +2876,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ComponentExternalPortEndpoint>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2897,13 +2897,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentExternalPortEndpoints, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentExternalPortEndpoints, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write_on (
           os, w.val_,
           formatter_t ());
@@ -2951,9 +2951,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint> element_traits;
+      using element_traits = IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2972,13 +2972,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanSubcomponentPortEndpoints, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanSubcomponentPortEndpoints, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3026,9 +3026,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ExternalReferenceEndpoint>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3047,13 +3047,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ExternalReferenceEndpoints, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ExternalReferenceEndpoints, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3101,9 +3101,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3122,13 +3122,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ConnectionResourceDeploymentDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ConnectionResourceDeploymentDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3176,9 +3176,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::PlanConnectionDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::PlanConnectionDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3197,13 +3197,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanConnectionDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanConnectionDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanConnectionDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3251,9 +3251,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference> element_traits;
+      using element_traits = IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3272,13 +3272,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanSubcomponentPropertyReferences, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanSubcomponentPropertyReferences, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3326,9 +3326,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::PlanPropertyMapping> element_traits;
+      using element_traits = IDL::traits< ::Deployment::PlanPropertyMapping>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3347,13 +3347,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanPropertyMappings, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanPropertyMappings, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanPropertyMappings>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3401,9 +3401,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ImplementationDependency> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ImplementationDependency>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3422,13 +3422,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ImplementationDependencies, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ImplementationDependencies, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ImplementationDependencies>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3476,9 +3476,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ResourceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3497,13 +3497,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ResourceDeploymentDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ResourceDeploymentDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3551,9 +3551,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ArtifactDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3572,13 +3572,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ArtifactDeploymentDescriptions, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ArtifactDeploymentDescriptions, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3625,13 +3625,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanLocalityKind, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanLocalityKind, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanLocalityKind>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3677,9 +3677,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::PlanLocality> element_traits;
+      using element_traits = IDL::traits< ::Deployment::PlanLocality>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3698,13 +3698,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanLocalities, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanLocalities, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanLocalities>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3780,9 +3780,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ComponentPackageReference> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ComponentPackageReference>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3801,13 +3801,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentPackageReferences, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentPackageReferences, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentPackageReferences>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3827,9 +3827,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ResourceUsageKind> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ResourceUsageKind>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3848,13 +3848,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ResourceUsageKinds, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ResourceUsageKinds, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ResourceUsageKinds>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3902,9 +3902,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::ImplementationRequirement> element_traits;
+      using element_traits = IDL::traits< ::Deployment::ImplementationRequirement>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3923,13 +3923,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ImplementationRequirements, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ImplementationRequirements, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ImplementationRequirements>::write_on (
           os, w.val_,
           formatter_t ());
@@ -3977,9 +3977,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< ::Deployment::Capability> element_traits;
+      using element_traits = IDL::traits< ::Deployment::Capability>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3998,13 +3998,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::Capabilities, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::Capabilities, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::Capabilities>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4042,13 +4042,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::Property>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::Property>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::Property, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::Property>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::Property, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::Property>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4077,13 +4077,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::Requirement>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::Requirement>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::Requirement, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::Requirement>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::Requirement, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::Requirement>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4113,13 +4113,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::SatisfierProperty, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::SatisfierProperty, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::SatisfierProperty>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4154,13 +4154,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentPortDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentPortDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentPortDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4188,13 +4188,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentPropertyDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentPropertyDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentPropertyDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4229,13 +4229,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentInterfaceDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4266,13 +4266,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::MonolithicDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4302,13 +4302,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4341,13 +4341,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::InstanceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4374,13 +4374,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4410,13 +4410,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4446,13 +4446,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ExternalReferenceEndpoint>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4482,13 +4482,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4521,13 +4521,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanConnectionDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanConnectionDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanConnectionDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4555,13 +4555,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4591,13 +4591,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanPropertyMapping, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanPropertyMapping, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanPropertyMapping>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4624,13 +4624,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ImplementationDependency, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ImplementationDependency, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ImplementationDependency>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4659,13 +4659,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ResourceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4698,13 +4698,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ArtifactDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4732,13 +4732,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::PlanLocality, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::PlanLocality, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::PlanLocality>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4775,13 +4775,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::DeploymentPlan, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::DeploymentPlan, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::DeploymentPlan>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4810,13 +4810,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ComponentPackageReference, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ComponentPackageReference, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ComponentPackageReference>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4848,13 +4848,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::ImplementationRequirement, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::ImplementationRequirement, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::ImplementationRequirement>::write_on (
           os, w.val_,
           formatter_t ());
@@ -4883,13 +4883,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Deployment::Capability>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Deployment::Capability>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Deployment::Capability, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Deployment::Capability>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Deployment::Capability, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Deployment::Capability>::write_on (
           os, w.val_,
           formatter_t ());
@@ -6034,6 +6034,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FDCJBEJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EBEECJJC_INCLUDED__ */
 
 // -*- END -*-

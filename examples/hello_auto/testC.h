@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EDCCAJAC_INCLUDED__
-#define __RIDL_TESTC_H_EDCCAJAC_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIDHHIFH_INCLUDED__
+#define __RIDL_TESTC_H_CIDHHIFH_INCLUDED__
 
 #pragma once
 
@@ -40,7 +40,7 @@ namespace Test
 #define _INTF_TEST__HELLO_FWD_
   class Hello;
   class Hello_proxy;
-  typedef Hello_proxy* Hello_proxy_ptr;
+  using Hello_proxy_ptr = Hello_proxy*;
 #endif // !_INTF_TEST__HELLO_FWD_
   // generated from Base::CodeWriter#at_global_scope
 } // namespace Test
@@ -72,10 +72,10 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
-      typedef std::false_type is_local;
+      using is_local = std::false_type;
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as abstract
-      typedef std::false_type is_abstract;
+      using is_abstract = std::false_type;
 
       template <typename OStrm_, typename Formatter = formatter< ::Test::Hello, OStrm_>>
       static inline OStrm_& write_on(
@@ -106,9 +106,9 @@ namespace Test
 
     /// @name Member types
     //@{
-    typedef TAOX11_IDL::traits<Hello>           _traits_type;
+    using _traits_type = TAOX11_IDL::traits<Hello>;
     /// Strong reference type
-    typedef TAOX11_IDL::traits<Hello>::ref_type _ref_type;
+    using _ref_type = TAOX11_IDL::traits<Hello>::ref_type;
     //@}
 
     // generated from c++11/templates/cli/hdr/operation
@@ -118,7 +118,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/interface_post
   protected:
-    typedef std::shared_ptr<Hello> _shared_ptr_type;
+    using _shared_ptr_type = std::shared_ptr<Hello>;
 
     template <typename _Tp1, typename, typename ...Args>
     friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -191,13 +191,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::Hello>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::Hello>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::Hello, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::Hello>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::Hello, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::Hello>::write_on (
           os, w.val_,
           formatter_t ());
@@ -220,6 +220,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EDCCAJAC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIDHHIFH_INCLUDED__ */
 
 // -*- END -*-

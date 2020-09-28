@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_CFBBFGBA_INCLUDED__
-#define __RIDL_TESTS_H_CFBBFGBA_INCLUDED__
+#ifndef __RIDL_TESTS_H_EAGAAGIA_INCLUDED__
+#define __RIDL_TESTS_H_EAGAAGIA_INCLUDED__
 
 #pragma once
 
@@ -28,7 +28,7 @@ namespace Test
   namespace POA
   {
     class Hello_srvproxy;
-    typedef Hello_srvproxy* Hello_srvproxy_ptr;
+    using Hello_srvproxy_ptr = Hello_srvproxy*;
 
     class Hello
       : public virtual TAOX11_NAMESPACE::PortableServer::Servant
@@ -36,15 +36,12 @@ namespace Test
     public:
       /// @name Member types
       //@{
-      typedef TAOX11_CORBA::servant_traits< Hello>    _traits_type;
-      typedef TAOX11_CORBA::servant_reference< Hello> _ref_type;
+      using _traits_type = TAOX11_CORBA::servant_traits<Hello>;
+      using _ref_type = TAOX11_CORBA::servant_reference<Hello>;
       //@}
 
     protected:
-      /// Constructor
       explicit Hello (bool inherited = false);
-
-      /// Destructor
       virtual ~Hello ();
 
       Servant_proxy_ptr get_proxy () const override;
@@ -95,11 +92,11 @@ namespace TAOX11_NAMESPACE {
     {
       /// Base trait type from which the servant implementations has to be derived
       /// from
-      typedef ::Test::POA::Hello base_type;
+      using base_type = ::Test::POA::Hello;
       /// Strong reference type
-      typedef TAOX11_CORBA::servant_reference< ::Test::POA::Hello> ref_type;
+      using ref_type = TAOX11_CORBA::servant_reference< ::Test::POA::Hello>;
       /// Weak reference type
-      typedef TAOX11_CORBA::weak_servant_reference< ::Test::POA::Hello> weak_ref_type;
+      using weak_ref_type = TAOX11_CORBA::weak_servant_reference< ::Test::POA::Hello>;
       /// Try to narrow the provided reference @a base to a ::Test::Hello
       /// reference. Returns a new reference when this succeeds, a nil reference
       /// when this fails. Narrowing a nil reference will return a nil reference.
@@ -113,6 +110,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_CFBBFGBA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_EAGAAGIA_INCLUDED__ */
 
 // -*- END -*-

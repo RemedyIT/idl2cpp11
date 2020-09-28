@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GBFEADGA_INCLUDED__
-#define __RIDL_TESTC_H_GBFEADGA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDEAJFBA_INCLUDED__
+#define __RIDL_TESTC_H_HDEAJFBA_INCLUDED__
 
 #pragma once
 
@@ -97,13 +97,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::Test::EEnum>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::Test::EEnum>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::Test::EEnum, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::Test::EEnum>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::Test::EEnum, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::Test::EEnum>::write_on (
           os, w.val_,
           formatter_t ());
@@ -134,6 +134,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GBFEADGA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDEAJFBA_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FGFIEAEI_INCLUDED__
-#define __RIDL_TESTC_H_FGFIEAEI_INCLUDED__
+#ifndef __RIDL_TESTC_H_CFDJFCEH_INCLUDED__
+#define __RIDL_TESTC_H_CFDJFCEH_INCLUDED__
 
 #pragma once
 
@@ -29,7 +29,7 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/typedef
 /// @copydoc test.idl::octetseq
-typedef std::vector< uint8_t> octetseq;
+using octetseq = std::vector< uint8_t>;
 
 // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -128,9 +128,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
-      typedef std::false_type is_bounded;
+      using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      typedef IDL::traits< uint8_t> element_traits;
+      using element_traits = IDL::traits< uint8_t>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -149,13 +149,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::octetseq>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::octetseq>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::octetseq, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::octetseq>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::octetseq, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::octetseq>::write_on (
           os, w.val_,
           formatter_t ());
@@ -224,13 +224,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::RadarTrack>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::RadarTrack>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::RadarTrack, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::RadarTrack>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::RadarTrack, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::RadarTrack>::write_on (
           os, w.val_,
           formatter_t ());
@@ -293,6 +293,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FGFIEAEI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CFDJFCEH_INCLUDED__ */
 
 // -*- END -*-

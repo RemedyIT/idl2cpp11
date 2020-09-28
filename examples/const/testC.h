@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DAJFBHAG_INCLUDED__
-#define __RIDL_TESTC_H_DAJFBHAG_INCLUDED__
+#ifndef __RIDL_TESTC_H_GBAJFHCH_INCLUDED__
+#define __RIDL_TESTC_H_GBAJFHCH_INCLUDED__
 
 #pragma once
 
@@ -98,11 +98,11 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::TCounter
-  typedef int32_t TCounter;
+  using TCounter = int32_t;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::TName
-  typedef TAOX11_IDL::bounded_basic_string<char, 30> TName;
+  using TName = TAOX11_IDL::bounded_basic_string<char, 30>;
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::count
@@ -118,7 +118,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::fixed_type
-  typedef TAOX11_NAMESPACE::IDL::Fixed <10, 3> fixed_type;
+  using fixed_type = TAOX11_NAMESPACE::IDL::Fixed <10, 3>;
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::pi2
@@ -133,7 +133,7 @@ namespace Test
 #define _INTF_A_FWD_
 class A;
 class A_proxy;
-typedef A_proxy* A_proxy_ptr;
+using A_proxy_ptr = A_proxy*;
 #endif // !_INTF_A_FWD_
 
 // generated from c++11/templates/cli/hdr/interface_object_traits
@@ -162,10 +162,10 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
-      typedef std::false_type is_local;
+      using is_local = std::false_type;
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as abstract
-      typedef std::false_type is_abstract;
+      using is_abstract = std::false_type;
 
       template <typename OStrm_, typename Formatter = formatter< ::A, OStrm_>>
       static inline OStrm_& write_on(
@@ -192,9 +192,9 @@ public:
 
   /// @name Member types
   //@{
-  typedef TAOX11_IDL::traits<A>           _traits_type;
+  using _traits_type = TAOX11_IDL::traits<A>;
   /// Strong reference type
-  typedef TAOX11_IDL::traits<A>::ref_type _ref_type;
+  using _ref_type = TAOX11_IDL::traits<A>::ref_type;
   //@}
 
   // generated from StubHeaderWriter#visit_const
@@ -203,7 +203,7 @@ public:
 
   // generated from c++11/templates/cli/hdr/interface_post
 protected:
-  typedef std::shared_ptr<A> _shared_ptr_type;
+  using _shared_ptr_type = std::shared_ptr<A>;
 
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -244,9 +244,9 @@ namespace TAOX11_NAMESPACE
     {
       /// std::false_type or std::true_type type indicating whether
       /// this string is declared as bounded
-      typedef std::true_type is_bounded;
+      using is_bounded = std::true_type ;
       /// IDL::traits<> for the element of the string
-      typedef IDL::traits<char> element_traits;
+      using element_traits = IDL::traits<char>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -265,13 +265,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< TAOX11_IDL::bounded_basic_string<char, 30>, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< TAOX11_IDL::bounded_basic_string<char, 30>, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::write_on (
           os, w.val_,
           formatter_t ());
@@ -289,8 +289,8 @@ namespace TAOX11_NAMESPACE
     struct traits < TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
       : IDL::common_traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
     {
-      typedef std::integral_constant< uint16_t, 10> digits;
-      typedef std::integral_constant< uint16_t, 3> scale;
+      using digits = std::integral_constant< uint16_t, 10>;
+      using scale = std::integral_constant< uint16_t, 3>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -322,13 +322,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (
           os, w.val_,
           formatter_t ());
@@ -379,13 +379,13 @@ namespace TAOX11_NAMESPACE
         OStrm_& os,
         IDL::traits< ::A>::__Writer<Fmt> w)
     {
-      typedef IDL::traits< ::A>::__Writer<Fmt> writer_t;
-      typedef typename std::conditional<
-                          std::is_same<
-                            typename writer_t::formatter_t,
-                            std::false_type>::value,
-                          formatter< ::A, OStrm_>,
-                          typename writer_t::formatter_t>::type formatter_t;
+      using writer_t = IDL::traits< ::A>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter< ::A, OStrm_>,
+                            typename writer_t::formatter_t>::type;
       return IDL::traits< ::A>::write_on (
           os, w.val_,
           formatter_t ());
@@ -423,6 +423,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DAJFBHAG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GBAJFHCH_INCLUDED__ */
 
 // -*- END -*-
