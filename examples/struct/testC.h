@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IIEAJGHG_INCLUDED__
-#define __RIDL_TESTC_H_IIEAJGHG_INCLUDED__
+#ifndef __RIDL_TESTC_H_GIHHGCHG_INCLUDED__
+#define __RIDL_TESTC_H_GIHHGCHG_INCLUDED__
 
 #pragma once
 
@@ -97,12 +97,10 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     object_traits< ::Test::Bar>::shared_ptr_type
-    object_traits< ::Test::Bar>::lock_shared (
-        ::Test::Bar* p);
+    object_traits< ::Test::Bar>::lock_shared (::Test::Bar* p);
     template<>
     object_traits< ::Test::Bar>::ref_type
-    object_traits< ::Test::Bar>::narrow (
-       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits< ::Test::Bar>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
@@ -310,12 +308,10 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     object_traits< ::Test::Foo>::shared_ptr_type
-    object_traits< ::Test::Foo>::lock_shared (
-        ::Test::Foo* p);
+    object_traits< ::Test::Foo>::lock_shared (::Test::Foo* p);
     template<>
     object_traits< ::Test::Foo>::ref_type
-    object_traits< ::Test::Foo>::narrow (
-       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits< ::Test::Foo>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
@@ -745,6 +741,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IIEAJGHG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GIHHGCHG_INCLUDED__ */
 
 // -*- END -*-
