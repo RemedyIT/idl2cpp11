@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FJIDCAEA_INCLUDED__
-#define __RIDL_TESTC_H_FJIDCAEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHGCIJIC_INCLUDED__
+#define __RIDL_TESTC_H_FHGCIJIC_INCLUDED__
 
 #pragma once
 
@@ -319,12 +319,10 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     object_traits< ::A>::shared_ptr_type
-    object_traits< ::A>::lock_shared (
-        ::A* p);
+    object_traits< ::A>::lock_shared (::A* p);
     template<>
     object_traits< ::A>::ref_type
-    object_traits< ::A>::narrow (
-       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits< ::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
@@ -422,8 +420,7 @@ namespace TAOX11_NAMESPACE
   {
     template<>
      object_traits< ::Val_init>::shared_ptr_type
-    object_traits< ::Val_init>::lock_shared (
-        ::Val_init*);
+    object_traits< ::Val_init>::lock_shared (::Val_init*);
   } // namespace CORBA
 
   namespace IDL
@@ -670,7 +667,6 @@ class Val_init
 public:
   using _traits_type = TAOX11_IDL::traits< Val_init>;
   using _ref_type = TAOX11_IDL::traits< Val_init>::ref_type;
-
   template <typename T> friend struct TAOX11_CORBA::object_traits;
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -683,8 +679,10 @@ public:
 protected:
   Val_init () = default;
   virtual ~Val_init () = default;
-  Val_init (const Val_init&) = default;
-  Val_init (Val_init&&) = default;
+  Val_init (const Val_init&) = delete;
+  Val_init (Val_init&&) = delete;
+  Val_init& operator =(const Val_init&) = delete;
+  Val_init& operator =(Val_init&&) = delete;
 }; // class Val_init
 
 // generated from c++11/templates/cli/hdr/valuebox_fwd
@@ -808,12 +806,10 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     object_traits< ::X>::shared_ptr_type
-    object_traits< ::X>::lock_shared (
-        ::X* p);
+    object_traits< ::X>::lock_shared (::X* p);
     template<>
     object_traits< ::X>::ref_type
-    object_traits< ::X>::narrow (
-       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits< ::X>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
@@ -1065,12 +1061,10 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     object_traits< ::A1>::shared_ptr_type
-    object_traits< ::A1>::lock_shared (
-        ::A1* p);
+    object_traits< ::A1>::lock_shared (::A1* p);
     template<>
     object_traits< ::A1>::ref_type
-    object_traits< ::A1>::narrow (
-       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits< ::A1>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
@@ -1347,8 +1341,7 @@ namespace TAOX11_NAMESPACE
   {
     template<>
      object_traits< ::V_init>::shared_ptr_type
-    object_traits< ::V_init>::lock_shared (
-        ::V_init*);
+    object_traits< ::V_init>::lock_shared (::V_init*);
   } // namespace CORBA
 
   namespace IDL
@@ -1510,8 +1503,8 @@ class V_init
 public:
   using _traits_type = TAOX11_IDL::traits< V_init>;
   using _ref_type = TAOX11_IDL::traits< V_init>::ref_type;
-
   template <typename T> friend struct TAOX11_CORBA::object_traits;
+
   virtual IDL::traits< ::V>::ref_type
   create_bool (bool b) = 0;
   virtual IDL::traits< ::V>::ref_type
@@ -1527,8 +1520,10 @@ public:
 protected:
   V_init () = default;
   virtual ~V_init () = default;
-  V_init (const V_init&) = default;
-  V_init (V_init&&) = default;
+  V_init (const V_init&) = delete;
+  V_init (V_init&&) = delete;
+  V_init& operator =(const V_init&) = delete;
+  V_init& operator =(V_init&&) = delete;
 }; // class V_init
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
@@ -2304,6 +2299,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FJIDCAEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHGCIJIC_INCLUDED__ */
 
 // -*- END -*-

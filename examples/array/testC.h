@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_ECADBADF_INCLUDED__
-#define __RIDL_TESTC_H_ECADBADF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CEEAJEDJ_INCLUDED__
+#define __RIDL_TESTC_H_CEEAJEDJ_INCLUDED__
 
 #pragma once
 
@@ -67,12 +67,10 @@ namespace TAOX11_NAMESPACE
   {
     template<>
     object_traits< ::Test::Foo>::shared_ptr_type
-    object_traits< ::Test::Foo>::lock_shared (
-        ::Test::Foo* p);
+    object_traits< ::Test::Foo>::lock_shared (::Test::Foo* p);
     template<>
     object_traits< ::Test::Foo>::ref_type
-    object_traits< ::Test::Foo>::narrow (
-       object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits< ::Test::Foo>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
@@ -427,6 +425,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_ECADBADF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CEEAJEDJ_INCLUDED__ */
 
 // -*- END -*-
