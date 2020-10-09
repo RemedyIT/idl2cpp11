@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JCJAIAIB_INCLUDED__
-#define __RIDL_TESTC_H_JCJAIAIB_INCLUDED__
+#ifndef __RIDL_TESTC_H_FDGEHEBH_INCLUDED__
+#define __RIDL_TESTC_H_FDGEHEBH_INCLUDED__
 
 #pragma once
 
@@ -125,7 +125,7 @@ namespace Test
 #else
     /// Default constructor
     Foo () = default;
-#endif /* _MSC_VER < 1920 */
+#endif /* _MSC_VER < 1930 */
     /// Destructor
     virtual ~Foo () = default;
 
@@ -235,7 +235,7 @@ namespace Test
 #else
     /// Default constructor
     Bar () = default;
-#endif /* _MSC_VER < 1920 */
+#endif /* _MSC_VER < 1930 */
     /// Destructor
     virtual ~Bar () = default;
 
@@ -387,6 +387,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JCJAIAIB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FDGEHEBH_INCLUDED__ */
 
 // -*- END -*-

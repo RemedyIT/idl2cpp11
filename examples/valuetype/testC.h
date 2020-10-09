@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHGCIJIC_INCLUDED__
-#define __RIDL_TESTC_H_FHGCIJIC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GIBJBAAE_INCLUDED__
+#define __RIDL_TESTC_H_GIBJBAAE_INCLUDED__
 
 #pragma once
 
@@ -192,7 +192,6 @@ namespace obv
   {
   protected:
 #if defined (_MSC_VER) && (_MSC_VER < 1920)
-    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     Example () {}
 #else
     Example () = default;
@@ -576,7 +575,6 @@ namespace obv
   {
   protected:
 #if defined (_MSC_VER) && (_MSC_VER < 1920)
-    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     Val () {}
 #else
     Val () = default;
@@ -1279,7 +1277,6 @@ namespace obv
   {
   protected:
 #if defined (_MSC_VER) && (_MSC_VER < 1920)
-    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     B () {}
 #else
     B () = default;
@@ -1468,7 +1465,6 @@ namespace obv
   {
   protected:
 #if defined (_MSC_VER) && (_MSC_VER < 1920)
-    // msvc14.(0|1) have a problem with defaulted constructors, issue #4005
     V () {}
 #else
     V () = default;
@@ -2299,6 +2295,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHGCIJIC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GIBJBAAE_INCLUDED__ */
 
 // -*- END -*-
