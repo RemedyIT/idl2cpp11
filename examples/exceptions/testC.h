@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CHCFFIFB_INCLUDED__
-#define __RIDL_TESTC_H_CHCFFIFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_EFGIEAIA_INCLUDED__
+#define __RIDL_TESTC_H_EFGIEAIA_INCLUDED__
 
 #pragma once
 
@@ -23,8 +23,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.8.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -468,6 +468,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CHCFFIFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EFGIEAIA_INCLUDED__ */
 
 // -*- END -*-
