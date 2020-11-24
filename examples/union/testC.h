@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JHGEBDAA_INCLUDED__
-#define __RIDL_TESTC_H_JHGEBDAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EEAFEGBC_INCLUDED__
+#define __RIDL_TESTC_H_EEAFEGBC_INCLUDED__
 
 #pragma once
 
@@ -22,8 +22,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.8.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
+#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -224,7 +224,7 @@ namespace Test
     /// a BAD_PARAM exception is thrown
     inline void _d (DataType);
     /// Get the discriminator
-    inline DataType _d () const;
+    inline DataType _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::Data::longData
     //@{
@@ -471,7 +471,7 @@ namespace Test
     /// a BAD_PARAM exception is thrown
     inline void _d (int32_t);
     /// Get the discriminator
-    inline int32_t _d () const;
+    inline int32_t _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::U::x
     //@{
@@ -1526,11 +1526,6 @@ inline void Test::Data::_d (DataType discval)
   }
 }
 
-inline ::Test::DataType Test::Data::_d () const
-{
-  return this->disc_;
-}
-
 inline void Test::Data::longData (int32_t _x11_longData)
 {
   if (this->disc_ != ::Test::DataType::dtLong)
@@ -2108,11 +2103,6 @@ inline void Test::U::_d (int32_t discval)
   }
 }
 
-inline int32_t Test::U::_d () const
-{
-  return this->disc_;
-}
-
 inline void Test::U::x (int32_t _x11_x)
 {
   if (this->disc_ != 1)
@@ -2511,6 +2501,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JHGEBDAA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EEAFEGBC_INCLUDED__ */
 
 // -*- END -*-
