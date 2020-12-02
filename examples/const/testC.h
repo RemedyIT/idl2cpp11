@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HJCJHJBJ_INCLUDED__
-#define __RIDL_TESTC_H_HJCJHJBJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDHACFBJ_INCLUDED__
+#define __RIDL_TESTC_H_HDHACFBJ_INCLUDED__
 
 #pragma once
 
@@ -102,7 +102,7 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::TName
-  using TName = TAOX11_IDL::bounded_basic_string<char, 30>;
+  using TName = TAOX11_IDL::bounded_string<30>;
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::count
@@ -230,15 +230,15 @@ namespace TAOX11_NAMESPACE
   {
 
     // generated from c++11/templates/cli/hdr/string_idl_traits
-    // Unaliased type : TAOX11_IDL::bounded_basic_string<char, 30>
-    // MD5            : 4FC4252C9D149C59A6F97B9D11EF60DC
-#if !defined(_ALIAS_4FC4252C9D149C59A6F97B9D11EF60DC_TRAITS_DECL_)
-#define _ALIAS_4FC4252C9D149C59A6F97B9D11EF60DC_TRAITS_DECL_
+    // Unaliased type : TAOX11_IDL::bounded_string<30>
+    // MD5            : 2D6CDB195D63B04182740C35A5402ABD
+#if !defined(_ALIAS_2D6CDB195D63B04182740C35A5402ABD_TRAITS_DECL_)
+#define _ALIAS_2D6CDB195D63B04182740C35A5402ABD_TRAITS_DECL_
 
     template<>
-    struct traits < TAOX11_IDL::bounded_basic_string<char, 30>>
-      : IDL::common_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
-      , IDL::bounded_traits< TAOX11_IDL::bounded_basic_string<char, 30>>
+    struct traits < TAOX11_IDL::bounded_string<30>>
+      : IDL::common_traits< TAOX11_IDL::bounded_string<30>>
+      , IDL::bounded_traits< TAOX11_IDL::bounded_string<30>>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this string is declared as bounded
@@ -261,16 +261,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt> w)
+        IDL::traits< TAOX11_IDL::bounded_string<30>>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::__Writer<Fmt>;
+      using writer_t = IDL::traits< TAOX11_IDL::bounded_string<30>>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< TAOX11_IDL::bounded_basic_string<char, 30>, OStrm_>,
+                            formatter< TAOX11_IDL::bounded_string<30>, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< TAOX11_IDL::bounded_basic_string<char, 30>>::write_on (
+      return IDL::traits< TAOX11_IDL::bounded_string<30>>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -421,6 +421,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HJCJHJBJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDHACFBJ_INCLUDED__ */
 
 // -*- END -*-
