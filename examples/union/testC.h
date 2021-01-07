@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JIEBAEAJ_INCLUDED__
-#define __RIDL_TESTC_H_JIEBAEAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHBBAFCJ_INCLUDED__
+#define __RIDL_TESTC_H_FHBBAFCJ_INCLUDED__
 
 #pragma once
 
@@ -224,7 +224,7 @@ namespace Test
     /// a BAD_PARAM exception is thrown
     inline void _d (DataType);
     /// Get the discriminator
-    inline DataType _d () const;
+    inline DataType _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::Data::longData
     //@{
@@ -471,7 +471,7 @@ namespace Test
     /// a BAD_PARAM exception is thrown
     inline void _d (int32_t);
     /// Get the discriminator
-    inline int32_t _d () const;
+    inline int32_t _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::U::x
     //@{
@@ -1526,11 +1526,6 @@ inline void Test::Data::_d (DataType discval)
   }
 }
 
-inline ::Test::DataType Test::Data::_d () const
-{
-  return this->disc_;
-}
-
 inline void Test::Data::longData (int32_t _x11_longData)
 {
   if (this->disc_ != ::Test::DataType::dtLong)
@@ -1945,33 +1940,33 @@ inline void Test::Data::_clear ()
     break;
     case ::Test::DataType::dtString:
     {
-#if defined __clang__ && __clang_major__ <= 8
+#if defined __clang__ && __clang_major__ <= 10
       using std::string;
-#endif /* __clang__ && __clang_major__ <= 8 */
+#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.stringData_.std::string::~string ();
     }
     break;
     case ::Test::DataType::dtPoint:
     {
-#if defined __clang__ && __clang_major__ <= 8
+#if defined __clang__ && __clang_major__ <= 10
       using ::Test::Point;
-#endif /* __clang__ && __clang_major__ <= 8 */
+#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.pointData_.::Test::Point::~Point ();
     }
     break;
     case ::Test::DataType::dtTrack:
     {
-#if defined __clang__ && __clang_major__ <= 8
+#if defined __clang__ && __clang_major__ <= 10
       using ::Test::Track;
-#endif /* __clang__ && __clang_major__ <= 8 */
+#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.trackData_.::Test::Track::~Track ();
     }
     break;
     case ::Test::DataType::dtGlobal:
     {
-#if defined __clang__ && __clang_major__ <= 8
+#if defined __clang__ && __clang_major__ <= 10
       using ::Global;
-#endif /* __clang__ && __clang_major__ <= 8 */
+#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.globalData_.::Global::~Global ();
     }
     break;
@@ -2106,11 +2101,6 @@ inline void Test::U::_d (int32_t discval)
     }
     this->disc_ = discval;
   }
-}
-
-inline int32_t Test::U::_d () const
-{
-  return this->disc_;
 }
 
 inline void Test::U::x (int32_t _x11_x)
@@ -2405,18 +2395,18 @@ inline void Test::U::_clear ()
     break;
     case 2:
     {
-#if defined __clang__ && __clang_major__ <= 8
+#if defined __clang__ && __clang_major__ <= 10
       using std::string;
-#endif /* __clang__ && __clang_major__ <= 8 */
+#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.z_.std::string::~string ();
     }
     break;
     case 3:
     case 4:
     {
-#if defined __clang__ && __clang_major__ <= 8
+#if defined __clang__ && __clang_major__ <= 10
       using ::Test::S;
-#endif /* __clang__ && __clang_major__ <= 8 */
+#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.w_.::Test::S::~S ();
     }
     break;
@@ -2511,6 +2501,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JIEBAEAJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHBBAFCJ_INCLUDED__ */
 
 // -*- END -*-
