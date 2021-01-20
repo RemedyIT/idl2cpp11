@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CIFGBAJA_INCLUDED__
-#define __RIDL_TESTC_H_CIFGBAJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIIHGFBC_INCLUDED__
+#define __RIDL_TESTC_H_CIIHGFBC_INCLUDED__
 
 #pragma once
 
@@ -247,10 +247,10 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    int16_t val1_ {};
-    int32_t val2_ {};
-    std::string val3_;
-    IDL::traits< ::Example>::ref_type val5_;
+    int16_t val1_{};
+    int32_t val2_{};
+    std::string val3_{};
+    IDL::traits< ::Example>::ref_type val5_{};
   }; // class Example
 } // namespace obv
 
@@ -293,7 +293,7 @@ public:
   inline void swap (S& s);
 
 private:
-  int32_t value_ {};
+  int32_t value_{};
 };// S
 
 inline void swap (::S& m1, ::S& m2) { m1.swap (m2); }
@@ -649,12 +649,12 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    IDL::traits< ::Val>::ref_type t_;
-    int32_t v_ {};
-    ::Bytes w_;
-    std::string x_;
-    ::S y_;
-    IDL::traits< ::A>::ref_type z_;
+    IDL::traits< ::Val>::ref_type t_{};
+    int32_t v_{};
+    ::Bytes w_{{}};
+    std::string x_{};
+    ::S y_{};
+    IDL::traits< ::A>::ref_type z_{};
   }; // class Val
 } // namespace obv
 
@@ -1034,7 +1034,7 @@ public:
   inline void swap (ColorValue2& s);
 
 private:
-  ::Color col_ {};
+  ::Color col_{};
 };// ColorValue2
 
 inline void swap (::ColorValue2& m1, ::ColorValue2& m2) { m1.swap (m2); }
@@ -1312,7 +1312,7 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    int16_t data_ {};
+    int16_t data_{};
   }; // class B
 } // namespace obv
 
@@ -2295,6 +2295,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CIFGBAJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIIHGFBC_INCLUDED__ */
 
 // -*- END -*-

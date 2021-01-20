@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HIFBGFJC_INCLUDED__
-#define __RIDL_TESTC_H_HIFBGFJC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHBGICEA_INCLUDED__
+#define __RIDL_TESTC_H_GHBGICEA_INCLUDED__
 
 #pragma once
 
@@ -111,12 +111,12 @@ namespace Test
     inline void swap (Simple& s);
 
   private:
-    uint8_t o_ {};
-    int32_t l_ {};
-    std::string s_;
-    double d_ {};
-    bool b_ {};
-    char c_ {};
+    uint8_t o_{};
+    int32_t l_{};
+    std::string s_{};
+    double d_{};
+    bool b_{};
+    char c_{};
   };// Simple
 
   inline void swap (::Test::Simple& m1, ::Test::Simple& m2) { m1.swap (m2); }
@@ -772,6 +772,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HIFBGFJC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHBGICEA_INCLUDED__ */
 
 // -*- END -*-

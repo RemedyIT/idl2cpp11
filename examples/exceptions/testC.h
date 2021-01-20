@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EJIIDIGD_INCLUDED__
-#define __RIDL_TESTC_H_EJIIDIGD_INCLUDED__
+#ifndef __RIDL_TESTC_H_HECAHIBA_INCLUDED__
+#define __RIDL_TESTC_H_HECAHIBA_INCLUDED__
 
 #pragma once
 
@@ -72,7 +72,7 @@ namespace Test
     void _info (std::ostream&) const override;
 
   private:
-    std::string message_;
+    std::string message_{};
   }; // class FooEx
 
   // generated from c++11/templates/cli/hdr/except_pre
@@ -112,7 +112,7 @@ namespace Test
     void _info (std::ostream&) const override;
 
   private:
-    int32_t id_ {};
+    int32_t id_{};
   }; // class BooEx
 
   // generated from StubHeaderWriter#enter_interface
@@ -468,6 +468,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EJIIDIGD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HECAHIBA_INCLUDED__ */
 
 // -*- END -*-

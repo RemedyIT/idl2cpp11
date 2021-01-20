@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JEJIIGIC_INCLUDED__
-#define __RIDL_TESTC_H_JEJIIGIC_INCLUDED__
+#ifndef __RIDL_TESTC_H_HJDFIFAD_INCLUDED__
+#define __RIDL_TESTC_H_HJDFIFAD_INCLUDED__
 
 #pragma once
 
@@ -69,7 +69,7 @@ namespace Test
     inline void swap (Variable& s);
 
   private:
-    std::string name_;
+    std::string name_{};
   };// Variable
 
   inline void swap (::Test::Variable& m1, ::Test::Variable& m2) { m1.swap (m2); }
@@ -273,14 +273,14 @@ namespace Test
     inline void swap (Simple& s);
 
   private:
-    uint8_t o_ {};
-    int32_t l_ {};
-    std::string s_;
-    double d_ {};
-    bool b_ {};
-    char c_ {};
-    IDL::traits< ::Test::Bar>::ref_type bar_ref_;
-    ::Test::Variable v_;
+    uint8_t o_{};
+    int32_t l_{};
+    std::string s_{};
+    double d_{};
+    bool b_{};
+    char c_{};
+    IDL::traits< ::Test::Bar>::ref_type bar_ref_{};
+    ::Test::Variable v_{};
   };// Simple
 
   inline void swap (::Test::Simple& m1, ::Test::Simple& m2) { m1.swap (m2); }
@@ -741,6 +741,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JEJIIGIC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HJDFIFAD_INCLUDED__ */
 
 // -*- END -*-

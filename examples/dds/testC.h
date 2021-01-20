@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EGGABBFI_INCLUDED__
-#define __RIDL_TESTC_H_EGGABBFI_INCLUDED__
+#ifndef __RIDL_TESTC_H_GECJHDGH_INCLUDED__
+#define __RIDL_TESTC_H_GECJHDGH_INCLUDED__
 
 #pragma once
 
@@ -87,10 +87,10 @@ public:
   inline void swap (ShapeType& s);
 
 private:
-  std::string color_;
-  int32_t x_ {};
-  int32_t y_ {};
-  int32_t shapesize_ {};
+  std::string color_{};
+  int32_t x_{};
+  int32_t y_{};
+  int32_t shapesize_{};
 };// ShapeType
 
 inline void swap (::ShapeType& m1, ::ShapeType& m2) { m1.swap (m2); }
@@ -149,9 +149,9 @@ public:
   inline void swap (Attributes& s);
 
 private:
-  std::string shape_;
-  std::string color_;
-  float speed_ {};
+  std::string shape_{};
+  std::string color_{};
+  float speed_{};
 };// Attributes
 
 inline void swap (::Attributes& m1, ::Attributes& m2) { m1.swap (m2); }
@@ -430,6 +430,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EGGABBFI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GECJHDGH_INCLUDED__ */
 
 // -*- END -*-
