@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHBBAFCJ_INCLUDED__
-#define __RIDL_TESTC_H_FHBBAFCJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHJCABDG_INCLUDED__
+#define __RIDL_TESTC_H_FHJCABDG_INCLUDED__
 
 #pragma once
 
@@ -63,7 +63,7 @@ public:
   inline void swap (Global& s);
 
 private:
-  int32_t x_ {};
+  int32_t x_{};
 };// Global
 
 inline void swap (::Global& m1, ::Global& m2) { m1.swap (m2); }
@@ -139,8 +139,8 @@ namespace Test
     inline void swap (Point& s);
 
   private:
-    int32_t x_ {};
-    int32_t y_ {};
+    int32_t x_{};
+    int32_t y_{};
   };// Point
 
   inline void swap (::Test::Point& m1, ::Test::Point& m2) { m1.swap (m2); }
@@ -190,8 +190,8 @@ namespace Test
     inline void swap (Track& s);
 
   private:
-    int32_t id_ {};
-    ::Test::Point p_;
+    int32_t id_{};
+    ::Test::Point p_{};
   };// Track
 
   inline void swap (::Test::Track& m1, ::Test::Track& m2) { m1.swap (m2); }
@@ -379,7 +379,7 @@ namespace Test
     inline void swap (S& s);
 
   private:
-    int32_t len_ {};
+    int32_t len_{};
   };// S
 
   inline void swap (::Test::S& m1, ::Test::S& m2) { m1.swap (m2); }
@@ -1374,7 +1374,7 @@ inline void ::Test::Track::swap (::Test::Track& s)
 // generated from c++11/templates/cli/inl/union_inl
 
 inline Test::Data::u_type_::u_type_ ()
-  : longData_ {}
+  : longData_{}
 {
 }
 
@@ -1995,7 +1995,7 @@ inline void ::Test::S::swap (::Test::S& s)
 // generated from c++11/templates/cli/inl/union_inl
 
 inline Test::U::u_type_::u_type_ ()
-  : obj_ {}
+  : obj_{}
 {
 }
 
@@ -2501,6 +2501,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHBBAFCJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHJCABDG_INCLUDED__ */
 
 // -*- END -*-

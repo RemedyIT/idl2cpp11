@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FFGEHCJE_INCLUDED__
-#define __RIDL_TESTC_H_FFGEHCJE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IIEACHIJ_INCLUDED__
+#define __RIDL_TESTC_H_IIEACHIJ_INCLUDED__
 
 #pragma once
 
@@ -100,11 +100,11 @@ public:
   inline void swap (RadarTrack& s);
 
 private:
-  std::string id_;
-  int32_t x_ {};
-  int32_t y_ {};
-  int32_t z_ {};
-  ::octetseq plot_;
+  std::string id_{};
+  int32_t x_{};
+  int32_t y_{};
+  int32_t z_{};
+  ::octetseq plot_{};
 };// RadarTrack
 
 inline void swap (::RadarTrack& m1, ::RadarTrack& m2) { m1.swap (m2); }
@@ -293,6 +293,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FFGEHCJE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IIEACHIJ_INCLUDED__ */
 
 // -*- END -*-
