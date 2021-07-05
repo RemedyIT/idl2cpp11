@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HECAHIBA_INCLUDED__
-#define __RIDL_TESTC_H_HECAHIBA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHEHJAHG_INCLUDED__
+#define __RIDL_TESTC_H_EHEHJAHG_INCLUDED__
 
 #pragma once
 
@@ -52,7 +52,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/except_post
     FooEx ();
-    virtual ~FooEx () throw () = default;
+    ~FooEx () throw () override = default;
     FooEx (const FooEx&) = default;
     FooEx (FooEx&&) = default;
     explicit FooEx (
@@ -93,7 +93,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/except_post
     BooEx ();
-    virtual ~BooEx () throw () = default;
+    ~BooEx () throw () override = default;
     BooEx (const BooEx&) = default;
     BooEx (BooEx&&) = default;
     explicit BooEx (
@@ -227,7 +227,7 @@ namespace Test
     /// Default constructor
     Foo () = default;
     /// Destructor
-    virtual ~Foo () = default;
+    ~Foo () override = default;
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -468,6 +468,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HECAHIBA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHEHJAHG_INCLUDED__ */
 
 // -*- END -*-

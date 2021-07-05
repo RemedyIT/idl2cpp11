@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FBGEIGGF_INCLUDED__
-#define __RIDL_TESTC_H_FBGEIGGF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CJCDJDAH_INCLUDED__
+#define __RIDL_TESTC_H_CJCDJDAH_INCLUDED__
 
 #pragma once
 
@@ -127,7 +127,7 @@ namespace Test
     Foo () = default;
 #endif /* _MSC_VER < 1930 */
     /// Destructor
-    virtual ~Foo () = default;
+    ~Foo () override = default;
 
     /// Returns a strong client reference for the local object you are calling
     IDL::traits< ::Test::Foo>::ref_type _this ();
@@ -237,7 +237,7 @@ namespace Test
     Bar () = default;
 #endif /* _MSC_VER < 1930 */
     /// Destructor
-    virtual ~Bar () = default;
+    ~Bar () override = default;
 
     /// Returns a strong client reference for the local object you are calling
     IDL::traits< ::Test::Bar>::ref_type _this ();
@@ -387,6 +387,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FBGEIGGF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CJCDJDAH_INCLUDED__ */
 
 // -*- END -*-

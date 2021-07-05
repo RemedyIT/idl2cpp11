@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GHBGICEA_INCLUDED__
-#define __RIDL_TESTC_H_GHBGICEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DFFEEBGJ_INCLUDED__
+#define __RIDL_TESTC_H_DFFEEBGJ_INCLUDED__
 
 #pragma once
 
@@ -266,7 +266,7 @@ namespace Test
     /// Default constructor
     Foo () = default;
     /// Destructor
-    virtual ~Foo () = default;
+    ~Foo () override = default;
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -772,6 +772,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GHBGICEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DFFEEBGJ_INCLUDED__ */
 
 // -*- END -*-
