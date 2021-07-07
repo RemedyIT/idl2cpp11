@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_FCBIAJIA_INCLUDED__
-#define __RIDL_TESTS_H_FCBIAJIA_INCLUDED__
+#ifndef __RIDL_TESTS_H_BDCDJBHA_INCLUDED__
+#define __RIDL_TESTS_H_BDCDJBHA_INCLUDED__
 
 #pragma once
 
@@ -42,7 +42,7 @@ namespace Test
 
     protected:
       explicit Hello (bool inherited = false);
-      virtual ~Hello ();
+      ~Hello () override;
 
       Servant_proxy_ptr get_proxy () const override;
 
@@ -105,6 +105,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_FCBIAJIA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_BDCDJBHA_INCLUDED__ */
 
 // -*- END -*-

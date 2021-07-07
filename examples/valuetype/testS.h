@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_GJJHFDGD_INCLUDED__
-#define __RIDL_TESTS_H_GJJHFDGD_INCLUDED__
+#ifndef __RIDL_TESTS_H_FEAJDJGB_INCLUDED__
+#define __RIDL_TESTS_H_FEAJDJGB_INCLUDED__
 
 #pragma once
 
@@ -38,7 +38,7 @@ namespace POA
 
   protected:
     explicit A (bool inherited = false);
-    virtual ~A ();
+    ~A () override;
 
     Servant_proxy_ptr get_proxy () const override;
 
@@ -88,7 +88,7 @@ namespace POA
 
   protected:
     explicit X (bool inherited = false);
-    virtual ~X ();
+    ~X () override;
 
     Servant_proxy_ptr get_proxy () const override;
 
@@ -139,7 +139,7 @@ namespace POA
 
   protected:
     explicit A1 (bool inherited = false);
-    virtual ~A1 ();
+    ~A1 () override;
 
     Servant_proxy_ptr get_proxy () const override;
 
@@ -189,7 +189,7 @@ namespace POA
   protected:
     using _shared_ptr_type = std::shared_ptr<B>;
     B () = default;
-    virtual ~B () = default;
+    ~B () override = default;
 
     template <typename T> friend class TAOX11_CORBA::servant_reference;
 
@@ -300,6 +300,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_GJJHFDGD_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_FEAJDJGB_INCLUDED__ */
 
 // -*- END -*-

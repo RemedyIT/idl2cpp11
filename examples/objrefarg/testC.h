@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HCFEIHFD_INCLUDED__
-#define __RIDL_TESTC_H_HCFEIHFD_INCLUDED__
+#ifndef __RIDL_TESTC_H_DIJGCJEI_INCLUDED__
+#define __RIDL_TESTC_H_DIJGCJEI_INCLUDED__
 
 #pragma once
 
@@ -190,7 +190,7 @@ namespace Test
     /// Default constructor
     Hello_Factory () = default;
     /// Destructor
-    virtual ~Hello_Factory () = default;
+    ~Hello_Factory () override = default;
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -241,7 +241,7 @@ namespace Test
     /// Default constructor
     Hello () = default;
     /// Destructor
-    virtual ~Hello () = default;
+    ~Hello () override = default;
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -406,6 +406,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HCFEIHFD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DIJGCJEI_INCLUDED__ */
 
 // -*- END -*-

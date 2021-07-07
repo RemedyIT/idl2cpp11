@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CIIHGFBC_INCLUDED__
-#define __RIDL_TESTC_H_CIIHGFBC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDDJEBEA_INCLUDED__
+#define __RIDL_TESTC_H_IDDJEBEA_INCLUDED__
 
 #pragma once
 
@@ -69,6 +69,15 @@ namespace TAOX11_NAMESPACE
       {
         return ref_type::_narrow (std::move(base));
       }
+
+      template <typename TInst = ::Example,
+                typename = typename
+                  std::enable_if<std::is_base_of< ::Example, TInst>::value>::type,
+                typename ...Args>
+      inline static ref_type make_reference(Args&& ...args)
+      {
+        return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
+      }
     };
   } // namespace CORBA
 
@@ -119,7 +128,7 @@ protected:
   static const std::string __example_repository_id;
 
   Example () = default;
-  virtual ~Example () = default;
+  ~Example () override = default;
   Example (const Example&) = default;
   Example (Example&&) = default;
   Example& operator= (const Example&) = delete;
@@ -196,7 +205,7 @@ namespace obv
 #else
     Example () = default;
 #endif /* _MSC_VER < 1920 */
-    virtual ~Example () = default;
+    ~Example () override = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
     explicit Example (
@@ -384,7 +393,7 @@ protected:
   /// Default constructor
   A () = default;
   /// Destructor
-  virtual ~A () = default;
+  ~A () override = default;
 
 private:
   /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -429,7 +438,7 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::Val_init>>,
       public CORBA::object_traits < ::Val_init>
     {
-      using is_abstract = std::false_type ;
+      using is_abstract = std::false_type;
       using is_local = std::true_type;
     };
   } // namespace IDL
@@ -453,6 +462,15 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
+      }
+
+      template <typename TInst = ::Val,
+                typename = typename
+                  std::enable_if<std::is_base_of< ::Val, TInst>::value>::type,
+                typename ...Args>
+      inline static ref_type make_reference(Args&& ...args)
+      {
+        return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
     };
   } // namespace CORBA
@@ -507,7 +525,7 @@ protected:
   static const std::string __val_repository_id;
 
   Val () = default;
-  virtual ~Val () = default;
+  ~Val () override = default;
   Val (const Val&) = default;
   Val (Val&&) = default;
   Val& operator= (const Val&) = delete;
@@ -579,7 +597,7 @@ namespace obv
 #else
     Val () = default;
 #endif /* _MSC_VER < 1920 */
-    virtual ~Val () = default;
+    ~Val () override = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
     explicit Val (
@@ -676,7 +694,7 @@ public:
 
 protected:
   Val_init () = default;
-  virtual ~Val_init () = default;
+  ~Val_init () override = default;
   Val_init (const Val_init&) = delete;
   Val_init (Val_init&&) = delete;
   Val_init& operator =(const Val_init&) = delete;
@@ -702,6 +720,12 @@ namespace TAOX11_NAMESPACE
       using weak_ref_type = weak_valuetype_reference< ::StringValue>;
 
       static ref_type narrow (valuetype_reference<ValueBase>);
+
+      template <typename ...Args>
+      inline static ref_type make_reference(Args&& ...args)
+      {
+        return TAOX11_CORBA::make_reference< ::StringValue> (std::forward<Args> (args)...);
+      }
     };
   } // namespace CORBA
 
@@ -762,7 +786,7 @@ protected:
   explicit StringValue (std::string v)
     : TAOX11_CORBA::Valuebox_T< std::string> (std::move(v))
   {}
-  virtual ~StringValue () = default;
+  ~StringValue () override = default;
   StringValue& operator= (const StringValue&) = delete;
   StringValue& operator= (StringValue&&) = delete;
 
@@ -871,7 +895,7 @@ protected:
   /// Default constructor
   X () = default;
   /// Destructor
-  virtual ~X () = default;
+  ~X () override = default;
 
 private:
   /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -917,6 +941,12 @@ namespace TAOX11_NAMESPACE
       using weak_ref_type = weak_valuetype_reference< ::ColorValue>;
 
       static ref_type narrow (valuetype_reference<ValueBase>);
+
+      template <typename ...Args>
+      inline static ref_type make_reference(Args&& ...args)
+      {
+        return TAOX11_CORBA::make_reference< ::ColorValue> (std::forward<Args> (args)...);
+      }
     };
   } // namespace CORBA
 
@@ -976,7 +1006,7 @@ protected:
   explicit ColorValue (::Color v)
     : TAOX11_CORBA::Valuebox_T< ::Color> (std::move(v))
   {}
-  virtual ~ColorValue () = default;
+  ~ColorValue () override = default;
   ColorValue& operator= (const ColorValue&) = delete;
   ColorValue& operator= (ColorValue&&) = delete;
 
@@ -1125,7 +1155,7 @@ protected:
   /// Default constructor
   A1 () = default;
   /// Destructor
-  virtual ~A1 () = default;
+  ~A1 () override = default;
 
 private:
   /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -1174,6 +1204,15 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
+      }
+
+      template <typename TInst = ::B,
+                typename = typename
+                  std::enable_if<std::is_base_of< ::B, TInst>::value>::type,
+                typename ...Args>
+      inline static ref_type make_reference(Args&& ...args)
+      {
+        return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
     };
   } // namespace CORBA
@@ -1225,7 +1264,7 @@ protected:
   static const std::string __b_repository_id;
 
   B () = default;
-  virtual ~B () = default;
+  ~B () override = default;
   B (const B&) = default;
   B (B&&) = default;
   B& operator= (const B&) = delete;
@@ -1281,7 +1320,7 @@ namespace obv
 #else
     B () = default;
 #endif /* _MSC_VER < 1920 */
-    virtual ~B () = default;
+    ~B () override = default;
     B (const B&) = default;
     B (B&&) = default;
     explicit B (
@@ -1348,7 +1387,7 @@ namespace TAOX11_NAMESPACE
       public IDL::common_byval_traits <CORBA::object_reference < ::V_init>>,
       public CORBA::object_traits < ::V_init>
     {
-      using is_abstract = std::false_type ;
+      using is_abstract = std::false_type;
       using is_local = std::true_type;
     };
   } // namespace IDL
@@ -1372,6 +1411,15 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
+      }
+
+      template <typename TInst = ::V,
+                typename = typename
+                  std::enable_if<std::is_base_of< ::V, TInst>::value>::type,
+                typename ...Args>
+      inline static ref_type make_reference(Args&& ...args)
+      {
+        return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
     };
   } // namespace CORBA
@@ -1426,7 +1474,7 @@ protected:
   static const std::string __v_repository_id;
 
   V () = default;
-  virtual ~V () = default;
+  ~V () override = default;
   V (const V&) = default;
   V (V&&) = default;
   V& operator= (const V&) = delete;
@@ -1469,7 +1517,7 @@ namespace obv
 #else
     V () = default;
 #endif /* _MSC_VER < 1920 */
-    virtual ~V () = default;
+    ~V () override = default;
     V (const V&) = default;
     V (V&&) = default;
 
@@ -1515,7 +1563,7 @@ public:
 
 protected:
   V_init () = default;
-  virtual ~V_init () = default;
+  ~V_init () override = default;
   V_init (const V_init&) = delete;
   V_init (V_init&&) = delete;
   V_init& operator =(const V_init&) = delete;
@@ -2295,6 +2343,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CIIHGFBC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IDDJEBEA_INCLUDED__ */
 
 // -*- END -*-

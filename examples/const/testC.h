@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JBHJEDBE_INCLUDED__
-#define __RIDL_TESTC_H_JBHJEDBE_INCLUDED__
+#ifndef __RIDL_TESTC_H_JJGDHGHF_INCLUDED__
+#define __RIDL_TESTC_H_JJGDHGHF_INCLUDED__
 
 #pragma once
 
@@ -210,7 +210,7 @@ protected:
   /// Default constructor
   A () = default;
   /// Destructor
-  virtual ~A () = default;
+  ~A () override = default;
 
 private:
   /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -421,6 +421,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JBHJEDBE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JJGDHGHF_INCLUDED__ */
 
 // -*- END -*-
