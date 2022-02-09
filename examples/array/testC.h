@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IGIJJCHD_INCLUDED__
-#define __RIDL_TESTC_H_IGIJJCHD_INCLUDED__
+#ifndef __RIDL_TESTC_H_GEDIDJIF_INCLUDED__
+#define __RIDL_TESTC_H_GEDIDJIF_INCLUDED__
 
 #pragma once
 
@@ -178,8 +178,7 @@ namespace TAOX11_NAMESPACE
       using dimensions = std::integral_constant<uint32_t, 1>;
 
       template <typename OStrm_,
-                typename Formatter = formatter< ::Test::F, OStrm_>
-               >
+                typename Formatter = formatter< ::Test::F, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -227,8 +226,7 @@ namespace TAOX11_NAMESPACE
       using dimensions = std::integral_constant<uint32_t, 1>;
 
       template <typename OStrm_,
-                typename Formatter = formatter< ::Test::V, OStrm_>
-               >
+                typename Formatter = formatter< ::Test::V, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -276,8 +274,7 @@ namespace TAOX11_NAMESPACE
       using dimensions = std::integral_constant<uint32_t, 3>;
 
       template <typename OStrm_,
-                typename Formatter = formatter< ::Test::M, OStrm_>
-               >
+                typename Formatter = formatter< ::Test::M, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -425,6 +422,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IGIJJCHD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GEDIDJIF_INCLUDED__ */
 
 // -*- END -*-
