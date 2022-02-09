@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EHEHJAHG_INCLUDED__
-#define __RIDL_TESTC_H_EHEHJAHG_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHHCEDFF_INCLUDED__
+#define __RIDL_TESTC_H_GHHCEDFF_INCLUDED__
 
 #pragma once
 
@@ -43,11 +43,9 @@ namespace Test
     void _raise () const override;
 
     void _tao_encode (TAO_OutputCDR &cdr) const override;
-
     void _tao_decode (TAO_InputCDR &cdr) override;
 
-
-    /// Deep copy
+    /// Make a deep copy of this exception
     TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
 
     // generated from c++11/templates/cli/hdr/except_post
@@ -84,11 +82,9 @@ namespace Test
     void _raise () const override;
 
     void _tao_encode (TAO_OutputCDR &cdr) const override;
-
     void _tao_decode (TAO_InputCDR &cdr) override;
 
-
-    /// Deep copy
+    /// Make a deep copy of this exception
     TAOX11_NAMESPACE::CORBA::Exception *_tao_duplicate () const override;
 
     // generated from c++11/templates/cli/hdr/except_post
@@ -468,6 +464,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EHEHJAHG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHHCEDFF_INCLUDED__ */
 
 // -*- END -*-

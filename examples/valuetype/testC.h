@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IDDJEBEA_INCLUDED__
-#define __RIDL_TESTC_H_IDDJEBEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DEJFHJGH_INCLUDED__
+#define __RIDL_TESTC_H_DEJFHJGH_INCLUDED__
 
 #pragma once
 
@@ -1605,8 +1605,7 @@ namespace TAOX11_NAMESPACE
       using dimensions = std::integral_constant<uint32_t, 1>;
 
       template <typename OStrm_,
-                typename Formatter = formatter< ::Bytes, OStrm_>
-               >
+                typename Formatter = formatter< ::Bytes, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -2343,6 +2342,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IDDJEBEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DEJFHJGH_INCLUDED__ */
 
 // -*- END -*-
