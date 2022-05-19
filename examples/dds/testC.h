@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BHAJGJCF_INCLUDED__
-#define __RIDL_TESTC_H_BHAJGJCF_INCLUDED__
+#ifndef __RIDL_TESTC_H_EFACEEDA_INCLUDED__
+#define __RIDL_TESTC_H_EFACEEDA_INCLUDED__
 
 #pragma once
 
@@ -171,8 +171,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_SHAPETYPE_TRAITS_)
 #define _STRUCT_SHAPETYPE_TRAITS_
     template<>
-    struct traits < ::ShapeType>
-      : IDL::common_traits< ::ShapeType>
+    struct traits <::ShapeType>
+      : IDL::common_traits<::ShapeType>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -187,20 +187,20 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::ShapeType, OStrm_>;
+    struct formatter<::ShapeType, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::ShapeType>::__Writer<Fmt>);
+        IDL::traits<::ShapeType>::__Writer<Fmt>);
 #endif // _STRUCT_SHAPETYPE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_ATTRIBUTES_TRAITS_)
 #define _STRUCT_ATTRIBUTES_TRAITS_
     template<>
-    struct traits < ::Attributes>
-      : IDL::common_traits< ::Attributes>
+    struct traits <::Attributes>
+      : IDL::common_traits<::Attributes>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -215,12 +215,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Attributes, OStrm_>;
+    struct formatter<::Attributes, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Attributes>::__Writer<Fmt>);
+        IDL::traits<::Attributes>::__Writer<Fmt>);
 #endif // _STRUCT_ATTRIBUTES_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -230,14 +230,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_AFA29D1C2FA960270DBBBC2006AE6A51_TRAITS_DECL_
 
     template<>
-    struct traits < ::ShapeTypeSeq>
-      : IDL::common_traits< ::ShapeTypeSeq>
+    struct traits <::ShapeTypeSeq>
+      : IDL::common_traits<::ShapeTypeSeq>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::ShapeType>;
+      using element_traits = IDL::traits<::ShapeType>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -254,16 +254,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::ShapeTypeSeq>::__Writer<Fmt> w)
+        IDL::traits<::ShapeTypeSeq>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::ShapeTypeSeq>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::ShapeTypeSeq>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::ShapeTypeSeq, OStrm_>,
+                            formatter<::ShapeTypeSeq, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::ShapeTypeSeq>::write_on (
+      return IDL::traits<::ShapeTypeSeq>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -280,7 +280,7 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::ShapeType, OStrm_>
+    struct formatter<::ShapeType, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -288,10 +288,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "ShapeType"
             << '{'
-            << "color=" << IDL::traits< std::string>::write(val_.color ())
-            << ",x=" << IDL::traits< int32_t>::write(val_.x ())
-            << ",y=" << IDL::traits< int32_t>::write(val_.y ())
-            << ",shapesize=" << IDL::traits< int32_t>::write(val_.shapesize ())
+            << "color=" << IDL::traits<std::string>::write(val_.color ())
+            << ",x=" << IDL::traits<int32_t>::write(val_.x ())
+            << ",y=" << IDL::traits<int32_t>::write(val_.y ())
+            << ",shapesize=" << IDL::traits<int32_t>::write(val_.shapesize ())
             << '}';
         return os_;
       }
@@ -300,23 +300,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::ShapeType>::__Writer<Fmt> w)
+        IDL::traits<::ShapeType>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::ShapeType>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::ShapeType>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::ShapeType, OStrm_>,
+                            formatter<::ShapeType, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::ShapeType>::write_on (
+      return IDL::traits<::ShapeType>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Attributes, OStrm_>
+    struct formatter<::Attributes, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -324,9 +324,9 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Attributes"
             << '{'
-            << "shape=" << IDL::traits< std::string>::write(val_.shape ())
-            << ",color=" << IDL::traits< std::string>::write(val_.color ())
-            << ",speed=" << IDL::traits< float>::write(val_.speed ())
+            << "shape=" << IDL::traits<std::string>::write(val_.shape ())
+            << ",color=" << IDL::traits<std::string>::write(val_.color ())
+            << ",speed=" << IDL::traits<float>::write(val_.speed ())
             << '}';
         return os_;
       }
@@ -335,16 +335,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Attributes>::__Writer<Fmt> w)
+        IDL::traits<::Attributes>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Attributes>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Attributes>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Attributes, OStrm_>,
+                            formatter<::Attributes, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Attributes>::write_on (
+      return IDL::traits<::Attributes>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -396,7 +396,7 @@ operator<< (
     std::ostream& strm,
     const ::ShapeType& _v)
 {
-  return IDL::traits< ::ShapeType>::write_on (strm, _v);
+  return IDL::traits<::ShapeType>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -405,7 +405,7 @@ operator<< (
     std::ostream& strm,
     const ::Attributes& _v)
 {
-  return IDL::traits< ::Attributes>::write_on (strm, _v);
+  return IDL::traits<::Attributes>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -418,7 +418,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::ShapeTypeSeq& _v)
 {
-  return IDL::traits< ::ShapeTypeSeq>::write_on (strm, _v);
+  return IDL::traits<::ShapeTypeSeq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AFA29D1C2FA960270DBBBC2006AE6A51_DECL_
@@ -430,6 +430,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BHAJGJCF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EFACEEDA_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DEJFHJGH_INCLUDED__
-#define __RIDL_TESTC_H_DEJFHJGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JCEFECIB_INCLUDED__
+#define __RIDL_TESTC_H_JCEFECIB_INCLUDED__
 
 #pragma once
 
@@ -52,19 +52,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template <>
-    struct valuetype_traits< ::Example>
+    struct valuetype_traits<::Example>
     {
       using base_type = ::Example;
       /// Strong reference type
-      using ref_type = valuetype_reference< ::Example>;
+      using ref_type = valuetype_reference<::Example>;
       /// Weak reference type
-      using weak_ref_type = weak_valuetype_reference< ::Example>;
+      using weak_ref_type = weak_valuetype_reference<::Example>;
       using obv_type = ::obv::Example;
       using factory_type = CORBA::ValueFactoryBase;
       using factory_ref_type = IDL::traits<CORBA::ValueFactoryBase>::ref_type;
       using weak_factory_ref_type = IDL::traits<CORBA::ValueFactoryBase>::weak_ref_type;
       template <typename _Tp1, typename = typename
-          std::enable_if<std::is_convertible< ::Example*, _Tp1*>::value>::type>
+          std::enable_if<std::is_convertible<::Example*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
@@ -72,7 +72,7 @@ namespace TAOX11_NAMESPACE
 
       template <typename TInst = ::Example,
                 typename = typename
-                  std::enable_if<std::is_base_of< ::Example, TInst>::value>::type,
+                  std::enable_if<std::is_base_of<::Example, TInst>::value>::type,
                 typename ...Args>
       inline static ref_type make_reference(Args&& ...args)
       {
@@ -84,14 +84,14 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::Example>
-      : public IDL::common_byval_traits<CORBA::valuetype_reference< ::Example>>,
-        public CORBA::valuetype_traits < ::Example>
+    struct traits <::Example>
+      : public IDL::common_byval_traits<CORBA::valuetype_reference<::Example>>,
+        public CORBA::valuetype_traits <::Example>
     {
       using is_abstract = std::false_type;
       using is_truncatable = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::Example, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::Example, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -326,19 +326,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::A>::shared_ptr_type
-    object_traits< ::A>::lock_shared (::A* p);
+    object_traits<::A>::shared_ptr_type
+    object_traits<::A>::lock_shared (::A* p);
     template<>
-    object_traits< ::A>::ref_type
-    object_traits< ::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::A>::ref_type
+    object_traits<::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::A> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::A>>,
-      public CORBA::object_traits < ::A>
+    struct traits <::A> :
+      public IDL::common_byval_traits <CORBA::object_reference <::A>>,
+      public CORBA::object_traits <::A>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -347,7 +347,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::A, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::A, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -427,16 +427,16 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-     object_traits< ::Val_init>::shared_ptr_type
-    object_traits< ::Val_init>::lock_shared (::Val_init*);
+     object_traits<::Val_init>::shared_ptr_type
+    object_traits<::Val_init>::lock_shared (::Val_init*);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::Val_init> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::Val_init>>,
-      public CORBA::object_traits < ::Val_init>
+    struct traits <::Val_init> :
+      public IDL::common_byval_traits <CORBA::object_reference <::Val_init>>,
+      public CORBA::object_traits <::Val_init>
     {
       using is_abstract = std::false_type;
       using is_local = std::true_type;
@@ -446,19 +446,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template <>
-    struct valuetype_traits< ::Val>
+    struct valuetype_traits<::Val>
     {
       using base_type = ::Val;
       /// Strong reference type
-      using ref_type = valuetype_reference< ::Val>;
+      using ref_type = valuetype_reference<::Val>;
       /// Weak reference type
-      using weak_ref_type = weak_valuetype_reference< ::Val>;
+      using weak_ref_type = weak_valuetype_reference<::Val>;
       using obv_type = ::obv::Val;
       using factory_type = ::Val_init;
       using factory_ref_type = TAOX11_IDL::traits< ::Val_init>::ref_type;
       using weak_factory_ref_type = TAOX11_IDL::traits< ::Val_init>::weak_ref_type;
       template <typename _Tp1, typename = typename
-          std::enable_if<std::is_convertible< ::Val*, _Tp1*>::value>::type>
+          std::enable_if<std::is_convertible<::Val*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
@@ -466,7 +466,7 @@ namespace TAOX11_NAMESPACE
 
       template <typename TInst = ::Val,
                 typename = typename
-                  std::enable_if<std::is_base_of< ::Val, TInst>::value>::type,
+                  std::enable_if<std::is_base_of<::Val, TInst>::value>::type,
                 typename ...Args>
       inline static ref_type make_reference(Args&& ...args)
       {
@@ -478,14 +478,14 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::Val>
-      : public IDL::common_byval_traits<CORBA::valuetype_reference< ::Val>>,
-        public CORBA::valuetype_traits < ::Val>
+    struct traits <::Val>
+      : public IDL::common_byval_traits<CORBA::valuetype_reference<::Val>>,
+        public CORBA::valuetype_traits <::Val>
     {
       using is_abstract = std::false_type;
       using is_truncatable = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::Val, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::Val, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -712,19 +712,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    struct valuetype_traits< ::StringValue>
+    struct valuetype_traits<::StringValue>
     {
       /// Strong reference type
-      using ref_type = valuetype_reference< ::StringValue>;
+      using ref_type = valuetype_reference<::StringValue>;
       /// Weak reference type
-      using weak_ref_type = weak_valuetype_reference< ::StringValue>;
+      using weak_ref_type = weak_valuetype_reference<::StringValue>;
 
       static ref_type narrow (valuetype_reference<ValueBase>);
 
       template <typename ...Args>
       inline static ref_type make_reference(Args&& ...args)
       {
-        return TAOX11_CORBA::make_reference< ::StringValue> (std::forward<Args> (args)...);
+        return TAOX11_CORBA::make_reference<::StringValue> (std::forward<Args> (args)...);
       }
     };
   } // namespace CORBA
@@ -732,14 +732,14 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::StringValue>
-      : public IDL::common_byval_traits<CORBA::valuetype_reference< ::StringValue>>,
-        public CORBA::valuetype_traits < ::StringValue>
+    struct traits <::StringValue>
+      : public IDL::common_byval_traits<CORBA::valuetype_reference<::StringValue>>,
+        public CORBA::valuetype_traits <::StringValue>
     {
       /// IDL::traits for the boxed type of the valuebox
-      using boxed_traits = IDL::traits< std::string>;
+      using boxed_traits = IDL::traits<std::string>;
 
-      template <typename OStrm_, typename Formatter = formatter< ::StringValue, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::StringValue, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -756,13 +756,13 @@ namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/valuebox_def
 class StringValue final
-  : public TAOX11_CORBA::Valuebox_T< std::string>
+  : public TAOX11_CORBA::Valuebox_T<std::string>
 {
 public:
   /// @name Member types
   //@{
-  using _traits_type = TAOX11_CORBA::valuetype_traits< StringValue>;
-  using _ref_type = TAOX11_CORBA::valuetype_reference< StringValue>;
+  using _traits_type = TAOX11_CORBA::valuetype_traits<StringValue>;
+  using _ref_type = TAOX11_CORBA::valuetype_reference<StringValue>;
   //@}
 
   void _value (const std::string& v) { this->value_ = v; }
@@ -784,7 +784,7 @@ protected:
   StringValue (const StringValue&) = default;
   StringValue (StringValue&&) = default;
   explicit StringValue (std::string v)
-    : TAOX11_CORBA::Valuebox_T< std::string> (std::move(v))
+    : TAOX11_CORBA::Valuebox_T<std::string> (std::move(v))
   {}
   ~StringValue () override = default;
   StringValue& operator= (const StringValue&) = delete;
@@ -800,8 +800,8 @@ namespace TAOX11_NAMESPACE
 {
   namespace CORBA
   {
-    inline valuetype_traits< ::StringValue>::ref_type
-    valuetype_traits< ::StringValue>::narrow (
+    inline valuetype_traits<::StringValue>::ref_type
+    valuetype_traits<::StringValue>::narrow (
           valuetype_reference<ValueBase> vbref)
     {
       return ref_type::_narrow (vbref);
@@ -827,19 +827,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::X>::shared_ptr_type
-    object_traits< ::X>::lock_shared (::X* p);
+    object_traits<::X>::shared_ptr_type
+    object_traits<::X>::lock_shared (::X* p);
     template<>
-    object_traits< ::X>::ref_type
-    object_traits< ::X>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::X>::ref_type
+    object_traits<::X>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::X> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::X>>,
-      public CORBA::object_traits < ::X>
+    struct traits <::X> :
+      public IDL::common_byval_traits <CORBA::object_reference <::X>>,
+      public CORBA::object_traits <::X>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -848,7 +848,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::X, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::X, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -933,19 +933,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    struct valuetype_traits< ::ColorValue>
+    struct valuetype_traits<::ColorValue>
     {
       /// Strong reference type
-      using ref_type = valuetype_reference< ::ColorValue>;
+      using ref_type = valuetype_reference<::ColorValue>;
       /// Weak reference type
-      using weak_ref_type = weak_valuetype_reference< ::ColorValue>;
+      using weak_ref_type = weak_valuetype_reference<::ColorValue>;
 
       static ref_type narrow (valuetype_reference<ValueBase>);
 
       template <typename ...Args>
       inline static ref_type make_reference(Args&& ...args)
       {
-        return TAOX11_CORBA::make_reference< ::ColorValue> (std::forward<Args> (args)...);
+        return TAOX11_CORBA::make_reference<::ColorValue> (std::forward<Args> (args)...);
       }
     };
   } // namespace CORBA
@@ -953,14 +953,14 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::ColorValue>
-      : public IDL::common_byval_traits<CORBA::valuetype_reference< ::ColorValue>>,
-        public CORBA::valuetype_traits < ::ColorValue>
+    struct traits <::ColorValue>
+      : public IDL::common_byval_traits<CORBA::valuetype_reference<::ColorValue>>,
+        public CORBA::valuetype_traits <::ColorValue>
     {
       /// IDL::traits for the boxed type of the valuebox
-      using boxed_traits = IDL::traits< ::Color>;
+      using boxed_traits = IDL::traits<::Color>;
 
-      template <typename OStrm_, typename Formatter = formatter< ::ColorValue, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::ColorValue, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -977,13 +977,13 @@ namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/valuebox_def
 class ColorValue final
-  : public TAOX11_CORBA::Valuebox_T< ::Color>
+  : public TAOX11_CORBA::Valuebox_T<::Color>
 {
 public:
   /// @name Member types
   //@{
-  using _traits_type = TAOX11_CORBA::valuetype_traits< ColorValue>;
-  using _ref_type = TAOX11_CORBA::valuetype_reference< ColorValue>;
+  using _traits_type = TAOX11_CORBA::valuetype_traits<ColorValue>;
+  using _ref_type = TAOX11_CORBA::valuetype_reference<ColorValue>;
   //@}
 
   void _value (::Color v) { this->value_ = v; }
@@ -1004,7 +1004,7 @@ protected:
   ColorValue (const ColorValue&) = default;
   ColorValue (ColorValue&&) = default;
   explicit ColorValue (::Color v)
-    : TAOX11_CORBA::Valuebox_T< ::Color> (std::move(v))
+    : TAOX11_CORBA::Valuebox_T<::Color> (std::move(v))
   {}
   ~ColorValue () override = default;
   ColorValue& operator= (const ColorValue&) = delete;
@@ -1020,8 +1020,8 @@ namespace TAOX11_NAMESPACE
 {
   namespace CORBA
   {
-    inline valuetype_traits< ::ColorValue>::ref_type
-    valuetype_traits< ::ColorValue>::narrow (
+    inline valuetype_traits<::ColorValue>::ref_type
+    valuetype_traits<::ColorValue>::narrow (
           valuetype_reference<ValueBase> vbref)
     {
       return ref_type::_narrow (vbref);
@@ -1088,19 +1088,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::A1>::shared_ptr_type
-    object_traits< ::A1>::lock_shared (::A1* p);
+    object_traits<::A1>::shared_ptr_type
+    object_traits<::A1>::lock_shared (::A1* p);
     template<>
-    object_traits< ::A1>::ref_type
-    object_traits< ::A1>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::A1>::ref_type
+    object_traits<::A1>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::A1> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::A1>>,
-      public CORBA::object_traits < ::A1>
+    struct traits <::A1> :
+      public IDL::common_byval_traits <CORBA::object_reference <::A1>>,
+      public CORBA::object_traits <::A1>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -1109,7 +1109,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::A1, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::A1, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -1188,19 +1188,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template <>
-    struct valuetype_traits< ::B>
+    struct valuetype_traits<::B>
     {
       using base_type = ::B;
       /// Strong reference type
-      using ref_type = valuetype_reference< ::B>;
+      using ref_type = valuetype_reference<::B>;
       /// Weak reference type
-      using weak_ref_type = weak_valuetype_reference< ::B>;
+      using weak_ref_type = weak_valuetype_reference<::B>;
       using obv_type = ::obv::B;
       using factory_type = CORBA::ValueFactoryBase;
       using factory_ref_type = IDL::traits<CORBA::ValueFactoryBase>::ref_type;
       using weak_factory_ref_type = IDL::traits<CORBA::ValueFactoryBase>::weak_ref_type;
       template <typename _Tp1, typename = typename
-          std::enable_if<std::is_convertible< ::B*, _Tp1*>::value>::type>
+          std::enable_if<std::is_convertible<::B*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
@@ -1208,7 +1208,7 @@ namespace TAOX11_NAMESPACE
 
       template <typename TInst = ::B,
                 typename = typename
-                  std::enable_if<std::is_base_of< ::B, TInst>::value>::type,
+                  std::enable_if<std::is_base_of<::B, TInst>::value>::type,
                 typename ...Args>
       inline static ref_type make_reference(Args&& ...args)
       {
@@ -1220,14 +1220,14 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::B>
-      : public IDL::common_byval_traits<CORBA::valuetype_reference< ::B>>,
-        public CORBA::valuetype_traits < ::B>
+    struct traits <::B>
+      : public IDL::common_byval_traits<CORBA::valuetype_reference<::B>>,
+        public CORBA::valuetype_traits <::B>
     {
       using is_abstract = std::false_type;
       using is_truncatable = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::B, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::B, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -1376,16 +1376,16 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-     object_traits< ::V_init>::shared_ptr_type
-    object_traits< ::V_init>::lock_shared (::V_init*);
+     object_traits<::V_init>::shared_ptr_type
+    object_traits<::V_init>::lock_shared (::V_init*);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::V_init> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::V_init>>,
-      public CORBA::object_traits < ::V_init>
+    struct traits <::V_init> :
+      public IDL::common_byval_traits <CORBA::object_reference <::V_init>>,
+      public CORBA::object_traits <::V_init>
     {
       using is_abstract = std::false_type;
       using is_local = std::true_type;
@@ -1395,19 +1395,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template <>
-    struct valuetype_traits< ::V>
+    struct valuetype_traits<::V>
     {
       using base_type = ::V;
       /// Strong reference type
-      using ref_type = valuetype_reference< ::V>;
+      using ref_type = valuetype_reference<::V>;
       /// Weak reference type
-      using weak_ref_type = weak_valuetype_reference< ::V>;
+      using weak_ref_type = weak_valuetype_reference<::V>;
       using obv_type = ::obv::V;
       using factory_type = ::V_init;
       using factory_ref_type = TAOX11_IDL::traits< ::V_init>::ref_type;
       using weak_factory_ref_type = TAOX11_IDL::traits< ::V_init>::weak_ref_type;
       template <typename _Tp1, typename = typename
-          std::enable_if<std::is_convertible< ::V*, _Tp1*>::value>::type>
+          std::enable_if<std::is_convertible<::V*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
       {
         return ref_type::_narrow (std::move(base));
@@ -1415,7 +1415,7 @@ namespace TAOX11_NAMESPACE
 
       template <typename TInst = ::V,
                 typename = typename
-                  std::enable_if<std::is_base_of< ::V, TInst>::value>::type,
+                  std::enable_if<std::is_base_of<::V, TInst>::value>::type,
                 typename ...Args>
       inline static ref_type make_reference(Args&& ...args)
       {
@@ -1427,14 +1427,14 @@ namespace TAOX11_NAMESPACE
   namespace IDL
   {
     template<>
-    struct traits < ::V>
-      : public IDL::common_byval_traits<CORBA::valuetype_reference< ::V>>,
-        public CORBA::valuetype_traits < ::V>
+    struct traits <::V>
+      : public IDL::common_byval_traits<CORBA::valuetype_reference<::V>>,
+        public CORBA::valuetype_traits <::V>
     {
       using is_abstract = std::false_type;
       using is_truncatable = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::V, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::V, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -1580,12 +1580,12 @@ namespace TAOX11_NAMESPACE
 #if !defined (_VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_)
 #define _VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Example, OStrm_>;
+    struct formatter<::Example, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Example>::__Writer<Fmt>);
+        IDL::traits<::Example>::__Writer<Fmt>);
 #endif // !_VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/array_idl_traits
@@ -1595,17 +1595,17 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_E53446397587C4EBA409F3A2EFDC9394_TRAITS_DECL_
 
     template<>
-    struct traits < ::Bytes>
-      : IDL::common_traits< ::Bytes>
+    struct traits <::Bytes>
+      : IDL::common_traits<::Bytes>
     {
       /// IDL::traits<> for the element of the array
-      using element_traits = IDL::traits< uint8_t>;
+      using element_traits = IDL::traits<uint8_t>;
       /// std::integral_constant type of value_type uint32_t
       /// indicating the number of dimensions of the array
       using dimensions = std::integral_constant<uint32_t, 1>;
 
       template <typename OStrm_,
-                typename Formatter = formatter< ::Bytes, OStrm_>>
+                typename Formatter = formatter<::Bytes, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -1620,16 +1620,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Bytes>::__Writer<Fmt> w)
+        IDL::traits<::Bytes>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Bytes>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Bytes>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Bytes, OStrm_>,
+                            formatter<::Bytes, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Bytes>::write_on (
+      return IDL::traits<::Bytes>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -1640,8 +1640,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_S_TRAITS_)
 #define _STRUCT_S_TRAITS_
     template<>
-    struct traits < ::S>
-      : IDL::common_traits< ::S>
+    struct traits <::S>
+      : IDL::common_traits<::S>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -1656,19 +1656,19 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::S, OStrm_>;
+    struct formatter<::S, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::S>::__Writer<Fmt>);
+        IDL::traits<::S>::__Writer<Fmt>);
 #endif // _STRUCT_S_TRAITS_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_A_TRAITS_DECL_)
 #define _INTF_FMT_A_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::A, OStrm_>
+    struct formatter<::A, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -1678,26 +1678,26 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::A>::__Writer<Fmt>);
+        IDL::traits<::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_VAL_IDL_TRAITS_DECL_)
 #define _VALUETYPE_VAL_IDL_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Val, OStrm_>;
+    struct formatter<::Val, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Val>::__Writer<Fmt>);
+        IDL::traits<::Val>::__Writer<Fmt>);
 #endif // !_VALUETYPE_VAL_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuebox_idl_traits
     template <typename OStrm_>
-    struct formatter< ::StringValue, OStrm_>
+    struct formatter<::StringValue, OStrm_>
     {
-      using boxed_traits = typename IDL::traits< ::StringValue>::boxed_traits;
+      using boxed_traits = typename IDL::traits<::StringValue>::boxed_traits;
 
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1711,16 +1711,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::StringValue>::__Writer<Fmt> w)
+        IDL::traits<::StringValue>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::StringValue>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::StringValue>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::StringValue, OStrm_>,
+                            formatter<::StringValue, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::StringValue>::write_on (
+      return IDL::traits<::StringValue>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -1729,7 +1729,7 @@ namespace TAOX11_NAMESPACE
 #if !defined (_INTF_FMT_X_TRAITS_DECL_)
 #define _INTF_FMT_X_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::X, OStrm_>
+    struct formatter<::X, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -1739,13 +1739,13 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::X>::__Writer<Fmt>);
+        IDL::traits<::X>::__Writer<Fmt>);
 #endif // !_INTF_FMT_X_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Color>
-      : IDL::common_byval_traits< ::Color>
+    struct traits <::Color>
+      : IDL::common_byval_traits<::Color>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -1760,7 +1760,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Color, OStrm_>
+    struct formatter<::Color, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1779,25 +1779,25 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Color>::__Writer<Fmt> w)
+        IDL::traits<::Color>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Color>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Color>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Color, OStrm_>,
+                            formatter<::Color, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Color>::write_on (
+      return IDL::traits<::Color>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuebox_idl_traits
     template <typename OStrm_>
-    struct formatter< ::ColorValue, OStrm_>
+    struct formatter<::ColorValue, OStrm_>
     {
-      using boxed_traits = typename IDL::traits< ::ColorValue>::boxed_traits;
+      using boxed_traits = typename IDL::traits<::ColorValue>::boxed_traits;
 
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1811,16 +1811,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::ColorValue>::__Writer<Fmt> w)
+        IDL::traits<::ColorValue>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::ColorValue>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::ColorValue>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::ColorValue, OStrm_>,
+                            formatter<::ColorValue, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::ColorValue>::write_on (
+      return IDL::traits<::ColorValue>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -1829,8 +1829,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_COLORVALUE2_TRAITS_)
 #define _STRUCT_COLORVALUE2_TRAITS_
     template<>
-    struct traits < ::ColorValue2>
-      : IDL::common_traits< ::ColorValue2>
+    struct traits <::ColorValue2>
+      : IDL::common_traits<::ColorValue2>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -1845,19 +1845,19 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::ColorValue2, OStrm_>;
+    struct formatter<::ColorValue2, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::ColorValue2>::__Writer<Fmt>);
+        IDL::traits<::ColorValue2>::__Writer<Fmt>);
 #endif // _STRUCT_COLORVALUE2_TRAITS_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_A1_TRAITS_DECL_)
 #define _INTF_FMT_A1_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::A1, OStrm_>
+    struct formatter<::A1, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -1867,31 +1867,31 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::A1>::__Writer<Fmt>);
+        IDL::traits<::A1>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A1_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_B_IDL_TRAITS_DECL_)
 #define _VALUETYPE_B_IDL_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::B, OStrm_>;
+    struct formatter<::B, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::B>::__Writer<Fmt>);
+        IDL::traits<::B>::__Writer<Fmt>);
 #endif // !_VALUETYPE_B_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_V_IDL_TRAITS_DECL_)
 #define _VALUETYPE_V_IDL_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::V, OStrm_>;
+    struct formatter<::V, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::V>::__Writer<Fmt>);
+        IDL::traits<::V>::__Writer<Fmt>);
 #endif // !_VALUETYPE_V_IDL_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -1904,7 +1904,7 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Example, OStrm_>
+    struct formatter<::Example, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1912,7 +1912,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Example"
             << '{'
-            << "val2=" << IDL::traits< int32_t>::write(val_->val2 ())
+            << "val2=" << IDL::traits<int32_t>::write(val_->val2 ())
             << '}';
         return os_;
       }
@@ -1921,23 +1921,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Example>::__Writer<Fmt> w)
+        IDL::traits<::Example>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Example>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Example>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Example, OStrm_>,
+                            formatter<::Example, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Example>::write_on (
+      return IDL::traits<::Example>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::S, OStrm_>
+    struct formatter<::S, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1945,7 +1945,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "S"
             << '{'
-            << "value=" << IDL::traits< int32_t>::write(val_.value ())
+            << "value=" << IDL::traits<int32_t>::write(val_.value ())
             << '}';
         return os_;
       }
@@ -1954,16 +1954,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::S>::__Writer<Fmt> w)
+        IDL::traits<::S>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::S>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::S>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::S, OStrm_>,
+                            formatter<::S, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::S>::write_on (
+      return IDL::traits<::S>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -1971,7 +1971,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::A, OStrm_>::operator ()(
+    formatter<::A, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::A>::ref_type val_)
     {
@@ -1984,23 +1984,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::A>::__Writer<Fmt> w)
+        IDL::traits<::A>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::A>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::A>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::A, OStrm_>,
+                            formatter<::A, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::A>::write_on (
+      return IDL::traits<::A>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Val, OStrm_>
+    struct formatter<::Val, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2008,9 +2008,9 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Val"
             << '{'
-            << "t=" << IDL::traits< ::Val>::write(val_->t ())
-            << ",w=" << IDL::traits< ::Bytes>::write(val_->w ())
-            << ",x=" << IDL::traits< std::string>::write(val_->x ())
+            << "t=" << IDL::traits<::Val>::write(val_->t ())
+            << ",w=" << IDL::traits<::Bytes>::write(val_->w ())
+            << ",x=" << IDL::traits<std::string>::write(val_->x ())
             << '}';
         return os_;
       }
@@ -2019,16 +2019,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Val>::__Writer<Fmt> w)
+        IDL::traits<::Val>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Val>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Val>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Val, OStrm_>,
+                            formatter<::Val, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Val>::write_on (
+      return IDL::traits<::Val>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2036,7 +2036,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::X, OStrm_>::operator ()(
+    formatter<::X, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::X>::ref_type val_)
     {
@@ -2049,23 +2049,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::X>::__Writer<Fmt> w)
+        IDL::traits<::X>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::X>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::X>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::X, OStrm_>,
+                            formatter<::X, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::X>::write_on (
+      return IDL::traits<::X>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::ColorValue2, OStrm_>
+    struct formatter<::ColorValue2, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2073,7 +2073,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "ColorValue2"
             << '{'
-            << "col=" << IDL::traits< ::Color>::write(val_.col ())
+            << "col=" << IDL::traits<::Color>::write(val_.col ())
             << '}';
         return os_;
       }
@@ -2082,16 +2082,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::ColorValue2>::__Writer<Fmt> w)
+        IDL::traits<::ColorValue2>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::ColorValue2>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::ColorValue2>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::ColorValue2, OStrm_>,
+                            formatter<::ColorValue2, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::ColorValue2>::write_on (
+      return IDL::traits<::ColorValue2>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2099,7 +2099,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::A1, OStrm_>::operator ()(
+    formatter<::A1, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::A1>::ref_type val_)
     {
@@ -2112,23 +2112,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::A1>::__Writer<Fmt> w)
+        IDL::traits<::A1>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::A1>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::A1>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::A1, OStrm_>,
+                            formatter<::A1, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::A1>::write_on (
+      return IDL::traits<::A1>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::B, OStrm_>
+    struct formatter<::B, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2136,7 +2136,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "B"
             << '{'
-            << "data=" << IDL::traits< int16_t>::write(val_->data ())
+            << "data=" << IDL::traits<int16_t>::write(val_->data ())
             << '}';
         return os_;
       }
@@ -2145,23 +2145,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::B>::__Writer<Fmt> w)
+        IDL::traits<::B>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::B>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::B>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::B, OStrm_>,
+                            formatter<::B, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::B>::write_on (
+      return IDL::traits<::B>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::V, OStrm_>
+    struct formatter<::V, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2176,16 +2176,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::V>::__Writer<Fmt> w)
+        IDL::traits<::V>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::V>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::V>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::V, OStrm_>,
+                            formatter<::V, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::V>::write_on (
+      return IDL::traits<::V>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2222,7 +2222,7 @@ operator<< (
     std::ostream& strm,
     IDL::traits< ::Example>::ref_type _v)
 {
-  return IDL::traits< ::Example>::write_on (strm, _v);
+  return IDL::traits<::Example>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/array_os
@@ -2235,7 +2235,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Bytes& _v)
 {
-  return IDL::traits< ::Bytes>::write_on (strm, _v);
+  return IDL::traits<::Bytes>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_E53446397587C4EBA409F3A2EFDC9394_DECL_
@@ -2246,7 +2246,7 @@ operator<< (
     std::ostream& strm,
     const ::S& _v)
 {
-  return IDL::traits< ::S>::write_on (strm, _v);
+  return IDL::traits<::S>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
@@ -2254,7 +2254,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A>::ref_type _v)
 {
-  return IDL::traits< ::A>::write_on (strm, std::move(_v));
+  return IDL::traits<::A>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/valuetype_os
@@ -2263,7 +2263,7 @@ operator<< (
     std::ostream& strm,
     IDL::traits< ::Val>::ref_type _v)
 {
-  return IDL::traits< ::Val>::write_on (strm, _v);
+  return IDL::traits<::Val>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/valuebox_os
@@ -2272,7 +2272,7 @@ operator<< (
     std::ostream& strm,
     IDL::traits< ::StringValue>::ref_type _v)
 {
-  return IDL::traits< ::StringValue>::write_on (strm, _v);
+  return IDL::traits<::StringValue>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
@@ -2280,7 +2280,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::X>::ref_type _v)
 {
-  return IDL::traits< ::X>::write_on (strm, std::move(_v));
+  return IDL::traits<::X>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/enum_os
@@ -2288,7 +2288,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Color _v)
 {
-  return IDL::traits< ::Color>::write_on (strm, _v);
+  return IDL::traits<::Color>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/valuebox_os
@@ -2297,7 +2297,7 @@ operator<< (
     std::ostream& strm,
     IDL::traits< ::ColorValue>::ref_type _v)
 {
-  return IDL::traits< ::ColorValue>::write_on (strm, _v);
+  return IDL::traits<::ColorValue>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -2306,7 +2306,7 @@ operator<< (
     std::ostream& strm,
     const ::ColorValue2& _v)
 {
-  return IDL::traits< ::ColorValue2>::write_on (strm, _v);
+  return IDL::traits<::ColorValue2>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
@@ -2314,7 +2314,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A1>::ref_type _v)
 {
-  return IDL::traits< ::A1>::write_on (strm, std::move(_v));
+  return IDL::traits<::A1>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/valuetype_os
@@ -2323,7 +2323,7 @@ operator<< (
     std::ostream& strm,
     IDL::traits< ::B>::ref_type _v)
 {
-  return IDL::traits< ::B>::write_on (strm, _v);
+  return IDL::traits<::B>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/valuetype_os
@@ -2332,7 +2332,7 @@ operator<< (
     std::ostream& strm,
     IDL::traits< ::V>::ref_type _v)
 {
-  return IDL::traits< ::V>::write_on (strm, _v);
+  return IDL::traits<::V>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/post
@@ -2342,6 +2342,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DEJFHJGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JCEFECIB_INCLUDED__ */
 
 // -*- END -*-

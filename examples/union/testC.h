@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DIIGCDCE_INCLUDED__
-#define __RIDL_TESTC_H_DIIGCDCE_INCLUDED__
+#ifndef __RIDL_TESTC_H_BHABFJFB_INCLUDED__
+#define __RIDL_TESTC_H_BHABFJFB_INCLUDED__
 
 #pragma once
 
@@ -404,19 +404,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::A>::shared_ptr_type
-    object_traits< ::Test::A>::lock_shared (::Test::A* p);
+    object_traits<::Test::A>::shared_ptr_type
+    object_traits<::Test::A>::lock_shared (::Test::A* p);
     template<>
-    object_traits< ::Test::A>::ref_type
-    object_traits< ::Test::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::Test::A>::ref_type
+    object_traits<::Test::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::Test::A> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::Test::A>>,
-      public CORBA::object_traits < ::Test::A>
+    struct traits <::Test::A> :
+      public IDL::common_byval_traits <CORBA::object_reference <::Test::A>>,
+      public CORBA::object_traits <::Test::A>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -425,7 +425,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::Test::A, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::Test::A, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -575,19 +575,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Foo>::shared_ptr_type
-    object_traits< ::Test::Foo>::lock_shared (::Test::Foo* p);
+    object_traits<::Test::Foo>::shared_ptr_type
+    object_traits<::Test::Foo>::lock_shared (::Test::Foo* p);
     template<>
-    object_traits< ::Test::Foo>::ref_type
-    object_traits< ::Test::Foo>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::Test::Foo>::ref_type
+    object_traits<::Test::Foo>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::Test::Foo> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Foo>>,
-      public CORBA::object_traits < ::Test::Foo>
+    struct traits <::Test::Foo> :
+      public IDL::common_byval_traits <CORBA::object_reference <::Test::Foo>>,
+      public CORBA::object_traits <::Test::Foo>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -596,7 +596,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::Test::Foo, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::Test::Foo, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -735,8 +735,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_GLOBAL_TRAITS_)
 #define _STRUCT_GLOBAL_TRAITS_
     template<>
-    struct traits < ::Global>
-      : IDL::common_traits< ::Global>
+    struct traits <::Global>
+      : IDL::common_traits<::Global>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -751,18 +751,18 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Global, OStrm_>;
+    struct formatter<::Global, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Global>::__Writer<Fmt>);
+        IDL::traits<::Global>::__Writer<Fmt>);
 #endif // _STRUCT_GLOBAL_TRAITS_
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Test::DataType>
-      : IDL::common_byval_traits< ::Test::DataType>
+    struct traits <::Test::DataType>
+      : IDL::common_byval_traits<::Test::DataType>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -777,7 +777,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::DataType, OStrm_>
+    struct formatter<::Test::DataType, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -800,16 +800,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::DataType>::__Writer<Fmt> w)
+        IDL::traits<::Test::DataType>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::DataType>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::DataType>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::DataType, OStrm_>,
+                            formatter<::Test::DataType, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::DataType>::write_on (
+      return IDL::traits<::Test::DataType>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -818,8 +818,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_TEST__POINT_TRAITS_)
 #define _STRUCT_TEST__POINT_TRAITS_
     template<>
-    struct traits < ::Test::Point>
-      : IDL::common_traits< ::Test::Point>
+    struct traits <::Test::Point>
+      : IDL::common_traits<::Test::Point>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -834,20 +834,20 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::Point, OStrm_>;
+    struct formatter<::Test::Point, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Point>::__Writer<Fmt>);
+        IDL::traits<::Test::Point>::__Writer<Fmt>);
 #endif // _STRUCT_TEST__POINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST__TRACK_TRAITS_)
 #define _STRUCT_TEST__TRACK_TRAITS_
     template<>
-    struct traits < ::Test::Track>
-      : IDL::common_traits< ::Test::Track>
+    struct traits <::Test::Track>
+      : IDL::common_traits<::Test::Track>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -862,20 +862,20 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::Track, OStrm_>;
+    struct formatter<::Test::Track, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Track>::__Writer<Fmt>);
+        IDL::traits<::Test::Track>::__Writer<Fmt>);
 #endif // _STRUCT_TEST__TRACK_TRAITS_
 
     // generated from c++11/templates/cli/hdr/union_idl_traits
 #if !defined (_UNION_TEST__DATA_TRAITS_)
 #define _UNION_TEST__DATA_TRAITS_
     template<>
-    struct traits < ::Test::Data>
-      : IDL::common_traits< ::Test::Data>
+    struct traits <::Test::Data>
+      : IDL::common_traits<::Test::Data>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -890,20 +890,20 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::Data, OStrm_>;
+    struct formatter<::Test::Data, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Data>::__Writer<Fmt>);
+        IDL::traits<::Test::Data>::__Writer<Fmt>);
 #endif // _UNION_TEST__DATA_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_TEST__S_TRAITS_)
 #define _STRUCT_TEST__S_TRAITS_
     template<>
-    struct traits < ::Test::S>
-      : IDL::common_traits< ::Test::S>
+    struct traits <::Test::S>
+      : IDL::common_traits<::Test::S>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -918,19 +918,19 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::S, OStrm_>;
+    struct formatter<::Test::S, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::S>::__Writer<Fmt>);
+        IDL::traits<::Test::S>::__Writer<Fmt>);
 #endif // _STRUCT_TEST__S_TRAITS_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST__A_TRAITS_DECL_)
 #define _INTF_FMT_TEST__A_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Test::A, OStrm_>
+    struct formatter<::Test::A, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -940,15 +940,15 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::A>::__Writer<Fmt>);
+        IDL::traits<::Test::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__A_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/union_idl_traits
 #if !defined (_UNION_TEST__U_TRAITS_)
 #define _UNION_TEST__U_TRAITS_
     template<>
-    struct traits < ::Test::U>
-      : IDL::common_traits< ::Test::U>
+    struct traits <::Test::U>
+      : IDL::common_traits<::Test::U>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -963,19 +963,19 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::U, OStrm_>;
+    struct formatter<::Test::U, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::U>::__Writer<Fmt>);
+        IDL::traits<::Test::U>::__Writer<Fmt>);
 #endif // _UNION_TEST__U_TRAITS_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST__FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST__FOO_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Test::Foo, OStrm_>
+    struct formatter<::Test::Foo, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -985,14 +985,14 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Foo>::__Writer<Fmt>);
+        IDL::traits<::Test::Foo>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__FOO_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST__A_TRAITS_DECL_)
 #define _INTF_FMT_TEST__A_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Test::A, OStrm_>
+    struct formatter<::Test::A, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -1002,7 +1002,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::A>::__Writer<Fmt>);
+        IDL::traits<::Test::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__A_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -1015,7 +1015,7 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Global, OStrm_>
+    struct formatter<::Global, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1023,7 +1023,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Global"
             << '{'
-            << "x=" << IDL::traits< int32_t>::write(val_.x ())
+            << "x=" << IDL::traits<int32_t>::write(val_.x ())
             << '}';
         return os_;
       }
@@ -1032,23 +1032,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Global>::__Writer<Fmt> w)
+        IDL::traits<::Global>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Global>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Global>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Global, OStrm_>,
+                            formatter<::Global, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Global>::write_on (
+      return IDL::traits<::Global>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Test::Point, OStrm_>
+    struct formatter<::Test::Point, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1056,8 +1056,8 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Test::Point"
             << '{'
-            << "x=" << IDL::traits< int32_t>::write(val_.x ())
-            << ",y=" << IDL::traits< int32_t>::write(val_.y ())
+            << "x=" << IDL::traits<int32_t>::write(val_.x ())
+            << ",y=" << IDL::traits<int32_t>::write(val_.y ())
             << '}';
         return os_;
       }
@@ -1066,23 +1066,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Point>::__Writer<Fmt> w)
+        IDL::traits<::Test::Point>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Point>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Point>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Point, OStrm_>,
+                            formatter<::Test::Point, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Point>::write_on (
+      return IDL::traits<::Test::Point>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Test::Track, OStrm_>
+    struct formatter<::Test::Track, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1090,8 +1090,8 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Test::Track"
             << '{'
-            << "id=" << IDL::traits< int32_t>::write(val_.id ())
-            << ",p=" << IDL::traits< ::Test::Point>::write(val_.p ())
+            << "id=" << IDL::traits<int32_t>::write(val_.id ())
+            << ",p=" << IDL::traits<::Test::Point>::write(val_.p ())
             << '}';
         return os_;
       }
@@ -1100,23 +1100,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Track>::__Writer<Fmt> w)
+        IDL::traits<::Test::Track>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Track>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Track>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Track, OStrm_>,
+                            formatter<::Test::Track, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Track>::write_on (
+      return IDL::traits<::Test::Track>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/union_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Test::Data, OStrm_>
+    struct formatter<::Test::Data, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1127,32 +1127,32 @@ namespace TAOX11_NAMESPACE
         {
           case ::Test::DataType::dtLong:
           {
-            os_ << "longData=" << IDL::traits< int32_t>::write (val_.longData ());
+            os_ << "longData=" << IDL::traits<int32_t>::write (val_.longData ());
           }
           break;
           case ::Test::DataType::dtShort:
           {
-            os_ << "shortData=" << IDL::traits< int16_t>::write (val_.shortData ());
+            os_ << "shortData=" << IDL::traits<int16_t>::write (val_.shortData ());
           }
           break;
           case ::Test::DataType::dtString:
           {
-            os_ << "stringData=" << IDL::traits< std::string>::write (val_.stringData ());
+            os_ << "stringData=" << IDL::traits<std::string>::write (val_.stringData ());
           }
           break;
           case ::Test::DataType::dtPoint:
           {
-            os_ << "pointData=" << IDL::traits< ::Test::Point>::write (val_.pointData ());
+            os_ << "pointData=" << IDL::traits<::Test::Point>::write (val_.pointData ());
           }
           break;
           case ::Test::DataType::dtTrack:
           {
-            os_ << "trackData=" << IDL::traits< ::Test::Track>::write (val_.trackData ());
+            os_ << "trackData=" << IDL::traits<::Test::Track>::write (val_.trackData ());
           }
           break;
           case ::Test::DataType::dtGlobal:
           {
-            os_ << "globalData=" << IDL::traits< ::Global>::write (val_.globalData ());
+            os_ << "globalData=" << IDL::traits<::Global>::write (val_.globalData ());
           }
           break;
           default:
@@ -1166,23 +1166,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Data>::__Writer<Fmt> w)
+        IDL::traits<::Test::Data>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Data>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Data>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Data, OStrm_>,
+                            formatter<::Test::Data, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Data>::write_on (
+      return IDL::traits<::Test::Data>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Test::S, OStrm_>
+    struct formatter<::Test::S, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1190,7 +1190,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Test::S"
             << '{'
-            << "len=" << IDL::traits< int32_t>::write(val_.len ())
+            << "len=" << IDL::traits<int32_t>::write(val_.len ())
             << '}';
         return os_;
       }
@@ -1199,23 +1199,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::S>::__Writer<Fmt> w)
+        IDL::traits<::Test::S>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::S>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::S>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::S, OStrm_>,
+                            formatter<::Test::S, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::S>::write_on (
+      return IDL::traits<::Test::S>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/union_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Test::U, OStrm_>
+    struct formatter<::Test::U, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -1226,23 +1226,23 @@ namespace TAOX11_NAMESPACE
         {
           case 1:
           {
-            os_ << "x=" << IDL::traits< int32_t>::write (val_.x ());
+            os_ << "x=" << IDL::traits<int32_t>::write (val_.x ());
           }
           break;
           case 2:
           {
-            os_ << "z=" << IDL::traits< std::string>::write (val_.z ());
+            os_ << "z=" << IDL::traits<std::string>::write (val_.z ());
           }
           break;
           case 3:
           case 4:
           {
-            os_ << "w=" << IDL::traits< ::Test::S>::write (val_.w ());
+            os_ << "w=" << IDL::traits<::Test::S>::write (val_.w ());
           }
           break;
           default:
           {
-            os_ << "obj=" << IDL::traits< ::Test::A>::write (val_.obj ());
+            os_ << "obj=" << IDL::traits<::Test::A>::write (val_.obj ());
           }
           break;
         }
@@ -1254,16 +1254,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::U>::__Writer<Fmt> w)
+        IDL::traits<::Test::U>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::U>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::U>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::U, OStrm_>,
+                            formatter<::Test::U, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::U>::write_on (
+      return IDL::traits<::Test::U>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -1271,7 +1271,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::Test::Foo, OStrm_>::operator ()(
+    formatter<::Test::Foo, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::Test::Foo>::ref_type val_)
     {
@@ -1284,16 +1284,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Foo>::__Writer<Fmt> w)
+        IDL::traits<::Test::Foo>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Foo>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Foo>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Foo, OStrm_>,
+                            formatter<::Test::Foo, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Foo>::write_on (
+      return IDL::traits<::Test::Foo>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -1301,7 +1301,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::Test::A, OStrm_>::operator ()(
+    formatter<::Test::A, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::Test::A>::ref_type val_)
     {
@@ -1314,16 +1314,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::A>::__Writer<Fmt> w)
+        IDL::traits<::Test::A>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::A>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::A>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::A, OStrm_>,
+                            formatter<::Test::A, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::A>::write_on (
+      return IDL::traits<::Test::A>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2424,7 +2424,7 @@ operator<< (
     std::ostream& strm,
     const ::Global& _v)
 {
-  return IDL::traits< ::Global>::write_on (strm, _v);
+  return IDL::traits<::Global>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/enum_os
@@ -2432,7 +2432,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Test::DataType _v)
 {
-  return IDL::traits< ::Test::DataType>::write_on (strm, _v);
+  return IDL::traits<::Test::DataType>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -2441,7 +2441,7 @@ operator<< (
     std::ostream& strm,
     const ::Test::Point& _v)
 {
-  return IDL::traits< ::Test::Point>::write_on (strm, _v);
+  return IDL::traits<::Test::Point>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -2450,7 +2450,7 @@ operator<< (
     std::ostream& strm,
     const ::Test::Track& _v)
 {
-  return IDL::traits< ::Test::Track>::write_on (strm, _v);
+  return IDL::traits<::Test::Track>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/union_os
@@ -2458,7 +2458,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::Data& _v)
 {
-  return IDL::traits< ::Test::Data>::write_on (strm, _v);
+  return IDL::traits<::Test::Data>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -2467,7 +2467,7 @@ operator<< (
     std::ostream& strm,
     const ::Test::S& _v)
 {
-  return IDL::traits< ::Test::S>::write_on (strm, _v);
+  return IDL::traits<::Test::S>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/union_os
@@ -2475,7 +2475,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::U& _v)
 {
-  return IDL::traits< ::Test::U>::write_on (strm, _v);
+  return IDL::traits<::Test::U>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
@@ -2483,7 +2483,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
 {
-  return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
+  return IDL::traits<::Test::Foo>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
@@ -2491,7 +2491,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::A>::ref_type _v)
 {
-  return IDL::traits< ::Test::A>::write_on (strm, std::move(_v));
+  return IDL::traits<::Test::A>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post
@@ -2501,6 +2501,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DIIGCDCE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BHABFJFB_INCLUDED__ */
 
 // -*- END -*-

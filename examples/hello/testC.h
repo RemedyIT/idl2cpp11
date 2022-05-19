@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJDIFBCA_INCLUDED__
-#define __RIDL_TESTC_H_JJDIFBCA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DABHBGCA_INCLUDED__
+#define __RIDL_TESTC_H_DABHBGCA_INCLUDED__
 
 #pragma once
 
@@ -54,19 +54,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Hello>::shared_ptr_type
-    object_traits< ::Test::Hello>::lock_shared (::Test::Hello* p);
+    object_traits<::Test::Hello>::shared_ptr_type
+    object_traits<::Test::Hello>::lock_shared (::Test::Hello* p);
     template<>
-    object_traits< ::Test::Hello>::ref_type
-    object_traits< ::Test::Hello>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::Test::Hello>::ref_type
+    object_traits<::Test::Hello>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::Test::Hello> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Hello>>,
-      public CORBA::object_traits < ::Test::Hello>
+    struct traits <::Test::Hello> :
+      public IDL::common_byval_traits <CORBA::object_reference <::Test::Hello>>,
+      public CORBA::object_traits <::Test::Hello>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -75,7 +75,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::Test::Hello, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::Test::Hello, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -155,7 +155,7 @@ namespace TAOX11_NAMESPACE
 #if !defined (_INTF_FMT_TEST__HELLO_TRAITS_DECL_)
 #define _INTF_FMT_TEST__HELLO_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Test::Hello, OStrm_>
+    struct formatter<::Test::Hello, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -165,7 +165,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Hello>::__Writer<Fmt>);
+        IDL::traits<::Test::Hello>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__HELLO_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -179,7 +179,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::Test::Hello, OStrm_>::operator ()(
+    formatter<::Test::Hello, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::Test::Hello>::ref_type val_)
     {
@@ -192,16 +192,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Hello>::__Writer<Fmt> w)
+        IDL::traits<::Test::Hello>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Hello>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Hello>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Hello, OStrm_>,
+                            formatter<::Test::Hello, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Hello>::write_on (
+      return IDL::traits<::Test::Hello>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -213,7 +213,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Hello>::ref_type _v)
 {
-  return IDL::traits< ::Test::Hello>::write_on (strm, std::move(_v));
+  return IDL::traits<::Test::Hello>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post
@@ -223,6 +223,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJDIFBCA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DABHBGCA_INCLUDED__ */
 
 // -*- END -*-

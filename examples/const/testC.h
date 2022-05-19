@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFGDDEFJ_INCLUDED__
-#define __RIDL_TESTC_H_JFGDDEFJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_GFDFFJDB_INCLUDED__
+#define __RIDL_TESTC_H_GFDFFJDB_INCLUDED__
 
 #pragma once
 
@@ -144,19 +144,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::A>::shared_ptr_type
-    object_traits< ::A>::lock_shared (::A* p);
+    object_traits<::A>::shared_ptr_type
+    object_traits<::A>::lock_shared (::A* p);
     template<>
-    object_traits< ::A>::ref_type
-    object_traits< ::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::A>::ref_type
+    object_traits<::A>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::A> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::A>>,
-      public CORBA::object_traits < ::A>
+    struct traits <::A> :
+      public IDL::common_byval_traits <CORBA::object_reference <::A>>,
+      public CORBA::object_traits <::A>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -165,7 +165,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::A, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::A, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -236,9 +236,9 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_2D6CDB195D63B04182740C35A5402ABD_TRAITS_DECL_
 
     template<>
-    struct traits < TAOX11_IDL::bounded_string<30>>
-      : IDL::common_traits< TAOX11_IDL::bounded_string<30>>
-      , IDL::bounded_traits< TAOX11_IDL::bounded_string<30>>
+    struct traits <TAOX11_IDL::bounded_string<30>>
+      : IDL::common_traits<TAOX11_IDL::bounded_string<30>>
+      , IDL::bounded_traits<TAOX11_IDL::bounded_string<30>>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this string is declared as bounded
@@ -261,16 +261,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< TAOX11_IDL::bounded_string<30>>::__Writer<Fmt> w)
+        IDL::traits<TAOX11_IDL::bounded_string<30>>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< TAOX11_IDL::bounded_string<30>>::__Writer<Fmt>;
+      using writer_t = IDL::traits<TAOX11_IDL::bounded_string<30>>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< TAOX11_IDL::bounded_string<30>, OStrm_>,
+                            formatter<TAOX11_IDL::bounded_string<30>, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< TAOX11_IDL::bounded_string<30>>::write_on (
+      return IDL::traits<TAOX11_IDL::bounded_string<30>>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -284,8 +284,8 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_26C447B68D082EEA72A00BE046CE87A7_TRAITS_DECL_
 
     template<>
-    struct traits < TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
-      : IDL::common_traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
+    struct traits <TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
+      : IDL::common_traits<TAOX11_NAMESPACE::IDL::Fixed <10, 3>>
     {
       using digits = std::integral_constant< uint16_t, 10>;
       using scale = std::integral_constant< uint16_t, 3>;
@@ -303,7 +303,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>
+    struct formatter<TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -318,16 +318,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt> w)
+        IDL::traits<TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt>;
+      using writer_t = IDL::traits<TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>,
+                            formatter<TAOX11_NAMESPACE::IDL::Fixed <10, 3>, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (
+      return IDL::traits<TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -338,7 +338,7 @@ namespace TAOX11_NAMESPACE
 #if !defined (_INTF_FMT_A_TRAITS_DECL_)
 #define _INTF_FMT_A_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::A, OStrm_>
+    struct formatter<::A, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -348,7 +348,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::A>::__Writer<Fmt>);
+        IDL::traits<::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -362,7 +362,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::A, OStrm_>::operator ()(
+    formatter<::A, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::A>::ref_type val_)
     {
@@ -375,16 +375,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::A>::__Writer<Fmt> w)
+        IDL::traits<::A>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::A>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::A>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::A, OStrm_>,
+                            formatter<::A, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::A>::write_on (
+      return IDL::traits<::A>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -401,7 +401,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const TAOX11_NAMESPACE::IDL::Fixed <10, 3>& _v)
 {
-  return IDL::traits< TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (strm, _v);
+  return IDL::traits<TAOX11_NAMESPACE::IDL::Fixed <10, 3>>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_26C447B68D082EEA72A00BE046CE87A7_DECL_
@@ -411,7 +411,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::A>::ref_type _v)
 {
-  return IDL::traits< ::A>::write_on (strm, std::move(_v));
+  return IDL::traits<::A>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post
@@ -421,6 +421,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFGDDEFJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GFDFFJDB_INCLUDED__ */
 
 // -*- END -*-
