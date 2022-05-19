@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GBAHFCBB_INCLUDED__
-#define __RIDL_TESTC_H_GBAHFCBB_INCLUDED__
+#ifndef __RIDL_TESTC_H_IHJFGDAC_INCLUDED__
+#define __RIDL_TESTC_H_IHJFGDAC_INCLUDED__
 
 #pragma once
 
@@ -60,8 +60,8 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Test::EEnum>
-      : IDL::common_byval_traits< ::Test::EEnum>
+    struct traits <::Test::EEnum>
+      : IDL::common_byval_traits<::Test::EEnum>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -76,7 +76,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::EEnum, OStrm_>
+    struct formatter<::Test::EEnum, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -95,16 +95,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::EEnum>::__Writer<Fmt> w)
+        IDL::traits<::Test::EEnum>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::EEnum>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::EEnum>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::EEnum, OStrm_>,
+                            formatter<::Test::EEnum, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::EEnum>::write_on (
+      return IDL::traits<::Test::EEnum>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -124,7 +124,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Test::EEnum _v)
 {
-  return IDL::traits< ::Test::EEnum>::write_on (strm, _v);
+  return IDL::traits<::Test::EEnum>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/post
@@ -134,6 +134,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GBAHFCBB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IHJFGDAC_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGFGGEAC_INCLUDED__
-#define __RIDL_TESTC_H_GGFGGEAC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IEAAEBGD_INCLUDED__
+#define __RIDL_TESTC_H_IEAAEBGD_INCLUDED__
 
 #pragma once
 
@@ -163,19 +163,19 @@ namespace TAOX11_NAMESPACE
   namespace CORBA
   {
     template<>
-    object_traits< ::Test::Foo>::shared_ptr_type
-    object_traits< ::Test::Foo>::lock_shared (::Test::Foo* p);
+    object_traits<::Test::Foo>::shared_ptr_type
+    object_traits<::Test::Foo>::lock_shared (::Test::Foo* p);
     template<>
-    object_traits< ::Test::Foo>::ref_type
-    object_traits< ::Test::Foo>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
+    object_traits<::Test::Foo>::ref_type
+    object_traits<::Test::Foo>::narrow (object_traits<TAOX11_NAMESPACE::CORBA::Object>::ref_type);
   } // namespace CORBA
 
   namespace IDL
   {
     template<>
-    struct traits < ::Test::Foo> :
-      public IDL::common_byval_traits <CORBA::object_reference < ::Test::Foo>>,
-      public CORBA::object_traits < ::Test::Foo>
+    struct traits <::Test::Foo> :
+      public IDL::common_byval_traits <CORBA::object_reference <::Test::Foo>>,
+      public CORBA::object_traits <::Test::Foo>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this interface is declared as local
@@ -184,7 +184,7 @@ namespace TAOX11_NAMESPACE
       /// this interface is declared as abstract
       using is_abstract = std::false_type;
 
-      template <typename OStrm_, typename Formatter = formatter< ::Test::Foo, OStrm_>>
+      template <typename OStrm_, typename Formatter = formatter<::Test::Foo, OStrm_>>
       static inline OStrm_& write_on(
           OStrm_& os_, in_type val_,
           Formatter fmt_ = Formatter ())
@@ -291,8 +291,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_TEST__SIMPLE_TRAITS_)
 #define _STRUCT_TEST__SIMPLE_TRAITS_
     template<>
-    struct traits < ::Test::Simple>
-      : IDL::common_traits< ::Test::Simple>
+    struct traits <::Test::Simple>
+      : IDL::common_traits<::Test::Simple>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -307,12 +307,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Test::Simple, OStrm_>;
+    struct formatter<::Test::Simple, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Simple>::__Writer<Fmt>);
+        IDL::traits<::Test::Simple>::__Writer<Fmt>);
 #endif // _STRUCT_TEST__SIMPLE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -322,14 +322,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_1817E99034D17AC88FEC57E1A31DB103_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::SimpleSeq>
-      : IDL::common_traits< ::Test::SimpleSeq>
+    struct traits <::Test::SimpleSeq>
+      : IDL::common_traits<::Test::SimpleSeq>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Test::Simple>;
+      using element_traits = IDL::traits<::Test::Simple>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -346,16 +346,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::SimpleSeq>::__Writer<Fmt> w)
+        IDL::traits<::Test::SimpleSeq>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::SimpleSeq>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::SimpleSeq>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::SimpleSeq, OStrm_>,
+                            formatter<::Test::SimpleSeq, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::SimpleSeq>::write_on (
+      return IDL::traits<::Test::SimpleSeq>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -369,14 +369,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_AED4359583036BE059570E400BF55053_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::LongSeq>
-      : IDL::common_traits< ::Test::LongSeq>
+    struct traits <::Test::LongSeq>
+      : IDL::common_traits<::Test::LongSeq>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< int32_t>;
+      using element_traits = IDL::traits<int32_t>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -393,16 +393,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::LongSeq>::__Writer<Fmt> w)
+        IDL::traits<::Test::LongSeq>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::LongSeq>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::LongSeq>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::LongSeq, OStrm_>,
+                            formatter<::Test::LongSeq, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::LongSeq>::write_on (
+      return IDL::traits<::Test::LongSeq>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -416,15 +416,15 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_B6B966F793FB4B3FFFF2C6D768857079_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::BoundedLongSeq>
-      : IDL::common_traits< ::Test::BoundedLongSeq>
-      , IDL::bounded_traits< ::Test::BoundedLongSeq>
+    struct traits <::Test::BoundedLongSeq>
+      : IDL::common_traits<::Test::BoundedLongSeq>
+      , IDL::bounded_traits<::Test::BoundedLongSeq>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::true_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< int32_t>;
+      using element_traits = IDL::traits<int32_t>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -441,16 +441,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::BoundedLongSeq>::__Writer<Fmt> w)
+        IDL::traits<::Test::BoundedLongSeq>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::BoundedLongSeq>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::BoundedLongSeq>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::BoundedLongSeq, OStrm_>,
+                            formatter<::Test::BoundedLongSeq, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::BoundedLongSeq>::write_on (
+      return IDL::traits<::Test::BoundedLongSeq>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -464,14 +464,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_8737878B15D8C3312172ACA78C5A85AC_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::BoolSeq>
-      : IDL::common_traits< ::Test::BoolSeq>
+    struct traits <::Test::BoolSeq>
+      : IDL::common_traits<::Test::BoolSeq>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< bool>;
+      using element_traits = IDL::traits<bool>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -488,16 +488,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::BoolSeq>::__Writer<Fmt> w)
+        IDL::traits<::Test::BoolSeq>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::BoolSeq>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::BoolSeq>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::BoolSeq, OStrm_>,
+                            formatter<::Test::BoolSeq, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::BoolSeq>::write_on (
+      return IDL::traits<::Test::BoolSeq>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -511,14 +511,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_3009A6FE2C460CA5E2399F8510369B17_TRAITS_DECL_
 
     template<>
-    struct traits < ::Test::StringSeq>
-      : IDL::common_traits< ::Test::StringSeq>
+    struct traits <::Test::StringSeq>
+      : IDL::common_traits<::Test::StringSeq>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< std::string>;
+      using element_traits = IDL::traits<std::string>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -535,16 +535,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::StringSeq>::__Writer<Fmt> w)
+        IDL::traits<::Test::StringSeq>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::StringSeq>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::StringSeq>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::StringSeq, OStrm_>,
+                            formatter<::Test::StringSeq, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::StringSeq>::write_on (
+      return IDL::traits<::Test::StringSeq>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -555,7 +555,7 @@ namespace TAOX11_NAMESPACE
 #if !defined (_INTF_FMT_TEST__FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST__FOO_TRAITS_DECL_
     template <typename OStrm_>
-    struct formatter< ::Test::Foo, OStrm_>
+    struct formatter<::Test::Foo, OStrm_>
     {
       OStrm_& operator ()(
           OStrm_& ,
@@ -565,7 +565,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Test::Foo>::__Writer<Fmt>);
+        IDL::traits<::Test::Foo>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__FOO_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -578,7 +578,7 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Test::Simple, OStrm_>
+    struct formatter<::Test::Simple, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -586,12 +586,12 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Test::Simple"
             << '{'
-            << "o=" << IDL::traits< uint8_t>::write(val_.o ())
-            << ",l=" << IDL::traits< int32_t>::write(val_.l ())
-            << ",s=" << IDL::traits< std::string>::write(val_.s ())
-            << ",d=" << IDL::traits< double>::write(val_.d ())
-            << ",b=" << IDL::traits< bool>::write(val_.b ())
-            << ",c=" << IDL::traits< char>::write(val_.c ())
+            << "o=" << IDL::traits<uint8_t>::write(val_.o ())
+            << ",l=" << IDL::traits<int32_t>::write(val_.l ())
+            << ",s=" << IDL::traits<std::string>::write(val_.s ())
+            << ",d=" << IDL::traits<double>::write(val_.d ())
+            << ",b=" << IDL::traits<bool>::write(val_.b ())
+            << ",c=" << IDL::traits<char>::write(val_.c ())
             << '}';
         return os_;
       }
@@ -600,16 +600,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Simple>::__Writer<Fmt> w)
+        IDL::traits<::Test::Simple>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Simple>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Simple>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Simple, OStrm_>,
+                            formatter<::Test::Simple, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Simple>::write_on (
+      return IDL::traits<::Test::Simple>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -617,7 +617,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter< ::Test::Foo, OStrm_>::operator ()(
+    formatter<::Test::Foo, OStrm_>::operator ()(
           OStrm_& os_,
           IDL::traits< ::Test::Foo>::ref_type val_)
     {
@@ -630,16 +630,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Test::Foo>::__Writer<Fmt> w)
+        IDL::traits<::Test::Foo>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Test::Foo>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Test::Foo>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Test::Foo, OStrm_>,
+                            formatter<::Test::Foo, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Test::Foo>::write_on (
+      return IDL::traits<::Test::Foo>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -679,7 +679,7 @@ operator<< (
     std::ostream& strm,
     const ::Test::Simple& _v)
 {
-  return IDL::traits< ::Test::Simple>::write_on (strm, _v);
+  return IDL::traits<::Test::Simple>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -692,7 +692,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::SimpleSeq& _v)
 {
-  return IDL::traits< ::Test::SimpleSeq>::write_on (strm, _v);
+  return IDL::traits<::Test::SimpleSeq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_1817E99034D17AC88FEC57E1A31DB103_DECL_
@@ -707,7 +707,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::LongSeq& _v)
 {
-  return IDL::traits< ::Test::LongSeq>::write_on (strm, _v);
+  return IDL::traits<::Test::LongSeq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_
@@ -722,7 +722,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::BoundedLongSeq& _v)
 {
-  return IDL::traits< ::Test::BoundedLongSeq>::write_on (strm, _v);
+  return IDL::traits<::Test::BoundedLongSeq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_B6B966F793FB4B3FFFF2C6D768857079_DECL_
@@ -737,7 +737,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::BoolSeq& _v)
 {
-  return IDL::traits< ::Test::BoolSeq>::write_on (strm, _v);
+  return IDL::traits<::Test::BoolSeq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_8737878B15D8C3312172ACA78C5A85AC_DECL_
@@ -752,7 +752,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Test::StringSeq& _v)
 {
-  return IDL::traits< ::Test::StringSeq>::write_on (strm, _v);
+  return IDL::traits<::Test::StringSeq>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_
@@ -762,7 +762,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     IDL::traits< ::Test::Foo>::ref_type _v)
 {
-  return IDL::traits< ::Test::Foo>::write_on (strm, std::move(_v));
+  return IDL::traits<::Test::Foo>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/post
@@ -772,6 +772,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGFGGEAC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IEAAEBGD_INCLUDED__ */
 
 // -*- END -*-

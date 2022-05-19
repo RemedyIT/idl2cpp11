@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JIDAHIBA_INCLUDED__
-#define __RIDL_TESTC_H_JIDAHIBA_INCLUDED__
+#ifndef __RIDL_TESTC_H_GDDFBEEA_INCLUDED__
+#define __RIDL_TESTC_H_GDDFBEEA_INCLUDED__
 
 #pragma once
 
@@ -2049,8 +2049,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__PROPERTY_TRAITS_)
 #define _STRUCT_DEPLOYMENT__PROPERTY_TRAITS_
     template<>
-    struct traits < ::Deployment::Property>
-      : IDL::common_traits< ::Deployment::Property>
+    struct traits <::Deployment::Property>
+      : IDL::common_traits<::Deployment::Property>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2065,12 +2065,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::Property, OStrm_>;
+    struct formatter<::Deployment::Property, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::Property>::__Writer<Fmt>);
+        IDL::traits<::Deployment::Property>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__PROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2080,14 +2080,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_D7395FCE530B622658DD71B872EFFEFC_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::Properties>
-      : IDL::common_traits< ::Deployment::Properties>
+    struct traits <::Deployment::Properties>
+      : IDL::common_traits<::Deployment::Properties>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::Property>;
+      using element_traits = IDL::traits<::Deployment::Property>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2104,16 +2104,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::Properties>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::Properties>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::Properties>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::Properties>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::Properties, OStrm_>,
+                            formatter<::Deployment::Properties, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::Properties>::write_on (
+      return IDL::traits<::Deployment::Properties>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2124,8 +2124,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__REQUIREMENT_TRAITS_)
 #define _STRUCT_DEPLOYMENT__REQUIREMENT_TRAITS_
     template<>
-    struct traits < ::Deployment::Requirement>
-      : IDL::common_traits< ::Deployment::Requirement>
+    struct traits <::Deployment::Requirement>
+      : IDL::common_traits<::Deployment::Requirement>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2140,12 +2140,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::Requirement, OStrm_>;
+    struct formatter<::Deployment::Requirement, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::Requirement>::__Writer<Fmt>);
+        IDL::traits<::Deployment::Requirement>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__REQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2155,14 +2155,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_3265D777E1B663C0C3E8129C9FA7A92F_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::Requirements>
-      : IDL::common_traits< ::Deployment::Requirements>
+    struct traits <::Deployment::Requirements>
+      : IDL::common_traits<::Deployment::Requirements>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::Requirement>;
+      using element_traits = IDL::traits<::Deployment::Requirement>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2179,16 +2179,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::Requirements>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::Requirements>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::Requirements>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::Requirements>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::Requirements, OStrm_>,
+                            formatter<::Deployment::Requirements, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::Requirements>::write_on (
+      return IDL::traits<::Deployment::Requirements>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2197,8 +2197,8 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Deployment::SatisfierPropertyKind>
-      : IDL::common_byval_traits< ::Deployment::SatisfierPropertyKind>
+    struct traits <::Deployment::SatisfierPropertyKind>
+      : IDL::common_byval_traits<::Deployment::SatisfierPropertyKind>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2213,7 +2213,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::SatisfierPropertyKind, OStrm_>
+    struct formatter<::Deployment::SatisfierPropertyKind, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2235,16 +2235,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::SatisfierPropertyKind>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::SatisfierPropertyKind>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::SatisfierPropertyKind>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::SatisfierPropertyKind, OStrm_>,
+                            formatter<::Deployment::SatisfierPropertyKind, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::SatisfierPropertyKind>::write_on (
+      return IDL::traits<::Deployment::SatisfierPropertyKind>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2253,8 +2253,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__SATISFIERPROPERTY_TRAITS_)
 #define _STRUCT_DEPLOYMENT__SATISFIERPROPERTY_TRAITS_
     template<>
-    struct traits < ::Deployment::SatisfierProperty>
-      : IDL::common_traits< ::Deployment::SatisfierProperty>
+    struct traits <::Deployment::SatisfierProperty>
+      : IDL::common_traits<::Deployment::SatisfierProperty>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2269,12 +2269,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::SatisfierProperty, OStrm_>;
+    struct formatter<::Deployment::SatisfierProperty, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt>);
+        IDL::traits<::Deployment::SatisfierProperty>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__SATISFIERPROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2284,14 +2284,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_EB80218682E63B0775FD6299B3051E6D_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::SatisfierProperties>
-      : IDL::common_traits< ::Deployment::SatisfierProperties>
+    struct traits <::Deployment::SatisfierProperties>
+      : IDL::common_traits<::Deployment::SatisfierProperties>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::SatisfierProperty>;
+      using element_traits = IDL::traits<::Deployment::SatisfierProperty>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2308,16 +2308,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::SatisfierProperties>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::SatisfierProperties>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::SatisfierProperties>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::SatisfierProperties, OStrm_>,
+                            formatter<::Deployment::SatisfierProperties, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::SatisfierProperties>::write_on (
+      return IDL::traits<::Deployment::SatisfierProperties>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2326,8 +2326,8 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Deployment::CCMComponentPortKind>
-      : IDL::common_byval_traits< ::Deployment::CCMComponentPortKind>
+    struct traits <::Deployment::CCMComponentPortKind>
+      : IDL::common_byval_traits<::Deployment::CCMComponentPortKind>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2342,7 +2342,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::CCMComponentPortKind, OStrm_>
+    struct formatter<::Deployment::CCMComponentPortKind, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2366,16 +2366,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::CCMComponentPortKind>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::CCMComponentPortKind>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::CCMComponentPortKind>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::CCMComponentPortKind, OStrm_>,
+                            formatter<::Deployment::CCMComponentPortKind, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::CCMComponentPortKind>::write_on (
+      return IDL::traits<::Deployment::CCMComponentPortKind>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2384,8 +2384,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__COMPONENTPORTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__COMPONENTPORTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentPortDescription>
-      : IDL::common_traits< ::Deployment::ComponentPortDescription>
+    struct traits <::Deployment::ComponentPortDescription>
+      : IDL::common_traits<::Deployment::ComponentPortDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2400,12 +2400,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentPortDescription, OStrm_>;
+    struct formatter<::Deployment::ComponentPortDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ComponentPortDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__COMPONENTPORTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2415,14 +2415,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_12954963972B5124A7A21E0C4327729B_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ComponentPortDescriptions>
-      : IDL::common_traits< ::Deployment::ComponentPortDescriptions>
+    struct traits <::Deployment::ComponentPortDescriptions>
+      : IDL::common_traits<::Deployment::ComponentPortDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ComponentPortDescription>;
+      using element_traits = IDL::traits<::Deployment::ComponentPortDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2439,16 +2439,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentPortDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentPortDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentPortDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentPortDescriptions, OStrm_>,
+                            formatter<::Deployment::ComponentPortDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentPortDescriptions>::write_on (
+      return IDL::traits<::Deployment::ComponentPortDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2459,8 +2459,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__COMPONENTPROPERTYDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__COMPONENTPROPERTYDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentPropertyDescription>
-      : IDL::common_traits< ::Deployment::ComponentPropertyDescription>
+    struct traits <::Deployment::ComponentPropertyDescription>
+      : IDL::common_traits<::Deployment::ComponentPropertyDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2475,12 +2475,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentPropertyDescription, OStrm_>;
+    struct formatter<::Deployment::ComponentPropertyDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ComponentPropertyDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__COMPONENTPROPERTYDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2490,14 +2490,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_920E8F149D82D841A00A08FE0557725B_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ComponentPropertyDescriptions>
-      : IDL::common_traits< ::Deployment::ComponentPropertyDescriptions>
+    struct traits <::Deployment::ComponentPropertyDescriptions>
+      : IDL::common_traits<::Deployment::ComponentPropertyDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ComponentPropertyDescription>;
+      using element_traits = IDL::traits<::Deployment::ComponentPropertyDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2514,16 +2514,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentPropertyDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentPropertyDescriptions, OStrm_>,
+                            formatter<::Deployment::ComponentPropertyDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write_on (
+      return IDL::traits<::Deployment::ComponentPropertyDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2534,8 +2534,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__COMPONENTINTERFACEDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__COMPONENTINTERFACEDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentInterfaceDescription>
-      : IDL::common_traits< ::Deployment::ComponentInterfaceDescription>
+    struct traits <::Deployment::ComponentInterfaceDescription>
+      : IDL::common_traits<::Deployment::ComponentInterfaceDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2550,20 +2550,20 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>;
+    struct formatter<::Deployment::ComponentInterfaceDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ComponentInterfaceDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__COMPONENTINTERFACEDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_DEPLOYMENT__MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::MonolithicDeploymentDescription>
-      : IDL::common_traits< ::Deployment::MonolithicDeploymentDescription>
+    struct traits <::Deployment::MonolithicDeploymentDescription>
+      : IDL::common_traits<::Deployment::MonolithicDeploymentDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2578,12 +2578,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>;
+    struct formatter<::Deployment::MonolithicDeploymentDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2593,14 +2593,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_8CA1C515FCEF8C84C8A8AC3BF21E75A1_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::MonolithicDeploymentDescriptions>
-      : IDL::common_traits< ::Deployment::MonolithicDeploymentDescriptions>
+    struct traits <::Deployment::MonolithicDeploymentDescriptions>
+      : IDL::common_traits<::Deployment::MonolithicDeploymentDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::MonolithicDeploymentDescription>;
+      using element_traits = IDL::traits<::Deployment::MonolithicDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2617,16 +2617,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::MonolithicDeploymentDescriptions, OStrm_>,
+                            formatter<::Deployment::MonolithicDeploymentDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write_on (
+      return IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2635,8 +2635,8 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Deployment::ResourceUsageKind>
-      : IDL::common_byval_traits< ::Deployment::ResourceUsageKind>
+    struct traits <::Deployment::ResourceUsageKind>
+      : IDL::common_byval_traits<::Deployment::ResourceUsageKind>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2651,7 +2651,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ResourceUsageKind, OStrm_>
+    struct formatter<::Deployment::ResourceUsageKind, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -2672,16 +2672,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ResourceUsageKind>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ResourceUsageKind>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ResourceUsageKind>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ResourceUsageKind, OStrm_>,
+                            formatter<::Deployment::ResourceUsageKind, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ResourceUsageKind>::write_on (
+      return IDL::traits<::Deployment::ResourceUsageKind>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2690,8 +2690,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::InstanceResourceDeploymentDescription>
-      : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescription>
+    struct traits <::Deployment::InstanceResourceDeploymentDescription>
+      : IDL::common_traits<::Deployment::InstanceResourceDeploymentDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2706,12 +2706,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>;
+    struct formatter<::Deployment::InstanceResourceDeploymentDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2721,14 +2721,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_7DA1C006DFD4ED780225B6DDB077F883_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::InstanceResourceDeploymentDescriptions>
-      : IDL::common_traits< ::Deployment::InstanceResourceDeploymentDescriptions>
+    struct traits <::Deployment::InstanceResourceDeploymentDescriptions>
+      : IDL::common_traits<::Deployment::InstanceResourceDeploymentDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>;
+      using element_traits = IDL::traits<::Deployment::InstanceResourceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2745,16 +2745,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::InstanceResourceDeploymentDescriptions, OStrm_>,
+                            formatter<::Deployment::InstanceResourceDeploymentDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write_on (
+      return IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2765,8 +2765,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::InstanceDeploymentDescription>
-      : IDL::common_traits< ::Deployment::InstanceDeploymentDescription>
+    struct traits <::Deployment::InstanceDeploymentDescription>
+      : IDL::common_traits<::Deployment::InstanceDeploymentDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2781,12 +2781,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>;
+    struct formatter<::Deployment::InstanceDeploymentDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::InstanceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2796,14 +2796,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_8B4B636BAEF9B16F13A7BA16B787ADEA_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::InstanceDeploymentDescriptions>
-      : IDL::common_traits< ::Deployment::InstanceDeploymentDescriptions>
+    struct traits <::Deployment::InstanceDeploymentDescriptions>
+      : IDL::common_traits<::Deployment::InstanceDeploymentDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::InstanceDeploymentDescription>;
+      using element_traits = IDL::traits<::Deployment::InstanceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2820,16 +2820,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::InstanceDeploymentDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::InstanceDeploymentDescriptions, OStrm_>,
+                            formatter<::Deployment::InstanceDeploymentDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write_on (
+      return IDL::traits<::Deployment::InstanceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2840,8 +2840,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__COMPONENTEXTERNALPORTENDPOINT_TRAITS_)
 #define _STRUCT_DEPLOYMENT__COMPONENTEXTERNALPORTENDPOINT_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentExternalPortEndpoint>
-      : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoint>
+    struct traits <::Deployment::ComponentExternalPortEndpoint>
+      : IDL::common_traits<::Deployment::ComponentExternalPortEndpoint>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2856,12 +2856,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>;
+    struct formatter<::Deployment::ComponentExternalPortEndpoint, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__COMPONENTEXTERNALPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2871,14 +2871,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_0079E24B070B963BAFE84A5B71BC7698_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ComponentExternalPortEndpoints>
-      : IDL::common_traits< ::Deployment::ComponentExternalPortEndpoints>
+    struct traits <::Deployment::ComponentExternalPortEndpoints>
+      : IDL::common_traits<::Deployment::ComponentExternalPortEndpoints>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ComponentExternalPortEndpoint>;
+      using element_traits = IDL::traits<::Deployment::ComponentExternalPortEndpoint>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2895,16 +2895,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentExternalPortEndpoints>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentExternalPortEndpoints, OStrm_>,
+                            formatter<::Deployment::ComponentExternalPortEndpoints, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write_on (
+      return IDL::traits<::Deployment::ComponentExternalPortEndpoints>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2915,8 +2915,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPORTENDPOINT_TRAITS_)
 #define _STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPortEndpoint>
-      : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoint>
+    struct traits <::Deployment::PlanSubcomponentPortEndpoint>
+      : IDL::common_traits<::Deployment::PlanSubcomponentPortEndpoint>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2931,12 +2931,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>;
+    struct formatter<::Deployment::PlanSubcomponentPortEndpoint, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt>);
+        IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -2946,14 +2946,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_1CC072AD6279ECB8F540C3C10DB1F767_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPortEndpoints>
-      : IDL::common_traits< ::Deployment::PlanSubcomponentPortEndpoints>
+    struct traits <::Deployment::PlanSubcomponentPortEndpoints>
+      : IDL::common_traits<::Deployment::PlanSubcomponentPortEndpoints>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>;
+      using element_traits = IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -2970,16 +2970,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanSubcomponentPortEndpoints, OStrm_>,
+                            formatter<::Deployment::PlanSubcomponentPortEndpoints, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write_on (
+      return IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -2990,8 +2990,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__EXTERNALREFERENCEENDPOINT_TRAITS_)
 #define _STRUCT_DEPLOYMENT__EXTERNALREFERENCEENDPOINT_TRAITS_
     template<>
-    struct traits < ::Deployment::ExternalReferenceEndpoint>
-      : IDL::common_traits< ::Deployment::ExternalReferenceEndpoint>
+    struct traits <::Deployment::ExternalReferenceEndpoint>
+      : IDL::common_traits<::Deployment::ExternalReferenceEndpoint>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3006,12 +3006,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>;
+    struct formatter<::Deployment::ExternalReferenceEndpoint, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__EXTERNALREFERENCEENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3021,14 +3021,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_2E044427492F5861B730283A565D1ED5_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ExternalReferenceEndpoints>
-      : IDL::common_traits< ::Deployment::ExternalReferenceEndpoints>
+    struct traits <::Deployment::ExternalReferenceEndpoints>
+      : IDL::common_traits<::Deployment::ExternalReferenceEndpoints>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ExternalReferenceEndpoint>;
+      using element_traits = IDL::traits<::Deployment::ExternalReferenceEndpoint>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3045,16 +3045,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ExternalReferenceEndpoints>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ExternalReferenceEndpoints, OStrm_>,
+                            formatter<::Deployment::ExternalReferenceEndpoints, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write_on (
+      return IDL::traits<::Deployment::ExternalReferenceEndpoints>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3065,8 +3065,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ConnectionResourceDeploymentDescription>
-      : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescription>
+    struct traits <::Deployment::ConnectionResourceDeploymentDescription>
+      : IDL::common_traits<::Deployment::ConnectionResourceDeploymentDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3081,12 +3081,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>;
+    struct formatter<::Deployment::ConnectionResourceDeploymentDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3096,14 +3096,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_4CE006491F749EF87F69C9F0666BD518_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ConnectionResourceDeploymentDescriptions>
-      : IDL::common_traits< ::Deployment::ConnectionResourceDeploymentDescriptions>
+    struct traits <::Deployment::ConnectionResourceDeploymentDescriptions>
+      : IDL::common_traits<::Deployment::ConnectionResourceDeploymentDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>;
+      using element_traits = IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3120,16 +3120,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ConnectionResourceDeploymentDescriptions, OStrm_>,
+                            formatter<::Deployment::ConnectionResourceDeploymentDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (
+      return IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3140,8 +3140,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__PLANCONNECTIONDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__PLANCONNECTIONDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanConnectionDescription>
-      : IDL::common_traits< ::Deployment::PlanConnectionDescription>
+    struct traits <::Deployment::PlanConnectionDescription>
+      : IDL::common_traits<::Deployment::PlanConnectionDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3156,12 +3156,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanConnectionDescription, OStrm_>;
+    struct formatter<::Deployment::PlanConnectionDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::PlanConnectionDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__PLANCONNECTIONDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3171,14 +3171,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_0864BEE17C4222FE18C6B2C68197901B_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::PlanConnectionDescriptions>
-      : IDL::common_traits< ::Deployment::PlanConnectionDescriptions>
+    struct traits <::Deployment::PlanConnectionDescriptions>
+      : IDL::common_traits<::Deployment::PlanConnectionDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::PlanConnectionDescription>;
+      using element_traits = IDL::traits<::Deployment::PlanConnectionDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3195,16 +3195,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanConnectionDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanConnectionDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanConnectionDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanConnectionDescriptions, OStrm_>,
+                            formatter<::Deployment::PlanConnectionDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanConnectionDescriptions>::write_on (
+      return IDL::traits<::Deployment::PlanConnectionDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3215,8 +3215,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_)
 #define _STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPropertyReference>
-      : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReference>
+    struct traits <::Deployment::PlanSubcomponentPropertyReference>
+      : IDL::common_traits<::Deployment::PlanSubcomponentPropertyReference>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3231,12 +3231,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>;
+    struct formatter<::Deployment::PlanSubcomponentPropertyReference, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt>);
+        IDL::traits<::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3246,14 +3246,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_E50992F1F837050D6477978B56863FBD_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::PlanSubcomponentPropertyReferences>
-      : IDL::common_traits< ::Deployment::PlanSubcomponentPropertyReferences>
+    struct traits <::Deployment::PlanSubcomponentPropertyReferences>
+      : IDL::common_traits<::Deployment::PlanSubcomponentPropertyReferences>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>;
+      using element_traits = IDL::traits<::Deployment::PlanSubcomponentPropertyReference>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3270,16 +3270,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanSubcomponentPropertyReferences, OStrm_>,
+                            formatter<::Deployment::PlanSubcomponentPropertyReferences, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write_on (
+      return IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3290,8 +3290,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__PLANPROPERTYMAPPING_TRAITS_)
 #define _STRUCT_DEPLOYMENT__PLANPROPERTYMAPPING_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanPropertyMapping>
-      : IDL::common_traits< ::Deployment::PlanPropertyMapping>
+    struct traits <::Deployment::PlanPropertyMapping>
+      : IDL::common_traits<::Deployment::PlanPropertyMapping>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3306,12 +3306,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanPropertyMapping, OStrm_>;
+    struct formatter<::Deployment::PlanPropertyMapping, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt>);
+        IDL::traits<::Deployment::PlanPropertyMapping>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__PLANPROPERTYMAPPING_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3321,14 +3321,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_0422E458499BDB48508CAB373414C33F_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::PlanPropertyMappings>
-      : IDL::common_traits< ::Deployment::PlanPropertyMappings>
+    struct traits <::Deployment::PlanPropertyMappings>
+      : IDL::common_traits<::Deployment::PlanPropertyMappings>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::PlanPropertyMapping>;
+      using element_traits = IDL::traits<::Deployment::PlanPropertyMapping>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3345,16 +3345,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanPropertyMappings>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanPropertyMappings>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanPropertyMappings>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanPropertyMappings, OStrm_>,
+                            formatter<::Deployment::PlanPropertyMappings, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanPropertyMappings>::write_on (
+      return IDL::traits<::Deployment::PlanPropertyMappings>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3365,8 +3365,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__IMPLEMENTATIONDEPENDENCY_TRAITS_)
 #define _STRUCT_DEPLOYMENT__IMPLEMENTATIONDEPENDENCY_TRAITS_
     template<>
-    struct traits < ::Deployment::ImplementationDependency>
-      : IDL::common_traits< ::Deployment::ImplementationDependency>
+    struct traits <::Deployment::ImplementationDependency>
+      : IDL::common_traits<::Deployment::ImplementationDependency>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3381,12 +3381,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ImplementationDependency, OStrm_>;
+    struct formatter<::Deployment::ImplementationDependency, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ImplementationDependency>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__IMPLEMENTATIONDEPENDENCY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3396,14 +3396,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_2C17710E0A7BA82C42ACC676758DBF1C_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ImplementationDependencies>
-      : IDL::common_traits< ::Deployment::ImplementationDependencies>
+    struct traits <::Deployment::ImplementationDependencies>
+      : IDL::common_traits<::Deployment::ImplementationDependencies>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ImplementationDependency>;
+      using element_traits = IDL::traits<::Deployment::ImplementationDependency>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3420,16 +3420,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ImplementationDependencies>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ImplementationDependencies>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ImplementationDependencies>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ImplementationDependencies, OStrm_>,
+                            formatter<::Deployment::ImplementationDependencies, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ImplementationDependencies>::write_on (
+      return IDL::traits<::Deployment::ImplementationDependencies>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3440,8 +3440,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ResourceDeploymentDescription>
-      : IDL::common_traits< ::Deployment::ResourceDeploymentDescription>
+    struct traits <::Deployment::ResourceDeploymentDescription>
+      : IDL::common_traits<::Deployment::ResourceDeploymentDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3456,12 +3456,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>;
+    struct formatter<::Deployment::ResourceDeploymentDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ResourceDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3471,14 +3471,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_77F1484D7BC4A6841660C8A62AFD38E7_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ResourceDeploymentDescriptions>
-      : IDL::common_traits< ::Deployment::ResourceDeploymentDescriptions>
+    struct traits <::Deployment::ResourceDeploymentDescriptions>
+      : IDL::common_traits<::Deployment::ResourceDeploymentDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ResourceDeploymentDescription>;
+      using element_traits = IDL::traits<::Deployment::ResourceDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3495,16 +3495,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ResourceDeploymentDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ResourceDeploymentDescriptions, OStrm_>,
+                            formatter<::Deployment::ResourceDeploymentDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write_on (
+      return IDL::traits<::Deployment::ResourceDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3515,8 +3515,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_)
 #define _STRUCT_DEPLOYMENT__ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
     template<>
-    struct traits < ::Deployment::ArtifactDeploymentDescription>
-      : IDL::common_traits< ::Deployment::ArtifactDeploymentDescription>
+    struct traits <::Deployment::ArtifactDeploymentDescription>
+      : IDL::common_traits<::Deployment::ArtifactDeploymentDescription>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3531,12 +3531,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>;
+    struct formatter<::Deployment::ArtifactDeploymentDescription, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3546,14 +3546,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_4B78A2395FEFF04B7A71CAF425D7AAB0_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ArtifactDeploymentDescriptions>
-      : IDL::common_traits< ::Deployment::ArtifactDeploymentDescriptions>
+    struct traits <::Deployment::ArtifactDeploymentDescriptions>
+      : IDL::common_traits<::Deployment::ArtifactDeploymentDescriptions>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ArtifactDeploymentDescription>;
+      using element_traits = IDL::traits<::Deployment::ArtifactDeploymentDescription>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3570,16 +3570,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ArtifactDeploymentDescriptions, OStrm_>,
+                            formatter<::Deployment::ArtifactDeploymentDescriptions, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write_on (
+      return IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3588,8 +3588,8 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
     template<>
-    struct traits < ::Deployment::PlanLocalityKind>
-      : IDL::common_byval_traits< ::Deployment::PlanLocalityKind>
+    struct traits <::Deployment::PlanLocalityKind>
+      : IDL::common_byval_traits<::Deployment::PlanLocalityKind>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3604,7 +3604,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanLocalityKind, OStrm_>
+    struct formatter<::Deployment::PlanLocalityKind, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -3623,16 +3623,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanLocalityKind>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanLocalityKind>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanLocalityKind>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanLocalityKind, OStrm_>,
+                            formatter<::Deployment::PlanLocalityKind, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanLocalityKind>::write_on (
+      return IDL::traits<::Deployment::PlanLocalityKind>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3641,8 +3641,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__PLANLOCALITY_TRAITS_)
 #define _STRUCT_DEPLOYMENT__PLANLOCALITY_TRAITS_
     template<>
-    struct traits < ::Deployment::PlanLocality>
-      : IDL::common_traits< ::Deployment::PlanLocality>
+    struct traits <::Deployment::PlanLocality>
+      : IDL::common_traits<::Deployment::PlanLocality>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3657,12 +3657,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanLocality, OStrm_>;
+    struct formatter<::Deployment::PlanLocality, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt>);
+        IDL::traits<::Deployment::PlanLocality>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__PLANLOCALITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3672,14 +3672,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_7639FB88384E3E335A056DB5284179B1_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::PlanLocalities>
-      : IDL::common_traits< ::Deployment::PlanLocalities>
+    struct traits <::Deployment::PlanLocalities>
+      : IDL::common_traits<::Deployment::PlanLocalities>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::PlanLocality>;
+      using element_traits = IDL::traits<::Deployment::PlanLocality>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3696,16 +3696,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanLocalities>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanLocalities>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanLocalities>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanLocalities, OStrm_>,
+                            formatter<::Deployment::PlanLocalities, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanLocalities>::write_on (
+      return IDL::traits<::Deployment::PlanLocalities>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3716,8 +3716,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__DEPLOYMENTPLAN_TRAITS_)
 #define _STRUCT_DEPLOYMENT__DEPLOYMENTPLAN_TRAITS_
     template<>
-    struct traits < ::Deployment::DeploymentPlan>
-      : IDL::common_traits< ::Deployment::DeploymentPlan>
+    struct traits <::Deployment::DeploymentPlan>
+      : IDL::common_traits<::Deployment::DeploymentPlan>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3732,20 +3732,20 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::DeploymentPlan, OStrm_>;
+    struct formatter<::Deployment::DeploymentPlan, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt>);
+        IDL::traits<::Deployment::DeploymentPlan>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__DEPLOYMENTPLAN_TRAITS_
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_DEPLOYMENT__COMPONENTPACKAGEREFERENCE_TRAITS_)
 #define _STRUCT_DEPLOYMENT__COMPONENTPACKAGEREFERENCE_TRAITS_
     template<>
-    struct traits < ::Deployment::ComponentPackageReference>
-      : IDL::common_traits< ::Deployment::ComponentPackageReference>
+    struct traits <::Deployment::ComponentPackageReference>
+      : IDL::common_traits<::Deployment::ComponentPackageReference>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3760,12 +3760,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentPackageReference, OStrm_>;
+    struct formatter<::Deployment::ComponentPackageReference, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ComponentPackageReference>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__COMPONENTPACKAGEREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3775,14 +3775,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_D5775520607EF1551FF61D9245FFC376_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ComponentPackageReferences>
-      : IDL::common_traits< ::Deployment::ComponentPackageReferences>
+    struct traits <::Deployment::ComponentPackageReferences>
+      : IDL::common_traits<::Deployment::ComponentPackageReferences>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ComponentPackageReference>;
+      using element_traits = IDL::traits<::Deployment::ComponentPackageReference>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3799,16 +3799,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentPackageReferences>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentPackageReferences>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentPackageReferences>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentPackageReferences, OStrm_>,
+                            formatter<::Deployment::ComponentPackageReferences, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentPackageReferences>::write_on (
+      return IDL::traits<::Deployment::ComponentPackageReferences>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3822,14 +3822,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_90F1BEC8CBCE4D84EC85294F6CFABECA_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ResourceUsageKinds>
-      : IDL::common_traits< ::Deployment::ResourceUsageKinds>
+    struct traits <::Deployment::ResourceUsageKinds>
+      : IDL::common_traits<::Deployment::ResourceUsageKinds>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ResourceUsageKind>;
+      using element_traits = IDL::traits<::Deployment::ResourceUsageKind>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3846,16 +3846,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ResourceUsageKinds>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ResourceUsageKinds>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ResourceUsageKinds>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ResourceUsageKinds, OStrm_>,
+                            formatter<::Deployment::ResourceUsageKinds, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ResourceUsageKinds>::write_on (
+      return IDL::traits<::Deployment::ResourceUsageKinds>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3866,8 +3866,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__IMPLEMENTATIONREQUIREMENT_TRAITS_)
 #define _STRUCT_DEPLOYMENT__IMPLEMENTATIONREQUIREMENT_TRAITS_
     template<>
-    struct traits < ::Deployment::ImplementationRequirement>
-      : IDL::common_traits< ::Deployment::ImplementationRequirement>
+    struct traits <::Deployment::ImplementationRequirement>
+      : IDL::common_traits<::Deployment::ImplementationRequirement>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3882,12 +3882,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::ImplementationRequirement, OStrm_>;
+    struct formatter<::Deployment::ImplementationRequirement, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt>);
+        IDL::traits<::Deployment::ImplementationRequirement>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__IMPLEMENTATIONREQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3897,14 +3897,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_D1965C67B438F31951F64983B8082D9F_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::ImplementationRequirements>
-      : IDL::common_traits< ::Deployment::ImplementationRequirements>
+    struct traits <::Deployment::ImplementationRequirements>
+      : IDL::common_traits<::Deployment::ImplementationRequirements>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::ImplementationRequirement>;
+      using element_traits = IDL::traits<::Deployment::ImplementationRequirement>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3921,16 +3921,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ImplementationRequirements>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ImplementationRequirements>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ImplementationRequirements>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ImplementationRequirements, OStrm_>,
+                            formatter<::Deployment::ImplementationRequirements, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ImplementationRequirements>::write_on (
+      return IDL::traits<::Deployment::ImplementationRequirements>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -3941,8 +3941,8 @@ namespace TAOX11_NAMESPACE
 #if !defined (_STRUCT_DEPLOYMENT__CAPABILITY_TRAITS_)
 #define _STRUCT_DEPLOYMENT__CAPABILITY_TRAITS_
     template<>
-    struct traits < ::Deployment::Capability>
-      : IDL::common_traits< ::Deployment::Capability>
+    struct traits <::Deployment::Capability>
+      : IDL::common_traits<::Deployment::Capability>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3957,12 +3957,12 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_>
-    struct formatter< ::Deployment::Capability, OStrm_>;
+    struct formatter<::Deployment::Capability, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
     OStrm_& operator <<(
         OStrm_&,
-        IDL::traits< ::Deployment::Capability>::__Writer<Fmt>);
+        IDL::traits<::Deployment::Capability>::__Writer<Fmt>);
 #endif // _STRUCT_DEPLOYMENT__CAPABILITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -3972,14 +3972,14 @@ namespace TAOX11_NAMESPACE
 #define _ALIAS_9AC75DD12DFFBAB4E6024AF2CB28F81D_TRAITS_DECL_
 
     template<>
-    struct traits < ::Deployment::Capabilities>
-      : IDL::common_traits< ::Deployment::Capabilities>
+    struct traits <::Deployment::Capabilities>
+      : IDL::common_traits<::Deployment::Capabilities>
     {
       /// std::false_type or std::true_type type indicating whether
       /// this sequence is declared as bounded
       using is_bounded = std::false_type;
       /// IDL::traits<> for the element of the sequence
-      using element_traits = IDL::traits< ::Deployment::Capability>;
+      using element_traits = IDL::traits<::Deployment::Capability>;
 
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(
@@ -3996,16 +3996,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::Capabilities>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::Capabilities>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::Capabilities>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::Capabilities, OStrm_>,
+                            formatter<::Deployment::Capabilities, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::Capabilities>::write_on (
+      return IDL::traits<::Deployment::Capabilities>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -4022,7 +4022,7 @@ namespace TAOX11_NAMESPACE
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::Property, OStrm_>
+    struct formatter<::Deployment::Property, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4030,8 +4030,8 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::Property"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",value=" << IDL::traits<TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
             << '}';
         return os_;
       }
@@ -4040,23 +4040,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::Property>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::Property>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::Property>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::Property>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::Property, OStrm_>,
+                            formatter<::Deployment::Property, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::Property>::write_on (
+      return IDL::traits<::Deployment::Property>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::Requirement, OStrm_>
+    struct formatter<::Deployment::Requirement, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4064,9 +4064,9 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::Requirement"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
-            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",resourceType=" << IDL::traits<std::string>::write(val_.resourceType ())
+            << ",property=" << IDL::traits<::Deployment::Properties>::write(val_.property ())
             << '}';
         return os_;
       }
@@ -4075,23 +4075,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::Requirement>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::Requirement>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::Requirement>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::Requirement>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::Requirement, OStrm_>,
+                            formatter<::Deployment::Requirement, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::Requirement>::write_on (
+      return IDL::traits<::Deployment::Requirement>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::SatisfierProperty, OStrm_>
+    struct formatter<::Deployment::SatisfierProperty, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4099,10 +4099,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::SatisfierProperty"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",kind=" << IDL::traits< ::Deployment::SatisfierPropertyKind>::write(val_.kind ())
-            << ",dynamic=" << IDL::traits< bool>::write(val_.dynamic ())
-            << ",value=" << IDL::traits< TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",kind=" << IDL::traits<::Deployment::SatisfierPropertyKind>::write(val_.kind ())
+            << ",dynamic=" << IDL::traits<bool>::write(val_.dynamic ())
+            << ",value=" << IDL::traits<TAOX11_NAMESPACE::CORBA::Any>::write(val_.value ())
             << '}';
         return os_;
       }
@@ -4111,23 +4111,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::SatisfierProperty>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::SatisfierProperty>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::SatisfierProperty>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::SatisfierProperty, OStrm_>,
+                            formatter<::Deployment::SatisfierProperty, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::SatisfierProperty>::write_on (
+      return IDL::traits<::Deployment::SatisfierProperty>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentPortDescription, OStrm_>
+    struct formatter<::Deployment::ComponentPortDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4135,15 +4135,15 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ComponentPortDescription"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
-            << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
-            << ",provider=" << IDL::traits< bool>::write(val_.provider ())
-            << ",exclusiveProvider=" << IDL::traits< bool>::write(val_.exclusiveProvider ())
-            << ",exclusiveUser=" << IDL::traits< bool>::write(val_.exclusiveUser ())
-            << ",optional=" << IDL::traits< bool>::write(val_.optional ())
-            << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
-            << ",templateParam=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.templateParam ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",specificType=" << IDL::traits<std::string>::write(val_.specificType ())
+            << ",supportedType=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+            << ",provider=" << IDL::traits<bool>::write(val_.provider ())
+            << ",exclusiveProvider=" << IDL::traits<bool>::write(val_.exclusiveProvider ())
+            << ",exclusiveUser=" << IDL::traits<bool>::write(val_.exclusiveUser ())
+            << ",optional=" << IDL::traits<bool>::write(val_.optional ())
+            << ",kind=" << IDL::traits<::Deployment::CCMComponentPortKind>::write(val_.kind ())
+            << ",templateParam=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.templateParam ())
             << '}';
         return os_;
       }
@@ -4152,23 +4152,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentPortDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentPortDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentPortDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentPortDescription, OStrm_>,
+                            formatter<::Deployment::ComponentPortDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentPortDescription>::write_on (
+      return IDL::traits<::Deployment::ComponentPortDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentPropertyDescription, OStrm_>
+    struct formatter<::Deployment::ComponentPropertyDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4176,8 +4176,8 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ComponentPropertyDescription"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",type=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::write(val_.type ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",type=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::TypeCode>::write(val_.type ())
             << '}';
         return os_;
       }
@@ -4186,23 +4186,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentPropertyDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentPropertyDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentPropertyDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentPropertyDescription, OStrm_>,
+                            formatter<::Deployment::ComponentPropertyDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentPropertyDescription>::write_on (
+      return IDL::traits<::Deployment::ComponentPropertyDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>
+    struct formatter<::Deployment::ComponentInterfaceDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4210,15 +4210,15 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ComponentInterfaceDescription"
             << '{'
-            << "label=" << IDL::traits< std::string>::write(val_.label ())
-            << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
-            << ",specificType=" << IDL::traits< std::string>::write(val_.specificType ())
-            << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
-            << ",idlFile=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.idlFile ())
-            << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
-            << ",port=" << IDL::traits< ::Deployment::ComponentPortDescriptions>::write(val_.port ())
-            << ",property=" << IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write(val_.property ())
-            << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
+            << "label=" << IDL::traits<std::string>::write(val_.label ())
+            << ",UUID=" << IDL::traits<std::string>::write(val_.UUID ())
+            << ",specificType=" << IDL::traits<std::string>::write(val_.specificType ())
+            << ",supportedType=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+            << ",idlFile=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.idlFile ())
+            << ",configProperty=" << IDL::traits<::Deployment::Properties>::write(val_.configProperty ())
+            << ",port=" << IDL::traits<::Deployment::ComponentPortDescriptions>::write(val_.port ())
+            << ",property=" << IDL::traits<::Deployment::ComponentPropertyDescriptions>::write(val_.property ())
+            << ",infoProperty=" << IDL::traits<::Deployment::Properties>::write(val_.infoProperty ())
             << '}';
         return os_;
       }
@@ -4227,23 +4227,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentInterfaceDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentInterfaceDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentInterfaceDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentInterfaceDescription, OStrm_>,
+                            formatter<::Deployment::ComponentInterfaceDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentInterfaceDescription>::write_on (
+      return IDL::traits<::Deployment::ComponentInterfaceDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>
+    struct formatter<::Deployment::MonolithicDeploymentDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4251,11 +4251,11 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::MonolithicDeploymentDescription"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-            << ",artifactRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.artifactRef ())
-            << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
-            << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",source=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",artifactRef=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.artifactRef ())
+            << ",execParameter=" << IDL::traits<::Deployment::Properties>::write(val_.execParameter ())
+            << ",deployRequirement=" << IDL::traits<::Deployment::Requirements>::write(val_.deployRequirement ())
             << '}';
         return os_;
       }
@@ -4264,23 +4264,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::MonolithicDeploymentDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::MonolithicDeploymentDescription, OStrm_>,
+                            formatter<::Deployment::MonolithicDeploymentDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::MonolithicDeploymentDescription>::write_on (
+      return IDL::traits<::Deployment::MonolithicDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>
+    struct formatter<::Deployment::InstanceResourceDeploymentDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4288,10 +4288,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::InstanceResourceDeploymentDescription"
             << '{'
-            << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKind>::write(val_.resourceUsage ())
-            << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
-            << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
-            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << "resourceUsage=" << IDL::traits<::Deployment::ResourceUsageKind>::write(val_.resourceUsage ())
+            << ",requirementName=" << IDL::traits<std::string>::write(val_.requirementName ())
+            << ",resourceName=" << IDL::traits<std::string>::write(val_.resourceName ())
+            << ",property=" << IDL::traits<::Deployment::Properties>::write(val_.property ())
             << '}';
         return os_;
       }
@@ -4300,23 +4300,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::InstanceResourceDeploymentDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::InstanceResourceDeploymentDescription, OStrm_>,
+                            formatter<::Deployment::InstanceResourceDeploymentDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::write_on (
+      return IDL::traits<::Deployment::InstanceResourceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>
+    struct formatter<::Deployment::InstanceDeploymentDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4324,13 +4324,13 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::InstanceDeploymentDescription"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",node=" << IDL::traits< std::string>::write(val_.node ())
-            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-            << ",implementationRef=" << IDL::traits< uint32_t>::write(val_.implementationRef ())
-            << ",configProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.configProperty ())
-            << ",deployedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedResource ())
-            << ",deployedSharedResource=" << IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedSharedResource ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",node=" << IDL::traits<std::string>::write(val_.node ())
+            << ",source=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",implementationRef=" << IDL::traits<uint32_t>::write(val_.implementationRef ())
+            << ",configProperty=" << IDL::traits<::Deployment::Properties>::write(val_.configProperty ())
+            << ",deployedResource=" << IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedResource ())
+            << ",deployedSharedResource=" << IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write(val_.deployedSharedResource ())
             << '}';
         return os_;
       }
@@ -4339,23 +4339,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::InstanceDeploymentDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::InstanceDeploymentDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::InstanceDeploymentDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::InstanceDeploymentDescription, OStrm_>,
+                            formatter<::Deployment::InstanceDeploymentDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::InstanceDeploymentDescription>::write_on (
+      return IDL::traits<::Deployment::InstanceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>
+    struct formatter<::Deployment::ComponentExternalPortEndpoint, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4363,7 +4363,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ComponentExternalPortEndpoint"
             << '{'
-            << "portName=" << IDL::traits< std::string>::write(val_.portName ())
+            << "portName=" << IDL::traits<std::string>::write(val_.portName ())
             << '}';
         return os_;
       }
@@ -4372,23 +4372,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentExternalPortEndpoint>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentExternalPortEndpoint, OStrm_>,
+                            formatter<::Deployment::ComponentExternalPortEndpoint, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::write_on (
+      return IDL::traits<::Deployment::ComponentExternalPortEndpoint>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>
+    struct formatter<::Deployment::PlanSubcomponentPortEndpoint, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4396,10 +4396,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::PlanSubcomponentPortEndpoint"
             << '{'
-            << "portName=" << IDL::traits< std::string>::write(val_.portName ())
-            << ",provider=" << IDL::traits< bool>::write(val_.provider ())
-            << ",kind=" << IDL::traits< ::Deployment::CCMComponentPortKind>::write(val_.kind ())
-            << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
+            << "portName=" << IDL::traits<std::string>::write(val_.portName ())
+            << ",provider=" << IDL::traits<bool>::write(val_.provider ())
+            << ",kind=" << IDL::traits<::Deployment::CCMComponentPortKind>::write(val_.kind ())
+            << ",instanceRef=" << IDL::traits<uint32_t>::write(val_.instanceRef ())
             << '}';
         return os_;
       }
@@ -4408,23 +4408,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanSubcomponentPortEndpoint, OStrm_>,
+                            formatter<::Deployment::PlanSubcomponentPortEndpoint, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::write_on (
+      return IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>
+    struct formatter<::Deployment::ExternalReferenceEndpoint, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4432,10 +4432,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ExternalReferenceEndpoint"
             << '{'
-            << "location=" << IDL::traits< std::string>::write(val_.location ())
-            << ",provider=" << IDL::traits< bool>::write(val_.provider ())
-            << ",portName=" << IDL::traits< std::string>::write(val_.portName ())
-            << ",supportedType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
+            << "location=" << IDL::traits<std::string>::write(val_.location ())
+            << ",provider=" << IDL::traits<bool>::write(val_.provider ())
+            << ",portName=" << IDL::traits<std::string>::write(val_.portName ())
+            << ",supportedType=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.supportedType ())
             << '}';
         return os_;
       }
@@ -4444,23 +4444,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ExternalReferenceEndpoint>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ExternalReferenceEndpoint, OStrm_>,
+                            formatter<::Deployment::ExternalReferenceEndpoint, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ExternalReferenceEndpoint>::write_on (
+      return IDL::traits<::Deployment::ExternalReferenceEndpoint>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>
+    struct formatter<::Deployment::ConnectionResourceDeploymentDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4468,10 +4468,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ConnectionResourceDeploymentDescription"
             << '{'
-            << "targetName=" << IDL::traits< std::string>::write(val_.targetName ())
-            << ",requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
-            << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
-            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << "targetName=" << IDL::traits<std::string>::write(val_.targetName ())
+            << ",requirementName=" << IDL::traits<std::string>::write(val_.requirementName ())
+            << ",resourceName=" << IDL::traits<std::string>::write(val_.resourceName ())
+            << ",property=" << IDL::traits<::Deployment::Properties>::write(val_.property ())
             << '}';
         return os_;
       }
@@ -4480,23 +4480,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ConnectionResourceDeploymentDescription, OStrm_>,
+                            formatter<::Deployment::ConnectionResourceDeploymentDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::write_on (
+      return IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanConnectionDescription, OStrm_>
+    struct formatter<::Deployment::PlanConnectionDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4504,13 +4504,13 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::PlanConnectionDescription"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-            << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
-            << ",externalEndpoint=" << IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write(val_.externalEndpoint ())
-            << ",internalEndpoint=" << IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write(val_.internalEndpoint ())
-            << ",externalReference=" << IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write(val_.externalReference ())
-            << ",deployedResource=" << IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write(val_.deployedResource ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",source=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",deployRequirement=" << IDL::traits<::Deployment::Requirements>::write(val_.deployRequirement ())
+            << ",externalEndpoint=" << IDL::traits<::Deployment::ComponentExternalPortEndpoints>::write(val_.externalEndpoint ())
+            << ",internalEndpoint=" << IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::write(val_.internalEndpoint ())
+            << ",externalReference=" << IDL::traits<::Deployment::ExternalReferenceEndpoints>::write(val_.externalReference ())
+            << ",deployedResource=" << IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::write(val_.deployedResource ())
             << '}';
         return os_;
       }
@@ -4519,23 +4519,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanConnectionDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanConnectionDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanConnectionDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanConnectionDescription, OStrm_>,
+                            formatter<::Deployment::PlanConnectionDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanConnectionDescription>::write_on (
+      return IDL::traits<::Deployment::PlanConnectionDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>
+    struct formatter<::Deployment::PlanSubcomponentPropertyReference, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4543,8 +4543,8 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::PlanSubcomponentPropertyReference"
             << '{'
-            << "propertyName=" << IDL::traits< std::string>::write(val_.propertyName ())
-            << ",instanceRef=" << IDL::traits< uint32_t>::write(val_.instanceRef ())
+            << "propertyName=" << IDL::traits<std::string>::write(val_.propertyName ())
+            << ",instanceRef=" << IDL::traits<uint32_t>::write(val_.instanceRef ())
             << '}';
         return os_;
       }
@@ -4553,23 +4553,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanSubcomponentPropertyReference>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanSubcomponentPropertyReference, OStrm_>,
+                            formatter<::Deployment::PlanSubcomponentPropertyReference, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::write_on (
+      return IDL::traits<::Deployment::PlanSubcomponentPropertyReference>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanPropertyMapping, OStrm_>
+    struct formatter<::Deployment::PlanPropertyMapping, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4577,10 +4577,10 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::PlanPropertyMapping"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-            << ",externalName=" << IDL::traits< std::string>::write(val_.externalName ())
-            << ",delegatesTo=" << IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write(val_.delegatesTo ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",source=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",externalName=" << IDL::traits<std::string>::write(val_.externalName ())
+            << ",delegatesTo=" << IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::write(val_.delegatesTo ())
             << '}';
         return os_;
       }
@@ -4589,23 +4589,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanPropertyMapping>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanPropertyMapping>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanPropertyMapping>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanPropertyMapping, OStrm_>,
+                            formatter<::Deployment::PlanPropertyMapping, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanPropertyMapping>::write_on (
+      return IDL::traits<::Deployment::PlanPropertyMapping>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ImplementationDependency, OStrm_>
+    struct formatter<::Deployment::ImplementationDependency, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4613,7 +4613,7 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ImplementationDependency"
             << '{'
-            << "requiredType=" << IDL::traits< std::string>::write(val_.requiredType ())
+            << "requiredType=" << IDL::traits<std::string>::write(val_.requiredType ())
             << '}';
         return os_;
       }
@@ -4622,23 +4622,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ImplementationDependency>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ImplementationDependency>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ImplementationDependency>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ImplementationDependency, OStrm_>,
+                            formatter<::Deployment::ImplementationDependency, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ImplementationDependency>::write_on (
+      return IDL::traits<::Deployment::ImplementationDependency>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>
+    struct formatter<::Deployment::ResourceDeploymentDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4646,9 +4646,9 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ResourceDeploymentDescription"
             << '{'
-            << "requirementName=" << IDL::traits< std::string>::write(val_.requirementName ())
-            << ",resourceName=" << IDL::traits< std::string>::write(val_.resourceName ())
-            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << "requirementName=" << IDL::traits<std::string>::write(val_.requirementName ())
+            << ",resourceName=" << IDL::traits<std::string>::write(val_.resourceName ())
+            << ",property=" << IDL::traits<::Deployment::Properties>::write(val_.property ())
             << '}';
         return os_;
       }
@@ -4657,23 +4657,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ResourceDeploymentDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ResourceDeploymentDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ResourceDeploymentDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ResourceDeploymentDescription, OStrm_>,
+                            formatter<::Deployment::ResourceDeploymentDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ResourceDeploymentDescription>::write_on (
+      return IDL::traits<::Deployment::ResourceDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>
+    struct formatter<::Deployment::ArtifactDeploymentDescription, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4681,13 +4681,13 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ArtifactDeploymentDescription"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",location=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.location ())
-            << ",node=" << IDL::traits< std::string>::write(val_.node ())
-            << ",source=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
-            << ",execParameter=" << IDL::traits< ::Deployment::Properties>::write(val_.execParameter ())
-            << ",deployRequirement=" << IDL::traits< ::Deployment::Requirements>::write(val_.deployRequirement ())
-            << ",deployedResource=" << IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write(val_.deployedResource ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",location=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.location ())
+            << ",node=" << IDL::traits<std::string>::write(val_.node ())
+            << ",source=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.source ())
+            << ",execParameter=" << IDL::traits<::Deployment::Properties>::write(val_.execParameter ())
+            << ",deployRequirement=" << IDL::traits<::Deployment::Requirements>::write(val_.deployRequirement ())
+            << ",deployedResource=" << IDL::traits<::Deployment::ResourceDeploymentDescriptions>::write(val_.deployedResource ())
             << '}';
         return os_;
       }
@@ -4696,23 +4696,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ArtifactDeploymentDescription>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ArtifactDeploymentDescription, OStrm_>,
+                            formatter<::Deployment::ArtifactDeploymentDescription, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ArtifactDeploymentDescription>::write_on (
+      return IDL::traits<::Deployment::ArtifactDeploymentDescription>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::PlanLocality, OStrm_>
+    struct formatter<::Deployment::PlanLocality, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4720,8 +4720,8 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::PlanLocality"
             << '{'
-            << "constraint=" << IDL::traits< ::Deployment::PlanLocalityKind>::write(val_.constraint ())
-            << ",constrainedInstanceRef=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.constrainedInstanceRef ())
+            << "constraint=" << IDL::traits<::Deployment::PlanLocalityKind>::write(val_.constraint ())
+            << ",constrainedInstanceRef=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::ULongSeq>::write(val_.constrainedInstanceRef ())
             << '}';
         return os_;
       }
@@ -4730,23 +4730,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::PlanLocality>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::PlanLocality>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::PlanLocality>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::PlanLocality, OStrm_>,
+                            formatter<::Deployment::PlanLocality, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::PlanLocality>::write_on (
+      return IDL::traits<::Deployment::PlanLocality>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::DeploymentPlan, OStrm_>
+    struct formatter<::Deployment::DeploymentPlan, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4754,17 +4754,17 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::DeploymentPlan"
             << '{'
-            << "label=" << IDL::traits< std::string>::write(val_.label ())
-            << ",UUID=" << IDL::traits< std::string>::write(val_.UUID ())
-            << ",realizes=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.realizes ())
-            << ",implementation=" << IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write(val_.implementation ())
-            << ",instance=" << IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write(val_.instance ())
-            << ",connection=" << IDL::traits< ::Deployment::PlanConnectionDescriptions>::write(val_.connection ())
-            << ",externalProperty=" << IDL::traits< ::Deployment::PlanPropertyMappings>::write(val_.externalProperty ())
-            << ",dependsOn=" << IDL::traits< ::Deployment::ImplementationDependencies>::write(val_.dependsOn ())
-            << ",artifact=" << IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write(val_.artifact ())
-            << ",infoProperty=" << IDL::traits< ::Deployment::Properties>::write(val_.infoProperty ())
-            << ",localityConstraint=" << IDL::traits< ::Deployment::PlanLocalities>::write(val_.localityConstraint ())
+            << "label=" << IDL::traits<std::string>::write(val_.label ())
+            << ",UUID=" << IDL::traits<std::string>::write(val_.UUID ())
+            << ",realizes=" << IDL::traits<::Deployment::ComponentInterfaceDescription>::write(val_.realizes ())
+            << ",implementation=" << IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::write(val_.implementation ())
+            << ",instance=" << IDL::traits<::Deployment::InstanceDeploymentDescriptions>::write(val_.instance ())
+            << ",connection=" << IDL::traits<::Deployment::PlanConnectionDescriptions>::write(val_.connection ())
+            << ",externalProperty=" << IDL::traits<::Deployment::PlanPropertyMappings>::write(val_.externalProperty ())
+            << ",dependsOn=" << IDL::traits<::Deployment::ImplementationDependencies>::write(val_.dependsOn ())
+            << ",artifact=" << IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::write(val_.artifact ())
+            << ",infoProperty=" << IDL::traits<::Deployment::Properties>::write(val_.infoProperty ())
+            << ",localityConstraint=" << IDL::traits<::Deployment::PlanLocalities>::write(val_.localityConstraint ())
             << '}';
         return os_;
       }
@@ -4773,23 +4773,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::DeploymentPlan>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::DeploymentPlan>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::DeploymentPlan>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::DeploymentPlan, OStrm_>,
+                            formatter<::Deployment::DeploymentPlan, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::DeploymentPlan>::write_on (
+      return IDL::traits<::Deployment::DeploymentPlan>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ComponentPackageReference, OStrm_>
+    struct formatter<::Deployment::ComponentPackageReference, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4797,9 +4797,9 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ComponentPackageReference"
             << '{'
-            << "requiredUUID=" << IDL::traits< std::string>::write(val_.requiredUUID ())
-            << ",requiredName=" << IDL::traits< std::string>::write(val_.requiredName ())
-            << ",requiredType=" << IDL::traits< ::Deployment::ComponentInterfaceDescription>::write(val_.requiredType ())
+            << "requiredUUID=" << IDL::traits<std::string>::write(val_.requiredUUID ())
+            << ",requiredName=" << IDL::traits<std::string>::write(val_.requiredName ())
+            << ",requiredType=" << IDL::traits<::Deployment::ComponentInterfaceDescription>::write(val_.requiredType ())
             << '}';
         return os_;
       }
@@ -4808,23 +4808,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ComponentPackageReference>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ComponentPackageReference>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ComponentPackageReference>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ComponentPackageReference, OStrm_>,
+                            formatter<::Deployment::ComponentPackageReference, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ComponentPackageReference>::write_on (
+      return IDL::traits<::Deployment::ComponentPackageReference>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::ImplementationRequirement, OStrm_>
+    struct formatter<::Deployment::ImplementationRequirement, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4832,12 +4832,12 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::ImplementationRequirement"
             << '{'
-            << "resourceUsage=" << IDL::traits< ::Deployment::ResourceUsageKinds>::write(val_.resourceUsage ())
-            << ",resourcePort=" << IDL::traits< std::string>::write(val_.resourcePort ())
-            << ",componentPort=" << IDL::traits< std::string>::write(val_.componentPort ())
-            << ",name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",resourceType=" << IDL::traits< std::string>::write(val_.resourceType ())
-            << ",property=" << IDL::traits< ::Deployment::Properties>::write(val_.property ())
+            << "resourceUsage=" << IDL::traits<::Deployment::ResourceUsageKinds>::write(val_.resourceUsage ())
+            << ",resourcePort=" << IDL::traits<std::string>::write(val_.resourcePort ())
+            << ",componentPort=" << IDL::traits<std::string>::write(val_.componentPort ())
+            << ",name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",resourceType=" << IDL::traits<std::string>::write(val_.resourceType ())
+            << ",property=" << IDL::traits<::Deployment::Properties>::write(val_.property ())
             << '}';
         return os_;
       }
@@ -4846,23 +4846,23 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::ImplementationRequirement>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::ImplementationRequirement>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::ImplementationRequirement>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::ImplementationRequirement, OStrm_>,
+                            formatter<::Deployment::ImplementationRequirement, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::ImplementationRequirement>::write_on (
+      return IDL::traits<::Deployment::ImplementationRequirement>::write_on (
           os, w.val_,
           formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
     template <typename OStrm_>
-    struct formatter< ::Deployment::Capability, OStrm_>
+    struct formatter<::Deployment::Capability, OStrm_>
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
@@ -4870,9 +4870,9 @@ namespace TAOX11_NAMESPACE
       {
         os_ << "Deployment::Capability"
             << '{'
-            << "name=" << IDL::traits< std::string>::write(val_.name ())
-            << ",resourceType=" << IDL::traits< ::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.resourceType ())
-            << ",property=" << IDL::traits< ::Deployment::SatisfierProperties>::write(val_.property ())
+            << "name=" << IDL::traits<std::string>::write(val_.name ())
+            << ",resourceType=" << IDL::traits<::TAOX11_NAMESPACE::CORBA::StringSeq>::write(val_.resourceType ())
+            << ",property=" << IDL::traits<::Deployment::SatisfierProperties>::write(val_.property ())
             << '}';
         return os_;
       }
@@ -4881,16 +4881,16 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_, typename Fmt>
     inline OStrm_& operator <<(
         OStrm_& os,
-        IDL::traits< ::Deployment::Capability>::__Writer<Fmt> w)
+        IDL::traits<::Deployment::Capability>::__Writer<Fmt> w)
     {
-      using writer_t = IDL::traits< ::Deployment::Capability>::__Writer<Fmt>;
+      using writer_t = IDL::traits<::Deployment::Capability>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
                             std::is_same<
                               typename writer_t::formatter_t,
                               std::false_type>::value,
-                            formatter< ::Deployment::Capability, OStrm_>,
+                            formatter<::Deployment::Capability, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits< ::Deployment::Capability>::write_on (
+      return IDL::traits<::Deployment::Capability>::write_on (
           os, w.val_,
           formatter_t ());
     }
@@ -5440,7 +5440,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::Property& _v)
 {
-  return IDL::traits< ::Deployment::Property>::write_on (strm, _v);
+  return IDL::traits<::Deployment::Property>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5453,7 +5453,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Properties& _v)
 {
-  return IDL::traits< ::Deployment::Properties>::write_on (strm, _v);
+  return IDL::traits<::Deployment::Properties>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_D7395FCE530B622658DD71B872EFFEFC_DECL_
@@ -5464,7 +5464,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::Requirement& _v)
 {
-  return IDL::traits< ::Deployment::Requirement>::write_on (strm, _v);
+  return IDL::traits<::Deployment::Requirement>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5477,7 +5477,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Requirements& _v)
 {
-  return IDL::traits< ::Deployment::Requirements>::write_on (strm, _v);
+  return IDL::traits<::Deployment::Requirements>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_3265D777E1B663C0C3E8129C9FA7A92F_DECL_
@@ -5487,7 +5487,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Deployment::SatisfierPropertyKind _v)
 {
-  return IDL::traits< ::Deployment::SatisfierPropertyKind>::write_on (strm, _v);
+  return IDL::traits<::Deployment::SatisfierPropertyKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -5496,7 +5496,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::SatisfierProperty& _v)
 {
-  return IDL::traits< ::Deployment::SatisfierProperty>::write_on (strm, _v);
+  return IDL::traits<::Deployment::SatisfierProperty>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5509,7 +5509,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::SatisfierProperties& _v)
 {
-  return IDL::traits< ::Deployment::SatisfierProperties>::write_on (strm, _v);
+  return IDL::traits<::Deployment::SatisfierProperties>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_EB80218682E63B0775FD6299B3051E6D_DECL_
@@ -5519,7 +5519,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Deployment::CCMComponentPortKind _v)
 {
-  return IDL::traits< ::Deployment::CCMComponentPortKind>::write_on (strm, _v);
+  return IDL::traits<::Deployment::CCMComponentPortKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -5528,7 +5528,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPortDescription& _v)
 {
-  return IDL::traits< ::Deployment::ComponentPortDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentPortDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5541,7 +5541,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPortDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::ComponentPortDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentPortDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_12954963972B5124A7A21E0C4327729B_DECL_
@@ -5552,7 +5552,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPropertyDescription& _v)
 {
-  return IDL::traits< ::Deployment::ComponentPropertyDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentPropertyDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5565,7 +5565,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPropertyDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::ComponentPropertyDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentPropertyDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_920E8F149D82D841A00A08FE0557725B_DECL_
@@ -5576,7 +5576,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentInterfaceDescription& _v)
 {
-  return IDL::traits< ::Deployment::ComponentInterfaceDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentInterfaceDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -5585,7 +5585,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::MonolithicDeploymentDescription& _v)
 {
-  return IDL::traits< ::Deployment::MonolithicDeploymentDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::MonolithicDeploymentDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5598,7 +5598,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::MonolithicDeploymentDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::MonolithicDeploymentDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_8CA1C515FCEF8C84C8A8AC3BF21E75A1_DECL_
@@ -5608,7 +5608,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Deployment::ResourceUsageKind _v)
 {
-  return IDL::traits< ::Deployment::ResourceUsageKind>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ResourceUsageKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -5617,7 +5617,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceResourceDeploymentDescription& _v)
 {
-  return IDL::traits< ::Deployment::InstanceResourceDeploymentDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::InstanceResourceDeploymentDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5630,7 +5630,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::InstanceResourceDeploymentDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_7DA1C006DFD4ED780225B6DDB077F883_DECL_
@@ -5641,7 +5641,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceDeploymentDescription& _v)
 {
-  return IDL::traits< ::Deployment::InstanceDeploymentDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::InstanceDeploymentDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5654,7 +5654,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::InstanceDeploymentDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::InstanceDeploymentDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::InstanceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_8B4B636BAEF9B16F13A7BA16B787ADEA_DECL_
@@ -5665,7 +5665,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentExternalPortEndpoint& _v)
 {
-  return IDL::traits< ::Deployment::ComponentExternalPortEndpoint>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentExternalPortEndpoint>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5678,7 +5678,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentExternalPortEndpoints& _v)
 {
-  return IDL::traits< ::Deployment::ComponentExternalPortEndpoints>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentExternalPortEndpoints>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_0079E24B070B963BAFE84A5B71BC7698_DECL_
@@ -5689,7 +5689,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPortEndpoint& _v)
 {
-  return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoint>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5702,7 +5702,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPortEndpoints& _v)
 {
-  return IDL::traits< ::Deployment::PlanSubcomponentPortEndpoints>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_1CC072AD6279ECB8F540C3C10DB1F767_DECL_
@@ -5713,7 +5713,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ExternalReferenceEndpoint& _v)
 {
-  return IDL::traits< ::Deployment::ExternalReferenceEndpoint>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ExternalReferenceEndpoint>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5726,7 +5726,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ExternalReferenceEndpoints& _v)
 {
-  return IDL::traits< ::Deployment::ExternalReferenceEndpoints>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ExternalReferenceEndpoints>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_2E044427492F5861B730283A565D1ED5_DECL_
@@ -5737,7 +5737,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ConnectionResourceDeploymentDescription& _v)
 {
-  return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5750,7 +5750,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ConnectionResourceDeploymentDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_4CE006491F749EF87F69C9F0666BD518_DECL_
@@ -5761,7 +5761,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::PlanConnectionDescription& _v)
 {
-  return IDL::traits< ::Deployment::PlanConnectionDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanConnectionDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5774,7 +5774,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanConnectionDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::PlanConnectionDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanConnectionDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_0864BEE17C4222FE18C6B2C68197901B_DECL_
@@ -5785,7 +5785,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPropertyReference& _v)
 {
-  return IDL::traits< ::Deployment::PlanSubcomponentPropertyReference>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanSubcomponentPropertyReference>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5798,7 +5798,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanSubcomponentPropertyReferences& _v)
 {
-  return IDL::traits< ::Deployment::PlanSubcomponentPropertyReferences>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_E50992F1F837050D6477978B56863FBD_DECL_
@@ -5809,7 +5809,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::PlanPropertyMapping& _v)
 {
-  return IDL::traits< ::Deployment::PlanPropertyMapping>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanPropertyMapping>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5822,7 +5822,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanPropertyMappings& _v)
 {
-  return IDL::traits< ::Deployment::PlanPropertyMappings>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanPropertyMappings>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_0422E458499BDB48508CAB373414C33F_DECL_
@@ -5833,7 +5833,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationDependency& _v)
 {
-  return IDL::traits< ::Deployment::ImplementationDependency>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ImplementationDependency>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5846,7 +5846,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationDependencies& _v)
 {
-  return IDL::traits< ::Deployment::ImplementationDependencies>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ImplementationDependencies>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_2C17710E0A7BA82C42ACC676758DBF1C_DECL_
@@ -5857,7 +5857,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceDeploymentDescription& _v)
 {
-  return IDL::traits< ::Deployment::ResourceDeploymentDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ResourceDeploymentDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5870,7 +5870,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceDeploymentDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::ResourceDeploymentDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_77F1484D7BC4A6841660C8A62AFD38E7_DECL_
@@ -5881,7 +5881,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ArtifactDeploymentDescription& _v)
 {
-  return IDL::traits< ::Deployment::ArtifactDeploymentDescription>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ArtifactDeploymentDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5894,7 +5894,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ArtifactDeploymentDescriptions& _v)
 {
-  return IDL::traits< ::Deployment::ArtifactDeploymentDescriptions>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_4B78A2395FEFF04B7A71CAF425D7AAB0_DECL_
@@ -5904,7 +5904,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     ::Deployment::PlanLocalityKind _v)
 {
-  return IDL::traits< ::Deployment::PlanLocalityKind>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanLocalityKind>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -5913,7 +5913,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::PlanLocality& _v)
 {
-  return IDL::traits< ::Deployment::PlanLocality>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanLocality>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5926,7 +5926,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::PlanLocalities& _v)
 {
-  return IDL::traits< ::Deployment::PlanLocalities>::write_on (strm, _v);
+  return IDL::traits<::Deployment::PlanLocalities>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_7639FB88384E3E335A056DB5284179B1_DECL_
@@ -5937,7 +5937,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::DeploymentPlan& _v)
 {
-  return IDL::traits< ::Deployment::DeploymentPlan>::write_on (strm, _v);
+  return IDL::traits<::Deployment::DeploymentPlan>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -5946,7 +5946,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPackageReference& _v)
 {
-  return IDL::traits< ::Deployment::ComponentPackageReference>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentPackageReference>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5959,7 +5959,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ComponentPackageReferences& _v)
 {
-  return IDL::traits< ::Deployment::ComponentPackageReferences>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ComponentPackageReferences>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_D5775520607EF1551FF61D9245FFC376_DECL_
@@ -5974,7 +5974,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ResourceUsageKinds& _v)
 {
-  return IDL::traits< ::Deployment::ResourceUsageKinds>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ResourceUsageKinds>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_90F1BEC8CBCE4D84EC85294F6CFABECA_DECL_
@@ -5985,7 +5985,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationRequirement& _v)
 {
-  return IDL::traits< ::Deployment::ImplementationRequirement>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ImplementationRequirement>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -5998,7 +5998,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::ImplementationRequirements& _v)
 {
-  return IDL::traits< ::Deployment::ImplementationRequirements>::write_on (strm, _v);
+  return IDL::traits<::Deployment::ImplementationRequirements>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_D1965C67B438F31951F64983B8082D9F_DECL_
@@ -6009,7 +6009,7 @@ operator<< (
     std::ostream& strm,
     const ::Deployment::Capability& _v)
 {
-  return IDL::traits< ::Deployment::Capability>::write_on (strm, _v);
+  return IDL::traits<::Deployment::Capability>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
@@ -6022,7 +6022,7 @@ inline std::ostream& operator<< (
     std::ostream& strm,
     const ::Deployment::Capabilities& _v)
 {
-  return IDL::traits< ::Deployment::Capabilities>::write_on (strm, _v);
+  return IDL::traits<::Deployment::Capabilities>::write_on (strm, _v);
 }
 
 #endif // _ALIAS_OSTREAM_9AC75DD12DFFBAB4E6024AF2CB28F81D_DECL_
@@ -6034,6 +6034,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JIDAHIBA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GDDFBEEA_INCLUDED__ */
 
 // -*- END -*-
