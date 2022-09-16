@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GDDFBEEA_INCLUDED__
-#define __RIDL_TESTC_H_GDDFBEEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BIJJGCIE_INCLUDED__
+#define __RIDL_TESTC_H_BIJJGCIE_INCLUDED__
 
 #pragma once
 
@@ -39,23 +39,16 @@ namespace Deployment
   class Property
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Property () = default;
-    /// Destructor
     ~Property () = default;
-    /// Copy constructor
     Property (const Property&) = default;
-    /// Move constructor
     Property (Property&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Property (
       std::string name,
       TAOX11_NAMESPACE::CORBA::Any value);
-    /// Copy assignment operator
     Property& operator= (const Property&) = default;
-    /// Move assignment operator
     Property& operator= (Property&&) = default;
 
     /// @copydoc test.idl::Deployment::Property::name
@@ -74,7 +67,7 @@ namespace Deployment
     inline TAOX11_NAMESPACE::CORBA::Any& value () { return this->value_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Property& s);
 
   private:
@@ -95,24 +88,17 @@ namespace Deployment
   class Requirement
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Requirement () = default;
-    /// Destructor
     ~Requirement () = default;
-    /// Copy constructor
     Requirement (const Requirement&) = default;
-    /// Move constructor
     Requirement (Requirement&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Requirement (
       std::string name,
       std::string resourceType,
       ::Deployment::Properties property);
-    /// Copy assignment operator
     Requirement& operator= (const Requirement&) = default;
-    /// Move assignment operator
     Requirement& operator= (Requirement&&) = default;
 
     /// @copydoc test.idl::Deployment::Requirement::name
@@ -139,7 +125,7 @@ namespace Deployment
     inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Requirement& s);
 
   private:
@@ -181,15 +167,10 @@ namespace Deployment
   class SatisfierProperty
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     SatisfierProperty () = default;
-    /// Destructor
     ~SatisfierProperty () = default;
-    /// Copy constructor
     SatisfierProperty (const SatisfierProperty&) = default;
-    /// Move constructor
     SatisfierProperty (SatisfierProperty&&) = default;
     /// Constructor which accepts value for all members
     explicit inline SatisfierProperty (
@@ -197,9 +178,7 @@ namespace Deployment
       ::Deployment::SatisfierPropertyKind kind,
       bool dynamic,
       TAOX11_NAMESPACE::CORBA::Any value);
-    /// Copy assignment operator
     SatisfierProperty& operator= (const SatisfierProperty&) = default;
-    /// Move assignment operator
     SatisfierProperty& operator= (SatisfierProperty&&) = default;
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::name
@@ -232,7 +211,7 @@ namespace Deployment
     inline TAOX11_NAMESPACE::CORBA::Any& value () { return this->value_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (SatisfierProperty& s);
 
   private:
@@ -286,15 +265,10 @@ namespace Deployment
   class ComponentPortDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ComponentPortDescription () = default;
-    /// Destructor
     ~ComponentPortDescription () = default;
-    /// Copy constructor
     ComponentPortDescription (const ComponentPortDescription&) = default;
-    /// Move constructor
     ComponentPortDescription (ComponentPortDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPortDescription (
@@ -307,9 +281,7 @@ namespace Deployment
       bool optional,
       ::Deployment::CCMComponentPortKind kind,
       ::TAOX11_NAMESPACE::CORBA::StringSeq templateParam);
-    /// Copy assignment operator
     ComponentPortDescription& operator= (const ComponentPortDescription&) = default;
-    /// Move assignment operator
     ComponentPortDescription& operator= (ComponentPortDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::name
@@ -379,7 +351,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam () { return this->templateParam_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ComponentPortDescription& s);
 
   private:
@@ -407,23 +379,16 @@ namespace Deployment
   class ComponentPropertyDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ComponentPropertyDescription () = default;
-    /// Destructor
     ~ComponentPropertyDescription () = default;
-    /// Copy constructor
     ComponentPropertyDescription (const ComponentPropertyDescription&) = default;
-    /// Move constructor
     ComponentPropertyDescription (ComponentPropertyDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPropertyDescription (
       std::string name,
       IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type);
-    /// Copy assignment operator
     ComponentPropertyDescription& operator= (const ComponentPropertyDescription&) = default;
-    /// Move assignment operator
     ComponentPropertyDescription& operator= (ComponentPropertyDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::ComponentPropertyDescription::name
@@ -441,7 +406,7 @@ namespace Deployment
     inline IDL::traits< ::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type () { return this->type_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ComponentPropertyDescription& s);
 
   private:
@@ -462,15 +427,10 @@ namespace Deployment
   class ComponentInterfaceDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ComponentInterfaceDescription () = default;
-    /// Destructor
     ~ComponentInterfaceDescription () = default;
-    /// Copy constructor
     ComponentInterfaceDescription (const ComponentInterfaceDescription&) = default;
-    /// Move constructor
     ComponentInterfaceDescription (ComponentInterfaceDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentInterfaceDescription (
@@ -483,9 +443,7 @@ namespace Deployment
       ::Deployment::ComponentPortDescriptions port,
       ::Deployment::ComponentPropertyDescriptions property,
       ::Deployment::Properties infoProperty);
-    /// Copy assignment operator
     ComponentInterfaceDescription& operator= (const ComponentInterfaceDescription&) = default;
-    /// Move assignment operator
     ComponentInterfaceDescription& operator= (ComponentInterfaceDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::label
@@ -560,7 +518,7 @@ namespace Deployment
     inline ::Deployment::Properties& infoProperty () { return this->infoProperty_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ComponentInterfaceDescription& s);
 
   private:
@@ -584,15 +542,10 @@ namespace Deployment
   class MonolithicDeploymentDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     MonolithicDeploymentDescription () = default;
-    /// Destructor
     ~MonolithicDeploymentDescription () = default;
-    /// Copy constructor
     MonolithicDeploymentDescription (const MonolithicDeploymentDescription&) = default;
-    /// Move constructor
     MonolithicDeploymentDescription (MonolithicDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline MonolithicDeploymentDescription (
@@ -601,9 +554,7 @@ namespace Deployment
       ::TAOX11_NAMESPACE::CORBA::ULongSeq artifactRef,
       ::Deployment::Properties execParameter,
       ::Deployment::Requirements deployRequirement);
-    /// Copy assignment operator
     MonolithicDeploymentDescription& operator= (const MonolithicDeploymentDescription&) = default;
-    /// Move assignment operator
     MonolithicDeploymentDescription& operator= (MonolithicDeploymentDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::name
@@ -646,7 +597,7 @@ namespace Deployment
     inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (MonolithicDeploymentDescription& s);
 
   private:
@@ -688,15 +639,10 @@ namespace Deployment
   class InstanceResourceDeploymentDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     InstanceResourceDeploymentDescription () = default;
-    /// Destructor
     ~InstanceResourceDeploymentDescription () = default;
-    /// Copy constructor
     InstanceResourceDeploymentDescription (const InstanceResourceDeploymentDescription&) = default;
-    /// Move constructor
     InstanceResourceDeploymentDescription (InstanceResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline InstanceResourceDeploymentDescription (
@@ -704,9 +650,7 @@ namespace Deployment
       std::string requirementName,
       std::string resourceName,
       ::Deployment::Properties property);
-    /// Copy assignment operator
     InstanceResourceDeploymentDescription& operator= (const InstanceResourceDeploymentDescription&) = default;
-    /// Move assignment operator
     InstanceResourceDeploymentDescription& operator= (InstanceResourceDeploymentDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceUsage
@@ -740,7 +684,7 @@ namespace Deployment
     inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (InstanceResourceDeploymentDescription& s);
 
   private:
@@ -763,15 +707,10 @@ namespace Deployment
   class InstanceDeploymentDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     InstanceDeploymentDescription () = default;
-    /// Destructor
     ~InstanceDeploymentDescription () = default;
-    /// Copy constructor
     InstanceDeploymentDescription (const InstanceDeploymentDescription&) = default;
-    /// Move constructor
     InstanceDeploymentDescription (InstanceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline InstanceDeploymentDescription (
@@ -782,9 +721,7 @@ namespace Deployment
       ::Deployment::Properties configProperty,
       ::Deployment::InstanceResourceDeploymentDescriptions deployedResource,
       ::Deployment::InstanceResourceDeploymentDescriptions deployedSharedResource);
-    /// Copy assignment operator
     InstanceDeploymentDescription& operator= (const InstanceDeploymentDescription&) = default;
-    /// Move assignment operator
     InstanceDeploymentDescription& operator= (InstanceDeploymentDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::name
@@ -842,7 +779,7 @@ namespace Deployment
     inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource () { return this->deployedSharedResource_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (InstanceDeploymentDescription& s);
 
   private:
@@ -868,22 +805,15 @@ namespace Deployment
   class ComponentExternalPortEndpoint
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ComponentExternalPortEndpoint () = default;
-    /// Destructor
     ~ComponentExternalPortEndpoint () = default;
-    /// Copy constructor
     ComponentExternalPortEndpoint (const ComponentExternalPortEndpoint&) = default;
-    /// Move constructor
     ComponentExternalPortEndpoint (ComponentExternalPortEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentExternalPortEndpoint (
       std::string portName);
-    /// Copy assignment operator
     ComponentExternalPortEndpoint& operator= (const ComponentExternalPortEndpoint&) = default;
-    /// Move assignment operator
     ComponentExternalPortEndpoint& operator= (ComponentExternalPortEndpoint&&) = default;
 
     /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoint::portName
@@ -894,7 +824,7 @@ namespace Deployment
     inline std::string& portName () { return this->portName_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ComponentExternalPortEndpoint& s);
 
   private:
@@ -914,15 +844,10 @@ namespace Deployment
   class PlanSubcomponentPortEndpoint
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     PlanSubcomponentPortEndpoint () = default;
-    /// Destructor
     ~PlanSubcomponentPortEndpoint () = default;
-    /// Copy constructor
     PlanSubcomponentPortEndpoint (const PlanSubcomponentPortEndpoint&) = default;
-    /// Move constructor
     PlanSubcomponentPortEndpoint (PlanSubcomponentPortEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPortEndpoint (
@@ -930,9 +855,7 @@ namespace Deployment
       bool provider,
       ::Deployment::CCMComponentPortKind kind,
       uint32_t instanceRef);
-    /// Copy assignment operator
     PlanSubcomponentPortEndpoint& operator= (const PlanSubcomponentPortEndpoint&) = default;
-    /// Move assignment operator
     PlanSubcomponentPortEndpoint& operator= (PlanSubcomponentPortEndpoint&&) = default;
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::portName
@@ -964,7 +887,7 @@ namespace Deployment
     inline uint32_t& instanceRef () { return this->instanceRef_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (PlanSubcomponentPortEndpoint& s);
 
   private:
@@ -987,15 +910,10 @@ namespace Deployment
   class ExternalReferenceEndpoint
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ExternalReferenceEndpoint () = default;
-    /// Destructor
     ~ExternalReferenceEndpoint () = default;
-    /// Copy constructor
     ExternalReferenceEndpoint (const ExternalReferenceEndpoint&) = default;
-    /// Move constructor
     ExternalReferenceEndpoint (ExternalReferenceEndpoint&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ExternalReferenceEndpoint (
@@ -1003,9 +921,7 @@ namespace Deployment
       bool provider,
       std::string portName,
       ::TAOX11_NAMESPACE::CORBA::StringSeq supportedType);
-    /// Copy assignment operator
     ExternalReferenceEndpoint& operator= (const ExternalReferenceEndpoint&) = default;
-    /// Move assignment operator
     ExternalReferenceEndpoint& operator= (ExternalReferenceEndpoint&&) = default;
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::location
@@ -1039,7 +955,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ExternalReferenceEndpoint& s);
 
   private:
@@ -1062,15 +978,10 @@ namespace Deployment
   class ConnectionResourceDeploymentDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ConnectionResourceDeploymentDescription () = default;
-    /// Destructor
     ~ConnectionResourceDeploymentDescription () = default;
-    /// Copy constructor
     ConnectionResourceDeploymentDescription (const ConnectionResourceDeploymentDescription&) = default;
-    /// Move constructor
     ConnectionResourceDeploymentDescription (ConnectionResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ConnectionResourceDeploymentDescription (
@@ -1078,9 +989,7 @@ namespace Deployment
       std::string requirementName,
       std::string resourceName,
       ::Deployment::Properties property);
-    /// Copy assignment operator
     ConnectionResourceDeploymentDescription& operator= (const ConnectionResourceDeploymentDescription&) = default;
-    /// Move assignment operator
     ConnectionResourceDeploymentDescription& operator= (ConnectionResourceDeploymentDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::targetName
@@ -1115,7 +1024,7 @@ namespace Deployment
     inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ConnectionResourceDeploymentDescription& s);
 
   private:
@@ -1138,15 +1047,10 @@ namespace Deployment
   class PlanConnectionDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     PlanConnectionDescription () = default;
-    /// Destructor
     ~PlanConnectionDescription () = default;
-    /// Copy constructor
     PlanConnectionDescription (const PlanConnectionDescription&) = default;
-    /// Move constructor
     PlanConnectionDescription (PlanConnectionDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanConnectionDescription (
@@ -1157,9 +1061,7 @@ namespace Deployment
       ::Deployment::PlanSubcomponentPortEndpoints internalEndpoint,
       ::Deployment::ExternalReferenceEndpoints externalReference,
       ::Deployment::ConnectionResourceDeploymentDescriptions deployedResource);
-    /// Copy assignment operator
     PlanConnectionDescription& operator= (const PlanConnectionDescription&) = default;
-    /// Move assignment operator
     PlanConnectionDescription& operator= (PlanConnectionDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::name
@@ -1218,7 +1120,7 @@ namespace Deployment
     inline ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (PlanConnectionDescription& s);
 
   private:
@@ -1244,23 +1146,16 @@ namespace Deployment
   class PlanSubcomponentPropertyReference
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     PlanSubcomponentPropertyReference () = default;
-    /// Destructor
     ~PlanSubcomponentPropertyReference () = default;
-    /// Copy constructor
     PlanSubcomponentPropertyReference (const PlanSubcomponentPropertyReference&) = default;
-    /// Move constructor
     PlanSubcomponentPropertyReference (PlanSubcomponentPropertyReference&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanSubcomponentPropertyReference (
       std::string propertyName,
       uint32_t instanceRef);
-    /// Copy assignment operator
     PlanSubcomponentPropertyReference& operator= (const PlanSubcomponentPropertyReference&) = default;
-    /// Move assignment operator
     PlanSubcomponentPropertyReference& operator= (PlanSubcomponentPropertyReference&&) = default;
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference::propertyName
@@ -1278,7 +1173,7 @@ namespace Deployment
     inline uint32_t& instanceRef () { return this->instanceRef_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (PlanSubcomponentPropertyReference& s);
 
   private:
@@ -1299,15 +1194,10 @@ namespace Deployment
   class PlanPropertyMapping
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     PlanPropertyMapping () = default;
-    /// Destructor
     ~PlanPropertyMapping () = default;
-    /// Copy constructor
     PlanPropertyMapping (const PlanPropertyMapping&) = default;
-    /// Move constructor
     PlanPropertyMapping (PlanPropertyMapping&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanPropertyMapping (
@@ -1315,9 +1205,7 @@ namespace Deployment
       ::TAOX11_NAMESPACE::CORBA::StringSeq source,
       std::string externalName,
       ::Deployment::PlanSubcomponentPropertyReferences delegatesTo);
-    /// Copy assignment operator
     PlanPropertyMapping& operator= (const PlanPropertyMapping&) = default;
-    /// Move assignment operator
     PlanPropertyMapping& operator= (PlanPropertyMapping&&) = default;
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::name
@@ -1352,7 +1240,7 @@ namespace Deployment
     inline ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo () { return this->delegatesTo_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (PlanPropertyMapping& s);
 
   private:
@@ -1375,22 +1263,15 @@ namespace Deployment
   class ImplementationDependency
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ImplementationDependency () = default;
-    /// Destructor
     ~ImplementationDependency () = default;
-    /// Copy constructor
     ImplementationDependency (const ImplementationDependency&) = default;
-    /// Move constructor
     ImplementationDependency (ImplementationDependency&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ImplementationDependency (
       std::string requiredType);
-    /// Copy assignment operator
     ImplementationDependency& operator= (const ImplementationDependency&) = default;
-    /// Move assignment operator
     ImplementationDependency& operator= (ImplementationDependency&&) = default;
 
     /// @copydoc test.idl::Deployment::ImplementationDependency::requiredType
@@ -1401,7 +1282,7 @@ namespace Deployment
     inline std::string& requiredType () { return this->requiredType_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ImplementationDependency& s);
 
   private:
@@ -1421,24 +1302,17 @@ namespace Deployment
   class ResourceDeploymentDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ResourceDeploymentDescription () = default;
-    /// Destructor
     ~ResourceDeploymentDescription () = default;
-    /// Copy constructor
     ResourceDeploymentDescription (const ResourceDeploymentDescription&) = default;
-    /// Move constructor
     ResourceDeploymentDescription (ResourceDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ResourceDeploymentDescription (
       std::string requirementName,
       std::string resourceName,
       ::Deployment::Properties property);
-    /// Copy assignment operator
     ResourceDeploymentDescription& operator= (const ResourceDeploymentDescription&) = default;
-    /// Move assignment operator
     ResourceDeploymentDescription& operator= (ResourceDeploymentDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::requirementName
@@ -1465,7 +1339,7 @@ namespace Deployment
     inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ResourceDeploymentDescription& s);
 
   private:
@@ -1487,15 +1361,10 @@ namespace Deployment
   class ArtifactDeploymentDescription
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ArtifactDeploymentDescription () = default;
-    /// Destructor
     ~ArtifactDeploymentDescription () = default;
-    /// Copy constructor
     ArtifactDeploymentDescription (const ArtifactDeploymentDescription&) = default;
-    /// Move constructor
     ArtifactDeploymentDescription (ArtifactDeploymentDescription&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ArtifactDeploymentDescription (
@@ -1506,9 +1375,7 @@ namespace Deployment
       ::Deployment::Properties execParameter,
       ::Deployment::Requirements deployRequirement,
       ::Deployment::ResourceDeploymentDescriptions deployedResource);
-    /// Copy assignment operator
     ArtifactDeploymentDescription& operator= (const ArtifactDeploymentDescription&) = default;
-    /// Move assignment operator
     ArtifactDeploymentDescription& operator= (ArtifactDeploymentDescription&&) = default;
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::name
@@ -1567,7 +1434,7 @@ namespace Deployment
     inline ::Deployment::ResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ArtifactDeploymentDescription& s);
 
   private:
@@ -1607,23 +1474,16 @@ namespace Deployment
   class PlanLocality
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     PlanLocality () = default;
-    /// Destructor
     ~PlanLocality () = default;
-    /// Copy constructor
     PlanLocality (const PlanLocality&) = default;
-    /// Move constructor
     PlanLocality (PlanLocality&&) = default;
     /// Constructor which accepts value for all members
     explicit inline PlanLocality (
       ::Deployment::PlanLocalityKind constraint,
       ::TAOX11_NAMESPACE::CORBA::ULongSeq constrainedInstanceRef);
-    /// Copy assignment operator
     PlanLocality& operator= (const PlanLocality&) = default;
-    /// Move assignment operator
     PlanLocality& operator= (PlanLocality&&) = default;
 
     /// @copydoc test.idl::Deployment::PlanLocality::constraint
@@ -1641,7 +1501,7 @@ namespace Deployment
     inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef () { return this->constrainedInstanceRef_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (PlanLocality& s);
 
   private:
@@ -1662,15 +1522,10 @@ namespace Deployment
   class DeploymentPlan
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     DeploymentPlan () = default;
-    /// Destructor
     ~DeploymentPlan () = default;
-    /// Copy constructor
     DeploymentPlan (const DeploymentPlan&) = default;
-    /// Move constructor
     DeploymentPlan (DeploymentPlan&&) = default;
     /// Constructor which accepts value for all members
     explicit inline DeploymentPlan (
@@ -1685,9 +1540,7 @@ namespace Deployment
       ::Deployment::ArtifactDeploymentDescriptions artifact,
       ::Deployment::Properties infoProperty,
       ::Deployment::PlanLocalities localityConstraint);
-    /// Copy assignment operator
     DeploymentPlan& operator= (const DeploymentPlan&) = default;
-    /// Move assignment operator
     DeploymentPlan& operator= (DeploymentPlan&&) = default;
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::label
@@ -1778,7 +1631,7 @@ namespace Deployment
     inline ::Deployment::PlanLocalities& localityConstraint () { return this->localityConstraint_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (DeploymentPlan& s);
 
   private:
@@ -1811,24 +1664,17 @@ namespace Deployment
   class ComponentPackageReference
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ComponentPackageReference () = default;
-    /// Destructor
     ~ComponentPackageReference () = default;
-    /// Copy constructor
     ComponentPackageReference (const ComponentPackageReference&) = default;
-    /// Move constructor
     ComponentPackageReference (ComponentPackageReference&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ComponentPackageReference (
       std::string requiredUUID,
       std::string requiredName,
       ::Deployment::ComponentInterfaceDescription requiredType);
-    /// Copy assignment operator
     ComponentPackageReference& operator= (const ComponentPackageReference&) = default;
-    /// Move assignment operator
     ComponentPackageReference& operator= (ComponentPackageReference&&) = default;
 
     /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredUUID
@@ -1855,7 +1701,7 @@ namespace Deployment
     inline ::Deployment::ComponentInterfaceDescription& requiredType () { return this->requiredType_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ComponentPackageReference& s);
 
   private:
@@ -1881,15 +1727,10 @@ namespace Deployment
   class ImplementationRequirement
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     ImplementationRequirement () = default;
-    /// Destructor
     ~ImplementationRequirement () = default;
-    /// Copy constructor
     ImplementationRequirement (const ImplementationRequirement&) = default;
-    /// Move constructor
     ImplementationRequirement (ImplementationRequirement&&) = default;
     /// Constructor which accepts value for all members
     explicit inline ImplementationRequirement (
@@ -1899,9 +1740,7 @@ namespace Deployment
       std::string name,
       std::string resourceType,
       ::Deployment::Properties property);
-    /// Copy assignment operator
     ImplementationRequirement& operator= (const ImplementationRequirement&) = default;
-    /// Move assignment operator
     ImplementationRequirement& operator= (ImplementationRequirement&&) = default;
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::resourceUsage
@@ -1952,7 +1791,7 @@ namespace Deployment
     inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (ImplementationRequirement& s);
 
   private:
@@ -1977,24 +1816,17 @@ namespace Deployment
   class Capability
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Capability () = default;
-    /// Destructor
     ~Capability () = default;
-    /// Copy constructor
     Capability (const Capability&) = default;
-    /// Move constructor
     Capability (Capability&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Capability (
       std::string name,
       ::TAOX11_NAMESPACE::CORBA::StringSeq resourceType,
       ::Deployment::SatisfierProperties property);
-    /// Copy assignment operator
     Capability& operator= (const Capability&) = default;
-    /// Move assignment operator
     Capability& operator= (Capability&&) = default;
 
     /// @copydoc test.idl::Deployment::Capability::name
@@ -2021,7 +1853,7 @@ namespace Deployment
     inline ::Deployment::SatisfierProperties& property () { return this->property_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Capability& s);
 
   private:
@@ -6034,6 +5866,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GDDFBEEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BIJJGCIE_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BHABFJFB_INCLUDED__
-#define __RIDL_TESTC_H_BHABFJFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDFIHJED_INCLUDED__
+#define __RIDL_TESTC_H_HDFIHJED_INCLUDED__
 
 #pragma once
 
@@ -34,22 +34,15 @@ using namespace TAOX11_NAMESPACE;
 class Global
 {
 public:
-
   // generated from c++11/templates/cli/hdr/struct_post
-  /// Default constructor
   Global () = default;
-  /// Destructor
   ~Global () = default;
-  /// Copy constructor
   Global (const Global&) = default;
-  /// Move constructor
   Global (Global&&) = default;
   /// Constructor which accepts value for all members
   explicit inline Global (
     int32_t x);
-  /// Copy assignment operator
   Global& operator= (const Global&) = default;
-  /// Move assignment operator
   Global& operator= (Global&&) = default;
 
   /// @copydoc test.idl::Global::x
@@ -59,7 +52,7 @@ public:
   inline int32_t& x () { return this->x_; }
   //@}
 
-  /// Exchange the value of two structs in an efficient matter
+  /// Exchange the value of two structures in an efficient matter
   inline void swap (Global& s);
 
 private:
@@ -102,23 +95,16 @@ namespace Test
   class Point
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Point () = default;
-    /// Destructor
     ~Point () = default;
-    /// Copy constructor
     Point (const Point&) = default;
-    /// Move constructor
     Point (Point&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Point (
       int32_t x,
       int32_t y);
-    /// Copy assignment operator
     Point& operator= (const Point&) = default;
-    /// Move assignment operator
     Point& operator= (Point&&) = default;
 
     /// @copydoc test.idl::Test::Point::x
@@ -135,7 +121,7 @@ namespace Test
     inline int32_t& y () { return this->y_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Point& s);
 
   private:
@@ -152,23 +138,16 @@ namespace Test
   class Track
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Track () = default;
-    /// Destructor
     ~Track () = default;
-    /// Copy constructor
     Track (const Track&) = default;
-    /// Move constructor
     Track (Track&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Track (
       int32_t id,
       ::Test::Point p);
-    /// Copy assignment operator
     Track& operator= (const Track&) = default;
-    /// Move assignment operator
     Track& operator= (Track&&) = default;
 
     /// @copydoc test.idl::Test::Track::id
@@ -186,7 +165,7 @@ namespace Test
     inline ::Test::Point& p () { return this->p_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Track& s);
 
   private:
@@ -330,14 +309,42 @@ namespace Test
     DataType disc_ {::Test::DataType::dtEmpty};
     union u_type_
     {
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       u_type_ ();
+#else
+      u_type_ () = default;
+#endif
       ~u_type_ ();
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       int32_t longData_;
+#else
+      int32_t longData_ {};
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       int16_t shortData_;
+#else
+      int16_t shortData_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       std::string stringData_;
+#else
+      std::string stringData_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       ::Test::Point pointData_;
+#else
+      ::Test::Point pointData_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       ::Test::Track trackData_;
+#else
+      ::Test::Track trackData_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       ::Global globalData_;
+#else
+      ::Global globalData_;
+#endif
     } u_ {};
   }; // class Data
 
@@ -350,22 +357,15 @@ namespace Test
   class S
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     S () = default;
-    /// Destructor
     ~S () = default;
-    /// Copy constructor
     S (const S&) = default;
-    /// Move constructor
     S (S&&) = default;
     /// Constructor which accepts value for all members
     explicit inline S (
       int32_t len);
-    /// Copy assignment operator
     S& operator= (const S&) = default;
-    /// Move assignment operator
     S& operator= (S&&) = default;
 
     /// @copydoc test.idl::Test::S::len
@@ -375,7 +375,7 @@ namespace Test
     inline int32_t& len () { return this->len_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (S& s);
 
   private:
@@ -542,12 +542,32 @@ namespace Test
     int32_t disc_ {(-2147483647-1)};
     union u_type_
     {
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       u_type_ ();
+#else
+      u_type_ () = default;
+#endif
       ~u_type_ ();
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       int32_t x_;
+#else
+      int32_t x_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       std::string z_;
+#else
+      std::string z_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       ::Test::S w_;
+#else
+      ::Test::S w_;
+#endif
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
       IDL::traits< ::Test::A>::ref_type obj_;
+#else
+      IDL::traits< ::Test::A>::ref_type obj_ {};
+#endif
     } u_ {};
   }; // class U
 
@@ -1372,11 +1392,12 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
 inline Test::Data::u_type_::u_type_ ()
   : longData_{}
 {
 }
+#endif
 
 inline Test::Data::u_type_::~u_type_ ()
 {
@@ -1993,11 +2014,12 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-
+#if (defined (_MSC_VER) && (_MSC_VER < 1930))
 inline Test::U::u_type_::u_type_ ()
   : obj_{}
 {
 }
+#endif
 
 inline Test::U::u_type_::~u_type_ ()
 {
@@ -2501,6 +2523,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BHABFJFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDFIHJED_INCLUDED__ */
 
 // -*- END -*-

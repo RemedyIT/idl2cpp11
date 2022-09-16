@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGBDAEDB_INCLUDED__
-#define __RIDL_TESTC_H_GGBDAEDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_DDBFFHAB_INCLUDED__
+#define __RIDL_TESTC_H_DDBFFHAB_INCLUDED__
 
 #pragma once
 
@@ -37,15 +37,10 @@ using octetseq = std::vector< uint8_t>;
 class RadarTrack
 {
 public:
-
   // generated from c++11/templates/cli/hdr/struct_post
-  /// Default constructor
   RadarTrack () = default;
-  /// Destructor
   ~RadarTrack () = default;
-  /// Copy constructor
   RadarTrack (const RadarTrack&) = default;
-  /// Move constructor
   RadarTrack (RadarTrack&&) = default;
   /// Constructor which accepts value for all members
   explicit inline RadarTrack (
@@ -54,9 +49,7 @@ public:
     int32_t y,
     int32_t z,
     ::octetseq plot);
-  /// Copy assignment operator
   RadarTrack& operator= (const RadarTrack&) = default;
-  /// Move assignment operator
   RadarTrack& operator= (RadarTrack&&) = default;
 
   /// @copydoc test.idl::RadarTrack::id
@@ -96,7 +89,7 @@ public:
   inline ::octetseq& plot () { return this->plot_; }
   //@}
 
-  /// Exchange the value of two structs in an efficient matter
+  /// Exchange the value of two structures in an efficient matter
   inline void swap (RadarTrack& s);
 
 private:
@@ -293,6 +286,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGBDAEDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DDBFFHAB_INCLUDED__ */
 
 // -*- END -*-

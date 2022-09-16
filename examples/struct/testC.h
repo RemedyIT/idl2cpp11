@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DGDIIJDA_INCLUDED__
-#define __RIDL_TESTC_H_DGDIIJDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EAAAECAF_INCLUDED__
+#define __RIDL_TESTC_H_EAAAECAF_INCLUDED__
 
 #pragma once
 
@@ -39,22 +39,15 @@ namespace Test
   class Variable
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Variable () = default;
-    /// Destructor
     ~Variable () = default;
-    /// Copy constructor
     Variable (const Variable&) = default;
-    /// Move constructor
     Variable (Variable&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Variable (
       std::string name);
-    /// Copy assignment operator
     Variable& operator= (const Variable&) = default;
-    /// Move assignment operator
     Variable& operator= (Variable&&) = default;
 
     /// @copydoc test.idl::Test::Variable::name
@@ -65,7 +58,7 @@ namespace Test
     inline std::string& name () { return this->name_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Variable& s);
 
   private:
@@ -186,15 +179,10 @@ namespace Test
   class Simple
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Simple () = default;
-    /// Destructor
     ~Simple () = default;
-    /// Copy constructor
     Simple (const Simple&) = default;
-    /// Move constructor
     Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Simple (
@@ -206,9 +194,7 @@ namespace Test
       char c,
       IDL::traits< ::Test::Bar>::ref_type bar_ref,
       ::Test::Variable v);
-    /// Copy assignment operator
     Simple& operator= (const Simple&) = default;
-    /// Move assignment operator
     Simple& operator= (Simple&&) = default;
 
     /// @copydoc test.idl::Test::Simple::o
@@ -269,7 +255,7 @@ namespace Test
     inline ::Test::Variable& v () { return this->v_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Simple& s);
 
   private:
@@ -741,6 +727,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DGDIIJDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EAAAECAF_INCLUDED__ */
 
 // -*- END -*-
