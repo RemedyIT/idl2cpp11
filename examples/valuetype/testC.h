@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JCEFECIB_INCLUDED__
-#define __RIDL_TESTC_H_JCEFECIB_INCLUDED__
+#ifndef __RIDL_TESTC_H_FGJAJHCE_INCLUDED__
+#define __RIDL_TESTC_H_FGJAJHCE_INCLUDED__
 
 #pragma once
 
@@ -273,22 +273,15 @@ using Bytes = std::array< uint8_t, 64>;
 class S
 {
 public:
-
   // generated from c++11/templates/cli/hdr/struct_post
-  /// Default constructor
   S () = default;
-  /// Destructor
   ~S () = default;
-  /// Copy constructor
   S (const S&) = default;
-  /// Move constructor
   S (S&&) = default;
   /// Constructor which accepts value for all members
   explicit inline S (
     int32_t value);
-  /// Copy assignment operator
   S& operator= (const S&) = default;
-  /// Move assignment operator
   S& operator= (S&&) = default;
 
   /// @copydoc test.idl::S::value
@@ -298,7 +291,7 @@ public:
   inline int32_t& value () { return this->value_; }
   //@}
 
-  /// Exchange the value of two structs in an efficient matter
+  /// Exchange the value of two structures in an efficient matter
   inline void swap (S& s);
 
 private:
@@ -1035,22 +1028,15 @@ namespace TAOX11_NAMESPACE
 class ColorValue2
 {
 public:
-
   // generated from c++11/templates/cli/hdr/struct_post
-  /// Default constructor
   ColorValue2 () = default;
-  /// Destructor
   ~ColorValue2 () = default;
-  /// Copy constructor
   ColorValue2 (const ColorValue2&) = default;
-  /// Move constructor
   ColorValue2 (ColorValue2&&) = default;
   /// Constructor which accepts value for all members
   explicit inline ColorValue2 (
     ::Color col);
-  /// Copy assignment operator
   ColorValue2& operator= (const ColorValue2&) = default;
-  /// Move assignment operator
   ColorValue2& operator= (ColorValue2&&) = default;
 
   /// @copydoc test.idl::ColorValue2::col
@@ -1060,7 +1046,7 @@ public:
   inline ::Color& col () { return this->col_; }
   //@}
 
-  /// Exchange the value of two structs in an efficient matter
+  /// Exchange the value of two structures in an efficient matter
   inline void swap (ColorValue2& s);
 
 private:
@@ -2342,6 +2328,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JCEFECIB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FGJAJHCE_INCLUDED__ */
 
 // -*- END -*-

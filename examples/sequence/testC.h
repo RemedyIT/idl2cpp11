@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IEAAEBGD_INCLUDED__
-#define __RIDL_TESTC_H_IEAAEBGD_INCLUDED__
+#ifndef __RIDL_TESTC_H_JIEDEIFA_INCLUDED__
+#define __RIDL_TESTC_H_JIEDEIFA_INCLUDED__
 
 #pragma once
 
@@ -41,15 +41,10 @@ namespace Test
   class Simple
   {
   public:
-
     // generated from c++11/templates/cli/hdr/struct_post
-    /// Default constructor
     Simple () = default;
-    /// Destructor
     ~Simple () = default;
-    /// Copy constructor
     Simple (const Simple&) = default;
-    /// Move constructor
     Simple (Simple&&) = default;
     /// Constructor which accepts value for all members
     explicit inline Simple (
@@ -59,9 +54,7 @@ namespace Test
       double d,
       bool b,
       char c);
-    /// Copy assignment operator
     Simple& operator= (const Simple&) = default;
-    /// Move assignment operator
     Simple& operator= (Simple&&) = default;
 
     /// @copydoc test.idl::Test::Simple::o
@@ -107,7 +100,7 @@ namespace Test
     inline char& c () { return this->c_; }
     //@}
 
-    /// Exchange the value of two structs in an efficient matter
+    /// Exchange the value of two structures in an efficient matter
     inline void swap (Simple& s);
 
   private:
@@ -772,6 +765,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IEAAEBGD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JIEDEIFA_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EFACEEDA_INCLUDED__
-#define __RIDL_TESTC_H_EFACEEDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_CDGICJCG_INCLUDED__
+#define __RIDL_TESTC_H_CDGICJCG_INCLUDED__
 
 #pragma once
 
@@ -33,15 +33,10 @@ using namespace TAOX11_NAMESPACE;
 class ShapeType
 {
 public:
-
   // generated from c++11/templates/cli/hdr/struct_post
-  /// Default constructor
   ShapeType () = default;
-  /// Destructor
   ~ShapeType () = default;
-  /// Copy constructor
   ShapeType (const ShapeType&) = default;
-  /// Move constructor
   ShapeType (ShapeType&&) = default;
   /// Constructor which accepts value for all members
   explicit inline ShapeType (
@@ -49,9 +44,7 @@ public:
     int32_t x,
     int32_t y,
     int32_t shapesize);
-  /// Copy assignment operator
   ShapeType& operator= (const ShapeType&) = default;
-  /// Move assignment operator
   ShapeType& operator= (ShapeType&&) = default;
 
   /// @copydoc test.idl::ShapeType::color
@@ -83,7 +76,7 @@ public:
   inline int32_t& shapesize () { return this->shapesize_; }
   //@}
 
-  /// Exchange the value of two structs in an efficient matter
+  /// Exchange the value of two structures in an efficient matter
   inline void swap (ShapeType& s);
 
 private:
@@ -102,24 +95,17 @@ inline void swap (::ShapeType& m1, ::ShapeType& m2) { m1.swap (m2); }
 class Attributes
 {
 public:
-
   // generated from c++11/templates/cli/hdr/struct_post
-  /// Default constructor
   Attributes () = default;
-  /// Destructor
   ~Attributes () = default;
-  /// Copy constructor
   Attributes (const Attributes&) = default;
-  /// Move constructor
   Attributes (Attributes&&) = default;
   /// Constructor which accepts value for all members
   explicit inline Attributes (
     std::string shape,
     std::string color,
     float speed);
-  /// Copy assignment operator
   Attributes& operator= (const Attributes&) = default;
-  /// Move assignment operator
   Attributes& operator= (Attributes&&) = default;
 
   /// @copydoc test.idl::Attributes::shape
@@ -145,7 +131,7 @@ public:
   inline float& speed () { return this->speed_; }
   //@}
 
-  /// Exchange the value of two structs in an efficient matter
+  /// Exchange the value of two structures in an efficient matter
   inline void swap (Attributes& s);
 
 private:
@@ -430,6 +416,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EFACEEDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CDGICJCG_INCLUDED__ */
 
 // -*- END -*-
