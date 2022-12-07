@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HDFIHJED_INCLUDED__
-#define __RIDL_TESTC_H_HDFIHJED_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIGGIGFB_INCLUDED__
+#define __RIDL_TESTC_H_CIGGIGFB_INCLUDED__
 
 #pragma once
 
@@ -309,38 +309,39 @@ namespace Test
     DataType disc_ {::Test::DataType::dtEmpty};
     union u_type_
     {
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+  // Compilation with c++11 standard gives errors on  the ' = default' declaration
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       u_type_ ();
 #else
       u_type_ () = default;
 #endif
       ~u_type_ ();
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       int32_t longData_;
 #else
       int32_t longData_ {};
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       int16_t shortData_;
 #else
       int16_t shortData_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       std::string stringData_;
 #else
       std::string stringData_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Test::Point pointData_;
 #else
       ::Test::Point pointData_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Test::Track trackData_;
 #else
       ::Test::Track trackData_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Global globalData_;
 #else
       ::Global globalData_;
@@ -542,28 +543,29 @@ namespace Test
     int32_t disc_ {(-2147483647-1)};
     union u_type_
     {
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+  // Compilation with c++11 standard gives errors on  the ' = default' declaration
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       u_type_ ();
 #else
       u_type_ () = default;
 #endif
       ~u_type_ ();
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       int32_t x_;
 #else
       int32_t x_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       std::string z_;
 #else
       std::string z_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Test::S w_;
 #else
       ::Test::S w_;
 #endif
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       IDL::traits< ::Test::A>::ref_type obj_;
 #else
       IDL::traits< ::Test::A>::ref_type obj_ {};
@@ -1392,7 +1394,7 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
 inline Test::Data::u_type_::u_type_ ()
   : longData_{}
 {
@@ -2014,7 +2016,7 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-#if (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
 inline Test::U::u_type_::u_type_ ()
   : obj_{}
 {
@@ -2523,6 +2525,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HDFIHJED_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIGGIGFB_INCLUDED__ */
 
 // -*- END -*-
