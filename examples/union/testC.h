@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CIGGIGFB_INCLUDED__
-#define __RIDL_TESTC_H_CIGGIGFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_FJJFFCAB_INCLUDED__
+#define __RIDL_TESTC_H_FJJFFCAB_INCLUDED__
 
 #pragma once
 
@@ -310,42 +310,22 @@ namespace Test
     union u_type_
     {
   // Compilation with c++11 standard gives errors on  the ' = default' declaration
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
+#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
       u_type_ ();
 #else
       u_type_ () = default;
 #endif
       ~u_type_ ();
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
+#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
       int32_t longData_;
 #else
       int32_t longData_ {};
 #endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       int16_t shortData_;
-#else
-      int16_t shortData_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       std::string stringData_;
-#else
-      std::string stringData_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Test::Point pointData_;
-#else
-      ::Test::Point pointData_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Test::Track trackData_;
-#else
-      ::Test::Track trackData_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Global globalData_;
-#else
-      ::Global globalData_;
-#endif
     } u_ {};
   }; // class Data
 
@@ -544,28 +524,16 @@ namespace Test
     union u_type_
     {
   // Compilation with c++11 standard gives errors on  the ' = default' declaration
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
+#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
       u_type_ ();
 #else
       u_type_ () = default;
 #endif
       ~u_type_ ();
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       int32_t x_;
-#else
-      int32_t x_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       std::string z_;
-#else
-      std::string z_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
       ::Test::S w_;
-#else
-      ::Test::S w_;
-#endif
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
+#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
       IDL::traits< ::Test::A>::ref_type obj_;
 #else
       IDL::traits< ::Test::A>::ref_type obj_ {};
@@ -2525,6 +2493,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CIGGIGFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FJJFFCAB_INCLUDED__ */
 
 // -*- END -*-
