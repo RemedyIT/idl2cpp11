@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IIICECID_INCLUDED__
-#define __RIDL_TESTC_H_IIICECID_INCLUDED__
+#ifndef __RIDL_TESTC_H_IAJCAAGH_INCLUDED__
+#define __RIDL_TESTC_H_IAJCAAGH_INCLUDED__
 
 #pragma once
 
@@ -50,7 +50,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/except_post
     FooEx ();
-    ~FooEx () throw () override = default;
+    ~FooEx () noexcept override = default;
     FooEx (const FooEx&) = default;
     FooEx (FooEx&&) = default;
     explicit FooEx (
@@ -89,7 +89,7 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/except_post
     BooEx ();
-    ~BooEx () throw () override = default;
+    ~BooEx () noexcept override = default;
     BooEx (const BooEx&) = default;
     BooEx (BooEx&&) = default;
     explicit BooEx (
@@ -464,6 +464,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IIICECID_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IAJCAAGH_INCLUDED__ */
 
 // -*- END -*-

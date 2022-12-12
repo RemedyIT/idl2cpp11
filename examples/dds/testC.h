@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DCDEJDFF_INCLUDED__
-#define __RIDL_TESTC_H_DCDEJDFF_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHAFBFBH_INCLUDED__
+#define __RIDL_TESTC_H_GHAFBFBH_INCLUDED__
 
 #pragma once
 
@@ -416,6 +416,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DCDEJDFF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHAFBFBH_INCLUDED__ */
 
 // -*- END -*-
