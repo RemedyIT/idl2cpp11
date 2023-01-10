@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DDDEACGH_INCLUDED__
-#define __RIDL_TESTC_H_DDDEACGH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JJEDJIIF_INCLUDED__
+#define __RIDL_TESTC_H_JJEDJIIF_INCLUDED__
 
 #pragma once
 
@@ -64,9 +64,7 @@ namespace TAOX11_NAMESPACE
       : IDL::common_byval_traits<::Test::EEnum>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
         return fmt_ (os_, val_);
       }
@@ -78,9 +76,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::EEnum, OStrm_>
     {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          ::Test::EEnum val_)
+      inline OStrm_& operator ()(OStrm_& os_, ::Test::EEnum val_)
       {
         switch (val_)
         {
@@ -93,9 +89,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::EEnum>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Test::EEnum>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::Test::EEnum>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -104,9 +98,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Test::EEnum, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::EEnum>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Test::EEnum>::write_on (os, w.val_, formatter_t ());
     }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -134,6 +126,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DDDEACGH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JJEDJIIF_INCLUDED__ */
 
 // -*- END -*-
