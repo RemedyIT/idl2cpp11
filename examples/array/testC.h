@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HJJHIIJJ_INCLUDED__
-#define __RIDL_TESTC_H_HJJHIIJJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_GDBECHHH_INCLUDED__
+#define __RIDL_TESTC_H_GDBECHHH_INCLUDED__
 
 #pragma once
 
@@ -311,15 +311,11 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::Foo, OStrm_>
     {
-      OStrm_& operator ()(
-          OStrm_& ,
-          IDL::traits< ::Test::Foo>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits< ::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::Test::Foo>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::Test::Foo>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__FOO_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -333,20 +329,14 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::Test::Foo, OStrm_>::operator ()(
-          OStrm_& os_,
-          IDL::traits< ::Test::Foo>::ref_type val_)
+    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::Test::Foo>::ref_type val_)
     {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               std::move (val_),
-               "Test::Foo");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Foo");
       return os_;
     }
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::Foo>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Test::Foo>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::Test::Foo>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -355,9 +345,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Test::Foo, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::Foo>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Test::Foo>::write_on (os, w.val_, formatter_t ());
     }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -422,6 +410,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HJJHIIJJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GDBECHHH_INCLUDED__ */
 
 // -*- END -*-

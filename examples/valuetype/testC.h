@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EABDCGIH_INCLUDED__
-#define __RIDL_TESTC_H_EABDCGIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_BICCIEHI_INCLUDED__
+#define __RIDL_TESTC_H_BICCIEHI_INCLUDED__
 
 #pragma once
 
@@ -1569,9 +1569,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::Example, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::Example>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::Example>::__Writer<Fmt>);
 #endif // !_VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/array_idl_traits
@@ -1630,9 +1628,7 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits<::S>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
         return fmt_ (os_, val_);
       }
@@ -1645,9 +1641,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::S, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::S>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::S>::__Writer<Fmt>);
 #endif // _STRUCT_S_TRAITS_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
@@ -1656,15 +1650,11 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::A, OStrm_>
     {
-      OStrm_& operator ()(
-          OStrm_& ,
-          IDL::traits< ::A>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits< ::A>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::A>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits
@@ -1674,9 +1664,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::Val, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::Val>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::Val>::__Writer<Fmt>);
 #endif // !_VALUETYPE_VAL_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuebox_idl_traits
@@ -1685,9 +1673,7 @@ namespace TAOX11_NAMESPACE
     {
       using boxed_traits = typename IDL::traits<::StringValue>::boxed_traits;
 
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          IDL::traits< ::StringValue>::ref_type val_)
+      inline OStrm_& operator ()(OStrm_& os_, IDL::traits< ::StringValue>::ref_type val_)
       {
         os_ << "StringValue {" << boxed_traits::write (val_->_value()) << '}';
         return os_;
@@ -1695,9 +1681,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::StringValue>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::StringValue>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::StringValue>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -1706,9 +1690,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::StringValue, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::StringValue>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::StringValue>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
@@ -1717,15 +1699,11 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::X, OStrm_>
     {
-      OStrm_& operator ()(
-          OStrm_& ,
-          IDL::traits< ::X>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits< ::X>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::X>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::X>::__Writer<Fmt>);
 #endif // !_INTF_FMT_X_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/enum_idl_traits
@@ -1734,9 +1712,7 @@ namespace TAOX11_NAMESPACE
       : IDL::common_byval_traits<::Color>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
         return fmt_ (os_, val_);
       }
@@ -1748,9 +1724,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Color, OStrm_>
     {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          ::Color val_)
+      inline OStrm_& operator ()(OStrm_& os_, ::Color val_)
       {
         switch (val_)
         {
@@ -1763,9 +1737,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Color>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Color>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::Color>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -1774,9 +1746,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Color, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Color>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Color>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuebox_idl_traits
@@ -1785,9 +1755,7 @@ namespace TAOX11_NAMESPACE
     {
       using boxed_traits = typename IDL::traits<::ColorValue>::boxed_traits;
 
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          IDL::traits< ::ColorValue>::ref_type val_)
+      inline OStrm_& operator ()(OStrm_& os_, IDL::traits< ::ColorValue>::ref_type val_)
       {
         os_ << "ColorValue {" << boxed_traits::write (val_->_value()) << '}';
         return os_;
@@ -1795,9 +1763,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::ColorValue>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::ColorValue>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::ColorValue>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -1806,9 +1772,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::ColorValue, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::ColorValue>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::ColorValue>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits
@@ -1819,9 +1783,7 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits<::ColorValue2>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
         return fmt_ (os_, val_);
       }
@@ -1834,9 +1796,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::ColorValue2, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::ColorValue2>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::ColorValue2>::__Writer<Fmt>);
 #endif // _STRUCT_COLORVALUE2_TRAITS_
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits
@@ -1845,15 +1805,11 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::A1, OStrm_>
     {
-      OStrm_& operator ()(
-          OStrm_& ,
-          IDL::traits< ::A1>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits< ::A1>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::A1>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::A1>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A1_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits
@@ -1863,9 +1819,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::B, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::B>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::B>::__Writer<Fmt>);
 #endif // !_VALUETYPE_B_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits
@@ -1875,9 +1829,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::V, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::V>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::V>::__Writer<Fmt>);
 #endif // !_VALUETYPE_V_IDL_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -1916,9 +1868,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Example, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Example>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Example>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
@@ -1938,9 +1888,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::S>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::S>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::S>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -1949,28 +1897,20 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::S, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::S>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::S>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::A, OStrm_>::operator ()(
-          OStrm_& os_,
-          IDL::traits< ::A>::ref_type val_)
+    formatter<::A, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::A>::ref_type val_)
     {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               std::move (val_),
-               "A");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A");
       return os_;
     }
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::A>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::A>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::A>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -1979,9 +1919,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::A, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::A>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::A>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
@@ -2014,28 +1952,20 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Val, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Val>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Val>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::X, OStrm_>::operator ()(
-          OStrm_& os_,
-          IDL::traits< ::X>::ref_type val_)
+    formatter<::X, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::X>::ref_type val_)
     {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               std::move (val_),
-               "X");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "X");
       return os_;
     }
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::X>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::X>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::X>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -2044,9 +1974,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::X, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::X>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::X>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/struct_idl_traits_def
@@ -2066,9 +1994,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::ColorValue2>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::ColorValue2>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::ColorValue2>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -2077,28 +2003,20 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::ColorValue2, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::ColorValue2>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::ColorValue2>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::A1, OStrm_>::operator ()(
-          OStrm_& os_,
-          IDL::traits< ::A1>::ref_type val_)
+    formatter<::A1, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::A1>::ref_type val_)
     {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               std::move (val_),
-               "A1");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A1");
       return os_;
     }
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::A1>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::A1>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::A1>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -2107,9 +2025,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::A1, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::A1>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::A1>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
@@ -2140,9 +2056,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::B, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::B>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::B>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
@@ -2171,9 +2085,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::V, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::V>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::V>::write_on (os, w.val_, formatter_t ());
     }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -2328,6 +2240,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EABDCGIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BICCIEHI_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DFEHGFCF_INCLUDED__
-#define __RIDL_TESTC_H_DFEHGFCF_INCLUDED__
+#ifndef __RIDL_TESTC_H_GACCEAAH_INCLUDED__
+#define __RIDL_TESTC_H_GACCEAAH_INCLUDED__
 
 #pragma once
 
@@ -117,23 +117,23 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::SimpleSeq
-  using SimpleSeq = std::vector< Simple>;
+  using SimpleSeq = std::vector<Simple>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::LongSeq
-  using LongSeq = std::vector< int32_t>;
+  using LongSeq = std::vector<int32_t>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::BoundedLongSeq
-  using BoundedLongSeq = TAOX11_NAMESPACE::IDL::bounded_vector< int32_t, 50>;
+  using BoundedLongSeq = TAOX11_NAMESPACE::IDL::bounded_vector<int32_t, 50>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::BoolSeq
-  using BoolSeq = std::vector< bool>;
+  using BoolSeq = std::vector<bool>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::StringSeq
-  using StringSeq = std::vector< std::string>;
+  using StringSeq = std::vector<std::string>;
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -288,9 +288,7 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits<::Test::Simple>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
         return fmt_ (os_, val_);
       }
@@ -303,9 +301,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::Test::Simple, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::Test::Simple>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::Test::Simple>::__Writer<Fmt>);
 #endif // _STRUCT_TEST__SIMPLE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
@@ -403,10 +399,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : TAOX11_NAMESPACE::IDL::bounded_vector< int32_t, 50>
-    // MD5            : B6B966F793FB4B3FFFF2C6D768857079
-#if !defined(_ALIAS_B6B966F793FB4B3FFFF2C6D768857079_TRAITS_DECL_)
-#define _ALIAS_B6B966F793FB4B3FFFF2C6D768857079_TRAITS_DECL_
+    // Unaliased type : TAOX11_NAMESPACE::IDL::bounded_vector<int32_t, 50>
+    // MD5            : 7A475C4C37327B16760A3F2C0D8B7475
+#if !defined(_ALIAS_7A475C4C37327B16760A3F2C0D8B7475_TRAITS_DECL_)
+#define _ALIAS_7A475C4C37327B16760A3F2C0D8B7475_TRAITS_DECL_
 
     template<>
     struct traits <::Test::BoundedLongSeq>
@@ -550,15 +546,11 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::Foo, OStrm_>
     {
-      OStrm_& operator ()(
-          OStrm_& ,
-          IDL::traits< ::Test::Foo>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits< ::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::Test::Foo>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::Test::Foo>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__FOO_TRAITS_DECL_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -591,9 +583,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::Simple>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Test::Simple>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::Test::Simple>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -602,28 +592,20 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Test::Simple, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::Simple>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Test::Simple>::write_on (os, w.val_, formatter_t ());
     }
 
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::Test::Foo, OStrm_>::operator ()(
-          OStrm_& os_,
-          IDL::traits< ::Test::Foo>::ref_type val_)
+    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::Test::Foo>::ref_type val_)
     {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (
-               std::move (val_),
-               "Test::Foo");
+      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Foo");
       return os_;
     }
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::Foo>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Test::Foo>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::Test::Foo>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -632,9 +614,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::Test::Foo, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::Foo>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::Test::Foo>::write_on (os, w.val_, formatter_t ());
     }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -706,10 +686,10 @@ inline std::ostream& operator<< (
 #endif // _ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : TAOX11_NAMESPACE::IDL::bounded_vector< int32_t, 50>
-// MD5            : B6B966F793FB4B3FFFF2C6D768857079
-#if !defined (_ALIAS_OSTREAM_B6B966F793FB4B3FFFF2C6D768857079_DECL_)
-#define _ALIAS_OSTREAM_B6B966F793FB4B3FFFF2C6D768857079_DECL_
+// Unaliased type : TAOX11_NAMESPACE::IDL::bounded_vector<int32_t, 50>
+// MD5            : 7A475C4C37327B16760A3F2C0D8B7475
+#if !defined (_ALIAS_OSTREAM_7A475C4C37327B16760A3F2C0D8B7475_DECL_)
+#define _ALIAS_OSTREAM_7A475C4C37327B16760A3F2C0D8B7475_DECL_
 
 inline std::ostream& operator<< (
     std::ostream& strm,
@@ -718,7 +698,7 @@ inline std::ostream& operator<< (
   return IDL::traits<::Test::BoundedLongSeq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_B6B966F793FB4B3FFFF2C6D768857079_DECL_
+#endif // _ALIAS_OSTREAM_7A475C4C37327B16760A3F2C0D8B7475_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
 // Unaliased type : std::vector< bool>
@@ -765,6 +745,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DFEHGFCF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GACCEAAH_INCLUDED__ */
 
 // -*- END -*-

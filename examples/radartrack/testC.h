@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GEJFDFAH_INCLUDED__
-#define __RIDL_TESTC_H_GEJFDFAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFAIDFGF_INCLUDED__
+#define __RIDL_TESTC_H_JFAIDFGF_INCLUDED__
 
 #pragma once
 
@@ -29,7 +29,7 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/typedef
 /// @copydoc test.idl::octetseq
-using octetseq = std::vector< uint8_t>;
+using octetseq = std::vector<uint8_t>;
 
 // generated from c++11/templates/cli/hdr/struct_pre
 
@@ -164,9 +164,7 @@ namespace TAOX11_NAMESPACE
       : IDL::common_traits<::RadarTrack>
     {
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
         return fmt_ (os_, val_);
       }
@@ -179,9 +177,7 @@ namespace TAOX11_NAMESPACE
     struct formatter<::RadarTrack, OStrm_>;
 
     template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(
-        OStrm_&,
-        IDL::traits<::RadarTrack>::__Writer<Fmt>);
+    OStrm_& operator <<(OStrm_&, IDL::traits<::RadarTrack>::__Writer<Fmt>);
 #endif // _STRUCT_RADARTRACK_TRAITS_
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -213,9 +209,7 @@ namespace TAOX11_NAMESPACE
     };
 
     template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::RadarTrack>::__Writer<Fmt> w)
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::RadarTrack>::__Writer<Fmt> w)
     {
       using writer_t = IDL::traits<::RadarTrack>::__Writer<Fmt>;
       using formatter_t = typename std::conditional<
@@ -224,9 +218,7 @@ namespace TAOX11_NAMESPACE
                               std::false_type>::value,
                             formatter<::RadarTrack, OStrm_>,
                             typename writer_t::formatter_t>::type;
-      return IDL::traits<::RadarTrack>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return IDL::traits<::RadarTrack>::write_on (os, w.val_, formatter_t ());
     }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
@@ -286,6 +278,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GEJFDFAH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFAIDFGF_INCLUDED__ */
 
 // -*- END -*-
