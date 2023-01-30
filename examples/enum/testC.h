@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJEDJIIF_INCLUDED__
-#define __RIDL_TESTC_H_JJEDJIIF_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDIDIGGA_INCLUDED__
+#define __RIDL_TESTC_H_HDIDIGGA_INCLUDED__
 
 #pragma once
 
@@ -112,9 +112,7 @@ namespace TAOX11_NAMESPACE
 } // namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/enum_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    ::Test::EEnum _v)
+inline std::ostream& operator<< (std::ostream& strm, ::Test::EEnum _v)
 {
   return IDL::traits<::Test::EEnum>::write_on (strm, _v);
 }
@@ -126,6 +124,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJEDJIIF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDIDIGGA_INCLUDED__ */
 
 // -*- END -*-

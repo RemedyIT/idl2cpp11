@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HAGJBIDC_INCLUDED__
-#define __RIDL_TESTC_H_HAGJBIDC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IEDGJHCC_INCLUDED__
+#define __RIDL_TESTC_H_IEDGJHCC_INCLUDED__
 
 #pragma once
 
@@ -130,7 +130,7 @@ namespace Test
     ~Foo () override = default;
 
     /// Returns a strong client reference for the local object you are calling
-    IDL::traits< ::Test::Foo>::ref_type _this ();
+    IDL::traits<::Test::Foo>::ref_type _this ();
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -223,7 +223,7 @@ namespace Test
     /// @copydoc test.idl::Test::Bar::do_foo
     virtual void
     do_foo (
-        IDL::traits< ::Test::Foo>::ref_type f) = 0;
+        IDL::traits<::Test::Foo>::ref_type f) = 0;
 
     // generated from c++11/templates/cli/hdr/interface_post
   protected:
@@ -240,7 +240,7 @@ namespace Test
     ~Bar () override = default;
 
     /// Returns a strong client reference for the local object you are calling
-    IDL::traits< ::Test::Bar>::ref_type _this ();
+    IDL::traits<::Test::Bar>::ref_type _this ();
 
   private:
     /** @name Illegal to be called. Deleted explicitly to let the compiler detect any violation */
@@ -266,7 +266,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::Foo, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::Test::Foo>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -279,7 +279,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::Bar, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::Test::Bar>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::Test::Bar>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -297,7 +297,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::Test::Foo>::ref_type val_)
+    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::Test::Foo>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Foo");
       return os_;
@@ -319,7 +319,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::Test::Bar, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::Test::Bar>::ref_type val_)
+    formatter<::Test::Bar, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::Test::Bar>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Bar");
       return os_;
@@ -341,17 +341,13 @@ namespace TAOX11_NAMESPACE
 } // namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::ref_type _v)
 {
   return IDL::traits<::Test::Foo>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::Test::Bar>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Bar>::ref_type _v)
 {
   return IDL::traits<::Test::Bar>::write_on (strm, std::move(_v));
 }
@@ -363,6 +359,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HAGJBIDC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IEDGJHCC_INCLUDED__ */
 
 // -*- END -*-

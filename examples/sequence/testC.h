@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GACCEAAH_INCLUDED__
-#define __RIDL_TESTC_H_GACCEAAH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JACJFHAA_INCLUDED__
+#define __RIDL_TESTC_H_JACJFHAA_INCLUDED__
 
 #pragma once
 
@@ -546,7 +546,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::Foo, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::Test::Foo>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::Test::Foo>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -598,7 +598,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::Test::Foo>::ref_type val_)
+    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::Test::Foo>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Foo");
       return os_;
@@ -661,9 +661,7 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_1817E99034D17AC88FEC57E1A31DB103_DECL_)
 #define _ALIAS_OSTREAM_1817E99034D17AC88FEC57E1A31DB103_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::Test::SimpleSeq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::SimpleSeq& _v)
 {
   return IDL::traits<::Test::SimpleSeq>::write_on (strm, _v);
 }
@@ -676,9 +674,7 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_)
 #define _ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::Test::LongSeq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::LongSeq& _v)
 {
   return IDL::traits<::Test::LongSeq>::write_on (strm, _v);
 }
@@ -691,9 +687,7 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_7A475C4C37327B16760A3F2C0D8B7475_DECL_)
 #define _ALIAS_OSTREAM_7A475C4C37327B16760A3F2C0D8B7475_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::Test::BoundedLongSeq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::BoundedLongSeq& _v)
 {
   return IDL::traits<::Test::BoundedLongSeq>::write_on (strm, _v);
 }
@@ -706,9 +700,7 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_8737878B15D8C3312172ACA78C5A85AC_DECL_)
 #define _ALIAS_OSTREAM_8737878B15D8C3312172ACA78C5A85AC_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::Test::BoolSeq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::BoolSeq& _v)
 {
   return IDL::traits<::Test::BoolSeq>::write_on (strm, _v);
 }
@@ -721,9 +713,7 @@ inline std::ostream& operator<< (
 #if !defined (_ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_)
 #define _ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::Test::StringSeq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::StringSeq& _v)
 {
   return IDL::traits<::Test::StringSeq>::write_on (strm, _v);
 }
@@ -731,9 +721,7 @@ inline std::ostream& operator<< (
 #endif // _ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::Test::Foo>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::ref_type _v)
 {
   return IDL::traits<::Test::Foo>::write_on (strm, std::move(_v));
 }
@@ -745,6 +733,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GACCEAAH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JACJFHAA_INCLUDED__ */
 
 // -*- END -*-
