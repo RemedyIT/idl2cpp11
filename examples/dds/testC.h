@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CABJJGDC_INCLUDED__
-#define __RIDL_TESTC_H_CABJJGDC_INCLUDED__
+#ifndef __RIDL_TESTC_H_FGABICAD_INCLUDED__
+#define __RIDL_TESTC_H_FGABICAD_INCLUDED__
 
 #pragma once
 
@@ -384,9 +384,7 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_AFA29D1C2FA960270DBBBC2006AE6A51_DECL_)
 #define _ALIAS_OSTREAM_AFA29D1C2FA960270DBBBC2006AE6A51_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::ShapeTypeSeq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 {
   return IDL::traits<::ShapeTypeSeq>::write_on (strm, _v);
 }
@@ -400,6 +398,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CABJJGDC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FGABICAD_INCLUDED__ */
 
 // -*- END -*-

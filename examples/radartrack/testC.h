@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JFAIDFGF_INCLUDED__
-#define __RIDL_TESTC_H_JFAIDFGF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CFEGCGDE_INCLUDED__
+#define __RIDL_TESTC_H_CFEGCGDE_INCLUDED__
 
 #pragma once
 
@@ -253,9 +253,7 @@ inline void ::RadarTrack::swap (::RadarTrack& s)
 #if !defined (_ALIAS_OSTREAM_00C7E9035221D75BA6FA9D78C2B65CE8_DECL_)
 #define _ALIAS_OSTREAM_00C7E9035221D75BA6FA9D78C2B65CE8_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::octetseq& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::octetseq& _v)
 {
   return IDL::traits<::octetseq>::write_on (strm, _v);
 }
@@ -278,6 +276,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JFAIDFGF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CFEGCGDE_INCLUDED__ */
 
 // -*- END -*-

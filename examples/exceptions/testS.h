@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_IGAJDJDG_INCLUDED__
-#define __RIDL_TESTS_H_IGAJDJDG_INCLUDED__
+#ifndef __RIDL_TESTS_H_GCHHFACG_INCLUDED__
+#define __RIDL_TESTS_H_GCHHFACG_INCLUDED__
 
 #pragma once
 
@@ -52,7 +52,7 @@ namespace Test
       bool _is_a (const std::string& logical_type_id) override;
 
       /// Returns a strong client reference for the servant you are calling
-      IDL::traits< ::Test::Foo>::ref_type _this ();
+      IDL::traits<::Test::Foo>::ref_type _this ();
 
       const std::string &_interface_repository_id () const override;
 
@@ -124,6 +124,6 @@ namespace TAOX11_NAMESPACE {
   } // namespace CORBA
 } // namespace TAOX11_NAMESPACE
 
-#endif /* __RIDL_TESTS_H_IGAJDJDG_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GCHHFACG_INCLUDED__ */
 
 // -*- END -*-

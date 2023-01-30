@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BICCIEHI_INCLUDED__
-#define __RIDL_TESTC_H_BICCIEHI_INCLUDED__
+#ifndef __RIDL_TESTC_H_CEIBJCEC_INCLUDED__
+#define __RIDL_TESTC_H_CEIBJCEC_INCLUDED__
 
 #pragma once
 
@@ -161,7 +161,7 @@ public:
   /// @copydoc test.idl::Example::op2
   virtual int32_t
   op2 (
-      IDL::traits< Example>::ref_type x) = 0;
+      IDL::traits<Example>::ref_type x) = 0;
 
   /// @name Public state members
   //@{
@@ -180,9 +180,9 @@ protected:
   virtual void val3 (std::string&& _x11_val3) = 0;
   virtual const std::string& val3 () const = 0;
   virtual std::string& val3 () = 0;
-  virtual void val5 (IDL::traits< Example>::ref_type _x11_val5) = 0;
-  virtual IDL::traits< Example>::ref_type val5 () const = 0;
-  virtual IDL::traits< Example>::ref_type& val5 () = 0;
+  virtual void val5 (IDL::traits<Example>::ref_type _x11_val5) = 0;
+  virtual IDL::traits<Example>::ref_type val5 () const = 0;
+  virtual IDL::traits<Example>::ref_type& val5 () = 0;
   //@}
 
 protected:
@@ -212,7 +212,7 @@ namespace obv
       int16_t val1,
       int32_t val2,
       std::string val3,
-      IDL::traits< ::Example>::ref_type val5)
+      IDL::traits<::Example>::ref_type val5)
       : val1_ (std::move (val1))
       , val2_ (std::move (val2))
       , val3_ (std::move (val3))
@@ -242,9 +242,9 @@ namespace obv
     const std::string& val3 () const override;
     std::string& val3 () override;
 
-    void val5 (IDL::traits< ::Example>::ref_type _x11_val5) override;
-    IDL::traits< ::Example>::ref_type val5 () const override;
-    IDL::traits< ::Example>::ref_type& val5 () override;
+    void val5 (IDL::traits<::Example>::ref_type _x11_val5) override;
+    IDL::traits<::Example>::ref_type val5 () const override;
+    IDL::traits<::Example>::ref_type& val5 () override;
 
     /// Marshaling support
     bool _obv_marshal_Example_v (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
@@ -259,7 +259,7 @@ namespace obv
     int16_t val1_{};
     int32_t val2_{};
     std::string val3_{};
-    IDL::traits< ::Example>::ref_type val5_{};
+    IDL::traits<::Example>::ref_type val5_{};
   }; // class Example
 } // namespace obv
 
@@ -448,8 +448,8 @@ namespace TAOX11_NAMESPACE
       using weak_ref_type = weak_valuetype_reference<::Val>;
       using obv_type = ::obv::Val;
       using factory_type = ::Val_init;
-      using factory_ref_type = TAOX11_IDL::traits< ::Val_init>::ref_type;
-      using weak_factory_ref_type = TAOX11_IDL::traits< ::Val_init>::weak_ref_type;
+      using factory_ref_type = TAOX11_IDL::traits<::Val_init>::ref_type;
+      using weak_factory_ref_type = TAOX11_IDL::traits<::Val_init>::weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible<::Val*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
@@ -542,9 +542,9 @@ public:
 
   /// @name Public state members
   //@{
-  virtual void t (IDL::traits< Val>::ref_type _x11_t) = 0;
-  virtual IDL::traits< Val>::ref_type t () const = 0;
-  virtual IDL::traits< Val>::ref_type& t () = 0;
+  virtual void t (IDL::traits<Val>::ref_type _x11_t) = 0;
+  virtual IDL::traits<Val>::ref_type t () const = 0;
+  virtual IDL::traits<Val>::ref_type& t () = 0;
   virtual void w (const ::Bytes& _x11_w) = 0;
   virtual void w (::Bytes&& _x11_w) = 0;
   virtual const ::Bytes& w () const = 0;
@@ -565,9 +565,9 @@ protected:
   virtual void y (::S&& _x11_y) = 0;
   virtual const ::S& y () const = 0;
   virtual ::S& y () = 0;
-  virtual void z (IDL::traits< ::A>::ref_type _x11_z) = 0;
-  virtual IDL::traits< ::A>::ref_type z () const = 0;
-  virtual IDL::traits< ::A>::ref_type& z () = 0;
+  virtual void z (IDL::traits<::A>::ref_type _x11_z) = 0;
+  virtual IDL::traits<::A>::ref_type z () const = 0;
+  virtual IDL::traits<::A>::ref_type& z () = 0;
   //@}
 
 protected:
@@ -594,12 +594,12 @@ namespace obv
     Val (const Val&) = default;
     Val (Val&&) = default;
     explicit Val (
-      IDL::traits< ::Val>::ref_type t,
+      IDL::traits<::Val>::ref_type t,
       int32_t v,
       ::Bytes w,
       std::string x,
       ::S y,
-      IDL::traits< ::A>::ref_type z)
+      IDL::traits<::A>::ref_type z)
       : t_ (std::move (t))
       , v_ (std::move (v))
       , w_ (std::move (w))
@@ -620,9 +620,9 @@ namespace obv
 
     /// @name Public state members
     //@{
-    void t (IDL::traits< ::Val>::ref_type _x11_t) override;
-    IDL::traits< ::Val>::ref_type t () const override;
-    IDL::traits< ::Val>::ref_type& t () override;
+    void t (IDL::traits<::Val>::ref_type _x11_t) override;
+    IDL::traits<::Val>::ref_type t () const override;
+    IDL::traits<::Val>::ref_type& t () override;
 
     void w (const ::Bytes& _x11_w) override;
     void w (::Bytes&& _x11_w) override;
@@ -646,9 +646,9 @@ namespace obv
     const ::S& y () const override;
     ::S& y () override;
 
-    void z (IDL::traits< ::A>::ref_type _x11_z) override;
-    IDL::traits< ::A>::ref_type z () const override;
-    IDL::traits< ::A>::ref_type& z () override;
+    void z (IDL::traits<::A>::ref_type _x11_z) override;
+    IDL::traits<::A>::ref_type z () const override;
+    IDL::traits<::A>::ref_type& z () override;
 
     /// Marshaling support
     bool _obv_marshal_Val_v (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
@@ -660,12 +660,12 @@ namespace obv
     bool _obv_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
 
   private:
-    IDL::traits< ::Val>::ref_type t_{};
+    IDL::traits<::Val>::ref_type t_{};
     int32_t v_{};
     ::Bytes w_{{}};
     std::string x_{};
     ::S y_{};
-    IDL::traits< ::A>::ref_type z_{};
+    IDL::traits<::A>::ref_type z_{};
   }; // class Val
 } // namespace obv
 
@@ -674,8 +674,8 @@ class Val_init
   : public TAOX11_CORBA::ValueFactoryBase
 {
 public:
-  using _traits_type = TAOX11_IDL::traits< Val_init>;
-  using _ref_type = TAOX11_IDL::traits< Val_init>::ref_type;
+  using _traits_type = TAOX11_IDL::traits<Val_init>;
+  using _ref_type = TAOX11_IDL::traits<Val_init>::ref_type;
   template <typename T> friend struct TAOX11_CORBA::object_traits;
   template <typename _Tp1, typename, typename ...Args>
   friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
@@ -1390,8 +1390,8 @@ namespace TAOX11_NAMESPACE
       using weak_ref_type = weak_valuetype_reference<::V>;
       using obv_type = ::obv::V;
       using factory_type = ::V_init;
-      using factory_ref_type = TAOX11_IDL::traits< ::V_init>::ref_type;
-      using weak_factory_ref_type = TAOX11_IDL::traits< ::V_init>::weak_ref_type;
+      using factory_ref_type = TAOX11_IDL::traits<::V_init>::ref_type;
+      using weak_factory_ref_type = TAOX11_IDL::traits<::V_init>::weak_ref_type;
       template <typename _Tp1, typename = typename
           std::enable_if<std::is_convertible<::V*, _Tp1*>::value>::type>
       static ref_type narrow (valuetype_reference<_Tp1> base)
@@ -1531,17 +1531,17 @@ class V_init
   : public TAOX11_CORBA::ValueFactoryBase
 {
 public:
-  using _traits_type = TAOX11_IDL::traits< V_init>;
-  using _ref_type = TAOX11_IDL::traits< V_init>::ref_type;
+  using _traits_type = TAOX11_IDL::traits<V_init>;
+  using _ref_type = TAOX11_IDL::traits<V_init>::ref_type;
   template <typename T> friend struct TAOX11_CORBA::object_traits;
 
-  virtual IDL::traits< ::V>::ref_type
+  virtual IDL::traits<::V>::ref_type
   create_bool (bool b) = 0;
-  virtual IDL::traits< ::V>::ref_type
+  virtual IDL::traits<::V>::ref_type
   create_char (char c) = 0;
-  virtual IDL::traits< ::V>::ref_type
+  virtual IDL::traits<::V>::ref_type
   create_octet (uint8_t o) = 0;
-  virtual IDL::traits< ::V>::ref_type
+  virtual IDL::traits<::V>::ref_type
   create_other (int16_t s,
                 const std::string& p) = 0;
 
@@ -1650,7 +1650,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::A, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::A>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::A>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -1673,7 +1673,7 @@ namespace TAOX11_NAMESPACE
     {
       using boxed_traits = typename IDL::traits<::StringValue>::boxed_traits;
 
-      inline OStrm_& operator ()(OStrm_& os_, IDL::traits< ::StringValue>::ref_type val_)
+      inline OStrm_& operator ()(OStrm_& os_, IDL::traits<::StringValue>::ref_type val_)
       {
         os_ << "StringValue {" << boxed_traits::write (val_->_value()) << '}';
         return os_;
@@ -1699,7 +1699,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::X, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::X>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::X>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -1755,7 +1755,7 @@ namespace TAOX11_NAMESPACE
     {
       using boxed_traits = typename IDL::traits<::ColorValue>::boxed_traits;
 
-      inline OStrm_& operator ()(OStrm_& os_, IDL::traits< ::ColorValue>::ref_type val_)
+      inline OStrm_& operator ()(OStrm_& os_, IDL::traits<::ColorValue>::ref_type val_)
       {
         os_ << "ColorValue {" << boxed_traits::write (val_->_value()) << '}';
         return os_;
@@ -1805,7 +1805,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::A1, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::A1>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::A1>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -1846,7 +1846,7 @@ namespace TAOX11_NAMESPACE
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
-          IDL::traits< ::Example>::ref_type val_)
+          IDL::traits<::Example>::ref_type val_)
       {
         os_ << "Example"
             << '{'
@@ -1903,7 +1903,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::A, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::A>::ref_type val_)
+    formatter<::A, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::A>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A");
       return os_;
@@ -1928,7 +1928,7 @@ namespace TAOX11_NAMESPACE
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
-          IDL::traits< ::Val>::ref_type val_)
+          IDL::traits<::Val>::ref_type val_)
       {
         os_ << "Val"
             << '{'
@@ -1958,7 +1958,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::X, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::X>::ref_type val_)
+    formatter<::X, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::X>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "X");
       return os_;
@@ -2009,7 +2009,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::A1, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::A1>::ref_type val_)
+    formatter<::A1, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::A1>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A1");
       return os_;
@@ -2034,7 +2034,7 @@ namespace TAOX11_NAMESPACE
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
-          IDL::traits< ::B>::ref_type val_)
+          IDL::traits<::B>::ref_type val_)
       {
         os_ << "B"
             << '{'
@@ -2065,7 +2065,7 @@ namespace TAOX11_NAMESPACE
     {
       inline OStrm_& operator ()(
           OStrm_& os_,
-          IDL::traits< ::V>::ref_type)
+          IDL::traits<::V>::ref_type)
       {
         os_ << "V"
             ;
@@ -2118,7 +2118,7 @@ inline void ::ColorValue2::swap (::ColorValue2& s)
 inline std::ostream&
 operator<< (
     std::ostream& strm,
-    IDL::traits< ::Example>::ref_type _v)
+    IDL::traits<::Example>::ref_type _v)
 {
   return IDL::traits<::Example>::write_on (strm, _v);
 }
@@ -2129,9 +2129,7 @@ operator<< (
 #if !defined (_ALIAS_OSTREAM_E53446397587C4EBA409F3A2EFDC9394_DECL_)
 #define _ALIAS_OSTREAM_E53446397587C4EBA409F3A2EFDC9394_DECL_
 
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    const ::Bytes& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Bytes& _v)
 {
   return IDL::traits<::Bytes>::write_on (strm, _v);
 }
@@ -2148,9 +2146,7 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::A>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::A>::ref_type _v)
 {
   return IDL::traits<::A>::write_on (strm, std::move(_v));
 }
@@ -2159,7 +2155,7 @@ inline std::ostream& operator<< (
 inline std::ostream&
 operator<< (
     std::ostream& strm,
-    IDL::traits< ::Val>::ref_type _v)
+    IDL::traits<::Val>::ref_type _v)
 {
   return IDL::traits<::Val>::write_on (strm, _v);
 }
@@ -2168,23 +2164,19 @@ operator<< (
 inline std::ostream&
 operator<< (
     std::ostream& strm,
-    IDL::traits< ::StringValue>::ref_type _v)
+    IDL::traits<::StringValue>::ref_type _v)
 {
   return IDL::traits<::StringValue>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::X>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::X>::ref_type _v)
 {
   return IDL::traits<::X>::write_on (strm, std::move(_v));
 }
 
 // generated from c++11/templates/cli/hdr/enum_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    ::Color _v)
+inline std::ostream& operator<< (std::ostream& strm, ::Color _v)
 {
   return IDL::traits<::Color>::write_on (strm, _v);
 }
@@ -2193,7 +2185,7 @@ inline std::ostream& operator<< (
 inline std::ostream&
 operator<< (
     std::ostream& strm,
-    IDL::traits< ::ColorValue>::ref_type _v)
+    IDL::traits<::ColorValue>::ref_type _v)
 {
   return IDL::traits<::ColorValue>::write_on (strm, _v);
 }
@@ -2208,9 +2200,7 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::A1>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::A1>::ref_type _v)
 {
   return IDL::traits<::A1>::write_on (strm, std::move(_v));
 }
@@ -2219,7 +2209,7 @@ inline std::ostream& operator<< (
 inline std::ostream&
 operator<< (
     std::ostream& strm,
-    IDL::traits< ::B>::ref_type _v)
+    IDL::traits<::B>::ref_type _v)
 {
   return IDL::traits<::B>::write_on (strm, _v);
 }
@@ -2228,7 +2218,7 @@ operator<< (
 inline std::ostream&
 operator<< (
     std::ostream& strm,
-    IDL::traits< ::V>::ref_type _v)
+    IDL::traits<::V>::ref_type _v)
 {
   return IDL::traits<::V>::write_on (strm, _v);
 }
@@ -2240,6 +2230,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BICCIEHI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CEIBJCEC_INCLUDED__ */
 
 // -*- END -*-

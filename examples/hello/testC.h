@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BCHGGIBF_INCLUDED__
-#define __RIDL_TESTC_H_BCHGGIBF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CJFHACGD_INCLUDED__
+#define __RIDL_TESTC_H_CJFHACGD_INCLUDED__
 
 #pragma once
 
@@ -157,7 +157,7 @@ namespace TAOX11_NAMESPACE
     template <typename OStrm_>
     struct formatter<::Test::Hello, OStrm_>
     {
-      OStrm_& operator ()(OStrm_& , IDL::traits< ::Test::Hello>::ref_type);
+      OStrm_& operator ()(OStrm_& , IDL::traits<::Test::Hello>::ref_type);
     };
 
     template <typename OStrm_, typename Fmt>
@@ -175,7 +175,7 @@ namespace TAOX11_NAMESPACE
     // generated from c++11/templates/cli/hdr/interface_idl_traits_def
     template <typename OStrm_>
     inline OStrm_&
-    formatter<::Test::Hello, OStrm_>::operator ()(OStrm_& os_, IDL::traits< ::Test::Hello>::ref_type val_)
+    formatter<::Test::Hello, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::Test::Hello>::ref_type val_)
     {
       os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Hello");
       return os_;
@@ -197,9 +197,7 @@ namespace TAOX11_NAMESPACE
 } // namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/interface_os
-inline std::ostream& operator<< (
-    std::ostream& strm,
-    IDL::traits< ::Test::Hello>::ref_type _v)
+inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Hello>::ref_type _v)
 {
   return IDL::traits<::Test::Hello>::write_on (strm, std::move(_v));
 }
@@ -211,6 +209,6 @@ inline std::ostream& operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BCHGGIBF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CJFHACGD_INCLUDED__ */
 
 // -*- END -*-
