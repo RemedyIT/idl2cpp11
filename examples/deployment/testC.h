@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHJCFBDA_INCLUDED__
-#define __RIDL_TESTC_H_FHJCFBDA_INCLUDED__
+#ifndef __RIDL_TESTC_H_IGJFAGFB_INCLUDED__
+#define __RIDL_TESTC_H_IGJFAGFB_INCLUDED__
 
 #pragma once
 
@@ -34,7 +34,6 @@ namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::Property
   class Property
   {
@@ -83,7 +82,6 @@ namespace Deployment
   using Properties = std::vector<Property>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::Requirement
   class Requirement
   {
@@ -142,7 +140,6 @@ namespace Deployment
   using Requirements = std::vector<Requirement>;
 
   // generated from c++11/templates/cli/hdr/enum
-
   /// @copydoc test.idl::Deployment::SatisfierPropertyKind
   enum class SatisfierPropertyKind : uint32_t
   {
@@ -162,7 +159,6 @@ namespace Deployment
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::SatisfierProperty
   class SatisfierProperty
   {
@@ -236,7 +232,6 @@ namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/enum
-
   /// @copydoc test.idl::Deployment::CCMComponentPortKind
   enum class CCMComponentPortKind : uint32_t
   {
@@ -260,7 +255,6 @@ namespace Deployment
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ComponentPortDescription
   class ComponentPortDescription
   {
@@ -374,7 +368,6 @@ namespace Deployment
   using ComponentPortDescriptions = std::vector<ComponentPortDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ComponentPropertyDescription
   class ComponentPropertyDescription
   {
@@ -422,7 +415,6 @@ namespace Deployment
   using ComponentPropertyDescriptions = std::vector<ComponentPropertyDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ComponentInterfaceDescription
   class ComponentInterfaceDescription
   {
@@ -537,7 +529,6 @@ namespace Deployment
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription
   class MonolithicDeploymentDescription
   {
@@ -616,7 +607,6 @@ namespace Deployment
   using MonolithicDeploymentDescriptions = std::vector<MonolithicDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/enum
-
   /// @copydoc test.idl::Deployment::ResourceUsageKind
   enum class ResourceUsageKind : uint32_t
   {
@@ -634,7 +624,6 @@ namespace Deployment
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription
   class InstanceResourceDeploymentDescription
   {
@@ -702,7 +691,6 @@ namespace Deployment
   using InstanceResourceDeploymentDescriptions = std::vector<InstanceResourceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::InstanceDeploymentDescription
   class InstanceDeploymentDescription
   {
@@ -800,7 +788,6 @@ namespace Deployment
   using InstanceDeploymentDescriptions = std::vector<InstanceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoint
   class ComponentExternalPortEndpoint
   {
@@ -839,7 +826,6 @@ namespace Deployment
   using ComponentExternalPortEndpoints = std::vector<ComponentExternalPortEndpoint>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint
   class PlanSubcomponentPortEndpoint
   {
@@ -905,7 +891,6 @@ namespace Deployment
   using PlanSubcomponentPortEndpoints = std::vector<PlanSubcomponentPortEndpoint>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint
   class ExternalReferenceEndpoint
   {
@@ -973,7 +958,6 @@ namespace Deployment
   using ExternalReferenceEndpoints = std::vector<ExternalReferenceEndpoint>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription
   class ConnectionResourceDeploymentDescription
   {
@@ -1042,7 +1026,6 @@ namespace Deployment
   using ConnectionResourceDeploymentDescriptions = std::vector<ConnectionResourceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::PlanConnectionDescription
   class PlanConnectionDescription
   {
@@ -1141,7 +1124,6 @@ namespace Deployment
   using PlanConnectionDescriptions = std::vector<PlanConnectionDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference
   class PlanSubcomponentPropertyReference
   {
@@ -1189,7 +1171,6 @@ namespace Deployment
   using PlanSubcomponentPropertyReferences = std::vector<PlanSubcomponentPropertyReference>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::PlanPropertyMapping
   class PlanPropertyMapping
   {
@@ -1258,7 +1239,6 @@ namespace Deployment
   using PlanPropertyMappings = std::vector<PlanPropertyMapping>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ImplementationDependency
   class ImplementationDependency
   {
@@ -1297,7 +1277,6 @@ namespace Deployment
   using ImplementationDependencies = std::vector<ImplementationDependency>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ResourceDeploymentDescription
   class ResourceDeploymentDescription
   {
@@ -1356,7 +1335,6 @@ namespace Deployment
   using ResourceDeploymentDescriptions = std::vector<ResourceDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription
   class ArtifactDeploymentDescription
   {
@@ -1455,7 +1433,6 @@ namespace Deployment
   using ArtifactDeploymentDescriptions = std::vector<ArtifactDeploymentDescription>;
 
   // generated from c++11/templates/cli/hdr/enum
-
   /// @copydoc test.idl::Deployment::PlanLocalityKind
   enum class PlanLocalityKind : uint32_t
   {
@@ -1469,7 +1446,6 @@ namespace Deployment
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::PlanLocality
   class PlanLocality
   {
@@ -1517,7 +1493,6 @@ namespace Deployment
   using PlanLocalities = std::vector<PlanLocality>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::DeploymentPlan
   class DeploymentPlan
   {
@@ -1659,7 +1634,6 @@ namespace Deployment
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ComponentPackageReference
   class ComponentPackageReference
   {
@@ -1722,7 +1696,6 @@ namespace Deployment
   using ResourceUsageKinds = std::vector<::Deployment::ResourceUsageKind>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::ImplementationRequirement
   class ImplementationRequirement
   {
@@ -1811,7 +1784,6 @@ namespace Deployment
   using ImplementationRequirements = std::vector<ImplementationRequirement>;
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Deployment::Capability
   class Capability
   {
@@ -5588,6 +5560,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHJCFBDA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IGJFAGFB_INCLUDED__ */
 
 // -*- END -*-

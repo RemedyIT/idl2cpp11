@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CCEFADBI_INCLUDED__
-#define __RIDL_TESTC_H_CCEFADBI_INCLUDED__
+#ifndef __RIDL_TESTC_H_CBCFFJHA_INCLUDED__
+#define __RIDL_TESTC_H_CBCFFJHA_INCLUDED__
 
 #pragma once
 
@@ -34,7 +34,6 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Test::Variable
   class Variable
   {
@@ -174,7 +173,6 @@ namespace Test
   }; // class Bar
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Test::Simple
   class Simple
   {
@@ -683,6 +681,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CCEFADBI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CBCFFJHA_INCLUDED__ */
 
 // -*- END -*-

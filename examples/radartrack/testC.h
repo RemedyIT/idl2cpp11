@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CFEGCGDE_INCLUDED__
-#define __RIDL_TESTC_H_CFEGCGDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IFDFGJDI_INCLUDED__
+#define __RIDL_TESTC_H_IFDFGJDI_INCLUDED__
 
 #pragma once
 
@@ -32,7 +32,6 @@ using namespace TAOX11_NAMESPACE;
 using octetseq = std::vector<uint8_t>;
 
 // generated from c++11/templates/cli/hdr/struct_pre
-
 /// @copydoc test.idl::RadarTrack
 class RadarTrack
 {
@@ -276,6 +275,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CFEGCGDE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IFDFGJDI_INCLUDED__ */
 
 // -*- END -*-

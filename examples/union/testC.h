@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CJGECFBJ_INCLUDED__
-#define __RIDL_TESTC_H_CJGECFBJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFDCGCCA_INCLUDED__
+#define __RIDL_TESTC_H_JFDCGCCA_INCLUDED__
 
 #pragma once
 
@@ -29,7 +29,6 @@
 using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/struct_pre
-
 /// @copydoc test.idl::Global
 class Global
 {
@@ -68,7 +67,6 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/enum
-
   /// @copydoc test.idl::Test::DataType
   enum class DataType : uint32_t
   {
@@ -90,7 +88,6 @@ namespace Test
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Test::Point
   class Point
   {
@@ -133,7 +130,6 @@ namespace Test
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Test::Track
   class Track
   {
@@ -177,7 +173,6 @@ namespace Test
 
 
   // generated from c++11/templates/cli/hdr/union_pre
-
   /// @copydoc test.idl::Test::Data
   class Data
   {
@@ -333,7 +328,6 @@ namespace Test
 
 
   // generated from c++11/templates/cli/hdr/struct_pre
-
   /// @copydoc test.idl::Test::S
   class S
   {
@@ -426,7 +420,6 @@ namespace Test
 {
 
   // generated from c++11/templates/cli/hdr/union_pre
-
   /// @copydoc test.idl::Test::U
   class U
   {
@@ -2428,6 +2421,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CJGECFBJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFDCGCCA_INCLUDED__ */
 
 // -*- END -*-
