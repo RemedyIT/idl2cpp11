@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CEIBJCEC_INCLUDED__
-#define __RIDL_TESTC_H_CEIBJCEC_INCLUDED__
+#ifndef __RIDL_TESTC_H_CGGBJGGJ_INCLUDED__
+#define __RIDL_TESTC_H_CGGBJGGJ_INCLUDED__
 
 #pragma once
 
@@ -268,7 +268,6 @@ namespace obv
 using Bytes = std::array< uint8_t, 64>;
 
 // generated from c++11/templates/cli/hdr/struct_pre
-
 /// @copydoc test.idl::S
 class S
 {
@@ -902,7 +901,6 @@ private:
 }; // class X
 
 // generated from c++11/templates/cli/hdr/enum
-
 /// @copydoc test.idl::Color
 enum class Color : uint32_t
 {
@@ -1023,7 +1021,6 @@ namespace TAOX11_NAMESPACE
 } // namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/struct_pre
-
 /// @copydoc test.idl::ColorValue2
 class ColorValue2
 {
@@ -2230,6 +2227,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CEIBJCEC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CGGBJGGJ_INCLUDED__ */
 
 // -*- END -*-
