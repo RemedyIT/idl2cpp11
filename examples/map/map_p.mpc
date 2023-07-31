@@ -1,0 +1,12 @@
+// -*- MPC -*-
+// CORBA C++11 MPC file
+//
+// Copyright (c) Remedy IT Expertise BV
+// --------------------------------------------------------------------
+
+project(*gen_idl): ridl_ostream_defaults {
+  IDL_Files {
+    test.idl
+  }
+  custom_only = 1
+}
