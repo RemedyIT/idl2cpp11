@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HAJBDBEJ_INCLUDED__
-#define __RIDL_TESTC_H_HAJBDBEJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_IJHHICDG_INCLUDED__
+#define __RIDL_TESTC_H_IJHHICDG_INCLUDED__
 
 #pragma once
 
@@ -21,8 +21,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -200,10 +200,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_ATTRIBUTES_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::ShapeType>
-    // MD5            : AFA29D1C2FA960270DBBBC2006AE6A51
-#if !defined(_ALIAS_AFA29D1C2FA960270DBBBC2006AE6A51_TRAITS_DECL_)
-#define _ALIAS_AFA29D1C2FA960270DBBBC2006AE6A51_TRAITS_DECL_
+    // Unaliased type : std::vector<::ShapeType>
+    // MD5            : 60443F1F4BFD2F9C8ABB2446E13D1510
+#if !defined(_ALIAS_60443F1F4BFD2F9C8ABB2446E13D1510_TRAITS_DECL_)
+#define _ALIAS_60443F1F4BFD2F9C8ABB2446E13D1510_TRAITS_DECL_
 
     template<>
     struct traits <::ShapeTypeSeq>
@@ -377,17 +377,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::ShapeType>
-// MD5            : AFA29D1C2FA960270DBBBC2006AE6A51
-#if !defined (_ALIAS_OSTREAM_AFA29D1C2FA960270DBBBC2006AE6A51_DECL_)
-#define _ALIAS_OSTREAM_AFA29D1C2FA960270DBBBC2006AE6A51_DECL_
+// Unaliased type : std::vector<::ShapeType>
+// MD5            : 60443F1F4BFD2F9C8ABB2446E13D1510
+#if !defined (_ALIAS_OSTREAM_60443F1F4BFD2F9C8ABB2446E13D1510_DECL_)
+#define _ALIAS_OSTREAM_60443F1F4BFD2F9C8ABB2446E13D1510_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 {
   return IDL::traits<::ShapeTypeSeq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_AFA29D1C2FA960270DBBBC2006AE6A51_DECL_
+#endif // _ALIAS_OSTREAM_60443F1F4BFD2F9C8ABB2446E13D1510_DECL_
 
 // generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
@@ -396,6 +396,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HAJBDBEJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IJHHICDG_INCLUDED__ */
 
 // -*- END -*-

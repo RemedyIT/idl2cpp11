@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IFDFGJDI_INCLUDED__
-#define __RIDL_TESTC_H_IFDFGJDI_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFHHCIEB_INCLUDED__
+#define __RIDL_TESTC_H_JFHHCIEB_INCLUDED__
 
 #pragma once
 
@@ -21,8 +21,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -109,10 +109,10 @@ namespace TAOX11_NAMESPACE
   {
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< uint8_t>
-    // MD5            : 00C7E9035221D75BA6FA9D78C2B65CE8
-#if !defined(_ALIAS_00C7E9035221D75BA6FA9D78C2B65CE8_TRAITS_DECL_)
-#define _ALIAS_00C7E9035221D75BA6FA9D78C2B65CE8_TRAITS_DECL_
+    // Unaliased type : std::vector<uint8_t>
+    // MD5            : 6520B07304360E5662D6ED9C7AC59F00
+#if !defined(_ALIAS_6520B07304360E5662D6ED9C7AC59F00_TRAITS_DECL_)
+#define _ALIAS_6520B07304360E5662D6ED9C7AC59F00_TRAITS_DECL_
 
     template<>
     struct traits <::octetseq>
@@ -247,17 +247,17 @@ inline void ::RadarTrack::swap (::RadarTrack& s)
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< uint8_t>
-// MD5            : 00C7E9035221D75BA6FA9D78C2B65CE8
-#if !defined (_ALIAS_OSTREAM_00C7E9035221D75BA6FA9D78C2B65CE8_DECL_)
-#define _ALIAS_OSTREAM_00C7E9035221D75BA6FA9D78C2B65CE8_DECL_
+// Unaliased type : std::vector<uint8_t>
+// MD5            : 6520B07304360E5662D6ED9C7AC59F00
+#if !defined (_ALIAS_OSTREAM_6520B07304360E5662D6ED9C7AC59F00_DECL_)
+#define _ALIAS_OSTREAM_6520B07304360E5662D6ED9C7AC59F00_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::octetseq& _v)
 {
   return IDL::traits<::octetseq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_00C7E9035221D75BA6FA9D78C2B65CE8_DECL_
+#endif // _ALIAS_OSTREAM_6520B07304360E5662D6ED9C7AC59F00_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -275,6 +275,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IFDFGJDI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFHHCIEB_INCLUDED__ */
 
 // -*- END -*-

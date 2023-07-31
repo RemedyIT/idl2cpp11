@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JIGEFJGF_INCLUDED__
-#define __RIDL_TESTC_H_JIGEFJGF_INCLUDED__
+#ifndef __RIDL_TESTC_H_BJGAABCI_INCLUDED__
+#define __RIDL_TESTC_H_BJGAABCI_INCLUDED__
 
 #pragma once
 
@@ -24,8 +24,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -304,10 +304,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_TEST__SIMPLE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Test::Simple>
-    // MD5            : 1817E99034D17AC88FEC57E1A31DB103
-#if !defined(_ALIAS_1817E99034D17AC88FEC57E1A31DB103_TRAITS_DECL_)
-#define _ALIAS_1817E99034D17AC88FEC57E1A31DB103_TRAITS_DECL_
+    // Unaliased type : std::vector<::Test::Simple>
+    // MD5            : 38A58E96D5B3A826F2EBCDE85018D8BF
+#if !defined(_ALIAS_38A58E96D5B3A826F2EBCDE85018D8BF_TRAITS_DECL_)
+#define _ALIAS_38A58E96D5B3A826F2EBCDE85018D8BF_TRAITS_DECL_
 
     template<>
     struct traits <::Test::SimpleSeq>
@@ -351,10 +351,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< int32_t>
-    // MD5            : AED4359583036BE059570E400BF55053
-#if !defined(_ALIAS_AED4359583036BE059570E400BF55053_TRAITS_DECL_)
-#define _ALIAS_AED4359583036BE059570E400BF55053_TRAITS_DECL_
+    // Unaliased type : std::vector<int32_t>
+    // MD5            : 9A64B3296F4A56FCDA67CF4F4483334F
+#if !defined(_ALIAS_9A64B3296F4A56FCDA67CF4F4483334F_TRAITS_DECL_)
+#define _ALIAS_9A64B3296F4A56FCDA67CF4F4483334F_TRAITS_DECL_
 
     template<>
     struct traits <::Test::LongSeq>
@@ -446,10 +446,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< bool>
-    // MD5            : 8737878B15D8C3312172ACA78C5A85AC
-#if !defined(_ALIAS_8737878B15D8C3312172ACA78C5A85AC_TRAITS_DECL_)
-#define _ALIAS_8737878B15D8C3312172ACA78C5A85AC_TRAITS_DECL_
+    // Unaliased type : std::vector<bool>
+    // MD5            : B8D1FD1B26C11FDB5854C03A6823264C
+#if !defined(_ALIAS_B8D1FD1B26C11FDB5854C03A6823264C_TRAITS_DECL_)
+#define _ALIAS_B8D1FD1B26C11FDB5854C03A6823264C_TRAITS_DECL_
 
     template<>
     struct traits <::Test::BoolSeq>
@@ -493,10 +493,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< std::string>
-    // MD5            : 3009A6FE2C460CA5E2399F8510369B17
-#if !defined(_ALIAS_3009A6FE2C460CA5E2399F8510369B17_TRAITS_DECL_)
-#define _ALIAS_3009A6FE2C460CA5E2399F8510369B17_TRAITS_DECL_
+    // Unaliased type : std::vector<std::string>
+    // MD5            : 71140A8E64F577D2005C73D47ACB6DAE
+#if !defined(_ALIAS_71140A8E64F577D2005C73D47ACB6DAE_TRAITS_DECL_)
+#define _ALIAS_71140A8E64F577D2005C73D47ACB6DAE_TRAITS_DECL_
 
     template<>
     struct traits <::Test::StringSeq>
@@ -655,30 +655,30 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Test::Simple>
-// MD5            : 1817E99034D17AC88FEC57E1A31DB103
-#if !defined (_ALIAS_OSTREAM_1817E99034D17AC88FEC57E1A31DB103_DECL_)
-#define _ALIAS_OSTREAM_1817E99034D17AC88FEC57E1A31DB103_DECL_
+// Unaliased type : std::vector<::Test::Simple>
+// MD5            : 38A58E96D5B3A826F2EBCDE85018D8BF
+#if !defined (_ALIAS_OSTREAM_38A58E96D5B3A826F2EBCDE85018D8BF_DECL_)
+#define _ALIAS_OSTREAM_38A58E96D5B3A826F2EBCDE85018D8BF_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::SimpleSeq& _v)
 {
   return IDL::traits<::Test::SimpleSeq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_1817E99034D17AC88FEC57E1A31DB103_DECL_
+#endif // _ALIAS_OSTREAM_38A58E96D5B3A826F2EBCDE85018D8BF_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< int32_t>
-// MD5            : AED4359583036BE059570E400BF55053
-#if !defined (_ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_)
-#define _ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_
+// Unaliased type : std::vector<int32_t>
+// MD5            : 9A64B3296F4A56FCDA67CF4F4483334F
+#if !defined (_ALIAS_OSTREAM_9A64B3296F4A56FCDA67CF4F4483334F_DECL_)
+#define _ALIAS_OSTREAM_9A64B3296F4A56FCDA67CF4F4483334F_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::LongSeq& _v)
 {
   return IDL::traits<::Test::LongSeq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_AED4359583036BE059570E400BF55053_DECL_
+#endif // _ALIAS_OSTREAM_9A64B3296F4A56FCDA67CF4F4483334F_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
 // Unaliased type : TAOX11_NAMESPACE::IDL::bounded_vector<int32_t, 50>
@@ -694,30 +694,30 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Test::BoundedLongSe
 #endif // _ALIAS_OSTREAM_7A475C4C37327B16760A3F2C0D8B7475_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< bool>
-// MD5            : 8737878B15D8C3312172ACA78C5A85AC
-#if !defined (_ALIAS_OSTREAM_8737878B15D8C3312172ACA78C5A85AC_DECL_)
-#define _ALIAS_OSTREAM_8737878B15D8C3312172ACA78C5A85AC_DECL_
+// Unaliased type : std::vector<bool>
+// MD5            : B8D1FD1B26C11FDB5854C03A6823264C
+#if !defined (_ALIAS_OSTREAM_B8D1FD1B26C11FDB5854C03A6823264C_DECL_)
+#define _ALIAS_OSTREAM_B8D1FD1B26C11FDB5854C03A6823264C_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::BoolSeq& _v)
 {
   return IDL::traits<::Test::BoolSeq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_8737878B15D8C3312172ACA78C5A85AC_DECL_
+#endif // _ALIAS_OSTREAM_B8D1FD1B26C11FDB5854C03A6823264C_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< std::string>
-// MD5            : 3009A6FE2C460CA5E2399F8510369B17
-#if !defined (_ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_)
-#define _ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_
+// Unaliased type : std::vector<std::string>
+// MD5            : 71140A8E64F577D2005C73D47ACB6DAE
+#if !defined (_ALIAS_OSTREAM_71140A8E64F577D2005C73D47ACB6DAE_DECL_)
+#define _ALIAS_OSTREAM_71140A8E64F577D2005C73D47ACB6DAE_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::StringSeq& _v)
 {
   return IDL::traits<::Test::StringSeq>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_3009A6FE2C460CA5E2399F8510369B17_DECL_
+#endif // _ALIAS_OSTREAM_71140A8E64F577D2005C73D47ACB6DAE_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::ref_type _v)
@@ -732,6 +732,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JIGEFJGF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BJGAABCI_INCLUDED__ */
 
 // -*- END -*-

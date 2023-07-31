@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IDGFGHDI_INCLUDED__
-#define __RIDL_TESTC_H_IDGFGHDI_INCLUDED__
+#ifndef __RIDL_TESTC_H_IEFCDAGD_INCLUDED__
+#define __RIDL_TESTC_H_IEFCDAGD_INCLUDED__
 
 #pragma once
 
@@ -22,8 +22,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -35,15 +35,15 @@ namespace Test
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::F
-  using F = std::array< float, 10>;
+  using F = std::array<float, 10>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::V
-  using V = std::array< std::string, 10>;
+  using V = std::array<std::string, 10>;
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Test::M
-  using M = std::array< std::array< std::array< std::string, 3>, 2>, 1>;
+  using M = std::array<std::array<std::array<std::string, 3>, 2>, 1>;
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -162,10 +162,10 @@ namespace TAOX11_NAMESPACE
   {
 
     // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array< float, 10>
-    // MD5            : 574B82568407E6C0F6B378D41D81C691
-#if !defined(_ALIAS_574B82568407E6C0F6B378D41D81C691_TRAITS_DECL_)
-#define _ALIAS_574B82568407E6C0F6B378D41D81C691_TRAITS_DECL_
+    // Unaliased type : std::array<float, 10>
+    // MD5            : 9B852471F9CE9C1C304DBFD80016C456
+#if !defined(_ALIAS_9B852471F9CE9C1C304DBFD80016C456_TRAITS_DECL_)
+#define _ALIAS_9B852471F9CE9C1C304DBFD80016C456_TRAITS_DECL_
 
     template<>
     struct traits <::Test::F>
@@ -210,10 +210,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array< std::string, 10>
-    // MD5            : 36D215768E6D81497922360AACDC3C01
-#if !defined(_ALIAS_36D215768E6D81497922360AACDC3C01_TRAITS_DECL_)
-#define _ALIAS_36D215768E6D81497922360AACDC3C01_TRAITS_DECL_
+    // Unaliased type : std::array<std::string, 10>
+    // MD5            : 77FA1CD3AE97AF829A10387AFE81B9D8
+#if !defined(_ALIAS_77FA1CD3AE97AF829A10387AFE81B9D8_TRAITS_DECL_)
+#define _ALIAS_77FA1CD3AE97AF829A10387AFE81B9D8_TRAITS_DECL_
 
     template<>
     struct traits <::Test::V>
@@ -258,10 +258,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array< std::array< std::array< std::string, 3>, 2>, 1>
-    // MD5            : 35D2DA584264FAF5A7F1FEA2E7A55517
-#if !defined(_ALIAS_35D2DA584264FAF5A7F1FEA2E7A55517_TRAITS_DECL_)
-#define _ALIAS_35D2DA584264FAF5A7F1FEA2E7A55517_TRAITS_DECL_
+    // Unaliased type : std::array<std::array<std::array<std::string, 3>, 2>, 1>
+    // MD5            : 5C019818C1D7360ACAE8413C97B8326C
+#if !defined(_ALIAS_5C019818C1D7360ACAE8413C97B8326C_TRAITS_DECL_)
+#define _ALIAS_5C019818C1D7360ACAE8413C97B8326C_TRAITS_DECL_
 
     template<>
     struct traits <::Test::M>
@@ -351,43 +351,43 @@ namespace TAOX11_NAMESPACE
 } // namespace TAOX11_NAMESPACE
 
 // generated from c++11/templates/cli/hdr/array_os
-// Unaliased type : std::array< float, 10>
-// MD5            : 574B82568407E6C0F6B378D41D81C691
-#if !defined (_ALIAS_OSTREAM_574B82568407E6C0F6B378D41D81C691_DECL_)
-#define _ALIAS_OSTREAM_574B82568407E6C0F6B378D41D81C691_DECL_
+// Unaliased type : std::array<float, 10>
+// MD5            : 9B852471F9CE9C1C304DBFD80016C456
+#if !defined (_ALIAS_OSTREAM_9B852471F9CE9C1C304DBFD80016C456_DECL_)
+#define _ALIAS_OSTREAM_9B852471F9CE9C1C304DBFD80016C456_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::F& _v)
 {
   return IDL::traits<::Test::F>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_574B82568407E6C0F6B378D41D81C691_DECL_
+#endif // _ALIAS_OSTREAM_9B852471F9CE9C1C304DBFD80016C456_DECL_
 
 // generated from c++11/templates/cli/hdr/array_os
-// Unaliased type : std::array< std::string, 10>
-// MD5            : 36D215768E6D81497922360AACDC3C01
-#if !defined (_ALIAS_OSTREAM_36D215768E6D81497922360AACDC3C01_DECL_)
-#define _ALIAS_OSTREAM_36D215768E6D81497922360AACDC3C01_DECL_
+// Unaliased type : std::array<std::string, 10>
+// MD5            : 77FA1CD3AE97AF829A10387AFE81B9D8
+#if !defined (_ALIAS_OSTREAM_77FA1CD3AE97AF829A10387AFE81B9D8_DECL_)
+#define _ALIAS_OSTREAM_77FA1CD3AE97AF829A10387AFE81B9D8_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::V& _v)
 {
   return IDL::traits<::Test::V>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_36D215768E6D81497922360AACDC3C01_DECL_
+#endif // _ALIAS_OSTREAM_77FA1CD3AE97AF829A10387AFE81B9D8_DECL_
 
 // generated from c++11/templates/cli/hdr/array_os
-// Unaliased type : std::array< std::array< std::array< std::string, 3>, 2>, 1>
-// MD5            : 35D2DA584264FAF5A7F1FEA2E7A55517
-#if !defined (_ALIAS_OSTREAM_35D2DA584264FAF5A7F1FEA2E7A55517_DECL_)
-#define _ALIAS_OSTREAM_35D2DA584264FAF5A7F1FEA2E7A55517_DECL_
+// Unaliased type : std::array<std::array<std::array<std::string, 3>, 2>, 1>
+// MD5            : 5C019818C1D7360ACAE8413C97B8326C
+#if !defined (_ALIAS_OSTREAM_5C019818C1D7360ACAE8413C97B8326C_DECL_)
+#define _ALIAS_OSTREAM_5C019818C1D7360ACAE8413C97B8326C_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Test::M& _v)
 {
   return IDL::traits<::Test::M>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_35D2DA584264FAF5A7F1FEA2E7A55517_DECL_
+#endif // _ALIAS_OSTREAM_5C019818C1D7360ACAE8413C97B8326C_DECL_
 
 // generated from c++11/templates/cli/hdr/interface_os
 inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::ref_type _v)
@@ -402,6 +402,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IDGFGHDI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IEFCDAGD_INCLUDED__ */
 
 // -*- END -*-
