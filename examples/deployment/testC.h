@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IGJFAGFB_INCLUDED__
-#define __RIDL_TESTC_H_IGJFAGFB_INCLUDED__
+#ifndef __RIDL_TESTC_H_FGEABEBG_INCLUDED__
+#define __RIDL_TESTC_H_FGEABEBG_INCLUDED__
 
 #pragma once
 
@@ -22,8 +22,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -1874,10 +1874,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__PROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::Property>
-    // MD5            : D7395FCE530B622658DD71B872EFFEFC
-#if !defined(_ALIAS_D7395FCE530B622658DD71B872EFFEFC_TRAITS_DECL_)
-#define _ALIAS_D7395FCE530B622658DD71B872EFFEFC_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::Property>
+    // MD5            : 8F6B733E281147A0D17C81974F6E2F4A
+#if !defined(_ALIAS_8F6B733E281147A0D17C81974F6E2F4A_TRAITS_DECL_)
+#define _ALIAS_8F6B733E281147A0D17C81974F6E2F4A_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::Properties>
@@ -1945,10 +1945,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__REQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::Requirement>
-    // MD5            : 3265D777E1B663C0C3E8129C9FA7A92F
-#if !defined(_ALIAS_3265D777E1B663C0C3E8129C9FA7A92F_TRAITS_DECL_)
-#define _ALIAS_3265D777E1B663C0C3E8129C9FA7A92F_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::Requirement>
+    // MD5            : 861CD953E45F11CE8C95711983BF7148
+#if !defined(_ALIAS_861CD953E45F11CE8C95711983BF7148_TRAITS_DECL_)
+#define _ALIAS_861CD953E45F11CE8C95711983BF7148_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::Requirements>
@@ -2062,10 +2062,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__SATISFIERPROPERTY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::SatisfierProperty>
-    // MD5            : EB80218682E63B0775FD6299B3051E6D
-#if !defined(_ALIAS_EB80218682E63B0775FD6299B3051E6D_TRAITS_DECL_)
-#define _ALIAS_EB80218682E63B0775FD6299B3051E6D_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::SatisfierProperty>
+    // MD5            : 87F85F9EB26CC27AF7572B9D51816AE0
+#if !defined(_ALIAS_87F85F9EB26CC27AF7572B9D51816AE0_TRAITS_DECL_)
+#define _ALIAS_87F85F9EB26CC27AF7572B9D51816AE0_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::SatisfierProperties>
@@ -2181,10 +2181,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__COMPONENTPORTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ComponentPortDescription>
-    // MD5            : 12954963972B5124A7A21E0C4327729B
-#if !defined(_ALIAS_12954963972B5124A7A21E0C4327729B_TRAITS_DECL_)
-#define _ALIAS_12954963972B5124A7A21E0C4327729B_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ComponentPortDescription>
+    // MD5            : D4429DB0150FC67ECDE284B51D6F4AB9
+#if !defined(_ALIAS_D4429DB0150FC67ECDE284B51D6F4AB9_TRAITS_DECL_)
+#define _ALIAS_D4429DB0150FC67ECDE284B51D6F4AB9_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ComponentPortDescriptions>
@@ -2252,10 +2252,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__COMPONENTPROPERTYDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ComponentPropertyDescription>
-    // MD5            : 920E8F149D82D841A00A08FE0557725B
-#if !defined(_ALIAS_920E8F149D82D841A00A08FE0557725B_TRAITS_DECL_)
-#define _ALIAS_920E8F149D82D841A00A08FE0557725B_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ComponentPropertyDescription>
+    // MD5            : 7C8CFF03B5F464E0810EBF30BC31B5C4
+#if !defined(_ALIAS_7C8CFF03B5F464E0810EBF30BC31B5C4_TRAITS_DECL_)
+#define _ALIAS_7C8CFF03B5F464E0810EBF30BC31B5C4_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ComponentPropertyDescriptions>
@@ -2347,10 +2347,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__MONOLITHICDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::MonolithicDeploymentDescription>
-    // MD5            : 8CA1C515FCEF8C84C8A8AC3BF21E75A1
-#if !defined(_ALIAS_8CA1C515FCEF8C84C8A8AC3BF21E75A1_TRAITS_DECL_)
-#define _ALIAS_8CA1C515FCEF8C84C8A8AC3BF21E75A1_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::MonolithicDeploymentDescription>
+    // MD5            : E082FCE7289B36751048D484A1FD239A
+#if !defined(_ALIAS_E082FCE7289B36751048D484A1FD239A_TRAITS_DECL_)
+#define _ALIAS_E082FCE7289B36751048D484A1FD239A_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::MonolithicDeploymentDescriptions>
@@ -2463,10 +2463,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__INSTANCERESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::InstanceResourceDeploymentDescription>
-    // MD5            : 7DA1C006DFD4ED780225B6DDB077F883
-#if !defined(_ALIAS_7DA1C006DFD4ED780225B6DDB077F883_TRAITS_DECL_)
-#define _ALIAS_7DA1C006DFD4ED780225B6DDB077F883_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::InstanceResourceDeploymentDescription>
+    // MD5            : DB7F332F419ADEE6FCAD6FBEAEDF1A4D
+#if !defined(_ALIAS_DB7F332F419ADEE6FCAD6FBEAEDF1A4D_TRAITS_DECL_)
+#define _ALIAS_DB7F332F419ADEE6FCAD6FBEAEDF1A4D_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::InstanceResourceDeploymentDescriptions>
@@ -2534,10 +2534,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__INSTANCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::InstanceDeploymentDescription>
-    // MD5            : 8B4B636BAEF9B16F13A7BA16B787ADEA
-#if !defined(_ALIAS_8B4B636BAEF9B16F13A7BA16B787ADEA_TRAITS_DECL_)
-#define _ALIAS_8B4B636BAEF9B16F13A7BA16B787ADEA_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::InstanceDeploymentDescription>
+    // MD5            : 14C41534697F78C59F608EE0A47CBA9B
+#if !defined(_ALIAS_14C41534697F78C59F608EE0A47CBA9B_TRAITS_DECL_)
+#define _ALIAS_14C41534697F78C59F608EE0A47CBA9B_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::InstanceDeploymentDescriptions>
@@ -2605,10 +2605,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__COMPONENTEXTERNALPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ComponentExternalPortEndpoint>
-    // MD5            : 0079E24B070B963BAFE84A5B71BC7698
-#if !defined(_ALIAS_0079E24B070B963BAFE84A5B71BC7698_TRAITS_DECL_)
-#define _ALIAS_0079E24B070B963BAFE84A5B71BC7698_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ComponentExternalPortEndpoint>
+    // MD5            : 4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6
+#if !defined(_ALIAS_4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6_TRAITS_DECL_)
+#define _ALIAS_4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ComponentExternalPortEndpoints>
@@ -2676,10 +2676,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPORTENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::PlanSubcomponentPortEndpoint>
-    // MD5            : 1CC072AD6279ECB8F540C3C10DB1F767
-#if !defined(_ALIAS_1CC072AD6279ECB8F540C3C10DB1F767_TRAITS_DECL_)
-#define _ALIAS_1CC072AD6279ECB8F540C3C10DB1F767_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::PlanSubcomponentPortEndpoint>
+    // MD5            : 5AB274DFC836186A85CD075080BF3DD9
+#if !defined(_ALIAS_5AB274DFC836186A85CD075080BF3DD9_TRAITS_DECL_)
+#define _ALIAS_5AB274DFC836186A85CD075080BF3DD9_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::PlanSubcomponentPortEndpoints>
@@ -2747,10 +2747,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__EXTERNALREFERENCEENDPOINT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ExternalReferenceEndpoint>
-    // MD5            : 2E044427492F5861B730283A565D1ED5
-#if !defined(_ALIAS_2E044427492F5861B730283A565D1ED5_TRAITS_DECL_)
-#define _ALIAS_2E044427492F5861B730283A565D1ED5_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ExternalReferenceEndpoint>
+    // MD5            : 7DA334904313D0632AD0668CC1C675D8
+#if !defined(_ALIAS_7DA334904313D0632AD0668CC1C675D8_TRAITS_DECL_)
+#define _ALIAS_7DA334904313D0632AD0668CC1C675D8_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ExternalReferenceEndpoints>
@@ -2818,10 +2818,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__CONNECTIONRESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ConnectionResourceDeploymentDescription>
-    // MD5            : 4CE006491F749EF87F69C9F0666BD518
-#if !defined(_ALIAS_4CE006491F749EF87F69C9F0666BD518_TRAITS_DECL_)
-#define _ALIAS_4CE006491F749EF87F69C9F0666BD518_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ConnectionResourceDeploymentDescription>
+    // MD5            : FAE00862C0F1191628751378AD4083FE
+#if !defined(_ALIAS_FAE00862C0F1191628751378AD4083FE_TRAITS_DECL_)
+#define _ALIAS_FAE00862C0F1191628751378AD4083FE_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ConnectionResourceDeploymentDescriptions>
@@ -2889,10 +2889,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__PLANCONNECTIONDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::PlanConnectionDescription>
-    // MD5            : 0864BEE17C4222FE18C6B2C68197901B
-#if !defined(_ALIAS_0864BEE17C4222FE18C6B2C68197901B_TRAITS_DECL_)
-#define _ALIAS_0864BEE17C4222FE18C6B2C68197901B_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::PlanConnectionDescription>
+    // MD5            : 7E69E4E1F80936F7D8A0BC670CA6816E
+#if !defined(_ALIAS_7E69E4E1F80936F7D8A0BC670CA6816E_TRAITS_DECL_)
+#define _ALIAS_7E69E4E1F80936F7D8A0BC670CA6816E_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::PlanConnectionDescriptions>
@@ -2960,10 +2960,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__PLANSUBCOMPONENTPROPERTYREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::PlanSubcomponentPropertyReference>
-    // MD5            : E50992F1F837050D6477978B56863FBD
-#if !defined(_ALIAS_E50992F1F837050D6477978B56863FBD_TRAITS_DECL_)
-#define _ALIAS_E50992F1F837050D6477978B56863FBD_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::PlanSubcomponentPropertyReference>
+    // MD5            : FA02661C3FA87DB69D356D9B486253EA
+#if !defined(_ALIAS_FA02661C3FA87DB69D356D9B486253EA_TRAITS_DECL_)
+#define _ALIAS_FA02661C3FA87DB69D356D9B486253EA_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::PlanSubcomponentPropertyReferences>
@@ -3031,10 +3031,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__PLANPROPERTYMAPPING_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::PlanPropertyMapping>
-    // MD5            : 0422E458499BDB48508CAB373414C33F
-#if !defined(_ALIAS_0422E458499BDB48508CAB373414C33F_TRAITS_DECL_)
-#define _ALIAS_0422E458499BDB48508CAB373414C33F_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::PlanPropertyMapping>
+    // MD5            : A44D429EAFCC66E7E91FA01C3950179F
+#if !defined(_ALIAS_A44D429EAFCC66E7E91FA01C3950179F_TRAITS_DECL_)
+#define _ALIAS_A44D429EAFCC66E7E91FA01C3950179F_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::PlanPropertyMappings>
@@ -3102,10 +3102,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__IMPLEMENTATIONDEPENDENCY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ImplementationDependency>
-    // MD5            : 2C17710E0A7BA82C42ACC676758DBF1C
-#if !defined(_ALIAS_2C17710E0A7BA82C42ACC676758DBF1C_TRAITS_DECL_)
-#define _ALIAS_2C17710E0A7BA82C42ACC676758DBF1C_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ImplementationDependency>
+    // MD5            : 4E449207CF0A14C1F360E36D560B5134
+#if !defined(_ALIAS_4E449207CF0A14C1F360E36D560B5134_TRAITS_DECL_)
+#define _ALIAS_4E449207CF0A14C1F360E36D560B5134_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ImplementationDependencies>
@@ -3173,10 +3173,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__RESOURCEDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ResourceDeploymentDescription>
-    // MD5            : 77F1484D7BC4A6841660C8A62AFD38E7
-#if !defined(_ALIAS_77F1484D7BC4A6841660C8A62AFD38E7_TRAITS_DECL_)
-#define _ALIAS_77F1484D7BC4A6841660C8A62AFD38E7_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ResourceDeploymentDescription>
+    // MD5            : B58F004049DB649D059AEB3C99E1B77C
+#if !defined(_ALIAS_B58F004049DB649D059AEB3C99E1B77C_TRAITS_DECL_)
+#define _ALIAS_B58F004049DB649D059AEB3C99E1B77C_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ResourceDeploymentDescriptions>
@@ -3244,10 +3244,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__ARTIFACTDEPLOYMENTDESCRIPTION_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ArtifactDeploymentDescription>
-    // MD5            : 4B78A2395FEFF04B7A71CAF425D7AAB0
-#if !defined(_ALIAS_4B78A2395FEFF04B7A71CAF425D7AAB0_TRAITS_DECL_)
-#define _ALIAS_4B78A2395FEFF04B7A71CAF425D7AAB0_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ArtifactDeploymentDescription>
+    // MD5            : D751A1162ECD0816AD37D39ED1DA9CB6
+#if !defined(_ALIAS_D751A1162ECD0816AD37D39ED1DA9CB6_TRAITS_DECL_)
+#define _ALIAS_D751A1162ECD0816AD37D39ED1DA9CB6_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ArtifactDeploymentDescriptions>
@@ -3358,10 +3358,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__PLANLOCALITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::PlanLocality>
-    // MD5            : 7639FB88384E3E335A056DB5284179B1
-#if !defined(_ALIAS_7639FB88384E3E335A056DB5284179B1_TRAITS_DECL_)
-#define _ALIAS_7639FB88384E3E335A056DB5284179B1_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::PlanLocality>
+    // MD5            : 9E657D3D91F66C2A5C545D214E26650F
+#if !defined(_ALIAS_9E657D3D91F66C2A5C545D214E26650F_TRAITS_DECL_)
+#define _ALIAS_9E657D3D91F66C2A5C545D214E26650F_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::PlanLocalities>
@@ -3453,10 +3453,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__COMPONENTPACKAGEREFERENCE_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ComponentPackageReference>
-    // MD5            : D5775520607EF1551FF61D9245FFC376
-#if !defined(_ALIAS_D5775520607EF1551FF61D9245FFC376_TRAITS_DECL_)
-#define _ALIAS_D5775520607EF1551FF61D9245FFC376_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ComponentPackageReference>
+    // MD5            : 8D91F00C508062DE9F1562B5493273B1
+#if !defined(_ALIAS_8D91F00C508062DE9F1562B5493273B1_TRAITS_DECL_)
+#define _ALIAS_8D91F00C508062DE9F1562B5493273B1_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ComponentPackageReferences>
@@ -3500,10 +3500,10 @@ namespace TAOX11_NAMESPACE
 #endif
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ResourceUsageKind>
-    // MD5            : 90F1BEC8CBCE4D84EC85294F6CFABECA
-#if !defined(_ALIAS_90F1BEC8CBCE4D84EC85294F6CFABECA_TRAITS_DECL_)
-#define _ALIAS_90F1BEC8CBCE4D84EC85294F6CFABECA_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ResourceUsageKind>
+    // MD5            : EBB93757F529E5532BBCE82A5EEEFCD8
+#if !defined(_ALIAS_EBB93757F529E5532BBCE82A5EEEFCD8_TRAITS_DECL_)
+#define _ALIAS_EBB93757F529E5532BBCE82A5EEEFCD8_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ResourceUsageKinds>
@@ -3571,10 +3571,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__IMPLEMENTATIONREQUIREMENT_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::ImplementationRequirement>
-    // MD5            : D1965C67B438F31951F64983B8082D9F
-#if !defined(_ALIAS_D1965C67B438F31951F64983B8082D9F_TRAITS_DECL_)
-#define _ALIAS_D1965C67B438F31951F64983B8082D9F_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::ImplementationRequirement>
+    // MD5            : E3307666EB672BE32344C449BEA5A034
+#if !defined(_ALIAS_E3307666EB672BE32344C449BEA5A034_TRAITS_DECL_)
+#define _ALIAS_E3307666EB672BE32344C449BEA5A034_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::ImplementationRequirements>
@@ -3642,10 +3642,10 @@ namespace TAOX11_NAMESPACE
 #endif // _STRUCT_DEPLOYMENT__CAPABILITY_TRAITS_
 
     // generated from c++11/templates/cli/hdr/sequence_idl_traits
-    // Unaliased type : std::vector< ::Deployment::Capability>
-    // MD5            : 9AC75DD12DFFBAB4E6024AF2CB28F81D
-#if !defined(_ALIAS_9AC75DD12DFFBAB4E6024AF2CB28F81D_TRAITS_DECL_)
-#define _ALIAS_9AC75DD12DFFBAB4E6024AF2CB28F81D_TRAITS_DECL_
+    // Unaliased type : std::vector<::Deployment::Capability>
+    // MD5            : A532AED9FFD8D225B0FE3EBAFC8FDD33
+#if !defined(_ALIAS_A532AED9FFD8D225B0FE3EBAFC8FDD33_TRAITS_DECL_)
+#define _ALIAS_A532AED9FFD8D225B0FE3EBAFC8FDD33_TRAITS_DECL_
 
     template<>
     struct traits <::Deployment::Capabilities>
@@ -5024,17 +5024,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::Property>
-// MD5            : D7395FCE530B622658DD71B872EFFEFC
-#if !defined (_ALIAS_OSTREAM_D7395FCE530B622658DD71B872EFFEFC_DECL_)
-#define _ALIAS_OSTREAM_D7395FCE530B622658DD71B872EFFEFC_DECL_
+// Unaliased type : std::vector<::Deployment::Property>
+// MD5            : 8F6B733E281147A0D17C81974F6E2F4A
+#if !defined (_ALIAS_OSTREAM_8F6B733E281147A0D17C81974F6E2F4A_DECL_)
+#define _ALIAS_OSTREAM_8F6B733E281147A0D17C81974F6E2F4A_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Properties& _v)
 {
   return IDL::traits<::Deployment::Properties>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_D7395FCE530B622658DD71B872EFFEFC_DECL_
+#endif // _ALIAS_OSTREAM_8F6B733E281147A0D17C81974F6E2F4A_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5046,17 +5046,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::Requirement>
-// MD5            : 3265D777E1B663C0C3E8129C9FA7A92F
-#if !defined (_ALIAS_OSTREAM_3265D777E1B663C0C3E8129C9FA7A92F_DECL_)
-#define _ALIAS_OSTREAM_3265D777E1B663C0C3E8129C9FA7A92F_DECL_
+// Unaliased type : std::vector<::Deployment::Requirement>
+// MD5            : 861CD953E45F11CE8C95711983BF7148
+#if !defined (_ALIAS_OSTREAM_861CD953E45F11CE8C95711983BF7148_DECL_)
+#define _ALIAS_OSTREAM_861CD953E45F11CE8C95711983BF7148_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Requirements& _v)
 {
   return IDL::traits<::Deployment::Requirements>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_3265D777E1B663C0C3E8129C9FA7A92F_DECL_
+#endif // _ALIAS_OSTREAM_861CD953E45F11CE8C95711983BF7148_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os
 inline std::ostream& operator<< (std::ostream& strm, ::Deployment::SatisfierPropertyKind _v)
@@ -5074,17 +5074,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::SatisfierProperty>
-// MD5            : EB80218682E63B0775FD6299B3051E6D
-#if !defined (_ALIAS_OSTREAM_EB80218682E63B0775FD6299B3051E6D_DECL_)
-#define _ALIAS_OSTREAM_EB80218682E63B0775FD6299B3051E6D_DECL_
+// Unaliased type : std::vector<::Deployment::SatisfierProperty>
+// MD5            : 87F85F9EB26CC27AF7572B9D51816AE0
+#if !defined (_ALIAS_OSTREAM_87F85F9EB26CC27AF7572B9D51816AE0_DECL_)
+#define _ALIAS_OSTREAM_87F85F9EB26CC27AF7572B9D51816AE0_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::SatisfierProperties& _v)
 {
   return IDL::traits<::Deployment::SatisfierProperties>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_EB80218682E63B0775FD6299B3051E6D_DECL_
+#endif // _ALIAS_OSTREAM_87F85F9EB26CC27AF7572B9D51816AE0_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os
 inline std::ostream& operator<< (std::ostream& strm, ::Deployment::CCMComponentPortKind _v)
@@ -5102,17 +5102,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ComponentPortDescription>
-// MD5            : 12954963972B5124A7A21E0C4327729B
-#if !defined (_ALIAS_OSTREAM_12954963972B5124A7A21E0C4327729B_DECL_)
-#define _ALIAS_OSTREAM_12954963972B5124A7A21E0C4327729B_DECL_
+// Unaliased type : std::vector<::Deployment::ComponentPortDescription>
+// MD5            : D4429DB0150FC67ECDE284B51D6F4AB9
+#if !defined (_ALIAS_OSTREAM_D4429DB0150FC67ECDE284B51D6F4AB9_DECL_)
+#define _ALIAS_OSTREAM_D4429DB0150FC67ECDE284B51D6F4AB9_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentPortDescriptions& _v)
 {
   return IDL::traits<::Deployment::ComponentPortDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_12954963972B5124A7A21E0C4327729B_DECL_
+#endif // _ALIAS_OSTREAM_D4429DB0150FC67ECDE284B51D6F4AB9_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5124,17 +5124,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ComponentPropertyDescription>
-// MD5            : 920E8F149D82D841A00A08FE0557725B
-#if !defined (_ALIAS_OSTREAM_920E8F149D82D841A00A08FE0557725B_DECL_)
-#define _ALIAS_OSTREAM_920E8F149D82D841A00A08FE0557725B_DECL_
+// Unaliased type : std::vector<::Deployment::ComponentPropertyDescription>
+// MD5            : 7C8CFF03B5F464E0810EBF30BC31B5C4
+#if !defined (_ALIAS_OSTREAM_7C8CFF03B5F464E0810EBF30BC31B5C4_DECL_)
+#define _ALIAS_OSTREAM_7C8CFF03B5F464E0810EBF30BC31B5C4_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentPropertyDescriptions& _v)
 {
   return IDL::traits<::Deployment::ComponentPropertyDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_920E8F149D82D841A00A08FE0557725B_DECL_
+#endif // _ALIAS_OSTREAM_7C8CFF03B5F464E0810EBF30BC31B5C4_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5155,17 +5155,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::MonolithicDeploymentDescription>
-// MD5            : 8CA1C515FCEF8C84C8A8AC3BF21E75A1
-#if !defined (_ALIAS_OSTREAM_8CA1C515FCEF8C84C8A8AC3BF21E75A1_DECL_)
-#define _ALIAS_OSTREAM_8CA1C515FCEF8C84C8A8AC3BF21E75A1_DECL_
+// Unaliased type : std::vector<::Deployment::MonolithicDeploymentDescription>
+// MD5            : E082FCE7289B36751048D484A1FD239A
+#if !defined (_ALIAS_OSTREAM_E082FCE7289B36751048D484A1FD239A_DECL_)
+#define _ALIAS_OSTREAM_E082FCE7289B36751048D484A1FD239A_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::MonolithicDeploymentDescriptions& _v)
 {
   return IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_8CA1C515FCEF8C84C8A8AC3BF21E75A1_DECL_
+#endif // _ALIAS_OSTREAM_E082FCE7289B36751048D484A1FD239A_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os
 inline std::ostream& operator<< (std::ostream& strm, ::Deployment::ResourceUsageKind _v)
@@ -5183,17 +5183,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::InstanceResourceDeploymentDescription>
-// MD5            : 7DA1C006DFD4ED780225B6DDB077F883
-#if !defined (_ALIAS_OSTREAM_7DA1C006DFD4ED780225B6DDB077F883_DECL_)
-#define _ALIAS_OSTREAM_7DA1C006DFD4ED780225B6DDB077F883_DECL_
+// Unaliased type : std::vector<::Deployment::InstanceResourceDeploymentDescription>
+// MD5            : DB7F332F419ADEE6FCAD6FBEAEDF1A4D
+#if !defined (_ALIAS_OSTREAM_DB7F332F419ADEE6FCAD6FBEAEDF1A4D_DECL_)
+#define _ALIAS_OSTREAM_DB7F332F419ADEE6FCAD6FBEAEDF1A4D_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::InstanceResourceDeploymentDescriptions& _v)
 {
   return IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_7DA1C006DFD4ED780225B6DDB077F883_DECL_
+#endif // _ALIAS_OSTREAM_DB7F332F419ADEE6FCAD6FBEAEDF1A4D_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5205,17 +5205,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::InstanceDeploymentDescription>
-// MD5            : 8B4B636BAEF9B16F13A7BA16B787ADEA
-#if !defined (_ALIAS_OSTREAM_8B4B636BAEF9B16F13A7BA16B787ADEA_DECL_)
-#define _ALIAS_OSTREAM_8B4B636BAEF9B16F13A7BA16B787ADEA_DECL_
+// Unaliased type : std::vector<::Deployment::InstanceDeploymentDescription>
+// MD5            : 14C41534697F78C59F608EE0A47CBA9B
+#if !defined (_ALIAS_OSTREAM_14C41534697F78C59F608EE0A47CBA9B_DECL_)
+#define _ALIAS_OSTREAM_14C41534697F78C59F608EE0A47CBA9B_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::InstanceDeploymentDescriptions& _v)
 {
   return IDL::traits<::Deployment::InstanceDeploymentDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_8B4B636BAEF9B16F13A7BA16B787ADEA_DECL_
+#endif // _ALIAS_OSTREAM_14C41534697F78C59F608EE0A47CBA9B_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5227,17 +5227,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ComponentExternalPortEndpoint>
-// MD5            : 0079E24B070B963BAFE84A5B71BC7698
-#if !defined (_ALIAS_OSTREAM_0079E24B070B963BAFE84A5B71BC7698_DECL_)
-#define _ALIAS_OSTREAM_0079E24B070B963BAFE84A5B71BC7698_DECL_
+// Unaliased type : std::vector<::Deployment::ComponentExternalPortEndpoint>
+// MD5            : 4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6
+#if !defined (_ALIAS_OSTREAM_4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6_DECL_)
+#define _ALIAS_OSTREAM_4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentExternalPortEndpoints& _v)
 {
   return IDL::traits<::Deployment::ComponentExternalPortEndpoints>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_0079E24B070B963BAFE84A5B71BC7698_DECL_
+#endif // _ALIAS_OSTREAM_4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5249,17 +5249,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::PlanSubcomponentPortEndpoint>
-// MD5            : 1CC072AD6279ECB8F540C3C10DB1F767
-#if !defined (_ALIAS_OSTREAM_1CC072AD6279ECB8F540C3C10DB1F767_DECL_)
-#define _ALIAS_OSTREAM_1CC072AD6279ECB8F540C3C10DB1F767_DECL_
+// Unaliased type : std::vector<::Deployment::PlanSubcomponentPortEndpoint>
+// MD5            : 5AB274DFC836186A85CD075080BF3DD9
+#if !defined (_ALIAS_OSTREAM_5AB274DFC836186A85CD075080BF3DD9_DECL_)
+#define _ALIAS_OSTREAM_5AB274DFC836186A85CD075080BF3DD9_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanSubcomponentPortEndpoints& _v)
 {
   return IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_1CC072AD6279ECB8F540C3C10DB1F767_DECL_
+#endif // _ALIAS_OSTREAM_5AB274DFC836186A85CD075080BF3DD9_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5271,17 +5271,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ExternalReferenceEndpoint>
-// MD5            : 2E044427492F5861B730283A565D1ED5
-#if !defined (_ALIAS_OSTREAM_2E044427492F5861B730283A565D1ED5_DECL_)
-#define _ALIAS_OSTREAM_2E044427492F5861B730283A565D1ED5_DECL_
+// Unaliased type : std::vector<::Deployment::ExternalReferenceEndpoint>
+// MD5            : 7DA334904313D0632AD0668CC1C675D8
+#if !defined (_ALIAS_OSTREAM_7DA334904313D0632AD0668CC1C675D8_DECL_)
+#define _ALIAS_OSTREAM_7DA334904313D0632AD0668CC1C675D8_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ExternalReferenceEndpoints& _v)
 {
   return IDL::traits<::Deployment::ExternalReferenceEndpoints>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_2E044427492F5861B730283A565D1ED5_DECL_
+#endif // _ALIAS_OSTREAM_7DA334904313D0632AD0668CC1C675D8_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5293,17 +5293,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ConnectionResourceDeploymentDescription>
-// MD5            : 4CE006491F749EF87F69C9F0666BD518
-#if !defined (_ALIAS_OSTREAM_4CE006491F749EF87F69C9F0666BD518_DECL_)
-#define _ALIAS_OSTREAM_4CE006491F749EF87F69C9F0666BD518_DECL_
+// Unaliased type : std::vector<::Deployment::ConnectionResourceDeploymentDescription>
+// MD5            : FAE00862C0F1191628751378AD4083FE
+#if !defined (_ALIAS_OSTREAM_FAE00862C0F1191628751378AD4083FE_DECL_)
+#define _ALIAS_OSTREAM_FAE00862C0F1191628751378AD4083FE_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ConnectionResourceDeploymentDescriptions& _v)
 {
   return IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_4CE006491F749EF87F69C9F0666BD518_DECL_
+#endif // _ALIAS_OSTREAM_FAE00862C0F1191628751378AD4083FE_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5315,17 +5315,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::PlanConnectionDescription>
-// MD5            : 0864BEE17C4222FE18C6B2C68197901B
-#if !defined (_ALIAS_OSTREAM_0864BEE17C4222FE18C6B2C68197901B_DECL_)
-#define _ALIAS_OSTREAM_0864BEE17C4222FE18C6B2C68197901B_DECL_
+// Unaliased type : std::vector<::Deployment::PlanConnectionDescription>
+// MD5            : 7E69E4E1F80936F7D8A0BC670CA6816E
+#if !defined (_ALIAS_OSTREAM_7E69E4E1F80936F7D8A0BC670CA6816E_DECL_)
+#define _ALIAS_OSTREAM_7E69E4E1F80936F7D8A0BC670CA6816E_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanConnectionDescriptions& _v)
 {
   return IDL::traits<::Deployment::PlanConnectionDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_0864BEE17C4222FE18C6B2C68197901B_DECL_
+#endif // _ALIAS_OSTREAM_7E69E4E1F80936F7D8A0BC670CA6816E_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5337,17 +5337,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::PlanSubcomponentPropertyReference>
-// MD5            : E50992F1F837050D6477978B56863FBD
-#if !defined (_ALIAS_OSTREAM_E50992F1F837050D6477978B56863FBD_DECL_)
-#define _ALIAS_OSTREAM_E50992F1F837050D6477978B56863FBD_DECL_
+// Unaliased type : std::vector<::Deployment::PlanSubcomponentPropertyReference>
+// MD5            : FA02661C3FA87DB69D356D9B486253EA
+#if !defined (_ALIAS_OSTREAM_FA02661C3FA87DB69D356D9B486253EA_DECL_)
+#define _ALIAS_OSTREAM_FA02661C3FA87DB69D356D9B486253EA_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanSubcomponentPropertyReferences& _v)
 {
   return IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_E50992F1F837050D6477978B56863FBD_DECL_
+#endif // _ALIAS_OSTREAM_FA02661C3FA87DB69D356D9B486253EA_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5359,17 +5359,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::PlanPropertyMapping>
-// MD5            : 0422E458499BDB48508CAB373414C33F
-#if !defined (_ALIAS_OSTREAM_0422E458499BDB48508CAB373414C33F_DECL_)
-#define _ALIAS_OSTREAM_0422E458499BDB48508CAB373414C33F_DECL_
+// Unaliased type : std::vector<::Deployment::PlanPropertyMapping>
+// MD5            : A44D429EAFCC66E7E91FA01C3950179F
+#if !defined (_ALIAS_OSTREAM_A44D429EAFCC66E7E91FA01C3950179F_DECL_)
+#define _ALIAS_OSTREAM_A44D429EAFCC66E7E91FA01C3950179F_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanPropertyMappings& _v)
 {
   return IDL::traits<::Deployment::PlanPropertyMappings>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_0422E458499BDB48508CAB373414C33F_DECL_
+#endif // _ALIAS_OSTREAM_A44D429EAFCC66E7E91FA01C3950179F_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5381,17 +5381,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ImplementationDependency>
-// MD5            : 2C17710E0A7BA82C42ACC676758DBF1C
-#if !defined (_ALIAS_OSTREAM_2C17710E0A7BA82C42ACC676758DBF1C_DECL_)
-#define _ALIAS_OSTREAM_2C17710E0A7BA82C42ACC676758DBF1C_DECL_
+// Unaliased type : std::vector<::Deployment::ImplementationDependency>
+// MD5            : 4E449207CF0A14C1F360E36D560B5134
+#if !defined (_ALIAS_OSTREAM_4E449207CF0A14C1F360E36D560B5134_DECL_)
+#define _ALIAS_OSTREAM_4E449207CF0A14C1F360E36D560B5134_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ImplementationDependencies& _v)
 {
   return IDL::traits<::Deployment::ImplementationDependencies>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_2C17710E0A7BA82C42ACC676758DBF1C_DECL_
+#endif // _ALIAS_OSTREAM_4E449207CF0A14C1F360E36D560B5134_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5403,17 +5403,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ResourceDeploymentDescription>
-// MD5            : 77F1484D7BC4A6841660C8A62AFD38E7
-#if !defined (_ALIAS_OSTREAM_77F1484D7BC4A6841660C8A62AFD38E7_DECL_)
-#define _ALIAS_OSTREAM_77F1484D7BC4A6841660C8A62AFD38E7_DECL_
+// Unaliased type : std::vector<::Deployment::ResourceDeploymentDescription>
+// MD5            : B58F004049DB649D059AEB3C99E1B77C
+#if !defined (_ALIAS_OSTREAM_B58F004049DB649D059AEB3C99E1B77C_DECL_)
+#define _ALIAS_OSTREAM_B58F004049DB649D059AEB3C99E1B77C_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ResourceDeploymentDescriptions& _v)
 {
   return IDL::traits<::Deployment::ResourceDeploymentDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_77F1484D7BC4A6841660C8A62AFD38E7_DECL_
+#endif // _ALIAS_OSTREAM_B58F004049DB649D059AEB3C99E1B77C_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5425,17 +5425,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ArtifactDeploymentDescription>
-// MD5            : 4B78A2395FEFF04B7A71CAF425D7AAB0
-#if !defined (_ALIAS_OSTREAM_4B78A2395FEFF04B7A71CAF425D7AAB0_DECL_)
-#define _ALIAS_OSTREAM_4B78A2395FEFF04B7A71CAF425D7AAB0_DECL_
+// Unaliased type : std::vector<::Deployment::ArtifactDeploymentDescription>
+// MD5            : D751A1162ECD0816AD37D39ED1DA9CB6
+#if !defined (_ALIAS_OSTREAM_D751A1162ECD0816AD37D39ED1DA9CB6_DECL_)
+#define _ALIAS_OSTREAM_D751A1162ECD0816AD37D39ED1DA9CB6_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ArtifactDeploymentDescriptions& _v)
 {
   return IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_4B78A2395FEFF04B7A71CAF425D7AAB0_DECL_
+#endif // _ALIAS_OSTREAM_D751A1162ECD0816AD37D39ED1DA9CB6_DECL_
 
 // generated from c++11/templates/cli/hdr/enum_os
 inline std::ostream& operator<< (std::ostream& strm, ::Deployment::PlanLocalityKind _v)
@@ -5453,17 +5453,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::PlanLocality>
-// MD5            : 7639FB88384E3E335A056DB5284179B1
-#if !defined (_ALIAS_OSTREAM_7639FB88384E3E335A056DB5284179B1_DECL_)
-#define _ALIAS_OSTREAM_7639FB88384E3E335A056DB5284179B1_DECL_
+// Unaliased type : std::vector<::Deployment::PlanLocality>
+// MD5            : 9E657D3D91F66C2A5C545D214E26650F
+#if !defined (_ALIAS_OSTREAM_9E657D3D91F66C2A5C545D214E26650F_DECL_)
+#define _ALIAS_OSTREAM_9E657D3D91F66C2A5C545D214E26650F_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanLocalities& _v)
 {
   return IDL::traits<::Deployment::PlanLocalities>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_7639FB88384E3E335A056DB5284179B1_DECL_
+#endif // _ALIAS_OSTREAM_9E657D3D91F66C2A5C545D214E26650F_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5484,30 +5484,30 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ComponentPackageReference>
-// MD5            : D5775520607EF1551FF61D9245FFC376
-#if !defined (_ALIAS_OSTREAM_D5775520607EF1551FF61D9245FFC376_DECL_)
-#define _ALIAS_OSTREAM_D5775520607EF1551FF61D9245FFC376_DECL_
+// Unaliased type : std::vector<::Deployment::ComponentPackageReference>
+// MD5            : 8D91F00C508062DE9F1562B5493273B1
+#if !defined (_ALIAS_OSTREAM_8D91F00C508062DE9F1562B5493273B1_DECL_)
+#define _ALIAS_OSTREAM_8D91F00C508062DE9F1562B5493273B1_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentPackageReferences& _v)
 {
   return IDL::traits<::Deployment::ComponentPackageReferences>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_D5775520607EF1551FF61D9245FFC376_DECL_
+#endif // _ALIAS_OSTREAM_8D91F00C508062DE9F1562B5493273B1_DECL_
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ResourceUsageKind>
-// MD5            : 90F1BEC8CBCE4D84EC85294F6CFABECA
-#if !defined (_ALIAS_OSTREAM_90F1BEC8CBCE4D84EC85294F6CFABECA_DECL_)
-#define _ALIAS_OSTREAM_90F1BEC8CBCE4D84EC85294F6CFABECA_DECL_
+// Unaliased type : std::vector<::Deployment::ResourceUsageKind>
+// MD5            : EBB93757F529E5532BBCE82A5EEEFCD8
+#if !defined (_ALIAS_OSTREAM_EBB93757F529E5532BBCE82A5EEEFCD8_DECL_)
+#define _ALIAS_OSTREAM_EBB93757F529E5532BBCE82A5EEEFCD8_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ResourceUsageKinds& _v)
 {
   return IDL::traits<::Deployment::ResourceUsageKinds>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_90F1BEC8CBCE4D84EC85294F6CFABECA_DECL_
+#endif // _ALIAS_OSTREAM_EBB93757F529E5532BBCE82A5EEEFCD8_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5519,17 +5519,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::ImplementationRequirement>
-// MD5            : D1965C67B438F31951F64983B8082D9F
-#if !defined (_ALIAS_OSTREAM_D1965C67B438F31951F64983B8082D9F_DECL_)
-#define _ALIAS_OSTREAM_D1965C67B438F31951F64983B8082D9F_DECL_
+// Unaliased type : std::vector<::Deployment::ImplementationRequirement>
+// MD5            : E3307666EB672BE32344C449BEA5A034
+#if !defined (_ALIAS_OSTREAM_E3307666EB672BE32344C449BEA5A034_DECL_)
+#define _ALIAS_OSTREAM_E3307666EB672BE32344C449BEA5A034_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ImplementationRequirements& _v)
 {
   return IDL::traits<::Deployment::ImplementationRequirements>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_D1965C67B438F31951F64983B8082D9F_DECL_
+#endif // _ALIAS_OSTREAM_E3307666EB672BE32344C449BEA5A034_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -5541,17 +5541,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/sequence_os
-// Unaliased type : std::vector< ::Deployment::Capability>
-// MD5            : 9AC75DD12DFFBAB4E6024AF2CB28F81D
-#if !defined (_ALIAS_OSTREAM_9AC75DD12DFFBAB4E6024AF2CB28F81D_DECL_)
-#define _ALIAS_OSTREAM_9AC75DD12DFFBAB4E6024AF2CB28F81D_DECL_
+// Unaliased type : std::vector<::Deployment::Capability>
+// MD5            : A532AED9FFD8D225B0FE3EBAFC8FDD33
+#if !defined (_ALIAS_OSTREAM_A532AED9FFD8D225B0FE3EBAFC8FDD33_DECL_)
+#define _ALIAS_OSTREAM_A532AED9FFD8D225B0FE3EBAFC8FDD33_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabilities& _v)
 {
   return IDL::traits<::Deployment::Capabilities>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_9AC75DD12DFFBAB4E6024AF2CB28F81D_DECL_
+#endif // _ALIAS_OSTREAM_A532AED9FFD8D225B0FE3EBAFC8FDD33_DECL_
 
 // generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
@@ -5560,6 +5560,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IGJFAGFB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FGEABEBG_INCLUDED__ */
 
 // -*- END -*-

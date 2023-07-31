@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CGGBJGGJ_INCLUDED__
-#define __RIDL_TESTC_H_CGGBJGGJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_JJFDEDFA_INCLUDED__
+#define __RIDL_TESTC_H_JJFDEDFA_INCLUDED__
 
 #pragma once
 
@@ -26,8 +26,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 8 || TAOX11_MICRO_VERSION != 1
-#error This file was generated with another RIDL C++11 backend version (1.8.1). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -265,7 +265,7 @@ namespace obv
 
 // generated from c++11/templates/cli/hdr/typedef
 /// @copydoc test.idl::Bytes
-using Bytes = std::array< uint8_t, 64>;
+using Bytes = std::array<uint8_t, 64>;
 
 // generated from c++11/templates/cli/hdr/struct_pre
 /// @copydoc test.idl::S
@@ -1570,10 +1570,10 @@ namespace TAOX11_NAMESPACE
 #endif // !_VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_
 
     // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array< uint8_t, 64>
-    // MD5            : E53446397587C4EBA409F3A2EFDC9394
-#if !defined(_ALIAS_E53446397587C4EBA409F3A2EFDC9394_TRAITS_DECL_)
-#define _ALIAS_E53446397587C4EBA409F3A2EFDC9394_TRAITS_DECL_
+    // Unaliased type : std::array<uint8_t, 64>
+    // MD5            : 2AA6F8B7E6B60E6CBE74E7080A32503A
+#if !defined(_ALIAS_2AA6F8B7E6B60E6CBE74E7080A32503A_TRAITS_DECL_)
+#define _ALIAS_2AA6F8B7E6B60E6CBE74E7080A32503A_TRAITS_DECL_
 
     template<>
     struct traits <::Bytes>
@@ -2121,17 +2121,17 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/array_os
-// Unaliased type : std::array< uint8_t, 64>
-// MD5            : E53446397587C4EBA409F3A2EFDC9394
-#if !defined (_ALIAS_OSTREAM_E53446397587C4EBA409F3A2EFDC9394_DECL_)
-#define _ALIAS_OSTREAM_E53446397587C4EBA409F3A2EFDC9394_DECL_
+// Unaliased type : std::array<uint8_t, 64>
+// MD5            : 2AA6F8B7E6B60E6CBE74E7080A32503A
+#if !defined (_ALIAS_OSTREAM_2AA6F8B7E6B60E6CBE74E7080A32503A_DECL_)
+#define _ALIAS_OSTREAM_2AA6F8B7E6B60E6CBE74E7080A32503A_DECL_
 
 inline std::ostream& operator<< (std::ostream& strm, const ::Bytes& _v)
 {
   return IDL::traits<::Bytes>::write_on (strm, _v);
 }
 
-#endif // _ALIAS_OSTREAM_E53446397587C4EBA409F3A2EFDC9394_DECL_
+#endif // _ALIAS_OSTREAM_2AA6F8B7E6B60E6CBE74E7080A32503A_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
 inline std::ostream&
@@ -2227,6 +2227,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CGGBJGGJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JJFDEDFA_INCLUDED__ */
 
 // -*- END -*-
