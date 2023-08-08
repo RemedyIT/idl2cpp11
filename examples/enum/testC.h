@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FBIAJAFC_INCLUDED__
-#define __RIDL_TESTC_H_FBIAJAFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_DBABGDGF_INCLUDED__
+#define __RIDL_TESTC_H_DBABGDGF_INCLUDED__
 
 #pragma once
 
@@ -62,6 +62,12 @@ namespace TAOX11_NAMESPACE
     struct traits <::Test::EEnum>
       : IDL::common_byval_traits<::Test::EEnum>
     {
+      /// Underlying type of the enum
+      using underlying_type = uint32_t;
+
+      /// bit_bound
+      using bit_bound = std::integral_constant<uint32_t, 32>;
+
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
@@ -123,6 +129,6 @@ inline std::ostream& operator<< (std::ostream& strm, ::Test::EEnum _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FBIAJAFC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DBABGDGF_INCLUDED__ */
 
 // -*- END -*-
