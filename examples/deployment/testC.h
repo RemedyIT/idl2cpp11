@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FGEABEBG_INCLUDED__
-#define __RIDL_TESTC_H_FGEABEBG_INCLUDED__
+#ifndef __RIDL_TESTC_H_DDDDDFFG_INCLUDED__
+#define __RIDL_TESTC_H_DDDDDFFG_INCLUDED__
 
 #pragma once
 
@@ -1996,6 +1996,12 @@ namespace TAOX11_NAMESPACE
     struct traits <::Deployment::SatisfierPropertyKind>
       : IDL::common_byval_traits<::Deployment::SatisfierPropertyKind>
     {
+      /// Underlying type of the enum
+      using underlying_type = uint32_t;
+
+      /// bit_bound
+      using bit_bound = std::integral_constant<uint32_t, 32>;
+
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
@@ -2113,6 +2119,12 @@ namespace TAOX11_NAMESPACE
     struct traits <::Deployment::CCMComponentPortKind>
       : IDL::common_byval_traits<::Deployment::CCMComponentPortKind>
     {
+      /// Underlying type of the enum
+      using underlying_type = uint32_t;
+
+      /// bit_bound
+      using bit_bound = std::integral_constant<uint32_t, 32>;
+
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
@@ -2398,6 +2410,12 @@ namespace TAOX11_NAMESPACE
     struct traits <::Deployment::ResourceUsageKind>
       : IDL::common_byval_traits<::Deployment::ResourceUsageKind>
     {
+      /// Underlying type of the enum
+      using underlying_type = uint32_t;
+
+      /// bit_bound
+      using bit_bound = std::integral_constant<uint32_t, 32>;
+
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
@@ -3295,6 +3313,12 @@ namespace TAOX11_NAMESPACE
     struct traits <::Deployment::PlanLocalityKind>
       : IDL::common_byval_traits<::Deployment::PlanLocalityKind>
     {
+      /// Underlying type of the enum
+      using underlying_type = uint32_t;
+
+      /// bit_bound
+      using bit_bound = std::integral_constant<uint32_t, 32>;
+
       template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
       static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
       {
@@ -5560,6 +5584,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FGEABEBG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DDDDDFFG_INCLUDED__ */
 
 // -*- END -*-
