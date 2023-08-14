@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJGDEIBE_INCLUDED__
-#define __RIDL_TESTC_H_JJGDEIBE_INCLUDED__
+#ifndef __RIDL_TESTC_H_CIBFDGJG_INCLUDED__
+#define __RIDL_TESTC_H_CIBFDGJG_INCLUDED__
 
 #pragma once
 
@@ -29,29 +29,65 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/bitset
 /// @copydoc test.idl::MyBitset
-/// THIS MAPPING IS NOT COMPLETE
-struct MyBitset
+/// @todo THIS MAPPING IS NOT COMPLETE
+class MyBitset
 {
-  /// @copydoc #{doc_scoped_name}::#{_bitfield.name}
-  bool x : 1;
-  /// @copydoc #{doc_scoped_name}::#{_bitfield.name}
-  int8_t a : 3;
-  /// @copydoc #{doc_scoped_name}::#{_bitfield.name}
-  int16_t d : 12;
-  /// @copydoc #{doc_scoped_name}::#{_bitfield.name}
-  int64_t tt : 33;
+public:
+  MyBitset () = default;
+  ~MyBitset () noexcept = default;
+  MyBitset (const MyBitset&) = default;
+  MyBitset (MyBitset&&) = default;
+  MyBitset& operator= (const MyBitset&) = default;
+  MyBitset& operator= (MyBitset&&) = default;
+
+  inline void x (bool _x11_x) { this->_taox11_mybitset.x = _x11_x; }
+  inline bool x () const { return this->_taox11_mybitset.x; }
+  inline void a (int8_t _x11_a) { this->_taox11_mybitset.a = _x11_a; }
+  inline int8_t a () const { return this->_taox11_mybitset.a; }
+  inline void d (int16_t _x11_d) { this->_taox11_mybitset.d = _x11_d; }
+  inline int16_t d () const { return this->_taox11_mybitset.d; }
+  inline void tt (int64_t _x11_tt) { this->_taox11_mybitset.tt = _x11_tt; }
+  inline int64_t tt () const { return this->_taox11_mybitset.tt; }
+
+private:
+  struct
+  {
+    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    bool x : 1;
+    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    int8_t a : 3;
+    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    int16_t d : 12;
+    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    int64_t tt : 33;
+  } _taox11_mybitset;
 }; // MyBitset
 
 
 // generated from c++11/templates/cli/hdr/bitset
 /// @copydoc test.idl::MyBitset2
-/// THIS MAPPING IS NOT COMPLETE
-struct MyBitset2
+/// @todo THIS MAPPING IS NOT COMPLETE
+class MyBitset2
 {
-  /// @copydoc #{doc_scoped_name}::#{_bitfield.name}
-  int8_t c : 3;
-  /// @copydoc #{doc_scoped_name}::#{_bitfield.name}
-  int8_t  : 2;
+public:
+  MyBitset2 () = default;
+  ~MyBitset2 () noexcept = default;
+  MyBitset2 (const MyBitset2&) = default;
+  MyBitset2 (MyBitset2&&) = default;
+  MyBitset2& operator= (const MyBitset2&) = default;
+  MyBitset2& operator= (MyBitset2&&) = default;
+
+  inline void c (int8_t _x11_c) { this->_taox11_mybitset2.c = _x11_c; }
+  inline int8_t c () const { return this->_taox11_mybitset2.c; }
+
+private:
+  struct
+  {
+    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    int8_t c : 3;
+    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    int8_t  : 2;
+  } _taox11_mybitset2;
 }; // MyBitset2
 
 
@@ -78,6 +114,6 @@ namespace TAOX11_NAMESPACE
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJGDEIBE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CIBFDGJG_INCLUDED__ */
 
 // -*- END -*-

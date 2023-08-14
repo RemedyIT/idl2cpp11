@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IIHIHAAD_INCLUDED__
-#define __RIDL_TESTC_H_IIHIHAAD_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDDAFFFJ_INCLUDED__
+#define __RIDL_TESTC_H_HDDAFFFJ_INCLUDED__
 
 #pragma once
 
@@ -2233,6 +2233,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IIHIHAAD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDDAFFFJ_INCLUDED__ */
 
 // -*- END -*-
