@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JDEDCHJI_INCLUDED__
-#define __RIDL_TESTC_H_JDEDCHJI_INCLUDED__
+#ifndef __RIDL_TESTC_H_CAJGADDE_INCLUDED__
+#define __RIDL_TESTC_H_CAJGADDE_INCLUDED__
 
 #pragma once
 
@@ -96,6 +96,89 @@ namespace TAOX11_NAMESPACE
 {
   namespace IDL
   {
+
+    // generated from c++11/templates/cli/hdr/bitset_idl_traits
+    template<>
+    struct traits <::MyBitset>
+      : IDL::common_byval_traits<::MyBitset>
+    {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val}; }
+    };
+
+    template <typename OStrm_>
+    struct formatter<::MyBitset, OStrm_>
+    {
+      inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset& val_)
+      {
+        os_ << "MyBitset{"
+            << "x=" << IDL::traits<bool>::write(val_.x ())
+            << ",a=" << IDL::traits<int8_t>::write(val_.a ())
+            << ",d=" << IDL::traits<int16_t>::write(val_.d ())
+            << ",tt=" << IDL::traits<int64_t>::write(val_.tt ())
+            << '}';
+        return os_;
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitset>::__Writer<Fmt> w)
+    {
+      using writer_t = IDL::traits<::MyBitset>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter<::MyBitset, OStrm_>,
+                            typename writer_t::formatter_t>::type;
+      return IDL::traits<::MyBitset>::write_on (os, w.val_, formatter_t ());
+    }
+
+    // generated from c++11/templates/cli/hdr/bitset_idl_traits
+    template<>
+    struct traits <::MyBitset2>
+      : IDL::common_byval_traits<::MyBitset2>
+    {
+      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
+      {
+        return fmt_ (os_, val_);
+      }
+
+      template <typename Formatter = std::false_type>
+      static inline __Writer<Formatter> write (in_type val) { return {val}; }
+    };
+
+    template <typename OStrm_>
+    struct formatter<::MyBitset2, OStrm_>
+    {
+      inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset2& val_)
+      {
+        os_ << "MyBitset2{"
+            << "c=" << IDL::traits<int8_t>::write(val_.c ())
+            << '}';
+        return os_;
+      }
+    };
+
+    template <typename OStrm_, typename Fmt>
+    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitset2>::__Writer<Fmt> w)
+    {
+      using writer_t = IDL::traits<::MyBitset2>::__Writer<Fmt>;
+      using formatter_t = typename std::conditional<
+                            std::is_same<
+                              typename writer_t::formatter_t,
+                              std::false_type>::value,
+                            formatter<::MyBitset2, OStrm_>,
+                            typename writer_t::formatter_t>::type;
+      return IDL::traits<::MyBitset2>::write_on (os, w.val_, formatter_t ());
+    }
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
@@ -114,6 +197,6 @@ namespace TAOX11_NAMESPACE
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JDEDCHJI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CAJGADDE_INCLUDED__ */
 
 // -*- END -*-
