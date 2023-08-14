@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HEDGBCFH_INCLUDED__
-#define __RIDL_TESTC_H_HEDGBCFH_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDHAAJDJ_INCLUDED__
+#define __RIDL_TESTC_H_IDHAAJDJ_INCLUDED__
 
 #pragma once
 
@@ -72,6 +72,8 @@ private:
   } _taox11_mybitset;
 }; // MyBitset
 
+inline void swap (::MyBitset& m1, ::MyBitset& m2) { m1.swap (m2); }
+
 
 // generated from c++11/templates/cli/hdr/bitset
 /// @copydoc test.idl::MyBitset2
@@ -89,8 +91,7 @@ public:
   /// Constructor which accepts value for all members
   explicit inline MyBitset2 (
     MyBitset _base,
-    int8_t c,
-    int8_t );
+    int8_t c);
 
   inline void c (int8_t _x11_c) { this->_taox11_mybitset2.c = _x11_c; }
   inline int8_t c () const { return this->_taox11_mybitset2.c; }
@@ -107,6 +108,8 @@ private:
     int8_t  : 2;
   } _taox11_mybitset2;
 }; // MyBitset2
+
+inline void swap (::MyBitset2& m1, ::MyBitset2& m2) { m1.swap (m2); }
 
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
@@ -214,12 +217,7 @@ inline ::MyBitset::MyBitset (
   int8_t a,
   int16_t d,
   int64_t tt)
-  : _taox11_mybitset {
- x
- , a
- , d
- , tt
-}
+  : _taox11_mybitset { x, a, d, tt }
 {
 }
 
@@ -231,12 +229,9 @@ inline void ::MyBitset::swap (::MyBitset& s)
 // generated from c++11/templates/cli/inl/bitset_inl
 inline ::MyBitset2::MyBitset2 (
   MyBitset _base,
-  int8_t c,
-  int8_t )
+  int8_t c)
   : MyBitset (std::move(_base))
-  , _taox11_mybitset2 {
- c
-}
+  , _taox11_mybitset2 { c }
 {
 }
 
@@ -252,6 +247,6 @@ inline void ::MyBitset2::swap (::MyBitset2& s)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HEDGBCFH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IDHAAJDJ_INCLUDED__ */
 
 // -*- END -*-
