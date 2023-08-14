@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CAJGADDE_INCLUDED__
-#define __RIDL_TESTC_H_CAJGADDE_INCLUDED__
+#ifndef __RIDL_TESTC_H_HEDGBCFH_INCLUDED__
+#define __RIDL_TESTC_H_HEDGBCFH_INCLUDED__
 
 #pragma once
 
@@ -39,6 +39,12 @@ public:
   MyBitset (MyBitset&&) = default;
   MyBitset& operator= (const MyBitset&) = default;
   MyBitset& operator= (MyBitset&&) = default;
+  /// Constructor which accepts value for all members
+  explicit inline MyBitset (
+    bool x,
+    int8_t a,
+    int16_t d,
+    int64_t tt);
 
   inline void x (bool _x11_x) { this->_taox11_mybitset.x = _x11_x; }
   inline bool x () const { return this->_taox11_mybitset.x; }
@@ -48,6 +54,9 @@ public:
   inline int16_t d () const { return this->_taox11_mybitset.d; }
   inline void tt (int64_t _x11_tt) { this->_taox11_mybitset.tt = _x11_tt; }
   inline int64_t tt () const { return this->_taox11_mybitset.tt; }
+
+  /// Exchange the value of two bitsets in an efficient matter
+  inline void swap (::MyBitset& s);
 
 private:
   struct
@@ -76,9 +85,18 @@ public:
   MyBitset2 (MyBitset2&&) = default;
   MyBitset2& operator= (const MyBitset2&) = default;
   MyBitset2& operator= (MyBitset2&&) = default;
+  using MyBitset::MyBitset;
+  /// Constructor which accepts value for all members
+  explicit inline MyBitset2 (
+    MyBitset _base,
+    int8_t c,
+    int8_t );
 
   inline void c (int8_t _x11_c) { this->_taox11_mybitset2.c = _x11_c; }
   inline int8_t c () const { return this->_taox11_mybitset2.c; }
+
+  /// Exchange the value of two bitsets in an efficient matter
+  inline void swap (::MyBitset2& s);
 
 private:
   struct
@@ -190,6 +208,43 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
+// generated from c++11/templates/cli/inl/bitset_inl
+inline ::MyBitset::MyBitset (
+  bool x,
+  int8_t a,
+  int16_t d,
+  int64_t tt)
+  : _taox11_mybitset {
+ x
+ , a
+ , d
+ , tt
+}
+{
+}
+
+inline void ::MyBitset::swap (::MyBitset& s)
+{
+  std::swap (this->_taox11_mybitset, s._taox11_mybitset);
+}
+
+// generated from c++11/templates/cli/inl/bitset_inl
+inline ::MyBitset2::MyBitset2 (
+  MyBitset _base,
+  int8_t c,
+  int8_t )
+  : MyBitset (std::move(_base))
+  , _taox11_mybitset2 {
+ c
+}
+{
+}
+
+inline void ::MyBitset2::swap (::MyBitset2& s)
+{
+  std::swap (this->_taox11_mybitset2, s._taox11_mybitset2);
+}
+
 // generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -197,6 +252,6 @@ namespace TAOX11_NAMESPACE
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CAJGADDE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HEDGBCFH_INCLUDED__ */
 
 // -*- END -*-

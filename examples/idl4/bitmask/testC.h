@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DICFAGIG_INCLUDED__
-#define __RIDL_TESTC_H_DICFAGIG_INCLUDED__
+#ifndef __RIDL_TESTC_H_DEBCCFAA_INCLUDED__
+#define __RIDL_TESTC_H_DEBCCFAA_INCLUDED__
 
 #pragma once
 
@@ -123,6 +123,6 @@ namespace TAOX11_NAMESPACE
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DICFAGIG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DEBCCFAA_INCLUDED__ */
 
 // -*- END -*-
