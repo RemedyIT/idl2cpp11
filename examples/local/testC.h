@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IAFEAJGG_INCLUDED__
-#define __RIDL_TESTC_H_IAFEAJGG_INCLUDED__
+#ifndef __RIDL_TESTC_H_JHFCGECG_INCLUDED__
+#define __RIDL_TESTC_H_JHFCGECG_INCLUDED__
 
 #pragma once
 
@@ -359,6 +359,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Bar>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IAFEAJGG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JHFCGECG_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CIBFDGJG_INCLUDED__
-#define __RIDL_TESTC_H_CIBFDGJG_INCLUDED__
+#ifndef __RIDL_TESTC_H_JDEDCHJI_INCLUDED__
+#define __RIDL_TESTC_H_JDEDCHJI_INCLUDED__
 
 #pragma once
 
@@ -67,7 +67,7 @@ private:
 // generated from c++11/templates/cli/hdr/bitset
 /// @copydoc test.idl::MyBitset2
 /// @todo THIS MAPPING IS NOT COMPLETE
-class MyBitset2
+class MyBitset2 : public MyBitset
 {
 public:
   MyBitset2 () = default;
@@ -114,6 +114,6 @@ namespace TAOX11_NAMESPACE
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CIBFDGJG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JDEDCHJI_INCLUDED__ */
 
 // -*- END -*-
