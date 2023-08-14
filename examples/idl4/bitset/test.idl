@@ -1,0 +1,21 @@
+/*!
+ * @file   test.idl
+ * @author Johnny Willemsen <jwillemsen@remedy.nl>
+ *
+ * @brief  CORBA C++11 test idl
+ *
+ * @copyright Copyright (c) Remedy IT Expertise BV
+ */
+
+bitset MyBitset {
+  bitfield<1> x;
+  bitfield<3> a;
+  bitfield<12, short> d;
+  bitfield<33> tt;
+};
+
+bitset MyBitset2 : MyBitset {
+  bitfield<3> c;
+  bitfield<2>;
+};
+
