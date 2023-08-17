@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IDHAAJDJ_INCLUDED__
-#define __RIDL_TESTC_H_IDHAAJDJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_IBFIJAGB_INCLUDED__
+#define __RIDL_TESTC_H_IBFIJAGB_INCLUDED__
 
 #pragma once
 
@@ -240,6 +240,18 @@ inline void ::MyBitset2::swap (::MyBitset2& s)
   std::swap (this->_taox11_mybitset2, s._taox11_mybitset2);
 }
 
+// generated from c++11/templates/cli/hdr/bitset_os
+inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset& _v)
+{
+  return IDL::traits<::MyBitset>::write_on (strm, _v);
+}
+
+// generated from c++11/templates/cli/hdr/bitset_os
+inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
+{
+  return IDL::traits<::MyBitset2>::write_on (strm, _v);
+}
+
 // generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -247,6 +259,6 @@ inline void ::MyBitset2::swap (::MyBitset2& s)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IDHAAJDJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IBFIJAGB_INCLUDED__ */
 
 // -*- END -*-

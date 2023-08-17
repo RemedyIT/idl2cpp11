@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DBHHADEA_INCLUDED__
-#define __RIDL_TESTC_H_DBHHADEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FEIJHGGD_INCLUDED__
+#define __RIDL_TESTC_H_FEIJHGGD_INCLUDED__
 
 #pragma once
 
@@ -257,19 +257,13 @@ inline void ::Point3D::swap (::Point3D& s)
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Point2D& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Point2D& _v)
 {
   return IDL::traits<::Point2D>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Point3D& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Point3D& _v)
 {
   return IDL::traits<::Point3D>::write_on (strm, _v);
 }
@@ -281,6 +275,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DBHHADEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FEIJHGGD_INCLUDED__ */
 
 // -*- END -*-

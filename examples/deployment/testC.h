@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EHHCAABA_INCLUDED__
-#define __RIDL_TESTC_H_EHHCAABA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DECDIJEA_INCLUDED__
+#define __RIDL_TESTC_H_DECDIJEA_INCLUDED__
 
 #pragma once
 
@@ -5039,10 +5039,7 @@ inline void ::Deployment::Capability::swap (::Deployment::Capability& s)
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::Property& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Property& _v)
 {
   return IDL::traits<::Deployment::Property>::write_on (strm, _v);
 }
@@ -5061,10 +5058,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Propert
 #endif // _ALIAS_OSTREAM_8F6B733E281147A0D17C81974F6E2F4A_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::Requirement& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Requirement& _v)
 {
   return IDL::traits<::Deployment::Requirement>::write_on (strm, _v);
 }
@@ -5089,10 +5083,7 @@ inline std::ostream& operator<< (std::ostream& strm, ::Deployment::SatisfierProp
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::SatisfierProperty& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::SatisfierProperty& _v)
 {
   return IDL::traits<::Deployment::SatisfierProperty>::write_on (strm, _v);
 }
@@ -5117,10 +5108,7 @@ inline std::ostream& operator<< (std::ostream& strm, ::Deployment::CCMComponentP
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ComponentPortDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentPortDescription& _v)
 {
   return IDL::traits<::Deployment::ComponentPortDescription>::write_on (strm, _v);
 }
@@ -5139,10 +5127,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Compone
 #endif // _ALIAS_OSTREAM_D4429DB0150FC67ECDE284B51D6F4AB9_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ComponentPropertyDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentPropertyDescription& _v)
 {
   return IDL::traits<::Deployment::ComponentPropertyDescription>::write_on (strm, _v);
 }
@@ -5161,19 +5146,13 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Compone
 #endif // _ALIAS_OSTREAM_7C8CFF03B5F464E0810EBF30BC31B5C4_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ComponentInterfaceDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentInterfaceDescription& _v)
 {
   return IDL::traits<::Deployment::ComponentInterfaceDescription>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::MonolithicDeploymentDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::MonolithicDeploymentDescription& _v)
 {
   return IDL::traits<::Deployment::MonolithicDeploymentDescription>::write_on (strm, _v);
 }
@@ -5198,10 +5177,7 @@ inline std::ostream& operator<< (std::ostream& strm, ::Deployment::ResourceUsage
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::InstanceResourceDeploymentDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::InstanceResourceDeploymentDescription& _v)
 {
   return IDL::traits<::Deployment::InstanceResourceDeploymentDescription>::write_on (strm, _v);
 }
@@ -5220,10 +5196,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Instanc
 #endif // _ALIAS_OSTREAM_DB7F332F419ADEE6FCAD6FBEAEDF1A4D_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::InstanceDeploymentDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::InstanceDeploymentDescription& _v)
 {
   return IDL::traits<::Deployment::InstanceDeploymentDescription>::write_on (strm, _v);
 }
@@ -5242,10 +5215,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Instanc
 #endif // _ALIAS_OSTREAM_14C41534697F78C59F608EE0A47CBA9B_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ComponentExternalPortEndpoint& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentExternalPortEndpoint& _v)
 {
   return IDL::traits<::Deployment::ComponentExternalPortEndpoint>::write_on (strm, _v);
 }
@@ -5264,10 +5234,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Compone
 #endif // _ALIAS_OSTREAM_4FDEBC1AAA8D0FF6EB5DDAD971B7B2A6_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::PlanSubcomponentPortEndpoint& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanSubcomponentPortEndpoint& _v)
 {
   return IDL::traits<::Deployment::PlanSubcomponentPortEndpoint>::write_on (strm, _v);
 }
@@ -5286,10 +5253,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanSub
 #endif // _ALIAS_OSTREAM_5AB274DFC836186A85CD075080BF3DD9_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ExternalReferenceEndpoint& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ExternalReferenceEndpoint& _v)
 {
   return IDL::traits<::Deployment::ExternalReferenceEndpoint>::write_on (strm, _v);
 }
@@ -5308,10 +5272,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Externa
 #endif // _ALIAS_OSTREAM_7DA334904313D0632AD0668CC1C675D8_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ConnectionResourceDeploymentDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ConnectionResourceDeploymentDescription& _v)
 {
   return IDL::traits<::Deployment::ConnectionResourceDeploymentDescription>::write_on (strm, _v);
 }
@@ -5330,10 +5291,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Connect
 #endif // _ALIAS_OSTREAM_FAE00862C0F1191628751378AD4083FE_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::PlanConnectionDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanConnectionDescription& _v)
 {
   return IDL::traits<::Deployment::PlanConnectionDescription>::write_on (strm, _v);
 }
@@ -5352,10 +5310,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanCon
 #endif // _ALIAS_OSTREAM_7E69E4E1F80936F7D8A0BC670CA6816E_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::PlanSubcomponentPropertyReference& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanSubcomponentPropertyReference& _v)
 {
   return IDL::traits<::Deployment::PlanSubcomponentPropertyReference>::write_on (strm, _v);
 }
@@ -5374,10 +5329,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanSub
 #endif // _ALIAS_OSTREAM_FA02661C3FA87DB69D356D9B486253EA_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::PlanPropertyMapping& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanPropertyMapping& _v)
 {
   return IDL::traits<::Deployment::PlanPropertyMapping>::write_on (strm, _v);
 }
@@ -5396,10 +5348,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanPro
 #endif // _ALIAS_OSTREAM_A44D429EAFCC66E7E91FA01C3950179F_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ImplementationDependency& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ImplementationDependency& _v)
 {
   return IDL::traits<::Deployment::ImplementationDependency>::write_on (strm, _v);
 }
@@ -5418,10 +5367,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Impleme
 #endif // _ALIAS_OSTREAM_4E449207CF0A14C1F360E36D560B5134_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ResourceDeploymentDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ResourceDeploymentDescription& _v)
 {
   return IDL::traits<::Deployment::ResourceDeploymentDescription>::write_on (strm, _v);
 }
@@ -5440,10 +5386,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Resourc
 #endif // _ALIAS_OSTREAM_B58F004049DB649D059AEB3C99E1B77C_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ArtifactDeploymentDescription& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ArtifactDeploymentDescription& _v)
 {
   return IDL::traits<::Deployment::ArtifactDeploymentDescription>::write_on (strm, _v);
 }
@@ -5468,10 +5411,7 @@ inline std::ostream& operator<< (std::ostream& strm, ::Deployment::PlanLocalityK
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::PlanLocality& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanLocality& _v)
 {
   return IDL::traits<::Deployment::PlanLocality>::write_on (strm, _v);
 }
@@ -5490,19 +5430,13 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::PlanLoc
 #endif // _ALIAS_OSTREAM_9E657D3D91F66C2A5C545D214E26650F_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::DeploymentPlan& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::DeploymentPlan& _v)
 {
   return IDL::traits<::Deployment::DeploymentPlan>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ComponentPackageReference& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ComponentPackageReference& _v)
 {
   return IDL::traits<::Deployment::ComponentPackageReference>::write_on (strm, _v);
 }
@@ -5534,10 +5468,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Resourc
 #endif // _ALIAS_OSTREAM_EBB93757F529E5532BBCE82A5EEEFCD8_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::ImplementationRequirement& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::ImplementationRequirement& _v)
 {
   return IDL::traits<::Deployment::ImplementationRequirement>::write_on (strm, _v);
 }
@@ -5556,10 +5487,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Impleme
 #endif // _ALIAS_OSTREAM_E3307666EB672BE32344C449BEA5A034_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Deployment::Capability& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capability& _v)
 {
   return IDL::traits<::Deployment::Capability>::write_on (strm, _v);
 }
@@ -5584,6 +5512,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EHHCAABA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DECDIJEA_INCLUDED__ */
 
 // -*- END -*-

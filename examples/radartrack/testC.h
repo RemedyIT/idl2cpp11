@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJGDDCFA_INCLUDED__
-#define __RIDL_TESTC_H_JJGDDCFA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DIFCIFFH_INCLUDED__
+#define __RIDL_TESTC_H_DIFCIFFH_INCLUDED__
 
 #pragma once
 
@@ -260,10 +260,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::octetseq& _v)
 #endif // _ALIAS_OSTREAM_6520B07304360E5662D6ED9C7AC59F00_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::RadarTrack& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::RadarTrack& _v)
 {
   return IDL::traits<::RadarTrack>::write_on (strm, _v);
 }
@@ -275,6 +272,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJGDDCFA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DIFCIFFH_INCLUDED__ */
 
 // -*- END -*-
