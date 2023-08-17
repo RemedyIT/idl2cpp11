@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DEBCCFAA_INCLUDED__
-#define __RIDL_TESTC_H_DEBCCFAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FIHGDDFC_INCLUDED__
+#define __RIDL_TESTC_H_FIHGDDFC_INCLUDED__
 
 #pragma once
 
@@ -80,14 +80,24 @@ namespace TAOX11_NAMESPACE
     {
       inline OStrm_& operator ()(OStrm_& os_, const ::MyBitMask& val_)
       {
-        switch (val_)
+        bool first_ {true};
+        if (static_cast<bool>(val_ & ::MyBitMask::flag0))
         {
-
-    //      case ::MyBitMask::flag0: os_ << "MyBitMask::flag0"; break;
-
-    //      case ::MyBitMask::flag1: os_ << "MyBitMask::flag1"; break;
-
-    //      case ::MyBitMask::flag2: os_ << "MyBitMask::flag2"; break;
+          if (!first_) os_ << "|";
+          os_ << "MyBitMask::flag0";
+          first_ = false;
+        }
+        if (static_cast<bool>(val_ & ::MyBitMask::flag1))
+        {
+          if (!first_) os_ << "|";
+          os_ << "MyBitMask::flag1";
+          first_ = false;
+        }
+        if (static_cast<bool>(val_ & ::MyBitMask::flag2))
+        {
+          if (!first_) os_ << "|";
+          os_ << "MyBitMask::flag2";
+          first_ = false;
         }
         return os_;
       }
@@ -116,6 +126,12 @@ namespace TAOX11_NAMESPACE
   } // namespace IDL
 } // namespace TAOX11_NAMESPACE
 
+// generated from c++11/templates/cli/hdr/bitmask_os
+inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
+{
+  return IDL::traits<::MyBitMask>::write_on (strm, _v);
+}
+
 // generated from c++11/templates/cli/hdr/post
 #if defined (__TAOX11_INCLUDE_STUB_PROXY__)
 #include "testCP.h"
@@ -123,6 +139,6 @@ namespace TAOX11_NAMESPACE
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DEBCCFAA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FIHGDDFC_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GDCHHECA_INCLUDED__
-#define __RIDL_TESTC_H_GDCHHECA_INCLUDED__
+#ifndef __RIDL_TESTC_H_JCFGBBDH_INCLUDED__
+#define __RIDL_TESTC_H_JCFGBBDH_INCLUDED__
 
 #pragma once
 
@@ -2140,10 +2140,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Bytes& _v)
 #endif // _ALIAS_OSTREAM_2AA6F8B7E6B60E6CBE74E7080A32503A_DECL_
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::S& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::S& _v)
 {
   return IDL::traits<::S>::write_on (strm, _v);
 }
@@ -2194,10 +2191,7 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::ColorValue2& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::ColorValue2& _v)
 {
   return IDL::traits<::ColorValue2>::write_on (strm, _v);
 }
@@ -2233,6 +2227,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GDCHHECA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JCFGBBDH_INCLUDED__ */
 
 // -*- END -*-

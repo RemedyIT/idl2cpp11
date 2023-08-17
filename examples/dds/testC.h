@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CAEAIAGE_INCLUDED__
-#define __RIDL_TESTC_H_CAEAIAGE_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDCAHJJA_INCLUDED__
+#define __RIDL_TESTC_H_IDCAHJJA_INCLUDED__
 
 #pragma once
 
@@ -359,19 +359,13 @@ inline void ::Attributes::swap (::Attributes& s)
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::ShapeType& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::ShapeType& _v)
 {
   return IDL::traits<::ShapeType>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Attributes& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Attributes& _v)
 {
   return IDL::traits<::Attributes>::write_on (strm, _v);
 }
@@ -396,6 +390,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_CAEAIAGE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IDCAHJJA_INCLUDED__ */
 
 // -*- END -*-

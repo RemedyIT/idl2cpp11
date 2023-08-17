@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DFAEICIG_INCLUDED__
-#define __RIDL_TESTC_H_DFAEICIG_INCLUDED__
+#ifndef __RIDL_TESTC_H_JJEFIADI_INCLUDED__
+#define __RIDL_TESTC_H_JJEFIADI_INCLUDED__
 
 #pragma once
 
@@ -2355,10 +2355,7 @@ inline void Test::U::_clear ()
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Global& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Global& _v)
 {
   return IDL::traits<::Global>::write_on (strm, _v);
 }
@@ -2370,19 +2367,13 @@ inline std::ostream& operator<< (std::ostream& strm, ::Test::DataType _v)
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Test::Point& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::Point& _v)
 {
   return IDL::traits<::Test::Point>::write_on (strm, _v);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Test::Track& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::Track& _v)
 {
   return IDL::traits<::Test::Track>::write_on (strm, _v);
 }
@@ -2394,10 +2385,7 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Test::Data& _v)
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
-inline std::ostream&
-operator<< (
-    std::ostream& strm,
-    const ::Test::S& _v)
+inline std::ostream& operator<< (std::ostream& strm, const ::Test::S& _v)
 {
   return IDL::traits<::Test::S>::write_on (strm, _v);
 }
@@ -2427,6 +2415,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DFAEICIG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JJEFIADI_INCLUDED__ */
 
 // -*- END -*-
