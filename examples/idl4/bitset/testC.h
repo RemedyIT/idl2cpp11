@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IBFIJAGB_INCLUDED__
-#define __RIDL_TESTC_H_IBFIJAGB_INCLUDED__
+#ifndef __RIDL_TESTC_H_DHHAEBHB_INCLUDED__
+#define __RIDL_TESTC_H_DHHAEBHB_INCLUDED__
 
 #pragma once
 
@@ -259,6 +259,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IBFIJAGB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DHHAEBHB_INCLUDED__ */
 
 // -*- END -*-

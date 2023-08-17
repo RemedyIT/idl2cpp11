@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JJEFIADI_INCLUDED__
-#define __RIDL_TESTC_H_JJEFIADI_INCLUDED__
+#ifndef __RIDL_TESTC_H_BEAIEABC_INCLUDED__
+#define __RIDL_TESTC_H_BEAIEABC_INCLUDED__
 
 #pragma once
 
@@ -304,14 +304,13 @@ namespace Test
     DataType disc_ {::Test::DataType::dtEmpty};
     union u_type_
     {
-  // Compilation with c++11 standard gives errors on  the ' = default' declaration
-#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
       u_type_ ();
 #else
       u_type_ () = default;
 #endif
       ~u_type_ ();
-#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
       int32_t longData_;
 #else
       int32_t longData_ {};
@@ -516,8 +515,7 @@ namespace Test
     int32_t disc_ {(-2147483647-1)};
     union u_type_
     {
-  // Compilation with c++11 standard gives errors on  the ' = default' declaration
-#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
       u_type_ ();
 #else
       u_type_ () = default;
@@ -526,7 +524,7 @@ namespace Test
       int32_t x_;
       std::string z_;
       ::Test::S w_;
-#if !defined (ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930))
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
       IDL::traits<::Test::A>::ref_type obj_;
 #else
       IDL::traits<::Test::A>::ref_type obj_ {};
@@ -1277,7 +1275,7 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
 inline Test::Data::u_type_::u_type_ ()
   : longData_{}
 {
@@ -1899,7 +1897,7 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-#if (!defined(ACE_HAS_CPP14) || (defined (_MSC_VER) && (_MSC_VER < 1930)))
+#if defined (_MSC_VER) && (_MSC_VER < 1930)
 inline Test::U::u_type_::u_type_ ()
   : obj_{}
 {
@@ -2415,6 +2413,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JJEFIADI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BEAIEABC_INCLUDED__ */
 
 // -*- END -*-
