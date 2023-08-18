@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_IEDGDJFD_INCLUDED__
-#define __RIDL_TESTS_H_IEDGDJFD_INCLUDED__
+#ifndef __RIDL_TESTS_H_FAGFCIAA_INCLUDED__
+#define __RIDL_TESTS_H_FAGFCIAA_INCLUDED__
 
 #pragma once
 
@@ -28,11 +28,9 @@ namespace Test
 
 
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace CORBA {
-  } // namespace CORBA
-} // namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::CORBA {
+} // namespace TAOX11_NAMESPACE::CORBA
 
-#endif /* __RIDL_TESTS_H_IEDGDJFD_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_FAGFCIAA_INCLUDED__ */
 
 // -*- END -*-

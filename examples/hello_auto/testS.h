@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_FJGFDJGG_INCLUDED__
-#define __RIDL_TESTS_H_FJGFDJGG_INCLUDED__
+#ifndef __RIDL_TESTS_H_DEHJDEFD_INCLUDED__
+#define __RIDL_TESTS_H_DEHJDEFD_INCLUDED__
 
 #pragma once
 
@@ -78,33 +78,31 @@ namespace Test
 
 
 // generated from ServantHeaderSrvTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE {
-  namespace CORBA {
+namespace TAOX11_NAMESPACE::CORBA {
 
-    // generated from c++11/templates/srv/hdr/interface_servant_traits
-    template <>
-    struct servant_traits<::Test::Hello>
+  // generated from c++11/templates/srv/hdr/interface_servant_traits
+  template <>
+  struct servant_traits<::Test::Hello>
+  {
+    /// Base trait type from which the servant implementations has to be derived
+    /// from
+    using base_type = ::Test::POA::Hello;
+    /// Strong reference type
+    using ref_type = TAOX11_CORBA::servant_reference<::Test::POA::Hello>;
+    /// Weak reference type
+    using weak_ref_type = TAOX11_CORBA::weak_servant_reference<::Test::POA::Hello>;
+    /// Try to narrow the provided reference @a base to a ::Test::Hello
+    /// reference. Returns a new reference when this succeeds, a nil reference
+    /// when this fails. Narrowing a nil reference will return a nil reference.
+    template <typename _Tp1, typename = typename
+        std::enable_if<std::is_convertible<::Test::POA::Hello*, _Tp1*>::value>::type>
+    static ref_type narrow (servant_reference<_Tp1> base)
     {
-      /// Base trait type from which the servant implementations has to be derived
-      /// from
-      using base_type = ::Test::POA::Hello;
-      /// Strong reference type
-      using ref_type = TAOX11_CORBA::servant_reference<::Test::POA::Hello>;
-      /// Weak reference type
-      using weak_ref_type = TAOX11_CORBA::weak_servant_reference<::Test::POA::Hello>;
-      /// Try to narrow the provided reference @a base to a ::Test::Hello
-      /// reference. Returns a new reference when this succeeds, a nil reference
-      /// when this fails. Narrowing a nil reference will return a nil reference.
-      template <typename _Tp1, typename = typename
-          std::enable_if<std::is_convertible<::Test::POA::Hello*, _Tp1*>::value>::type>
-      static ref_type narrow (servant_reference<_Tp1> base)
-      {
-        return ref_type::_narrow (std::move(base));
-      }
-    };
-  } // namespace CORBA
-} // namespace TAOX11_NAMESPACE
+      return ref_type::_narrow (std::move(base));
+    }
+  };
+} // namespace TAOX11_NAMESPACE::CORBA
 
-#endif /* __RIDL_TESTS_H_FJGFDJGG_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_DEHJDEFD_INCLUDED__ */
 
 // -*- END -*-

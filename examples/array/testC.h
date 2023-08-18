@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FHICGACJ_INCLUDED__
-#define __RIDL_TESTC_H_FHICGACJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_DFGABDFA_INCLUDED__
+#define __RIDL_TESTC_H_DFGABDFA_INCLUDED__
 
 #pragma once
 
@@ -156,199 +156,193 @@ namespace Test
 
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
-  {
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array<float, 10>
-    // MD5            : 9B852471F9CE9C1C304DBFD80016C456
+  // generated from c++11/templates/cli/hdr/array_idl_traits
+  // Unaliased type : std::array<float, 10>
+  // MD5            : 9B852471F9CE9C1C304DBFD80016C456
 #if !defined(_ALIAS_9B852471F9CE9C1C304DBFD80016C456_TRAITS_DECL_)
 #define _ALIAS_9B852471F9CE9C1C304DBFD80016C456_TRAITS_DECL_
 
-    template<>
-    struct traits <::Test::F>
-      : IDL::common_traits<::Test::F>
+  template<>
+  struct traits <::Test::F>
+    : IDL::common_traits<::Test::F>
+  {
+    /// IDL::traits<> for the element of the array
+    using element_traits = IDL::traits<float>;
+    /// std::integral_constant type of value_type uint32_t
+    /// indicating the number of dimensions of the array
+    using dimensions = std::integral_constant<uint32_t, 1>;
+
+    template <typename OStrm_,
+              typename Formatter = formatter<::Test::F, OStrm_>>
+    static inline OStrm_& write_on(
+        OStrm_& os_, in_type val_,
+        Formatter fmt_ = Formatter ())
     {
-      /// IDL::traits<> for the element of the array
-      using element_traits = IDL::traits<float>;
-      /// std::integral_constant type of value_type uint32_t
-      /// indicating the number of dimensions of the array
-      using dimensions = std::integral_constant<uint32_t, 1>;
-
-      template <typename OStrm_,
-                typename Formatter = formatter<::Test::F, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::F>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Test::F>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Test::F, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::F>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return fmt_ (os_, val_);
     }
+
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::Test::F>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Test::F>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Test::F, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Test::F>::write_on (
+        os, w.val_,
+        formatter_t ());
+  }
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array<std::string, 10>
-    // MD5            : 77FA1CD3AE97AF829A10387AFE81B9D8
+  // generated from c++11/templates/cli/hdr/array_idl_traits
+  // Unaliased type : std::array<std::string, 10>
+  // MD5            : 77FA1CD3AE97AF829A10387AFE81B9D8
 #if !defined(_ALIAS_77FA1CD3AE97AF829A10387AFE81B9D8_TRAITS_DECL_)
 #define _ALIAS_77FA1CD3AE97AF829A10387AFE81B9D8_TRAITS_DECL_
 
-    template<>
-    struct traits <::Test::V>
-      : IDL::common_traits<::Test::V>
+  template<>
+  struct traits <::Test::V>
+    : IDL::common_traits<::Test::V>
+  {
+    /// IDL::traits<> for the element of the array
+    using element_traits = IDL::traits<std::string>;
+    /// std::integral_constant type of value_type uint32_t
+    /// indicating the number of dimensions of the array
+    using dimensions = std::integral_constant<uint32_t, 1>;
+
+    template <typename OStrm_,
+              typename Formatter = formatter<::Test::V, OStrm_>>
+    static inline OStrm_& write_on(
+        OStrm_& os_, in_type val_,
+        Formatter fmt_ = Formatter ())
     {
-      /// IDL::traits<> for the element of the array
-      using element_traits = IDL::traits<std::string>;
-      /// std::integral_constant type of value_type uint32_t
-      /// indicating the number of dimensions of the array
-      using dimensions = std::integral_constant<uint32_t, 1>;
-
-      template <typename OStrm_,
-                typename Formatter = formatter<::Test::V, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::V>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Test::V>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Test::V, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::V>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return fmt_ (os_, val_);
     }
+
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::Test::V>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Test::V>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Test::V, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Test::V>::write_on (
+        os, w.val_,
+        formatter_t ());
+  }
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array<std::array<std::array<std::string, 3>, 2>, 1>
-    // MD5            : 5C019818C1D7360ACAE8413C97B8326C
+  // generated from c++11/templates/cli/hdr/array_idl_traits
+  // Unaliased type : std::array<std::array<std::array<std::string, 3>, 2>, 1>
+  // MD5            : 5C019818C1D7360ACAE8413C97B8326C
 #if !defined(_ALIAS_5C019818C1D7360ACAE8413C97B8326C_TRAITS_DECL_)
 #define _ALIAS_5C019818C1D7360ACAE8413C97B8326C_TRAITS_DECL_
 
-    template<>
-    struct traits <::Test::M>
-      : IDL::common_traits<::Test::M>
+  template<>
+  struct traits <::Test::M>
+    : IDL::common_traits<::Test::M>
+  {
+    /// IDL::traits<> for the element of the array
+    using element_traits = IDL::traits<std::string>;
+    /// std::integral_constant type of value_type uint32_t
+    /// indicating the number of dimensions of the array
+    using dimensions = std::integral_constant<uint32_t, 3>;
+
+    template <typename OStrm_,
+              typename Formatter = formatter<::Test::M, OStrm_>>
+    static inline OStrm_& write_on(
+        OStrm_& os_, in_type val_,
+        Formatter fmt_ = Formatter ())
     {
-      /// IDL::traits<> for the element of the array
-      using element_traits = IDL::traits<std::string>;
-      /// std::integral_constant type of value_type uint32_t
-      /// indicating the number of dimensions of the array
-      using dimensions = std::integral_constant<uint32_t, 3>;
-
-      template <typename OStrm_,
-                typename Formatter = formatter<::Test::M, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Test::M>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Test::M>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Test::M, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::M>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return fmt_ (os_, val_);
     }
+
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::Test::M>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Test::M>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Test::M, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Test::M>::write_on (
+        os, w.val_,
+        formatter_t ());
+  }
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits
+  // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_TEST__FOO_TRAITS_DECL_)
 #define _INTF_FMT_TEST__FOO_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::Test::Foo, OStrm_>
-    {
-      OStrm_& operator ()(OStrm_& , IDL::traits<::Test::Foo>::ref_type);
-    };
+  template <typename OStrm_>
+  struct formatter<::Test::Foo, OStrm_>
+  {
+    OStrm_& operator ()(OStrm_& , IDL::traits<::Test::Foo>::ref_type);
+  };
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::Test::Foo>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::Test::Foo>::__Writer<Fmt>);
 #endif // !_INTF_FMT_TEST__FOO_TRAITS_DECL_
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
+
+  // generated from c++11/templates/cli/hdr/interface_idl_traits_def
+  template <typename OStrm_>
+  inline OStrm_&
+  formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::Test::Foo>::ref_type val_)
   {
+    os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Foo");
+    return os_;
+  }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
-    template <typename OStrm_>
-    inline OStrm_&
-    formatter<::Test::Foo, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::Test::Foo>::ref_type val_)
-    {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "Test::Foo");
-      return os_;
-    }
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Test::Foo>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Test::Foo>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Test::Foo, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Test::Foo>::write_on (os, w.val_, formatter_t ());
-    }
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Test::Foo>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Test::Foo>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Test::Foo, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Test::Foo>::write_on (os, w.val_, formatter_t ());
+  }
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from c++11/templates/cli/hdr/array_os
 // Unaliased type : std::array<float, 10>
@@ -402,6 +396,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FHICGACJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DFGABDFA_INCLUDED__ */
 
 // -*- END -*-

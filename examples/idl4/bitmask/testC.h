@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EEHGAHFC_INCLUDED__
-#define __RIDL_TESTC_H_EEHGAHFC_INCLUDED__
+#ifndef __RIDL_TESTC_H_EGFJJAAA_INCLUDED__
+#define __RIDL_TESTC_H_EGFJJAAA_INCLUDED__
 
 #pragma once
 
@@ -49,82 +49,76 @@ inline ::MyBitMask operator ^= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _ta
 
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
+
+  // generated from c++11/templates/cli/hdr/bitmask_idl_traits
+  template<>
+  struct traits <::MyBitMask>
+    : IDL::common_byval_traits<::MyBitMask>
   {
+    /// Underlying type of the bitmask
+    using underlying_type = uint8_t;
 
-    // generated from c++11/templates/cli/hdr/bitmask_idl_traits
-    template<>
-    struct traits <::MyBitMask>
-      : IDL::common_byval_traits<::MyBitMask>
+    /// bit_bound
+    using bit_bound = std::integral_constant<uint32_t, 3>;
+
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      /// Underlying type of the bitmask
-      using underlying_type = uint8_t;
-
-      /// bit_bound
-      using bit_bound = std::integral_constant<uint32_t, 3>;
-
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_>
-    struct formatter<::MyBitMask, OStrm_>
-    {
-      inline OStrm_& operator ()(OStrm_& os_, const ::MyBitMask& val_)
-      {
-        bool first_ {true};
-        if (static_cast<bool>(val_ & ::MyBitMask::flag0))
-        {
-          if (!first_) os_ << "|";
-          os_ << "MyBitMask::flag0";
-          first_ = false;
-        }
-        if (static_cast<bool>(val_ & ::MyBitMask::flag1))
-        {
-          if (!first_) os_ << "|";
-          os_ << "MyBitMask::flag1";
-          first_ = false;
-        }
-        if (static_cast<bool>(val_ & ::MyBitMask::flag2))
-        {
-          if (!first_) os_ << "|";
-          os_ << "MyBitMask::flag2";
-          first_ = false;
-        }
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitMask>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::MyBitMask>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::MyBitMask, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::MyBitMask>::write_on (os, w.val_, formatter_t ());
+      return fmt_ (os_, val_);
     }
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
+
+  template <typename OStrm_>
+  struct formatter<::MyBitMask, OStrm_>
+  {
+    inline OStrm_& operator ()(OStrm_& os_, const ::MyBitMask& val_)
+    {
+      bool first_ {true};
+      if (static_cast<bool>(val_ & ::MyBitMask::flag0))
+      {
+        if (!first_) os_ << "|";
+        os_ << "MyBitMask::flag0";
+        first_ = false;
+      }
+      if (static_cast<bool>(val_ & ::MyBitMask::flag1))
+      {
+        if (!first_) os_ << "|";
+        os_ << "MyBitMask::flag1";
+        first_ = false;
+      }
+      if (static_cast<bool>(val_ & ::MyBitMask::flag2))
+      {
+        if (!first_) os_ << "|";
+        os_ << "MyBitMask::flag2";
+        first_ = false;
+      }
+      return os_;
+    }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitMask>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::MyBitMask>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::MyBitMask, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::MyBitMask>::write_on (os, w.val_, formatter_t ());
+  }
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
-  {
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from c++11/templates/cli/hdr/bitmask_os
 inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
@@ -139,6 +133,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EEHGAHFC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EGFJJAAA_INCLUDED__ */
 
 // -*- END -*-

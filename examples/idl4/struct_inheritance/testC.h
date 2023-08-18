@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DDABAEDC_INCLUDED__
-#define __RIDL_TESTC_H_DDABAEDC_INCLUDED__
+#ifndef __RIDL_TESTC_H_HFFJEGCF_INCLUDED__
+#define __RIDL_TESTC_H_HFFJEGCF_INCLUDED__
 
 #pragma once
 
@@ -105,127 +105,121 @@ inline void swap (::Point3D& m1, ::Point3D& m2) { m1.swap (m2); }
 
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
-  {
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits
+  // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_POINT2D_TRAITS_)
 #define _STRUCT_POINT2D_TRAITS_
-    template<>
-    struct traits <::Point2D>
-      : IDL::common_traits<::Point2D>
+  template<>
+  struct traits <::Point2D>
+    : IDL::common_traits<::Point2D>
+  {
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
+      return fmt_ (os_, val_);
+    }
 
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
 
-    template <typename OStrm_>
-    struct formatter<::Point2D, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::Point2D, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::Point2D>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::Point2D>::__Writer<Fmt>);
 #endif // _STRUCT_POINT2D_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits
+  // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_POINT3D_TRAITS_)
 #define _STRUCT_POINT3D_TRAITS_
-    template<>
-    struct traits <::Point3D>
-      : IDL::common_traits<::Point3D>
+  template<>
+  struct traits <::Point3D>
+    : IDL::common_traits<::Point3D>
+  {
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
+      return fmt_ (os_, val_);
+    }
 
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
 
-    template <typename OStrm_>
-    struct formatter<::Point3D, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::Point3D, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::Point3D>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::Point3D>::__Writer<Fmt>);
 #endif // _STRUCT_POINT3D_TRAITS_
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
+
+  // generated from c++11/templates/cli/hdr/struct_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::Point2D, OStrm_>
   {
-
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::Point2D, OStrm_>
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        const ::Point2D& val_)
     {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          const ::Point2D& val_)
-      {
-        os_ << "Point2D"
-            << '{'
-            << "x=" << IDL::traits<int32_t>::write(val_.x ())
-            << ",y=" << IDL::traits<int32_t>::write(val_.y ())
-            << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Point2D>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Point2D>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Point2D, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Point2D>::write_on (os, w.val_, formatter_t ());
+      os_ << "Point2D"
+          << '{'
+          << "x=" << IDL::traits<int32_t>::write(val_.x ())
+          << ",y=" << IDL::traits<int32_t>::write(val_.y ())
+          << '}';
+      return os_;
     }
+  };
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::Point3D, OStrm_>
-    {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          const ::Point3D& val_)
-      {
-        os_ << "Point3D"
-            << '{'
-            << "z=" << IDL::traits<int32_t>::write(val_.z ())
-            << '}';
-        return os_;
-      }
-    };
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Point2D>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Point2D>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Point2D, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Point2D>::write_on (os, w.val_, formatter_t ());
+  }
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Point3D>::__Writer<Fmt> w)
+  // generated from c++11/templates/cli/hdr/struct_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::Point3D, OStrm_>
+  {
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        const ::Point3D& val_)
     {
-      using writer_t = IDL::traits<::Point3D>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Point3D, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Point3D>::write_on (os, w.val_, formatter_t ());
+      os_ << "Point3D"
+          << '{'
+          << "z=" << IDL::traits<int32_t>::write(val_.z ())
+          << '}';
+      return os_;
     }
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Point3D>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Point3D>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Point3D, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Point3D>::write_on (os, w.val_, formatter_t ());
+  }
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from c++11/templates/cli/inl/struct_inl
 inline ::Point2D::Point2D (
@@ -275,6 +269,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Point3D& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DDABAEDC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HFFJEGCF_INCLUDED__ */
 
 // -*- END -*-
