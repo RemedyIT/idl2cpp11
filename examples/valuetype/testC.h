@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EJFDHDHC_INCLUDED__
-#define __RIDL_TESTC_H_EJFDHDHC_INCLUDED__
+#ifndef __RIDL_TESTC_H_GFJCJHID_INCLUDED__
+#define __RIDL_TESTC_H_GFJCJHID_INCLUDED__
 
 #pragma once
 
@@ -788,18 +788,14 @@ protected:
 };
 
 // generated from c++11/templates/cli/hdr/valuebox_traits_def
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::CORBA
 {
-  namespace CORBA
+  inline valuetype_traits<::StringValue>::ref_type
+  valuetype_traits<::StringValue>::narrow (valuetype_reference<ValueBase> vbref)
   {
-    inline valuetype_traits<::StringValue>::ref_type
-    valuetype_traits<::StringValue>::narrow (
-          valuetype_reference<ValueBase> vbref)
-    {
-      return ref_type::_narrow (vbref);
-    }
-  } // namespace CORBA
-} // namespace TAOX11_NAMESPACE
+    return ref_type::_narrow (vbref);
+  }
+} // namespace TAOX11_NAMESPACE::CORBA
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -1007,18 +1003,14 @@ protected:
 };
 
 // generated from c++11/templates/cli/hdr/valuebox_traits_def
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::CORBA
 {
-  namespace CORBA
+  inline valuetype_traits<::ColorValue>::ref_type
+  valuetype_traits<::ColorValue>::narrow (valuetype_reference<ValueBase> vbref)
   {
-    inline valuetype_traits<::ColorValue>::ref_type
-    valuetype_traits<::ColorValue>::narrow (
-          valuetype_reference<ValueBase> vbref)
-    {
-      return ref_type::_narrow (vbref);
-    }
-  } // namespace CORBA
-} // namespace TAOX11_NAMESPACE
+    return ref_type::_narrow (vbref);
+  }
+} // namespace TAOX11_NAMESPACE::CORBA
 
 // generated from c++11/templates/cli/hdr/struct_pre
 /// @copydoc test.idl::ColorValue2
@@ -1554,544 +1546,538 @@ protected:
 }; // class V_init
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
-  {
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_)
 #define _VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::Example, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::Example, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::Example>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::Example>::__Writer<Fmt>);
 #endif // !_VALUETYPE_EXAMPLE_IDL_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/array_idl_traits
-    // Unaliased type : std::array<uint8_t, 64>
-    // MD5            : 2AA6F8B7E6B60E6CBE74E7080A32503A
+  // generated from c++11/templates/cli/hdr/array_idl_traits
+  // Unaliased type : std::array<uint8_t, 64>
+  // MD5            : 2AA6F8B7E6B60E6CBE74E7080A32503A
 #if !defined(_ALIAS_2AA6F8B7E6B60E6CBE74E7080A32503A_TRAITS_DECL_)
 #define _ALIAS_2AA6F8B7E6B60E6CBE74E7080A32503A_TRAITS_DECL_
 
-    template<>
-    struct traits <::Bytes>
-      : IDL::common_traits<::Bytes>
+  template<>
+  struct traits <::Bytes>
+    : IDL::common_traits<::Bytes>
+  {
+    /// IDL::traits<> for the element of the array
+    using element_traits = IDL::traits<uint8_t>;
+    /// std::integral_constant type of value_type uint32_t
+    /// indicating the number of dimensions of the array
+    using dimensions = std::integral_constant<uint32_t, 1>;
+
+    template <typename OStrm_,
+              typename Formatter = formatter<::Bytes, OStrm_>>
+    static inline OStrm_& write_on(
+        OStrm_& os_, in_type val_,
+        Formatter fmt_ = Formatter ())
     {
-      /// IDL::traits<> for the element of the array
-      using element_traits = IDL::traits<uint8_t>;
-      /// std::integral_constant type of value_type uint32_t
-      /// indicating the number of dimensions of the array
-      using dimensions = std::integral_constant<uint32_t, 1>;
-
-      template <typename OStrm_,
-                typename Formatter = formatter<::Bytes, OStrm_>>
-      static inline OStrm_& write_on(
-          OStrm_& os_, in_type val_,
-          Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Bytes>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Bytes>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Bytes, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Bytes>::write_on (
-          os, w.val_,
-          formatter_t ());
+      return fmt_ (os_, val_);
     }
+
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::Bytes>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Bytes>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Bytes, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Bytes>::write_on (
+        os, w.val_,
+        formatter_t ());
+  }
 
 #endif
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits
+  // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_S_TRAITS_)
 #define _STRUCT_S_TRAITS_
-    template<>
-    struct traits <::S>
-      : IDL::common_traits<::S>
+  template<>
+  struct traits <::S>
+    : IDL::common_traits<::S>
+  {
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
+      return fmt_ (os_, val_);
+    }
 
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
 
-    template <typename OStrm_>
-    struct formatter<::S, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::S, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::S>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::S>::__Writer<Fmt>);
 #endif // _STRUCT_S_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits
+  // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_A_TRAITS_DECL_)
 #define _INTF_FMT_A_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::A, OStrm_>
-    {
-      OStrm_& operator ()(OStrm_& , IDL::traits<::A>::ref_type);
-    };
+  template <typename OStrm_>
+  struct formatter<::A, OStrm_>
+  {
+    OStrm_& operator ()(OStrm_& , IDL::traits<::A>::ref_type);
+  };
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::A>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::A>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_VAL_IDL_TRAITS_DECL_)
 #define _VALUETYPE_VAL_IDL_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::Val, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::Val, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::Val>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::Val>::__Writer<Fmt>);
 #endif // !_VALUETYPE_VAL_IDL_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/valuebox_idl_traits
-    template <typename OStrm_>
-    struct formatter<::StringValue, OStrm_>
-    {
-      using boxed_traits = typename IDL::traits<::StringValue>::boxed_traits;
+  // generated from c++11/templates/cli/hdr/valuebox_idl_traits
+  template <typename OStrm_>
+  struct formatter<::StringValue, OStrm_>
+  {
+    using boxed_traits = typename IDL::traits<::StringValue>::boxed_traits;
 
-      inline OStrm_& operator ()(OStrm_& os_, IDL::traits<::StringValue>::ref_type val_)
-      {
-        os_ << "StringValue {" << boxed_traits::write (val_->_value()) << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::StringValue>::__Writer<Fmt> w)
+    inline OStrm_& operator ()(OStrm_& os_, IDL::traits<::StringValue>::ref_type val_)
     {
-      using writer_t = IDL::traits<::StringValue>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::StringValue, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::StringValue>::write_on (os, w.val_, formatter_t ());
+      os_ << "StringValue {" << boxed_traits::write (val_->_value()) << '}';
+      return os_;
     }
+  };
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::StringValue>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::StringValue>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::StringValue, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::StringValue>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_X_TRAITS_DECL_)
 #define _INTF_FMT_X_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::X, OStrm_>
-    {
-      OStrm_& operator ()(OStrm_& , IDL::traits<::X>::ref_type);
-    };
+  template <typename OStrm_>
+  struct formatter<::X, OStrm_>
+  {
+    OStrm_& operator ()(OStrm_& , IDL::traits<::X>::ref_type);
+  };
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::X>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::X>::__Writer<Fmt>);
 #endif // !_INTF_FMT_X_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/enum_idl_traits
-    template<>
-    struct traits <::Color>
-      : IDL::common_byval_traits<::Color>
+  // generated from c++11/templates/cli/hdr/enum_idl_traits
+  template<>
+  struct traits <::Color>
+    : IDL::common_byval_traits<::Color>
+  {
+    /// Underlying type of the enum
+    using underlying_type = uint32_t;
+
+    /// bit_bound
+    using bit_bound = std::integral_constant<uint32_t, 32>;
+
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      /// Underlying type of the enum
-      using underlying_type = uint32_t;
-
-      /// bit_bound
-      using bit_bound = std::integral_constant<uint32_t, 32>;
-
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_>
-    struct formatter<::Color, OStrm_>
-    {
-      inline OStrm_& operator ()(OStrm_& os_, ::Color val_)
-      {
-        switch (val_)
-        {
-          case ::Color::red: os_ << "Color::red"; break;
-          case ::Color::green: os_ << "Color::green"; break;
-          case ::Color::blue: os_ << "Color::blue"; break;
-        }
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Color>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Color>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Color, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Color>::write_on (os, w.val_, formatter_t ());
+      return fmt_ (os_, val_);
     }
 
-    // generated from c++11/templates/cli/hdr/valuebox_idl_traits
-    template <typename OStrm_>
-    struct formatter<::ColorValue, OStrm_>
-    {
-      using boxed_traits = typename IDL::traits<::ColorValue>::boxed_traits;
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
 
-      inline OStrm_& operator ()(OStrm_& os_, IDL::traits<::ColorValue>::ref_type val_)
+  template <typename OStrm_>
+  struct formatter<::Color, OStrm_>
+  {
+    inline OStrm_& operator ()(OStrm_& os_, ::Color val_)
+    {
+      switch (val_)
       {
-        os_ << "ColorValue {" << boxed_traits::write (val_->_value()) << '}';
-        return os_;
+        case ::Color::red: os_ << "Color::red"; break;
+        case ::Color::green: os_ << "Color::green"; break;
+        case ::Color::blue: os_ << "Color::blue"; break;
       }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::ColorValue>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::ColorValue>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::ColorValue, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::ColorValue>::write_on (os, w.val_, formatter_t ());
+      return os_;
     }
+  };
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::Color>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Color>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Color, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Color>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/valuebox_idl_traits
+  template <typename OStrm_>
+  struct formatter<::ColorValue, OStrm_>
+  {
+    using boxed_traits = typename IDL::traits<::ColorValue>::boxed_traits;
+
+    inline OStrm_& operator ()(OStrm_& os_, IDL::traits<::ColorValue>::ref_type val_)
+    {
+      os_ << "ColorValue {" << boxed_traits::write (val_->_value()) << '}';
+      return os_;
+    }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::ColorValue>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::ColorValue>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::ColorValue, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::ColorValue>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/struct_idl_traits
 #if !defined (_STRUCT_COLORVALUE2_TRAITS_)
 #define _STRUCT_COLORVALUE2_TRAITS_
-    template<>
-    struct traits <::ColorValue2>
-      : IDL::common_traits<::ColorValue2>
+  template<>
+  struct traits <::ColorValue2>
+    : IDL::common_traits<::ColorValue2>
+  {
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
+      return fmt_ (os_, val_);
+    }
 
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
 
-    template <typename OStrm_>
-    struct formatter<::ColorValue2, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::ColorValue2, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::ColorValue2>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::ColorValue2>::__Writer<Fmt>);
 #endif // _STRUCT_COLORVALUE2_TRAITS_
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits
+  // generated from c++11/templates/cli/hdr/interface_idl_traits
 #if !defined (_INTF_FMT_A1_TRAITS_DECL_)
 #define _INTF_FMT_A1_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::A1, OStrm_>
-    {
-      OStrm_& operator ()(OStrm_& , IDL::traits<::A1>::ref_type);
-    };
+  template <typename OStrm_>
+  struct formatter<::A1, OStrm_>
+  {
+    OStrm_& operator ()(OStrm_& , IDL::traits<::A1>::ref_type);
+  };
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::A1>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::A1>::__Writer<Fmt>);
 #endif // !_INTF_FMT_A1_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_B_IDL_TRAITS_DECL_)
 #define _VALUETYPE_B_IDL_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::B, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::B, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::B>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::B>::__Writer<Fmt>);
 #endif // !_VALUETYPE_B_IDL_TRAITS_DECL_
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits
 #if !defined (_VALUETYPE_V_IDL_TRAITS_DECL_)
 #define _VALUETYPE_V_IDL_TRAITS_DECL_
-    template <typename OStrm_>
-    struct formatter<::V, OStrm_>;
+  template <typename OStrm_>
+  struct formatter<::V, OStrm_>;
 
-    template <typename OStrm_, typename Fmt>
-    OStrm_& operator <<(OStrm_&, IDL::traits<::V>::__Writer<Fmt>);
+  template <typename OStrm_, typename Fmt>
+  OStrm_& operator <<(OStrm_&, IDL::traits<::V>::__Writer<Fmt>);
 #endif // !_VALUETYPE_V_IDL_TRAITS_DECL_
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
+
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::Example, OStrm_>
   {
-
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::Example, OStrm_>
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        IDL::traits<::Example>::ref_type val_)
     {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          IDL::traits<::Example>::ref_type val_)
-      {
-        os_ << "Example"
-            << '{'
-            << "val2=" << IDL::traits<int32_t>::write(val_->val2 ())
-            << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Example>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Example>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Example, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Example>::write_on (os, w.val_, formatter_t ());
-    }
-
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::S, OStrm_>
-    {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          const ::S& val_)
-      {
-        os_ << "S"
-            << '{'
-            << "value=" << IDL::traits<int32_t>::write(val_.value ())
-            << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::S>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::S>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::S, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::S>::write_on (os, w.val_, formatter_t ());
-    }
-
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
-    template <typename OStrm_>
-    inline OStrm_&
-    formatter<::A, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::A>::ref_type val_)
-    {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A");
+      os_ << "Example"
+          << '{'
+          << "val2=" << IDL::traits<int32_t>::write(val_->val2 ())
+          << '}';
       return os_;
     }
+  };
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::A>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::A>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::A, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::A>::write_on (os, w.val_, formatter_t ());
-    }
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::Example>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Example>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Example, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Example>::write_on (os, w.val_, formatter_t ());
+  }
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::Val, OStrm_>
+  // generated from c++11/templates/cli/hdr/struct_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::S, OStrm_>
+  {
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        const ::S& val_)
     {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          IDL::traits<::Val>::ref_type val_)
-      {
-        os_ << "Val"
-            << '{'
-            << "t=" << IDL::traits<::Val>::write(val_->t ())
-            << ",w=" << IDL::traits<::Bytes>::write(val_->w ())
-            << ",x=" << IDL::traits<std::string>::write(val_->x ())
-            << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::Val>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::Val>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::Val, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::Val>::write_on (os, w.val_, formatter_t ());
-    }
-
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
-    template <typename OStrm_>
-    inline OStrm_&
-    formatter<::X, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::X>::ref_type val_)
-    {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "X");
+      os_ << "S"
+          << '{'
+          << "value=" << IDL::traits<int32_t>::write(val_.value ())
+          << '}';
       return os_;
     }
+  };
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::X>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::X>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::X, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::X>::write_on (os, w.val_, formatter_t ());
-    }
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::S>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::S>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::S, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::S>::write_on (os, w.val_, formatter_t ());
+  }
 
-    // generated from c++11/templates/cli/hdr/struct_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::ColorValue2, OStrm_>
-    {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          const ::ColorValue2& val_)
-      {
-        os_ << "ColorValue2"
-            << '{'
-            << "col=" << IDL::traits<::Color>::write(val_.col ())
-            << '}';
-        return os_;
-      }
-    };
+  // generated from c++11/templates/cli/hdr/interface_idl_traits_def
+  template <typename OStrm_>
+  inline OStrm_&
+  formatter<::A, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::A>::ref_type val_)
+  {
+    os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A");
+    return os_;
+  }
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::ColorValue2>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::ColorValue2>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::ColorValue2, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::ColorValue2>::write_on (os, w.val_, formatter_t ());
-    }
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::A>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::A>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::A, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::A>::write_on (os, w.val_, formatter_t ());
+  }
 
-    // generated from c++11/templates/cli/hdr/interface_idl_traits_def
-    template <typename OStrm_>
-    inline OStrm_&
-    formatter<::A1, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::A1>::ref_type val_)
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::Val, OStrm_>
+  {
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        IDL::traits<::Val>::ref_type val_)
     {
-      os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A1");
+      os_ << "Val"
+          << '{'
+          << "t=" << IDL::traits<::Val>::write(val_->t ())
+          << ",w=" << IDL::traits<::Bytes>::write(val_->w ())
+          << ",x=" << IDL::traits<std::string>::write(val_->x ())
+          << '}';
       return os_;
     }
+  };
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::A1>::__Writer<Fmt> w)
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::Val>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::Val>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::Val, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::Val>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/interface_idl_traits_def
+  template <typename OStrm_>
+  inline OStrm_&
+  formatter<::X, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::X>::ref_type val_)
+  {
+    os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "X");
+    return os_;
+  }
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::X>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::X>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::X, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::X>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/struct_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::ColorValue2, OStrm_>
+  {
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        const ::ColorValue2& val_)
     {
-      using writer_t = IDL::traits<::A1>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::A1, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::A1>::write_on (os, w.val_, formatter_t ());
+      os_ << "ColorValue2"
+          << '{'
+          << "col=" << IDL::traits<::Color>::write(val_.col ())
+          << '}';
+      return os_;
     }
+  };
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::B, OStrm_>
-    {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          IDL::traits<::B>::ref_type val_)
-      {
-        os_ << "B"
-            << '{'
-            << "data=" << IDL::traits<int16_t>::write(val_->data ())
-            << '}';
-        return os_;
-      }
-    };
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::ColorValue2>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::ColorValue2>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::ColorValue2, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::ColorValue2>::write_on (os, w.val_, formatter_t ());
+  }
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::B>::__Writer<Fmt> w)
+  // generated from c++11/templates/cli/hdr/interface_idl_traits_def
+  template <typename OStrm_>
+  inline OStrm_&
+  formatter<::A1, OStrm_>::operator ()(OStrm_& os_, IDL::traits<::A1>::ref_type val_)
+  {
+    os_ << IDL::traits<TAOX11_CORBA::Object>::_dump (std::move (val_), "A1");
+    return os_;
+  }
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::A1>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::A1>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::A1, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::A1>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::B, OStrm_>
+  {
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        IDL::traits<::B>::ref_type val_)
     {
-      using writer_t = IDL::traits<::B>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::B, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::B>::write_on (os, w.val_, formatter_t ());
+      os_ << "B"
+          << '{'
+          << "data=" << IDL::traits<int16_t>::write(val_->data ())
+          << '}';
+      return os_;
     }
+  };
 
-    // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
-    template <typename OStrm_>
-    struct formatter<::V, OStrm_>
-    {
-      inline OStrm_& operator ()(
-          OStrm_& os_,
-          IDL::traits<::V>::ref_type)
-      {
-        os_ << "V"
-            ;
-        return os_;
-      }
-    };
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::B>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::B>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::B, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::B>::write_on (os, w.val_, formatter_t ());
+  }
 
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(
-        OStrm_& os,
-        IDL::traits<::V>::__Writer<Fmt> w)
+  // generated from c++11/templates/cli/hdr/valuetype_idl_traits_def
+  template <typename OStrm_>
+  struct formatter<::V, OStrm_>
+  {
+    inline OStrm_& operator ()(
+        OStrm_& os_,
+        IDL::traits<::V>::ref_type)
     {
-      using writer_t = IDL::traits<::V>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::V, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::V>::write_on (os, w.val_, formatter_t ());
+      os_ << "V"
+          ;
+      return os_;
     }
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(
+      OStrm_& os,
+      IDL::traits<::V>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::V>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::V, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::V>::write_on (os, w.val_, formatter_t ());
+  }
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from c++11/templates/cli/inl/struct_inl
 inline ::S::S (
@@ -2227,6 +2213,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EJFDHDHC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GFJCJHID_INCLUDED__ */
 
 // -*- END -*-

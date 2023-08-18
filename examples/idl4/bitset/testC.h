@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DHHAEBHB_INCLUDED__
-#define __RIDL_TESTC_H_DHHAEBHB_INCLUDED__
+#ifndef __RIDL_TESTC_H_JCHIGCFI_INCLUDED__
+#define __RIDL_TESTC_H_JCHIGCFI_INCLUDED__
 
 #pragma once
 
@@ -113,103 +113,97 @@ inline void swap (::MyBitset2& m1, ::MyBitset2& m2) { m1.swap (m2); }
 
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
+
+  // generated from c++11/templates/cli/hdr/bitset_idl_traits
+  template<>
+  struct traits <::MyBitset>
+    : IDL::common_byval_traits<::MyBitset>
   {
-
-    // generated from c++11/templates/cli/hdr/bitset_idl_traits
-    template<>
-    struct traits <::MyBitset>
-      : IDL::common_byval_traits<::MyBitset>
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
     {
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
-
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_>
-    struct formatter<::MyBitset, OStrm_>
-    {
-      inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset& val_)
-      {
-        os_ << "MyBitset{"
-            << "x=" << IDL::traits<bool>::write(val_.x ())
-            << ",a=" << IDL::traits<int8_t>::write(val_.a ())
-            << ",d=" << IDL::traits<int16_t>::write(val_.d ())
-            << ",tt=" << IDL::traits<int64_t>::write(val_.tt ())
-            << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitset>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::MyBitset>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::MyBitset, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::MyBitset>::write_on (os, w.val_, formatter_t ());
+      return fmt_ (os_, val_);
     }
 
-    // generated from c++11/templates/cli/hdr/bitset_idl_traits
-    template<>
-    struct traits <::MyBitset2>
-      : IDL::common_byval_traits<::MyBitset2>
-    {
-      template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
-      static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
-      {
-        return fmt_ (os_, val_);
-      }
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
 
-      template <typename Formatter = std::false_type>
-      static inline __Writer<Formatter> write (in_type val) { return {val}; }
-    };
-
-    template <typename OStrm_>
-    struct formatter<::MyBitset2, OStrm_>
+  template <typename OStrm_>
+  struct formatter<::MyBitset, OStrm_>
+  {
+    inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset& val_)
     {
-      inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset2& val_)
-      {
-        os_ << "MyBitset2{"
-            << "c=" << IDL::traits<int8_t>::write(val_.c ())
-            << '}';
-        return os_;
-      }
-    };
-
-    template <typename OStrm_, typename Fmt>
-    inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitset2>::__Writer<Fmt> w)
-    {
-      using writer_t = IDL::traits<::MyBitset2>::__Writer<Fmt>;
-      using formatter_t = typename std::conditional<
-                            std::is_same<
-                              typename writer_t::formatter_t,
-                              std::false_type>::value,
-                            formatter<::MyBitset2, OStrm_>,
-                            typename writer_t::formatter_t>::type;
-      return IDL::traits<::MyBitset2>::write_on (os, w.val_, formatter_t ());
+      os_ << "MyBitset{"
+          << "x=" << IDL::traits<bool>::write(val_.x ())
+          << ",a=" << IDL::traits<int8_t>::write(val_.a ())
+          << ",d=" << IDL::traits<int16_t>::write(val_.d ())
+          << ",tt=" << IDL::traits<int64_t>::write(val_.tt ())
+          << '}';
+      return os_;
     }
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitset>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::MyBitset>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::MyBitset, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::MyBitset>::write_on (os, w.val_, formatter_t ());
+  }
+
+  // generated from c++11/templates/cli/hdr/bitset_idl_traits
+  template<>
+  struct traits <::MyBitset2>
+    : IDL::common_byval_traits<::MyBitset2>
+  {
+    template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
+    static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
+    {
+      return fmt_ (os_, val_);
+    }
+
+    template <typename Formatter = std::false_type>
+    static inline __Writer<Formatter> write (in_type val) { return {val}; }
+  };
+
+  template <typename OStrm_>
+  struct formatter<::MyBitset2, OStrm_>
+  {
+    inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset2& val_)
+    {
+      os_ << "MyBitset2{"
+          << "c=" << IDL::traits<int8_t>::write(val_.c ())
+          << '}';
+      return os_;
+    }
+  };
+
+  template <typename OStrm_, typename Fmt>
+  inline OStrm_& operator <<(OStrm_& os, IDL::traits<::MyBitset2>::__Writer<Fmt> w)
+  {
+    using writer_t = IDL::traits<::MyBitset2>::__Writer<Fmt>;
+    using formatter_t = typename std::conditional<
+                          std::is_same<
+                            typename writer_t::formatter_t,
+                            std::false_type>::value,
+                          formatter<::MyBitset2, OStrm_>,
+                          typename writer_t::formatter_t>::type;
+    return IDL::traits<::MyBitset2>::write_on (os, w.val_, formatter_t ());
+  }
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from StubHeaderIDLTraitsDefWriter#pre_visit
-namespace TAOX11_NAMESPACE
+namespace TAOX11_NAMESPACE::IDL
 {
-  namespace IDL
-  {
-  } // namespace IDL
-} // namespace TAOX11_NAMESPACE
+} // namespace TAOX11_NAMESPACE::IDL
 
 // generated from c++11/templates/cli/inl/bitset_inl
 inline ::MyBitset::MyBitset (
@@ -259,6 +253,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DHHAEBHB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JCHIGCFI_INCLUDED__ */
 
 // -*- END -*-
