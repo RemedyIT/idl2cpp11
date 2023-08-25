@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EGFJJAAA_INCLUDED__
-#define __RIDL_TESTC_H_EGFJJAAA_INCLUDED__
+#ifndef __RIDL_TESTC_H_EHIIEGGA_INCLUDED__
+#define __RIDL_TESTC_H_EHIIEGGA_INCLUDED__
 
 #pragma once
 
@@ -32,11 +32,11 @@ using namespace TAOX11_NAMESPACE;
 enum class MyBitMask : uint8_t
 {
   /// @copydoc test.idl::MyBitMask::flag0
-  flag0 = 1,
+  flag0 = 0x01 << 0,
   /// @copydoc test.idl::MyBitMask::flag1
-  flag1 = 2,
+  flag1 = 0x01 << 1,
   /// @copydoc test.idl::MyBitMask::flag2
-  flag2 = 4
+  flag2 = 0x01 << 2
 };// MyBitMask
 
 inline ::MyBitMask operator~ (const ::MyBitMask& _taox11_t) { return static_cast<MyBitMask>(~static_cast<uint8_t>(_taox11_t)); }
@@ -133,6 +133,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EGFJJAAA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EHIIEGGA_INCLUDED__ */
 
 // -*- END -*-
