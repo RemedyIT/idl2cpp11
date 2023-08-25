@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HFFJEGCF_INCLUDED__
-#define __RIDL_TESTC_H_HFFJEGCF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CGFEIHBA_INCLUDED__
+#define __RIDL_TESTC_H_CGFEIHBA_INCLUDED__
 
 #pragma once
 
@@ -201,6 +201,7 @@ namespace TAOX11_NAMESPACE::IDL
     {
       os_ << "Point3D"
           << '{'
+          << IDL::traits<Point2D>::write(val_) << ","
           << "z=" << IDL::traits<int32_t>::write(val_.z ())
           << '}';
       return os_;
@@ -269,6 +270,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Point3D& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HFFJEGCF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CGFEIHBA_INCLUDED__ */
 
 // -*- END -*-
