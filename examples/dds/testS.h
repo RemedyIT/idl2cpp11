@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_BFBIABGH_INCLUDED__
-#define __RIDL_TESTS_H_BFBIABGH_INCLUDED__
+#ifndef __RIDL_TESTS_H_DCECEAID_INCLUDED__
+#define __RIDL_TESTS_H_DCECEAID_INCLUDED__
 
 #pragma once
 
@@ -25,6 +25,6 @@
 namespace TAOX11_NAMESPACE::CORBA {
 } // namespace TAOX11_NAMESPACE::CORBA
 
-#endif /* __RIDL_TESTS_H_BFBIABGH_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_DCECEAID_INCLUDED__ */
 
 // -*- END -*-

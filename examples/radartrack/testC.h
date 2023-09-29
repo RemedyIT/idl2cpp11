@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FBFGGFCH_INCLUDED__
-#define __RIDL_TESTC_H_FBFGGFCH_INCLUDED__
+#ifndef __RIDL_TESTC_H_DBACBEAH_INCLUDED__
+#define __RIDL_TESTC_H_DBACBEAH_INCLUDED__
 
 #pragma once
 
@@ -146,9 +146,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::octetseq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::octetseq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::octetseq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -266,6 +264,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::RadarTrack& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FBFGGFCH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DBACBEAH_INCLUDED__ */
 
 // -*- END -*-

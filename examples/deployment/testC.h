@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDFFDHIH_INCLUDED__
-#define __RIDL_TESTC_H_BDFFDHIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_IDACJGDH_INCLUDED__
+#define __RIDL_TESTC_H_IDACJGDH_INCLUDED__
 
 #pragma once
 
@@ -1911,9 +1911,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::Properties, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::Properties>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::Properties>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -1982,9 +1980,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::Requirements, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::Requirements>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::Requirements>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2105,9 +2101,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::SatisfierProperties, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::SatisfierProperties>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::SatisfierProperties>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2230,9 +2224,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ComponentPortDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ComponentPortDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ComponentPortDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2301,9 +2293,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ComponentPropertyDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ComponentPropertyDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ComponentPropertyDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2396,9 +2386,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::MonolithicDeploymentDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::MonolithicDeploymentDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2518,9 +2506,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::InstanceResourceDeploymentDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::InstanceResourceDeploymentDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2589,9 +2575,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::InstanceDeploymentDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::InstanceDeploymentDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::InstanceDeploymentDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2660,9 +2644,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ComponentExternalPortEndpoints, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ComponentExternalPortEndpoints>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ComponentExternalPortEndpoints>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2731,9 +2713,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::PlanSubcomponentPortEndpoints, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::PlanSubcomponentPortEndpoints>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2802,9 +2782,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ExternalReferenceEndpoints, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ExternalReferenceEndpoints>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ExternalReferenceEndpoints>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2873,9 +2851,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ConnectionResourceDeploymentDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ConnectionResourceDeploymentDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -2944,9 +2920,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::PlanConnectionDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::PlanConnectionDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::PlanConnectionDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3015,9 +2989,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::PlanSubcomponentPropertyReferences, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::PlanSubcomponentPropertyReferences>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3086,9 +3058,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::PlanPropertyMappings, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::PlanPropertyMappings>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::PlanPropertyMappings>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3157,9 +3127,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ImplementationDependencies, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ImplementationDependencies>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ImplementationDependencies>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3228,9 +3196,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ResourceDeploymentDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ResourceDeploymentDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ResourceDeploymentDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3299,9 +3265,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ArtifactDeploymentDescriptions, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ArtifactDeploymentDescriptions>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3419,9 +3383,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::PlanLocalities, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::PlanLocalities>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::PlanLocalities>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3514,9 +3476,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ComponentPackageReferences, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ComponentPackageReferences>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ComponentPackageReferences>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3561,9 +3521,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ResourceUsageKinds, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ResourceUsageKinds>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ResourceUsageKinds>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3632,9 +3590,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::ImplementationRequirements, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::ImplementationRequirements>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::ImplementationRequirements>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -3703,9 +3659,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Deployment::Capabilities, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Deployment::Capabilities>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Deployment::Capabilities>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -5506,6 +5460,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_BDFFDHIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IDACJGDH_INCLUDED__ */
 
 // -*- END -*-

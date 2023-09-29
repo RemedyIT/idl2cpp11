@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DJFEHABH_INCLUDED__
-#define __RIDL_TESTC_H_DJFEHABH_INCLUDED__
+#ifndef __RIDL_TESTC_H_BACFEDAG_INCLUDED__
+#define __RIDL_TESTC_H_BACFEDAG_INCLUDED__
 
 #pragma once
 
@@ -341,9 +341,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::SimpleSeq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::SimpleSeq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::SimpleSeq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -388,9 +386,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::LongSeq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::LongSeq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::LongSeq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -436,9 +432,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::BoundedLongSeq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::BoundedLongSeq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::BoundedLongSeq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -483,9 +477,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::BoolSeq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::BoolSeq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::BoolSeq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -530,9 +522,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::StringSeq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::StringSeq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::StringSeq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -723,6 +713,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DJFEHABH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BACFEDAG_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HDGAGDAB_INCLUDED__
-#define __RIDL_TESTC_H_HDGAGDAB_INCLUDED__
+#ifndef __RIDL_TESTC_H_GFDBBAIC_INCLUDED__
+#define __RIDL_TESTC_H_GFDBBAIC_INCLUDED__
 
 #pragma once
 
@@ -237,9 +237,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::ShapeTypeSeq, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::ShapeTypeSeq>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::ShapeTypeSeq>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -384,6 +382,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HDGAGDAB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GFDBBAIC_INCLUDED__ */
 
 // -*- END -*-
