@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DFDFDAJA_INCLUDED__
-#define __RIDL_TESTC_H_DFDFDAJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HJFHDAHB_INCLUDED__
+#define __RIDL_TESTC_H_HJFHDAHB_INCLUDED__
 
 #pragma once
 
@@ -85,9 +85,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::StringLongMap, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::StringLongMap>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::StringLongMap>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -118,6 +116,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Test::StringLongMap
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DFDFDAJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HJFHDAHB_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JECDAGJJ_INCLUDED__
-#define __RIDL_TESTC_H_JECDAGJJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_EIGFEEAA_INCLUDED__
+#define __RIDL_TESTC_H_EIGFEEAA_INCLUDED__
 
 #pragma once
 
@@ -200,9 +200,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::F, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::F>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::F>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -248,9 +246,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::V, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::V>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::V>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -296,9 +292,7 @@ namespace TAOX11_NAMESPACE::IDL
                             std::false_type>::value,
                           formatter<::Test::M, OStrm_>,
                           typename writer_t::formatter_t>::type;
-    return IDL::traits<::Test::M>::write_on (
-        os, w.val_,
-        formatter_t ());
+    return IDL::traits<::Test::M>::write_on (os, w.val_, formatter_t ());
   }
 
 #endif
@@ -396,6 +390,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JECDAGJJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EIGFEEAA_INCLUDED__ */
 
 // -*- END -*-
