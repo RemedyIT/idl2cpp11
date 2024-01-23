@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EFBDFGJG_INCLUDED__
-#define __RIDL_TESTC_H_EFBDFGJG_INCLUDED__
+#ifndef __RIDL_TESTC_H_DGJFIGFB_INCLUDED__
+#define __RIDL_TESTC_H_DGJFIGFB_INCLUDED__
 
 #pragma once
 
@@ -26,8 +26,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -74,7 +74,7 @@ namespace TAOX11_NAMESPACE
                 typename = typename
                   std::enable_if<std::is_base_of<::Example, TInst>::value>::type,
                 typename ...Args>
-      inline static ref_type make_reference(Args&& ...args)
+      inline static constexpr ref_type make_reference(Args&& ...args)
       {
         return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
@@ -379,7 +379,7 @@ protected:
   using _shared_ptr_type = std::shared_ptr<A>;
 
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   explicit A (A_proxy_ptr p, bool inherited = false);
   /// Default constructor
@@ -460,7 +460,7 @@ namespace TAOX11_NAMESPACE
                 typename = typename
                   std::enable_if<std::is_base_of<::Val, TInst>::value>::type,
                 typename ...Args>
-      inline static ref_type make_reference(Args&& ...args)
+      inline static constexpr ref_type make_reference(Args&& ...args)
       {
         return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
@@ -613,7 +613,7 @@ namespace obv
 
   public:
     template <typename _Tp1, typename, typename ...Args>
-    friend TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+    friend constexpr TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
     TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type _copy_value () const override;
 
@@ -661,7 +661,7 @@ namespace obv
   private:
     IDL::traits<::Val>::ref_type t_{};
     int32_t v_{};
-    ::Bytes w_{{}};
+    ::Bytes w_{};
     std::string x_{};
     ::S y_{};
     IDL::traits<::A>::ref_type z_{};
@@ -677,7 +677,7 @@ public:
   using _ref_type = TAOX11_IDL::traits<Val_init>::ref_type;
   template <typename T> friend struct TAOX11_CORBA::object_traits;
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type
   create_for_unmarshal () override;
@@ -714,7 +714,7 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (valuetype_reference<ValueBase>);
 
       template <typename ...Args>
-      inline static ref_type make_reference(Args&& ...args)
+      inline static constexpr ref_type make_reference(Args&& ...args)
       {
         return TAOX11_CORBA::make_reference<::StringValue> (std::forward<Args> (args)...);
       }
@@ -768,7 +768,7 @@ public:
 
 protected:
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   static const std::string __stringvalue_repository_id;
 
@@ -877,7 +877,7 @@ protected:
   using _shared_ptr_type = std::shared_ptr<X>;
 
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   explicit X (X_proxy_ptr p, bool inherited = false);
   /// Default constructor
@@ -930,7 +930,7 @@ namespace TAOX11_NAMESPACE
       static ref_type narrow (valuetype_reference<ValueBase>);
 
       template <typename ...Args>
-      inline static ref_type make_reference(Args&& ...args)
+      inline static constexpr ref_type make_reference(Args&& ...args)
       {
         return TAOX11_CORBA::make_reference<::ColorValue> (std::forward<Args> (args)...);
       }
@@ -983,7 +983,7 @@ public:
 
 protected:
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   static const std::string __colorvalue_repository_id;
 
@@ -1124,7 +1124,7 @@ protected:
   using _shared_ptr_type = std::shared_ptr<A1>;
 
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   explicit A1 (A1_proxy_ptr p, bool inherited = false);
   /// Default constructor
@@ -1185,7 +1185,7 @@ namespace TAOX11_NAMESPACE
                 typename = typename
                   std::enable_if<std::is_base_of<::B, TInst>::value>::type,
                 typename ...Args>
-      inline static ref_type make_reference(Args&& ...args)
+      inline static constexpr ref_type make_reference(Args&& ...args)
       {
         return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
@@ -1392,7 +1392,7 @@ namespace TAOX11_NAMESPACE
                 typename = typename
                   std::enable_if<std::is_base_of<::V, TInst>::value>::type,
                 typename ...Args>
-      inline static ref_type make_reference(Args&& ...args)
+      inline static constexpr ref_type make_reference(Args&& ...args)
       {
         return TAOX11_CORBA::make_reference<TInst> (std::forward<Args> (args)...);
       }
@@ -1700,7 +1700,7 @@ namespace TAOX11_NAMESPACE::IDL
     using underlying_type = uint32_t;
 
     /// bit_bound
-    using bit_bound = std::integral_constant<uint32_t, 32>;
+    using bit_bound = std::integral_constant<uint8_t, 32>;
 
     template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
     static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
@@ -2211,6 +2211,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_EFBDFGJG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DGJFIGFB_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JHGBHICJ_INCLUDED__
-#define __RIDL_TESTC_H_JHGBHICJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_JEICDJII_INCLUDED__
+#define __RIDL_TESTC_H_JEICDJII_INCLUDED__
 
 #pragma once
 
@@ -25,8 +25,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -204,7 +204,7 @@ protected:
   using _shared_ptr_type = std::shared_ptr<A>;
 
   template <typename _Tp1, typename, typename ...Args>
-  friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+  friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
   explicit A (A_proxy_ptr p, bool inherited = false);
   /// Default constructor
@@ -390,6 +390,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::A>::ref_type 
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_JHGBHICJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JEICDJII_INCLUDED__ */
 
 // -*- END -*-

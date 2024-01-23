@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GCHCFDIG_INCLUDED__
-#define __RIDL_TESTC_H_GCHCFDIG_INCLUDED__
+#ifndef __RIDL_TESTC_H_IGCDGCCE_INCLUDED__
+#define __RIDL_TESTC_H_IGCDGCCE_INCLUDED__
 
 #pragma once
 
@@ -22,8 +22,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -184,7 +184,7 @@ namespace Test
     using _shared_ptr_type = std::shared_ptr<Hello_Factory>;
 
     template <typename _Tp1, typename, typename ...Args>
-    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+    friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
     explicit Hello_Factory (Hello_Factory_proxy_ptr p, bool inherited = false);
     /// Default constructor
@@ -235,7 +235,7 @@ namespace Test
     using _shared_ptr_type = std::shared_ptr<Hello>;
 
     template <typename _Tp1, typename, typename ...Args>
-    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+    friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
     explicit Hello (Hello_proxy_ptr p, bool inherited = false);
     /// Default constructor
@@ -368,6 +368,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Hello>:
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GCHCFDIG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IGCDGCCE_INCLUDED__ */
 
 // -*- END -*-

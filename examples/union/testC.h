@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HIAFBIJC_INCLUDED__
-#define __RIDL_TESTC_H_HIAFBIJC_INCLUDED__
+#ifndef __RIDL_TESTC_H_CGAEEGFJ_INCLUDED__
+#define __RIDL_TESTC_H_CGAEEGFJ_INCLUDED__
 
 #pragma once
 
@@ -22,8 +22,8 @@
 
 #include /**/ "tao/x11/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 1 || TAOX11_MINOR_VERSION != 9 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (1.9.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -644,7 +644,7 @@ namespace Test
     using _shared_ptr_type = std::shared_ptr<Foo>;
 
     template <typename _Tp1, typename, typename ...Args>
-    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+    friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
     explicit Foo (Foo_proxy_ptr p, bool inherited = false);
     /// Default constructor
@@ -685,7 +685,7 @@ namespace Test
     using _shared_ptr_type = std::shared_ptr<A>;
 
     template <typename _Tp1, typename, typename ...Args>
-    friend TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
+    friend constexpr TAOX11_CORBA::object_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
     explicit A (A_proxy_ptr p, bool inherited = false);
     /// Default constructor
@@ -743,7 +743,7 @@ namespace TAOX11_NAMESPACE::IDL
     using underlying_type = uint32_t;
 
     /// bit_bound
-    using bit_bound = std::integral_constant<uint32_t, 32>;
+    using bit_bound = std::integral_constant<uint8_t, 32>;
 
     template <typename OStrm_, typename Formatter = formatter<value_type, OStrm_>>
     static inline OStrm_& write_on(OStrm_& os_, in_type val_, Formatter fmt_ = Formatter ())
@@ -2407,6 +2407,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HIAFBIJC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CGAEEGFJ_INCLUDED__ */
 
 // -*- END -*-
