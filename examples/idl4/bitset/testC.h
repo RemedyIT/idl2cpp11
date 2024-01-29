@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GGFAEEID_INCLUDED__
-#define __RIDL_TESTC_H_GGFAEEID_INCLUDED__
+#ifndef __RIDL_TESTC_H_JCGEAGBA_INCLUDED__
+#define __RIDL_TESTC_H_JCGEAGBA_INCLUDED__
 
 #pragma once
 
@@ -61,13 +61,13 @@ public:
 private:
   struct
   {
-    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    /// @copydoc test.idl::MyBitset::x
     bool x : 1;
-    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    /// @copydoc test.idl::MyBitset::a
     int8_t a : 3;
-    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    /// @copydoc test.idl::MyBitset::d
     int16_t d : 12;
-    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    /// @copydoc test.idl::MyBitset::tt
     int64_t tt : 33;
   } _taox11_mybitset;
 }; // MyBitset
@@ -102,9 +102,9 @@ public:
 private:
   struct
   {
-    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    /// @copydoc test.idl::MyBitset2::c
     int8_t c : 3;
-    /// @copydoc #{bitfield.doc_scoped_name}::#{bitfield.name}
+    /// @copydoc test.idl::MyBitset2::
     int8_t  : 2;
   } _taox11_mybitset2;
 }; // MyBitset2
@@ -253,6 +253,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GGFAEEID_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JCGEAGBA_INCLUDED__ */
 
 // -*- END -*-
