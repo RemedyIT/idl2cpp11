@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IJEDDGEC_INCLUDED__
-#define __RIDL_TESTC_H_IJEDDGEC_INCLUDED__
+#ifndef __RIDL_TESTC_H_BCDFEBFG_INCLUDED__
+#define __RIDL_TESTC_H_BCDFEBFG_INCLUDED__
 
 #pragma once
 
@@ -15,13 +15,13 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/system_exception.h"
 #include "tao/x11/object.h"
-#include "tao/x11/corba_ostream.h"
 #include "tao/x11/anytypecode/typecode.h"
 #include "tao/x11/valuetype/value_base.h"
 #include "tao/x11/valuetype/value_factory_base.h"
+#include "tao/x11/object_ostream.h"
 #include "tao/x11/valuetype/value_box_t.h"
 
 #include /**/ "tao/x11/versionx11.h"
@@ -298,7 +298,6 @@ private:
 };// S
 
 inline void swap (::S& m1, ::S& m2) { m1.swap (m2); }
-
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -1043,7 +1042,6 @@ private:
 };// ColorValue2
 
 inline void swap (::ColorValue2& m1, ::ColorValue2& m2) { m1.swap (m2); }
-
 
 // generated from StubHeaderWriter#enter_interface
 
@@ -2211,6 +2209,6 @@ operator<< (
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IJEDDGEC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BCDFEBFG_INCLUDED__ */
 
 // -*- END -*-

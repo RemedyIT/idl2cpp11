@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GAFDHGDD_INCLUDED__
-#define __RIDL_TESTC_H_GAFDHGDD_INCLUDED__
+#ifndef __RIDL_TESTC_H_EDHGIBBA_INCLUDED__
+#define __RIDL_TESTC_H_EDHGIBBA_INCLUDED__
 
 #pragma once
 
@@ -15,9 +15,7 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
-#include "tao/x11/corba_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -87,7 +85,6 @@ private:
 
 inline void swap (::ShapeType& m1, ::ShapeType& m2) { m1.swap (m2); }
 
-
 // generated from c++11/templates/cli/hdr/struct_pre
 /// @copydoc test.idl::Attributes
 class Attributes
@@ -139,7 +136,6 @@ private:
 };// Attributes
 
 inline void swap (::Attributes& m1, ::Attributes& m2) { m1.swap (m2); }
-
 
 // generated from c++11/templates/cli/hdr/typedef
 /// @copydoc test.idl::ShapeTypeSeq
@@ -382,6 +378,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GAFDHGDD_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_EDHGIBBA_INCLUDED__ */
 
 // -*- END -*-

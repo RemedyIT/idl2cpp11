@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HIEDIEBI_INCLUDED__
-#define __RIDL_TESTC_H_HIEDIEBI_INCLUDED__
+#ifndef __RIDL_TESTC_H_DAAEBFDH_INCLUDED__
+#define __RIDL_TESTC_H_DAAEBFDH_INCLUDED__
 
 #pragma once
 
@@ -15,9 +15,7 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
-#include "tao/x11/corba_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -46,7 +44,6 @@ inline ::MyBitMask operator& (const ::MyBitMask& _taox11_t, const ::MyBitMask& _
 inline ::MyBitMask operator |= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _taox11_rhs) { _taox11_lhs = _taox11_lhs | _taox11_rhs; return _taox11_lhs; }
 inline ::MyBitMask operator &= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _taox11_rhs) { _taox11_lhs = _taox11_lhs & _taox11_rhs; return _taox11_lhs; }
 inline ::MyBitMask operator ^= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _taox11_rhs) { _taox11_lhs = _taox11_lhs ^ _taox11_rhs; return _taox11_lhs; }
-
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE::IDL
@@ -133,6 +130,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HIEDIEBI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DAAEBFDH_INCLUDED__ */
 
 // -*- END -*-

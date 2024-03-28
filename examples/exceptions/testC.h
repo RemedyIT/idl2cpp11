@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HACFGEJA_INCLUDED__
-#define __RIDL_TESTC_H_HACFGEJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_BHDFBEII_INCLUDED__
+#define __RIDL_TESTC_H_BHDFBEII_INCLUDED__
 
 #pragma once
 
@@ -15,11 +15,11 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/user_exception.h"
 #include "tao/x11/object.h"
-#include "tao/x11/corba_ostream.h"
+#include "tao/x11/system_exception.h"
+#include "tao/x11/object_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -194,17 +194,13 @@ namespace Test
 
     // generated from c++11/templates/cli/hdr/attribute
     /// @copydoc test.idl::Test::Foo::a_number
-    virtual int32_t
-    a_number ();
+    virtual int32_t a_number ();
 
     // generated from c++11/templates/cli/hdr/attribute
     /// @copydoc test.idl::Test::Foo::a_string
     //@{
-    virtual std::string
-    a_string ();
-
-    virtual void
-    a_string (const std::string& _v);
+    virtual std::string a_string ();
+    virtual void a_string (const std::string& _v);
     //@}
 
     // generated from c++11/templates/cli/hdr/operation
@@ -428,6 +424,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_HACFGEJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BHDFBEII_INCLUDED__ */
 
 // -*- END -*-
