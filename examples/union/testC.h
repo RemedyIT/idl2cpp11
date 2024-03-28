@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FIHCIFEE_INCLUDED__
-#define __RIDL_TESTC_H_FIHCIFEE_INCLUDED__
+#ifndef __RIDL_TESTC_H_HGEBGCCF_INCLUDED__
+#define __RIDL_TESTC_H_HGEBGCCF_INCLUDED__
 
 #pragma once
 
@@ -15,10 +15,10 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
+#include "tao/x11/system_exception.h"
 #include "tao/x11/object.h"
-#include "tao/x11/corba_ostream.h"
+#include "tao/x11/object_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -59,7 +59,6 @@ private:
 };// Global
 
 inline void swap (::Global& m1, ::Global& m2) { m1.swap (m2); }
-
 
 // generated from StubHeaderWriter#enter_module
 /// @copydoc test.idl::Test
@@ -128,7 +127,6 @@ namespace Test
 
   inline void swap (::Test::Point& m1, ::Test::Point& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/struct_pre
   /// @copydoc test.idl::Test::Track
   class Track
@@ -170,7 +168,6 @@ namespace Test
   };// Track
 
   inline void swap (::Test::Track& m1, ::Test::Track& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/union_pre
   /// @copydoc test.idl::Test::Data
@@ -357,7 +354,6 @@ namespace Test
   };// S
 
   inline void swap (::Test::S& m1, ::Test::S& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/interface_fwd
 #if !defined (_INTF_TEST__A_FWD_)
@@ -2407,6 +2403,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_FIHCIFEE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HGEBGCCF_INCLUDED__ */
 
 // -*- END -*-

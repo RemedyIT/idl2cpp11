@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IHBAHIIH_INCLUDED__
-#define __RIDL_TESTC_H_IHBAHIIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JFFJGHIA_INCLUDED__
+#define __RIDL_TESTC_H_JFFJGHIA_INCLUDED__
 
 #pragma once
 
@@ -15,10 +15,8 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/anytypecode/any.h"
-#include "tao/x11/corba_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -76,7 +74,6 @@ namespace Deployment
 
   inline void swap (::Deployment::Property& m1, ::Deployment::Property& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::Properties
   using Properties = std::vector<Property>;
@@ -133,7 +130,6 @@ namespace Deployment
   };// Requirement
 
   inline void swap (::Deployment::Requirement& m1, ::Deployment::Requirement& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::Requirements
@@ -218,7 +214,6 @@ namespace Deployment
   };// SatisfierProperty
 
   inline void swap (::Deployment::SatisfierProperty& m1, ::Deployment::SatisfierProperty& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::SatisfierProperties
@@ -362,7 +357,6 @@ namespace Deployment
 
   inline void swap (::Deployment::ComponentPortDescription& m1, ::Deployment::ComponentPortDescription& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentPortDescriptions
   using ComponentPortDescriptions = std::vector<ComponentPortDescription>;
@@ -408,7 +402,6 @@ namespace Deployment
   };// ComponentPropertyDescription
 
   inline void swap (::Deployment::ComponentPropertyDescription& m1, ::Deployment::ComponentPropertyDescription& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentPropertyDescriptions
@@ -527,7 +520,6 @@ namespace Deployment
 
   inline void swap (::Deployment::ComponentInterfaceDescription& m1, ::Deployment::ComponentInterfaceDescription& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/struct_pre
   /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription
   class MonolithicDeploymentDescription
@@ -600,7 +592,6 @@ namespace Deployment
   };// MonolithicDeploymentDescription
 
   inline void swap (::Deployment::MonolithicDeploymentDescription& m1, ::Deployment::MonolithicDeploymentDescription& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::MonolithicDeploymentDescriptions
@@ -684,7 +675,6 @@ namespace Deployment
   };// InstanceResourceDeploymentDescription
 
   inline void swap (::Deployment::InstanceResourceDeploymentDescription& m1, ::Deployment::InstanceResourceDeploymentDescription& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescriptions
@@ -782,7 +772,6 @@ namespace Deployment
 
   inline void swap (::Deployment::InstanceDeploymentDescription& m1, ::Deployment::InstanceDeploymentDescription& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::InstanceDeploymentDescriptions
   using InstanceDeploymentDescriptions = std::vector<InstanceDeploymentDescription>;
@@ -819,7 +808,6 @@ namespace Deployment
   };// ComponentExternalPortEndpoint
 
   inline void swap (::Deployment::ComponentExternalPortEndpoint& m1, ::Deployment::ComponentExternalPortEndpoint& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentExternalPortEndpoints
@@ -884,7 +872,6 @@ namespace Deployment
   };// PlanSubcomponentPortEndpoint
 
   inline void swap (::Deployment::PlanSubcomponentPortEndpoint& m1, ::Deployment::PlanSubcomponentPortEndpoint& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoints
@@ -952,7 +939,6 @@ namespace Deployment
 
   inline void swap (::Deployment::ExternalReferenceEndpoint& m1, ::Deployment::ExternalReferenceEndpoint& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ExternalReferenceEndpoints
   using ExternalReferenceEndpoints = std::vector<ExternalReferenceEndpoint>;
@@ -1019,7 +1005,6 @@ namespace Deployment
   };// ConnectionResourceDeploymentDescription
 
   inline void swap (::Deployment::ConnectionResourceDeploymentDescription& m1, ::Deployment::ConnectionResourceDeploymentDescription& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescriptions
@@ -1118,7 +1103,6 @@ namespace Deployment
 
   inline void swap (::Deployment::PlanConnectionDescription& m1, ::Deployment::PlanConnectionDescription& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanConnectionDescriptions
   using PlanConnectionDescriptions = std::vector<PlanConnectionDescription>;
@@ -1164,7 +1148,6 @@ namespace Deployment
   };// PlanSubcomponentPropertyReference
 
   inline void swap (::Deployment::PlanSubcomponentPropertyReference& m1, ::Deployment::PlanSubcomponentPropertyReference& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReferences
@@ -1233,7 +1216,6 @@ namespace Deployment
 
   inline void swap (::Deployment::PlanPropertyMapping& m1, ::Deployment::PlanPropertyMapping& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanPropertyMappings
   using PlanPropertyMappings = std::vector<PlanPropertyMapping>;
@@ -1270,7 +1252,6 @@ namespace Deployment
   };// ImplementationDependency
 
   inline void swap (::Deployment::ImplementationDependency& m1, ::Deployment::ImplementationDependency& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ImplementationDependencies
@@ -1328,7 +1309,6 @@ namespace Deployment
   };// ResourceDeploymentDescription
 
   inline void swap (::Deployment::ResourceDeploymentDescription& m1, ::Deployment::ResourceDeploymentDescription& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ResourceDeploymentDescriptions
@@ -1427,7 +1407,6 @@ namespace Deployment
 
   inline void swap (::Deployment::ArtifactDeploymentDescription& m1, ::Deployment::ArtifactDeploymentDescription& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ArtifactDeploymentDescriptions
   using ArtifactDeploymentDescriptions = std::vector<ArtifactDeploymentDescription>;
@@ -1486,7 +1465,6 @@ namespace Deployment
   };// PlanLocality
 
   inline void swap (::Deployment::PlanLocality& m1, ::Deployment::PlanLocality& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::PlanLocalities
@@ -1624,7 +1602,6 @@ namespace Deployment
   };// DeploymentPlan
 
   inline void swap (::Deployment::DeploymentPlan& m1, ::Deployment::DeploymentPlan& m2) { m1.swap (m2); }
-
 } // namespace Deployment
 
 
@@ -1685,7 +1662,6 @@ namespace Deployment
   };// ComponentPackageReference
 
   inline void swap (::Deployment::ComponentPackageReference& m1, ::Deployment::ComponentPackageReference& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ComponentPackageReferences
@@ -1778,7 +1754,6 @@ namespace Deployment
 
   inline void swap (::Deployment::ImplementationRequirement& m1, ::Deployment::ImplementationRequirement& m2) { m1.swap (m2); }
 
-
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::ImplementationRequirements
   using ImplementationRequirements = std::vector<ImplementationRequirement>;
@@ -1835,7 +1810,6 @@ namespace Deployment
   };// Capability
 
   inline void swap (::Deployment::Capability& m1, ::Deployment::Capability& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/typedef
   /// @copydoc test.idl::Deployment::Capabilities
@@ -5460,6 +5434,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_IHBAHIIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JFFJGHIA_INCLUDED__ */
 
 // -*- END -*-

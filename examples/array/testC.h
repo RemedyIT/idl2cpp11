@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DEJDIHJA_INCLUDED__
-#define __RIDL_TESTC_H_DEJDIHJA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FGFCFACC_INCLUDED__
+#define __RIDL_TESTC_H_FGFCFACC_INCLUDED__
 
 #pragma once
 
@@ -15,10 +15,10 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/object.h"
-#include "tao/x11/corba_ostream.h"
+#include "tao/x11/system_exception.h"
+#include "tao/x11/object_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -390,6 +390,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_DEJDIHJA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FGFCFACC_INCLUDED__ */
 
 // -*- END -*-

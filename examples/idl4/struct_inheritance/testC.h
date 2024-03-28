@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFFJHAEF_INCLUDED__
-#define __RIDL_TESTC_H_GFFJHAEF_INCLUDED__
+#ifndef __RIDL_TESTC_H_FHJHHCAJ_INCLUDED__
+#define __RIDL_TESTC_H_FHJHHCAJ_INCLUDED__
 
 #pragma once
 
@@ -15,9 +15,7 @@
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/system_exception.h"
 #include "tao/x11/orb.h"
-#include "tao/x11/corba_ostream.h"
 
 #include /**/ "tao/x11/versionx11.h"
 
@@ -68,7 +66,6 @@ private:
 
 inline void swap (::Point2D& m1, ::Point2D& m2) { m1.swap (m2); }
 
-
 // generated from c++11/templates/cli/hdr/struct_pre
 /// @copydoc test.idl::Point3D
 class Point3D : public Point2D
@@ -102,7 +99,6 @@ private:
 };// Point3D
 
 inline void swap (::Point3D& m1, ::Point3D& m2) { m1.swap (m2); }
-
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE::IDL
@@ -270,6 +266,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Point3D& _v)
 
 #include /**/ "ace/post.h"
 
-#endif /* __RIDL_TESTC_H_GFFJHAEF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FHJHHCAJ_INCLUDED__ */
 
 // -*- END -*-
