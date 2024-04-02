@@ -6,12 +6,12 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HGEBGCCF_INCLUDED__
-#define __RIDL_TESTC_H_HGEBGCCF_INCLUDED__
+#ifndef __RIDL_TESTC_H_FJJGJIFF_INCLUDED__
+#define __RIDL_TESTC_H_FJJGJIFF_INCLUDED__
 
 #pragma once
 
-#include /**/ "ace/pre.h"
+#include /**/ "tao/x11/pre.h"
 #include "tao/x11/stddef.h"
 #include "tao/x11/basic_traits.h"
 #include "tao/x11/corba.h"
@@ -2401,8 +2401,8 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 #include "testCP.h"
 #endif
 
-#include /**/ "ace/post.h"
+#include /**/ "tao/x11/post.h"
 
-#endif /* __RIDL_TESTC_H_HGEBGCCF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FJJGJIFF_INCLUDED__ */
 
 // -*- END -*-
