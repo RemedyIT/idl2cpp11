@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GECIIJCH_INCLUDED__
-#define __RIDL_TESTC_H_GECIIJCH_INCLUDED__
+#ifndef __RIDL_TESTC_H_JBJJHJBE_INCLUDED__
+#define __RIDL_TESTC_H_JBJJHJBE_INCLUDED__
 
 #pragma once
 
@@ -122,7 +122,7 @@ namespace Test
 
   // generated from StubHeaderWriter#visit_const
   /// @copydoc test.idl::Test::pi2
-  const fixed_type pi2;
+  const fixed_type pi2 {3.14159};
 } // namespace Test
 
 
@@ -390,6 +390,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::A>::ref_type 
 
 #include /**/ "tao/x11/post.h"
 
-#endif /* __RIDL_TESTC_H_GECIIJCH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JBJJHJBE_INCLUDED__ */
 
 // -*- END -*-

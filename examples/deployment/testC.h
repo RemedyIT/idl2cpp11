@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BDICIJBA_INCLUDED__
-#define __RIDL_TESTC_H_BDICIJBA_INCLUDED__
+#ifndef __RIDL_TESTC_H_HBEICHHD_INCLUDED__
+#define __RIDL_TESTC_H_HBEICHHD_INCLUDED__
 
 #pragma once
 
@@ -5434,6 +5434,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "tao/x11/post.h"
 
-#endif /* __RIDL_TESTC_H_BDICIJBA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HBEICHHD_INCLUDED__ */
 
 // -*- END -*-

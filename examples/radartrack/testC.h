@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HFHDICDH_INCLUDED__
-#define __RIDL_TESTC_H_HFHDICDH_INCLUDED__
+#ifndef __RIDL_TESTC_H_GEJCHGFF_INCLUDED__
+#define __RIDL_TESTC_H_GEJCHGFF_INCLUDED__
 
 #pragma once
 
@@ -261,6 +261,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::RadarTrack& _v)
 
 #include /**/ "tao/x11/post.h"
 
-#endif /* __RIDL_TESTC_H_HFHDICDH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GEJCHGFF_INCLUDED__ */
 
 // -*- END -*-

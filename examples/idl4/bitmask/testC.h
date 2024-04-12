@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BJGHGGAF_INCLUDED__
-#define __RIDL_TESTC_H_BJGHGGAF_INCLUDED__
+#ifndef __RIDL_TESTC_H_DBEGGCEA_INCLUDED__
+#define __RIDL_TESTC_H_DBEGGCEA_INCLUDED__
 
 #pragma once
 
@@ -130,6 +130,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
 
 #include /**/ "tao/x11/post.h"
 
-#endif /* __RIDL_TESTC_H_BJGHGGAF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DBEGGCEA_INCLUDED__ */
 
 // -*- END -*-
