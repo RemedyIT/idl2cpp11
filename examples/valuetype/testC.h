@@ -6,14 +6,14 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFEBFGIH_INCLUDED__
-#define __RIDL_TESTC_H_BFEBFGIH_INCLUDED__
+#ifndef __RIDL_TESTC_H_IAAHCIJC_INCLUDED__
+#define __RIDL_TESTC_H_IAAHCIJC_INCLUDED__
 
 #pragma once
 
-#include /**/ "tao/x11/pre.h"
-#include "tao/x11/stddef.h"
-#include "tao/x11/basic_traits.h"
+#include /**/ "tao/x11/base/pre.h"
+#include "tao/x11/base/stddef.h"
+#include "tao/x11/base/basic_traits.h"
 #include "tao/x11/corba.h"
 #include "tao/x11/orb.h"
 #include "tao/x11/system_exception.h"
@@ -24,7 +24,7 @@
 #include "tao/x11/object_ostream.h"
 #include "tao/x11/valuetype/value_box_t.h"
 
-#include /**/ "tao/x11/versionx11.h"
+#include /**/ "tao/x11/base/versionx11.h"
 
 #if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
 #error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
@@ -125,7 +125,7 @@ public:
 protected:
   using _shared_ptr_type = std::shared_ptr<Example>;
 
-  static const std::string __example_repository_id;
+  static inline const std::string __example_repository_id {"IDL:Example:1.0"};
 
   Example () = default;
   ~Example () override = default;
@@ -513,7 +513,7 @@ protected:
 
   using _shared_ptr_type = std::shared_ptr<Val>;
 
-  static const std::string __val_repository_id;
+  static inline const std::string __val_repository_id {"IDL:Val:1.0"};
 
   Val () = default;
   ~Val () override = default;
@@ -769,7 +769,7 @@ protected:
   template <typename _Tp1, typename, typename ...Args>
   friend constexpr TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-  static const std::string __stringvalue_repository_id;
+  static inline const std::string __stringvalue_repository_id {"IDL:StringValue:1.0"};
 
   StringValue () = default;
   StringValue (const StringValue&) = default;
@@ -984,7 +984,7 @@ protected:
   template <typename _Tp1, typename, typename ...Args>
   friend constexpr TAOX11_CORBA::valuetype_reference<_Tp1> TAOX11_CORBA::make_reference(Args&& ...args);
 
-  static const std::string __colorvalue_repository_id;
+  static inline const std::string __colorvalue_repository_id {"IDL:ColorValue:1.0"};
 
   ColorValue () = default;
   ColorValue (const ColorValue&) = default;
@@ -1234,7 +1234,7 @@ public:
 protected:
   using _shared_ptr_type = std::shared_ptr<B>;
 
-  static const std::string __b_repository_id;
+  static inline const std::string __b_repository_id {"IDL:B:1.0"};
 
   B () = default;
   ~B () override = default;
@@ -1444,7 +1444,7 @@ protected:
 
   using _shared_ptr_type = std::shared_ptr<V>;
 
-  static const std::string __v_repository_id;
+  static inline const std::string __v_repository_id {"IDL:V:1.0"};
 
   V () = default;
   ~V () override = default;
@@ -2203,12 +2203,12 @@ operator<< (
 }
 
 // generated from c++11/templates/cli/hdr/post
-#if defined (__TAOX11_INCLUDE_STUB_PROXY__)
-#include "testCP.h"
+#if !defined (TAOX11_DISABLE_INCLUDE_STUB_PROXY_HDR) && defined (__TAOX11_INCLUDE_STUB_PROXY__) && __has_include("testCP.h")
+# include "testCP.h"
 #endif
 
-#include /**/ "tao/x11/post.h"
+#include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_BFEBFGIH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IAAHCIJC_INCLUDED__ */
 
 // -*- END -*-
