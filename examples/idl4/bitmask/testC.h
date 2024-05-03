@@ -6,18 +6,17 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DBEGGCEA_INCLUDED__
-#define __RIDL_TESTC_H_DBEGGCEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_GFCFFEID_INCLUDED__
+#define __RIDL_TESTC_H_GFCFFEID_INCLUDED__
 
 #pragma once
 
-#include /**/ "tao/x11/pre.h"
-#include "tao/x11/stddef.h"
-#include "tao/x11/basic_traits.h"
+#include /**/ "tao/x11/base/pre.h"
+#include "tao/x11/base/stddef.h"
+#include "tao/x11/base/basic_traits.h"
 #include "tao/x11/corba.h"
-#include "tao/x11/orb.h"
 
-#include /**/ "tao/x11/versionx11.h"
+#include /**/ "tao/x11/base/versionx11.h"
 
 #if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
 #error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
@@ -124,12 +123,12 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
 }
 
 // generated from c++11/templates/cli/hdr/post
-#if defined (__TAOX11_INCLUDE_STUB_PROXY__)
-#include "testCP.h"
+#if !defined (TAOX11_DISABLE_INCLUDE_STUB_PROXY_HDR) && defined (__TAOX11_INCLUDE_STUB_PROXY__) && __has_include("testCP.h")
+# include "testCP.h"
 #endif
 
-#include /**/ "tao/x11/post.h"
+#include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_DBEGGCEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GFCFFEID_INCLUDED__ */
 
 // -*- END -*-
