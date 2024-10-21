@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GFCFFEID_INCLUDED__
-#define __RIDL_TESTC_H_GFCFFEID_INCLUDED__
+#ifndef __RIDL_TESTC_H_FDHJFEHC_INCLUDED__
+#define __RIDL_TESTC_H_FDHJFEHC_INCLUDED__
 
 #pragma once
 
@@ -26,23 +26,33 @@ using namespace TAOX11_NAMESPACE;
 
 // generated from c++11/templates/cli/hdr/bitmask
 /// @copydoc test.idl::MyBitMask
-enum class MyBitMask : uint8_t
+class MyBitMask
 {
-  /// @copydoc test.idl::MyBitMask::flag0
-  flag0 = 0x01 << 0,
-  /// @copydoc test.idl::MyBitMask::flag1
-  flag1 = 0x01 << 1,
-  /// @copydoc test.idl::MyBitMask::flag2
-  flag2 = 0x01 << 2
-};// MyBitMask
+public:
+  enum _flags : uint8_t
+  {
+    /// @copydoc test.idl::MyBitMask::flag0
+    flag0 = 0x01 << 0,
+    /// @copydoc test.idl::MyBitMask::flag1
+    flag1 = 0x01 << 1,
+    /// @copydoc test.idl::MyBitMask::flag2
+    flag2 = 0x01 << 2
+  };
+  MyBitMask () = default;
+  ~MyBitMask () = default;
+  MyBitMask (const ::MyBitMask&) = default;
+  MyBitMask (::MyBitMask&&) = default;
+  MyBitMask (uint8_t _v) : _value(_v) {}
+  ::MyBitMask& operator= (const ::MyBitMask&) = default;
+  ::MyBitMask& operator= (::MyBitMask&&) = default;
+  operator uint8_t() const { return _value; }
+  ::MyBitMask& operator |= (uint8_t _taox11_rhs) { _value |= _taox11_rhs; return *this; }
+  ::MyBitMask& operator &= (uint8_t _taox11_rhs) { _value &= _taox11_rhs; return *this; }
+  ::MyBitMask& operator ^= (uint8_t _taox11_rhs) { _value ^= _taox11_rhs; return *this; }
+private:
+  uint8_t _value {};
+};  // MyBitMask
 
-inline ::MyBitMask operator~ (const ::MyBitMask& _taox11_t) { return static_cast<MyBitMask>(~static_cast<uint8_t>(_taox11_t)); }
-inline ::MyBitMask operator| (const ::MyBitMask& _taox11_t, const ::MyBitMask& _taox11_y) { return static_cast<MyBitMask>(static_cast<uint8_t>(_taox11_t) | static_cast<uint8_t>(_taox11_y)); }
-inline ::MyBitMask operator^ (const ::MyBitMask& _taox11_t, const ::MyBitMask& _taox11_y) { return static_cast<MyBitMask>(static_cast<uint8_t>(_taox11_t) ^ static_cast<uint8_t>(_taox11_y)); }
-inline ::MyBitMask operator& (const ::MyBitMask& _taox11_t, const ::MyBitMask& _taox11_y) { return static_cast<MyBitMask>(static_cast<uint8_t>(_taox11_t) & static_cast<uint8_t>(_taox11_y)); }
-inline ::MyBitMask operator |= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _taox11_rhs) { _taox11_lhs = _taox11_lhs | _taox11_rhs; return _taox11_lhs; }
-inline ::MyBitMask operator &= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _taox11_rhs) { _taox11_lhs = _taox11_lhs & _taox11_rhs; return _taox11_lhs; }
-inline ::MyBitMask operator ^= (::MyBitMask& _taox11_lhs, const ::MyBitMask& _taox11_rhs) { _taox11_lhs = _taox11_lhs ^ _taox11_rhs; return _taox11_lhs; }
 
 // generated from StubHeaderIDLTraitsWriter#pre_visit
 namespace TAOX11_NAMESPACE::IDL
@@ -75,19 +85,19 @@ namespace TAOX11_NAMESPACE::IDL
     inline OStrm_& operator ()(OStrm_& os_, const ::MyBitMask& val_)
     {
       bool first_ {true};
-      if (static_cast<bool>(val_ & ::MyBitMask::flag0))
+      if (val_ & ::MyBitMask::flag0)
       {
         if (!first_) os_ << "|";
         os_ << "MyBitMask::flag0";
         first_ = false;
       }
-      if (static_cast<bool>(val_ & ::MyBitMask::flag1))
+      if (val_ & ::MyBitMask::flag1)
       {
         if (!first_) os_ << "|";
         os_ << "MyBitMask::flag1";
         first_ = false;
       }
-      if (static_cast<bool>(val_ & ::MyBitMask::flag2))
+      if (val_ & ::MyBitMask::flag2)
       {
         if (!first_) os_ << "|";
         os_ << "MyBitMask::flag2";
@@ -129,6 +139,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitMask& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_GFCFFEID_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FDHJFEHC_INCLUDED__ */
 
 // -*- END -*-
