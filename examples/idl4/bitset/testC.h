@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EFCAIEED_INCLUDED__
-#define __RIDL_TESTC_H_EFCAIEED_INCLUDED__
+#ifndef __RIDL_TESTC_H_GIAFICCJ_INCLUDED__
+#define __RIDL_TESTC_H_GIAFICCJ_INCLUDED__
 
 #pragma once
 
@@ -30,7 +30,7 @@ using namespace TAOX11_NAMESPACE;
 class MyBitset
 {
 public:
-  MyBitset () = default;
+  MyBitset ();
   ~MyBitset () noexcept = default;
   MyBitset (const MyBitset&) = default;
   MyBitset (MyBitset&&) = default;
@@ -42,6 +42,9 @@ public:
     int8_t a,
     int16_t d,
     int64_t tt);
+
+  bool operator== (const MyBitset &rhs) const;
+  bool operator!= (const MyBitset &rhs) const;
 
   inline void x (bool _x11_x) { this->_taox11_mybitset.x = _x11_x; }
   inline bool x () const { return this->_taox11_mybitset.x; }
@@ -77,7 +80,7 @@ inline void swap (::MyBitset& m1, ::MyBitset& m2) { m1.swap (m2); }
 class MyBitset2 : public MyBitset
 {
 public:
-  MyBitset2 () = default;
+  MyBitset2 ();
   ~MyBitset2 () noexcept = default;
   MyBitset2 (const MyBitset2&) = default;
   MyBitset2 (MyBitset2&&) = default;
@@ -88,6 +91,9 @@ public:
   explicit inline MyBitset2 (
     MyBitset _base,
     int8_t c);
+
+  bool operator== (const MyBitset2 &rhs) const;
+  bool operator!= (const MyBitset2 &rhs) const;
 
   inline void c (int8_t _x11_c) { this->_taox11_mybitset2.c = _x11_c; }
   inline int8_t c () const { return this->_taox11_mybitset2.c; }
@@ -175,6 +181,7 @@ namespace TAOX11_NAMESPACE::IDL
     inline OStrm_& operator ()(OStrm_& os_, const ::MyBitset2& val_)
     {
       os_ << "MyBitset2{"
+          << IDL::traits<MyBitset>::write(val_) << ','
           << "c=" << IDL::traits<int8_t>::write(val_.c ())
           << '}';
       return os_;
@@ -201,6 +208,11 @@ namespace TAOX11_NAMESPACE::IDL
 } // namespace TAOX11_NAMESPACE::IDL
 
 // generated from c++11/templates/cli/inl/bitset_inl
+inline ::MyBitset::MyBitset ()
+  : _taox11_mybitset { false, 0, 0, 0 }
+{
+}
+
 inline ::MyBitset::MyBitset (
   bool x,
   int8_t a,
@@ -215,7 +227,26 @@ inline void ::MyBitset::swap (::MyBitset& s)
   std::swap (this->_taox11_mybitset, s._taox11_mybitset);
 }
 
+inline bool ::MyBitset::operator== (const MyBitset &rhs) const {
+  return
+    (this->_taox11_mybitset.x == rhs._taox11_mybitset.x) &&
+    (this->_taox11_mybitset.a == rhs._taox11_mybitset.a) &&
+    (this->_taox11_mybitset.d == rhs._taox11_mybitset.d) &&
+    (this->_taox11_mybitset.tt == rhs._taox11_mybitset.tt);
+}
+
+inline bool ::MyBitset::operator!= (const MyBitset &rhs) const
+{
+  return !this->operator== (rhs);
+}
+
 // generated from c++11/templates/cli/inl/bitset_inl
+inline ::MyBitset2::MyBitset2 ()
+  : MyBitset ()
+  , _taox11_mybitset2 { 0 }
+{
+}
+
 inline ::MyBitset2::MyBitset2 (
   MyBitset _base,
   int8_t c)
@@ -227,6 +258,17 @@ inline ::MyBitset2::MyBitset2 (
 inline void ::MyBitset2::swap (::MyBitset2& s)
 {
   std::swap (this->_taox11_mybitset2, s._taox11_mybitset2);
+}
+
+inline bool ::MyBitset2::operator== (const MyBitset2 &rhs) const {
+  return
+    MyBitset::operator==(rhs) &&
+    (this->_taox11_mybitset2.c == rhs._taox11_mybitset2.c);
+}
+
+inline bool ::MyBitset2::operator!= (const MyBitset2 &rhs) const
+{
+  return !this->operator== (rhs);
 }
 
 // generated from c++11/templates/cli/hdr/bitset_os
@@ -248,6 +290,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_EFCAIEED_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GIAFICCJ_INCLUDED__ */
 
 // -*- END -*-

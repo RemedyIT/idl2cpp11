@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CHJDFJJI_INCLUDED__
-#define __RIDL_TESTC_H_CHJDFJJI_INCLUDED__
+#ifndef __RIDL_TESTC_H_BFCDGHBF_INCLUDED__
+#define __RIDL_TESTC_H_BFCDGHBF_INCLUDED__
 
 #pragma once
 
@@ -2209,6 +2209,6 @@ operator<< (
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_CHJDFJJI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BFCDGHBF_INCLUDED__ */
 
 // -*- END -*-
