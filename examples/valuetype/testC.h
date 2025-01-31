@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_BFCDGHBF_INCLUDED__
-#define __RIDL_TESTC_H_BFCDGHBF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CCAGEBDI_INCLUDED__
+#define __RIDL_TESTC_H_CCAGEBDI_INCLUDED__
 
 #pragma once
 
@@ -200,11 +200,7 @@ namespace obv
     : public virtual ::Example
   {
   protected:
-#if defined (_MSC_VER) && (_MSC_VER < 1920)
-    Example () {}
-#else
     Example () = default;
-#endif /* _MSC_VER < 1920 */
     ~Example () override = default;
     Example (const Example&) = default;
     Example (Example&&) = default;
@@ -583,11 +579,7 @@ namespace obv
     : public virtual ::Val
   {
   protected:
-#if defined (_MSC_VER) && (_MSC_VER < 1920)
-    Val () {}
-#else
     Val () = default;
-#endif /* _MSC_VER < 1920 */
     ~Val () override = default;
     Val (const Val&) = default;
     Val (Val&&) = default;
@@ -1288,11 +1280,7 @@ namespace obv
     : public virtual ::B
   {
   protected:
-#if defined (_MSC_VER) && (_MSC_VER < 1920)
-    B () {}
-#else
     B () = default;
-#endif /* _MSC_VER < 1920 */
     ~B () override = default;
     B (const B&) = default;
     B (B&&) = default;
@@ -1485,11 +1473,7 @@ namespace obv
     : public virtual ::V
   {
   protected:
-#if defined (_MSC_VER) && (_MSC_VER < 1920)
-    V () {}
-#else
     V () = default;
-#endif /* _MSC_VER < 1920 */
     ~V () override = default;
     V (const V&) = default;
     V (V&&) = default;
@@ -2209,6 +2193,6 @@ operator<< (
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_BFCDGHBF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CCAGEBDI_INCLUDED__ */
 
 // -*- END -*-

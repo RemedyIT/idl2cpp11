@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_CIFEGECA_INCLUDED__
-#define __RIDL_TESTS_H_CIFEGECA_INCLUDED__
+#ifndef __RIDL_TESTS_H_GCEEIEIF_INCLUDED__
+#define __RIDL_TESTS_H_GCEEIEIF_INCLUDED__
 
 #pragma once
 
@@ -27,6 +27,6 @@ namespace Test
 } // namespace Test
 
 
-#endif /* __RIDL_TESTS_H_CIFEGECA_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GCEEIEIF_INCLUDED__ */
 
 // -*- END -*-
