@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HFFCAJDB_INCLUDED__
-#define __RIDL_TESTC_H_HFFCAJDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_IEHEEIJE_INCLUDED__
+#define __RIDL_TESTC_H_IEHEEIJE_INCLUDED__
 
 #pragma once
 
@@ -301,17 +301,9 @@ namespace Test
     DataType disc_ {::Test::DataType::dtEmpty};
     union u_type_
     {
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-      u_type_ ();
-#else
       u_type_ () = default;
-#endif
       ~u_type_ ();
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-      int32_t longData_;
-#else
       int32_t longData_ {};
-#endif
       int16_t shortData_;
       std::string stringData_;
       ::Test::Point pointData_;
@@ -511,20 +503,12 @@ namespace Test
     int32_t disc_ {(-2147483647-1)};
     union u_type_
     {
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-      u_type_ ();
-#else
       u_type_ () = default;
-#endif
       ~u_type_ ();
       int32_t x_;
       std::string z_;
       ::Test::S w_;
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-      IDL::traits<::Test::A>::ref_type obj_;
-#else
       IDL::traits<::Test::A>::ref_type obj_ {};
-#endif
     } u_ {};
   }; // class U
 
@@ -1265,13 +1249,6 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-inline Test::Data::u_type_::u_type_ ()
-  : longData_{}
-{
-}
-#endif
-
 inline Test::Data::u_type_::~u_type_ ()
 {
 }
@@ -1887,13 +1864,6 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-inline Test::U::u_type_::u_type_ ()
-  : obj_{}
-{
-}
-#endif
-
 inline Test::U::u_type_::~u_type_ ()
 {
 }
@@ -2403,6 +2373,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_HFFCAJDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IEHEEIJE_INCLUDED__ */
 
 // -*- END -*-

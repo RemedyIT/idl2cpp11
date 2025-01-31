@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_JDAEHEEH_INCLUDED__
-#define __RIDL_TESTC_H_JDAEHEEH_INCLUDED__
+#ifndef __RIDL_TESTC_H_GEGBHBEC_INCLUDED__
+#define __RIDL_TESTC_H_GEGBHBEC_INCLUDED__
 
 #pragma once
 
@@ -119,13 +119,8 @@ namespace Test
   protected:
     using _shared_ptr_type = std::shared_ptr<Foo>;
 
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-    /// Default constructor
-    Foo () {};
-#else
     /// Default constructor
     Foo () = default;
-#endif /* _MSC_VER < 1930 */
     /// Destructor
     ~Foo () override = default;
 
@@ -229,13 +224,8 @@ namespace Test
   protected:
     using _shared_ptr_type = std::shared_ptr<Bar>;
 
-#if defined (_MSC_VER) && (_MSC_VER < 1930)
-    /// Default constructor
-    Bar () {};
-#else
     /// Default constructor
     Bar () = default;
-#endif /* _MSC_VER < 1930 */
     /// Destructor
     ~Bar () override = default;
 
@@ -353,6 +343,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Bar>::r
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_JDAEHEEH_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GEGBHBEC_INCLUDED__ */
 
 // -*- END -*-

@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FFCBIEFF_INCLUDED__
-#define __RIDL_TESTC_H_FFCBIEFF_INCLUDED__
+#ifndef __RIDL_TESTC_H_HDACHHBC_INCLUDED__
+#define __RIDL_TESTC_H_HDACHHBC_INCLUDED__
 
 #pragma once
 
@@ -377,6 +377,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_FFCBIEFF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HDACHHBC_INCLUDED__ */
 
 // -*- END -*-
