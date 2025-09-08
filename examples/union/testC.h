@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_IEHEEIJE_INCLUDED__
-#define __RIDL_TESTC_H_IEHEEIJE_INCLUDED__
+#ifndef __RIDL_TESTC_H_DFBHHFGA_INCLUDED__
+#define __RIDL_TESTC_H_DFBHHFGA_INCLUDED__
 
 #pragma once
 
@@ -1811,33 +1811,21 @@ inline void Test::Data::_clear ()
     break;
     case ::Test::DataType::dtString:
     {
-#if defined __clang__ && __clang_major__ <= 10
-      using std::string;
-#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.stringData_.std::string::~string ();
     }
     break;
     case ::Test::DataType::dtPoint:
     {
-#if defined __clang__ && __clang_major__ <= 10
-      using ::Test::Point;
-#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.pointData_.::Test::Point::~Point ();
     }
     break;
     case ::Test::DataType::dtTrack:
     {
-#if defined __clang__ && __clang_major__ <= 10
-      using ::Test::Track;
-#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.trackData_.::Test::Track::~Track ();
     }
     break;
     case ::Test::DataType::dtGlobal:
     {
-#if defined __clang__ && __clang_major__ <= 10
-      using ::Global;
-#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.globalData_.::Global::~Global ();
     }
     break;
@@ -2289,18 +2277,12 @@ inline void Test::U::_clear ()
     break;
     case 2:
     {
-#if defined __clang__ && __clang_major__ <= 10
-      using std::string;
-#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.z_.std::string::~string ();
     }
     break;
     case 3:
     case 4:
     {
-#if defined __clang__ && __clang_major__ <= 10
-      using ::Test::S;
-#endif /* __clang__ && __clang_major__ <= 10 */
       this->u_.w_.::Test::S::~S ();
     }
     break;
@@ -2373,6 +2355,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_IEHEEIJE_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DFBHHFGA_INCLUDED__ */
 
 // -*- END -*-
