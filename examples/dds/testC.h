@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EAAFDAGC_INCLUDED__
-#define __RIDL_TESTC_H_EAAFDAGC_INCLUDED__
+#ifndef __RIDL_TESTC_H_IIFHEGFE_INCLUDED__
+#define __RIDL_TESTC_H_IIFHEGFE_INCLUDED__
 
 #pragma once
 
@@ -18,8 +18,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -47,29 +47,29 @@ public:
   //@{
   inline void color (const std::string& _x11_color) { this->color_ = _x11_color; }
   inline void color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
-  inline const std::string& color () const { return this->color_; }
-  inline std::string& color () { return this->color_; }
+  [[nodiscard]] inline const std::string& color () const { return this->color_; }
+  [[nodiscard]] inline std::string& color () { return this->color_; }
   //@}
 
   /// @copydoc test.idl::ShapeType::x
   //@{
   inline void x (int32_t _x11_x) { this->x_ = _x11_x; }
-  inline int32_t x () const { return this->x_; }
-  inline int32_t& x () { return this->x_; }
+  [[nodiscard]] inline int32_t x () const { return this->x_; }
+  [[nodiscard]] inline int32_t& x () { return this->x_; }
   //@}
 
   /// @copydoc test.idl::ShapeType::y
   //@{
   inline void y (int32_t _x11_y) { this->y_ = _x11_y; }
-  inline int32_t y () const { return this->y_; }
-  inline int32_t& y () { return this->y_; }
+  [[nodiscard]] inline int32_t y () const { return this->y_; }
+  [[nodiscard]] inline int32_t& y () { return this->y_; }
   //@}
 
   /// @copydoc test.idl::ShapeType::shapesize
   //@{
   inline void shapesize (int32_t _x11_shapesize) { this->shapesize_ = _x11_shapesize; }
-  inline int32_t shapesize () const { return this->shapesize_; }
-  inline int32_t& shapesize () { return this->shapesize_; }
+  [[nodiscard]] inline int32_t shapesize () const { return this->shapesize_; }
+  [[nodiscard]] inline int32_t& shapesize () { return this->shapesize_; }
   //@}
 
   /// Exchange the value of two structures in an efficient matter
@@ -106,23 +106,23 @@ public:
   //@{
   inline void shape (const std::string& _x11_shape) { this->shape_ = _x11_shape; }
   inline void shape (std::string&& _x11_shape) { this->shape_ = std::move (_x11_shape); }
-  inline const std::string& shape () const { return this->shape_; }
-  inline std::string& shape () { return this->shape_; }
+  [[nodiscard]] inline const std::string& shape () const { return this->shape_; }
+  [[nodiscard]] inline std::string& shape () { return this->shape_; }
   //@}
 
   /// @copydoc test.idl::Attributes::color
   //@{
   inline void color (const std::string& _x11_color) { this->color_ = _x11_color; }
   inline void color (std::string&& _x11_color) { this->color_ = std::move (_x11_color); }
-  inline const std::string& color () const { return this->color_; }
-  inline std::string& color () { return this->color_; }
+  [[nodiscard]] inline const std::string& color () const { return this->color_; }
+  [[nodiscard]] inline std::string& color () { return this->color_; }
   //@}
 
   /// @copydoc test.idl::Attributes::speed
   //@{
   inline void speed (float _x11_speed) { this->speed_ = _x11_speed; }
-  inline float speed () const { return this->speed_; }
-  inline float& speed () { return this->speed_; }
+  [[nodiscard]] inline float speed () const { return this->speed_; }
+  [[nodiscard]] inline float& speed () { return this->speed_; }
   //@}
 
   /// Exchange the value of two structures in an efficient matter
@@ -377,6 +377,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::ShapeTypeSeq& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_EAAFDAGC_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IIFHEGFE_INCLUDED__ */
 
 // -*- END -*-

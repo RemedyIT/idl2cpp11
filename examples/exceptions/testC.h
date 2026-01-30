@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_HDGADECI_INCLUDED__
-#define __RIDL_TESTC_H_HDGADECI_INCLUDED__
+#ifndef __RIDL_TESTC_H_JHEJHBIB_INCLUDED__
+#define __RIDL_TESTC_H_JHEJHBIB_INCLUDED__
 
 #pragma once
 
@@ -23,8 +23,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -62,8 +62,8 @@ namespace Test
     //@{
     void message (const std::string& _x11_message) { this->message_ = _x11_message; }
     void message (std::string&& _x11_message)  { this->message_ = std::move (_x11_message); }
-    const std::string& message () const { return this->message_; }
-    std::string& message () { return this->message_; };
+    [[nodiscard]] const std::string& message () const { return this->message_; }
+    [[nodiscard]] std::string& message () { return this->message_; };
     //@}
 
   protected:
@@ -100,8 +100,8 @@ namespace Test
     /// @copydoc test.idl::Test::BooEx::id
     //@{
     void id (int32_t _x11_id) { this->id_ = _x11_id; }
-    int32_t id () const { return this->id_; }
-    int32_t& id () { return this->id_; };
+    [[nodiscard]] int32_t id () const { return this->id_; }
+    [[nodiscard]] int32_t& id () { return this->id_; };
     //@}
 
   protected:
@@ -424,6 +424,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_HDGADECI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JHEJHBIB_INCLUDED__ */
 
 // -*- END -*-
