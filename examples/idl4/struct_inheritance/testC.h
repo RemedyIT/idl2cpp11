@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GAFBECBF_INCLUDED__
-#define __RIDL_TESTC_H_GAFBECBF_INCLUDED__
+#ifndef __RIDL_TESTC_H_GHIEJCFD_INCLUDED__
+#define __RIDL_TESTC_H_GHIEJCFD_INCLUDED__
 
 #pragma once
 
@@ -18,8 +18,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -44,15 +44,15 @@ public:
   /// @copydoc test.idl::Point2D::x
   //@{
   inline void x (int32_t _x11_x) { this->x_ = _x11_x; }
-  inline int32_t x () const { return this->x_; }
-  inline int32_t& x () { return this->x_; }
+  [[nodiscard]] inline int32_t x () const { return this->x_; }
+  [[nodiscard]] inline int32_t& x () { return this->x_; }
   //@}
 
   /// @copydoc test.idl::Point2D::y
   //@{
   inline void y (int32_t _x11_y) { this->y_ = _x11_y; }
-  inline int32_t y () const { return this->y_; }
-  inline int32_t& y () { return this->y_; }
+  [[nodiscard]] inline int32_t y () const { return this->y_; }
+  [[nodiscard]] inline int32_t& y () { return this->y_; }
   //@}
 
   /// Exchange the value of two structures in an efficient matter
@@ -86,8 +86,8 @@ public:
   /// @copydoc test.idl::Point3D::z
   //@{
   inline void z (int32_t _x11_z) { this->z_ = _x11_z; }
-  inline int32_t z () const { return this->z_; }
-  inline int32_t& z () { return this->z_; }
+  [[nodiscard]] inline int32_t z () const { return this->z_; }
+  [[nodiscard]] inline int32_t& z () { return this->z_; }
   //@}
 
   /// Exchange the value of two structures in an efficient matter
@@ -265,6 +265,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Point3D& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_GAFBECBF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_GHIEJCFD_INCLUDED__ */
 
 // -*- END -*-

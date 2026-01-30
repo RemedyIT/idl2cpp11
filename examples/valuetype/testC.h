@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DJDIJEAJ_INCLUDED__
-#define __RIDL_TESTC_H_DJDIJEAJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_IJGCJDJJ_INCLUDED__
+#define __RIDL_TESTC_H_IJGCJDJJ_INCLUDED__
 
 #pragma once
 
@@ -26,8 +26,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -282,8 +282,8 @@ public:
   /// @copydoc test.idl::S::value
   //@{
   inline void value (int32_t _x11_value) { this->value_ = _x11_value; }
-  inline int32_t value () const { return this->value_; }
-  inline int32_t& value () { return this->value_; }
+  [[nodiscard]] inline int32_t value () const { return this->value_; }
+  [[nodiscard]] inline int32_t& value () { return this->value_; }
   //@}
 
   /// Exchange the value of two structures in an efficient matter
@@ -750,8 +750,8 @@ public:
 
   void _value (const std::string& v) { this->value_ = v; }
   void _value (std::string&& v) { this->value_ = std::move (v); }
-  const std::string& _value () const { return this->value_; }
-  std::string& _value () { return this->value_; }
+  [[nodiscard]] const std::string& _value () const { return this->value_; }
+  [[nodiscard]] std::string& _value () { return this->value_; }
 
   TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type _copy_value () const override;
 
@@ -965,8 +965,8 @@ public:
   //@}
 
   void _value (::Color v) { this->value_ = v; }
-  ::Color _value () const { return this->value_; }
-  ::Color& _value () { return this->value_; }
+  [[nodiscard]] ::Color _value () const { return this->value_; }
+  [[nodiscard]] ::Color& _value () { return this->value_; }
 
   TAOX11_IDL::traits<TAOX11_CORBA::ValueBase>::ref_type _copy_value () const override;
 
@@ -1022,8 +1022,8 @@ public:
   /// @copydoc test.idl::ColorValue2::col
   //@{
   inline void col (::Color _x11_col) { this->col_ = _x11_col; }
-  inline ::Color col () const { return this->col_; }
-  inline ::Color& col () { return this->col_; }
+  [[nodiscard]] inline ::Color col () const { return this->col_; }
+  [[nodiscard]] inline ::Color& col () { return this->col_; }
   //@}
 
   /// Exchange the value of two structures in an efficient matter
@@ -2193,6 +2193,6 @@ operator<< (
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_DJDIJEAJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_IJGCJDJJ_INCLUDED__ */
 
 // -*- END -*-

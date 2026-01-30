@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CEHGBAJJ_INCLUDED__
-#define __RIDL_TESTC_H_CEHGBAJJ_INCLUDED__
+#ifndef __RIDL_TESTC_H_BBJEHAED_INCLUDED__
+#define __RIDL_TESTC_H_BBJEHAED_INCLUDED__
 
 #pragma once
 
@@ -18,8 +18,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -47,13 +47,13 @@ public:
   bool operator!= (const MyBitset &rhs) const;
 
   inline void x (bool _x11_x) { this->_taox11_mybitset.x = _x11_x; }
-  inline bool x () const { return this->_taox11_mybitset.x; }
+  [[nodiscard]] inline bool x () const { return this->_taox11_mybitset.x; }
   inline void a (int8_t _x11_a) { this->_taox11_mybitset.a = _x11_a; }
-  inline int8_t a () const { return this->_taox11_mybitset.a; }
+  [[nodiscard]] inline int8_t a () const { return this->_taox11_mybitset.a; }
   inline void d (int16_t _x11_d) { this->_taox11_mybitset.d = _x11_d; }
-  inline int16_t d () const { return this->_taox11_mybitset.d; }
+  [[nodiscard]] inline int16_t d () const { return this->_taox11_mybitset.d; }
   inline void tt (int64_t _x11_tt) { this->_taox11_mybitset.tt = _x11_tt; }
-  inline int64_t tt () const { return this->_taox11_mybitset.tt; }
+  [[nodiscard]] inline int64_t tt () const { return this->_taox11_mybitset.tt; }
 
   /// Exchange the value of two bitsets in an efficient matter
   inline void swap (::MyBitset& s);
@@ -96,7 +96,7 @@ public:
   bool operator!= (const MyBitset2 &rhs) const;
 
   inline void c (int8_t _x11_c) { this->_taox11_mybitset2.c = _x11_c; }
-  inline int8_t c () const { return this->_taox11_mybitset2.c; }
+  [[nodiscard]] inline int8_t c () const { return this->_taox11_mybitset2.c; }
 
   /// Exchange the value of two bitsets in an efficient matter
   inline void swap (::MyBitset2& s);
@@ -290,6 +290,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_CEHGBAJJ_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_BBJEHAED_INCLUDED__ */
 
 // -*- END -*-

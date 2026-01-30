@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_GHCCIAEA_INCLUDED__
-#define __RIDL_TESTC_H_GHCCIAEA_INCLUDED__
+#ifndef __RIDL_TESTC_H_DFFBGFFE_INCLUDED__
+#define __RIDL_TESTC_H_DFFBGFFE_INCLUDED__
 
 #pragma once
 
@@ -19,8 +19,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -51,16 +51,16 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::Property::value
     //@{
     inline void value (const TAOX11_NAMESPACE::CORBA::Any& _x11_value) { this->value_ = _x11_value; }
     inline void value (TAOX11_NAMESPACE::CORBA::Any&& _x11_value) { this->value_ = std::move (_x11_value); }
-    inline const TAOX11_NAMESPACE::CORBA::Any& value () const { return this->value_; }
-    inline TAOX11_NAMESPACE::CORBA::Any& value () { return this->value_; }
+    [[nodiscard]] inline const TAOX11_NAMESPACE::CORBA::Any& value () const { return this->value_; }
+    [[nodiscard]] inline TAOX11_NAMESPACE::CORBA::Any& value () { return this->value_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -99,24 +99,24 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::Requirement::resourceType
     //@{
     inline void resourceType (const std::string& _x11_resourceType) { this->resourceType_ = _x11_resourceType; }
     inline void resourceType (std::string&& _x11_resourceType) { this->resourceType_ = std::move (_x11_resourceType); }
-    inline const std::string& resourceType () const { return this->resourceType_; }
-    inline std::string& resourceType () { return this->resourceType_; }
+    [[nodiscard]] inline const std::string& resourceType () const { return this->resourceType_; }
+    [[nodiscard]] inline std::string& resourceType () { return this->resourceType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::Requirement::property
     //@{
     inline void property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::Properties& property () const { return this->property_; }
-    inline ::Deployment::Properties& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::Properties& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -176,30 +176,30 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::kind
     //@{
     inline void kind (::Deployment::SatisfierPropertyKind _x11_kind) { this->kind_ = _x11_kind; }
-    inline ::Deployment::SatisfierPropertyKind kind () const { return this->kind_; }
-    inline ::Deployment::SatisfierPropertyKind& kind () { return this->kind_; }
+    [[nodiscard]] inline ::Deployment::SatisfierPropertyKind kind () const { return this->kind_; }
+    [[nodiscard]] inline ::Deployment::SatisfierPropertyKind& kind () { return this->kind_; }
     //@}
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::dynamic
     //@{
     inline void dynamic (bool _x11_dynamic) { this->dynamic_ = _x11_dynamic; }
-    inline bool dynamic () const { return this->dynamic_; }
-    inline bool& dynamic () { return this->dynamic_; }
+    [[nodiscard]] inline bool dynamic () const { return this->dynamic_; }
+    [[nodiscard]] inline bool& dynamic () { return this->dynamic_; }
     //@}
 
     /// @copydoc test.idl::Deployment::SatisfierProperty::value
     //@{
     inline void value (const TAOX11_NAMESPACE::CORBA::Any& _x11_value) { this->value_ = _x11_value; }
     inline void value (TAOX11_NAMESPACE::CORBA::Any&& _x11_value) { this->value_ = std::move (_x11_value); }
-    inline const TAOX11_NAMESPACE::CORBA::Any& value () const { return this->value_; }
-    inline TAOX11_NAMESPACE::CORBA::Any& value () { return this->value_; }
+    [[nodiscard]] inline const TAOX11_NAMESPACE::CORBA::Any& value () const { return this->value_; }
+    [[nodiscard]] inline TAOX11_NAMESPACE::CORBA::Any& value () { return this->value_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -276,67 +276,67 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::specificType
     //@{
     inline void specificType (const std::string& _x11_specificType) { this->specificType_ = _x11_specificType; }
     inline void specificType (std::string&& _x11_specificType) { this->specificType_ = std::move (_x11_specificType); }
-    inline const std::string& specificType () const { return this->specificType_; }
-    inline std::string& specificType () { return this->specificType_; }
+    [[nodiscard]] inline const std::string& specificType () const { return this->specificType_; }
+    [[nodiscard]] inline std::string& specificType () { return this->specificType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::supportedType
     //@{
     inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType) { this->supportedType_ = _x11_supportedType; }
     inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType) { this->supportedType_ = std::move (_x11_supportedType); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const { return this->supportedType_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const { return this->supportedType_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::provider
     //@{
     inline void provider (bool _x11_provider) { this->provider_ = _x11_provider; }
-    inline bool provider () const { return this->provider_; }
-    inline bool& provider () { return this->provider_; }
+    [[nodiscard]] inline bool provider () const { return this->provider_; }
+    [[nodiscard]] inline bool& provider () { return this->provider_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::exclusiveProvider
     //@{
     inline void exclusiveProvider (bool _x11_exclusiveProvider) { this->exclusiveProvider_ = _x11_exclusiveProvider; }
-    inline bool exclusiveProvider () const { return this->exclusiveProvider_; }
-    inline bool& exclusiveProvider () { return this->exclusiveProvider_; }
+    [[nodiscard]] inline bool exclusiveProvider () const { return this->exclusiveProvider_; }
+    [[nodiscard]] inline bool& exclusiveProvider () { return this->exclusiveProvider_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::exclusiveUser
     //@{
     inline void exclusiveUser (bool _x11_exclusiveUser) { this->exclusiveUser_ = _x11_exclusiveUser; }
-    inline bool exclusiveUser () const { return this->exclusiveUser_; }
-    inline bool& exclusiveUser () { return this->exclusiveUser_; }
+    [[nodiscard]] inline bool exclusiveUser () const { return this->exclusiveUser_; }
+    [[nodiscard]] inline bool& exclusiveUser () { return this->exclusiveUser_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::optional
     //@{
     inline void optional (bool _x11_optional) { this->optional_ = _x11_optional; }
-    inline bool optional () const { return this->optional_; }
-    inline bool& optional () { return this->optional_; }
+    [[nodiscard]] inline bool optional () const { return this->optional_; }
+    [[nodiscard]] inline bool& optional () { return this->optional_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::kind
     //@{
     inline void kind (::Deployment::CCMComponentPortKind _x11_kind) { this->kind_ = _x11_kind; }
-    inline ::Deployment::CCMComponentPortKind kind () const { return this->kind_; }
-    inline ::Deployment::CCMComponentPortKind& kind () { return this->kind_; }
+    [[nodiscard]] inline ::Deployment::CCMComponentPortKind kind () const { return this->kind_; }
+    [[nodiscard]] inline ::Deployment::CCMComponentPortKind& kind () { return this->kind_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPortDescription::templateParam
     //@{
     inline void templateParam (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_templateParam) { this->templateParam_ = _x11_templateParam; }
     inline void templateParam (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_templateParam) { this->templateParam_ = std::move (_x11_templateParam); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam () const { return this->templateParam_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam () { return this->templateParam_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam () const { return this->templateParam_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& templateParam () { return this->templateParam_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -381,15 +381,15 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPropertyDescription::type
     //@{
     inline void type (IDL::traits<::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type _x11_type) { this->type_ = _x11_type; }
-    inline IDL::traits<::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const { return this->type_; }
-    inline IDL::traits<::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type () { return this->type_; }
+    [[nodiscard]] inline IDL::traits<::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type type () const { return this->type_; }
+    [[nodiscard]] inline IDL::traits<::TAOX11_NAMESPACE::CORBA::TypeCode>::ref_type& type () { return this->type_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -434,72 +434,72 @@ namespace Deployment
     //@{
     inline void label (const std::string& _x11_label) { this->label_ = _x11_label; }
     inline void label (std::string&& _x11_label) { this->label_ = std::move (_x11_label); }
-    inline const std::string& label () const { return this->label_; }
-    inline std::string& label () { return this->label_; }
+    [[nodiscard]] inline const std::string& label () const { return this->label_; }
+    [[nodiscard]] inline std::string& label () { return this->label_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::UUID
     //@{
     inline void UUID (const std::string& _x11_UUID) { this->UUID_ = _x11_UUID; }
     inline void UUID (std::string&& _x11_UUID) { this->UUID_ = std::move (_x11_UUID); }
-    inline const std::string& UUID () const { return this->UUID_; }
-    inline std::string& UUID () { return this->UUID_; }
+    [[nodiscard]] inline const std::string& UUID () const { return this->UUID_; }
+    [[nodiscard]] inline std::string& UUID () { return this->UUID_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::specificType
     //@{
     inline void specificType (const std::string& _x11_specificType) { this->specificType_ = _x11_specificType; }
     inline void specificType (std::string&& _x11_specificType) { this->specificType_ = std::move (_x11_specificType); }
-    inline const std::string& specificType () const { return this->specificType_; }
-    inline std::string& specificType () { return this->specificType_; }
+    [[nodiscard]] inline const std::string& specificType () const { return this->specificType_; }
+    [[nodiscard]] inline std::string& specificType () { return this->specificType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::supportedType
     //@{
     inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType) { this->supportedType_ = _x11_supportedType; }
     inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType) { this->supportedType_ = std::move (_x11_supportedType); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const { return this->supportedType_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const { return this->supportedType_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::idlFile
     //@{
     inline void idlFile (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_idlFile) { this->idlFile_ = _x11_idlFile; }
     inline void idlFile (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_idlFile) { this->idlFile_ = std::move (_x11_idlFile); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile () const { return this->idlFile_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile () { return this->idlFile_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile () const { return this->idlFile_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& idlFile () { return this->idlFile_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::configProperty
     //@{
     inline void configProperty (const ::Deployment::Properties& _x11_configProperty) { this->configProperty_ = _x11_configProperty; }
     inline void configProperty (::Deployment::Properties&& _x11_configProperty) { this->configProperty_ = std::move (_x11_configProperty); }
-    inline const ::Deployment::Properties& configProperty () const { return this->configProperty_; }
-    inline ::Deployment::Properties& configProperty () { return this->configProperty_; }
+    [[nodiscard]] inline const ::Deployment::Properties& configProperty () const { return this->configProperty_; }
+    [[nodiscard]] inline ::Deployment::Properties& configProperty () { return this->configProperty_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::_port
     //@{
     inline void port (const ::Deployment::ComponentPortDescriptions& _x11_port) { this->port_ = _x11_port; }
     inline void port (::Deployment::ComponentPortDescriptions&& _x11_port) { this->port_ = std::move (_x11_port); }
-    inline const ::Deployment::ComponentPortDescriptions& port () const { return this->port_; }
-    inline ::Deployment::ComponentPortDescriptions& port () { return this->port_; }
+    [[nodiscard]] inline const ::Deployment::ComponentPortDescriptions& port () const { return this->port_; }
+    [[nodiscard]] inline ::Deployment::ComponentPortDescriptions& port () { return this->port_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::property
     //@{
     inline void property (const ::Deployment::ComponentPropertyDescriptions& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::ComponentPropertyDescriptions&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::ComponentPropertyDescriptions& property () const { return this->property_; }
-    inline ::Deployment::ComponentPropertyDescriptions& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::ComponentPropertyDescriptions& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::ComponentPropertyDescriptions& property () { return this->property_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentInterfaceDescription::infoProperty
     //@{
     inline void infoProperty (const ::Deployment::Properties& _x11_infoProperty) { this->infoProperty_ = _x11_infoProperty; }
     inline void infoProperty (::Deployment::Properties&& _x11_infoProperty) { this->infoProperty_ = std::move (_x11_infoProperty); }
-    inline const ::Deployment::Properties& infoProperty () const { return this->infoProperty_; }
-    inline ::Deployment::Properties& infoProperty () { return this->infoProperty_; }
+    [[nodiscard]] inline const ::Deployment::Properties& infoProperty () const { return this->infoProperty_; }
+    [[nodiscard]] inline ::Deployment::Properties& infoProperty () { return this->infoProperty_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -543,40 +543,40 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::artifactRef
     //@{
     inline void artifactRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _x11_artifactRef) { this->artifactRef_ = _x11_artifactRef; }
     inline void artifactRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _x11_artifactRef) { this->artifactRef_ = std::move (_x11_artifactRef); }
-    inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef () const { return this->artifactRef_; }
-    inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef () { return this->artifactRef_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef () const { return this->artifactRef_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& artifactRef () { return this->artifactRef_; }
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::execParameter
     //@{
     inline void execParameter (const ::Deployment::Properties& _x11_execParameter) { this->execParameter_ = _x11_execParameter; }
     inline void execParameter (::Deployment::Properties&& _x11_execParameter) { this->execParameter_ = std::move (_x11_execParameter); }
-    inline const ::Deployment::Properties& execParameter () const { return this->execParameter_; }
-    inline ::Deployment::Properties& execParameter () { return this->execParameter_; }
+    [[nodiscard]] inline const ::Deployment::Properties& execParameter () const { return this->execParameter_; }
+    [[nodiscard]] inline ::Deployment::Properties& execParameter () { return this->execParameter_; }
     //@}
 
     /// @copydoc test.idl::Deployment::MonolithicDeploymentDescription::deployRequirement
     //@{
     inline void deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement) { this->deployRequirement_ = _x11_deployRequirement; }
     inline void deployRequirement (::Deployment::Requirements&& _x11_deployRequirement) { this->deployRequirement_ = std::move (_x11_deployRequirement); }
-    inline const ::Deployment::Requirements& deployRequirement () const { return this->deployRequirement_; }
-    inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
+    [[nodiscard]] inline const ::Deployment::Requirements& deployRequirement () const { return this->deployRequirement_; }
+    [[nodiscard]] inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -635,32 +635,32 @@ namespace Deployment
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceUsage
     //@{
     inline void resourceUsage (::Deployment::ResourceUsageKind _x11_resourceUsage) { this->resourceUsage_ = _x11_resourceUsage; }
-    inline ::Deployment::ResourceUsageKind resourceUsage () const { return this->resourceUsage_; }
-    inline ::Deployment::ResourceUsageKind& resourceUsage () { return this->resourceUsage_; }
+    [[nodiscard]] inline ::Deployment::ResourceUsageKind resourceUsage () const { return this->resourceUsage_; }
+    [[nodiscard]] inline ::Deployment::ResourceUsageKind& resourceUsage () { return this->resourceUsage_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::requirementName
     //@{
     inline void requirementName (const std::string& _x11_requirementName) { this->requirementName_ = _x11_requirementName; }
     inline void requirementName (std::string&& _x11_requirementName) { this->requirementName_ = std::move (_x11_requirementName); }
-    inline const std::string& requirementName () const { return this->requirementName_; }
-    inline std::string& requirementName () { return this->requirementName_; }
+    [[nodiscard]] inline const std::string& requirementName () const { return this->requirementName_; }
+    [[nodiscard]] inline std::string& requirementName () { return this->requirementName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::resourceName
     //@{
     inline void resourceName (const std::string& _x11_resourceName) { this->resourceName_ = _x11_resourceName; }
     inline void resourceName (std::string&& _x11_resourceName) { this->resourceName_ = std::move (_x11_resourceName); }
-    inline const std::string& resourceName () const { return this->resourceName_; }
-    inline std::string& resourceName () { return this->resourceName_; }
+    [[nodiscard]] inline const std::string& resourceName () const { return this->resourceName_; }
+    [[nodiscard]] inline std::string& resourceName () { return this->resourceName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceResourceDeploymentDescription::property
     //@{
     inline void property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::Properties& property () const { return this->property_; }
-    inline ::Deployment::Properties& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::Properties& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -705,55 +705,55 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::node
     //@{
     inline void node (const std::string& _x11_node) { this->node_ = _x11_node; }
     inline void node (std::string&& _x11_node) { this->node_ = std::move (_x11_node); }
-    inline const std::string& node () const { return this->node_; }
-    inline std::string& node () { return this->node_; }
+    [[nodiscard]] inline const std::string& node () const { return this->node_; }
+    [[nodiscard]] inline std::string& node () { return this->node_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::implementationRef
     //@{
     inline void implementationRef (uint32_t _x11_implementationRef) { this->implementationRef_ = _x11_implementationRef; }
-    inline uint32_t implementationRef () const { return this->implementationRef_; }
-    inline uint32_t& implementationRef () { return this->implementationRef_; }
+    [[nodiscard]] inline uint32_t implementationRef () const { return this->implementationRef_; }
+    [[nodiscard]] inline uint32_t& implementationRef () { return this->implementationRef_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::configProperty
     //@{
     inline void configProperty (const ::Deployment::Properties& _x11_configProperty) { this->configProperty_ = _x11_configProperty; }
     inline void configProperty (::Deployment::Properties&& _x11_configProperty) { this->configProperty_ = std::move (_x11_configProperty); }
-    inline const ::Deployment::Properties& configProperty () const { return this->configProperty_; }
-    inline ::Deployment::Properties& configProperty () { return this->configProperty_; }
+    [[nodiscard]] inline const ::Deployment::Properties& configProperty () const { return this->configProperty_; }
+    [[nodiscard]] inline ::Deployment::Properties& configProperty () { return this->configProperty_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::deployedResource
     //@{
     inline void deployedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _x11_deployedResource) { this->deployedResource_ = _x11_deployedResource; }
     inline void deployedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _x11_deployedResource) { this->deployedResource_ = std::move (_x11_deployedResource); }
-    inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource () const { return this->deployedResource_; }
-    inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
+    [[nodiscard]] inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource () const { return this->deployedResource_; }
+    [[nodiscard]] inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
     //@}
 
     /// @copydoc test.idl::Deployment::InstanceDeploymentDescription::deployedSharedResource
     //@{
     inline void deployedSharedResource (const ::Deployment::InstanceResourceDeploymentDescriptions& _x11_deployedSharedResource) { this->deployedSharedResource_ = _x11_deployedSharedResource; }
     inline void deployedSharedResource (::Deployment::InstanceResourceDeploymentDescriptions&& _x11_deployedSharedResource) { this->deployedSharedResource_ = std::move (_x11_deployedSharedResource); }
-    inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource () const { return this->deployedSharedResource_; }
-    inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource () { return this->deployedSharedResource_; }
+    [[nodiscard]] inline const ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource () const { return this->deployedSharedResource_; }
+    [[nodiscard]] inline ::Deployment::InstanceResourceDeploymentDescriptions& deployedSharedResource () { return this->deployedSharedResource_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -795,8 +795,8 @@ namespace Deployment
     //@{
     inline void portName (const std::string& _x11_portName) { this->portName_ = _x11_portName; }
     inline void portName (std::string&& _x11_portName) { this->portName_ = std::move (_x11_portName); }
-    inline const std::string& portName () const { return this->portName_; }
-    inline std::string& portName () { return this->portName_; }
+    [[nodiscard]] inline const std::string& portName () const { return this->portName_; }
+    [[nodiscard]] inline std::string& portName () { return this->portName_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -835,29 +835,29 @@ namespace Deployment
     //@{
     inline void portName (const std::string& _x11_portName) { this->portName_ = _x11_portName; }
     inline void portName (std::string&& _x11_portName) { this->portName_ = std::move (_x11_portName); }
-    inline const std::string& portName () const { return this->portName_; }
-    inline std::string& portName () { return this->portName_; }
+    [[nodiscard]] inline const std::string& portName () const { return this->portName_; }
+    [[nodiscard]] inline std::string& portName () { return this->portName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::provider
     //@{
     inline void provider (bool _x11_provider) { this->provider_ = _x11_provider; }
-    inline bool provider () const { return this->provider_; }
-    inline bool& provider () { return this->provider_; }
+    [[nodiscard]] inline bool provider () const { return this->provider_; }
+    [[nodiscard]] inline bool& provider () { return this->provider_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::kind
     //@{
     inline void kind (::Deployment::CCMComponentPortKind _x11_kind) { this->kind_ = _x11_kind; }
-    inline ::Deployment::CCMComponentPortKind kind () const { return this->kind_; }
-    inline ::Deployment::CCMComponentPortKind& kind () { return this->kind_; }
+    [[nodiscard]] inline ::Deployment::CCMComponentPortKind kind () const { return this->kind_; }
+    [[nodiscard]] inline ::Deployment::CCMComponentPortKind& kind () { return this->kind_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPortEndpoint::instanceRef
     //@{
     inline void instanceRef (uint32_t _x11_instanceRef) { this->instanceRef_ = _x11_instanceRef; }
-    inline uint32_t instanceRef () const { return this->instanceRef_; }
-    inline uint32_t& instanceRef () { return this->instanceRef_; }
+    [[nodiscard]] inline uint32_t instanceRef () const { return this->instanceRef_; }
+    [[nodiscard]] inline uint32_t& instanceRef () { return this->instanceRef_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -899,31 +899,31 @@ namespace Deployment
     //@{
     inline void location (const std::string& _x11_location) { this->location_ = _x11_location; }
     inline void location (std::string&& _x11_location) { this->location_ = std::move (_x11_location); }
-    inline const std::string& location () const { return this->location_; }
-    inline std::string& location () { return this->location_; }
+    [[nodiscard]] inline const std::string& location () const { return this->location_; }
+    [[nodiscard]] inline std::string& location () { return this->location_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::provider
     //@{
     inline void provider (bool _x11_provider) { this->provider_ = _x11_provider; }
-    inline bool provider () const { return this->provider_; }
-    inline bool& provider () { return this->provider_; }
+    [[nodiscard]] inline bool provider () const { return this->provider_; }
+    [[nodiscard]] inline bool& provider () { return this->provider_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::portName
     //@{
     inline void portName (const std::string& _x11_portName) { this->portName_ = _x11_portName; }
     inline void portName (std::string&& _x11_portName) { this->portName_ = std::move (_x11_portName); }
-    inline const std::string& portName () const { return this->portName_; }
-    inline std::string& portName () { return this->portName_; }
+    [[nodiscard]] inline const std::string& portName () const { return this->portName_; }
+    [[nodiscard]] inline std::string& portName () { return this->portName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ExternalReferenceEndpoint::supportedType
     //@{
     inline void supportedType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_supportedType) { this->supportedType_ = _x11_supportedType; }
     inline void supportedType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_supportedType) { this->supportedType_ = std::move (_x11_supportedType); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const { return this->supportedType_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () const { return this->supportedType_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& supportedType () { return this->supportedType_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -965,32 +965,32 @@ namespace Deployment
     //@{
     inline void targetName (const std::string& _x11_targetName) { this->targetName_ = _x11_targetName; }
     inline void targetName (std::string&& _x11_targetName) { this->targetName_ = std::move (_x11_targetName); }
-    inline const std::string& targetName () const { return this->targetName_; }
-    inline std::string& targetName () { return this->targetName_; }
+    [[nodiscard]] inline const std::string& targetName () const { return this->targetName_; }
+    [[nodiscard]] inline std::string& targetName () { return this->targetName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::requirementName
     //@{
     inline void requirementName (const std::string& _x11_requirementName) { this->requirementName_ = _x11_requirementName; }
     inline void requirementName (std::string&& _x11_requirementName) { this->requirementName_ = std::move (_x11_requirementName); }
-    inline const std::string& requirementName () const { return this->requirementName_; }
-    inline std::string& requirementName () { return this->requirementName_; }
+    [[nodiscard]] inline const std::string& requirementName () const { return this->requirementName_; }
+    [[nodiscard]] inline std::string& requirementName () { return this->requirementName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::resourceName
     //@{
     inline void resourceName (const std::string& _x11_resourceName) { this->resourceName_ = _x11_resourceName; }
     inline void resourceName (std::string&& _x11_resourceName) { this->resourceName_ = std::move (_x11_resourceName); }
-    inline const std::string& resourceName () const { return this->resourceName_; }
-    inline std::string& resourceName () { return this->resourceName_; }
+    [[nodiscard]] inline const std::string& resourceName () const { return this->resourceName_; }
+    [[nodiscard]] inline std::string& resourceName () { return this->resourceName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ConnectionResourceDeploymentDescription::property
     //@{
     inline void property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::Properties& property () const { return this->property_; }
-    inline ::Deployment::Properties& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::Properties& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1035,56 +1035,56 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::deployRequirement
     //@{
     inline void deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement) { this->deployRequirement_ = _x11_deployRequirement; }
     inline void deployRequirement (::Deployment::Requirements&& _x11_deployRequirement) { this->deployRequirement_ = std::move (_x11_deployRequirement); }
-    inline const ::Deployment::Requirements& deployRequirement () const { return this->deployRequirement_; }
-    inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
+    [[nodiscard]] inline const ::Deployment::Requirements& deployRequirement () const { return this->deployRequirement_; }
+    [[nodiscard]] inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::externalEndpoint
     //@{
     inline void externalEndpoint (const ::Deployment::ComponentExternalPortEndpoints& _x11_externalEndpoint) { this->externalEndpoint_ = _x11_externalEndpoint; }
     inline void externalEndpoint (::Deployment::ComponentExternalPortEndpoints&& _x11_externalEndpoint) { this->externalEndpoint_ = std::move (_x11_externalEndpoint); }
-    inline const ::Deployment::ComponentExternalPortEndpoints& externalEndpoint () const { return this->externalEndpoint_; }
-    inline ::Deployment::ComponentExternalPortEndpoints& externalEndpoint () { return this->externalEndpoint_; }
+    [[nodiscard]] inline const ::Deployment::ComponentExternalPortEndpoints& externalEndpoint () const { return this->externalEndpoint_; }
+    [[nodiscard]] inline ::Deployment::ComponentExternalPortEndpoints& externalEndpoint () { return this->externalEndpoint_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::internalEndpoint
     //@{
     inline void internalEndpoint (const ::Deployment::PlanSubcomponentPortEndpoints& _x11_internalEndpoint) { this->internalEndpoint_ = _x11_internalEndpoint; }
     inline void internalEndpoint (::Deployment::PlanSubcomponentPortEndpoints&& _x11_internalEndpoint) { this->internalEndpoint_ = std::move (_x11_internalEndpoint); }
-    inline const ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint () const { return this->internalEndpoint_; }
-    inline ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint () { return this->internalEndpoint_; }
+    [[nodiscard]] inline const ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint () const { return this->internalEndpoint_; }
+    [[nodiscard]] inline ::Deployment::PlanSubcomponentPortEndpoints& internalEndpoint () { return this->internalEndpoint_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::externalReference
     //@{
     inline void externalReference (const ::Deployment::ExternalReferenceEndpoints& _x11_externalReference) { this->externalReference_ = _x11_externalReference; }
     inline void externalReference (::Deployment::ExternalReferenceEndpoints&& _x11_externalReference) { this->externalReference_ = std::move (_x11_externalReference); }
-    inline const ::Deployment::ExternalReferenceEndpoints& externalReference () const { return this->externalReference_; }
-    inline ::Deployment::ExternalReferenceEndpoints& externalReference () { return this->externalReference_; }
+    [[nodiscard]] inline const ::Deployment::ExternalReferenceEndpoints& externalReference () const { return this->externalReference_; }
+    [[nodiscard]] inline ::Deployment::ExternalReferenceEndpoints& externalReference () { return this->externalReference_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanConnectionDescription::deployedResource
     //@{
     inline void deployedResource (const ::Deployment::ConnectionResourceDeploymentDescriptions& _x11_deployedResource) { this->deployedResource_ = _x11_deployedResource; }
     inline void deployedResource (::Deployment::ConnectionResourceDeploymentDescriptions&& _x11_deployedResource) { this->deployedResource_ = std::move (_x11_deployedResource); }
-    inline const ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource () const { return this->deployedResource_; }
-    inline ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
+    [[nodiscard]] inline const ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource () const { return this->deployedResource_; }
+    [[nodiscard]] inline ::Deployment::ConnectionResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1127,15 +1127,15 @@ namespace Deployment
     //@{
     inline void propertyName (const std::string& _x11_propertyName) { this->propertyName_ = _x11_propertyName; }
     inline void propertyName (std::string&& _x11_propertyName) { this->propertyName_ = std::move (_x11_propertyName); }
-    inline const std::string& propertyName () const { return this->propertyName_; }
-    inline std::string& propertyName () { return this->propertyName_; }
+    [[nodiscard]] inline const std::string& propertyName () const { return this->propertyName_; }
+    [[nodiscard]] inline std::string& propertyName () { return this->propertyName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanSubcomponentPropertyReference::instanceRef
     //@{
     inline void instanceRef (uint32_t _x11_instanceRef) { this->instanceRef_ = _x11_instanceRef; }
-    inline uint32_t instanceRef () const { return this->instanceRef_; }
-    inline uint32_t& instanceRef () { return this->instanceRef_; }
+    [[nodiscard]] inline uint32_t instanceRef () const { return this->instanceRef_; }
+    [[nodiscard]] inline uint32_t& instanceRef () { return this->instanceRef_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1175,32 +1175,32 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::externalName
     //@{
     inline void externalName (const std::string& _x11_externalName) { this->externalName_ = _x11_externalName; }
     inline void externalName (std::string&& _x11_externalName) { this->externalName_ = std::move (_x11_externalName); }
-    inline const std::string& externalName () const { return this->externalName_; }
-    inline std::string& externalName () { return this->externalName_; }
+    [[nodiscard]] inline const std::string& externalName () const { return this->externalName_; }
+    [[nodiscard]] inline std::string& externalName () { return this->externalName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanPropertyMapping::delegatesTo
     //@{
     inline void delegatesTo (const ::Deployment::PlanSubcomponentPropertyReferences& _x11_delegatesTo) { this->delegatesTo_ = _x11_delegatesTo; }
     inline void delegatesTo (::Deployment::PlanSubcomponentPropertyReferences&& _x11_delegatesTo) { this->delegatesTo_ = std::move (_x11_delegatesTo); }
-    inline const ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo () const { return this->delegatesTo_; }
-    inline ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo () { return this->delegatesTo_; }
+    [[nodiscard]] inline const ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo () const { return this->delegatesTo_; }
+    [[nodiscard]] inline ::Deployment::PlanSubcomponentPropertyReferences& delegatesTo () { return this->delegatesTo_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1239,8 +1239,8 @@ namespace Deployment
     //@{
     inline void requiredType (const std::string& _x11_requiredType) { this->requiredType_ = _x11_requiredType; }
     inline void requiredType (std::string&& _x11_requiredType) { this->requiredType_ = std::move (_x11_requiredType); }
-    inline const std::string& requiredType () const { return this->requiredType_; }
-    inline std::string& requiredType () { return this->requiredType_; }
+    [[nodiscard]] inline const std::string& requiredType () const { return this->requiredType_; }
+    [[nodiscard]] inline std::string& requiredType () { return this->requiredType_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1278,24 +1278,24 @@ namespace Deployment
     //@{
     inline void requirementName (const std::string& _x11_requirementName) { this->requirementName_ = _x11_requirementName; }
     inline void requirementName (std::string&& _x11_requirementName) { this->requirementName_ = std::move (_x11_requirementName); }
-    inline const std::string& requirementName () const { return this->requirementName_; }
-    inline std::string& requirementName () { return this->requirementName_; }
+    [[nodiscard]] inline const std::string& requirementName () const { return this->requirementName_; }
+    [[nodiscard]] inline std::string& requirementName () { return this->requirementName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::resourceName
     //@{
     inline void resourceName (const std::string& _x11_resourceName) { this->resourceName_ = _x11_resourceName; }
     inline void resourceName (std::string&& _x11_resourceName) { this->resourceName_ = std::move (_x11_resourceName); }
-    inline const std::string& resourceName () const { return this->resourceName_; }
-    inline std::string& resourceName () { return this->resourceName_; }
+    [[nodiscard]] inline const std::string& resourceName () const { return this->resourceName_; }
+    [[nodiscard]] inline std::string& resourceName () { return this->resourceName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ResourceDeploymentDescription::property
     //@{
     inline void property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::Properties& property () const { return this->property_; }
-    inline ::Deployment::Properties& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::Properties& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1339,56 +1339,56 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::location
     //@{
     inline void location (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_location) { this->location_ = _x11_location; }
     inline void location (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_location) { this->location_ = std::move (_x11_location); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& location () const { return this->location_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& location () { return this->location_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& location () const { return this->location_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& location () { return this->location_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::node
     //@{
     inline void node (const std::string& _x11_node) { this->node_ = _x11_node; }
     inline void node (std::string&& _x11_node) { this->node_ = std::move (_x11_node); }
-    inline const std::string& node () const { return this->node_; }
-    inline std::string& node () { return this->node_; }
+    [[nodiscard]] inline const std::string& node () const { return this->node_; }
+    [[nodiscard]] inline std::string& node () { return this->node_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::source
     //@{
     inline void source (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_source) { this->source_ = _x11_source; }
     inline void source (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_source) { this->source_ = std::move (_x11_source); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& source () const { return this->source_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& source () { return this->source_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::execParameter
     //@{
     inline void execParameter (const ::Deployment::Properties& _x11_execParameter) { this->execParameter_ = _x11_execParameter; }
     inline void execParameter (::Deployment::Properties&& _x11_execParameter) { this->execParameter_ = std::move (_x11_execParameter); }
-    inline const ::Deployment::Properties& execParameter () const { return this->execParameter_; }
-    inline ::Deployment::Properties& execParameter () { return this->execParameter_; }
+    [[nodiscard]] inline const ::Deployment::Properties& execParameter () const { return this->execParameter_; }
+    [[nodiscard]] inline ::Deployment::Properties& execParameter () { return this->execParameter_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::deployRequirement
     //@{
     inline void deployRequirement (const ::Deployment::Requirements& _x11_deployRequirement) { this->deployRequirement_ = _x11_deployRequirement; }
     inline void deployRequirement (::Deployment::Requirements&& _x11_deployRequirement) { this->deployRequirement_ = std::move (_x11_deployRequirement); }
-    inline const ::Deployment::Requirements& deployRequirement () const { return this->deployRequirement_; }
-    inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
+    [[nodiscard]] inline const ::Deployment::Requirements& deployRequirement () const { return this->deployRequirement_; }
+    [[nodiscard]] inline ::Deployment::Requirements& deployRequirement () { return this->deployRequirement_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ArtifactDeploymentDescription::deployedResource
     //@{
     inline void deployedResource (const ::Deployment::ResourceDeploymentDescriptions& _x11_deployedResource) { this->deployedResource_ = _x11_deployedResource; }
     inline void deployedResource (::Deployment::ResourceDeploymentDescriptions&& _x11_deployedResource) { this->deployedResource_ = std::move (_x11_deployedResource); }
-    inline const ::Deployment::ResourceDeploymentDescriptions& deployedResource () const { return this->deployedResource_; }
-    inline ::Deployment::ResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
+    [[nodiscard]] inline const ::Deployment::ResourceDeploymentDescriptions& deployedResource () const { return this->deployedResource_; }
+    [[nodiscard]] inline ::Deployment::ResourceDeploymentDescriptions& deployedResource () { return this->deployedResource_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1443,16 +1443,16 @@ namespace Deployment
     /// @copydoc test.idl::Deployment::PlanLocality::constraint
     //@{
     inline void constraint (::Deployment::PlanLocalityKind _x11_constraint) { this->constraint_ = _x11_constraint; }
-    inline ::Deployment::PlanLocalityKind constraint () const { return this->constraint_; }
-    inline ::Deployment::PlanLocalityKind& constraint () { return this->constraint_; }
+    [[nodiscard]] inline ::Deployment::PlanLocalityKind constraint () const { return this->constraint_; }
+    [[nodiscard]] inline ::Deployment::PlanLocalityKind& constraint () { return this->constraint_; }
     //@}
 
     /// @copydoc test.idl::Deployment::PlanLocality::constrainedInstanceRef
     //@{
     inline void constrainedInstanceRef (const ::TAOX11_NAMESPACE::CORBA::ULongSeq& _x11_constrainedInstanceRef) { this->constrainedInstanceRef_ = _x11_constrainedInstanceRef; }
     inline void constrainedInstanceRef (::TAOX11_NAMESPACE::CORBA::ULongSeq&& _x11_constrainedInstanceRef) { this->constrainedInstanceRef_ = std::move (_x11_constrainedInstanceRef); }
-    inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef () const { return this->constrainedInstanceRef_; }
-    inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef () { return this->constrainedInstanceRef_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef () const { return this->constrainedInstanceRef_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::ULongSeq& constrainedInstanceRef () { return this->constrainedInstanceRef_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1499,88 +1499,88 @@ namespace Deployment
     //@{
     inline void label (const std::string& _x11_label) { this->label_ = _x11_label; }
     inline void label (std::string&& _x11_label) { this->label_ = std::move (_x11_label); }
-    inline const std::string& label () const { return this->label_; }
-    inline std::string& label () { return this->label_; }
+    [[nodiscard]] inline const std::string& label () const { return this->label_; }
+    [[nodiscard]] inline std::string& label () { return this->label_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::UUID
     //@{
     inline void UUID (const std::string& _x11_UUID) { this->UUID_ = _x11_UUID; }
     inline void UUID (std::string&& _x11_UUID) { this->UUID_ = std::move (_x11_UUID); }
-    inline const std::string& UUID () const { return this->UUID_; }
-    inline std::string& UUID () { return this->UUID_; }
+    [[nodiscard]] inline const std::string& UUID () const { return this->UUID_; }
+    [[nodiscard]] inline std::string& UUID () { return this->UUID_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::realizes
     //@{
     inline void realizes (const ::Deployment::ComponentInterfaceDescription& _x11_realizes) { this->realizes_ = _x11_realizes; }
     inline void realizes (::Deployment::ComponentInterfaceDescription&& _x11_realizes) { this->realizes_ = std::move (_x11_realizes); }
-    inline const ::Deployment::ComponentInterfaceDescription& realizes () const { return this->realizes_; }
-    inline ::Deployment::ComponentInterfaceDescription& realizes () { return this->realizes_; }
+    [[nodiscard]] inline const ::Deployment::ComponentInterfaceDescription& realizes () const { return this->realizes_; }
+    [[nodiscard]] inline ::Deployment::ComponentInterfaceDescription& realizes () { return this->realizes_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::implementation
     //@{
     inline void implementation (const ::Deployment::MonolithicDeploymentDescriptions& _x11_implementation) { this->implementation_ = _x11_implementation; }
     inline void implementation (::Deployment::MonolithicDeploymentDescriptions&& _x11_implementation) { this->implementation_ = std::move (_x11_implementation); }
-    inline const ::Deployment::MonolithicDeploymentDescriptions& implementation () const { return this->implementation_; }
-    inline ::Deployment::MonolithicDeploymentDescriptions& implementation () { return this->implementation_; }
+    [[nodiscard]] inline const ::Deployment::MonolithicDeploymentDescriptions& implementation () const { return this->implementation_; }
+    [[nodiscard]] inline ::Deployment::MonolithicDeploymentDescriptions& implementation () { return this->implementation_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::instance
     //@{
     inline void instance (const ::Deployment::InstanceDeploymentDescriptions& _x11_instance) { this->instance_ = _x11_instance; }
     inline void instance (::Deployment::InstanceDeploymentDescriptions&& _x11_instance) { this->instance_ = std::move (_x11_instance); }
-    inline const ::Deployment::InstanceDeploymentDescriptions& instance () const { return this->instance_; }
-    inline ::Deployment::InstanceDeploymentDescriptions& instance () { return this->instance_; }
+    [[nodiscard]] inline const ::Deployment::InstanceDeploymentDescriptions& instance () const { return this->instance_; }
+    [[nodiscard]] inline ::Deployment::InstanceDeploymentDescriptions& instance () { return this->instance_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::connection
     //@{
     inline void connection (const ::Deployment::PlanConnectionDescriptions& _x11_connection) { this->connection_ = _x11_connection; }
     inline void connection (::Deployment::PlanConnectionDescriptions&& _x11_connection) { this->connection_ = std::move (_x11_connection); }
-    inline const ::Deployment::PlanConnectionDescriptions& connection () const { return this->connection_; }
-    inline ::Deployment::PlanConnectionDescriptions& connection () { return this->connection_; }
+    [[nodiscard]] inline const ::Deployment::PlanConnectionDescriptions& connection () const { return this->connection_; }
+    [[nodiscard]] inline ::Deployment::PlanConnectionDescriptions& connection () { return this->connection_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::externalProperty
     //@{
     inline void externalProperty (const ::Deployment::PlanPropertyMappings& _x11_externalProperty) { this->externalProperty_ = _x11_externalProperty; }
     inline void externalProperty (::Deployment::PlanPropertyMappings&& _x11_externalProperty) { this->externalProperty_ = std::move (_x11_externalProperty); }
-    inline const ::Deployment::PlanPropertyMappings& externalProperty () const { return this->externalProperty_; }
-    inline ::Deployment::PlanPropertyMappings& externalProperty () { return this->externalProperty_; }
+    [[nodiscard]] inline const ::Deployment::PlanPropertyMappings& externalProperty () const { return this->externalProperty_; }
+    [[nodiscard]] inline ::Deployment::PlanPropertyMappings& externalProperty () { return this->externalProperty_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::dependsOn
     //@{
     inline void dependsOn (const ::Deployment::ImplementationDependencies& _x11_dependsOn) { this->dependsOn_ = _x11_dependsOn; }
     inline void dependsOn (::Deployment::ImplementationDependencies&& _x11_dependsOn) { this->dependsOn_ = std::move (_x11_dependsOn); }
-    inline const ::Deployment::ImplementationDependencies& dependsOn () const { return this->dependsOn_; }
-    inline ::Deployment::ImplementationDependencies& dependsOn () { return this->dependsOn_; }
+    [[nodiscard]] inline const ::Deployment::ImplementationDependencies& dependsOn () const { return this->dependsOn_; }
+    [[nodiscard]] inline ::Deployment::ImplementationDependencies& dependsOn () { return this->dependsOn_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::artifact
     //@{
     inline void artifact (const ::Deployment::ArtifactDeploymentDescriptions& _x11_artifact) { this->artifact_ = _x11_artifact; }
     inline void artifact (::Deployment::ArtifactDeploymentDescriptions&& _x11_artifact) { this->artifact_ = std::move (_x11_artifact); }
-    inline const ::Deployment::ArtifactDeploymentDescriptions& artifact () const { return this->artifact_; }
-    inline ::Deployment::ArtifactDeploymentDescriptions& artifact () { return this->artifact_; }
+    [[nodiscard]] inline const ::Deployment::ArtifactDeploymentDescriptions& artifact () const { return this->artifact_; }
+    [[nodiscard]] inline ::Deployment::ArtifactDeploymentDescriptions& artifact () { return this->artifact_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::infoProperty
     //@{
     inline void infoProperty (const ::Deployment::Properties& _x11_infoProperty) { this->infoProperty_ = _x11_infoProperty; }
     inline void infoProperty (::Deployment::Properties&& _x11_infoProperty) { this->infoProperty_ = std::move (_x11_infoProperty); }
-    inline const ::Deployment::Properties& infoProperty () const { return this->infoProperty_; }
-    inline ::Deployment::Properties& infoProperty () { return this->infoProperty_; }
+    [[nodiscard]] inline const ::Deployment::Properties& infoProperty () const { return this->infoProperty_; }
+    [[nodiscard]] inline ::Deployment::Properties& infoProperty () { return this->infoProperty_; }
     //@}
 
     /// @copydoc test.idl::Deployment::DeploymentPlan::localityConstraint
     //@{
     inline void localityConstraint (const ::Deployment::PlanLocalities& _x11_localityConstraint) { this->localityConstraint_ = _x11_localityConstraint; }
     inline void localityConstraint (::Deployment::PlanLocalities&& _x11_localityConstraint) { this->localityConstraint_ = std::move (_x11_localityConstraint); }
-    inline const ::Deployment::PlanLocalities& localityConstraint () const { return this->localityConstraint_; }
-    inline ::Deployment::PlanLocalities& localityConstraint () { return this->localityConstraint_; }
+    [[nodiscard]] inline const ::Deployment::PlanLocalities& localityConstraint () const { return this->localityConstraint_; }
+    [[nodiscard]] inline ::Deployment::PlanLocalities& localityConstraint () { return this->localityConstraint_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1631,24 +1631,24 @@ namespace Deployment
     //@{
     inline void requiredUUID (const std::string& _x11_requiredUUID) { this->requiredUUID_ = _x11_requiredUUID; }
     inline void requiredUUID (std::string&& _x11_requiredUUID) { this->requiredUUID_ = std::move (_x11_requiredUUID); }
-    inline const std::string& requiredUUID () const { return this->requiredUUID_; }
-    inline std::string& requiredUUID () { return this->requiredUUID_; }
+    [[nodiscard]] inline const std::string& requiredUUID () const { return this->requiredUUID_; }
+    [[nodiscard]] inline std::string& requiredUUID () { return this->requiredUUID_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredName
     //@{
     inline void requiredName (const std::string& _x11_requiredName) { this->requiredName_ = _x11_requiredName; }
     inline void requiredName (std::string&& _x11_requiredName) { this->requiredName_ = std::move (_x11_requiredName); }
-    inline const std::string& requiredName () const { return this->requiredName_; }
-    inline std::string& requiredName () { return this->requiredName_; }
+    [[nodiscard]] inline const std::string& requiredName () const { return this->requiredName_; }
+    [[nodiscard]] inline std::string& requiredName () { return this->requiredName_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ComponentPackageReference::requiredType
     //@{
     inline void requiredType (const ::Deployment::ComponentInterfaceDescription& _x11_requiredType) { this->requiredType_ = _x11_requiredType; }
     inline void requiredType (::Deployment::ComponentInterfaceDescription&& _x11_requiredType) { this->requiredType_ = std::move (_x11_requiredType); }
-    inline const ::Deployment::ComponentInterfaceDescription& requiredType () const { return this->requiredType_; }
-    inline ::Deployment::ComponentInterfaceDescription& requiredType () { return this->requiredType_; }
+    [[nodiscard]] inline const ::Deployment::ComponentInterfaceDescription& requiredType () const { return this->requiredType_; }
+    [[nodiscard]] inline ::Deployment::ComponentInterfaceDescription& requiredType () { return this->requiredType_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1695,48 +1695,48 @@ namespace Deployment
     //@{
     inline void resourceUsage (const ::Deployment::ResourceUsageKinds& _x11_resourceUsage) { this->resourceUsage_ = _x11_resourceUsage; }
     inline void resourceUsage (::Deployment::ResourceUsageKinds&& _x11_resourceUsage) { this->resourceUsage_ = std::move (_x11_resourceUsage); }
-    inline const ::Deployment::ResourceUsageKinds& resourceUsage () const { return this->resourceUsage_; }
-    inline ::Deployment::ResourceUsageKinds& resourceUsage () { return this->resourceUsage_; }
+    [[nodiscard]] inline const ::Deployment::ResourceUsageKinds& resourceUsage () const { return this->resourceUsage_; }
+    [[nodiscard]] inline ::Deployment::ResourceUsageKinds& resourceUsage () { return this->resourceUsage_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::resourcePort
     //@{
     inline void resourcePort (const std::string& _x11_resourcePort) { this->resourcePort_ = _x11_resourcePort; }
     inline void resourcePort (std::string&& _x11_resourcePort) { this->resourcePort_ = std::move (_x11_resourcePort); }
-    inline const std::string& resourcePort () const { return this->resourcePort_; }
-    inline std::string& resourcePort () { return this->resourcePort_; }
+    [[nodiscard]] inline const std::string& resourcePort () const { return this->resourcePort_; }
+    [[nodiscard]] inline std::string& resourcePort () { return this->resourcePort_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::componentPort
     //@{
     inline void componentPort (const std::string& _x11_componentPort) { this->componentPort_ = _x11_componentPort; }
     inline void componentPort (std::string&& _x11_componentPort) { this->componentPort_ = std::move (_x11_componentPort); }
-    inline const std::string& componentPort () const { return this->componentPort_; }
-    inline std::string& componentPort () { return this->componentPort_; }
+    [[nodiscard]] inline const std::string& componentPort () const { return this->componentPort_; }
+    [[nodiscard]] inline std::string& componentPort () { return this->componentPort_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::name
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::resourceType
     //@{
     inline void resourceType (const std::string& _x11_resourceType) { this->resourceType_ = _x11_resourceType; }
     inline void resourceType (std::string&& _x11_resourceType) { this->resourceType_ = std::move (_x11_resourceType); }
-    inline const std::string& resourceType () const { return this->resourceType_; }
-    inline std::string& resourceType () { return this->resourceType_; }
+    [[nodiscard]] inline const std::string& resourceType () const { return this->resourceType_; }
+    [[nodiscard]] inline std::string& resourceType () { return this->resourceType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::ImplementationRequirement::property
     //@{
     inline void property (const ::Deployment::Properties& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::Properties&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::Properties& property () const { return this->property_; }
-    inline ::Deployment::Properties& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::Properties& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::Properties& property () { return this->property_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -1779,24 +1779,24 @@ namespace Deployment
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// @copydoc test.idl::Deployment::Capability::resourceType
     //@{
     inline void resourceType (const ::TAOX11_NAMESPACE::CORBA::StringSeq& _x11_resourceType) { this->resourceType_ = _x11_resourceType; }
     inline void resourceType (::TAOX11_NAMESPACE::CORBA::StringSeq&& _x11_resourceType) { this->resourceType_ = std::move (_x11_resourceType); }
-    inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType () const { return this->resourceType_; }
-    inline ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType () { return this->resourceType_; }
+    [[nodiscard]] inline const ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType () const { return this->resourceType_; }
+    [[nodiscard]] inline ::TAOX11_NAMESPACE::CORBA::StringSeq& resourceType () { return this->resourceType_; }
     //@}
 
     /// @copydoc test.idl::Deployment::Capability::property
     //@{
     inline void property (const ::Deployment::SatisfierProperties& _x11_property) { this->property_ = _x11_property; }
     inline void property (::Deployment::SatisfierProperties&& _x11_property) { this->property_ = std::move (_x11_property); }
-    inline const ::Deployment::SatisfierProperties& property () const { return this->property_; }
-    inline ::Deployment::SatisfierProperties& property () { return this->property_; }
+    [[nodiscard]] inline const ::Deployment::SatisfierProperties& property () const { return this->property_; }
+    [[nodiscard]] inline ::Deployment::SatisfierProperties& property () { return this->property_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -5433,6 +5433,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::Deployment::Capabil
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_GHCCIAEA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DFFBGFFE_INCLUDED__ */
 
 // -*- END -*-

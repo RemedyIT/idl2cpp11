@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CDIGEAHG_INCLUDED__
-#define __RIDL_TESTC_H_CDIGEAHG_INCLUDED__
+#ifndef __RIDL_TESTC_H_JBEDFJFC_INCLUDED__
+#define __RIDL_TESTC_H_JBEDFJFC_INCLUDED__
 
 #pragma once
 
@@ -22,8 +22,8 @@
 
 #include /**/ "tao/x11/base/versionx11.h"
 
-#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 6 || TAOX11_MICRO_VERSION != 0
-#error This file was generated with another RIDL C++11 backend version (2.6.0). Please re-generate.
+#if TAOX11_MAJOR_VERSION != 2 || TAOX11_MINOR_VERSION != 7 || TAOX11_MICRO_VERSION != 0
+#error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
 using namespace TAOX11_NAMESPACE;
@@ -53,8 +53,8 @@ namespace Test
     //@{
     inline void name (const std::string& _x11_name) { this->name_ = _x11_name; }
     inline void name (std::string&& _x11_name) { this->name_ = std::move (_x11_name); }
-    inline const std::string& name () const { return this->name_; }
-    inline std::string& name () { return this->name_; }
+    [[nodiscard]] inline const std::string& name () const { return this->name_; }
+    [[nodiscard]] inline std::string& name () { return this->name_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -197,59 +197,59 @@ namespace Test
     /// @copydoc test.idl::Test::Simple::o
     //@{
     inline void o (uint8_t _x11_o) { this->o_ = _x11_o; }
-    inline uint8_t o () const { return this->o_; }
-    inline uint8_t& o () { return this->o_; }
+    [[nodiscard]] inline uint8_t o () const { return this->o_; }
+    [[nodiscard]] inline uint8_t& o () { return this->o_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::l
     //@{
     inline void l (int32_t _x11_l) { this->l_ = _x11_l; }
-    inline int32_t l () const { return this->l_; }
-    inline int32_t& l () { return this->l_; }
+    [[nodiscard]] inline int32_t l () const { return this->l_; }
+    [[nodiscard]] inline int32_t& l () { return this->l_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::s
     //@{
     inline void s (const std::string& _x11_s) { this->s_ = _x11_s; }
     inline void s (std::string&& _x11_s) { this->s_ = std::move (_x11_s); }
-    inline const std::string& s () const { return this->s_; }
-    inline std::string& s () { return this->s_; }
+    [[nodiscard]] inline const std::string& s () const { return this->s_; }
+    [[nodiscard]] inline std::string& s () { return this->s_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::d
     //@{
     inline void d (double _x11_d) { this->d_ = _x11_d; }
-    inline double d () const { return this->d_; }
-    inline double& d () { return this->d_; }
+    [[nodiscard]] inline double d () const { return this->d_; }
+    [[nodiscard]] inline double& d () { return this->d_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::b
     //@{
     inline void b (bool _x11_b) { this->b_ = _x11_b; }
-    inline bool b () const { return this->b_; }
-    inline bool& b () { return this->b_; }
+    [[nodiscard]] inline bool b () const { return this->b_; }
+    [[nodiscard]] inline bool& b () { return this->b_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::c
     //@{
     inline void c (char _x11_c) { this->c_ = _x11_c; }
-    inline char c () const { return this->c_; }
-    inline char& c () { return this->c_; }
+    [[nodiscard]] inline char c () const { return this->c_; }
+    [[nodiscard]] inline char& c () { return this->c_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::bar_ref
     //@{
     inline void bar_ref (IDL::traits<::Test::Bar>::ref_type _x11_bar_ref) { this->bar_ref_ = _x11_bar_ref; }
-    inline IDL::traits<::Test::Bar>::ref_type bar_ref () const { return this->bar_ref_; }
-    inline IDL::traits<::Test::Bar>::ref_type& bar_ref () { return this->bar_ref_; }
+    [[nodiscard]] inline IDL::traits<::Test::Bar>::ref_type bar_ref () const { return this->bar_ref_; }
+    [[nodiscard]] inline IDL::traits<::Test::Bar>::ref_type& bar_ref () { return this->bar_ref_; }
     //@}
 
     /// @copydoc test.idl::Test::Simple::v
     //@{
     inline void v (const ::Test::Variable& _x11_v) { this->v_ = _x11_v; }
     inline void v (::Test::Variable&& _x11_v) { this->v_ = std::move (_x11_v); }
-    inline const ::Test::Variable& v () const { return this->v_; }
-    inline ::Test::Variable& v () { return this->v_; }
+    [[nodiscard]] inline const ::Test::Variable& v () const { return this->v_; }
+    [[nodiscard]] inline ::Test::Variable& v () { return this->v_; }
     //@}
 
     /// Exchange the value of two structures in an efficient matter
@@ -667,6 +667,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::Foo>::r
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_CDIGEAHG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_JBEDFJFC_INCLUDED__ */
 
 // -*- END -*-
