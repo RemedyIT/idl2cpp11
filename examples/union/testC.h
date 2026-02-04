@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_FIEIHAGG_INCLUDED__
-#define __RIDL_TESTC_H_FIEIHAGG_INCLUDED__
+#ifndef __RIDL_TESTC_H_DHIGHJDB_INCLUDED__
+#define __RIDL_TESTC_H_DHIGHJDB_INCLUDED__
 
 #pragma once
 
@@ -15,6 +15,7 @@
 #include "tao/x11/base/stddef.h"
 #include "tao/x11/base/basic_traits.h"
 #include "tao/x11/corba.h"
+#include "variant"
 #include "tao/x11/orb.h"
 #include "tao/x11/system_exception.h"
 #include "tao/x11/object.h"
@@ -174,28 +175,27 @@ namespace Test
   class Data
   {
   public:
-
     // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
     Data () = default;
     /// Copy constructor
-    inline Data (const Data&);
+    Data (const Data&) = default;
     /// Move constructor
-    inline Data (Data&&);
+    Data (Data&&) = default;
     /// Destructor
-    inline ~Data ();
+    ~Data () = default;
     /// Copy assignment operator
-    inline Data &operator= (const Data&);
+    Data &operator= (const Data&) = default;
     /// Move assignment operator
-    inline Data &operator= (Data&&);
+    Data &operator= (Data&&) = default;
 
     /// Set the discriminator. Only possible to set it to a
     /// value within the same current union member, otherwise
     /// a BAD_PARAM exception is thrown
     inline void _d (DataType);
     /// Get the discriminator
-    inline DataType _d () const  { return this->disc_; }
+    [[nodiscard]] inline DataType _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::Data::longData
     //@{
@@ -204,10 +204,10 @@ namespace Test
     inline void longData (int32_t _x11_longData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline int32_t longData () const;
+    [[nodiscard]] inline int32_t longData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline int32_t& longData ();
+    [[nodiscard]] inline int32_t& longData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::shortData
@@ -217,10 +217,10 @@ namespace Test
     inline void shortData (int16_t _x11_shortData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline int16_t shortData () const;
+    [[nodiscard]] inline int16_t shortData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline int16_t& shortData ();
+    [[nodiscard]] inline int16_t& shortData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::stringData
@@ -233,10 +233,10 @@ namespace Test
     inline void stringData (std::string&& _x11_stringData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline const std::string& stringData () const;
+    [[nodiscard]] inline const std::string& stringData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline std::string& stringData ();
+    [[nodiscard]] inline std::string& stringData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::pointData
@@ -249,10 +249,10 @@ namespace Test
     inline void pointData (::Test::Point&& _x11_pointData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline const ::Test::Point& pointData () const;
+    [[nodiscard]] inline const ::Test::Point& pointData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline ::Test::Point& pointData ();
+    [[nodiscard]] inline ::Test::Point& pointData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::trackData
@@ -265,10 +265,10 @@ namespace Test
     inline void trackData (::Test::Track&& _x11_trackData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline const ::Test::Track& trackData () const;
+    [[nodiscard]] inline const ::Test::Track& trackData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline ::Test::Track& trackData ();
+    [[nodiscard]] inline ::Test::Track& trackData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::globalData
@@ -281,10 +281,10 @@ namespace Test
     inline void globalData (::Global&& _x11_globalData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline const ::Global& globalData () const;
+    [[nodiscard]] inline const ::Global& globalData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline ::Global& globalData ();
+    [[nodiscard]] inline ::Global& globalData ();
     //@}
 
     /// Modifier that sets the union to a legal default value
@@ -294,26 +294,12 @@ namespace Test
     inline void swap (Data& u);
 
   private:
-    inline void _swap_u (Data& u);
-    inline void _move_u (Data& u);
-    inline void _clear ();
-
     DataType disc_ {::Test::DataType::dtEmpty};
-    union u_type_
-    {
-      u_type_ () = default;
-      ~u_type_ ();
-      int32_t longData_ {};
-      int16_t shortData_;
-      std::string stringData_;
-      ::Test::Point pointData_;
-      ::Test::Track trackData_;
-      ::Global globalData_;
-    } u_ {};
+    using u_type_ = std::variant<int32_t, int16_t, std::string, ::Test::Point, ::Test::Track, ::Global>;
+    u_type_ u_ {std::in_place_index<0>};
   }; // class Data
 
   inline void swap (::Test::Data& m1, ::Test::Data& m2) { m1.swap (m2); }
-
 
   // generated from c++11/templates/cli/hdr/struct_pre
   /// @copydoc test.idl::Test::S
@@ -411,28 +397,27 @@ namespace Test
   class U
   {
   public:
-
     // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
     U () = default;
     /// Copy constructor
-    inline U (const U&);
+    U (const U&) = default;
     /// Move constructor
-    inline U (U&&);
+    U (U&&) = default;
     /// Destructor
-    inline ~U ();
+    ~U () = default;
     /// Copy assignment operator
-    inline U &operator= (const U&);
+    U &operator= (const U&) = default;
     /// Move assignment operator
-    inline U &operator= (U&&);
+    U &operator= (U&&) = default;
 
     /// Set the discriminator. Only possible to set it to a
     /// value within the same current union member, otherwise
     /// a BAD_PARAM exception is thrown
     inline void _d (int32_t);
     /// Get the discriminator
-    inline int32_t _d () const  { return this->disc_; }
+    [[nodiscard]] inline int32_t _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::U::x
     //@{
@@ -441,10 +426,10 @@ namespace Test
     inline void x (int32_t _x11_x);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline int32_t x () const;
+    [[nodiscard]] inline int32_t x () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline int32_t& x ();
+    [[nodiscard]] inline int32_t& x ();
     //@}
 
     /// @copydoc test.idl::Test::U::z
@@ -457,10 +442,10 @@ namespace Test
     inline void z (std::string&& _x11_z);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline const std::string& z () const;
+    [[nodiscard]] inline const std::string& z () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline std::string& z ();
+    [[nodiscard]] inline std::string& z ();
     //@}
 
     /// @copydoc test.idl::Test::U::w
@@ -473,10 +458,10 @@ namespace Test
     inline void w (::Test::S&& _x11_w, int32_t _x11_disc = 3);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline const ::Test::S& w () const;
+    [[nodiscard]] inline const ::Test::S& w () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline ::Test::S& w ();
+    [[nodiscard]] inline ::Test::S& w ();
     //@}
 
     /// @copydoc test.idl::Test::U::obj
@@ -486,34 +471,22 @@ namespace Test
     inline void obj (IDL::traits<::Test::A>::ref_type _x11_obj, int32_t _x11_disc = (-2147483647-1));
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline IDL::traits<::Test::A>::ref_type obj () const;
+    [[nodiscard]] inline IDL::traits<::Test::A>::ref_type obj () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    inline IDL::traits<::Test::A>::ref_type& obj ();
+    [[nodiscard]] inline IDL::traits<::Test::A>::ref_type& obj ();
     //@}
 
     /// Exchange the value of two unions in an efficient matter
     inline void swap (U& u);
 
   private:
-    inline void _swap_u (U& u);
-    inline void _move_u (U& u);
-    inline void _clear ();
-
     int32_t disc_ {(-2147483647-1)};
-    union u_type_
-    {
-      u_type_ () = default;
-      ~u_type_ ();
-      int32_t x_;
-      std::string z_;
-      ::Test::S w_;
-      IDL::traits<::Test::A>::ref_type obj_ {};
-    } u_ {};
+    using u_type_ = std::variant<int32_t, std::string, ::Test::S, IDL::traits<::Test::A>::ref_type>;
+    u_type_ u_ {std::in_place_index<3>};
   }; // class U
 
   inline void swap (::Test::U& m1, ::Test::U& m2) { m1.swap (m2); }
-
 
   // generated from StubHeaderWriter#enter_interface
 
@@ -1249,61 +1222,6 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-inline Test::Data::u_type_::~u_type_ ()
-{
-}
-
-inline Test::Data::~Data ()
-{
-  this->_clear ();
-}
-
-inline Test::Data::Data (const ::Test::Data& u)
-  : disc_ (u.disc_)
-{
-  switch (this->disc_)
-  {
-    case ::Test::DataType::dtLong:
-    {
-      this->u_.longData_ = u.u_.longData_;
-    }
-    break;
-    case ::Test::DataType::dtShort:
-    {
-      this->u_.shortData_ = u.u_.shortData_;
-    }
-    break;
-    case ::Test::DataType::dtString:
-    {
-      new (std::addressof(this->u_.stringData_)) std::string (u.u_.stringData_);
-    }
-    break;
-    case ::Test::DataType::dtPoint:
-    {
-      new (std::addressof(this->u_.pointData_)) ::Test::Point (u.u_.pointData_);
-    }
-    break;
-    case ::Test::DataType::dtTrack:
-    {
-      new (std::addressof(this->u_.trackData_)) ::Test::Track (u.u_.trackData_);
-    }
-    break;
-    case ::Test::DataType::dtGlobal:
-    {
-      new (std::addressof(this->u_.globalData_)) ::Global (u.u_.globalData_);
-    }
-    break;
-    default:
-    break;
-  }
-}
-
-inline Test::Data::Data (::Test::Data&& u)
-  : disc_ (std::move (u.disc_))
-{
-  this->_move_u (u);
-}
-
 inline void Test::Data::_d (DataType discval)
 {
   if (this->disc_ != discval)
@@ -1399,12 +1317,8 @@ inline void Test::Data::_d (DataType discval)
 
 inline void Test::Data::longData (int32_t _x11_longData)
 {
-  if (this->disc_ != ::Test::DataType::dtLong)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtLong;
-  }
-  this->u_.longData_ = _x11_longData;
+  this->disc_ = ::Test::DataType::dtLong;
+  this->u_.emplace<0>(_x11_longData);
 }
 
 inline int32_t Test::Data::longData () const
@@ -1416,7 +1330,7 @@ inline int32_t Test::Data::longData () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.longData_;
+  return std::get<0>(this->u_);
 }
 
 inline int32_t& Test::Data::longData ()
@@ -1428,17 +1342,13 @@ inline int32_t& Test::Data::longData ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.longData_;
+  return std::get<0>(this->u_);
 }
 
 inline void Test::Data::shortData (int16_t _x11_shortData)
 {
-  if (this->disc_ != ::Test::DataType::dtShort)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtShort;
-  }
-  this->u_.shortData_ = _x11_shortData;
+  this->disc_ = ::Test::DataType::dtShort;
+  this->u_.emplace<1>(_x11_shortData);
 }
 
 inline int16_t Test::Data::shortData () const
@@ -1450,7 +1360,7 @@ inline int16_t Test::Data::shortData () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.shortData_;
+  return std::get<1>(this->u_);
 }
 
 inline int16_t& Test::Data::shortData ()
@@ -1462,35 +1372,19 @@ inline int16_t& Test::Data::shortData ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.shortData_;
+  return std::get<1>(this->u_);
 }
 
 inline void Test::Data::stringData (const std::string& _x11_stringData)
 {
-  if (this->disc_ != ::Test::DataType::dtString)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtString;
-    new (std::addressof(this->u_.stringData_)) std::string (_x11_stringData);
-  }
-  else
-  {
-    this->u_.stringData_ = _x11_stringData;
-  }
+  this->disc_ = ::Test::DataType::dtString;
+  this->u_.emplace<2>(_x11_stringData);
 }
 
 inline void Test::Data::stringData (std::string&& _x11_stringData)
 {
-  if (this->disc_ != ::Test::DataType::dtString)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtString;
-    new (std::addressof(this->u_.stringData_)) std::string (std::move (_x11_stringData));
-  }
-  else
-  {
-    this->u_.stringData_ = std::move (_x11_stringData);
-  }
+  this->disc_ = ::Test::DataType::dtString;
+  this->u_.emplace<2>(std::move (_x11_stringData));
 }
 
 inline const std::string& Test::Data::stringData () const
@@ -1502,7 +1396,7 @@ inline const std::string& Test::Data::stringData () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.stringData_;
+  return std::get<2>(this->u_);
 }
 
 inline std::string& Test::Data::stringData ()
@@ -1514,35 +1408,19 @@ inline std::string& Test::Data::stringData ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.stringData_;
+  return std::get<2>(this->u_);
 }
 
 inline void Test::Data::pointData (const ::Test::Point& _x11_pointData)
 {
-  if (this->disc_ != ::Test::DataType::dtPoint)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtPoint;
-    new (std::addressof(this->u_.pointData_)) ::Test::Point (_x11_pointData);
-  }
-  else
-  {
-    this->u_.pointData_ = _x11_pointData;
-  }
+  this->disc_ = ::Test::DataType::dtPoint;
+  this->u_.emplace<3>(_x11_pointData);
 }
 
 inline void Test::Data::pointData (::Test::Point&& _x11_pointData)
 {
-  if (this->disc_ != ::Test::DataType::dtPoint)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtPoint;
-    new (std::addressof(this->u_.pointData_)) ::Test::Point (std::move (_x11_pointData));
-  }
-  else
-  {
-    this->u_.pointData_ = std::move (_x11_pointData);
-  }
+  this->disc_ = ::Test::DataType::dtPoint;
+  this->u_.emplace<3>(std::move (_x11_pointData));
 }
 
 inline const ::Test::Point& Test::Data::pointData () const
@@ -1554,7 +1432,7 @@ inline const ::Test::Point& Test::Data::pointData () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.pointData_;
+  return std::get<3>(this->u_);
 }
 
 inline ::Test::Point& Test::Data::pointData ()
@@ -1566,35 +1444,19 @@ inline ::Test::Point& Test::Data::pointData ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.pointData_;
+  return std::get<3>(this->u_);
 }
 
 inline void Test::Data::trackData (const ::Test::Track& _x11_trackData)
 {
-  if (this->disc_ != ::Test::DataType::dtTrack)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtTrack;
-    new (std::addressof(this->u_.trackData_)) ::Test::Track (_x11_trackData);
-  }
-  else
-  {
-    this->u_.trackData_ = _x11_trackData;
-  }
+  this->disc_ = ::Test::DataType::dtTrack;
+  this->u_.emplace<4>(_x11_trackData);
 }
 
 inline void Test::Data::trackData (::Test::Track&& _x11_trackData)
 {
-  if (this->disc_ != ::Test::DataType::dtTrack)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtTrack;
-    new (std::addressof(this->u_.trackData_)) ::Test::Track (std::move (_x11_trackData));
-  }
-  else
-  {
-    this->u_.trackData_ = std::move (_x11_trackData);
-  }
+  this->disc_ = ::Test::DataType::dtTrack;
+  this->u_.emplace<4>(std::move (_x11_trackData));
 }
 
 inline const ::Test::Track& Test::Data::trackData () const
@@ -1606,7 +1468,7 @@ inline const ::Test::Track& Test::Data::trackData () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.trackData_;
+  return std::get<4>(this->u_);
 }
 
 inline ::Test::Track& Test::Data::trackData ()
@@ -1618,35 +1480,19 @@ inline ::Test::Track& Test::Data::trackData ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.trackData_;
+  return std::get<4>(this->u_);
 }
 
 inline void Test::Data::globalData (const ::Global& _x11_globalData)
 {
-  if (this->disc_ != ::Test::DataType::dtGlobal)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtGlobal;
-    new (std::addressof(this->u_.globalData_)) ::Global (_x11_globalData);
-  }
-  else
-  {
-    this->u_.globalData_ = _x11_globalData;
-  }
+  this->disc_ = ::Test::DataType::dtGlobal;
+  this->u_.emplace<5>(_x11_globalData);
 }
 
 inline void Test::Data::globalData (::Global&& _x11_globalData)
 {
-  if (this->disc_ != ::Test::DataType::dtGlobal)
-  {
-    this->_clear ();
-    this->disc_ = ::Test::DataType::dtGlobal;
-    new (std::addressof(this->u_.globalData_)) ::Global (std::move (_x11_globalData));
-  }
-  else
-  {
-    this->u_.globalData_ = std::move (_x11_globalData);
-  }
+  this->disc_ = ::Test::DataType::dtGlobal;
+  this->u_.emplace<5>(std::move (_x11_globalData));
 }
 
 inline const ::Global& Test::Data::globalData () const
@@ -1658,7 +1504,7 @@ inline const ::Global& Test::Data::globalData () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.globalData_;
+  return std::get<5>(this->u_);
 }
 
 inline ::Global& Test::Data::globalData ()
@@ -1670,173 +1516,17 @@ inline ::Global& Test::Data::globalData ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.globalData_;
-}
-
-inline ::Test::Data& Test::Data::operator= (const ::Test::Data& u)
-{
-  if (this != std::addressof(u))
-  {
-    ::Test::Data tmp (u);
-    this->swap (tmp);
-  }
-  return *this;
-}
-
-inline ::Test::Data& Test::Data::operator= (::Test::Data&& u)
-{
-  if (this != std::addressof(u))
-  {
-    ::Test::Data tmp (std::move (u));
-    this->swap (tmp);
-  }
-  return *this;
+  return std::get<5>(this->u_);
 }
 
 inline void Test::Data::swap (::Test::Data& u)
 {
-  if (this != std::addressof(u))
-  {
-    if (this->disc_ != u.disc_)
-    {
-      // different datatypes; so use move semantics to swap efficiently through intermediary
-      ::Test::Data intermediate (std::move (*this));
-      this->disc_ = std::move (u.disc_);
-      this->_move_u (u);
-      u.disc_ = std::move (intermediate.disc_);
-      u._move_u (intermediate);
-    }
-    else
-    {
-      // same datatypes so swap directly
-      this->_swap_u (u);
-    }
-  }
-}
-
-inline void Test::Data::_swap_u (::Test::Data& u)
-{
-  // u_ members have been guaranteed initialized identically so simply swap data
-  switch (this->disc_)
-  {
-    case ::Test::DataType::dtLong:
-    {
-      std::swap (this->u_.longData_, u.u_.longData_);
-    }
-    break;
-    case ::Test::DataType::dtShort:
-    {
-      std::swap (this->u_.shortData_, u.u_.shortData_);
-    }
-    break;
-    case ::Test::DataType::dtString:
-    {
-      std::swap (this->u_.stringData_, u.u_.stringData_);
-    }
-    break;
-    case ::Test::DataType::dtPoint:
-    {
-      std::swap (this->u_.pointData_, u.u_.pointData_);
-    }
-    break;
-    case ::Test::DataType::dtTrack:
-    {
-      std::swap (this->u_.trackData_, u.u_.trackData_);
-    }
-    break;
-    case ::Test::DataType::dtGlobal:
-    {
-      std::swap (this->u_.globalData_, u.u_.globalData_);
-    }
-    break;
-    default:
-    {
-      std::swap (this->u_.longData_, u.u_.longData_);
-    }
-    break;
-  }
-}
-
-inline void Test::Data::_move_u (::Test::Data& u)
-{
-  // this->disc_ is guaranteed to be initialized with the value from u.disc_ so it's safe
-  // to move/initialize the corresponding union members
-  switch (this->disc_)
-  {
-    case ::Test::DataType::dtLong:
-    {
-      this->u_.longData_ = std::move (u.u_.longData_);
-    }
-    break;
-    case ::Test::DataType::dtShort:
-    {
-      this->u_.shortData_ = std::move (u.u_.shortData_);
-    }
-    break;
-    case ::Test::DataType::dtString:
-    {
-      new (std::addressof(this->u_.stringData_)) std::string (std::move (u.u_.stringData_));
-    }
-    break;
-    case ::Test::DataType::dtPoint:
-    {
-      new (std::addressof(this->u_.pointData_)) ::Test::Point (std::move (u.u_.pointData_));
-    }
-    break;
-    case ::Test::DataType::dtTrack:
-    {
-      new (std::addressof(this->u_.trackData_)) ::Test::Track (std::move (u.u_.trackData_));
-    }
-    break;
-    case ::Test::DataType::dtGlobal:
-    {
-      new (std::addressof(this->u_.globalData_)) ::Global (std::move (u.u_.globalData_));
-    }
-    break;
-    default:
-    {
-      this->u_.longData_ = std::move (u.u_.longData_);
-    }
-    break;
-  }
-}
-
-inline void Test::Data::_clear ()
-{
-  switch (this->disc_)
-  {
-    case ::Test::DataType::dtLong:
-    break;
-    case ::Test::DataType::dtShort:
-    break;
-    case ::Test::DataType::dtString:
-    {
-      this->u_.stringData_.std::string::~string ();
-    }
-    break;
-    case ::Test::DataType::dtPoint:
-    {
-      this->u_.pointData_.::Test::Point::~Point ();
-    }
-    break;
-    case ::Test::DataType::dtTrack:
-    {
-      this->u_.trackData_.::Test::Track::~Track ();
-    }
-    break;
-    case ::Test::DataType::dtGlobal:
-    {
-      this->u_.globalData_.::Global::~Global ();
-    }
-    break;
-    default:
-    break;
-  }
+  std::swap (this->disc_, u.disc_);
+  std::swap (this->u_, u.u_);
 }
 
 inline void Test::Data::_default ()
 {
-  this->_clear ();
   this->disc_ = ::Test::DataType::dtEmpty;
 }
 
@@ -1852,50 +1542,6 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-inline Test::U::u_type_::~u_type_ ()
-{
-}
-
-inline Test::U::~U ()
-{
-  this->_clear ();
-}
-
-inline Test::U::U (const ::Test::U& u)
-  : disc_ (u.disc_)
-{
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.x_ = u.u_.x_;
-    }
-    break;
-    case 2:
-    {
-      new (std::addressof(this->u_.z_)) std::string (u.u_.z_);
-    }
-    break;
-    case 3:
-    case 4:
-    {
-      new (std::addressof(this->u_.w_)) ::Test::S (u.u_.w_);
-    }
-    break;
-    default:
-    {
-      new (std::addressof(this->u_.obj_)) IDL::traits<::Test::A>::ref_type (u.u_.obj_);
-    }
-    break;
-  }
-}
-
-inline Test::U::U (::Test::U&& u)
-  : disc_ (std::move (u.disc_))
-{
-  this->_move_u (u);
-}
-
 inline void Test::U::_d (int32_t discval)
 {
   if (this->disc_ != discval)
@@ -1958,12 +1604,8 @@ inline void Test::U::_d (int32_t discval)
 
 inline void Test::U::x (int32_t _x11_x)
 {
-  if (this->disc_ != 1)
-  {
-    this->_clear ();
-    this->disc_ = 1;
-  }
-  this->u_.x_ = _x11_x;
+  this->disc_ = 1;
+  this->u_.emplace<0>(_x11_x);
 }
 
 inline int32_t Test::U::x () const
@@ -1975,7 +1617,7 @@ inline int32_t Test::U::x () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.x_;
+  return std::get<0>(this->u_);
 }
 
 inline int32_t& Test::U::x ()
@@ -1987,35 +1629,19 @@ inline int32_t& Test::U::x ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.x_;
+  return std::get<0>(this->u_);
 }
 
 inline void Test::U::z (const std::string& _x11_z)
 {
-  if (this->disc_ != 2)
-  {
-    this->_clear ();
-    this->disc_ = 2;
-    new (std::addressof(this->u_.z_)) std::string (_x11_z);
-  }
-  else
-  {
-    this->u_.z_ = _x11_z;
-  }
+  this->disc_ = 2;
+  this->u_.emplace<1>(_x11_z);
 }
 
 inline void Test::U::z (std::string&& _x11_z)
 {
-  if (this->disc_ != 2)
-  {
-    this->_clear ();
-    this->disc_ = 2;
-    new (std::addressof(this->u_.z_)) std::string (std::move (_x11_z));
-  }
-  else
-  {
-    this->u_.z_ = std::move (_x11_z);
-  }
+  this->disc_ = 2;
+  this->u_.emplace<1>(std::move (_x11_z));
 }
 
 inline const std::string& Test::U::z () const
@@ -2027,7 +1653,7 @@ inline const std::string& Test::U::z () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.z_;
+  return std::get<1>(this->u_);
 }
 
 inline std::string& Test::U::z ()
@@ -2039,7 +1665,7 @@ inline std::string& Test::U::z ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.z_;
+  return std::get<1>(this->u_);
 }
 
 inline void Test::U::w (const ::Test::S& _x11_w, int32_t _x11_disc)
@@ -2053,16 +1679,8 @@ inline void Test::U::w (const ::Test::S& _x11_w, int32_t _x11_disc)
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  if (this->disc_ != _x11_disc)
-  {
-    this->_clear ();
-    this->disc_ = _x11_disc;
-    new (std::addressof(this->u_.w_)) ::Test::S (_x11_w);
-  }
-  else
-  {
-    this->u_.w_ = _x11_w;
-  }
+  this->disc_ = _x11_disc;
+  this->u_.emplace<2>(_x11_w);
 }
 
 inline void Test::U::w (::Test::S&& _x11_w, int32_t _x11_disc)
@@ -2076,16 +1694,8 @@ inline void Test::U::w (::Test::S&& _x11_w, int32_t _x11_disc)
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  if (this->disc_ != _x11_disc)
-  {
-    this->_clear ();
-    this->disc_ = _x11_disc;
-    new (std::addressof(this->u_.w_)) ::Test::S (std::move (_x11_w));
-  }
-  else
-  {
-    this->u_.w_ = std::move (_x11_w);
-  }
+  this->disc_ = _x11_disc;
+  this->u_.emplace<2>(std::move (_x11_w));
 }
 
 inline const ::Test::S& Test::U::w () const
@@ -2098,7 +1708,7 @@ inline const ::Test::S& Test::U::w () const
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.w_;
+  return std::get<2>(this->u_);
 }
 
 inline ::Test::S& Test::U::w ()
@@ -2111,7 +1721,7 @@ inline ::Test::S& Test::U::w ()
     default:
       throw TAOX11_NAMESPACE::CORBA::BAD_PARAM ();
   }
-  return this->u_.w_;
+  return std::get<2>(this->u_);
 }
 
 inline void Test::U::obj (IDL::traits<::Test::A>::ref_type _x11_obj, int32_t _x11_disc)
@@ -2127,16 +1737,8 @@ inline void Test::U::obj (IDL::traits<::Test::A>::ref_type _x11_obj, int32_t _x1
     default:
       break;
   }
-  if (this->disc_ != _x11_disc)
-  {
-    this->_clear ();
-    this->disc_ = _x11_disc;
-    new (std::addressof(this->u_.obj_)) IDL::traits<::Test::A>::ref_type (_x11_obj);
-  }
-  else
-  {
-    this->u_.obj_ = _x11_obj;
-  }
+  this->disc_ = _x11_disc;
+  this->u_.emplace<3>(_x11_obj);
 }
 
 inline IDL::traits<::Test::A>::ref_type Test::U::obj () const
@@ -2151,7 +1753,7 @@ inline IDL::traits<::Test::A>::ref_type Test::U::obj () const
     default:
       break;
   }
-  return this->u_.obj_;
+  return std::get<3>(this->u_);
 }
 
 inline IDL::traits<::Test::A>::ref_type& Test::U::obj ()
@@ -2166,132 +1768,13 @@ inline IDL::traits<::Test::A>::ref_type& Test::U::obj ()
     default:
       break;
   }
-  return this->u_.obj_;
-}
-
-inline ::Test::U& Test::U::operator= (const ::Test::U& u)
-{
-  if (this != std::addressof(u))
-  {
-    ::Test::U tmp (u);
-    this->swap (tmp);
-  }
-  return *this;
-}
-
-inline ::Test::U& Test::U::operator= (::Test::U&& u)
-{
-  if (this != std::addressof(u))
-  {
-    ::Test::U tmp (std::move (u));
-    this->swap (tmp);
-  }
-  return *this;
+  return std::get<3>(this->u_);
 }
 
 inline void Test::U::swap (::Test::U& u)
 {
-  if (this != std::addressof(u))
-  {
-    if (this->disc_ != u.disc_)
-    {
-      // different datatypes; so use move semantics to swap efficiently through intermediary
-      ::Test::U intermediate (std::move (*this));
-      this->disc_ = std::move (u.disc_);
-      this->_move_u (u);
-      u.disc_ = std::move (intermediate.disc_);
-      u._move_u (intermediate);
-    }
-    else
-    {
-      // same datatypes so swap directly
-      this->_swap_u (u);
-    }
-  }
-}
-
-inline void Test::U::_swap_u (::Test::U& u)
-{
-  // u_ members have been guaranteed initialized identically so simply swap data
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      std::swap (this->u_.x_, u.u_.x_);
-    }
-    break;
-    case 2:
-    {
-      std::swap (this->u_.z_, u.u_.z_);
-    }
-    break;
-    case 3:
-    case 4:
-    {
-      std::swap (this->u_.w_, u.u_.w_);
-    }
-    break;
-    default:
-    {
-      std::swap (this->u_.obj_, u.u_.obj_);
-    }
-    break;
-  }
-}
-
-inline void Test::U::_move_u (::Test::U& u)
-{
-  // this->disc_ is guaranteed to be initialized with the value from u.disc_ so it's safe
-  // to move/initialize the corresponding union members
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.x_ = std::move (u.u_.x_);
-    }
-    break;
-    case 2:
-    {
-      new (std::addressof(this->u_.z_)) std::string (std::move (u.u_.z_));
-    }
-    break;
-    case 3:
-    case 4:
-    {
-      new (std::addressof(this->u_.w_)) ::Test::S (std::move (u.u_.w_));
-    }
-    break;
-    default:
-    {
-      new (std::addressof(this->u_.obj_)) IDL::traits<::Test::A>::ref_type (std::move (u.u_.obj_));
-    }
-    break;
-  }
-}
-
-inline void Test::U::_clear ()
-{
-  switch (this->disc_)
-  {
-    case 1:
-    break;
-    case 2:
-    {
-      this->u_.z_.std::string::~string ();
-    }
-    break;
-    case 3:
-    case 4:
-    {
-      this->u_.w_.::Test::S::~S ();
-    }
-    break;
-    default:
-    {
-      this->u_.obj_.IDL::traits<::Test::A>::ref_type::~object_reference ();
-    }
-    break;
-  }
+  std::swap (this->disc_, u.disc_);
+  std::swap (this->u_, u.u_);
 }
 
 // generated from c++11/templates/cli/hdr/struct_os
@@ -2355,6 +1838,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_FIEIHAGG_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DHIGHJDB_INCLUDED__ */
 
 // -*- END -*-

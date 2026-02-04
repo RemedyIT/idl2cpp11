@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_DGGDJBHG_INCLUDED__
-#define __RIDL_TESTS_H_DGGDJBHG_INCLUDED__
+#ifndef __RIDL_TESTS_H_GAGADJGA_INCLUDED__
+#define __RIDL_TESTS_H_GAGADJGA_INCLUDED__
 
 #pragma once
 
@@ -19,6 +19,6 @@
 #error This file was generated with another RIDL C++11 backend version (2.7.0). Please re-generate.
 #endif
 
-#endif /* __RIDL_TESTS_H_DGGDJBHG_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_GAGADJGA_INCLUDED__ */
 
 // -*- END -*-
