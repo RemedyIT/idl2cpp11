@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DHIGHJDB_INCLUDED__
-#define __RIDL_TESTC_H_DHIGHJDB_INCLUDED__
+#ifndef __RIDL_TESTC_H_HJGBAFGA_INCLUDED__
+#define __RIDL_TESTC_H_HJGBAFGA_INCLUDED__
 
 #pragma once
 
@@ -178,7 +178,7 @@ namespace Test
     // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
-    Data () = default;
+    inline Data ();
     /// Copy constructor
     Data (const Data&) = default;
     /// Move constructor
@@ -195,7 +195,7 @@ namespace Test
     /// a BAD_PARAM exception is thrown
     inline void _d (DataType);
     /// Get the discriminator
-    [[nodiscard]] inline DataType _d () const  { return this->disc_; }
+    inline DataType _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::Data::longData
     //@{
@@ -204,10 +204,10 @@ namespace Test
     inline void longData (int32_t _x11_longData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline int32_t longData () const;
+    inline int32_t longData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline int32_t& longData ();
+    inline int32_t& longData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::shortData
@@ -217,10 +217,10 @@ namespace Test
     inline void shortData (int16_t _x11_shortData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline int16_t shortData () const;
+    inline int16_t shortData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline int16_t& shortData ();
+    inline int16_t& shortData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::stringData
@@ -233,10 +233,10 @@ namespace Test
     inline void stringData (std::string&& _x11_stringData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline const std::string& stringData () const;
+    inline const std::string& stringData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline std::string& stringData ();
+    inline std::string& stringData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::pointData
@@ -249,10 +249,10 @@ namespace Test
     inline void pointData (::Test::Point&& _x11_pointData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline const ::Test::Point& pointData () const;
+    inline const ::Test::Point& pointData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline ::Test::Point& pointData ();
+    inline ::Test::Point& pointData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::trackData
@@ -265,10 +265,10 @@ namespace Test
     inline void trackData (::Test::Track&& _x11_trackData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline const ::Test::Track& trackData () const;
+    inline const ::Test::Track& trackData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline ::Test::Track& trackData ();
+    inline ::Test::Track& trackData ();
     //@}
 
     /// @copydoc test.idl::Test::Data::globalData
@@ -281,10 +281,10 @@ namespace Test
     inline void globalData (::Global&& _x11_globalData);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline const ::Global& globalData () const;
+    inline const ::Global& globalData () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline ::Global& globalData ();
+    inline ::Global& globalData ();
     //@}
 
     /// Modifier that sets the union to a legal default value
@@ -400,7 +400,7 @@ namespace Test
     // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
-    U () = default;
+    inline U ();
     /// Copy constructor
     U (const U&) = default;
     /// Move constructor
@@ -417,7 +417,7 @@ namespace Test
     /// a BAD_PARAM exception is thrown
     inline void _d (int32_t);
     /// Get the discriminator
-    [[nodiscard]] inline int32_t _d () const  { return this->disc_; }
+    inline int32_t _d () const  { return this->disc_; }
 
     /// @copydoc test.idl::Test::U::x
     //@{
@@ -426,10 +426,10 @@ namespace Test
     inline void x (int32_t _x11_x);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline int32_t x () const;
+    inline int32_t x () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline int32_t& x ();
+    inline int32_t& x ();
     //@}
 
     /// @copydoc test.idl::Test::U::z
@@ -442,10 +442,10 @@ namespace Test
     inline void z (std::string&& _x11_z);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline const std::string& z () const;
+    inline const std::string& z () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline std::string& z ();
+    inline std::string& z ();
     //@}
 
     /// @copydoc test.idl::Test::U::w
@@ -458,10 +458,10 @@ namespace Test
     inline void w (::Test::S&& _x11_w, int32_t _x11_disc = 3);
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline const ::Test::S& w () const;
+    inline const ::Test::S& w () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline ::Test::S& w ();
+    inline ::Test::S& w ();
     //@}
 
     /// @copydoc test.idl::Test::U::obj
@@ -471,10 +471,10 @@ namespace Test
     inline void obj (IDL::traits<::Test::A>::ref_type _x11_obj, int32_t _x11_disc = (-2147483647-1));
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline IDL::traits<::Test::A>::ref_type obj () const;
+    inline IDL::traits<::Test::A>::ref_type obj () const;
     /// Get the value of the union, if the discriminator doesn't match a
     /// BAD_PARAM exception is thrown
-    [[nodiscard]] inline IDL::traits<::Test::A>::ref_type& obj ();
+    inline IDL::traits<::Test::A>::ref_type& obj ();
     //@}
 
     /// Exchange the value of two unions in an efficient matter
@@ -1222,6 +1222,10 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
+inline Test::Data::Data ()
+{
+}
+
 inline void Test::Data::_d (DataType discval)
 {
   if (this->disc_ != discval)
@@ -1528,6 +1532,7 @@ inline void Test::Data::swap (::Test::Data& u)
 inline void Test::Data::_default ()
 {
   this->disc_ = ::Test::DataType::dtEmpty;
+  this->u_.emplace<0>(int32_t{});
 }
 
 // generated from c++11/templates/cli/inl/struct_inl
@@ -1542,6 +1547,10 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
+inline Test::U::U ()
+{
+}
+
 inline void Test::U::_d (int32_t discval)
 {
   if (this->disc_ != discval)
@@ -1838,6 +1847,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_DHIGHJDB_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_HJGBAFGA_INCLUDED__ */
 
 // -*- END -*-
