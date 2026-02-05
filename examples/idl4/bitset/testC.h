@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_CCJAEGDI_INCLUDED__
-#define __RIDL_TESTC_H_CCJAEGDI_INCLUDED__
+#ifndef __RIDL_TESTC_H_DCJJBBAF_INCLUDED__
+#define __RIDL_TESTC_H_DCJJBBAF_INCLUDED__
 
 #pragma once
 
@@ -290,6 +290,6 @@ inline std::ostream& operator<< (std::ostream& strm, const ::MyBitset2& _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_CCJAEGDI_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_DCJJBBAF_INCLUDED__ */
 
 // -*- END -*-

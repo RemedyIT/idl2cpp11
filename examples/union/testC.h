@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_DCICGJCA_INCLUDED__
-#define __RIDL_TESTC_H_DCICGJCA_INCLUDED__
+#ifndef __RIDL_TESTC_H_FCBJGBEA_INCLUDED__
+#define __RIDL_TESTC_H_FCBJGBEA_INCLUDED__
 
 #pragma once
 
@@ -178,7 +178,7 @@ namespace Test
     // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
-    inline Data ();
+    Data () = default;
     /// Copy constructor
     Data (const Data&) = default;
     /// Move constructor
@@ -400,7 +400,7 @@ namespace Test
     // generated from c++11/templates/cli/hdr/union_post
     /// Default constructor creating an union initialized to
     /// the default cause
-    inline U ();
+    U () = default;
     /// Copy constructor
     U (const U&) = default;
     /// Move constructor
@@ -1222,10 +1222,6 @@ inline void ::Test::Track::swap (::Test::Track& s)
   std::swap (this->p_, s.p_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-inline Test::Data::Data ()
-{
-}
-
 inline void Test::Data::_d (DataType discval)
 {
   if (this->disc_ != discval)
@@ -1547,10 +1543,6 @@ inline void ::Test::S::swap (::Test::S& s)
   std::swap (this->len_, s.len_);
 }
 // generated from c++11/templates/cli/inl/union_inl
-inline Test::U::U ()
-{
-}
-
 inline void Test::U::_d (int32_t discval)
 {
   if (this->disc_ != discval)
@@ -1847,6 +1839,6 @@ inline std::ostream& operator<< (std::ostream& strm, IDL::traits<::Test::A>::ref
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_DCICGJCA_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_FCBJGBEA_INCLUDED__ */
 
 // -*- END -*-

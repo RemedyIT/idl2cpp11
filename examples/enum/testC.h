@@ -6,8 +6,8 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTC_H_EIGJJJBF_INCLUDED__
-#define __RIDL_TESTC_H_EIGJJJBF_INCLUDED__
+#ifndef __RIDL_TESTC_H_CEHJIFDI_INCLUDED__
+#define __RIDL_TESTC_H_CEHJIFDI_INCLUDED__
 
 #pragma once
 
@@ -120,6 +120,6 @@ inline std::ostream& operator<< (std::ostream& strm, ::Test::EEnum _v)
 
 #include /**/ "tao/x11/base/post.h"
 
-#endif /* __RIDL_TESTC_H_EIGJJJBF_INCLUDED__ */
+#endif /* __RIDL_TESTC_H_CEHJIFDI_INCLUDED__ */
 
 // -*- END -*-
