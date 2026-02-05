@@ -6,14 +6,12 @@
  *        https://www.remedy.nl
  */
 
-#ifndef __RIDL_TESTS_H_IBAJCFBB_INCLUDED__
-#define __RIDL_TESTS_H_IBAJCFBB_INCLUDED__
+#ifndef __RIDL_TESTS_H_BACBGAGF_INCLUDED__
+#define __RIDL_TESTS_H_BACBGAGF_INCLUDED__
 
 #pragma once
 
 #include "testC.h"
-#include "tao/x11/portable_server/servantbase.h"
-#include "tao/x11/portable_server/servantbase.h"
 
 #include /**/ "tao/x11/base/versionx11.h"
 
@@ -27,6 +25,6 @@ namespace Test
 } // namespace Test
 
 
-#endif /* __RIDL_TESTS_H_IBAJCFBB_INCLUDED__ */
+#endif /* __RIDL_TESTS_H_BACBGAGF_INCLUDED__ */
 
 // -*- END -*-
